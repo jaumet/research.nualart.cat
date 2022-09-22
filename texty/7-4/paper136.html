@@ -1,0 +1,529 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/7-4/paper136.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:21 GMT -->
+<head>
+<title>The Semantic Web, Universalist Ambition and Some Lessons from Librarianship</title>
+<link href="../IRstyle.css" rel=stylesheet>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2712.300" name=GENERATOR>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta content="Semantic Web, Authority Control" name=keywords>
+<meta content="Building the semantic web encounters problems similar to building large bibliographic systems.  The experience of librarianship in controlling large, heterogeneous collections of bibliographic data suggests that the real obstacles facing a semantic web will be logical and textual, not mechanical.  Three issues are explored in this essay: development of a standard container of information, desirability of standardizing the information hosted by this standardized container, and auxiliary tools to aid users find information.  Value spaces are suggested as a solution." name=description>
+<meta content=Mature name=rating>
+<meta content=Document name=VW96.objecttype>
+<meta content=ALL name=ROBOTS>
+<meta content="The Semantic Web, Universalist Ambition and Some Lessons from Librarianship" name=DC.Title>
+<meta content="Terrence A. Brooks" name=DC.Creator>
+<meta content="Semantic Web, Authority Control" name=DC.Subject>
+
+<meta content="Building the semantic web encounters problems similar to building large bibliographic systems.  The experience of librarianship in controlling large, heterogeneous collections of bibliographic data suggests that the real obstacles facing a semantic web will be logical and textual, not mechanical.  Three issues are explored in this essay: development of a standard container of information, desirability of standardizing the information hosted by this standardized container, and auxiliary tools to aid users find information.  Value spaces are suggested as a solution." name=DC.Description>
+<meta content="Professor T.D. Wilson" name=DC.Publisher>
+<meta content=Global name=DC.Coverage.PlaceName>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+
+
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center" colspan="5"><h4>Information Research, Vol. 7 No. 4, July 2002,</h4></td></tr>
+  <tr> 
+    <td><a href="infres74.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3>
+<h1>The Semantic Web, universalist ambition and some lessons from librarianship</h1>
+
+<h4 align=center><a href="mailto:tabrooks@u.washington.edu">Terrence A. Brooks</a> 
+<br>Information School,
+<br>University of Washington
+<br>Seattle, WA 98195, USA</h4>
+<br>
+
+<br>
+<div align=center><b>Abstract</b></div>
+
+<blockquote>Building the semantic web encounters problems similar to building large bibliographic systems.  
+The experience of librarianship in controlling large, heterogeneous collections of bibliographic data suggests 
+that the real obstacles facing a semantic web will be logical and textual, not mechanical.  Three issues are 
+explored in this essay: development of a standard container of information, desirability of standardizing 
+the information hosted by this standardized container, and auxiliary tools to aid users find information.  
+Value spaces are suggested as a solution, but dismissed as impracticable. The standardization necessary for
+the success of the Semantic Web may not be achievable in the Web environment.</blockquote>
+<br>
+<br>
+
+<h2>A vision of shared meaning</h2>
+
+<p>Increasing the intelligibility of the Web is a compelling vision.  Imagine how the utility of local data 
+could be enhanced if they were meaningfully linked to data posted by strangers far away.  The Web could 
+evolve into a comprehensive meaning system, a universal encyclopedia or “world brain,” as prophesized by 
+H.G. Wells (<a href="#Wells">1938</a>).   Clever programs could roam this meaning space discovering useful, 
+unanticipated information, 
+emulating Bachman’s (<a href="#Bachman">1973</a>) vision of database programmers navigating an n-dimensional 
+database space.</p>
+
+      
+<p>The extensible markup language (XML) and its attendant technologies is the fundamental facilitator of 
+the semantic web (<a href="#BLee">Berners-Lee, 2001</a>).  XML replaces presentation markup, e.g.: 
+&lt;h4> My name is Terry &lt;/H4> 
+with markup that provides a context for understanding the meaning of the data, e.g.:  &lt;name> Terry &lt;/name>.   
+Extensible technologies facilitate an era of the distributed object where XML elements 
+will roam the 
+Internet as autonomous units in a sea of contextual relationships. Poynder (<a href="#Poynder">May 5, 2002</a>) 
+describes the
+Web populated with dictionaries of meaning that autonomous agents interrogate as they traverse cyberspace.
+Semantic markup could be potentially 
+exploited in many ways; for example, disambiguating information resources and aiding information discovery 
+in a rapidly expanding and heterogeneous Web.  Problems like the following could be solved:</p>
+
+<blockquote>In addition, this markup makes it much easier to develop programs that can tackle 
+complicated questions whose answers do not reside on a single Web page. Suppose you wish to find 
+the Ms. Cook you met at a trade conference last year. You don't remember her first name, but you 
+remember that she worked for one of your clients and that her son was a student at your alma mater. 
+An intelligent search program can sift through all the pages of people whose name is "Cook" 
+(sidestepping all the pages relating to cooks, cooking, the Cook Islands and so forth), find the 
+ones that mention working for a company that's on your list of clients and follow links to 
+Web pages of their children to track down if any are in school at the right place. (<a href="#BLee">Berners-Lee 2001</a>)</blockquote>
+
+<h2>The “Ms. Cook” retrieval problem</h2>
+
+<p>	Finding a particular “Ms. Cook” in a semantic web is essentially an information retrieval problem, 
+similar to the bibliographic problem of finding an author named “Ms. Cook.”  Librarians possess considerable 
+experience dealing with this sort of problem.  Their strategy for controlling bibliographic data can be 
+summed up in a few words: Make the structural form of the data predictable, make the information contents 
+hosted by this form predictable, and where information is structured arbitrarily, provide access tools to 
+help the searcher find the difficult-to-anticipate information.</p>
+
+<p>	In some ways a semantic web and large bibliographic databases are similar.  A semantic web is a 
+single meaning system organizing a large collection of widely disparate information.  So are large 
+bibliographic databases.  For example, the WorldCat database (sponsored by OCLC, Online Computer 
+Library Center at http://oclc.org/home/) is a union catalog that hosts about 48 million records 
+(as of Spring 2002) in 400 languages and indexes a heterogeneous collection of material including 
+books, maps, films and slides, sound recordings, and so on.  The WorldCat database has been called 
+the most important database in academe (<a href="#Smith">Smith, 1996</a>).</p>      
+
+<p>A semantic web and large bibliographic databases also both employ expressive data structures.  
+The Machine Readable Cataloging (MARC 21) record provides each field and subfield with a semantically 
+significant field number or code.  Usage conventions define exactly what sort of data can be placed 
+in each field and subfield.  One can distinguish, consequently,  “John F. Kennedy” as the author 
+of a work, the subject of a work, a person named in the work, and so on.  XML also permits the 
+definition of element names that express usage aspects of a personal name; for example, one can 
+create tags such as &lt;author>,  &lt;subject> or &lt;named person>.</p>
+
+<p>There are, of course, great systematic differences between the Web and large bibliographic databases.  
+The Web is magnitudes larger.  It is growing faster.  The origins of Web pages are not a few cooperating 
+agencies.  Web pages do not reflect a single, well-groomed record structure.  Web pages do not benefit 
+from coordinated activity distinguishing material written by “Ms. Cook” from material describing “Ms. Cook.”  
+Furthermore, Web pages have no coordinated activity distinguishing “Mary Cook” from “Sally Cook,” or even 
+this “Mary Cook” from that “Mary Cook.”  This problem is commonly encountered when one uses a Web tool 
+to search for “Mary Cook,” receives hundreds of thousands of Web pages in return, and discovers 
+that the vast majority are irrelevant.</p>
+
+<p>Librarians have been struggling with these problems for decades.  It is possible that their practical 
+experience dealing with bibliographic data could be profitably applied to the semantic web proposal, 
+especially if an exemplary semantic web activity were searching for a certain “Ms. Cook” in a heterogeneous, 
+rapidly growing and decentralized Web.</p>
+      
+<h2>Principal elements of a bibliographic system</h2>
+
+<p>The basic strategy for constructing a bibliographic database system is standardizing the container of the 
+information, structuring the information contents within this container, and then building ancillary tools that 
+aid the anticipation of the user.</p>
+<p>The following are example methodologies and technologies: </p>	
+<ul>
+<li><p><em>Standardize the container of information.</em>  The library community has cooperated in developing MARC 
+records and agreeing on the usage of its fields, subfields and indicators.  An example is the 700 Added 
+Entry—Personal Name field (a description is available at http://www.oclc.org/oclc/bib/700.htm ).  Subfields 
+give elaborating information such as titles and dates associated with the name, even a fuller form of the 
+name.  In Spring 2001, two “Mrs. Cook” were listed in the WorldCat database (there is no Ms. Cook listed):</p>
+
+<pre>
+	#aCook,  #c Mrs.,  #d  fl.1735-1740,  #e bookseller
+	#aCook,  #c Mrs.,  #d  d. 1826
+</pre>	
+<p>We can infer that these are two different Mrs. Cook based on the d subfield (“Dates associated with a name”) 
+and the e subfield (“Relator term”).  Without these auxiliary, contextual subfields, these two different Mrs. 
+Cook could easily be misconstrued as the same person.</p>
+<p>It is likely that in a semantic web, which lacked an agreement about supplying qualifying information, 
+these two Mrs. Cook would have been mistakenly conflated to one person.</li></p>
+
+<li><p><em>Formalize the construction of information.</em>  The construction of the majority of the fields of the 
+MARC record is controlled by tools such as the Anglo-American Cataloguing Rules (<a href="#Gorman">Gorman, 1998</a>) 
+and Library of 
+Congress Subject Headings (<a href="#Cata">Cataloging, 2001</a>).  Special rules exist for the construction of 
+a surname, for example:</p>
+
+<blockquote>“22.15A If the name by which a person is known consists only of a surname, add the word or phrase 
+associated with the name in works by the person or in reference sources.” Example: Read, Miss  
+(<a href="#Gorman">Gorman, 1998 p.410</a>)</blockquote>
+
+<blockquote>“22.15B1 Add the term of address of a married woman if she is identified only by her husband’s name.” 
+Example: Ward, Mrs. Humphry  (<a href="#Gorman">Gorman, 1998, p. 410</a>)</blockquote>
+
+<p>Examples of the application of these rules appear above where both records construct Mrs. Cook’s 
+name as #aCook,  #c Mrs.</p>
+
+<p>Semantic web discussion has yet to broach this deeper level of standardization.  It highly probable 
+that several XML sources may have similar <name> elements, and may be referring to the same person, but a 
+robot spider would be stymied recognizing the equivalence of “Sally Cook,” “Cook, Sally,”  “S. Cook,” 
+and “Cook, S” or any other of the innumerable variations possible in the construction of a person’s name.</p></li>
+
+
+<li><p><em>Aid Users’ Anticipation. </em> It has been widely recognized that there are many names for the same thing 
+(<a href="#Furnas">Furnas, 1983</a>).  Semantic dispersion (one person having multiple names) and semantic conflation 
+(many people sharing the same name) are typical problems of bibliographic systems.  Librarians have 
+developed name authority files to ensure that a single bibliographic reference points to the same person.  
+For example, Captain James Cook (1728-1779) has references from alternate spellings and renderings 
+including: “James Cooke,” “Dzhames Kuk,” “Hakobos Gowg,” and “Jacques Cook” in the WorldCat database.  
+Name authority files aid users by leading them from “Dzhames Kuk” to “James Cook.” This is so powerful 
+and efficient method of finding information that some bibliographic systems are designed for searchers to 
+navigate authority files before jumping into the bibliographic database.</p>
+
+<p>The semantic web proposal suggests the evolution of the World Wide Web into a single meaning system.  
+Therefore, it is possible that the crucial information element about the targeted Ms. Cook is associated 
+with a &lt;name> element containing “Ms. Kuk,” or perhaps “Ms. Gowg,” or something else I can not anticipate.  
+As a general rule in bibliographic systems, if you cannot anticipate the representation of the information 
+you are seeking, you are going to have a hard time finding it, and so will your robot spider.</p>
+
+
+<h3>Decentralization and its effect on meaning</h3>
+	
+
+<p>Comparing the semantic web proposal and bibliographic databases illustrates the difference between 
+open and closed information systems.  Closed systems can impose standards on information structure 
+and content not possible in open systems.  A semantic web would be an open system, its raison d’etre 
+is to find meaningful data posted by strangers far away; in short, a semantic web has universalist 
+ambitions as far as meaning is concerned, yet will operate in an open environment.</p>
+	
+<p>XML namespaces (http://www.w3.org/TR/REC-xml-names/) addresses some of the semantic conflation 
+problem that would exist in a semantic web.  Namespaces are useful when an XML document pulls data 
+from several XML sources and finds element name collisions.  For example, a relatively common XML 
+element like &lt;dollar> could be disambiguated by reference to one namespace that contexts it 
+as a U.S. dollar amount and another namespace that contexts it as a Canadian dollar amount.</p>
+	
+<p>XML namespaces do not solve the deeper semantic problem, however, that precise agreement about 
+the meaning of any common word is rare.  “Price,” “revenue,” “assets” and so on, can have multiple 
+connotations depending on context.  A spider robot could find many XML sources with &lt;heaven> as an 
+element name, but do the authors mean the same thing by this term?</p>
+
+<blockquote>Consider this illustration.  At a summit of religious leaders, aimed at increasing common 
+understanding among the world’s religions, it is decided that everyone will speak English and use 
+the vocabulary of Protestant Christianity.  But as soon as the discussions start, there are problems.  
+Someone uses the word heaven and many people nod in recognition.  But as the discussion progresses, 
+it is clear that even the different Christian delegates have understood different nuances of the word, 
+let alone the Hindu and Buddhist representatives.  As time goes by, they realize that perhaps they should 
+have agreed at the start not to use a single vocabulary but rather to describe what the relationships were 
+between the apparently similar words in the vocabularies with which they were already familiar.  
+(<a href ="#Phipps">Phipps 1999</a>)</blockquote>
+
+<p>	XML schemas (http://www.w3.org/TR/xmlschema-1/) formalize the syntax and value constraints of XML 
+instances, and facilitate the sharing of information among communities of users.  Biztalk.org 
+(http://www.biztalk.org/home/default.asp) and XML.org (http://www.xml.org/) are examples of registries 
+for schemas.  The rapid development of schemas can be viewed as a positive trend for the penetration of 
+XML, but an unintended consequence is a growing lack of transference among schemas:</p>
+
+<blockquote>As the pace of activity around the Web-based XML schema repositories accelerates, the number of 
+registered schemas increases dramatically.  As an example, a quick count revealed that among the more than 
+300 schemas at one of the major XML repositories, at least eight of these describe purchase order documents.  
+As a developer, which should I choose?  Regardless of my choice, if my company deals with multiple trading 
+partners—and what company doesn’t—which schemas will my partners choose?  And across these multiple schemas, 
+how many different tag names for “customer number,” “ship-to address,” or “purchase order number” are there 
+like to be?  (<a href="#Lewis">Lewis 2001</a>)</blockquote>
+
+<p>	The only solution to schema proliferation is the convergence on a few schemas that will act as 
+touchstones or translation devices for a community of users.  This emulates the development of the 
+MARC record structure as a common structuring device for bibliographic data.  Even though parochial 
+MARC formats exist; for example, Canadians have CANMARC, Finns have FINNMARC, Hungarians has HUNMARC, 
+the library community shares data uniformly structured as MARC records.</p>      
+	  
+<p>The Universal Data Element Framework (UDEF) at http://www.udef.com/, which describes itself as 
+a “Dewey Decimal-Like Indexing System” for the Web, is a possible device for rationalizing the tags 
+of XML schemas.  UDEF would index schema tags as they are submitted to registries and, if the system 
+were ever to be widely implemented, would supply semantically equal tags across multiple interest domains.</p>
+
+<p>Proposals such as UDEF represent centrist impulses that are at odds with the open, unregulated nature 
+of the Web.  Success of the UDEF would depend on the cooperation of the Web community, a doubtful prospect 
+at best.  Partial deployment of the UDEF solution suggests a partitioned semantic web where clusters of Web 
+pages would become intelligible through the translation device of one or more tag indexes, while other Web 
+pages posted by individuals, or organizations that refuse to participate would be missing.   A partial 
+semantic web that systematically missed whole classes of Web pages doesn’t seem to manifest the spirit 
+of a decentralized, yet single-meaning worldwide system.</p>
+
+<h3>The impediment of orthography</h3>
+
+<p>The experience of librarianship in organizing large depositories of bibliographic information 
+suggests that the success of a semantic web hinges on the deep standardization of the information 
+content of XML elements.  For example, a spider robot may successfully locate a &lt;name> element, but 
+yet be stymied matching “Hakobos Gowg” to “James Cook.” </p>
+      
+<p>Orthography is uncontrolled on the Web: There is no worldwide law enforcing the use of language.  
+Variant spellings, contractions, neologisms have proven a fundamental impediment to online information 
+retrieval (<a href="#Brooks">Brooks 1998</a>).  The problem is so well recognized that commercial database 
+vendors construct databases specifically to help users with the scatter of company names 
+(i.e., DIALOG Company Name Finder database), products (i.e., DIALOG Product Code Finder) and 
+journal names (i.e., DIALOG Journal Name Finder).   Consider the problem of finding XML information 
+associated with the journal “Scientific American.”  The DIALOG Journal Name Finder database reveals 
+that this journal has been represented in many different ways.  Here is a sample:</p>
+
+ <pre>     
+SCI AM
+SCI AM (NEW YORK)
+SCI AM NEW YORK
+SCI AM.
+SCI AMER
+SCI. AM. (INT. ED.) (USA)
+SCI. AM. (USA)
+SCI. AMERICAN
+SCI. AMIC.
+SCI., AM.
+SCI.AM
+SCIENTIFIC AM
+SCIENTIFIC AMERCIAN
+SCIENTIFIC AMERICA
+
+DIALOG File 414, May 8, 2001
+</pre>
+
+
+<p>Clever programs could be constructed to deal with these few English-language variants for one 
+journal name, but this solution doesn’t scale up if one has to anticipate the spelling variants, 
+abbreviations and punctuation irregularities in, say, the 400 languages represented in the WorldCat database.</p>
+
+<p> Uncontrolled orthography has already played an important part in the Napster controversy, and 
+illustrates that successful sharing or retrieval of information hinges on being able to anticipate 
+its construction:</p>
+
+<blockquote>Which of the following is the correct spelling of the 1962 nonsense surf classic by the 
+Rivingtons? Is it a) "Pa Pa Ooh Mow Mow," as one authoritative record collectors' Web site has 
+it; b) "Papa Oom Mow Mow," as claimed by another; or c) the socialistically correct "Poppa Ooh Mao Mao," 
+as avowed by a third?… But, given the court's ruling that Napster must now find a way to identify and 
+block copyright-infringing song files, the proper spelling of song titles will likely be more than a 
+fanboy's parlor trick: it could be a key in determining the future of Napster.  (<a href="#Mann">Mann 2001</a>)	
+</blockquote>
+
+<h3>A suggestion: valuing authority first</h3>
+
+<p> The Western Library Network architecture (<a href="#WLN">WLN 1993</a>) encouraged users to begin searching authority 
+files before addressing their search to the bibliographic file.  Using the “Ms. Cook” example, one would sort through the 
+small number of authority records that established the various “Ms. Cook” and find the one you’re seeking.  
+The textual problem of your information need was solved: You knew what your target information looked like.  
+Armed with this information, one could apply it to the bibliographic file and specify that the information 
+resided in a certain field such as author, subject or named person.  This solved the logical problem of 
+specifying the role that your target name held in relation to the information you were seeking.  
+Essentially, you knew what the information looked like and where it should reside.</p>
+
+<p>Extension of this idea to the semantic web suggests the development of a “value space,” akin to 
+namespaces.  Perhaps XML sources could link to a value space where a spider robot could find information 
+collating “Ms. Cook” to “Mary Cook,” “M. Cook,” “Cook, Mary” and so on.  This would, of course, add 
+overhead to XML sources and might be more conformity possible in an unruly World Wide Web.  On the 
+other hand, there may be a central value depository, a sort of world wide name authority file.  Visiting 
+this central value depository, I could sort through the relatively few Ms. Cook entries and select 
+the correct individual.  I could then program my spider robot to look for this formulation of the name 
+in specific XML elements. Armed with the target formulation of the data, and knowing which XML elements 
+to examine, my spider robot would meet with much more success because its task would have been reduced 
+to the mechanical one of simply looking for matches.</p>
+
+<p>However attractive is the idea of a uniform and universal value space, the suggestion is impracticable
+in a technological frame such as the World Wide Web.  There is simply no agency that could enforce the creation of
+valid authority data for all the world, and no agency that would police its use.</p>
+
+
+<h3>A Semantic Web by other means</h3>
+
+<p>If the essential impulse of the Semantic Web initiative is to increase the intelligibility of Web pages then
+several other initiatives and technologies deserve mention:</p>
+
+<ul>
+<li><em>The Dublin Core Initiative [See http://dublincore.org/]</em> The Dublin Core initiative defines a 
+series of metatags.  The hope is that a large number of Web authors will begin using
+these metatags to advertize the semantics of their Web pages.  It is further hoped that Web browsers will
+exploit these metatags.</li>
+
+<li><em>Resource Description Framework (RDF)[See http://www.w3.org/RDF/]</em> The RDF is a proposal for the 
+processing of metadata by machines.  It would provide interoperability between Web applications that 
+wish to exchange machine-understandable information.  This would be accomplished in part by identifying Web 
+resources with Uniform Resource
+Identifiers (URIs) and indicating relationships among them.  Thus a resource (the "subject") would be linked to
+another resource (the "object") through an arc labeled with a third resource (the "predicate").  Like the
+Dublin Core metatags, Web authors would be responsible for the creation and addition of RDF data to their Web pages.</li>
+
+<li><em>UDDI: Universal Description, Discovery, and Integration [See http://uddi.microsoft.com/default.aspx]</em> 
+UDDI is an initiative by businesses to build registries of XML Web Services (i.e., a place to find and learn the
+use of machine-understandable information).  To aid users in finding available services, taxomies such as NAICS 
+(the North American Industry Classification system) and UNSPSC 
+(the Universal Standard Products and Services Classification) are used.</li>
+</ul> 
+
+<p>Perhaps these technologies will be warmly embraced by Web authors, or perhaps a new technology will
+arise that will produce a more intelligible Web.
+This essay has suggested that three devices have been used by the library community to establish the commonly
+held meanings of information objects: (1) The development of a standard container for information, (2) The 
+development of standardized contents residing in the standard container, and (3) Auxilliary aids in using these
+standardized elements.  The foregoing survey of other initiatives and technologies illustrates that current 
+efforts are focusing on the first of these
+three requirements: The development of standard containers for information.
+
+There are a number of challenges in getting the Web world to use a standard set of metatags, either
+Dublin Core or RDF.  There will have to be a massive retagging effort (<a href="#Poynder">Poynder, May 5, 2002</a>),
+as well as an increased concern for accuracy.  A survey by Eberhart (<a href="#Eberhart">2001</a>) noted that 
+40% of the RDF pages found were syntactically incorrect.</p>
+
+<p>The second strategy used by librarians - standardizing the contents residing in the standard container - falls
+into the realm of personal behaviour on the Web.  Will Web authors be clever enough to use metadata schemes, and possess
+sufficient probity to make mining metadata worthwhile?  Metadata schemes require added work for Web authors, 
+additional computer storage space, and there
+is always the temptation to manipulate metadata to increase the visibility of your own page.
+
+Doctorow (<a href="#Cory">26 August 2001</a>) is a particularly 
+sharp critic of the idea that Web folks with dress their metadata with valid and reliable information.  He suggests
+that sloth, stupidity and greed, among other human failings, will always limit the usefulness of metadata. </p>
+
+
+<h3>Conclusion</h3>
+<blockquote>The Semantic Web is not a separate Web but an extension of the current one, in which 
+information is given well-defined meaning, better enabling computers and people to work in cooperation. 
+(<a href="#BLee">Berners-Lee 2001</a>)</blockquote>
+      
+<p>The semantic web proposal has an unsolved tension between a universalist ambition and the need 
+to centralize to support intelligibility.  The experience of librarianship in building large 
+bibliographic systems suggests that standardization is the key to success. It is unclear at this time
+whether the degree of standardization necessary for the success of the Semantic Web is possible in the
+Web environment.</p>
+
+<h3>References:</h3>
+
+<ul>
+<li><a name="Bachman"></a>Bachman, C.  (1973) “The Programmer as navigator”  
+<em>Communications of the ACM</em>, <strong>16</strong> (11), 653-658.</li>
+
+<li><a name="BLee"></a>Berners-Lee, T., Hendler, J., &amp; Lassila, O. (2001). &quot;<a href="http://www.sciam.com/article.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21&amp;catID=2">The Semantic Web.</a>&quot; <em>Scientific American</em>. <strong>279(5)</strong>. Available  at: http://www.sciam.com/article.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21&catID=2 [Site visited 11th July 2002]</li>
+
+<li><a name="Brooks"></a>Brooks, T. A. (1998)  “<a href="http://faculty.washington.edu/tabrooks/Documents/Ortho3.html">Orthography as a fundamental impediment to online 
+information retrieval</a>.” <em>Journal of the American Society for Information Science</em>, 
+<strong>49</strong>(8), 731-741. Available at http://faculty.washington.edu/tabrooks/Documents/Ortho3.html.
+ [Site visited May 7, 2002]</li>
+
+<li><a name="Cata"></a>Cataloging distribution service. (2001) <em><a href="http://www.loc.gov/cds/lcsh.html">Tools for authority control--subject headings</a></em> Washington, DC: Library of Congress. Available at http://www.loc.gov/cds/lcsh.html. [Site visited May 7, 2002]</li>
+
+<li><a name="Cory"></a>Doctorow, C. (26 August 2001) <em><a href="http://www.well.com/~doctorow/metacrap.htm">Metacrap: Putting the torch to seven straw-men of the meta-utopia</a>.</em> [Personal Web page] Available at http://www.well.com/~doctorow/metacrap.htm [Site visited May 8, 2002]</li>
+
+<li><a name="Eberhart"></a>Eberhart, A. (2001)  <em><a href="http://www.i-u.de/schools/eberhart/rdf/rdf-survey.htm">Survey of RDF data on the web.</a></em>  Bruchsal: International University in Germany.  Available at
+http://www.i-u.de/schools/eberhart/rdf/rdf-survey.htm [Site visited 11th July, 2002]</li>
+
+<li><a name="Furnas"></a>Furnas, G.W., Landauer, T.K., Gomez, L.M. &amp; Dumais, S.T. (1983) “Statistical semantics: analysis of the potential performance of key-word information systems.”  <em>The Bell System Technical Journal</em>, <strong>62</strong>,1753-1806.</li>
+
+<li><a name="Gorman"></a>Gorman, M., &amp; Winkler, P. W., eds. (1998) <em>Anglo-American cataloguing rules</em>, 2d ed.   Chicago, IL: American Library Association.</li>
+
+<li><a name="Lewis"></a>Lewis, W. J. (2001)  “XML microstandards.”  <em>Intelligent Enterprise</em>, <strong>3</strong>(7) 
+Available at http://www.intelligententerprise.com/000428/supplychain.shtml. [Site visited May 7, 2002]</li>
+
+<li><a name="Mann"></a>Mann, C. C. (2001) “Napster will remove copyright-protected songs.” <em>The Industry Standard</em>, February 13.  Available at http://www.thestandard.com/article/0,1902,22189,00.html. [Site visited May 7, 2002]</li>
+
+<li><a name="Marc"></a>Library of Congress. <em>MARC Standards Office</em> (1996)  <em><a href="http://lcweb.loc.gov/marc/96principl.html">The MARC 21 formats: background and principles.</a></em>  Washington, DC: Library of Congress. 
+Available at http://lcweb.loc.gov/marc/96principl.html. [Site visited May 7, 2002]</li>
+
+<li><a name="Phipps"></a>Phipps, S. (1999)  <em><a href="http://www-106.ibm.com/developerworks/library/meaning.html">Meaning, not markup.</a></em>   Yorktown Heights, NY: IBM.  Available at http://www-106.ibm.com/developerworks/library/meaning.html. [Site visited May 7, 2002]</li>
+
+<li><a name="Poynder">Poynder, R. (May 5, 2002) "Quest for more meaning online"  Available at
+http://news.ft.com/home/us/. [Site visited May 7, 2002]</a></li>
+
+<li><a name="Smith"></a>Smith, K.W.  (1996) "OCLC - Moving toward the next stage of the electronic library," 
+<em>in</em>: <em>Proceedings of the Fourteenth Annual Conference of Research Library Directors. Tomorrow's access-today's decisions: ensuring access to today's electronic resources</em> (pp. 1-5). Dublin, OH: OCLC Online Computer Library Center. </li>
+
+<li><a name="Wells"></a>Wells, H.G. (1938) <em>World brain.</em>  Garden City, NY: Doubleday, Doran.</li>
+
+<li><a name="WLN"></a>Western Library Network (1993)  <em>WLN online searching manual</em>.  Lacey, WA: WLN.</li>
+</ul>
+
+<hr color=#ff00ff SIZE=3>
+
+<div align=center>
+<h4>How to cite this paper:</h4>
+Brooks, T.A. &nbsp;(2002) 
+&quot;The Semantic Web, universalist ambition and some lessons from librarianship&quot;. &nbsp; 
+<em>Information Research</em>, <strong>7</strong>(4) 
+[Available at http://InformationR.net/ir/7-4/paper136.html] 
+<br>&copy; the author, 2002. Updated 11th July 2002
+</div>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:PqnnpysUwXsJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres74.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><IMG SRC="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper136" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+
+<hr color=#ff00ff SIZE=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+<!-- Mirrored from informationr.net/ir/7-4/paper136.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:21 GMT -->
+</html>
+
+
+

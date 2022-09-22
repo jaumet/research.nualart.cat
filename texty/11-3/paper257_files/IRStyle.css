@@ -1,0 +1,137 @@
+/* IRStyle default */
+
+
+#refDisplay
+{
+	display: none; 
+	width: 600px; 
+	margin: 0 auto;
+	BACKGROUND-COLOR: #FFFFCE;
+}
+.centerImage
+{
+	text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+}
+BODY 
+{
+	TEXT-ALIGN: center;
+	FONT-FAMILY: Verdana, Helvetica, Arial, serif;
+	COLOR: #333;
+	BACKGROUND-COLOR: #FFF;
+}
+
+DIV 
+{
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetical, sans-serif;
+	FONT-SIZE: 10pt;
+	FONT-WEIGHT: bold;
+	PADDING-TOP: 5px;
+	PADDING-LEFT: 10px; 
+	PADDING-RIGHT: 10px; 
+	WIDTH: 800px; 
+	BACKGROUND-COLOR: white;
+	margin-left: auto;
+	margin-right: auto; 
+	TEXT-ALIGN: left
+}
+
+DIV.imageSet
+{
+	WIDTH: 820px;
+	margin-left: auto;
+	margin-right: auto;
+}
+SPAN.ref
+{
+	TEXT-DECORATION: underline;
+	COLOR: blue;
+	CURSOR: pointer;
+}
+
+
+IMG.floatedImageLeft
+{
+	float: left;
+}
+
+* HTML .floatedImageLeft
+{
+	margin: 0 -3px -3px ma\rgin: 0;
+}
+
+
+IMG.right
+{
+	float:right;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+span.floatedSpanLeft
+{
+	float: left;
+}
+* html .floatedSpanLeft
+{
+	margin: 0 -3px -3px ma\rgin: 0;
+}
+
+
+blockquote 
+{
+	BACKGROUND-COLOR: #FFFFCE;
+	PADDING: 10px;
+}
+
+h1
+{
+	COLOR: black;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: large;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+h2 
+{
+	COLOR: navy; 
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	FONT-SIZE: medium; 
+	FONT-STYLE: normal; 
+	FONT-WEIGHT: bold; 
+	TEXT-ALIGN: left
+}
+h3 
+{
+	COLOR: teal; 
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	FONT-SIZE: medium; 
+	FONT-STYLE: normal; 
+	FONT-WEIGHT: bold; 
+	TEXT-ALIGN: left
+}
+
+h4 
+{
+	color: maroon; 
+	FONT-FAMILY: Times, Times Roman, serif; 
+	FONT-SIZE: medium; 
+	FONT-STYLE: italic; 
+	FONT-WEIGHT: bold; 
+	TEXT-ALIGN: center 
+}
+
+p 
+{
+	COLOR: black; 
+	TEXT-ALIGN: left;
+}
+p.center
+{
+	TEXT-ALIGN: center;
+}
+
+

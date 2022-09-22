@@ -1,0 +1,249 @@
+<!doctype html system "html.dtd">
+<html>
+
+<!-- Mirrored from informationr.net/ir/2-1/paper10.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:50 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css" type="text/css">
+<title>Processing morphological variants in searches of <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>text</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="natural language, text databases, query words, recall, word variants, morphology,  retrieval <span>systems</span>, <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> truncation, information retrieval, IR, stemming <span>algorithms</span>, <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> stemmers, suffixes, humanities, <span>Latin</span>" <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>>
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> content="<span>A+</span>  <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>characteristic of natural-language text databases is that a user must be able to specify all of the variant forms of each query word if high recall is to be <span>achieved</span>. <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>  The most common type of word variants are those arising from morphology and thus most retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>provide facilities for user-controlled right-hand (and occasionally left-hand) truncation to allow the retrieval of all words with the same root.  <span>A+</span>  <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>stemming <span>algorithm</span>, <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> or stemmer, is a <span>computational</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>procedure that reduces all words with the same root to a single form by stripping the root of its derivational and inflectional affixes. In most cases, only suffixes are stripped so that a stemmer provides an automatic equivalent of manual, right-hand truncation.  Thus far, most work on stemmers has focused on present-day <span>languages</span>, <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> but the increasing user of computers in the humanities has resulted in a need for comparable <span>tools</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to facilitate searching in historical text databases.  This paper summarises some of the initial results of a project here in Sheffield to develop such <span>tools</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>for databases of <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>text.">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Processing morphological variants in searches of <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>text">
+<meta name="DC.Creator" content="Mark Greengrass, Alexander M. Robertson, Robyn Schinke,  Peter Willett">
+<meta name="DC.Subject" content="natural language, text databases, query words, recall, word variants, morphology,  retrieval <span>systems</span>, <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> truncation, information retrieval, IR, stemming <span>algorithms</span>, <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> stemmers, suffixes, humanities, <span>Latin</span>" <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>>
+<meta name="DC.Description" content="<span>A+</span>  <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>characteristic of natural-language text databases is that a user must be able to specify all of the variant forms of each query word if high recall is to be <span>achieved</span>. <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>  The most common type of word variants are those arising from morphology and thus most retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>provide facilities for user-controlled right-hand (and occasionally left-hand) truncation to allow the retrieval of all words with the same root.  <span>A+</span>  <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>stemming <span>algorithm</span>, <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> or stemmer, is a <span>computational</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>procedure that reduces all words with the same root to a single form by stripping the root of its derivational and inflectional affixes. In most cases, only suffixes are stripped so that a stemmer provides an automatic equivalent of manual, right-hand truncation.  Thus far, most work on stemmers has focused on present-day <span>languages</span>, <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> but the increasing user of computers in the humanities has resulted in a need for comparable <span>tools</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to facilitate searching in historical text databases.  This paper summarises some of the initial results of a project here in Sheffield to develop such <span>tools</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>for databases of <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>text.">
+<meta name="DC.Publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>T.D. Wilson">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 2 No. 1, August 1996</h4></td></tr>
+  <tr> 
+    <td><a href="infres21.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<a name="paper10"></a><h1>Processing morphological variants in searches of <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>text</h1>
+
+<h4><a href="mailto:M.Greengrass@sheffield.ac.uk">Mark Greengrass</a><sup>*</sup>, Alexander M. Robertson, Robyn Schinke and <a href="mailto:p.willett@shef.ac.uk">Peter Willett</a><br>
+<sup>*</sup>Department of <span>History</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>and Department of Information Studies<br>
+University of Sheffield, Sheffield, UK</h4>
+<br>
+<hr color=#ff00ff size=3>
+<br>
+<h2>Introduction</h2>
+
+<p>A characteristic of natural-language text databases is that a user must be able to specify all of the 
+variant forms of each query word if high recall is to be <span>achieved</span>. <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>  The most common type of word 
+variants are those arising from morphology and thus most retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>provide facilities for user-
+<span>controlled</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>right-hand (and occasionally left-hand) truncation to allow the retrieval of all words with 
+the same root.  <span>A+</span>  <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>stemming <span>algorithm</span>, <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> or stemmer, is a <span>computational</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>procedure that reduces all 
+words with the same root to a single form by stripping the root of its derivational and inflectional 
+affixes (<a href="#frak">Frakes, 1992</a>; <a href="#lenn">Lennon <em><em>et al.</em></em>., 1981</a>). In most cases, only suffixes are stripped so that a stemmer provides an automatic equivalent of manual, right-hand truncation.  Thus far, most work on stemmers has focused on present-day <span>languages</span>, <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> but the increasing user of computers in the humanities has resulted in a need for comparable <span>tools</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to facilitate searching in historical text databases.  This paper summarises some of the initial results of a project here in Sheffield to develop such <span>tools</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>for databases of <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>text.  Full <span>details</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of the work are presented by<a href="#schi"> Schinke <em><em>et al.</em></em>. (1996)</a>.</p>
+
+<h2>The Hartlib Papers Collection</h2>
+
+<p>The Hartlib Papers Collection of manuscripts is <span>held</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>in the Library of the University of Sheffield and 
+runs to approximately 25,000 folios.  These manuscripts <span>represent</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>the bulk of the surviving papers of 
+Samuel Hartlib (ca. 1600-1662), whose life-work was to <span>establish</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>a <span>network</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of scientific and learned 
+correspondence across Europe on a wide <span>range</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of subjects.    In 1987, the Hartlib Papers Project was 
+<span>established</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>in the University of Sheffield, this being a multi-disciplinary research team composed of 
+specialists in the field from the Departments of <span>History</span>, <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> <span>English</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>Literature and the University Library 
+(<a href="#green">Greengrass, 1993</a>; <a href="#lesl">Leslie, 1990</a>).  With funding from the British Academy and the Leverhulme Trust, the Project has been able to transcribe all of the surviving papers in Sheffield into electronic form.  The result is a database <span>containing</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>more than 100 megabytes of text that was published on <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>in 1995.</p>
+
+<p>The present project is <span>designed</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to support searches of that significant fraction, ca. 25%, of the Hartlib Papers that is in <span>Latin</span>. <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>  It might appear, at first glance, that <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>is ideally suited to searching by means of right-hand truncation, since it is an inflected language which makes <span>extensive</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>use of suffixes 
+to convey <span>syntactic</span>, <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> rather than <span>semantic</span>, <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> information about words.  In practice, however, a simple, 
+right-hand truncation <span>search</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>for a standard <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>word <span>produces</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>very poor results for two <span>principal</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>
+reasons (<a href="#schi">Schinke <em><em>et al.</em></em>., 1996</a>). </p> 
+
+<p>The first problem is that many <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>words have more than one <span>distinct</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>root, so that an effective 
+truncation <span>search</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>will be <span>achieved</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>if, and only if, the user knows all of the stems of the query word 
+and carries out several <span>separate</span>, <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> but related, searches of the database for each <span>distinct</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>query word.  
+However, the great majority of the scholars who are <span>expected</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to consult the <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>portions of the 
+Collection will not be classicists by training, and will thus be most unlikely to be able to specify all of 
+the morphological variants of their query terms that are necessary for high-recall searches.  The second 
+problem arises from the fact that not only are many <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span><span>roots</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>quite short but also many <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>words 
+with different meanings have similar <span>roots</span>. <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>  The latter two factors result in very substantial 
+overstemming, i.e., the retrieval of unrelated words that <span>occurs</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>when too short a stem remains after the 
+removal of a word’s ending(s).  The converse of this, understemming, <span>occurs</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>when too short a suffix is 
+removed (so that related words are not all conflated to the same stem).  Both problems <span>occur</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>with any 
+stemming <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>(<a href="#lovi">Lovins, 1971</a>); in the particular context of <span>Latin</span>, <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> we believe that understemming is of less importance because of the ways in which <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>text databases are used.  The nature of the stored texts implies that most users will be academic scholars - classicists, historians or philologists - who wish to retrieve texts that can answer highly specific questions, e.g., the extent to which a particular poet uses a particular phrase or the ways in which the meaning of a particular word <span>differs</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>in texts from different periods.  In such cases, understemming is <span>strongly</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to be preferred to 
+overstemming, a fact that has <span>strongly</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span><span>influenced</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>the final form of the stemmer we have developed 
+(<a href="#schi">Schinke <em><em>et al.</em></em>., 1996</a>).</p>
+
+<h2>Development Of The Stemmer</h2>
+
+<h3>Noun and verb suffixes</h3>
+
+<p>Latin words may readily be grouped into broad categories according to their part of speech and general form.  Nouns, for example, are commonly grouped into five declensions, each with reasonably <span>distinct</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>endings, and most adjectives use the suffixes of these five declensions.  However, additional <span>particles</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>are <span>added</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>adjectives when they are used in  comparisons, and certain types of verb forms, such as present and <span>future</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>participles, gerunds, and forms of the gerundive, are <span>actually</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>treated as if they were nouns and adjectives.  These con0erations lead to a final <span>list</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of 84 suffixes that are needed to stem nouns, adjectives and verbal nouns and adjectives to their correct linguistic <span>roots</span>. <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>  It is 
+similarly possible to enumerate all of the 262 suffixes that are needed to stem correctly verbs of all 
+tenses and moods, giving a total of no less than 346 suffixes that should be removed from <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>words 
+in order to stem them correctly.  Although it is straightforward to compile such a <span>list</span>, <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> its use is likely 
+to result in widespread overstemming, for the reasons given earlier.  In fact, even with a severely 
+restricted set of just 56 suffixes (25 of them relating to nouns and adjectives and 31 to verbs), our 
+initial experiments showed that overstemming occurred for about <span>one-third</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of the words in a <span>sample</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>
+<span>dictionary</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>(<a href="#schi">Schinke <em><em>et al.</em></em>., 1996</a>).  
+</p>
+
+<p>The overstemming was principally caused by the removal of suffixes relevant to verb forms from 
+nouns and adjectives (and, to a lesser extent, the removal of suffixes relevant to noun forms from 
+verbs).  This <span>finding</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>led to us to modify the <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>so that it produced two <span>separate</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>dictionaries of 
+stemmed words when it was applied to a text file.  The <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>is applied to an input query word 
+using first the set of noun suffixes (those associated with the five declensions of nouns and adjectives) 
+and the query word stemmed if a matching suffix is identified.  The set of verb suffixes (those 
+associated with the four conjugations of verbs, including deponent verbs) is then <span>checked</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>in an 
+analogous manner.  The result is that one <span>dictionary</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>contains a <span>list</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of words in which nouns and 
+adjectives are stemmed correctly, while any other words are either not stemmed at all or are stemmed 
+in such a way that they cannot be confused with nouns and adjectives.  For the second <span>dictionary</span>, <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> the 
+converse applies: verb forms are stemmed correctly, while nouns and adjectives are processed so that 
+they cannot be confused with the verb stems.  The final <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>contains 19 suffixes for stemming 
+nouns and adjectives and 25 suffixes for stemming verbs.  Nine of the latter suffixes are transformed 
+into other endings, rather than being removed <span>directly</span>, <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> to ensure that all verb forms of the same tense 
+are reduced to a common stem.  </p>
+
+<h3>Processing enclitic suffixes</h3>
+
+<p>The modified <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>was able to process correctly over 90% of the words in two large <span>sample</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>files 
+<span>drawn</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>from the Hartlib Papers database.  However, a <span>detailed</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span><span>failure</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>analysis showed that many of the 
+failures were caused by words from some of the <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>poems in the database, where the authors often 
+<span>added</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>enclitic suffixes to the ends of words <span>instead</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of using conjunctions.  There are just three enclitic 
+suffixes:  -QUE, which is used <span>instead</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of AND; -NE, which is used to <span>indicate</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>a question; and -VE, 
+which is used in place of OR.  For example, <span>instead</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of <span>writing</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>PUERI ET PUELLAE (the boys and 
+the girls), authors may write PUERI PUELLAEQUE to give the same meaning, with the addition of 
+the terminal -QUE effectively hiding the suffix -AE that <span>ought</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to be removed from the stem PUELL-.  
+It is possible to remove the three enclitic suffixes from all words before stemming starts but such a 
+simplistic approach would lead to widespread overstemming, since many words incorporate these 
+syllables as a part of their stems.  In fact, only about 5% of the Hartlib words ending in -VE or -NE 
+<span>actually</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>included an enclitic suffix that would have to be removed in order for the word to be stemmed 
+correctly.  It was hence decided to ignore the problems caused by these two enclitic suffixes and not to 
+attempt to remove them from words prior to stemming.  However, the same analysis showed that it 
+was necessary to remove the enclitic suffix from over 80% of words ending in -QUE before those 
+words could be correctly stemmed.  It is thus clear that this enclitic suffix is very widely used and that 
+it cannot simply be removed whenever it <span>occurs</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>at the end of a word (since this would still leave 
+almost a fifth of the words incorrectly stemmed).  We have thus created a <span>list</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of words from which -
+QUE should not be removed prior to stemming.</p>
+
+<h2>The implementation</h2>
+
+<p>Schinke <em><em>et al.</em></em>. (1996) describe various other <span>features</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of the <span>algorithm</span>. <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>  The most important of these 
+was the need to take account of the use of the <span>letter</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>J in place of the <span>letter</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>I that is quite common in 
+neo-classical <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>texts (although the Romans never used the <span>letter</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>J at all).  This was handled by 
+ensuring that the <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>transformed all occurrences of the <span>letter</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>J to I prior to stemming.  An 
+analogous replacement strategy was adopted for the letters V and U, which are used interchangeably in 
+neo-classical <span>Latin</span>. <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> </p>
+
+<p>The <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>has been implemented using some of the data structures and character manipulation 
+routines in the implementation of the <span>English</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>stemmer due to <a href="#port">Porter (1981)</a>, for which a C-language coding is given by <a href="#frak">Frakes (1992)</a>.  The rules used for stemming nouns and adjectives remain <span>separate</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>from those rules used to stem verb forms.  In both cases, suffixes are removed using a longest-match procedure in which just the longest suffix that matches the end of an input word is removed.  No stemming takes place if a match cannot be obtained with any of the suffixes in either of the suffix dictionaries.  By structuring the <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>in this way, it is possible to ensure that entire <span>classes</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of words in the stemmed dictionaries do not need to be processed by the retrieval routines (which are currently under development).  Thus, the set of suffixes that are common to nouns and adjectives does not include any suffixes which are relevant to verbs, and thus verb forms cannot be reduced to any stem which might be <span>identical</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to the stem of a noun or adjective.  Likewise, the set of suffixes relevant to verb forms either allows nouns and adjectives to remain intact, or stems them in such a way that stems cannot be produced that are <span>identical</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to those of verb forms.  The aim of this approach is to ensure that the two <span>main</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span><span>classes</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of words are stemmed in an appropriate manner but without the need for the <span>extensive</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>linguistic processing that would be required to identify the parts of speech for each of the words in a text that was to be stemmed. </p>
+
+<h2>Conclusions</h2>
+
+<p>In this paper, we have described the <span>main</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span><span>features</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of a stemming <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>we have developed to 
+facilitate searches of <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>text databases.  There are two <span>major</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span><span>features</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of our <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>that 
+differentiate it from other stemmers that have been described in the literature (<a href="#frak">Frakes, 1992</a>; <a href="#lenn">Lennon <em>et al.</em>., 1981</a>).  Firstly, the <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>generates two stem dictionaries.  This it does by using two sets of stemming rules which keep nouns and adjectives <span>separate</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>from verb forms by default, but without the need to encode the parts of speech for the words that are to be stemmed.  Secondly, the policy of deliberately understemming many words leaves enough <span>grammatical</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>information attached to the resultant word stems to enable the <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to <span>distinguish</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>easily between different words with similar <span>roots</span>. <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>  In addition, this <span>feature</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>enables very specific searches to be carried out for single <span>grammatical</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>forms of some types of words, an important requirement for the <span>intended</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>users of the procedure.  </p>
+
+<p>Thus far, we have con0ered only the stemming of individual words.  We are now developing a 
+retrieval system that will enable a user to present just a single query <span>term</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>to a database and then be 
+presented with a <span>list</span>  <span class="quali" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>of all of the morphological variants of that <span>term</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>that <span>occur</span>  <span class="exper" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>in the database; these 
+variants can then be included in the query.   </p>
+
+<h2>Acknowledgements  </h2>
+<p>This work was funded by the British Library Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>Department and the Library of the University of Sheffield.</p>  
+
+<h2>References</h2>
+
+<ul>
+<li><a name="frak">Frakes, W.B. </a>(1992).  Stemming <span>algorithms</span>. <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>  In: Frakes, W.B. and Baeze-Yates, <span>R++</span>. <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span> (editors) Information Retrieval: Data Structures and Algorithms.  Englewood Cliffs: Prentice-Hall, pp. 131-160.
+<li><a name="green">Greengrass, M. </a>(1993).  Samuel Hartlib: "intelligenceur" européen.  Diffusion du savoir et affrontement des idées, 1600-1770, Festival d’Histoire de Montbrison, 30 Septembre-4 Octobre 1992, pp. 213-234.
+<li><a name="lenn">Lennon, M.,</a> Peirce, D.S., Tarry, B.D. and Willett, P. (1981).  An evaluation of some conflation <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>for information retrieval.  Journal of Information Science, 3, 177-183.
+<li><a name="lesl">Leslie, M. </a>(1990). The Hartlib Papers Project: text retrieval in large datasets.  Literary and <span>Linguistic</span>  <span class="conce" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>Computing, 5, 58-69.
+<li><a name="lovi">Lovins, <span>J++</span>. <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>B. (1971).</a>  Error evaluation for stemming <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>as clustering <span>algorithms</span>. <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>  Journal of the American Society for Information Science, 22, 28-40.
+<li><a name="port">Porter, M.F.</a> (1980).  An <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>for suffix stripping.  Program, 14, 130-137.
+<li><a name="schi">Schinke, <span>R++</span>. <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>,</a> Greengrass, M., Robertson, <span>A+</span>. <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>M. and Willett, P. (1996).  <span>A+</span>  <span class="compus" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>stemming <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>for <span>Latin</span>  <span class="quanti" style="width:1px;border-width:54px 18px 54px 18px;position:relative;">.</span>text databases.  Journal of Documentation, 52, 172-187
+</ul>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+
+<p style="text-align : left; color : black;">Greengrass, Mark, Robertson, Alexander M.,  Schinke, Robyn &amp; Willett, Peter   (1996) &nbsp; &quot;&quot;. &nbsp;Information 
+Research, <strong>2</strong>(1)  Available at: http://InformationR.net/ir/2-1/paper10.html</p>
+
+<p style="text-align : center">&copy; the authors, 1996. </p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:TXvoieitOD0J:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres21.html"><h3>Contents</h3></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper10" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 13 December 2002</h5></td>
+    <td><a href="../index.html"><h3>Home</h3></a></td>
+  </tr>
+</table>	
+<hr color=#ff00ff size=3>		
+ <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/2-1/paper10.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:50 GMT -->
+</html>

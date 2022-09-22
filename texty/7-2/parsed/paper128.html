@@ -1,0 +1,996 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<!-- Mirrored from informationr.net/ir/7-2/paper128.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:13:54 GMT -->
+<head>
+<title></title>
+<link rel="stylesheet" href="../IRstyle.css">
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="<span>Microsoft</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>Word 97">
+   <title>Compounds in dictionary-based Cross-language information retrieval_revised</title>
+   <script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center" colspan="5"><h4>Information Research, Vol. 7 No. 2, January 2002,</h4></td></tr>
+  <tr> 
+    <td><a href="infres72.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3>
+
+
+<h1>Compounds in dictionary-based cross-language information retrieval</h1>
+
+
+<h4><a href="mailto:hedlund@shh.fi">Turid Hedlund<br>
+</a>Department of Information Studies<br>
+University of Tampere<br>
+Finland</h4>
+
+<br>
+<div align="center" style="font-family: sans-serif; font-size: medium; font-weight: bold;"><b>Abstract</b></div>
+
+<br>
+
+<blockquote>Compound words form an important part of natural language.
+From the cross-lingual information retrieval (CLIR) point of view it is
+important that many natural <span>languages</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>are highly productive with compounds,
+and translation resources cannot include <span>entries</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for all compounds. Also,
+compounds are often content bearing words in a <span>sentence</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> In Swedish, German
+and Finnish roughly one tenth of the words in a text prepared for information
+retrieval <span>purposes</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>are compounds. Important research questions concerning
+compound handling in dictionary-based cross-language information retrieval
+are 1) compound splitting into components, 2) normalisation of components,
+3) translation of components and 4) query structuring for compounds and
+their components in the target language. The impact of compound processing
+on the <span>performance</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of the cross-language information retrieval process
+is evaluated in this study and the results <span>indicate</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>that the effect is
+clearly positive.</blockquote> 
+<br>
+
+<h2>Introduction</h2>
+
+<p>Cross-language information retrieval (CLIR) deals with the problem of presenting
+a query in one language and retrieving <span>documents</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in one or several other
+<span>languages</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> The use of natural language in topics and <span>documents</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>makes it
+obvious that many of the research questions <span>deal</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>with aspects of word morphology
+and <span>semantics</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>(<a href="#Strzalkowski99">Strzalkowski <em>et al.</em> 1999</a>; <a href="#Smeaton99">Smeaton 1999</a>).
+Compound words form an important part of natural language, since compounding
+is a <span>major</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>way of forming new words. From the information retrieval (IR)
+point of view, compounds may be content bearing words in natural language
+<span>sentences</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and therefore important for the retrieval result. Compound words
+have been discussed in the <span>main</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>forums for research and evaluation on cross-language
+information retrieval <span>systems</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> the TREC conferences and the CLEF evaluation
+forum <a href="#BM1">(1</a>). The problem with compound handling for cross-language
+information retrieval is acknowledged for many <span>languages</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> but we still
+<span>lack</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>research results on the importance and effects to the retrieval result
+of compound handling in natural language queries. In this study compound
+words are analysed from the cross-language information retrieval <span>perspective</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>
+<span>Methods</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of handling compounds in an automated process as well as the effects
+of compound handling on retrieval results are presented.</p>
+
+<p>Since natural language cross-language information retrieval is faced
+with the task of identifying, normalising, translating and matching query
+words to the database index, linguistic <span>tools</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and linguistic analysis are
+in use. <span>Natural</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>language analysis <span>tools</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>are also <span>extended</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in information
+retrieval and cross-language information retrieval <span>applications</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>also to
+a sub-word level, e.g., morphological analysers are used for the decomposing
+of compounds and normalisation of words (<a href="#Sparck99">Sparck
+Jones 1999</a>). Normalization of words is a way to improve recall also
+in monolingual information retrieval. By reducing the number of word forms,
+more successful matches can be made (<a href="#Strzalkowski95">Strzalkowski
+1995</a>). Stemming <span>algorithms</span>, <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> able to produce word stems, are used for
+the same purpose (<a href="#Porter80">Porter 1980</a>).</p>
+
+<p>A general <span>introduction</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to compounds and their relevance from an information
+retrieval <span>perspective</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>is presented in Section 2. In dictionary-based cross-language
+information retrieval, stemming or normalisation of words to base forms
+using morphological analysis programs is necessary to be able to match
+the right <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>entry. Typically in Germanic <span>languages</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>(for example,
+Swedish, Norwegian, Danish, German and Dutch) the compounds are joined
+by special elements, "fogemorphemes" (<a href="#Hedlund01a">Hedlund
+<em>et al.</em> 2001a</a>). However, splitting compounds into <span>constituents</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>using
+morphological analysis programs does not <span>necessarily</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>produce <span>lexical</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>base
+form words due to the use of "fogemorphemes", inflection, and word stems
+to join compounds. Section 3 provides a <span>description</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of compound formation
+in three compound <span>languages</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> Swedish, German and Finnish, the first two
+being Germanic <span>languages</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>while Finnish is a Fenno-Ugrian language.</p>
+
+<p>If one cannot translate a compound as a whole, one does not normally
+get a one-to-one translation for each component in a compound, but rather
+several alternative <span>translations</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> Also, a component might remain untranslated
+due to limitations in the lexicon of the morphological analyser or a translation
+<span>dictionary</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> It may also be a proper name or a spelling variant of a proper
+name, or a spelling <span>error</span>. <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> Components might also remain untranslated as
+described above due to fogemorphemes and inflection.</p>
+
+<p>For compounds <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>more than two components we can in many cases
+identify compounds within the original compound. For example the German
+compound "<i>Universit&auml;tshochhaus" </i>contains the compound "<i>hochhaus</i>"
+(<a href="#Warren78">Warren 1978</a>).</p>
+
+<p>Compound based structuring and the use of proximity operators have been
+tested for several language pairs at the University of Tampere by Pirkola
+(<a href="#Pirkola98">1998</a>), and Hedlund <em>et al.</em>
+
+(<a href="#Hedlund01b"> 2001b</a>; <a href="#Hedlund01c">2001c</a>).
+<span>Methods</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for component processing, handling fogemorphemes and the use of
+proximity operators are presented in Section 4, <span>followed</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>by a discussion
+in Section 5 on the relevance of the <span>findings</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and their importance to cross-language
+information retrieval research.</p>
+
+
+<h2>Compound <span>definitions</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> categories and relevance from an information retrieval perspective</h2>
+
+<p>Compounds can be defined according to orthography (<a href="#Akmajian97">Akmajian
+<em>et al.</em> 1997</a>), <span>namely</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>compounds where the components are written together
+and compounds in the form of phrases. The way to form compounds, that is,
+joining words together into one word or having them separated as a phrase
+is a language dependent <span>feature</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> Swedish, German, Dutch and many other
+Germanic <span>languages</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>belong</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to the former type, likewise Finnish (a Fenno-Ugric
+language), while <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and French are examples of the latter one. In
+this study, the <span>term</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><i>compound</i> <span>refers</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to a case where the components
+are written together. The <span>term</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><i>phrase</i> <span>refers</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to a case where components
+are written separately.</p>
+
+<p>What is important for <span>purposes</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of information retrieval is the categorisation
+according to the part of speech of the components. The combinations are
+numerous, we can identify noun - noun (raindrop), adjective - noun (bluebell),
+adjective - adjective (light green), noun - verb (heart-broken), preposition
+- verb (over-ride) as common combinations but also many others. The part
+of speech of the compound is normally defined on the basis of the last
+component (<a href="#Malmgren94">Malmgren 1994</a>; <a href="#Akmajian97">Akmajian
+<em>et al.</em> 1997</a>). From the information retrieval point of view nouns and
+combinations <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>nouns are often content-bearing words and therefore
+mo! st! important. The <span>syntactic</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>structure of compounds, components within
+components, and the left- or right-branching structure are used for compound
+handling <span>strategies</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in this study. Compounds also have a paradigmatic structure,
+e.g., berry is a hyperonym of several types of berries (blueberry, strawberry).</p>
+
+<p>Compounds are used to form new words in a language and are therefore
+productive. The word formation process is complex and different stages
+can be identified. We have <b>occasional compounds</b> that are used to
+<span>express</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>a specific thing or process, e.g., (<i>skolbokshylla, </i>a Swedish
+word for a shelf <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>school</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>books). When forming a new concept as
+a compound, the <span>semantic</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>structure is often <b>transparent </b>or <b>compositional
+
+</b>(<a href="#Malmgren94">Malmgren
+1994</a>). The meaning of the compositional compounds can be derived from
+the meanings of their components, e.g., <i>Handelsvertrag, </i>a German
+word for trade agreement where the components are <i>Handel </i>(trade)
+and <i>Vertrag </i>(agreement).</p>
+
+<p>When a compound is <span>frequently</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>used in a language the denotation of the
+original transparent compound is sometimes transformed into a special concept.
+In Finnish the word refrigerator is <i>j&auml;&auml;kaappi </i>(<i>j&auml;&auml;
+
+= </i>ice and <i>kaappi =</i> cupboard), which is no longer a cupboard
+<span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>ice, but has the special meaning of refrigerator. The compound
+is stable and is no longer an occasional compound.</p>
+
+<p>Compounds where the meaning of the compound cannot be derived directly
+from the meanings of the components are <b>opaque </b>or<b> non-compositional</b>,
+e.g., the <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>word <i>strawberry </i>and the Swedish word <i>jordgubbe</i>
+
+(meaning strawberry). The word for towel in German <i>Handtuch</i> (hand
+cloth or towel) is opaque to a certain <span>degree</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>but we can identify a semantic
+relationship to the components forming the compound. This is quite a usual
+pattern for compounds and completely opaque compounds are not very common
+(<a href="#Fleischer92">Fleischer &amp; Barz 1992</a>). Opaque compounds
+denote in many cases common concepts and are therefore <b>lexicalised</b>
+and can often be found in dictionaries.</p>
+
+<p>From the information retrieval point of view and especially for the
+translation process in cross-language information retrieval using dictionaries
+the categorisation presented above is important. Occasional compounds rarely
+appear as <span>entries</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in translation dictionaries, transparent compounds may
+appear as <span>entries</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in comprehensive dictionaries or dictionaries created
+for a special <span>domain</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> The word <i>Handelsvertrag </i>(trade agreement)
+is most certainly appears in a <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of economics, whereas frequent
+opaque and lexicalised compounds often appear as <span>entries</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>even in small
+general translation dictionaries.</p>
+
+<p>For the above-mentioned reasons we need ways to handle compounds in
+dictionary-based cross-language information retrieval when they cannot
+be <span>directly</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>translated</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> <span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>solution is to split the compounds into components
+and translate them separately since the components can be seen as contents
+bearers from the information retrieval point of view. This holds for many
+transparent and occasional compounds. In many cases the splitting of non-compositional
+compounds and translating the components often increases ambiguity, and
+adds no value to the retrieval <span>performance</span>. <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> The automatic translation process
+(below) is <span>designed</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to work in a way similar to human understanding
+of language. If a compound word is found in the <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>it will be <span>translated</span>, <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>
+and only if not will the process of splitting it into components and translating
+them take place.</p>
+
+<h2>Compound formation in Swedish, German and Finnish</font></h2>
+
+<p>The simplest form of compound formation is to join two word stems, base
+forms or inflected forms, e.g., the Swedish word, <i>livb&aring;t, </i>(lifeboat)
+of <i>liv </i>(life) and <i>b&aring;t </i>(boat). This new word can in
+turn be joined to form other words, e.g., <i>livb&aring;tsbes&auml;ttning</i>
+
+(lifeboat crew). The German word <i>Welthandel </i>(world trade) is formed
+from <i>Welt</i> (world) and <i>Handel </i>(trade) and is a part of a compound
+<i>Welthandelsorganisation</i>(world trade organization). Similarly the Finnish word <i>Lentokoneonnettomuus</i>
+(air plane accident) is <span>formed</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of the three components <i>lento </i>(flight)
+<i>kone</i>(machine) and <i>onnettomuus </i>(accident). Note that in Swedish and German the
+fogemorpheme "s" is used to join the <span>constituents</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>(see <span>Figure</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>1). Several components in
+a compound usually <span>indicate</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>that the compound is occasional. In <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>compounds in the form of phrases
+are common, as can be seen in the <span>translations</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of the examples above.</p>
+
+<div align="center"><img src="p128fig1.jpg" width="670" height="492" border="0" alt=""></div>
+
+<div align="center">Figure 1. Examples of compound noun formation in Swedish, German and Finnish</div>
+
+<p>The use of fogemorphemes to join compound is <span>typical</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of the Germanic
+<span>languages</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> In Swedish the fogemorpheme types are as follows:<br>
+<br><i>- (omission)__ flick(a)namn</i> (maiden name)
+<br><i>-s______r&auml;tt<b>s</b>fall </i>(legal case)
+<br><i>-e_____ flick<b><u>e</u></b>barn </i>(female child)
+
+<br><i>-a_____ g&auml;st<b><u>a</u></b>bud </i>(feast, banquet)
+<br><i>-u_____ gat<b><u>u</u></b>belysning </i>(street lighting)
+<br><i>-o_____ m&auml;nnisk<b><u>o</u></b>k&auml;rlek</i> (love of mankind)
+<br>&nbsp;
+
+<p>Sometimes the component preceding the fogemorpheme is a stem, e.g.,
+<i>gat(a)</i>
+sometimes a base form, e.g., <i>r&auml;tt. </i>From the information retrieval
+point of view, proper weighting of index terms and effective matching require
+that fogemorphemes be handled and correct base forms of component words
+identified.
+<p>In German the most common fogemorpheme types are:<br>
+<br><i>-s_____ Handel<b><u>s</u></b>vertrag </i>(trade agreement)
+<br><i>-n_____ Affe<b><u>n</u></b>haus</i> (monkey house)
+
+<br><i>-e_____ G&auml;st<b><u>e</u></b>bett </i>(guest bed)
+<br><i>-en____ Fotograph<b><u>en</u></b>ausbildung </i>(training of photographers)
+<br><i>-er____ Gespenst<b><u>er</u></b>haus </i>(ghost house or haunted
+house)
+<br><i>-es____ Freund<b><u>es</u></b>kreis </i>(circle of friends)
+
+<br><i>-ens___ Herz<b><u>ens</u></b>brecher </i>(hearthbreaker)
+<br><i>- (omission)__ Sprach(e)wissenschaft </i>(linguistics)</p>
+
+<p>The morpheme boundaries of the <span>constituents</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in a compound are called
+fogemorphemes in Swedish, Fuge-elements in German. They mark the elements
+of one constituent and the following constituent in a compound and are
+mostly connected with nouns and sometimes verbs as the first element of
+a compound. For the use of fogemorphemes some rules can be established
+but there is no complete scheme for how the components are connected (<a href="#Fleischer92">Fleischer
+&amp; Barz 1992</a>). They are historically often derived from plurals,
+from oblique case suffixes and combinations of the two.</p>
+
+<p>Although there are no fogemorphemes in the Finnish language, compound
+splitting can still produce components in inflected forms or in the form
+of derivatives. For example the compound noun <i>tupakastavieroituskurssi
+
+</i>(course
+to break the habit of smoking) includes the components <i>tupakasta
+</i>(an
+inflected form of <i>tupakka = </i>tobacco), <i>vieroitus </i>(wean, a
+derived form of <i>vieroittaa </i>= wean, to break a habit) and <i>kurssi
+</i>(a
+base form for course).</p>
+
+<p>To give an indication of the frequency of compounds in text for different
+<span>languages</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>a <span>sample</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of 100,000 words of newspaper text was collected for
+each language (Swedish, Finnish and German) in this study. The text corpus
+was processed in a way similar to building up a document database index.
+Stop words, that is, frequent words, e.g. articles and pronouns in the
+text were <span>eliminated</span>. <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> Then the text was processed by a morphological analyser,
+and the criteria for a compound was that it could be separated into constituents
+by a morphological analyser. The <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>indicated that for Finnish 8.7%,
+for Swedish 9.8% and for German 10.2% of the words are compounds.</p>
+
+<p>We can clearly see common patterns in compound formation in the three
+different <span>languages</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> The Germanic <span>languages</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> Swedish and German, naturally
+have more in common, but for information retrieval or cross-language information
+retrieval <span>purposes</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>solutions for how to handle compounds may to some extent
+be language independent. In information retrieval and cross-language information
+retrieval we need to identify compound components for translation, and
+that means con0ering how to handle fogemorphemes, word stems and inflected
+word forms. In the following section compounds are processed for a bilingual
+translation process.</p>
+
+<h2>Compound processing for bilingual cross-language information retrieval</h2>
+
+<p>The problems with compounds and compound splitting in Germanic languages
+(German, Dutch, Swedish) were mentioned as important in several papers
+presented at the Cross-language Evaluation Forum (2001). Generally compound
+splitting and the translation of components is found to improve retrieval
+results (<a href="#Savoy01">Savoy 2001</a>; <a href="#Kraaij01">Kraaij
+2001</a>; <a href="#Riplinger01">Riplinger 2001</a>; <a href="#Hedlund01c">Hedlund
+<em>et al.</em>2001c</a>).</p>
+
+<p>In this section problems and <span>solutions</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to three important questions
+concerning compounds in <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>based cross-language information retrieval
+are discussed. They are 1) normalisation, 2) translation of components
+and 3) query structuring of components in the target language. Since the
+impact of compound processing on the <span>actual</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>query process is of interest,
+evaluation results for this way of processing compounds will be presented.</p>
+
+<p>The <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>settings in this study are:</p>
+
+<ul><li>CLEF- 2000 <span>topic</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>set in Swedish, Finnish and German (33 queries), http://www.iei.pi.cnr.it/DELOS/CLEF/</li>
+<li><li>CLEF- 2001 <span>topic</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>set in Swedish, Finnish and German (47 queries), http://www.iei.pi.cnr.it/DELOS/CLEF/</li>
+<li>LA Times <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>document <span>collection</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>provided by CLEF</li></ul>
+
+<p>Other resources:</p>
+
+<ul>
+<li>Motcom Swedish - <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>translation <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>(60,000 entries) by Kielikone plc. Finland</li>
+<li>Motcom Finnish - <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>translation <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>(110,000 entries) by Kielikone plc. Finland</li>
+<li>Oxford Duden German - <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>translation <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>(260,000 entries)</li>
+<li>Morphological analysers: SWETWOL, FINTWOL, GERTWOL and ENGTWOL by Lingsoft plc. Finland</li>
+<li>InQuery retrieval system, Center for Intelligent Information Retrieval at the University of Massachusetts.</li>
+</ul>
+
+
+<h3>Normalisation of components</h3>
+
+<p>Morphological analysers used to decompose compounds into <span>constituents</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>are
+effective, but do not <span>necessarily</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>present the <span>constituents</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in base forms.
+This is especially the case with analysers for Germanic <span>languages</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>with
+fogemorphemes, but also words <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>components that are stems or inflected
+word forms are not automatically normalised and presented in base forms.
+<p>Fogemorpheme <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to transform the output of morphological analyzers
+to base form words have been tested for Swedish - <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>translations
+using CLEF 2000 Swedish <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>queries (<a href="#Hedlund01b">Hedlund et
+al. 2001b</a>). The <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>are able to handle only the most common
+fogemorphemes. Table 1, presents the translation results of a <span>sample</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of
+10 compounds including fogemorphemes is presented.</p>
+<br>
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=7 WIDTH="562">
+<caption align="bottom"><br><strong>Table 1: Sample normalisations of compound components</strong></caption>
+<tr>
+<th VALIGN="top" WIDTH="33%">Swedish compoundn</th>
+<th VALIGN="top" WIDTH="33%">Normalised components</th>
+<th VALIGN="top" WIDTH="33%">English translation</th></tr>
+
+<tr><td VALIGN="top" WIDTH="33%">medlems|land</td>
+<td VALIGN="top" WIDTH="33%">medlem land</td>
+<td VALIGN="top" WIDTH="33%">member country<br>member land</td></tr>
+<tr><td VALIGN="top" WIDTH="33%">befolknings|konferens</td>
+<td VALIGN="top" WIDTH="33%">befolkning konferens</td>
+<td VALIGN="top" WIDTH="33%">population conference</td></tr>
+<tr><td VALIGN="top" WIDTH="33%">v&auml;rlds|marknaden&nbsp;</td>
+<td VALIGN="top" WIDTH="33%">v&auml;rld marknad</td>
+
+<td VALIGN="top" WIDTH="33%">world market</td></tr>
+<tr><td VALIGN="top" WIDTH="33%">brand|bek&auml;mpnings|olyckor</td>
+<td VALIGN="top" WIDTH="33%">brand bek&auml;mpning olycka</td>
+<td VALIGN="top" WIDTH="33%">fire bek&auml;mpning accident</td></tr>
+<tr><td VALIGN="top" WIDTH="33%">samarbets|omr&aring;de</td>
+<td VALIGN="top" WIDTH="33%">samarbet omr&aring;de</td>
+
+<td VALIGN="top" WIDTH="33%">samarbet area</td></tr>
+<tr><td VALIGN="top" WIDTH="33%">flyg|plans|olyckor</td>
+<td VALIGN="top" WIDTH="33%">flyg plan olycka</td>
+<td VALIGN="top" WIDTH="33%">aviation plane accident</td></tr>
+<tr><td VALIGN="top" WIDTH="33%">v&auml;rlds|handels|organisation</td>
+<td VALIGN="top" WIDTH="33%">v&auml;rld handel organisation</td>
+<td VALIGN="top" WIDTH="33%">world trade organisation</td></tr>
+<tr><td VALIGN="top" WIDTH="33%">undervisnings|metod</td>
+
+<td VALIGN="top" WIDTH="33%">undervisning metod</td>
+<td VALIGN="top" WIDTH="33%">education method<br>educational method</td></tr>
+<tr><td VALIGN="top" WIDTH="33%">varu|hus|tak</td>
+<td VALIGN="top" WIDTH="33%">vara hus tak</td>
+<td VALIGN="top" WIDTH="33%">goods building roof<br>article building roof</td></tr>
+</table>
+
+<p>The <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>fails to normalise the component <i>samarbets</i> (samarbet
+is a word stem) to the right base form <i>samarbete</i> (co-operation)
+and for the word <i>bek&auml;mpning</i> the <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>did not provide
+any translation. In some examples, the sense of the Swedish compound does
+not transform into a correct <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>phrase although components are found
+in the <span>dictionary</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> We <span>obtain</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>nonsense combinations like "aviation plane
+accident","article building roof", "goods building roof". The reason for
+this is that the Swedish compounds contain non-compositional compounds
+as components <i>flygplan</i> (aeroplane) and <i>varuhus</i> (department
+store). This <span>phenomenon</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>is discussed later in Section 4.2. However, the
+<span>algorithm</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>developed and used for handling fogemorphemes, obviously reduces
+the number of non-translated components.</p>
+
+<p>Two different automatic <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>runs, (<a href="#BM4">4</a>) one using
+the fogemorpheme <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and one without it were performed with the CLEF
+2000 <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>set of Swedish topics and the <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>document database provided
+by CLEF. The average precision rates over 11 recall levels from 0 to 100
+for the eleven queries <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>fogemorphemes <span>indicate</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>a slight effect
+on the result (Table 2).</p>
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=7 WIDTH="472">
+<caption align="bottom"><br><strong>Table 2: The effect of the fogemorpheme algorithm</strong></caption>
+<tr>
+<th VALIGN=TOP WIDTH="37%">Data set</th>
+<th VALIGN=TOP COLSPAN="2" WIDTH="63%">Average precision over recall levels</th></tr>
+<tr><td VALIGN=TOP WIDTH="37%"><em>Queries <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>fogemorphemes</em></td>
+<td VALIGN=TOP WIDTH="31%"><em>Fogemorpheme <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>used</em></td>
+
+<td VALIGN=TOP WIDTH="32%"><em>Fogemorphemealgorithm not used</em></td></tr>
+<tr><td VALIGN=TOP WIDTH="37%">Swedish queries <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>fogemorphemes (N=11)</td>
+<td VALIGN=TOP WIDTH="31%">0,2898</td>
+<td VALIGN=TOP WIDTH="32%">0,2711</td></tr>
+</table>
+
+
+<p>For individual queries the effect <span>depends</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>on whether the translated
+compound components can <span>express</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>the sense of the original word in the translation.
+For non-compositional compounds the effect of compound splitting and fogemorpheme
+handling does not have any effect, or the effect is negative, since additional
+<span>translations</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>add noise to the query. However, since we are dealing with
+<span>constituents</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of compounds the <span>actual</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>effect on the <span>search</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>result also depends
+on other factors, such as to what extent the <span>constituents</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>are important
+<span>topic</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>words. <span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>similar <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for German has been developed and used
+in dictionary-based cross-language information retrieval <span>tests</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>(<a href="#Hedlund01c">Hedlund
+<em>et al.</em> 2001c</a>).</p>
+
+<p>The inflected word forms appearing as <span>constituents</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> e.g., the Finnish
+word <i>ymp&auml;rist&ouml;n|suojelu </i>(environment protection), where
+the first component is the genitive form of <i>ymp&auml;rist&ouml; </i>(environment),
+also need to be normalised to base form in order to match the <span>entries</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of
+a translation <span>dictionary</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> <span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>morphological analyser can be helpful in this
+case, by normalising the compound components to base forms in a two-stage
+process. The original compound is first decomposed into components and
+then the single components are normalised.</p>
+
+<p>By applying these two <span>features</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to a system for compound processing the
+majority of the compounds can be handled for translation. The unsolved
+problem with component normalisation is word stems and other irregularities
+in compound formation; they cannot be handled <span>easily</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in an automated process.</p>
+
+
+<h3>Component translation and structuring of queries</h3>
+
+<p>A problem with splitting compounds in cross-language information retrieval
+is to find an optimal solution as to how to combine the translation alternatives
+in the final query structure. This is especially true for multi-compositional
+compounds (three or more components). Multi-compositional compounds are
+quite <span>frequently</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>used in text. For example, the Swedish word <i>metangasfyndigheter
+</i>(deposits
+for methane gas) is composed of three components, <i>metan <span>gas</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>fyndigheter
+</i>(deposits).
+<span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>general Swedish - <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>dictionary gives the following translations
+(Table 3).</p>
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=7 WIDTH="300">
+<caption align="bottom"><br><strong>Table 3: Sample <span>translations</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>from Swedish to English</strong></caption>
+<tr>
+<th VALIGN=TOP WIDTH="40%">Swedish</th>
+<th VALIGN=TOP WIDTH="60%">English</th></tr>
+<tr>
+
+<td VALIGN=TOP WIDTH="40%">metan</td>
+<td VALIGN=TOP WIDTH="60%">methane</td></tr>
+<tr>
+<td VALIGN=TOP WIDTH="40%">gas</td>
+<td VALIGN=TOP WIDTH="60%">gas<br>gauze</td></tr>
+<tr>
+<td VALIGN=TOP WIDTH="40%">fyndighet</td>
+<td VALIGN=TOP WIDTH="60%">deposit</td>
+</tr>
+</table>
+
+<p>A solution using structuring of the translation alternatives for Finnish
+to <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>CLIR was originally developed by Pirkola (<a href="#Pirkola98">1998</a>).
+It includes the translation of every component and combining each translation
+equivalent to each other using a proximity operator. The proximity statements
+are joined using the syn-operator of the InQuery retrieval system. Different
+grouping <span>strategies</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of components in <span>combination</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>with a proximity structure
+have been used in later CLIR studies by Hedlund <em>et al.</em> (<a href="#Hedlund01b">2001b</a>;
+<a href="#Hedlund01c">2001c</a>).</p>
+
+<p>For the example key above, the initial query structure used in Hedlund
+<em>et al.</em> (<a href="#Hedlund01b">2001b</a>) combines all the component translations
+in a synonym structure using a strict word order operator "OD" and a proximity
+operator 5 allowing the window size to span enveloping 6 words (<a href="#BM2">2</a>).
+See <span>Figure</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>2. For proximity operators see Section 4.3.</p>
+
+<blockquote>#syn(#od5(methane <span>gas</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>deposit) #od5(methane gauze deposit)).</blockquote>
+
+<div align="center"><img src="p128fig2.jpg" width="328" height="211" border="0" alt=""></div>
+
+<div align="center">Figure 2: Query structure for the three component compound</div>
+
+<p>This construction when matched to a document database index requires
+that all words in the construction in this <span>exact</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>order match the document
+index. It would thus not be able to retrieve a paraphrased version of the
+concept, e.g., "deposit of methane <span>gas</span>" <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> or the word <span>pair</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>"methane <span>gas</span>" <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>.
+In the worst case this might affect the retrieval result negatively due
+to no matches for this concept.</p>
+
+<p>The <span>syntactic</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>structure of a compound can almost always be <span>divided</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>into
+two <span>main</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>constituents</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> These may in turn be made up of compounds or other
+complex <span>units</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>(<a href="#Malmgren94">Malmgren 1994</a>; <a href="#Warren78">Warren
+1978</a>). The structure is either left branching or right branching (see
+<span>Figure</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>3). An alternative, according to the above mentioned structure is
+to group the components into pairs of consecutive components in order to
+form meaningful pairs. This has been and tested by Hedlund <em>et al.</em>(<a href="#Hedlund01c">2001c</a>).</p>
+
+<div align="center"><img src="p128fig3.jpg" width="671" height="242" border="0" alt=""></div>
+
+<div align="center">Figure 3. Left branched and right branched compound structure.</div>
+
+<p>The previous example grouped into consecutive pairs would be as follows.
+Note that also the word order operator is changed to unordered window (UW):</p>
+
+<blockquote>#syn(#uw5(methane gas) #uw5(methane gauze) #uw5(gas deposit)
+#uw5(gauze deposit).</blockquote>
+
+<blockquote>More <span>formally</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>this is expressed as follows:</blockquote>
+
+<blockquote>Compound word = <i>CW </i>[<i>comp<sub>1</sub></i>+<i>comp<sub>2</sub></i>+<i>comp<sub>3</sub></i>+...<i>comp<sub>n</sub></i>]</blockquote>
+
+<blockquote>Consecutive pairs, <i>(i,i+1)</i> are <span>formed</span>, <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> <i>i</i>=1...<i>n</i>-1</blockquote>
+
+<blockquote>where <i>n </i>is the number of components.</blockquote>
+
+<p>The other aspect, also discussed in Section 3, is that compounds in many
+cases also contain components that themselves are compounds. These are
+<span>naturally</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>consecutive. In the above example both the components <i>metan</i> and <i>gas</i> form
+the compound <i>metangas</i> and the components <i>gas</i> and <i>fyndighet</i> form the compound <i>gasfyndighet </i> (gas deposit).  In an earlier study by Hedlund <em>et al.</em> (<a href="#Hedlund01c"> 2001c</a>) our attempt was made to translate all component pairs <span>directly</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>by looking them up in a translation <span>dictionary</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> For example, if the words
+
+<i>metangas</i> and <i>gasfyndighet</i> can be <span>translated</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to methane <span>gas</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and <span>gas</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>deposit, the query formulation
+would be like this:</p>
+
+<blockquote>#syn(#uw5(methane gas) #uw5(gas deposit)).</blockquote>
+
+<p>Another problem with compounds is that not all components are included in a <span>dictionary</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> for example in Section 4.1, Table 1, the Swedish compound <i>brandbek&auml;mpningsolyckor</i> (accidents in fire fighting). The components are <i>brand</i> (fire) <i>bek&auml;mpning</i> (fighting) <i>olyckor</i> (accidents, conflagrations). In this case the word <i>bek&auml;mpning</i> is not <span>translated</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>by a <span>sample</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>dictionary</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> Combinations including a word in a foreign language
+do not usually retrieve any <span>documents</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span></p>
+
+<blockquote>#syn (#uw5(fire bek&auml;mpning) #uw5(bek&auml;mpning accident)
+#uw5(bek&auml;mpning conflagration))</blockquote>
+
+<p>Moving the untranslatable component <span>out0e</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>the proximity construction
+can be helpful for the matching process.</p>
+
+<blockquote>#syn(bek&auml;mpning #uw5(fire accident) #uw5(fire conflagration)).</blockquote>
+
+<p>The idea of still having it as part of the SYN construction is that if it is a proper name or a loan word the matching with the document database could still take place.</p> 
+
+<p>The <span>phenomenon</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of untranslatable <span>constituents</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in compounds is of immediate
+interest for several <span>source</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>languages</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>used in dictionary-based bilingual
+cross-language information retrieval. In a <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>with Finnish queries in
+an <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>document database (47 <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>queries from the CLEF 2001 collection)
+the effect is hardly noticeable in the average precision over recall values
+for all the queries. However, for some individual queries <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>untranslated
+compound components the effect is greater (see Table 3).</p>
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=7 WIDTH="568" >
+<caption align="bottom"><br><strong>Table 4: <span>Test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>with Finnish-English CLIR, for untranslated components in compounds</strong></caption>
+<tr>
+<td VALIGN=TOP WIDTH="33%"></td>
+<th VALIGN=TOP COLSPAN="2" WIDTH="67%">Average precision over 11 recall points</th></tr>
+<tr>
+<td VALIGN=TOP WIDTH="33%">&nbsp;</td>
+<th VALIGN=TOP WIDTH="33%">Untranslated components <span>added</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in0e the phrase construction</th>
+<th VALIGN=TOP WIDTH="33%">Untranslated components moved <span>out0e</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>the phrase construction</th></tr>
+<tr>
+<td VALIGN=TOP WIDTH="33%">Single query (CLEF 2001 <span>topic</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>no 49)</td>
+
+<td align="center" VALIGN=TOP WIDTH="33%">0,0355</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,1977</td></tr>
+<tr>
+<td VALIGN=TOP WIDTH="33%">Single query (CLEF 2001 <span>topic</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>no 65)</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,0196</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,1419</td></tr>
+<tr>
+<td VALIGN=TOP WIDTH="33%">All Finnish-English queries&nbsp;</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,3894</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,3962</td></tr>
+
+</table>
+
+<h3>Proximity operators and window size</h3>
+
+<p>Compounds in German, Swedish and Finnish are usually <span>translated</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>into <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>using a phrase construction, e.g., the German compound <i>Fussballweltmeisterschaft</i> is <span>translated</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>as "world soccer championship", the Swedish <i>Eutanasifall</i> as "incidents of euthanasia", and the Finnish <i>Tietokonevirus </i>as "<span>computer</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>virus" <a href="#BM3">(3</a>). The importance of using phrases in and problems with phrase identification for CLIR is discussed in Ballesteros and Croft <a href="#Ballesteros97">(1997</a>).</p>
+
+<p>Windowing techniques and the span for the text window or window size have been discussed for use in information retrieval by Jacquemin (<a href="#Jacquemin96">1996</a>) and Haas and Losee <a href="#Haas94">(1994</a>). In the study by Jacquemin a linguistic approach is taken and the author stresses that the words included in the window should be lexically and syntactically related or constitute of a correct <span>partial</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>noun phrase. Haas and Losee <span>focus</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>on an optimal window size and confirm that <span>limiting</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>the span of the words to between three and five is a good value. Zhou (<a href="#Zhou99">1999</a>) has documented phrasal terms in <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>documents</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> The <span>findings</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>show a clear predominance
+of two-word phrases (75.9%), while three-word phrases were not very common (14.4%). <span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>window size of five words and a <span>free</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>word order would according to the <span>findings</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of Zhou cover most (roughly 95%) of the phrases. <p>These results give some background knowledge on the processing of compounds for bilingual CLIR when the <span>source</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>language is a compound rich language and the target language in most cases uses a phrase <span>instead</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of a joint compound. <span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>direct</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>translation by looking up a compound in a bilingual <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>would give a phrase as translation equivalent, e.g., <i>Welthandelsorganisation</i> (world trade organisation). The translation can be marked as a phrase #2(world
+trade organisation). This meaning that the <span>exact</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>sequence</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of words, in this word order, has to match the document database, in order to retrieve relevant <span>documents</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>on this subject.</p>
+
+<p>Enlarging the window size and allowing for any word order #uw5(world trade organisation) means that a document <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>the phrase &quot;organisation for world trade&quot; would be retrieved. But we would not get a match for the phrases &quot;trade organisation&quot; or &quot;world trade&quot;.</p>
+
+<p>On the other hand, if the <span>source</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>compound word is split into the <span>constituents</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><i>Welt,
+Handel</i> and <i>Organisation,</i> and these are grouped according to the rules in Section 4.2., e.g., <i>Welt+handel </i> and <i>Handel+s+Organisation</i> we could get <span>direct</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>translations</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of the component pairs, forming the phrases
+&quot;world trade&quot; and &quot;trade organisation&quot;.</p>
+
+<p>Proximity operators and window size can also be used in cases where no <span>direct</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>translations</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for the whole compound nor for constituent pairs can be obtained. If in the above case the split components: <i>Welt </i>(world, universe), <i>Handel</i> (trade, business), <i>Organisation </i>(organisation), and the combinations that can be made, are marked as phrases we would get the following combinations, using a synonym structure:</p>
+
+<p>#syn(#uw5(world trade organisation) #uw5(world <span>business</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>organisation) #uw5(universe trade organisation) #uw5(universe <span>business</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>organisation))</p>
+
+<p>Both the proximity operators #od and #uw have been used in cross-language
+information retrieval <span>tests</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in the studies by Hedlund <em>et al.</em> (<a href="#Hedlund01b">
+
+2001b</a>; <a href="#Hedlund01c">2001c</a>) for the CLEF campaigns 2000
+and 2001. The <span>actual</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>effect of changing the word order operator and the
+window size is small. <span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>with Finnish - <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>bilingual CLIR (47
+Finnish topics, <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>document database) showed no <span>actual</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>effect in the
+average precision <span>values</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>over all recall levels 0 to 100 for all the 47
+queries (see Table 5).</p>
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=7 WIDTH="568" >
+<caption align="bottom"><br><strong>Table 5: The effect of proximity operators with Finnish-English CLIR</strong></caption>
+<tr>
+<td VALIGN=TOP WIDTH="33%">&nbsp;</td>
+<th VALIGN=TOP COLSPAN="2" WIDTH="67%">Average precision over 11 recall points</th></tr>
+<tr>
+<th VALIGN=TOP WIDTH="33%">Data set</th>
+<th VALIGN=TOP WIDTH="33%">#od n (exact phrase length)</th>
+
+<th VALIGN=TOP WIDTH="33%">#uw 5 + n&nbsp;</th></tr>
+<tr>
+<td VALIGN=TOP WIDTH="33%">Individual query (CLEF 2001 no 45)</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,6417</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,6564</td></tr>
+<tr>
+<td VALIGN=TOP WIDTH="33%">Individual query (CLEF 2001 no 48)</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,1280</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,1253</td></tr>
+<tr>
+
+<td VALIGN=TOP WIDTH="33%">Individual query (CLEF 2001 no 63)</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,2671</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,3985</td></tr>
+<tr>
+<td VALIGN=TOP WIDTH="33%">Individual query (CLEF 2001 no 86)</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,3113</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,3709</td></tr>
+<tr>
+<td VALIGN=TOP WIDTH="33%">All Finnish - <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>queries (47)</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,3906</td>
+
+<td align="center" VALIGN=TOP WIDTH="33%">0,3962</td></tr>
+</table>
+
+<p>The positive effect is noticeable only for three individual queries (queries 45, 63 and 86 in Table 5). The <span>test</span>, <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> however, shows that the <span>free</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>word order operator (#uw) might be a better <span>choice</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in an automated system since for 44 queries the result was better or equal and the largest negative result was an average precision drop of 0,0015 (query 48 in Table 5).</p>
+
+
+<h3>Effects of compound processing in bilingual cross-language information retrieval</font></h3>
+
+<p>To evaluate the effect of compound handling in an automated process for
+bilingual <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>based CLIR several <span>tests</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>with German CLEF 2001 topics
+and the <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>document <span>collection</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>were performed. The <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>runs were
+performed by using different translation resources for the same 47 German
+topics (see also the study by Hedlund <em>et al.</em> <a href="#Hedlund01c">( 2001c</a>).
+The resources were 1) a comprehensive <span>dictionary</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>translations
+for many compounds, 2) the same <span>dictionary</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> except that every compound
+word was first removed from it. This <span>limited</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>dictionary thus contains no
+<span>direct</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>translations</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for compound words. <span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>direct</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>translation through a
+comprehensive <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>has a higher average effectiveness (see runs 2
+and 5 in Table 6). However the <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>with a <span>limited</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>dictionary also indicates
+that the compound! h! andling process works fairly well.</p>
+
+<p>In order to <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>the compound handling process further, additional tests
+were made (Table 6.). <span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>baseline for German - <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>bilingual CLIR was
+<span>established</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span></p>
+
+<p>Run 1 in Table 6 is a baseline for German - <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>CLIR - no compound
+splitting or translation of components was performed. The compounds that
+could be <span>translated</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>directly using the translation <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>were used
+in a similar way as for any other single word, that is, a synonym structure
+for translation alternatives was used.</p>
+<p>Run 2 in Table 6 is a <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>run including the compound processing features
+described in Section 4. That is, splitting of compounds into <span>constituents</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>
+normalisation of <span>constituents</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to base forms, translation using a comprehensive
+<span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and a structured query construction using an unordered proximity
+operator and a window size of 5 + n (n = <span>spaces</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>between words in the construction).</p>
+<p>Test run 3 in Table 6 includes the best possible translation alternatives
+for the compounds in the query. This means that ambiguities in the translations
+provided by the <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>were manually <span>eliminated</span>. <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> It is, however, disambiguation
+based solely on the translation of individual compound words in the <span>topic</span>, <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>
+not on phrases and multi-word concepts or <span>semantic</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>structures in the topic
+<span>sentences</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span></p>
+
+
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=7 WIDTH="347">
+<caption align="bottom"><br><strong>Table 6: Evaluation results for the effects of compound processing and dictionaries. The <span>topic</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>sets are the German-English CLEF 2001 queries (N=47).</strong></caption>
+<tr>
+
+<th valign="middle"  WIDTH="67%">Test run</td>
+<th VALIGN=TOP WIDTH="33%">Average precision over 11 recall values</th></tr>
+<tr><td VALIGN=TOP WIDTH="67%">1. Comprehensive <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>no compound process</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,3520</td></tr>
+<tr><td VALIGN=TOP WIDTH="67%">2. Comprehensive <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>+ compound process</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,3830</td></tr>
+<tr><td VALIGN=TOP WIDTH="67%">3. Comprehensive <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>(manual disambiguation of compounds)</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,3737</td></tr>
+<tr><td VALIGN=TOP WIDTH="67%">4. Limited <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>no compound process</td>
+
+<td align="center" VALIGN=TOP WIDTH="33%">0,3057</td></tr>
+<tr><td VALIGN=TOP WIDTH="67%">5. Limited <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>+ compound process</td>
+<td align="center" VALIGN=TOP WIDTH="33%">0,3547</td></tr>
+</table>
+
+<p>Test runs 4 and 5 in Table 6, were performed with the <span>limited</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>dictionary.
+Run 4 does not include the compound process and since the <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>does
+not contain any <span>translations</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for compound words, no compounds were translated
+in this run. They are included in the query as such. <span>Test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>run 5 was performed
+using the compound process as described in the case of <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>run 2.</p>
+
+<p>As <span>expected</span>, <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> the manual disambiguation of compounds, <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>run 3, performed
+well. Likewise, run 4, where compound translation was <span>eliminated</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>by not
+including compounds in the <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and by not including any compound
+handling process, got the lowest score. But surprisingly <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>run 2, where
+the compound process was tested using a comprehensive <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>was the
+most effective, although the difference from <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>run 3 is very small.
+An explanation for this is that the compound process for some queries adds
+more <span>weight</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to the compounds in a query using many alternative translations
+and combinations of components. <span>Test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>runs 1 and 2 allow a <span>comparison</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for
+how well the compound process works as a complement to the comprehensive
+<span>dictionary</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> The result for the run with the process included is clearly
+better. This is also true for <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>runs 4 and 5 where the effect of the
+process is compared using a <span>limited</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>dictionary not <span>containing</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>translations
+for compounds. The <span>conclusion</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>is! t! hat the compound process is effective
+for handling compounds.</p>
+
+<h2>Discussion and conclusion</h2>
+
+<p>The importance of compound processing in dictionary-based cross-language
+information retrieval was <span>investigated</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in this study. We found that around
+ten percent of remaining content words in running text are compounds for
+the three <span>languages</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>studied. This can be <span>reformulated</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>even more impressively:
+it means that more than twenty percent of morphemes in running text are
+in compounds! Compounding is a way to form new words and concepts. Compounds
+are often occasional. Studying compound processing in cross-language information
+retrieval is important, since we know that translation dictionaries, even
+comprehensive ones, are <span>limited</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and cannot <span>hold</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>entries</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for all compounds.
+Compounds and their <span>features</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>are described in this study from the information
+retrieval and cross-language information retrieval point of view, and therefore
+not all linguistic <span>features</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for compound formation are con0ered in this
+study. The linguistic reality is much more complex than described here.</p>
+
+<p>The compound handling process is implemented as a component into an
+automated cross-language information retrieval system. This makes it possible
+to evaluate the final process as well as individual steps in the process
+using conventional evaluation measures, the average precision over different
+recall levels. The topics and the document database were provided by the
+international CLEF evaluation forum, which ensures the availability of
+the <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>material.</p>
+
+<p>The <span>solutions</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>proposed in this study rely on the morphological and syntactic
+structure of compounds. For normalisation of compound components the features
+of fogemorphemes in Germanic <span>languages</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> as well as the inflected components
+or components in the form of word stems have to be taken into account.
+The left- or right-branching structure for the compound components form
+the linguistic basis for the <span>novel</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><i>grouping strategy</i> with pairwise
+<span>combination</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and translation of consecutive components.</p>
+
+<p>The query construction phase has to take into account the <span>features</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in
+the target language. This involves the use of proximity operators and phrase
+construction, in this study due to the fact that the target language in
+the document database language is <span>English</span>. <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span></p>
+
+<p>The evaluation results of this study <span>indicate</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>that compound processing
+as a whole has a clearly positive effect on retrieval results. Each step
+in the process has a relatively small impact on the result. However, summing
+up each of them adds to the positive effect of the system. One can naturally
+<span>discuss</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>whether general conclusions should be <span>drawn</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>on the basis of this
+relatively small <span>test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>sample. <span>Test</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>situations do not completely cover the
+complexity of natural language information retrieval, and additional test
+sets with different topics and different document databases could yield
+other results. In this study the document database contains newspaper text,
+which implies that the topics created are adapted to this content. Scientific
+articles or other types of texts would use different types of topics and
+the concepts and <span>vocabulary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>would be different.</p>
+
+<p>The relative importance of a system processing compounds for dictionary
+based cross-language information retrieval <span>naturally</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>depends on the number
+of compounds present in queries as well as the available translation resources.
+<span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>direct</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>translation of compounds is clearly more precise and therefore
+effective. Using comprehensive dictionaries we are able to <span>directly</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>translate
+more compounds than with <span>limited</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>and small translation dictionaries. But
+on the other hand, no <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>can <span>hold</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><span>entries</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for all occasional compounds
+in a language, so there will always be a need for <span>systems</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>handling compounds
+even if their function in some cases is to work as a complement to a direct
+translation.</p>
+
+<p>The analysis of compounds and their <span>features</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>from the cross-language
+information retrieval point of view in this study could be <span>extended</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to
+<span>semantic</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>analysis to determine, for example, paradigmatic relations and
+to <span>syntactic</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>analysis to determine <span>syntactic</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>structures of phrases. This
+kind of information could be in use in information retrieval and cross-language
+information retrieval <span>applications</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to determine valuable keys. The descriptions
+provided by the morphological analysis <span>program</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>like part of speech, gender,
+etc. could also be valuable for disambiguation of translation alternatives.</p>
+
+<h2>Notes</h2>
+
+<p>(1)<a NAME="BM1"></a> TREC, Text REtrieval Conference, <a href="http://trec.nist.gov/">http://trec.nist.gov/</a>
+<br>CLEF is a forum for evaluating cross-language information retrieval
+<span>solutions</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>on European <span>languages</span>, <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> <a href="http://www.iei.pi.cnr.it/DELOS/CLEF/">http://www.iei.pi.cnr.it/DELOS/CLEF/</a>
+
+<p>(2)<a NAME="BM2"></a> The operators <span>referred</span>  <span class="quali" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to are used in InQuery
+retrieval system. OD <span>refers</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to "Ordered window" or strict word order, UW
+<span>refers</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to "unordered window" or <span>free</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>word order.
+<p>(3)<a NAME="BM3"></a> The examples are from the year 2001 CLEF topics
+in German, Swedish and Finnish
+<p><a NAME="BM4"></a>(4) The query formulation files for the runs in this
+study can be obtained from the author, e-mail: turid.hedlund@shh.fi
+
+<h2>Acknowledgements</h2>
+
+<p>The <i>InQuery</i> <span>search</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>engine was provided by the Center for Intelligent
+Information Retrieval at the University of Massachusetts.
+<br>ENGTWOL (Morphological Transducer Lexicon Description of English):
+Copyright (c) 1989-1992 Arto Voutilainen and Juha Heikkil&auml;.
+
+<br>FINTWOL (Morphological Description of Finnish): Copyright (c) Kimmo
+Koskenniemi and Lingsoft plc. 1983-1993.
+<br>GERTWOL (Morphological Transducer Lexicon Description of German): Copyright
+(c) 1997 Kimmo Koskenniemi and Lingsoft plc.
+<br>SWETWOL (Morphological Transducer Lexicon Description of Swedish):
+Copyright (c) 1998 Fred Karlsson and Lingsoft plc.
+<br>TWOL-R (Run-time Two-Level Program): Copyright (c) Kimmo Koskenniemi
+and Lingsoft plc. 1983-1992.
+<br>MOT <span>Dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>Software was used for automatic word-by-word <span>translations</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>
+Copyright (c) 1998 Kielikone plc, Finland.</p>
+
+<p>This research is part of the research project <i>Query structures and
+dictionaries as <span>tools</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>in concept-based and cross-lingual information retrieval</i>
+funded by the Academy of Finland (Research Projects 44703; 49157).</p>
+<p>A special <span>expression</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>of gratitude to the <a href="http://www.info.uta.fi/tutkimus/fire/index.html">FIRE</a>
+research group for many comments and to Mr. Heikki Keskustalo and Ms. Eija
+Airio for valuable <span>programming</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>assistance.</p>
+
+ 
+<h2>References</h2>
+
+<ul>
+<li>
+<a NAME="Akmajian97"></a>Akmajian, <span>A+</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>, Demers, <span>R++</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>, Farmer, <span>A+</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> and Harnish,
+<span>R++</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> (1997) <i>Linguistics: An <span>introduction</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>to language and communication.
+</i>Cambridge, MA: <span>MIT</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>Press.</li>
+
+<li>
+<a NAME="Ballesteros97"></a>Ballesteros, L. and Croft, B. (1997) &quot;<a href="http://www.ece.umd.edu/medlab/filter/sss/papers/ballesteros.ps">Phrasal
+translation and query <span>expansion</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>techniques for cross-language information
+retrieval</a>&quot;. <i>Working Notes of the AAAI Spring Symposium on Cross-Language Text and</i> <i>Speech Retrieval,</a></i> Stanford, CA: Stanford University.  Available at http://www.ece.umd.edu/medlab/filter/sss/papers/ballesteros.ps [Accessed 20 January 2002]</li>
+
+<li>
+<a NAME="Fleischer92"></a>Fleischer, W. and Barz, I. (1992) <i>Wortbildung
+der deutschen Gegenwartssprache</i>. T&uuml;bingen: Max Niemeyer Verlag.</li>
+
+<li>
+<a NAME="Haas94"></a>Haas, S. W. and Losee, <span>R++</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> M. (1994) Looking in text
+windows: Their size and <span>composition</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span><i>Information Processing &amp; Management,</i>
+<strong>30</strong>(5), 619-629.</li>
+
+<li>
+<a NAME="Hedlund01a"></a>Hedlund,T., Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> and J&auml;rvelin, K.
+(2001a) Aspects of Swedish morphology and <span>semantics</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>from the perspective
+of mono- and cross-language information retrieval. <i>Information Processing
+&amp; Management,</i> <strong>37</strong>(1), 147-161.</li>
+
+<li>
+<a NAME="Hedlund01b"></a>Hedlund, T., Keskustalo, H., Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>, Sepponen,
+M. and J&auml;rvelin, K. (2001b) Bilingual <span>tests</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>with Swedish, Finnish
+and German queries: Dealing with morphology, compound words and query structuring.
+In Carol Peters (Ed.) <i>Cross-Language Information Retrieval and Evaluation:
+Proceedings of the</i> <i>CLEF 2000 Workshop, Lecture Notes in Computer
+Science,</i> 2069, pp. 211-225.  Heidelberg: Springer. </li>
+
+<li>
+<a NAME="Hedlund01c"></a>Hedlund, T., Keskustalo, H., Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>, Airio,
+E. and J&auml;rvelin, K. (2001c) &quot;<a href="http://www.ercim.org/publication/ws-proceedings/CLEF2/hedlund.pdf">UTACLIR @ CLEF 2001</a>&quot;. <i>Working Notes for CLEF 2001 Workshop</i>. Sophia Antipolis: European Research Consortium for Informatics and <span>Mathematics</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>Available at http://www.ercim.org/publication/ws-proceedings/CLEF2/hedlund.pdf [Accessed 20 January 2002]</li>
+
+<li>
+<a NAME="Jacquemin96"></a>Jacquemin, C. (1996) What is the three that we see through the window: <span>A+</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>linguistic approach to windowing and <span>term</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>variation. <i>Information Processing &amp; Management,</i> <strong>32</strong>(4), 445-458.</li>
+
+<li>
+<a NAME="Kraaij01"></a>Kraaij, W. (2001) &quot;<a href="http://www.ercim.org/publication/ws-proceedings/CLEF2/kraaij.pdf">TNO at CLEF 2001: Comparing translation resources</a>&quot. <i>Working Notes for CLEF</i> <i>2001 Workshop</i>.  Sophia Antipolis: European Research Consortium for Informatics and <span>Mathematics</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> Available at http://www.ercim.org/publication/ws-proceedings/CLEF2/kraaij.pdf [Accessed 20 January 2002]</li>
+
+<li>
+<a NAME="Malmgren94"></a>Malmgren, S. G. (1994)<i> Svensk lexikologi. Ord, ordbildning, ordb&ouml;cker och orddatabaser. [Swedish lexicology. Words, word formation, dictionaries and word databases.] Lund: Studentlitteratur.</li>
+
+<li>
+<a NAME="Pirkola98"></a>Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> (1998) The effects of query structure and <span>dictionary</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>setups in dictionary-based cross-language information retrieval. <i>Proceedings of the 21<sup>st</sup> ACM/SIGIR Conference, pp. 55-63</i> New York, NY: Association for <span>Computing</span>  <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>Machinery</li>
+
+<li>
+<a NAME="Porter80"></a>Porter, M.F. (1980) An <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>for suffix stripping. <i>Program, </i>14, 130-137.</li>
+
+<li>
+<a NAME="Riplinger01"></a>Riplinger, B. (2001) &quot;<a href="http://www.ercim.org/publication/ws-proceedings/CLEF2/ripplinger.pdf">Mpro-IR in CLEF 2001</a>.&quot; <i>Working Notes for CLEF 2001 Workshop</i>. Sophia Antipolis: European Research Consortium for Informatics and <span>Mathematics</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> Available at http://www.ercim.org/publication/ws-proceedings/CLEF2/ripplinger.pdf [Accessed 20 January 2002]</li>
+
+<li>
+<a NAME="Savoy01"></a>Savoy, <span>J++</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> (2001)  &quot;<a href="http://www.ercim.org/publication/ws-proceedings/CLEF2/savoy.pdf">Report on CLEF-2001 experiments</a>&quot;. <i>Working Notes for CLEF 2001 Workshop</i>. Sophia Antipolis: European Research Consortium for Informatics and <span>Mathematics</span>. <span class="quanti" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>  Available at http://www.ercim.org/publication/ws-proceedings/CLEF2/savoy.pdf [Accessed 20 January 2002]</li>
+
+<li><a NAME="Smeaton99"></a>Smeaton, <span>A+</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> F. (1999) Using NLP or NLP resources for information retrieval tasks. In Tomek Strzalkowski (Ed.) <i>Natural language information retrieval. </i>Dordrecht: Kluwer Academic Publishers.</li>
+
+<li><a NAME="Sparck99"></a>Sparck Jones, K. (1999) What is the role of NLP in text retrieval? In Tomek Strzalkowski (Ed.) <i>Natural language information retrieval. </i>Dordrecht: Kluwer Academic Publishers.</li>
+
+<li>Strzalkowski, T. (1995) <span>Natural</span>  <span class="exper" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>language information retrieval. <i>Information Processing &amp; Management,</i> <strong>31</strong>(3), 397-417.</li>
+
+<li><a NAME="Strzalkowski99"></a><a NAME="Strzalkowski95"></a>Strzalkowski, T., Lin, F., Wang, <span>J++</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> and Perez-Carballo, <span>J++</span>. <span class="compus" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span> (1999). In T. Strzalkowski (Ed.) <i>Natural language information retrieval. </i>Dordrecht: Kluwer
+Academic Publishers.</li>
+
+<li><a NAME="Warren78"></a>Warren, B. (1978) <i>Semantic petterns of noun-noun compounds</i>. G&ouml;teborg: Acta Universitatis Gothoburgensis.  (Gothenburg studies in <span>English</span>  <span class="conce" style="width:1px;border-width:96px 32px 96px 32px;position:relative;">.</span>41)</li>
+</ul>
+
+<hr color="#ff00ff" SIZE=3>
+
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+
+<p style="text-align : left; color : black;">Hedlund, T (2002) &quot;Compounds in dictionary-based cross-language information retrieval&quot; <i>Information Research</i>, <b>7</b>(2) [Available at http://InformationR.net/ir/7-2/paper128.html]</p>
+<div align="center">&copy; the author, 2001. <br>Last updated: 20th January, 2001</div>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:rB3pYR7kqPwJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres72.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><IMG SRC="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper128" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3></blockquote>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/7-2/paper128.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:13:54 GMT -->
+</html>

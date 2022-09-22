@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>La Red Marátegui</title>
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- libs -->
+  <script src="./js/jquery.min.js" charset="utf-8"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <script src="./js/jquery.mousewheel.min.js" charset="utf-8"></script>
+  <script src="./js/raphael.min.js" charset="utf-8"></script>
+  <script src="./js/jquery.mapael.js" charset="utf-8"></script>
+  <script src="./js/jquery-marquee.js" charset="utf-8"></script>
+  <!--  maps -->
+  <script src="./js/maps/world_countries.js" charset="utf-8"></script>
+  <script src="./js/maps/peru.min.js" charset="utf-8"></script>
+  <!-- data -->
+  <script src="./data/mariategui_lared-300.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+
+  // Get date from URL POST var:
+
+  //var mydateY = "19240101_19241231";
+  //var mydateX = "19250101_19251231";
+  //var mydate_default = "19230101";
+  //function getParameterByName(name) {
+  //  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+  //}
+
+  // Getting plots from data/events.js
+  function get_plots(map, mydate) {
+    my = {}; myMarquee = "";
+    //console.log("func. get_plots ( "+map+"|"+mydate+" )");
+    $.each( events, function( key, value ) {
+      value["date"] = parseInt(value["date"].toString().substr(0,4));
+      console.log(".... "+value["date"]+" ---->"+mydate);
+      if (value["date"] == mydate)  {
+        my[value["name"]] = value["data"];
+        //console.log("# # # Accepted "+value["name"].toString()+": my="+mydate+" >= "+value["date"]);
+        myMarquee += value["name"].toString()+" => "+value["data"]["value"][0].toString()+"<br />";
+      }
+    });
+    myhtml = '<p>Año '+mydate+': Origenes, destinos y temas.</p><marquee id="marquee" behavior="scroll" direction="down" scrollamount="0.1" height="85" width="250"><p>';
+    $(".marquee").html(myhtml+myMarquee+"</p></marquee>");
+    return my;
+  }
+
+  function get_plots_labels(mydate) {
+    var my = [];
+    console.log("F get_LABELS ( "+mydate+" )");
+    $.each( events, function( key, value ) {
+      if (mydate >= value["date"])  {
+        my.push(value["name"]);
+        //console.log("> > > Labels "+value["name"]+": my="+mydate+" >= "+value["date"]);
+      }
+    });
+    return my;
+  };
+
+  </script>
+
+</head>
+
+<!-- ############################################## -->
+<!-- ############################################## -->
+<!-- ############################################## -->
+
+<body>
+  <div class="container">
+    <div id="div_setDate_and_barcharts"> 
+        <h2>La Red Mar&aacute;tegui (clic en los años para ver la actividad entre 1923 y 1930)</h2>
+    
+      <table class="barchart" width="850" height="50">
+        <tr class="bars">
+          <td class="myLegend"><span><b>Legend:</b><br />Cartas por año</span></td>
+          <td class="b1">10<div style="height:10px;"></div></td>
+          <td class="b2">70<div style="height:70px;"></div></td>
+          <td class="b3">80<div style="height:80px;"></div></td>
+          <td class="b4">50<div style="height:50px;"></div></td>
+          <td class="b5">48<div style="height:48px;"></div></td>
+          <td class="b6">45<div style="height:45px;"></div></td>
+          <td class="b7">30<div style="height:30px;"></div></td>
+          <td class="b8">67<div style="height:67px;"></div></td>
+        </tr>
+        <tr class="years">
+          <td class="myLegend"><span>Años</span></td>
+          <td>1923</td>
+          <td>1924</td>
+          <td>1925</td>
+          <td>1926</td>
+          <td>1927</td>
+          <td>1928</td>
+          <td>1929</td>
+          <td>1930</td>
+        </tr>
+        <tr class="bars2">
+          <td class="myLegend"><span>Perú/resto del mundo</span></td>
+          <td class="myLegend"><div style="height:0px;"></div></td>
+          <td><div style="height:10px;"></div></td>
+          <td><div style="height:70px;"></div></td>
+          <td><div style="height:60px;"></div></td>
+          <td><div style="height:50px;"></div></td>
+          <td><div style="height:58px;"></div></td>
+          <td><div style="height:64px;"></div></td>
+          <td><div style="height:30px;"></div></td>
+          <td><div style="height:67px;"></div></td>
+
+          <td><div style="height:10px;"></div></td>
+          <td><div style="height:60px;"></div></td>
+          <td><div style="height:70px;"></div></td>
+          <td><div style="height:50px;"></div></td>
+          <td><div style="height:70px;"></div></td>
+          <td><div style="height:54px;"></div></td>
+          <td><div style="height:30px;"></div></td>
+          <td><div style="height:67px;"></div></td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div id="div_map_peru" class="mapcontainer mapcontainer_refresh div_map_left">
+        <div class="map">
+            <span>Alternative content for the map</span>
+        </div>
+    </div>
+
+    <div id="div_map_world" class="mapcontainer2 mapcontainer_refresh div_map_right">
+        <div class="map">
+            <span>Alternative content for the map</span>
+        </div>
+    </div>
+  </div>
+
+  <div id="div_marquee1" class="marquee">
+    <marquee id="marquee" behavior="scroll" direction="down" scrollamount="0.1" height="140" width="250">
+    <p>Dos maneras predefinidas de relación con los datos aquí representados:</p>
+      <p>Esta que ves es la manera interactiva</p>
+      <p>Estamos preparando la manera reproducción continua.</p>
+    </marquee>
+  </div>
+
+  <div id="div_barchart_by_topic" class="barchart_categories">
+    <p>Temas del año <span id="getYear"></span>:</p>
+    <table class="barchart_cat" width="450" height="90">
+      <tr class="bars3">
+        <td>10<div style="height:10px;"></div></td>
+        <td>70<div style="height:70px;"></div></td>
+        <td>30<div style="height:30px;"></div></td>
+        <td>54<div style="height:50px;"></div></td>
+        <td>8<div style="height:8px;"></div></td>
+        <td>55<div style="height:55px;"></div></td>
+        <td>30<div style="height:30px;"></div></td>
+        <td>67<div style="height:67px;"></div></td>
+        <td>3<div style="height:3px;"></div></td>
+        <td>17<div style="height:17px;"></div></td>
+
+      </tr>
+      <tr class="cat">
+        <td>Viajes</td>
+        <td>Prensa</td>
+        <td>Arte</td>
+        <td>Salud</td>
+        <td>Familia</td>
+        <td>Escritores</td>
+        <td>Comercializaci&oacute;n</td>
+        <td>Canjeos</td>
+        <td>Suscriciones</td>
+        <td>Suscriciones</td>
+      </tr>
+    </table>
+
+  </div>
+
+  <div id="old_date" class="old_date">
+  </div>
+
+
+<!-----------------------
+
+ToDo:
+- Three floor barchar diagrams: 
+DONE  > top: To al evennts = f( year )
+DONE  > middle 1: Regions 1 (Peru/oters) = f( year )
+DONE  > middel 2: Category = f(  )
+  > bottom: Regions 2 (Peru/LatinoAm./ NorthAm./Europe/Africa-Asia-Oceania(in case there is any) 
+  > 
+
+  Data structure: CSV
+  192totalNum, 192PeruNum, RestNum, RestoLatinoAm, NorthAm, EuropeNum, Asia-Africa-OceaniaNum, Cat1Num, Cat2Num, Cat3Num... 
+
+
+------------------------>
+
+<script>
+
+$(function () {
+    /*
+     * Override default option example
+     * Here we override defaultOptions for all instance!
+     * => We want to set the stroke color different for all of our instance
+     */
+    $.mapael.prototype.defaultOptions.map.defaultArea.attrs.stroke = "#c3c3c3";
+
+    /*
+     * Override method example
+     * Here we override the setTooltip() method for all instance !
+     * => We want that area having a tooltip appears as red when mouse over
+     */
+    // Save setTooltip function for future use
+    var baseSetTooltip = $.mapael.prototype.setTooltip;
+    $.mapael.prototype.setTooltip = function(elem){
+        // Save ref to Mapael object in self
+        var self = this;
+        // Some special processing for "path" element having a tooltip
+        if (elem.type === "path") {
+            elem.attrsHover.fill = "#FF0000";
+        }
+        // Call base Mapael function
+        baseSetTooltip.call(self, elem);
+    };
+
+
+///////////////////////////////////////
+//// MAP1
+
+    $(".mapcontainer").mapael({
+        map: {
+            name: "peru_regions",
+            zoom: {
+                enabled: true
+            },
+            defaultPlot: {
+                attrs: {
+                    fill: "#ff0000",
+                    opacity: 10
+                },
+                text: {
+                    attrs: {
+                        fill: "#ff0000"
+                    }
+                    , attrsHover: {
+                        fill: "#000"
+                    }
+                }
+            },
+            defaultArea: {
+                attrs: {
+                    fill: "#c3c3c3"
+                },
+                text: {
+                    attrs: {
+                        fill: "#ffffff"
+                    }
+                    , attrsHover: {
+                        fill: "#000"
+                    }
+                }
+            }
+        },
+        areas: {
+            "lima": {
+                text: {content: "Lima Region"},
+                tooltip: {content: "region de Lima"},
+                attrs: {opacity: 0.4}
+            },
+        }
+    });
+
+///////////////////////////////////////////
+//// MAP2
+
+    var $mapcontainer2 = $(".mapcontainer2");
+    $mapcontainer2.mapael({
+        map: {
+            name: "world_countries",
+            zoom: {
+                enabled: true,
+                maxLevel: 20
+            },
+            defaultPlot: {
+                attrs: {
+                  fill: "#ff0000",
+                  opacity: 1,
+                  r:50
+                }
+            },
+            defaultArea: {
+                attrs: {
+                    fill: "#c3c3c3"
+                },
+                text: {
+                    attrs: {
+                        fill: "#ffffff"
+                    }
+                    , attrsHover: {
+                        fill: "#000"
+                    }
+                }
+            }
+        }
+    });
+
+  function myMarquee() {
+        // basic version is: $('div.demo marquee').marquee() - but we're doing some sexy extras
+      $('marquee').marquee('pointer').mouseover(function () {
+          $(this).trigger('stop');
+      }).mouseout(function () {
+          $(this).trigger('start');
+      }).mousemove(function (event) {
+          if ($(this).data('drag') == true) {
+              this.scrollLeft = $(this).data('scrollX') + ($(this).data('x') - event.clientX);
+          }
+      }).mousedown(function (event) {
+          $(this).data('drag', true).data('x', event.clientX).data('scrollX', this.scrollLeft);
+      }).mouseup(function () {
+          $(this).data('drag', false);
+      })
+    };
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// UPDATING MAPS data and function
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+    $(".years td").not(".years td.legend").on ("click", function () {
+      var mydate = parseInt($(this).text());
+      console.log("NEW mydate :"+mydate)
+
+      //  toggle color on selected <td>
+      $(".years td").removeClass('highlighted');
+      $(this).addClass('highlighted');
+
+      // Topics of the year: add content for the selected year
+      $(".barchart_categories").css({"display": "block"});
+      $("#getYear").html(mydate);
+
+      // Get the old date
+      var olddate = $("#old_date").html();
+      console.log("OLD date :"+olddate)
+      // Save new date:
+      $("#old_date").html(mydate);
+
+      // delete all plots ...
+      if (olddate.length<1) {
+        var deletedPlots = {};
+      } else if (olddate < mydate) {
+        var deletedPlots = get_plots_labels(olddate);        
+      } else {
+        var deletedPlots = {};
+      }
+      console.log("deletedPlots: "+deletedPlots)
+
+       // Update some plots and areas attributes ...
+       // Not Usedm here
+
+        // add some new plots ...
+        var newPlots = //{
+          get_plots("peru", mydate)
+        //}
+    
+    
+        $(".mapcontainer_refresh").trigger('update', [{
+            deletePlotKeys: deletedPlots,
+            newPlots: newPlots,
+            animDuration: 3000
+          }]);
+        myMarquee()
+        
+        // Add class to all circles:
+        //$("circle"
+        
+        //////////////////////////////////////
+        // circle animation:
+        //$("circle").css("fill","blue");
+        $( "circle" ).animate({
+          r:20 ,
+          opacity: 0.1
+        }, 2000 );
+        $( "circle" ).animate({
+          r:6 ,
+          opacity: 1
+        }, 1500 );
+
+  });
+
+  // Defining dragable elements w/ jquery-ui
+  $( "#div_marquee1" ).draggable();
+  $( "#div_barchart_by_topic" ).draggable();
+  $( "#div_setDate_and_barcharts" ).draggable();
+  $( "#div_map_world" ).draggable();  
+  $( "#div_map_peru" ).draggable();
+
+});
+
+/// 
+  </script>
+</body>
+</html>

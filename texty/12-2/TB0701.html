@@ -1,0 +1,690 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from informationr.net/ir/12-2/TB0701.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:21 GMT -->
+<head>
+<title>Watch this: Artisanal Animation</title>
+<link href="animationColumn_files/TBstyle.css" type="text/css" rel="stylesheet" />
+<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+<meta name="keywords" content="Ajax YUI Web 2.0" />
+<meta name="description" content="JavaScript libraries make animating Web widgets easy." />
+<meta name="rating" content="mature" />
+<meta name="VW96.objecttype" content="Document" />
+<meta name="ROBOTS" content="ALL" />
+<meta name="DC.Title" content="Watch this: Artisanal Animation" />
+<meta name="DC.Creator" content="Brooks, Terrence A." />
+<meta name="DC.Subject" content="Ajax, JavaScript, web page design, YUI, Yahoo User Interface Library, web page widgets, animation" />
+<meta name="DC.Description" content="JavaScript libraries make animating Web widgets easy." />
+<meta name="DC.Type" content="article" />
+<meta name="DC.Identifier" scheme="ISSN" content="1368-1613" />
+<meta name="DC.Identifier" content="TB0701.html" />
+<meta name="DC.Relation.IsPartOf" content="infres122.html" />
+<meta name="DC.Format" content="text/html" />
+<meta name="DC.Language" content="en" />
+<meta name="DC.Publisher" content="Professor T.D. Wilson" />
+<meta name="DC.Date.Available" content="2007.01.15" />
+<meta name="DC.Rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="DC.Coverage.PlaceName" content="Global" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+
+<!--
+
+JavaScript supporting animation on this page
+
+-->
+
+<!-- Dependencies --> 
+<script src="yahoo.js" type="text/javascript"></script> 
+
+<script src="dom.js" type="text/javascript"></script> 
+<script src="event.js" type="text/javascript"></script> 
+ 
+<!-- Source files --> 
+<script src="animation.js" type="text/javascript"></script> 
+<script src="container.js" type="text/javascript"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="container.css" />
+
+<script type="text/javascript">   
+//<![CDATA[
+
+<!-- Fade in examples -->
+function setPage(){
+ YAHOO.util.Dom.setStyle('you', 'opacity', 0.0);
+ YAHOO.util.Dom.setStyle('WesternCiv', 'opacity', 0.0);
+ YAHOO.util.Dom.setStyle('faint', 'opacity', 0.5);
+ var myTooltip = new YAHOO.widget.Tooltip("myTooltip", {
+ 	context: "strunk",
+	text: "Strunk, William, Jr. and White, E.B. The Elements of style",
+	showDelay: 500 } );
+}
+
+function importanceForYou(){
+   var youExample = new YAHOO.util.Anim('you', { opacity: { from: 0, to: 1 } }, 1, YAHOO.util.Easing.easeOut);
+   youExample.animate();
+}
+function westernCiv(){
+   var westernCivExample = new YAHOO.util.Anim('WesternCiv', { opacity: { from: 0, to: 1 } }, 1, YAHOO.util.Easing.easeOut);
+   westernCivExample.animate();
+}
+
+<!-- Resize example -->
+function resize(){
+		var resizeExample = new YAHOO.util.Anim('resize', { 
+	    width: { to: 400 }  
+	    }, 1, YAHOO.util.Easing.easeOut); 
+		resizeExample.animate();	
+}
+
+<!-- Move example -->
+function doMove(){
+	 var infoWord = new YAHOO.util.Motion('info', { points: { by: [135, 0] } });
+	 infoWord.animate();
+}
+
+<!-- opacity example -->
+function doFade(){
+	 var fadeExample = new YAHOO.util.Anim('faint', { opacity: { from: .5, to: 1 } }, 1, YAHOO.util.Easing.easeOut);
+     fadeExample.animate();
+}
+
+<!-- Colour examples -->
+function doColour(){
+	   var goToRed = new YAHOO.util.ColorAnim('turnRed', { color: { to: 'rgb(255, 0, 0)'} });
+	   goToRed.animate();
+	   var goToOrange = new YAHOO.util.ColorAnim('turnOrange', { color: { to: 'rgb(255, 128, 0)'} });
+	   goToOrange.animate();
+}
+
+<!-- Resize book cover image -->
+function doHeinle(){
+ 	  var attributes = {
+      	width: { to: 246 }, 
+      	height: { to: 286 }
+	 };
+	 var bookCover = new YAHOO.util.Anim('heinle', attributes, 0.5, YAHOO.util.Easing.backOut);
+	 bookCover.animate();	
+}
+
+function doDog(){
+  	document.getElementById("catBox").checked=false;
+	var fadeDogToWhite = new YAHOO.util.ColorAnim('allDogs', { backgroundColor: { from: 'rgb(187, 187, 187)', to: 'rgb(255, 255, 255)'} }, 1.0);
+	fadeDogToWhite.animate();
+}
+function doCat(){
+  	document.getElementById("dogBox").checked=false;
+	var fadeCatToWhite = new YAHOO.util.ColorAnim('allCats', { backgroundColor: { from: 'rgb(187, 187, 187)', to: 'rgb(255, 255, 255)'} }, 1.0);
+	fadeCatToWhite.animate();	
+}
+function doReset(){
+  	document.getElementById("catBox").checked=false;
+  	document.getElementById("dogBox").checked=false;
+}
+//]]>
+</script>
+
+<!--
+
+End of JavaScript supporting animation on this page
+
+-->
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+	
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted maroon;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: maroon;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+
+
+.style1 {color: #000000}
+</style></head>
+<body>
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+      width="336" /><br />Vol. 12  No. 2, January 2007<br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres122.html">Contents</a> |  </li>
+
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+
+<hr style="color: rgb(0, 0, 128);" size="3" />
+<div align="center">
+
+<div align="center">
+<h1>Watch this: Artisanal Animation</h1>
+</div>
+
+<h4><a href="mailto:tabrooks@u.washington.edu">Terrence A.Brooks</a> <br />
+The Information School, University of Washington, Seattle, WA 98195</h4>
+
+<br />
+<br />
+
+<table cellspacing="5">
+  <tbody>
+  <tr>
+    <td valign="top">
+	
+
+	<table cellspacing="2" cellpadding="2" border="0">
+<tr>
+    <td width="200" valign="top" style="text-align: left">
+	<strong style="font-family: Freestyle Script; font-size: xx-large">artisanal</strong> 
+	</td>
+    <td width="400" style="text-align: left">
+Of a product: handmade (esp. with care and skill) using traditional techniques; having qualities associated with small-scale, pre-industrial production. <span style="font-style: italic">Oxford English Dictionary</span>
+	</td>
+</tr>
+<tr>
+<td style="height: 20px"></td>
+</tr>
+<tr>
+    <td valign="top" style="text-align: left"><strong style="font-family: Freestyle Script; font-size: xx-large">artisanal animation</strong></td>
+    <td style="text-align: left">Handmade animation by non-technical web writers like you and me. The YUI (<a href="http://developer.yahoo.com/yui/index.html">Yahoo! User Interface Library</a>), for example, shields us from the complexities of JavaScript, Java Applets, Flash, cross-browser problems, etc. and makes animation easy.</td>
+</tr>
+</table>
+	
+<p>&nbsp;</p>
+<div style="margin-left: 50px; width: 700px; font-size: 90%; text-align: left">
+	<div><span style="text-decoration: underline; cursor: pointer" onclick="importanceForYou()">What does this mean to you as a writer</span>? <span id="you" style="font-style: italic; font-size: 110%">Anybody can juice up a web page.</span> </div> 
+	<br />
+	<div style="margin-bottom: 10px"><span style="text-decoration: underline; cursor: pointer" onclick="westernCiv()">What does this mean to the literary culture of Western Civilization</span>? <span id="WesternCiv" style="font-style: italic; font-size: 110%">We take another step away from the static written word towards the moving image.</span></div>
+</div>
+
+<div style="font-family: broadway; font-size: x-large; text-align: left"><span style="font-style: italic;">Gist of this column:</span><br /><br /> <span style="font-size: xx-large">Your ability to express yourself has just been enriched</span>
+</div>
+
+<h3>You ask: What animations can I do?</h3>
+
+<p>You include the <a href="http://developer.yahoo.com/yui/index.html">Yahoo! User Interface Library</a> (these are various JavaScripts) in a web page (<span style="font-style: italic">translation</span>: In the &lt;head&gt; section of your web page you write some code to tell your browser to fetch the YUI library files and use them in constructing the web page).  In the web page itself, you write code to identify a widget and then tell your browser how to change it.  For example, you can</p>
+
+<table cellspacing="2" cellpadding="2" border="0" >
+<tr align="left">
+    <td width="120"><span onclick="resize()" style="text-decoration: underline; cursor: pointer">Resize things</span></td>
+    <td width="500" align="left">
+	<div id="resize" style="background-color: blue; width: 10px">&nbsp;</div>
+	</td>
+</tr>
+<tr align="left">
+    <td><span onclick="doMove()" style="text-decoration: underline; cursor: pointer">Move things</span></td>
+    <td width="500">
+	<div style="text-align: left">
+	<span id="info">Information</span> <span id="res">Research</span>
+	</div>
+	</td>
+</tr>
+<tr align="left">
+    <td><span onclick="doFade()" style="text-decoration: underline; cursor: pointer">Change opacity</span></td>
+    <td><div style="text-align: left"><span id="faint">Information Research</span>: An International Electronic Journal
+</div>
+</td>
+</tr>
+<tr align="left">
+    <td><span onclick="doColour()" style="text-decoration: underline; cursor: pointer">Colour things</span></td>
+    <td><div style="text-align: left"><span id="turnRed">Information Research</span>: <span id="turnOrange">An International Electronic Journal</span></div></td>
+</tr>
+</table>
+
+<br clear="all" />
+<div align="left">
+<p><em>Let's put the WOW factor in context</em>: Technology has again enlarged our toolbox thereby challenging us to develop an etiquette of appropriate use. We still await the <span id="strunk" style="text-decoration: underline; cursor: pointer">Strunk and White</span> of the web era. But the emergence of pattern libraries (i.e., <a href="http://developer.yahoo.com/ypatterns/index.php"> Yahoo! Design Pattern Library
+</a>) signal the development of best practices.</p>
+<p>Learn more about the mechanics of these effects:</p>
+<ul>
+<li><a href="http://developer.yahoo.com/yui/animation/">YUI animation page</a></li>
+<li>An example to animate a web widget's <a href="http://developer.yahoo.com/yui/examples/animation/anim_basic.html">
+width attribute
+</a>.</li>
+<li>An example to animate a web widget's <a href="http://developer.yahoo.com/yui/examples/animation/anim_size.html">
+size
+</a>.</li>
+<li>An example to animate a web widget's <a href="http://developer.yahoo.com/yui/examples/animation/fade.html">
+opacity
+</a> attribute.</li>
+<li>An example to animate a web widget's <a href="http://developer.yahoo.com/yui/examples/animation/colors.html">
+colour</a>.</li>
+<li>An example to create motion around <a href="http://developer.yahoo.com/yui/examples/animation/motion_controls.html">two control points</a>.</li>
+</ul>
+
+
+<h4 style="text-align: left"><em>The WOW factor in a historical perspective</em></h4>
+<table cellspacing="2" cellpadding="2" border="0">
+<tr>
+    <td width="300"  style="padding: 10px">
+<strong>Designing with JavaScript</strong> by Heinle and Pe&ntilde;a appeared first in 1997 and was republished in 2002.  Remember tangling with code to create an image billboard, drop-down menus, sliding tabs and scrolling layers with clipping? That's ancient history now, replaced by JavaScript libraries that are even more powerful, but enable you snap your web page together like playing with legos.
+	</td>
+    <td width="400" valign="top" style="font-size: -1">
+	<em>Click to enlarge</em>
+	<br />
+	<img id="heinle" onclick="doHeinle()" src="designingJavaScript.JPG" width="25" height="29" alt="Book cover of Designing with JavaScript" />
+	</td>
+</tr>
+</table>
+
+<h3>You ask: So how do I snap the legos together?</h3>
+<p>Consider the image enlargement effect that I used above. How does one do that?</p>
+<p>Get yourself an image and place it in your web page with the &lt;img&gt; tag.  I used the following for my image:</p>
+<pre>
+&lt;img id="heinle" onclick="doHeinle()" src="designingJavaScript.JPG" 
+width="25" height="29" alt="Book cover of Designing with JavaScript" />
+</pre>
+<div style="margin-left: 50px">
+<span style="font-family: Broadway; font-size: xx-large">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><em>id="heinle"</em> gives this image a unique name in my webpage code
+
+<span style="font-family: Broadway; font-size: xx-large"> <br /> &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><em>onclick="doHeinle()"</em> will fire a JavaScript function to enlarge the image.  The function I wrote is given below.
+
+<span style="font-family: Broadway; font-size: xx-large"> <br /> &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><em>src="designingJavaScript.JPG"</em> is the image
+
+<span style="font-family: Broadway; font-size: xx-large"> <br /> &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><em>width="25" height="29"</em> give the dimensions of the image as it first appears, i.e., it's really small.
+</div>
+
+<p>In the &lt;head&gt; section of your web page you import some JavaScript libraries.  You can download the entire YUI library, unzip it and then locate the following files.  Put them in the same directory as your web page:</p>
+
+<pre>
+&lt;script src="yahoo.js"&gt;&lt;/script&gt; 
+&lt;script src="dom.js"&gt;&lt;/script&gt; 
+&lt;script src="event.js"&gt;&lt;/script&gt; 
+&lt;script src="animation.js"&gt;&lt;/script&gt; 
+</pre>
+
+<div style="margin-left: 50px">
+<span style="font-family: Broadway; font-size: xx-large">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><em>&lt;script src="yahoo.js"&gt;&lt;/script&gt;</em> imports the file "yahoo.js".  The suffix "js" indicates JavaScript.
+</div>
+
+<p>Now for the most difficult part of all...a function that will fire when the book cover image is clicked.</p>
+<pre>
+&lt;script type="text/javascript"&gt;
+function doHeinle(){
+     var attributes = {
+         width: { to: 246 }, 
+         height: { to: 286 }
+     };
+     var bookCover = new YAHOO.util.Anim('heinle', attributes, 0.5, YAHOO.util.Easing.backOut);
+     bookCover.animate();	
+}
+&lt;/script&gt;
+</pre>
+
+<p>This may look like pretty thick code, but I stole most of it from the YUI just as you can steal this example from me and modify it with your own file names, etc.</p>
+
+<div style="margin-left: 50px">
+<span style="font-family: Broadway; font-size: xx-large">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><em>function doHeinle()</em> is the name of the function.  Note that it is exactly the same as the "onclick=" function call above.
+
+<span style="font-family: Broadway; font-size: xx-large"> <br /> &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><em>var attributes</em> creates a list of attributes for our image.  Here are the full size width and height of the image. We want to modify the image to these full-size dimensions.
+
+<span style="font-family: Broadway; font-size: xx-large"> <br /> &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><em>new YAHOO.util.Anim('heinle', attributes, 0.5, YAHOO.util.Easing.backOut)</em> says that the object is called 'heinle', that certain attributes should be applied, that all the animation should occur in half a second and that the image should bounce a bit so that it seems to land and settle in place.
+
+<span style="font-family: Broadway; font-size: xx-large"> <br /> &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><em>bookCover.animate()</em> tells the JavaScript engine in your browser to enlarge the image.
+
+</div>
+<br /><br />
+<div style="margin-left: 30px; border: solid medium black; padding: 20px">
+Pause to consider how these lines of code shield you from lots of messy details. If you were to build all this yourself, the first thing that you'd have to do is determine which kinds of web browsers are running your code.  You would have to target the <em>heinle</em> element.  You would have to create some code that loops around at timed intervals enlarging the width and height of the image.  When the image is full size, then you would have to run code that reduced it slightly and then inflated it again so as to produce the little bounce at the end.<br />
+<em>Comment: That's a lot of code. You'd have to be a professional to do all that.</em>
+<br /><br />
+What code did I have to write to get my example to work? I had to name my image with  <em>id="heinle"</em> and indicate what to do when the image was clicked with <em>onclick="doHeinle()"</em>.  And I had to create my own function with <em>function doHeinle()</em>. <br />
+<em>Comment: That's <span style="color: Fuchsia;">not</span> a lot of code.  You could steal my example and then merely substitute.  This an example of artisanal animation...sophisticated animation effects done by web writers like you and me who are not professionals.</em>
+</div>
+
+
+<h3>You ask: Just because you can do it, why do it?</h3>
+
+<p>Web page widgets that act and respond like real-world objects are more comprehensible to your readers.  For example: I stand in my front yard and see an airplane overhead several miles away.  It appears very small, but as it approaches it becomes larger and then dominates my view of the sky.  Gradually it recedes into the distance and becomes small again.  Note that the airplane doesn't appear suddenly, full-size, right overhead, which would totally disorient me. Similarly, web page widgets that pop out of nowhere and then suddenly disappear can disorient your readers. </p>
+
+<p style="font-size: smaller; font-style: italic">Read another statement of <a href="http://developer.yahoo.com/ypatterns/parent.php?pattern=transition#Rationale">
+this same rationale</a> in the Yahoo! Design Pattern Library</p>
+
+<blockquote style="padding: 10px">
+User interfaces are often based on static presentations, a model ill suited for conveying change...When the user cannot visually track the changes occurring in the interface, the causal connection between the old state of the screen and the new state of the screen is not immediately clear...Animation provides the visual cues necessary to understand what is happening before, during, and after the action. Unlike user interfaces which burden the user with the responsibility of relying on experience and deductive ability to interpret changes, cartoon animation leverages off of human experience of how objects change and move smoothly in the real world.
+
+<p style="font-size: -1;"><em>"Animation: From cartoons to the user interface" Bay-Wei Chang and David Ungar. Proceedings of UIST 93, pp.45-55, November 1993</em></p>
+</blockquote>
+
+<h3>You ask: Are there recommended ways of doing animations?</h3>
+
+<p>With a decade or more of web page experience under our belts, we are now developing a taste for how things should look and act on a web page. Those emerging visual conventions are expressed by patterns.  Pattern libraries are repositories of the basic visual paradigms for web page animations.  Two examples:</p>
+
+<table cellspacing="2" cellpadding="2" border="0" style="margin-left: 50px">
+<tr>
+    <td width="200"><img src="pattern_trnst_slide_sub.gif" alt="Slide transition" style="border: solid medium red" /></td>
+    <td width="200"><img src="pattern_trnst_spotlg_sub.gif" alt="Spotlight Transition" style="border: solid medium black" /></td>
+</tr>
+<tr>
+    <td valign="top">
+	<div style="text-align: left; width:200px">
+	<a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=slide">
+Slide Transition
+</a><br />
+	The designer wants to bring new context into the page and would like to communicate the additional content's relationship with other items on the page.
+	</div>
+	</td>
+    <td valign="top">
+	<div style="text-align: left; width:200px">
+	<a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=spotlight">
+Spotlight Transition
+</a><br />
+	Designer needs to call attention to where a data value or content has changed within the interface.
+	
+	</div>
+	</td>
+</tr>
+</table>
+
+<p>The artisan animator can profit from these emerging patterns and begin to build them into his own pages.  Consider the example of a spotlight transition.  The essential mechanics are illustrated above with the colour change.  To create a spotlight transition around some element that I want my user to focus on, I might use a pastel shade to color the background of the surrounding &lt;div&gt; element and then have it fade away to white. Here's a simple example:</p>
+
+<div style="font-size: smaller; font-style: italic">Click a box:</div>
+<table cellspacing="2" cellpadding="2" border="0" >
+<tr>
+    <td width="100">
+	
+	
+<form action="#">
+	<input id="dogBox" type="checkbox" name="dogs" onclick="doDog()" />Dogs<br />
+	<input id="catBox" type="checkbox" name="cats" onclick="doCat()" />Cats<br />
+	<input type="button" value="Clear all" onclick="doReset()" />
+</form>
+	
+	</td>
+    <td width="70" valign="top">
+	<div id="allDogs" style="height='100px'; width='50px';padding-left:5px;padding-right:5px">
+	Collie<br />
+	Spaniel
+	</div>
+	</td >
+    <td width="70" valign="top">
+	<div id="allCats" style="height='100px'; width='50px';padding-left:5px;padding-right:5px">
+	Persian<br />
+	Manx
+	</div>
+	</td>
+</tr>
+</table>
+
+
+<span style="font-family: Broadway; font-size: xx-large">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><a href="http://developer.yahoo.com/ypatterns/index.php">
+Yahoo! Design Pattern Library
+</a></strong> &nbsp;&nbsp;recommends visual paradigms to 
+
+	<br /><span style="font-family: Broadway; font-size: large; margin-left: 30px">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=brighten">
+Brighten</a>:&nbsp;&nbsp; An inactive object that has been previously dimmed comes into sharp focus.
+
+	<br /><span style="font-family: Broadway; font-size: large; margin-left: 30px">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=collapse">
+Collapse</a>:&nbsp;&nbsp; An object no longer in use is reduced in size, but still present.
+
+	<br /><span style="font-family: Broadway; font-size: large; margin-left: 30px">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=crossfade">
+Cross fade</a>:&nbsp;&nbsp;An object transitions from one state to another.  This is accomplished by fading out the old view of the object and fading in the new view of the object.
+
+	<br /><span style="font-family: Broadway; font-size: large; margin-left: 30px">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=selfhealing">
+Self-Healing</a>:&nbsp;&nbsp;An object has been removed from a list and the list adjusts (i.e., heals) by sliding the remaining choices together.
+
+	<br /><span style="font-family: Broadway; font-size: large; margin-left: 30px">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=slide#">
+Slide</a>:&nbsp;&nbsp;New content slides into view and visual content adjusts for the newcomer.
+
+	<br /><span style="font-family: Broadway; font-size: large; margin-left: 30px">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=spotlight">
+Spotlight</a>:&nbsp;&nbsp;The user's attention must be drawn to new content or values on the page.
+
+<br />
+<span style="font-family: Broadway; font-size: xx-large">&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>
+<a href="http://www.webcitation.org/5LcslAR1k">Jack Slocum's blog</a></strong>&nbsp;&nbsp;is <em>extending</em> the YUI library.  He has some resizable examples (http://www.yui-ext.com/deploy/yui-ext/docs/) that will probably revolutionize the use of thumbnail images. <span style="font-size: smaller; font-style: italic">Available at http://jackslocum.com/blog/index.php</span>
+
+<br />
+<span style="font-family: Broadway; font-size: xx-large">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><a href="http://www.webcitation.org/5LcslAR1u">WebPatterns.org</a></strong>&nbsp;&nbsp;is a new website that focuses on web patterns. <span style= "font-size: smaller; font-style: italic">Available at http://webpatterns.org/</span>
+
+
+<br />
+<span style="font-family: Broadway; font-size: xx-large">  &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>
+<a href="http://www.webcitation.org/5LcslAR23">Web Patterns</a></strong>&nbsp;&nbsp;collects web patterns from the University of California, Berkeley.
+<span style="font-size: smaller; font-style: italic">Available at http://harbinger.sims.berkeley.edu/ui_designpatterns/webpatterns2/webpatterns/home.php</span>
+
+<br />
+<span style="font-family: Broadway; font-size: xx-large">
+&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>
+<a href="http://www.webcitation.org/5LcslAR2D">Web design patterns
+</a></strong>&nbsp;&nbsp;is a collection of typical web page patterns. <span style="font-size: smaller; font-style: italic">Available at http://www.welie.com/patterns/</span>
+
+
+
+</div>
+<p><em>Date: January, 2007</em></p></td></tr>
+	  <tr><td style="font-size: 3px;" bgcolor="#800000">&nbsp;</td></tr>
+	 <tr><td bgcolor="#fbffdf" valign="top"><h3>For further reading:</h3>
+      
+<p><a href="http://www.webcitation.org/5LcslAR2M">User interface design patterns</a>. <span style="font-size: smaller; font-style: italic">Available at http://www.cs.helsinki.fi/u/salaakso/patterns/</span></p>
+	
+<p><a href="http://www.webcitation.org/5LcslAR2U">Web patterns and web semantics</a>. <span style="font-size: smaller; font-style: italic"> Available at http://westciv.typepad.com/dog_or_higher/2005/11/webpatterns_and.html</span></p>
+	
+ 
+		</td></tr>
+ <tr><td style="font-size: 3px;" bgcolor="#800000">&nbsp;</td></tr>
+ </tbody>
+ </table>
+ 
+ <form>
+<fieldset>
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">How to cite this paper</legend>
+<div><br />
+Brooks, T.A.&nbsp;(2007) &quot;Watch this: artisanal animation&quot; &nbsp; <em>Information Research</em>, <strong>12</strong>(2) paper TB0701 [Available at http://InformationR.net/ir/12-2/TB0701]</div>
+</fieldset>
+</form>
+
+<table cellspacing="10" align="center">
+	<tr>
+		<td colspan="3" align="center" style="background-color: maroon; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>
+	<tr>
+		<td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td style="white-space: nowrap;" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;Yahoo user interface library&quot; animation, &quot;Web design&quot;"></input> <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+		</td>
+		<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td style="white-space: nowrap;" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;Yahoo user interface library&quot; animation, &quot;Web design&quot;"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+</td>
+<td align="center" valign="top">
+<form method="get" action="http://www.live.com/" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td style="white-space: nowrap;" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;Yahoo user interface library&quot; animation, &quot;Web design&quot;"></input> <br />
+<input type="submit" name="sa" value="Windows Academic"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+</td>
+				</tr>
+</table>
+
+
+<hr color="maroon" size="1px" />
+
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/TB0701" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the author, 2007. <br />Last updated: 4 January, 2007
+</div></td>
+
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('TB0701.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+</table>
+
+<hr size="3" style="color: maroon ;" />
+<table align="center"><tr><td><div class="button">
+<ul>
+	<li><a href="infres122.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+</div></td></tr></table>
+
+<hr size="3" style="color: maroon ;" />
+
+</body>
+
+<!-- Mirrored from informationr.net/ir/12-2/TB0701.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:21 GMT -->
+</html>
+
+

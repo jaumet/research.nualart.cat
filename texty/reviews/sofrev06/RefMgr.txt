@@ -1,0 +1,1030 @@
+En: 4: Besides: mixed versions network: (Macintosh & Windows) Individual preferences file on different users machines
+
+RM 1 2 5 
+True network version. Though, global, field and type edit functions are reserved to just one user whilst others can only read the database. Read-only mode is a kind of right access that can be set by administrator for one or more, or none of the users 
+
+3.2 Internet
+   1. can use different browsers 
+   2. can automatically import/capture of WWW page 
+   3. launch URL from within a record 
+   4. can print HTML output 
+   5. client Z39.50 
+   6. can post database to the WWW that can be dynamically searched
+   7. record type(s) for Internet resources 
+En: 
+1 any
+3
+4 very basic, URLs are static, cannot be opened
+5 yes internal
+6 companion ISI ResearchSoft software Reference Web Poster to post (RefMan, ProCite, EndNote) databases to the www
+7
+
+RM: 
+1
+3 (static URLs); 
+4 
+5 BookWhere? 2000 embedded; 
+6 companion ISI ResearchSoft software Reference Web Poster to post (RefMan, ProCite, EndNote) databases to the www
+7
+
+3.3 Available Functions: summary
+   1. Search 
+   2. Remote search (Z39.50) 
+   3. Print 
+   4. Export 
+   5. Sort 
+   6. Input/Cataloguing 
+   7. Global corrections 
+   8. Import 
+   9. Reformatting during import 
+   10. Input via catching www pages 
+   11. Manuscript formatting (also from within the wp) 
+   12. Managing term lists 
+   13. Thesaurus 
+   14. Duplicates detection 
+   15. Circulation (Loans) 
+   16. Can activate external files and applications (OLE or OS' Shell)
+   17. Compute 
+   18. Graphic files management 
+
+En: 1 2 3 4 5 6 7 8 9 11 12 14 16  
+RM: 1 2 3 4 5 6 7 8 9 11 12 14 16 (OLE) 
+
+3.4 Internal database management
+   1. Create 
+   2. Rename 
+   3. Copy 
+   4. Delete 
+   5. Undelete 
+   6. Rebuild 
+   7. Save 
+   8. Compress (release space) 
+   9. Record undelete 
+   10. Revert global corrections
+   11. Statistics 
+En: 1 3 6 in beta 4.0.1 (7 as 3) 
+   
+RM 1; 4 (not reversible); 6; 8; 11 gives: sort criterium and order, total record number, total number of entries for authors, kw, periodical titles and dates 6 rebuild does not need to make a copy, releases disk space, and erases Reference Indexes (Groups) and record list configuration 
+
+3.5 Functions across different databases
+   1. search 
+   2. print 
+   3. global corrections 
+   4. duplicate detection 
+   5. manuscript formatting 
+En: 5 (with Add-in)
+RM: 1; 2 (it can print and search across 10 database result); 4; 5 + display (not use) of term lists: same sort criterium (character, word system/international...) required 
+
+3.6 Database subsets
+    1. retrieved records 
+    2. highlighted records 
+    3. marked records 
+    4. virtual sets
+    5. imported set
+    6. duplicate set 
+En: 1 2 5 6 
+RM 1; 2; 3 (not across sessions); 4 
+
+3.8 Data type
+   1. textual (also ANSI 128-255)
+   2. numeric 
+   3. graphic 
+   4. sound
+   5. bar codes 
+En: 1; 3 and 4 external via Windows Shell 
+RM: 1; 3 OLE; 4 OLE 
+
+3.9 Macro 
+En: no 
+RM no 
+
+3.10 Mouse
+1. right click 2. drag-and-drop 
+En: 1 2 
+RM 1 2 
+
+4 Database and record structure 
+4.1 Files 
+En: 1 file: dbn.ENL 
+RM: 2 files dbn.RMD dbn.RMX (respectively: data and indexes)
+
+4.2 Internal database and record structure 
+En: only vertical: Database -> Record -> Fields -> Subfields (names only) 
+RM: only vertical: Database -> Record -> Fields -> Subfields in names 
+
+4.3 Horizontal links: between databases, records, list entries 
+En: no 
+RM: only term synonyms in the 3 indexes: they are equivalent in searching ("reference index" is a virtual duplication of -pointer to- records) 
+
+4.4 Hierarchical links (es. thesaurus, mother/sons records, text/notecards)
+
+En: no 
+Term Lists can be regarded as autonomous (see dedicated section): their content can be imported from external text, updated from records, directly edited. Field data and list contents (sort of look-up) can be "crossed" in output to replace text: secondary title (journal) field + journal list (with up to three abbreviations 
+RM: no
+some fields generate indexes which are not only derived, i.e. automatically created and updated, as they can have indipendent entries and synonyms and can be directly edited
+
+4.5 Ready, predefined record structure
+En: yes: "reference types", which are automatically shared among different databases (stored in Windows system registry)
+RM: yes (reference type), they belong to each database
+
+4.6 Input worksheets
+    1. features 
+    2. can be modified 
+    3. can create others
+En: 
+1: 26 reference types -with varying fields- for book, articles, e-source etc.; 
+fields bear "step" displayed name: total number is fixed max 38; fields are identified by the number they bear in the Generic RT which determinates their position: number is fixed across all the reference types (workforms); some fields (names, journal titles, pages, URL, keywords) have peculiarities (internal coding, indexing, output formatting, sort...) that cannot loose or lend to other fields;
+2: yes, given abovementioned constraints, can add, delete, move, rename fields; attributes cannot be changed
+3: yes, up to three
+if a field is deleted from RT, existing record content is put to corresponding Generic RT field renamed; 
+no numeric fields apart from RN for sorting; if fields names are changed in RT, styles are automatically updated, searching and global editing are not affected
+
+RM: 
+1: 35 predefined forms: Reference Types -with varying fields- for books, articles. e-mail, thesis etc.; fields bear a label as "step" displayed name: total number is fixed max 33 (5 user defined); fields are identified by a number which does not imply a fixed position: number is fixed across all the RT; some fields ( names, periodical titles, dates, pages, URL, kw) have, to a different extent, properties (internal coding, indexing, output formatting, sort, searching...) that cannot lose or transfer to other fields;
+2: yes, given the abovementioned constraints, can add, delete, move, rename fields; their attributes cannot be changed
+3: no
+
+4.8 Multiples (multi-value) fields
+    1. present/absent 
+   2. specific input rules
+En: names as for the output (not kw); no headings sort; lists can recognize different separators in every single field (<CR> always fine)
+2: each occurrence on a new line or properly separated
+RM: 1 names and kw (33 URL); 2 each value is separated by a semi-colon (;) 
+
+4.9 Indexed fields for searching
+En: all fields content is automatically indexed, out of user's control (apart form QuickIndexes for kw or full-text); each character (right/left truncation), word, phrase, is indexed, without stopwords, and thus retrievable 
+RM: all fields are indexed for searching purposes: Authors, Dates, Periodical titles, kw have special indexes 
+
+4.10 Record number
+   1. system assigned 
+   2. reserved, cannot be altered 
+   3. user assigned 
+   4. allows duplicate numbers 
+   5. renumbering 
+   6. is a sortable field 
+   7. is a searchable field 
+   8. can be displayed in printed output 
+   9. reuse deleted numbers
+   10. can be alphanumeric 
+En: 1; 2; 5 (only if copied to another database with records); 6 for output; and database list; 7  
+RM: 1; 2 if 1; 3; 5 (only if copied to another database with records); 6; 7; 8; 9 (must manually enter); 10 
+
+5 Input/Edit 
+5.1 Cataloguing Reference Standard 
+En: none 
+RM: none
+ 
+5.2 How to recall records for editing
+    1. list browsing 
+    2. query search 
+    3. while editing another record 
+En: 1 2 3 (next/previous) 
+RM: 1 2 
+
+5.3 Input must be preceeded by searching 
+En: no 
+RM: no 
+
+5.4 Compulsory input within certain fields 
+En: no 
+RM: yes, user can define fields as mandatory depending on RT  
+
+5.5 Particular edit features
+   1. copy fields and/or records 
+   2. symbols table 
+   3. term lists 
+   4. date stamping 
+   5. undo 
+   6. default values (session and/or permanent) 
+   7. validation
+   8. automatic assignment of values
+   9. configure edit window
+   10. other 
+En: 1, complete record(s) can be copied in the db short list display); 2 no, but can use symbol font; 3; 5 
+RM: 1 (also Paste special, Copy, Duplicate: see 5.8); 2; 3; 4 no (but today's date can be automatically dumped if Reprint Status is "On request"); 5; 7 for terms; 8 yes, can scan titles (series), notes and abstracts to match words in the kw list and add to the kw field; 9 yes can change fields order; 10 can automatically sort keywords in field
+
+5.6 Spellchecker 
+En: no 
+RM: yes, can add words and use a different dictionary 
+
+5.7 Direct print of a record while editing it 
+En: no 
+RM: no 
+5.8 Duplicate record
+    1. drag-and-drop 
+    2. copy command 
+    3. clipboard (formatted: can specify style) 
+    4. export/print on disk (also formatted) 
+En: 1 2 3 4   3 only In-text citation 
+RM: 1 (also for portion of a field); 2 (Duplicate and Paste special can copy selected fields of a record; Paste follows a 'copy to clipboard' and replaces the target records); 3; 4 
+
+5.9 Duplicates detection
+    1. fixed criterium 
+    2. criterium can be defined 
+En: 2 can use several fields, exact match vs ignore punctuation and spacing  
+RM: 2 (can check across 10 databases) 
+ 
+5.10 Editor
+    1. upper/lowercase conversion 
+    2. cut/paste text 
+    3. b/e record 
+    4. b/e field 
+    5. delete to end-of-field key 
+En: field editor; 2 4 
+RM: field editor; 2 3 4 
+
+5.11 Font editing: font, size, bold, italics, underline, super/subscript, small caps 
+En: yes, all but no small caps 
+RM: yes, all, also Greek; but no small caps  
+
+5.12 Global corrections
+    1. add string (b/e) 
+    2. locate/replace (words, case) 
+    3. delete entire field content 
+    4. move field content 
+    5. change record type
+    6. can use wildcard 
+En: 1 2 3 4 
+RM:1 no (but can add entire field content);2 ; 3; 4; 6 explicit in term lists, "Match word" option in non-indexed fields 
+
+6 Import 
+6.1 Different ways. 
+    1. direct copy (write from database to database) 
+    2. batch import 
+      a) with reformatting filters
+         a1) ready-made 
+         a2) un/modifiable 
+         a3) user can define more
+    3. can capture WWW pages
+   4. can download data ready formatted in its own proprietary format from specific data sources 
+En: 1 copy and drag-and-drop 2, a) a1) a2) modifiable a3); 4 (e.g. BioMedNet Evaluated Medline etc.) 
+RM: 1; 2, a) a1) a2) modify and save under different name a3); 4 (e.g. BioMedNet Evaluated Medline etc.) 
+
+6.2 Delimited/Tabbed stuctured input ASCII text file
+    1. fixed/variable number of fields 
+    2. fixed/variable fields position in different RTs
+    3. RT can be changed 
+    4. multiple value fields allowed 
+    5. fields also on different lines
+    6. can define field separator
+    7. can replace delimiter if embedded in field
+    8. can define end of record
+En: CDF: ready-made option for ProCite CDF, cannot be altered; 
+Tabbed: 1; 2; 3; 4 
+Tab delimited: special first line for reference type and second with fields names labels according to receiving EndNote RT; no fixed position required; recognizes multiple authors
+ 
+RM: 1 and 2 variable according to the specified RT; 3 (more than one can be defined); 4 yes if with RM punctuation "; "; 5; 6; 7 ; 8 You can create your own capture definition to import comma or tab delimited records. None provided. Not obvious at all (also only online help documentation): finally, use only one destination field "Source" with subfields and its parsing option where you list all the fields by their position and delimiters 
+
+6.3 Can import alpha/numeric data from a spreadsheet 
+En: yes as long as tab delimited or tagged structured, see above 6.2 
+RM: yes as long as it is comma/tab delim. or tagged structured Papyrus: yes as long as it is comma/tab delim. structured 
+
+6.4 Can import proprietary format files 
+En: yes: built-in unmodifiable filters for e.g.: EndNote itself, Refer/BibIX, Reference Manager (RIS tagged), ProCite CDF, Papyrus, Bookends, BibTex ... + normally modifiable dedicated filters; directly reads downloaded file from some 35 different hosts, like BioMedNet Evaluated Medline, Innopac ... 
+RM: normally only modifiable dedicated filters, but can automatically convert ProCite EndNote; BookWhere?, ISI Current Contents, ISI Web of Science can directly write data to an RM database; directly reads downloaded file from BioMedNet Evaluated Medline
+
+6.5 Can import ISO 2709 format 
+En: no 
+RM: no
+
+6.6 Can import MARC format file 
+En: one has to create its own for a tagged MARC format , or download records through Z39.50 conline connection and MARC tagged modifiable filters 
+RM: one has to create its own for a tagged MARC format , or download records through Z39.50 conline connection and MARC tagged modifiable filters 
+
+6.7 Tagged stuctured input ASCII text file File. Reformatting:
+   1. condition check
+   2. change RT
+   3. merge fields
+   4. delete/discard fields
+   5. field content parsing
+   6. add field content, strings
+   7. tolerate fields in variable position
+   8. upper/lower case conversion
+   9. replace text 
+En: 2; 3; 4; 5; 7; 8; 9 omitting strings 
+RM: 1 to replace text; 2; 3; 4; 5 (7 predefined patterns: author, periodical, date etc.: Source lets indicate delimiters, also commas and tabs); 6 (4 keywords + date stamping); 7; 8 (also Casing Term Dictionary); 9; also "Periodical term Dictionary" not to abbreviate terms without periods in abbreviated titles
+
+6.8 Operability
+    1. read range of records rather than all
+    2. read one record at the time, confirm y/n
+    3. handle duplicates
+    4. preview
+    5. log file 
+Pr: 3; 5  En: 3; 5 for Z39.50 connection downloaded records 
+RM: 1; 2; 3; 4; 5  
+
+6.9 Import through Z39.50 online connection
+    1. can modify import filters
+ 
+En: yes 
+RM: yes 
+
+7 Search 
+7.1 Different levels and approaches:
+    1. easy / expert 
+   2. menu/command driven 
+   3. browsing term lists / indexes 
+   4. query expressions 
+   5. browsings record list 
+En: 1 one query by example template, with syntax control; 4; 5 
+Short Record List browsing is default window: one record per line; can handle up to five columns and use any field to display. Quickly move to record by directly entering a string belonging to a key of the first sort field. Sort on any displayed field by clicking the column field bar. Cannot use term lists here
+
+RM: 1 Usually only expert; easy "Quick retrieval" hidden in Term Manager; 2: command driven, assisted by buttons;3: no, lists are to pick up termsfor a query, not to index and display records at once; 4; 5
+Short Record list browsing is default window, not database dependent -and can apply to all lists: one record per line, can choose any field (up to 33); sort on any displayed field by clicking the column field bar. Quick retrieval lets select terms but only from Term Manager and launch <F12> a search (AND or OR)
+
+7.2 Browsing indexes to search
+    1. entries show number of related docs
+    2. relationships (e.g. x-refs) between entries are displayed 
+    3. direct selection of index terms and display of related documents 
+En: n.a. 
+RM: n.a. 
+
+7.3 Query expressions 
+Pr: assisted by command buttons to select: fields, operators, terms, previous queries En: assisted by template and buttons to select fields, operators, scope, (+ options: full word, case, use quickindexes, remote search); lists' terms are available only by open, copy/paste 
+RM: assisted by command buttons to select: fields, operators, terms, previous queries Papyrus: assisted by command buttons to select: fields, operators, terms 
+7.4 Natural language queries 
+Pr: no En: no 
+RM: no Papyrus: no 
+7.5 Search stragey
+   1. can save and recall search expressions
+   2. can recall previous queries within the same session
+   3. can combine previous search steps 
+Pr: 1; 2 only if = 1, i.e. explicitly saved and named; 3 yes, new expression can cumulate previous queries still fully editable En: 1; 2 no, only if saved; 3 can search on result : within/refine, add, omit 
+RM: 1; 2 (up to 10); 3 (recalled query becomes first expression: others can be added) Papyrus: 1 if the resulting set of retrieved records -group- is saved, the originating query is saved as well: can be re-run and edited; 2; 3 (editable) 
+7.6 Can save and recall search result 
+Pr: yes, if stored in Groups En: no 
+RM: yes Reference Indexes Papyrus: yes Groups 
+7.7 Shows hits of each search expression component 
+Pr: no, only total records number En: no, only total records number 
+RM: total records number also for each line of a multiline query (but not for its internal components not for the last line) Papyrus: no, only total records number 
+7.8 Can print directly one or more records while in search/browse mode 
+Pr: yes En: yes 
+RM: yes Papyrus: yes 
+7.9 Refine (search in result) 
+Pr: yes En: yes 
+RM: yes Papyrus: yes 
+7.10 Advanced search features
+    1. best match, weighted terms, ranking 
+    2. fuzzy, sounds like 
+    3. hypertext-like 
+Pr: no En: no 
+RM: no Papyrus: 3
+kw file allows links between entries, also records can be linked: search can be limited/expanded to selected/all types of links; number of levels for the same link can also be selected: up- down- posting (thesaurus-like)  
+7.11 Input allowed while indexing 
+Pr: n.a. (real time) En: n.a. (real time) 
+RM: n.a. (real time) Papyrus: n.a. (real time) 
+7.12 Instant display of retrieved records
+    1. short record list 
+    2. one record at the time 
+Pr: 1 2 En: 1 
+RM 1 2 Papyrus: 1 2 
+7.13 Highlighting search terms in result ( + jump to next occurrence of term) 
+Pr: no En: no 
+RM: yes in the Output display --not in the Standard editable one, (no "jump") Papyrus: no 
+7.14 Indexing operation
+    1. automatic, real time 
+    2. batch 
+Pr: 1 automatic when saving a record En: 1 automatic when saving a record 
+RM: 1 automatic when saving a record Papyrus: 1 automatic when saving a record 
+7.15 Indexing techniques
+    1. any character string 
+    2. word by word 
+    3. phrase (adjacent words) 
+    4. marked portions of fields 
+Pr: indexing is ruled only by the system: 1 2 3 En: indexing is ruled only by the system: 1 2 3.
+One built-in quickfind index for authors, user can activate or exclude it. If on, left truncation is unavailable. User can create kw or "any field" quickfind indexes 
+RM: 1 in non-indexed fields; 2 in non-indexed fields; 3 also more words inside the string (indexed fields require truncation symbol) Papyrus: 1 2 3 (any string is automatically made searchable, but proper indexing for user-defined fields is under user's control) 
+7.16 Scope of searching
+    1. one or more distinct fields
+    2. cluster of fields 
+    3. full text = any field
+    4. same occurrence 
+Pr: 1 yes with field indicator (RT included); 2 limited to three clusters; author, title, date; 3 yes, default En: 1 pull-down menu selection (RT included); 3 any field 
+RM: 1 (RT included); 2 (predefined: non/indexed fields, authors, titles) Papyrus: 1 (RT included); 2; 3 ("general" but does not include either kw or journals) 
+7.17 Case sensitiveness 
+Pr: no En: yes if Case option is on 
+RM: no Papyrus: no 
+7.18 Diacritics 
+Pr:: no difference, "Göthe" = "Gothe" En: difference : "libertà" cannot retrieve "liberta" 
+RM: no difference (can be used only in: Authors, kw, Titles, Notes) Papyrus: no difference 
+7.19 Can use and nest parenthesis 
+Pr: yes En: yes; but implicitly: vertical priority: the up most is the first and inner most within the implicit expression, e.g. (((1 and 2) not 3) or 3) 
+RM: yes; but implicitly: vertical priority: the up most is the first and inner most within the implicit expression, e.g. (((1 and 2) not 3) or 3) Papyrus: yes 
+7.20 Priority within search operators and queries 
+Pr: set by using parentheses, the inner most comes first En: vertically: first comes the first cfr. previous 
+RM: no explicit parentheses; vertically: first comes the first cfr. previous Papyrus: set by using parentheses, the inner most comes first 
+7.21 Boolean operators
+    1. AND 
+    2. OR 
+    3. NOT (unary) 
+    4. AND NOT (binary) 
+    5. XOR 
+Pr: 1 2 3 4, 5 indirectly En: 1 2 3 4, 5 indirectly (two steps: OR + omit ref. AND) 
+RM: 1 2 4 Papyrus: 1 2 3 4, 5 indirectly 
+7.22 Relational operators
+contains    <>    <    <=     >    >=    range    equal 
+Pr: contains, <>, <, <=, >, >=, range in dates (or via: x > y and x < z), equal En: contains, <> as "omit", <, <=, >, >=, range, equal 
+RM: range in dates, RefID (RN); <= for earlier than today's date in Reprint status=On request Papyrus: contains < <= > >= equal (by adding a backslash to the search string, e.g.: Author=Smith,P\ will not match "Smith, Paul") 
+7.23 Can combine boolean and relational operators 
+Pr: yes En: yes 
+RM: yes, but (only range) Papyrus: yes  
+7.24 Truncated search
+    1. explicit or implicit 
+    2. right 
+    3. left 
+    4. r/l 
+Pr: 1 yes (* ASCII 42) 2; 3; 4 : operator "contains" En: 1 implicit 2; 3 left unavailable when using quickfind indexes; 4 (see 3) 
+"contains" is like "=" equal, with implicit l/r truncation; whereas explicit l/r truncation ( *xxx*) is used with "=" e.g. AUTHOR contains ale, AUTHOR = *ale*, no: AUTHOR contains *ale*,)   
+RM: r/l explicit in indexed fields; r/l implicit in non indexed fields Papyrus: 1 explicit; 2; 3; 4 
+7.25 Can search by position: b/e field and/or occurrence 
+Pr: yes En: no 
+BEGINS WITH field or occurrence (names and kw), implicit right truncation: "D'Alema", AUTHOR BEGINS WITH "D'Alem" ok; not: AUTHOR BEGINS WITH "D'Alem*"); same for field ends with   
+RM: no Papyrus: no 
+7.26 Search for not/empty fields 
+Pr: yes (dedicated operators: EMPTY, NOT EMPTY)  En: yes, empty: "field"is [blank];
+not empty: "field"is [blank] + Omit showing references; 
+RM: "yes", only in indexed fields: look for records (RefID range) then exclude (NOT) or include (AND) any character * (non-indexed only accept * as a real character \*) Papyrus: yes 
+7.27 Internal wildcards (e.g. *?) 
+Pr: no En:no 
+RM: no Papyrus: yes * for any character 
+7.28 Can combine boolean, relational, parenthesis, truncation etc. 
+Pr: yes En: yes 
+RM: yes (as long as provided) Papyrus: yes 
+7.29 Adjacency and proximity operators 
+Pr: no, but "xxx yyy zzz" is adjacency (with " " delimiters) En: no, but xxx yyy is adjacency (without delimiters) 
+RM: no proximity , but xxx yyy zzz is adjacency (without delimiters) Papyrus: no, but xxx yyy is adjacency (without delimiters) 
+7.30 Search only within the same occurrence of a repeatable field 
+Pr: no En: no 
+RM: no Papyrus: no 
+7.31 Search only within the same paragraph 
+Pr: no En: no 
+RM: no Papyrus: no 
+7.32 Stopwords 
+Pr: no (only for sorting purposes) En: no 
+RM: no Papyrus: yes, system-controlled; but user can decide how many characters make up a "word" 
+7.33 Z39.50 Searching   
+Pr: yes, embedds previous "companion" BookWhere?® package En: yes 
+use special -simplified- search interface; can search different databases simultaneously; can save result in db without conversion; can save search expressions; can modify or add new hosts and configure; can configure conversion filters;  use same interface as normal searching function; cannot search different databases simultaneously; can save result in db without conversion; can modify or add new hosts and configure; can configure conversion filters; connection files and filters are individual files 
+RM: yes, embedds previous "companion" BookWhere?® package Papyrus: no 
+use same interface as normal searching function; can search different databases simultaneously; save result in db without conversion; can modify or add new hosts and configure 
+
+8 Thesaurus 
+En: no 
+RM: no  
+
+9 Output and Print 
+9.1 Send output to printer, file, video 
+En: printer, file; print preview not available 
+RM: yes
+
+9.2 Real bibliography formatting software: offers large quantity of -ready and modifiable- styles, can create new 
+En: yes, offers predefined ±400 styles and can create new to use across 1 proof+22+3 custom RTs; 
+RM: yes, offers predefined ±460 styles and can create new to use across 1 proof+35 RTs, cannot create new RTs; wizard provided to assist in creating new styles 
+
+9.3 Structure of system display
+   1. short record list 
+   2. one formatted record at the time
+   3. more formatted records 
+En: 1; 2; 3 no, needs to export and open file 
+RM: 1; 2; 3 only print preview 
+
+9.4 Report generator 
+En: within each style
+-sort
+-pre/suffix, record numbering, spacing
+-indents
+-can add to the formatted reference: RN, RT, Number in the list, Notes, Abstract, Label, Keywords, In-text citations
+-journal abbreviation list 
+Lacks: headers, footers, columns; right justified record content (only record number); block (record) protect Lacks: headers, footers, columns; block (record) protect 
+RM: 
+-choose output style
+-heading
+-record numbering (pref/suffix + justification)
+-indents (first/following lines -hanging)
+-line spacing, eject new page
+-in/ex-clude RT, Notes, Abstract, Report Status, Keywords if contained in style
+-font type and size
+-margins
+-page numbering (begins with, suppress first, location, alignment)
+-can print short table form list from Reference list display
+Sort order is the active one on the selected list
+
+9.5 "Subject list", i.e. list with sorted headings from record content
+    1. one level 
+    2. more levels
+    3. headings only
+    4. from more than one field at once 
+En: not at all; 3 can print term list; 4 term list can derive data from more than one field 
+RM: not at all; 3 can print term lists, also with reference counter
+
+9.6 Output file format 
+1. RTF 2. MS-Word 3. Corel-WP 4. TXT 5. HTML 6. other 
+En: (as export) 1 4 5 just static HTML text: URLs are not active 
+RM: : 1; 2 RTF Word; 3 RTF WP; 4; 5 just static HTML text: URLs are not active 
+
+10 FL-Formatting language to define output styles
+En: mostly made up of: 
+1 field names
+2 field/string separator (|), link adjacent text (non-breaking space)
+3 text strings, punctuation, spacing, tab, style 
+4 many options for names, titles, pages keywords
+5 ` (ASCII 96) marks strings as mere text e.g. field names `Journal` 
+6 handles singular vs plural, e.g. p^pp. ed.^eds.
+special provisions for anonymous works, for distinguishing ambiguous in-text citations; recognizes generic field names)
+RM: same as ProCite (but it recognizes fields generic names and numbers)
+[Pr: mostly made up of: 
+1 field names
+2 two formal instructions: field/string separator, group command «...» (i.e. if more elements -fields- are included in a group, one is enough for the relevant surrounding punctuation to be output)
+3 text strings, punctuation (automatic control on double punct.), spacing, style (bold etc.): as written
+4 many options for names, titles, dates, pages keywords
+5 back slash (ASCII 92) \ marks any string as mere text, e.g.: " \« "
+(FL recognizes specific and not generic workform field names and not numbers)]
+
+10.1 Selection 
+1. fields 2. subfields  
+En: 1; 2: only "surname, name" 
+RM: 1; 2: only "surname, name", internal date format 
+
+10.2 Add text
+     1. in front of/after 
+     2. regardless of field presence 
+     3. depending on field presence 
+     4. depending on field content 
+En: 1 2 3 
+RM: 1 2 3 
+  
+10.3 Distinguishes among occurrences of a repeatable field:
+     1. by punctuation -separators 
+     2. because of position / sequence number 
+     3. can count them 
+En: 1 names; 2 partially names, as far as output is concerned; 3: can count number of names to sort references with same first author 
+RM: 1; 2 only partially: names, as far as output is concerned
+
+10.4 Produces tagged format output 
+En: to a limited extent : cannot handle multivalue fileds (authors, keywords...) on consecutive lines 
+RM: yes, as an output style
+ 
+10.5 Displays RT (reference type)  
+En: yes 
+RM: yes   
+
+10.6 Produces permuted indexes (words in-out-and context) 
+En: no 
+RM: no
+    
+10.7 Offers conditional commands (IF ... THEN...) 
+En: not really, but implied by various options (e.g. names) 
+RM: not really, but implied by various options (e.g. names) 
+ 
+10.8 Upper/lowercase conversion 
+En: yes (names and titles + list of words that should not be altered) 
+RM: yes    
+
+10.9 Look-up tables to expand acronyms, abbreviations, replace text 
+En: Journal field ("Secondary title") and relevant list 
+RM: Periodical synonyms list
+   
+10.10 Contextual Record Preview 
+En: not while designing a style, but yes when choosing a style 
+RM: yes  
+ 
+10.11 Text added in styles can be language dependent for each record
+     1. text lists can be modified
+     2. new lists can be added (new language)
+     3. text can be present in various fields 
+En: no 
+RM: no   
+ 
+10.12 Checks format syntax 
+En: no 
+RM: yes   
+
+10.13 Level of difficulty of the formatting language 
+En: rather easy, does not require programming skills 
+RM: rather easy, does not require programming skills (offers a Wizard function) 
+
+11 Sort 
+11.1 Scope
+   1. sorting records within the database 
+   2. sorting records in output  
+En: 1: one criterium by default and several custom; 2 sort the db (or a subset) to export and to print; different sort orders for in-text and bibliography citations in a manuscript 
+RM: 1 is the criterium also for the output (apart from manuscript's bibliography) 
+
+11.2 Basic sort criterium for characters:
+   1. operating system's tables 
+   2. program specific settings and/or tables
+   3. user defined table (es. ä = ae)
+En: 1 Windows active table for output list. Beginning punctuation is always ignored; default sort (author-year) has got its own -hidden- criterium; two stopword lists available (see below)
+RM: 1; 2 internal regional tables: see above ProCite; can also set "Character sort order" where letters with diacritics are sorted at the end. Leading punctuation and articles are never ignored. Digits are still letters apart from Dates and RN
+
+11.3 Sort keys on different levels 
+En: various ready options + 5 (each A/D) levels for custom sort order 
+RM: yes 3 levels (each A/D) 
+
+11.4 How to sort the database 
+En: Pull down menu option or mouse click on the short record list field name bar to sort 
+RM: setting permanent option or mouse click on the short record list field name bar to sort temporarily 
+
+11.5 How to sort for printing 
+En: within the style (see previous) for manuscript's in-text and bibliography citations; sort selected records to export or print 
+RM: uses sort order of the selected list of records 
+
+11.6 Database sort is kept over sessions 
+En: yes 
+RM: yes 
+
+11.7 Sort key length can be defined 
+En: no 
+RM: no 
+
+11.8 Sort for printing belongs to output styles 
+En: only as far as manuscript's in-text and bibliography citations are concerned 
+RM: it does not, apart from manuscript's bibliography sort 
+
+11.9 Sort records in output using: 
+   1. words 
+   2. single occurrence of a multiple field 
+   3. marked strings 
+   4. portions of field and subfield 
+   5. whole field 
+En: 2 option for first author in manuscript bibliography; 5 
+RM: 2=4 (first author or kw); 5 
+
+11.10 Can alter the sort value of a string 
+En: no, only leading stopwords (2 lists : authors, titles) 
+RM: no, (no stopwords available) 
+
+11.11 Conditional commands available for sorting 
+En: no, but embedded in options for authors and anonymous works 
+RM: no 
+
+11.12 Sort keys derived from different fields 
+En: no 
+RM: no 
+
+11.13 Ignore initial articles and punctuation marks
+En: leading a an the and punctuation always excluded + two customizable stopword files belonging to each database: 1 authors (corporate names included); 2 titles
+Stopwords cannot be disactivated: must be emptied
+RM: no (does not have stopwords list)
+
+11.15 Other 
+En: special provisions for anonymous works and for edited works after original works by the same author  
+RM: can sort kw within the kw field 
+
+11.16 Sort can produce headings above sorted records ("subject bibliography") 
+En: no 
+RM: no 
+ 
+11.16.1 Sort keys are another item from headings, thus can match or be different 
+En: n.a. 
+RM: n.a.
+ 
+11.16.2 Headings might not be displayed within records 
+En: n.a. 
+RM: n.a. 
+
+11.16.3 More than one level of sort key as headings 
+En: n.a. 
+RM: n.a. 
+  
+11.16.4 Sort of records under the same sort key 
+Pr: print sort order En: n.a. 
+RM: n.a. 
+
+11.16.5 Sort occurrences of a repeatable field as headings
+1. altogether 2. all separated 3. just one 
+En: n.a. 
+RM: n.a. 
+ 
+11.16.6 Records referenced more than once by different sort headings 
+En: n.a. 
+RM: n.a. 
+
+11.16.7 Sort headings can be formatted 
+En: n.a. 
+RM: n.a. 
+
+11.16.8 Can produce indexes referencing records in the database by a short element (e.g. RN) 
+En: n.a. 
+RM: no 
+
+12 Export 
+En: yes, it is equal to "printing" (TXT, RTF, static HTML file formats); 
+RM: yes 
+
+12.1 Export formats
+   1. delimited: comma, tab, <CR>, other 
+   2. tagged
+   3. ISO 2709 
+   4. MARC 
+   5. proprietary format of other database 
+En: 
+1: already made (and modifiable) output styles: tab delimited, ProCite CDF
+2: already made (and modifiable) output styles: EndNote tagged show all fields, EndNote and Refer (%A), BibTex, RM ISI (AU - ), others depending on the style chosen or defined for bibliographies; 
+4: no, but one could just "invent" it from scratch; 
+5: see 1 delimited and 2 tagged] 
+RM: 1 comma, tab; 2 RIS (style is preserved), Medlars 
+
+12.2 Fields that can be exported
+   1. all 
+   2. some 
+   3. RT 
+   4. RN 
+En: 1 2 3 4 
+RM: 1, no options 
+
+13 Manuscript formatting (i.e. Generating citations and bibliography in a document) 
+En: yes): only the Add-In facility installed within the wp is considered here 
+RM: yes: only CWYW "cite-while-you-write" facility is considered here 
+
+13.1 Compatible wordprocessors 
+En: MS-Word 7, 97, 200; Corel-WP 7-9 also localized versions  
+RM: Corel-WP 7-8 9, MS-Word 7-97 2000 
+
+13.2 On-line contextual help 
+En: yes, not contextual 
+RM: yes 
+
+13.3 Can format more than one document at the time 
+En: no 
+RM: no  
+
+13.4 Can generate bibliography from more than one database at the time 
+En: yes 
+RM: yes
+
+13.5 Entering placeholders within text
+   1 from within wp text (ad hoc tool bar and/or pull down integrated menu):
+      1a manually writing
+      1b automatic insert
+   2 from within db: 
+      2a ad hoc command to copy an operational in-text placeholder; 
+      2b via clipboard (in-text format has to comply with placeholder format) 
+En: 1a; 1b not searching the db but automatically capturing selected records; 2a Copy; 2b Copy formatted 
+RM: 1a; 1b also: a) multiple selection, b) selection between multiple matches, c) marked records selection; 2b 
+
+13.6 Location for placeholders within the wp document
+1. main text 2. end/footnote 3. hidden text 
+En: 1 2 3 
+RM: 1 2 3 
+
+13.7 Content and structure of placeholders
+   1. author name (1a any order)
+    2. title
+    3. keywords
+    4. date
+    5. RN 
+    6. one or more, also truncated, string from any field
+    7. delimiters/markers can be changed 
+ 
+En: 1 4 5 7 
+RM: 1; 1a; 2; 3; 4; 5; 6; 7 
+
+13.8 Different references same author same year
+    1. must differentiate within db (1990b) 
+    2. program can distinguish them
+    3. must differentiate within text 
+En: 2 (in three different ways) 
+RM: 2 
+
+13.9 Multiple citation (same or different authors)
+    1. can sort
+    2. can join: 2-5
+    3. can suppress repeated names
+    4. can insert text 
+En: 1 2 3 4  
+RM: 1 name / citation order / date A/D; 2; 3 (add switch /d); 4 (switches: /pt /ft) 
+
+13.10 Final in-text citation format is different from placeholder 
+En: yes 
+RM: yes  
+
+13.11 Final in-text citation format is ruled by ad hoc style within db made up of: 
+    1. citation number
+    2. author-date
+    3. other
+    4. shortened version of complete bibliographic reference
+    5. two styles: in-text vs. note
+    6. nothing 
+En: 1 2 3 4 5 6 + extra footnote format that handles repeated, consecutive, partially identical citations 
+RM: 1 2 3 4 5 6 
+
+13.12 Changes to in-text/footnote citations standard format
+   1. add text (in front of / after) 
+   2. hide portion 
+   3. hide completely 
+   4. put only in the list, exclude in-text 
+   5. first different from its repetitions  
+En: 1 (only prefix) 2 3 (if only NR and option is on) 4 5  
+RM: 1 2 3 4 5 ("op. cit." allowed) 
+
+13.13 Bibliographic reference list format ruled by db style different for each RT
+    1. generated within wp text
+    2. generated in a copy of wp text
+    3. settings remain for next session
+    4. can automatically exclude citations placed in notes
+    5. list can include references not shown as in-text citations 
+En: 1 4 5 (hidden text) 
+RM: 1 3 4 5 
+
+13.14 Control over reference list format done directly by the sw rather than by wp
+   1. paper size, margins, headers footers
+   2. heading
+   3. font, size 
+   4. indent, line spacing
+   5. citation numbering, pre/suffix, justification 
+En: 3 4 (line spacing only between records) 5 
+RM: 2 3 4 5  
+
+13.15 Duplicates are automatically removed from the list 
+En: yes 
+RM: yes 
+
+13.16 Reference list sort order
+    1. citation order
+    2. sort order defined within db
+    3. sort order defined within wp by the program 
+En: 1 2 (within each style) 
+RM: 1 2 3 (only Manuscript order and Author-Date) 
+
+13.17 Format for In-text citations and list references can be changed without changing wp text 
+En: yes 
+RM: yes  
+
+13.18 Errors
+1. during inserting and formatting; 2. user can act on the spot; 3. log file 
+En: 2 (can just stop); 3 online 
+RM: 1; 2 
+
+13.19 Manuscript formatting can take place:
+    1. within wp text (1a same document 1b other document)
+    2. within db
+    3. in one step
+    4. in more than one step 
+En: 1 1a 2 3 
+RM: 1 1a 3 or 4  
+
+13.20 More citations of the same reference can bear same number 
+En: yes 
+RM: yes  
+
+13.21 In text formatted citation can have different format depending on RT 
+En: no: one in-text style format for all RTs  
+RM: yes 
+
+14 Term/Entry lists (authority files)
+En: features in general:
+System lists: 3: authors, journals, keywords predeterminated, and can be modified; Other lists: free number up to 31; user can choose from which fields list entries are derived (n fields to 1 list, but a field can automatically update just only one list);
+All lists: content can be automatically derived during input or updated in batch mode; content can be suggested during input if term already exists in the list (auto-completion); lists can be automatically updated when importing or copying records; user can set delimiters for multivalue fields; batch update of list from all or only selected references; new terms are highlighted in red; any field can resort to entry lists; any list can contain entries also not derived from records (import or direct input, edit and deletion : but to change content in the records fields one has to perform global change); automatic duplicate detection and sort; document total number linked to entries never shown. Journals lists with up to 3 abbreviations that can be individually selected in output styles. No list is physically separated from database thus cannot be shared with others
+Remarks: alphabetic scrolling: keying in "MARC" can bring to "MARC" or to "C" if keying speed is too slow
+RM: features in general:
+Term lists (3 Lists: Authors, Journals, Keywords) connected only to correspondent fields whose contents cannot but being automatically included in them; fixed number: 3; not separate from database; can be independently managed: can add, global edit, purge, print list terms; lists cannot be shared with other db (but Periodical list can be copied); cannopt be accessed from other fields; in searching work as pick up lists; 
+Synonyms: each author and kw can have up to 255 synonyms, periodical title up to 3 (output style can use them) . Synonyms automatically become physically reciprocal: A with syn. B C, then B with syn. A C etc. They can be used in searching non in editing. Syn. of different terms can be combined (summed)
+Phrase list: one single list of "strings": user created (no import), strings can be picked up from later, while editing any reference field
+
+14.1 Fixed number 
+En: yes 3 system lists, others can be added up to max 31 (each entry 253 chars long) 
+RM: yes 3 term lists + 1 optional Phrase list 
+ 
+14.2 Lists' content is automatically derived from db data, or can contain external data 
+En: 3 lists derive data from one or more fields according to user's preferences; updating can be batch or automatic; any list can have content not derived from records (direct input or import) 
+RM: derived and can also contain external data 
+
+14.3 Lists are physically separated from database 
+En: no, they are all embedded 
+RM: no 
+
+14.4 Lists reflect records content in real time 
+En: yes if this preference is selected, batch update is also possible 
+RM: yes  
+
+14.5 List can be directly edited 
+En: yes, all 
+RM: yes  
+
+14.6 When list entries are edited, records content change 
+En: never, must perform a global change 
+RM: yes 
+
+14.7 New entries are validated (go list, e.g.: new, old, probably a duplicate) 
+En: new entries displayed in red; close or identical term is suggested 
+RM: yes (new) 
+
+14.8 List entry can contain its own supplementary data: note, abbreviation, date, compiler, x-refs 
+En: no, only journal titles list can have up to 3 abbreviations 
+RM: synonyms terms, which -on their turn- become entries of the list; journal titles list can have up to 3 abbreviations 
+ 
+14.9 Lists can be printed 
+En: yes all (export as .TXT file) 
+RM: yes (the three indexes) 
+ 
+14.10 Import external data into the lists 
+En: yes 
+RM: only Periodical term dictionary
+
+14.11 Lists are useful for input 
+En: yes 
+RM: yes
+
+14.12 Lists are useful for searching 
+En: not really : just open, cut and paste 
+RM: yes 
+
+14.13 List entries show total number of related documents  
+En: no 
+RM: no (only when printed out)
+ 
+14.14 Lists can be shared among different db 
+En: no 
+RM: no  
+
+14.15 Where and how they are used:
+   1. browsing, display related records
+   2. search expressions, pick up terms from one or another
+   3. input, pick up terms from one or another
+   4. output 
+En: 2: cut-and-paste; 3: all; 4: journal list to replace matching text
+RM: 2; 3; 4 periodical list 
+
+14.16 How lists are created and updated:
+   1. input: new entries automatically update the list
+   2. ad hoc command to edit lists out of records
+   3. import
+   4. as a text file out of the program 
+En: 1 2 3 
+RM: 1; 2
+  
+14.17 How lists are printed
+    1. from the outside, as text file 
+    2. from the inside, by ad hoc printing function 
+En: 2 export -save file 
+RM: 2 
+
+15 Documentation
+   1. Reference manual 
+   2. Tutorial 
+   3. Context-sensitive Help screens 
+   4. Error messages
+En: 
+1: Users' Guide in English, bound, TOC, index; PDF version; not an alphabetic nor systematic reference manual. Very complete, precise, clear, reliable, honest
+2: chap. 3 "Guided Tour" 
+3: yes but not contextual at all, Windows-like
+4: not enough 
+RM: 
+1: Users' Guide in English, bound, TOC, index; not an alphabetic nor systematic reference manual. Could be more precise and complete: does not solve difficult tasks, hides some important details, does not include Import File editor
+2: "Guided Tour" on CD and in the online help file
+3: incomplete
+4: not enough
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+

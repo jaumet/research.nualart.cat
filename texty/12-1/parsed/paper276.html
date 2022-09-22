@@ -1,0 +1,956 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/12-1/paper276.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:36:02 GMT -->
+<head>
+<title>Query <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and their role in Web searching by the members of the general public</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif"/>
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css"/>
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk"/>
+
+<!--Enter appropriate data in the content fields-->
+<meta name="dc.title" content="Query <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and their role in Web searching by the members of the general public"/>
+<meta name="dc.creator" content="Martin Whittle, Barry Eaglestone, Nigel Ford, Valerie <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Gillet, Andrew Madden"/>
+<meta name="dc.subject" content="Give a brief statement of the subject of the paper"/>
+<meta name="dc.<span>description</span>" <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> content="Introduction.  This paper reports preliminary research in a primarily <span>experimental</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>study of how the general public <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>for information on the Web. The <span>focus</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is on the query transformation patterns that characterise searching. <span>Method</span>. <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> In this work, we have used transaction logs from the Excite <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine to develop methods for analysing query <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>that should aid the analysis of our ongoing <span>experimental</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>work. Our methods involve the use of similarity techniques to link queries with the most similar previous query in a train. The resulting query <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>are <span>represented</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>as a <span>list</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>representing a whole <span>search</span>. <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Analysis.  It is shown how query transformation sequences can be <span>represented</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>as graphical networks and some basic <span>statistical</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>results are shown. <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>correlation analysis is performed to examine the co-occurrence of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and quotation mark changes with the <span>syntactic</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>changes. Results. <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>frequency analysis of the occurrence of query transformation <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is presented. The connectivity of graphs obtained from the query transformation is <span>investigated</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and found to follow an exponential scaling law. The correlation analysis reveals a number of patterns that provide some interesting insights into Web searching by the general public. Conclusion.  We have developed analytical methods based on query similarity that can be applied to our current <span>experimental</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>work with volunteer subjects. The results of these will form part of a database with the aim of developing an improved understanding of how the public <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>the Web."/> 
+<meta name="dc.subject.keywords" content="Web <span>search</span>, <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> query transformation"/>
+
+<!--leave the following to be completed by the Editor-->
+<meta name="robots" content="all"/>
+<meta name="dc.publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>T.D. Wilson"/>
+<meta name="dc.coverage.placename" content="global"/>
+<meta name="dc.type" content="text"/>
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613"/>
+<meta name="dc.identifier" scheme="URI" content="paper276.html"/>
+<meta name="dc.relation.IsPartOf" content="infres121.html"/>
+<meta name="dc.format" content="text/html"/>
+<meta name="dc.language" content="en"/>
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/"/>
+<meta name="dc.date.available" content="2006-10-15"/>
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted maroon;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: maroon;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>navy;
+    border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>navy;
+    font-weight: bold;
+}
+		
+		
+</style>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" width="336" /><br />Vol. 12  No. 1, October 2006<br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres121.html">Contents</a> | </li>
+        <li><a href="../iraindex.html">Author index</a> | </li>
+        <li><a href="../irsindex.html">Subject index</a> | </li>
+        <li><a href="../search.html">Search</a> | </li>
+        <li><a href="../index-2.html">Home</a> </li></ul></div></td></tr>
+  <tr>
+    <td> </td></tr></table>
+<hr style="COLOR: maroon" size="1" />
+
+<h1>Query <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and their role in Web searching by the general public</h1>
+<br />
+<div style="margin-left: 10%; margin-right: 10%;">
+<h4>Martin Whittle, <a href="mailto:b.eaglestone@sheffield.ac.uk">Barry Eaglestone</a>, Nigel Ford, Valerie <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Gillet and Andrew Madden<br />Department of Information Studies, University of Sheffield, Regent Court, 210 Portobello Street, Sheffield, S1 4DY, United Kingdom </h4>
+</div>
+<br />
+
+<form action="http://informationr.net/ir/12-1/none">
+<fieldset style="margin-left: 5%; margin-right: 5%;">
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>navy; border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>navy; font-weight: bold;">Abstract</legend>
+<br />
+<blockquote>
+<strong>Introduction.</strong>  This paper reports preliminary research in a primarily <span>experimental</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>study of how the general public <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>for information on the Web. The <span>focus</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is on the <em>query transformation</em> patterns that characterise searching. <br />
+<strong>Method.</strong> In this work, we have used transaction logs from the Excite <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine to develop methods for analysing query <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>that should aid the analysis of our ongoing <span>experimental</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>work. Our methods involve the use of similarity techniques to link queries with the most similar previous query in a train. The resulting query <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>are <span>represented</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>as a <span>list</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>representing a whole <span>search</span>. <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><br /> 
+<strong>Analysis.</strong>  It is shown how query transformation sequences can be <span>represented</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>as graphical networks and some basic <span>statistical</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>results are shown. <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>correlation analysis is performed to examine the co-occurrence of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and quotation mark changes with the <span>syntactic</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>changes. <br />
+<strong>Results.</strong> <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>frequency analysis of the occurrence of query transformation <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is presented. The connectivity of graphs obtained from the query transformation is <span>investigated</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and found to follow an exponential scaling law. The correlation analysis reveals a number of patterns that provide some interesting insights into Web searching by the general public.<br /> 
+<strong>Conclusion.</strong>  We have developed analytical methods based on query similarity that can be applied to our current <span>experimental</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>work with volunteer subjects. The results of these will form part of a database with the aim of developing an improved understanding of how the public <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>the Web. </blockquote><br />
+</fieldset>
+</form>
+<br />
+<div align="center"><input class="btn" style="FONT-WEIGHT: bold; COLOR: white; background-color: maroon; FONT-FAMILY: Verdana; FONT-VARIANT: small-caps" onclick="doChangeFont()" type="button" value="change font" /></div>
+<br /><br />
+
+<h2>Introduction</h2>
+
+<p>This paper reports on preliminary research in an ongoing study of how, and how effectively, members of the general public <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>for information on the Web. The <span>focus</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is <em>query transformation</em> patterns that <span>occur</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in a <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>session. Thus, we hope to gain insights into <span>essential</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>generic <span>strategies</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>that may result in more, and less, effective Web-searching. Our long-term aim is to build an evidence-based model of effective searching, based on <span>statistical</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>data, to inform the <span>design</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of training and of intelligent adaptive <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>interfaces. In this initial phase, transaction logs from the Excite <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine dating from 2001 have been used to develop methods for analysing query <span>transformations</span>. <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Although not current, the Excite logs <span>represent</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a <span>typical</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>record of queries from the time with many of the <span>syntactic</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>changes that will be of interest to us. Also, they are well known and extensively studied. The activity logs thus present us with core data for development of analytical methods that can be used later in conjunction with <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>results in our own <span>empirical</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>studies with volunteer members of the general public. This paper describes the research method that we have developed through our study of these logs, and also presents <span>analyses</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of the logs which provide new insights into Web searching by the general public. </p>
+
+<h2>Related work</h2>
+
+<p>A significant body of research into Web searching exists (for a review, see: <a href="#spi04">Spink &amp; Jansen 2004)</a> and potential value is demonstrated by <a href="#jan05a">Jansen and McNeese (2005)</a>, whose empirically study has identified predictable <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>states when searchers are more likely to be receptive to assistance, which can be informed by knowledge of effective Web searching <span>strategies</span>. <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Also, such interventions can be <span>supported</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>by search-pattern classifier <span>algorithms</span>, <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> such as those of <a href="#ozm05">Ozmutlu and Cavdur (2005)</a>. </p>
+
+<p>Most studies have been quantitative, using transaction logs (e.g., <a href="#jan98">Jansen <em>et al.</em> 1998</a>; <a href="#jan00a">2000</a>; <a href="#hub98">Huberman <em>et al.</em> 1998</a>) or on-line surveys (e.g., <a href="#bro02">Broder 2002</a>; <a href="#spi99">Spink <em>et al.</em> 1999</a>). Some have <span>investigated</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>searching by the general public, including query reformulations (e.g., <a href="#spi00">Spink <em>et al.</em> 2000</a> and <a href="#spi01">2001</a>). From these, various <span>characteristics</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>have emerged. For example, transaction log <span>analyses</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>show that most users (51.8% in 1998, 51.2% in 2002 - <a href="#jan05a">Jansen <em>et al.</em> 2005</a>) only enter one or two <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>terms; and most only look at one screen of results (85.2% in 1998, 72.8% in 2002; <a href="#jan05c">Jansen <em>et al.</em> 2005</a>). Changes are occurring rapidly as <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engines improve and searchers become more adept at using them (<a href="#jan05c">Jansen <em>et al.</em> 2005</a>). In Europe, a study has demonstrated a decline in query <span>length</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and a <span>reduction</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in session time between 2001 and 2002 (<a href="#jan05b">Jansen and Spink 2005</a>). Indeed, <span>analyses</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>suggest that little is gained by increasing the complexity of a <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>(<a href="#jan00b">Jansen 2000</a>). More recently an analysis of <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine transaction logs over time and geographical <span>region</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>(<a href="#jan06">Jansen and Spink 2006</a>) confirmed the predominance of simple queries, but also identified geographical and <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine specific differences. Specifically, use of query operators <span>differs</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>across <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engines and greater searching competence was found to exist in the USA compared with Europe. In general, their study found that searchers now tend to reformulate queries rather than examining results pages beyond the first page, and consequently searchers view fewer results pages. Also, the nature of <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>topics is changing in <span>balance</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>(from entertainment more to information and commerce). </p>
+
+<p>Such studies, with exceptions (e.g. <a href="#nic03">Nicholas <em>et al.</em>, 2003</a>), used anonymous Web <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine logs, which provide no data relating to relevance, personal <span>characteristics</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of searchers, or <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>insights into searchers' thinking behind their observable <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>behaviour. Consequently, only <span>limited</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>explanation is provided for the patterns of Web information seeking identified. <span>Nevertheless</span>, <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> studies of this kind have sometimes been able to infer useful information about user behaviour (<a href="#cha05">Chau <em>et al.</em> 2005</a>) with consequent recommendations for <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine and Website <span>design</span>. <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Several recent studies have focused on automated <span>topic</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>identification and an examination of diurnal changes as a means of optimising <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine <span>response</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>(<a href="#ozm06">Ozmutlu 2006</a>; <a href="#ozm04">Ozmutlu <em>et al.</em> 2004</a>; <a href="#ozm05">Ozmutlu and Cavdur 2005</a>). </p>
+
+<p>A potentially powerful but largely unexploited tool in Web searching research is the use of <span>abstract</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>models to <span>represent</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>semantics of the <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>process. Two <span>approaches</span>, <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> often combined, are synthesis of statistics-based models and of semantically enriched data models. Examples of the former include <span>Bayesian</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>networks to model successive <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>queries (<a href="#lau99">Lau and Horvitz 1999</a>) and Markov models to predict Web users' next moves (<a href="#zuk99">Zukerman <em>et al.</em> 1999</a>). In contrast, Wildemuth (<a href="#wild04">2004</a>) uses zero-order state transition matrices and maximal repeating patterns (MRP) (<a href="#sio91">Siochi and Ehrich 1991</a>) to characterise <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>tactics. An example of the data modelling approach is the use of graphs to <span>represent</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>sequences of <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>actions and <span>interactions</span>, <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> <span>finding</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>both combined and individual effects on <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>strategies</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and effectiveness of <span>domain</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and Web experience (<a href="#hol02">Hölscher and Strube 2000</a>). They used graphical <span>representations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to summarise the <span>action</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>sequences of the participants in their study, and as one of a number of means of comparing the behaviour of experts and novices. </p>
+
+<p>Studies to date have provided only <span>limited</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>understanding of Web searching behaviour, with very little <span>focus</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>on the general public. We have noted various <span>approaches</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to modelling Web searching behaviour, but feel that the potential of data modelling <span>approaches</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>for developing semantically rich models is under-exploited.</p>
+ 
+<h2>A study of Web searching by the general public: data modelling issues </h2>
+
+<h3>Research aims</h3>
+
+<p>The preliminary phase of our research into Web searching reported here is part of a <span>larger</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>study. The study aims to extend previous research by seeking greater understanding of <em>real</em> Web-based searching, and of searching by the general public. Specifically, we want to examine searching in natural <span>contexts</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in relation to the searchers' genuine information needs, as <span>opposed</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to <span>experimental</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>situations and researcher-assigned <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>topics. Our research is <span>designed</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to employs a <span>balance</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of quantitative and <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>approaches to develop semantically rich models of the ways in which searchers transform their queries during a session. </p>
+
+<p>In the initial phase reported here we have addressed the research questions: to what extent can different types of query transformation be identified by the automatic analysis of <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine logs and can the resulting <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>be used to identify any significant patterns or relationships relating to Web use? This initial work involved the analysis of an Excite <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine transaction log dating from 2001 <span>containing</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>1,025,910 queries (previously studied by <a href="#spi01">Spink <em>et al.</em> 2001</a>). For operational reasons our results were <span>limited</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to those 1,025,838 queries with fewer than 256 characters. These logs presented us with core data for the development of analytical methods that can be used later in conjunction with <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>data collected through our own experiments with volunteer members of the general public. </p>
+
+<h3>Research method</h3>
+
+<p>Space <span>limits</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>allow only an overview the method of research used in this initial phase. Our method of research has been to inductively <span>derive</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a taxonomy of <span>syntactic</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>query <span>transformations</span>. <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> We have done this through the development and elaboration of a <span>program</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to analyse and encode the Excite logs. The <span>program</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>transforms logs into a string of <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>designed to be converted to graphical form in which nodes and edges <span>respectively</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>represent</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>queries and query <span>transformations</span>. <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Pseudo-code for the heart of the <span>program</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is presented in the <a href="#app">Appendix</a>. The advantages of this <span>representation</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>are that, it captures the dynamic nature of Web searching by providing a history of the changes the searcher makes, there is potential for elaborating the model to <span>represent</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>semantic <span>explanations</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>as well as <span>syntactic</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>query <span>transformations</span>, <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> and the similarities between this <span>representation</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and that of <span>chemical</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>compounds should allow us to exploit data mining techniques developed for chemoinformatics research to identify characteristic <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>patterns. </p>
+
+<p>Our <span>main</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>assumption</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is that the target query can be treated as a modification of the most similar preceding query rather than any other in the <span>list</span>. <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> If none of the earlier queries bears <span>sufficient</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>similarity to the current one then we have a criterion for defining an entirely new query that is syntactically <span>distinct</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>from the <span>rest</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of the session. Modification could be by addition or subtraction of words, by a change in word order, a change in spelling, word endings or prefixes etc. Accordingly, the transformation <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>scans those sequences of queries within the log that form a session; that is, queries submitted by a single user. For each query within a session, the most similar previous query in that session is identified, and the syntactical transformation from that previous query to the current query is analysed and coded. Thus, the key aspects of the analysis <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>are the query similarity <span>test</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and the method of analysing and encoding query <span>transformations</span>. <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Both are being developed inductively and are thus evolving to <span>derive</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>models of searching within a session that appear better to capture the <span>semantics</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of a Web <span>search</span>. <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Initially, in the absence of <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>data, we are seeking to identify only syntactical query similarities and <span>transformations</span>. <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> </p>
+
+<h3>Query comparison</h3>
+
+<p>Our approach to <i>query comparison</i> is based on the use of similarity methods (<a href="#will98">Willett <em>et al.</em> 1998</a>) to compare individual words and whole queries. Query <span>comparison</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is based on word content using a routine that effectively recognises words with modified spellings that have <span>essentially</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>the same meaning as similar. This method allows users also to specify the sensitivity of query <span>comparison</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>by <span>setting</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a word similarity threshold (WST) and query modification threshold (QMT). These, <span>respectively</span>, <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> are based on the similarity of words in the queries being compared and the amount of modification needed to transform one into the other. Values of WST = 0.4 and QMT = 0.3 were found to give an optimum <span>balance</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>between discrimination and acceptance when compared with human decisions for queries, based on a <span>sample</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of results from the logs. Although these <span>values</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>appear to be about the most favourable the <span>choice</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is largely a case of judgment. </p>
+
+<h3>Query transformation analysis</h3>
+
+<p>The query transformation <span>classification</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>developed describes the key multiple alterations that may <span>occur</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in a single query transformation. Transformations <span>frequently</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>occur in <span>combination</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>with a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>operator or with the addition of quotation marks that transform a string of words into a phrase. In addition, we found it useful to introduce a code to register any long time delays between queries as this gives some indication of a user's working practice. Accordingly, our coding system for query transformation involves up to four <span>symbols</span>. <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>primary</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>code denotes the <span>main</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>transformation type and this may be supplemented by up to three supplementary <span>codes</span>. <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Two of these prefix the <span>primary</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>code and <span>indicate</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>changes <span>involving</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and those <span>involving</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>quotation mark (") changes. <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>third</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>symbol, the delay code "_", may be <span>added</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to the end of the query transform <span>description</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>if there has been no activity for a prescribed time. In this work we have chosen this to be sixty minutes. The <span>primary</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and supplementary <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>used to denote these changes are listed in the <a href="#app">Appendix</a>. Using these, the transformation between the queries </p>
+
+<blockquote>
+<ul style="list-style: none;">
+<li>
+Query 1: isic conference
+</li>
+<li>
+Query 2: "isic conference" +Sydney
+</li>
+</ul>
+</blockquote>
+
+<p>would be <span>represented</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>as BQC(1), since the second query is a conjoint modification of the first and also includes quotation marks and a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>symbol</span>. <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> The number in parenthesis indicates the most similar previously occurring query in the train, which in this case is trivially 1. If the logs showed that there was no further activity for at least one hour, a delay <span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>would be <span>added</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and the code would become BQC(1)_.</p> 
+
+<p>The routines outlined in the <a href="#app">Appendix</a> apply a series of <span>tests</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to the pairs of queries found to be most similar in a session and code each transformation accordingly. Previous coding schemes have been <span>limited</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to sequential <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and have used a smaller set, e.g. <a href="#spi00">Spink <em>et al.</em> (2000)</a>. The categories can also be related to those discussed by <a href="#he02">He <em>et al.</em> (2002)</a>. Their notion of <em>generalisation</em> is equivalent to a disjoint modification and <em>specialisation</em> is equivalent to a conjoint modification in our coding system. However, the inclusion of phrase marks and <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>terms also specialise a <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and were not con0ered by these authors. These authors also <span>discuss</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><em>reformulation</em>" which is <span>essentially</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>split into four categories, S, s, W, and w, in our scheme. </p>
+
+<p>An example is given in <span>Figure</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>1, in which we <span>represent</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a query session (by user 74) concerning nurse training courses. <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>table</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of the queries involved is given in Table 1. </p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+  <caption align="bottom"><br /><strong>Table 1: Queries from the Excite log for user id 74 used to construct the graph shown in <span>Figure</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>1. The first column gives a relative query identification number, qid0, and queries   6-20 were textually <span>identical</span>. <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span></strong></caption>
+  
+  <tr><th valign="middle">qid0</th><th>Query</th></tr>
+  <tr><td align="center">1 </td><td>nursing careers </td></tr>
+  <tr><td align="center">2 </td><td>nurse training </td></tr>
+  <tr><td align="center">3 </td> <td>nurse training programs in baltimore </td></tr>
+  <tr><td align="center">4 </td><td>nurse training programs in baltimore city </td></tr>
+  <tr><td align="center">5 </td><td>undergraduate nurse training programs in baltimore city, 
+      maryland </td></tr>
+  <tr><td align="center">6-20 </td><td>paid undergraduate nurse training programs in baltimore city maryland </td></tr>
+  <tr><td align="center">21 </td><td>undergraduate nurse training programs in baltimore city, maryland </td></tr>
+  <tr><td align="center">22 </td><td>nursing <span>schools</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in baltimore in baltimore city maryland</td></tr>
+  <tr><td align="center">23 </td><td>undergraduate nursing <span>schools</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in baltimore city maryland</td></tr>
+  <tr><td align="center">24 </td><td>free nursing <span>schools</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in baltimore city maryland </td></tr>
+  <tr><td align="center">25 </td><td>free undergraduate <span>schools</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in baltimore city maryland</td></tr>
+  <tr><td align="center">26 </td><td>free undergraduate nursind <span>schools</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in baltimore city maryland </td></tr>
+  <tr><td align="center">27 </td><td>free undergraduate nursing <span>schools</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in baltimore city maryland </td></tr>
+  <tr><td align="center">28 </td> <td>paid undergraduate nursing <span>schools</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in baltimore city maryland </td></tr>
+  <tr><td align="center">29 </td><td>paid undergraduate nursing <span>schools</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in baltimore city maryland</td></tr>
+</table>
+	  
+	  <p>Figure 1 shows the initial and final queries, together with the string of <span>intermediate</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>query transformation types. The <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>are <span>represented</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>both as a string of <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and also as a graph. All of the <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>used are defined in Tables 1 and 2. Note that the same query can <span>occur</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>many times within the one session (in the example, the 5th and 21st iterations of the query are equivalent) and undergo different transformation. Consequently, the graph can be cyclic, as a transformation may produce a query used earlier in the session.</p>
+
+<div align="center"><img src="p276fig1.jpg" width="684" height="333" alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>1" /></div>
+
+<div align="center"><br /><strong>Figure 1:  Example query transformation graph for user id 74 from the Excite log.</strong><br /> <span style="font-size: small; font-style: italic;">Note: The numbers assigned to each node signify a <span>distinct</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>query in a path starting and ending with those given explicitly. The string of <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>shown in the box <span>represent</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>the <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>between maximally similar queries (<a href="#app">
+Appendix</a>) as the user modifies a <span>search</span>. <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> These <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>are also used to label the edges of the graph. In this case RP[14] is a condensed <span>notation</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>meaning a <span>sequence</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of fourteen page viewing and repetition events relating to queries 6-20 in Table 1.</span></div>
+
+<p>The string and graphical <span>representations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>illustrated in <span>Figure</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>1 are motivated by the use of similar constructions in the field of chemoinformatics. The strategy is to utilise data mining techniques developed in that field to determine characteristic <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>development patterns, thus building models of the different ways in which the general public conduct their searches and the associated effectiveness of these <span>approaches</span>. <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Having <span>established</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a quantitative methodology based on a large <span>sample</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of <span>typical</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>queries, the research has now progressed into a second phase, in which we are conducting our own <span>empirical</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>studies with volunteer members of the general public to validate and elaborate the models. The data collected in this phase are richer than is provided by transaction logs, since they includes complete screen records supplemented by <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>data collected through interviews, talk-aloud protocols and questionnaires. Thus, the data provide a full record of all human-computer <span>interactions</span>, <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> including, but not <span>limited</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to, dialogue with the <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engines used. In addition, the <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>data provides insights into the <span>semantics</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of and motivation for the <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>behaviour and its effectiveness. The richer data are being used to develop richer models of the <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>process, since the <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>data allows us to also determine the intent behind query <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and, hence, to <span>derive</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a taxonomy of <span>semantic</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>query <span>transformations</span>. <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> </p>
+
+<h2>Preliminary results</h2>
+
+<h3>Occurrence of query transformation types</h3>
+
+<p>Figure 2 shows the occurrence frequencies of query transformation characters (listed in Table 1 of the <a href="#app">Appendix</a>). Each query transformation to the left of the vertical <span>line</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>consists of a <span>main</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>transformation type, which may be modified by one or more of the supplementary characters B, b, Q, q and _. </p>
+
+<div align="center"><img src="p276fig2.jpg" width="582" height="361" alt="Figure_2" /></div>
+
+<div align="center"><br /><strong>Figure 2. Query transformation percentage frequencies for 
+QMT = 0.3 and WST = 0.4. </strong><br /><span style="font-size: small; font-style: italic;">Note: The transformation <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>are described in Table 1 of the <a href="#app">Appendix.</a> Classes U-z <span>sum</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to 100% and results shown to the right of the vertical <span>line</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>refer to the supplementary characters for <span>Boolean</span>, <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> quotation marks and delays. The occurrences of these are distributed amongst the <span>main</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>characters. <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>total of 1,025,838 queries was 
+analysed.</span></div>
+
+<p>The <span>main</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>features</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of <span>Figure</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>2 can be summarised as follows. Forward page viewing, 'P', which <a href="#he02">He <em>et al.</em> (2002)</a> have called Browsing, is the most popular activity and <span>occurs</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>more <span>frequently</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>than the submission of new queries, 'N'. Unique queries, 'U', form over 10% of <span>entries</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and these are <span>followed</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in popularity by repetition, 'R', which has also been interpreted as relevance feedback requests (<a href="#spi00">Spink <em>et al.</em> 2000</a>). Of the <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of more significant interest, 'W' indicating a single common word, 'C' indicating the lengthening of a phrase and 'M' an unresolved textual similarity are the most common. </p>
+
+<p>The graphs that we have examined in detail <span>suggest</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>that there is <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>variety in the patterns that may be obtained by these methods. The hope is that further analysis of these will aid the development of <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>models. At this stage we have examined the overall <span>features</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of the graphs through their connectivity. Disregarding <span>direction</span>, <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> query 22 in <span>Figure</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>1 is connected to four other queries, queries 5 and 6 are connected to three, while other nodes are connected to just one or two neighbours. Amongst the 368,513 sub-sessions we found 165,578 that <span>contained</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>two queries or more and constituted viable graphs. By counting the <i>k</i> <span>connections</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to each node for each sub-session <span>length</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and accumulating the results in a histogram, we can <span>obtain</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>an average frequency <span>distribution</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><i>f</i>(<i>k</i>). <span>Figure</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>3 shows a semi-logarithmic <span>plot</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of this <span>distribution</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of connectivity with the preferred <span>parameters</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>QMT = 0.3 and WST = 0.4. Many <span>naturally</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>occurring networks exhibit connectivity with a scale-free, power-law <span>distribution</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>characterised by relatively few highly connected nodes amongst a majority of low connectivity (<a href="#bar99">Barab&aacute;si and Albert 1999</a>). However, the fitted <span>lines</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in <span>Figure</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>3 reveal that exponential scaling is obtained over much of the <span>range</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>following <i>f</i>(<i>k</i>) ~ <em>Ae</em><sup>&gamma;<i>k</i></sup>  with exponent &gamma; = 1 and where <em>A</em> is a <span>constant</span>. <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> For clarity, we show results for graphs of just two sub-session lengths in the <span>range</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of interest, but other <span>values</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>have been sampled and show similar behaviour. The implication is that there is no preferential attachment of new queries to nodes that are already well subscribed (<a href="#bar99">Barab&aacute;si and Albert 1999</a>). <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>possible influence on this result is the <span>observed</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>preponderance of simply connected page-viewing and repetitive queries. However, as shown in <span>Figure</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>3, ignoring these trains in the connectivity count makes a significant difference only to <span>values</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>for <i>k</i> = 2 other points being virtually unchanged when viewed on the logarithmic scale. </p>
+
+<div align="center"><img height="451" alt="Figure_3" src="p276fig3.jpg" width="671" border="0" /></div>
+ <div align="center"><br /><strong>Figure 3.  This natural logarithmic <span>plot</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>shows the frequency, <i>f</i>, of nodes with <i>k</i>-connections found in our graphical <span>representations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of query trains obtained with WST = 0.3 and QMT = 0.4.</strong><br /><span style="font-size: small; font-style: italic;">The <span>plot</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>shows results for sub-sessions of <span>length</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>10 (filled circles); and of <span>length</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>20 (filled squares). Also shown, using open <span>symbols</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>are results obtained by excluding page-rank and relevance feedback trains: for lengths 10 (open circles); and <span>length</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>20 (open squares). The <span>lines</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>have a slope of -1 and are fitted through the points corresponding to <i>k</i> = 3 in each case. </span></div>
+
+
+<h3>Correlation studies</h3>
+
+<p>As we have described, each query transformation code may contain up to four characters describing the transformation.  An analysis of the correlations between these characters reveals information about the relationships between the supplementary <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and the <span>primary</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>codes relating to the construction of query transforms; these are the Intra-QT correlations.  Following a standard correlation analysis (<a href="#haj67">Hájek &amp; Dupac 1967</a>) we write the occurrence frequencies for these as <em>f</em>(<em>A<sub>j</sub> , A<sub>i</sub></em>)  for pairs in which a character <i>A<sub>j</sub></i> is coincident (i.e. part of the same query transform) with character <i>A<sub>i</sub></i>.   From the occurrence frequencies we evaluate expectation frequencies and an estimated standard deviation for the <span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>correlations under the <span>assumption</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>that the <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>appear randomly.  We then compare the differences between <span>observed</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and <span>expected</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>values</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>expressed in <span>multiples</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of the estimated standard deviation using the quantities <em>D</em><sub><em>f</em></sub></p>
+
+<div align="center"><img height="68" alt="<span>equation</span>" <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> src="p276eq1.gif" width="475" align="top" border="0" /></div> 
+                
+
+<p>Where <em>V</em> is the variance.   Compared in this way, large positive differences in these <span>suggest</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a strong association while negative <span>values</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>indicate that the <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>concerned appear together less than <span>expected</span>. <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>    On the basis of <span>values</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>returned, <span>values</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of greater than 50 <span>suggest</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a strong association whilst <span>values</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>between 5 and 50 are significantly associated.  Values between -5 and +5 were con0ered insignificantly associated and those less than -5 negatively associated.   Results are given in Table 2</p>
+
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: small; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Table 2: Intra-QT deviations from expectation obtained for the Excite logs. In this case the '&mdash;' <span>symbol</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>refers to a 1hour delay. The results are printed for 5 <u>&lt;</u> <em>D<sub>f</sub></em><u>&lt;</u> 50, and <b><u>bold underlined</u></b> for <em>D<sub>f </sub></em>  > 50and in <i>italics</i> for <em>D<sub>f </sub></em>  &lt; 50.</strong></caption>
+  
+  <tr>
+    <th valign="middle">Type</th>
+    <th>B</th>
+    <th>b</th>
+    <th>Q</th>
+    <th>q</th>
+    <th>&mdash;</th></tr>
+  <tr>
+    <td align="center">U </td>
+    <td align="center"><b>20.6</b> </td>
+    <td align="center">- </td>
+    <td align="center">1.32 </td>
+    <td align="center">- </td>
+    <td align="center">- </td></tr>
+  <tr>
+    <td align="center">N</td>
+    <td align="center">-1.48 </td>
+    <td align="center">- </td>
+    <td align="center"><b>23.26</b> </td>
+    <td align="center">- </td>
+    <td align="center"><strong><u>78.27</u></strong> </td></tr>
+  <tr>
+    <td align="center">P </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">-66.16 </td></tr>
+  <tr>
+    <td align="center">p </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">-9.63  </td></tr>
+  <tr>
+    <td align="center">R </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center"><strong>10.53</strong> </td></tr>
+  <tr>
+    <td align="center">I </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">- </td>
+    <td align="center">4.45 </td></tr>
+  <tr>
+    <td align="center">J </td>
+    <td align="center"><b><u>61.85</u></b> </td>
+    <td align="center"><strong>47.37</strong> </td>
+    <td align="center"><strong><u>136.42</u></strong> </td>
+    <td align="center"><strong><u>78.73</u></strong> </td>
+    <td align="center">-5.47 </td></tr>
+  <tr>
+    <td align="center">C </td>
+    <td align="center"><b>46.02</b> </td>
+    <td align="center"><i>-42.81</i> </td>
+    <td align="center">-15.14 </td>
+    <td align="center">-19.22 </td>
+    <td align="center">-4.70 </td></tr>
+  <tr>
+    <td align="center">D </td>
+    <td align="center"><i>-34.07</i> </td>
+    <td align="center"><strong><u>62.20</u></strong> </td>
+    <td align="center">-15.09  </td>
+    <td align="center"><strong>13.45</strong> </td>
+    <td align="center">-4.79  </td></tr>
+  <tr>
+    <td align="center">S </td>
+    <td align="center"><i>-24.52</i> </td>
+    <td align="center">-11.14 </td>
+    <td align="center"><em>-20.69</em> 
+    </td>
+    <td align="center"><em>-7.63</em> 
+</td>
+    <td align="center"><em>-5.65</em> 
+        </td></tr>
+  <tr>
+    <td align="center">s </td>
+    <td align="center"><i>-2.62</i> </td>
+    <td align="center"><strong>9.93</strong> </td>
+    <td align="center"><em>-7.05</em>  </td>
+    <td align="center">3.65  </td>
+    <td align="center"><em>-8.04</em> 
+        </td></tr>
+  <tr>
+    <td align="center">W </td>
+    <td align="center"><i>-35.00</i> </td>
+    <td align="center"><i>-10.35</i> </td>
+    <td align="center"><em>-32.99</em>  </td>
+    <td align="center"><em>-6.81</em> 
+        </td>
+    <td align="center">-6.05  </td></tr>
+  <tr>
+    <td align="center">w </td>
+    <td align="center"><i>-2.63</i> </td>
+    <td align="center"><strong>9.14</strong> </td>
+    <td align="center"><em>-11.51</em>  </td>
+    <td align="center">-0.98  </td>
+    <td align="center"><em>-8.18</em> 
+        </td></tr>
+  <tr>
+    <td align="center">M </td>
+    <td align="center"><em>-21.05</em>  </td>
+    <td align="center"><em>-12.98</em> 
+    </td>
+    <td align="center"><em>-37.31</em>  </td>
+    <td align="center"><em>-13.28</em>  </td>
+    <td align="center">-1.97  </td></tr>
+  <tr>
+    <td align="center">Z  </td>
+    <td align="center">-2.26 </td>
+    <td align="center"><strong>14.11</strong> </td>
+    <td align="center"><em>-10.06</em>  </td>
+    <td align="center">2.23  </td>
+    <td align="center">-0.90  </td></tr>
+  <tr>
+    <td align="center">z  </td>
+    <td align="center">1.78  </td>
+    <td align="center">2.82 </td>
+    <td align="center">0.55 </td>
+    <td align="center">1.45 </td>
+    <td align="center">0.95 </td></tr>
+  <tr>
+    <td align="center">B  </td>
+    <td align="center"><i>0.00</i>  
+    </td>
+    <td align="center"><i>-</i>  
+</td>
+    <td align="center">1.16  </td>
+    <td align="center"><strong><u>76.78</u></strong>   </td>
+    <td align="center">-<em>15.01</em> 
+        </td></tr>
+  <tr>
+    <td align="center">b  </td>
+    <td align="center"><i>-</i>  
+</td>
+    <td align="center"><em>0.00</em>  </td>
+    <td align="center"><strong><u>74.95</u></strong>  </td>
+    <td align="center"><strong>10.05</strong>   </td>
+    <td align="center"><em>-11.07</em> 
+        </td></tr>
+  <tr>
+    <td align="center">Q  </td>
+    <td align="center">1.16  </td>
+    <td align="center"><strong><u>74.95</u></strong>  </td>
+    <td align="center">0.00 </td>
+    <td align="center">- </td>
+    <td align="center">-0.28  </td></tr>
+  <tr>
+    <td align="center">q  </td>
+    <td align="center"><strong><u>76.78</u></strong>  </td>
+    <td align="center"><strong>10.05</strong>  </td>
+    <td align="center">- </td>
+    <td align="center">0.00 </td>
+    <td align="center"><em>-7.77</em> 
+        </td></tr>
+  <tr>
+    <td align="center">_  </td>
+    <td align="center"><i>-15.01</i> </td>
+    <td align="center"><i>-11.07</i> </td>
+    <td align="center">-0.28  </td>
+    <td align="center"><em>-7.77</em>  </td>
+    <td align="center">0.00  </td></tr></table>
+	
+<h3>Discussion</h3>
+
+<p>Table 2 records the <span>values</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of <i>D<sub>f</sub></i> for correlations between <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>within the same transformation. Using this measure, many of the results are significantly different from the random expectation. </p>
+
+<p>The <span>primary</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>character, 'J' is, by definition, normally in association with one of the supplementary terms (the erroneous use of a single quotation mark may trigger it without an auxiliary character) and so the high <span>values</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>
+in row <span>J++</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of Table 2 are <span>expected</span>. <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> The <span>main</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>conclusions that can be <span>drawn</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>from Table 2 can be summarised as follows: </p>
+
+<ul>
+  <li>A <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is relatively likely to be used with a unique query. </li>
+  <li>Quotation marks are relatively likely to be used with a new query. </li>
+  <li>There is a strong correlation (<i>D<sub>f</sub></i> = 46.02) between the  use of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>terms and the character code "C", indicating that the inclusion of a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>often involves a new word as well (the <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>terms AND OR NOT are not counted as words). Similarly, there is a strong correlation between 'b' and 'D' - the removal of a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>often includes the removal of word. </li>
+  <li>Conversely, there is a negative correlation between 'B' and 'D', indicating that the inclusion of a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>is rarely combined with the removal of a word. There is also a negative correlation between 'b' and 'C'.</li>
+  <li>There is a somewhat more surprising correlation between 'B' and 'q' indicating that the simultaneous inclusion of a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and the removal of quotation marks is relatively common. Similarly the removal of a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>'b' and the addition of quotation marks 'Q' are also <span>strongly</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>linked.</li> 
+  <li>However, it seems that the inclusion of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>terms and the addition of quotation marks, 'B' and 'Q', appear together roughly as <span>expected</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>according to the random model. </li>
+  <li>The delay code '&mdash;' is <span>strongly</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>associated with new queries (<i>D<sub>f</sub></i> = 78.27). Within a session several different enquires (sub-sessions) may be <span>represented</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and some of these may be answered by a single query. It seems that there is then <span>frequently</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a delay before the next enquiry is embarked on.</li> 
+  <li>The delay code is positively associated with relevance feedback, suggesting that this behaviour is being used to look again with <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>terms that have been successful. </li>
+  <li>The delay code is negatively correlated with most other <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>particularly the inclusion of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>terms and page viewing. This suggests that these are part of active searching behaviour.</li></ul>
+
+<p>These observations include some that may be <span>expected</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and some that are not. <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>similar analysis can be performed on the inter-QT correlations and this will be reported elsewhere. </p>
+
+<h2>Conclusions</h2>
+
+<p>In this paper we report on the initial phase of research into Web searching behaviour by the general public. By linking queries to the most similar preceding query in a session we have <span>devised</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a system that will process a <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine log and convert individual sessions into a string of query <span>transformations</span>. <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Each transformation type is coded by up to four <span>symbols</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and includes a connection number to the most similar preceding query. These can be converted into a graphical <span>representation</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of the <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>process that could potentially <span>reflect</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>an operator's thoughts more accurately than could a simple relationship to the immediately preceding query. We have used this system to analyse the <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>obtained from an Excite <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine log in terms of their relative frequency and co-occurrence. <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>number of <span>expected</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>correlations have been identified and some that are unexpected. The connectivity of the graphs obtained has been <span>investigated</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and found to follow an exponential scaling law, suggesting that their evolution does not involve preferential attachment to existing nodes. </p>
+
+<p>The original motivation for developing this analysis was to apply it to our own logs derived from <span>experimental</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>records of searches by volunteers. This is now in progress. The <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>can either be applied, as here, to link queries to the most similar previously occurring query, or to the immediately occurring query. Two sets of <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>add an extra dimension to the richness of the data. These <span>codes</span>, <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> representing the <span>syntactic</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>changes between queries, are being embedded in a database that includes volunteer background, scores from a <span>cognitive</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>style</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>analysis, scores representing the subjects appraisal of a <span>search</span>, <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> the queries themselves, Webpage titles visited as well as the keystroke record and activity timings. Volunteers are encouraged to talk through their searches and the temporal database will <span>represent</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a flexible repository of data that can be used in conjunction with audio records of the volunteers' comments in a <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>analysis. </p>
+
+<p>The database approach has the aim of developing an understanding of the problem <span>domain</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>by elaborating a model that captures its <span>semantics</span>. <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Further, the inductive nature of this process means that this model will evolve, particularly given the progression from quantitative to <span>qualitative</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>analysis and the consequential progressive increasing in understanding of the <span>semantics</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of the problem <span>domain</span>. <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Therefore, the <span>applications</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>for analysing snapshots of the data will benefit from views of the data that are persistent and independent of <span>subsequent</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>changes to the data model, i.e., data independence. Finally, we note that the phenomena that we wish to model, i.e., Web searches, are characterised by time. There is  potential, therefore, to utilise the large body of research into temporal databases. In particular, we identify <span>parallels</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>between temporal data modelling requirements encountered in previous research into museum databases (<a href="#eag96">Eaglestone <em>et al.</em> 1996)</a>) and those of the current study, which is also an area of ongoing research into support for inductive research methods. </p>
+
+<h2>Acknowledgements</h2>
+
+<p>We thank Mark Sanderson and Amanda Spink for making the Excite logs available to us and the Arts and Humanities Research Council (formerly Board) for funding this project.</p> 
+
+<form action="#">
+<fieldset>
+<legend style="color: white; background-color: maroon; font-size: 12pt; padding: .1ex .5ex; border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>navy; border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>navy; font-weight: bold;">References</legend>
+
+<ul>
+  <li><a id="bar99" name="bar99"></a>Barab&aacute;si, A-L. &amp; Albert, <span>R++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> (1999) Emergence of 
+  scaling in random networks. <i>Science</i>, <b>286</b>(5439), 509-512.</li> 
+  
+  <li><a id="bro02" name="bro02"></a>Broder, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>, (2002).  <a href="http://www.acm.org/sigir/forum/F2002/broder.pdf">A taxonomy of Web search</a>.  <i>ACM SIGIR Forum</i>, <strong> 36</strong>(2).  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>10 September, 2006 from http://www.acm.org/sigir/forum/F2002/broder.pdf.</li>  
+
+  <li><a id="cha05" name="cha05"></a>Chau, M., Fang, <span>X++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Sheng, O. <span>R++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> L, (2005).  Analysis of the 
+  query logs of a Web site <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine.   <i>Journal of the American Society for Information Science and Technology</i>, <b>56</b>(13), 1363-1376. </li>  
+  
+  <li><a id="eag96" name="eag96"></a>Eaglestone, B., Holton, <span>R++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Rold, L. (1996).  GENREG: a 
+  historical data model based on event graphs. In <em>Proceedings of the 7th International Conference on Database and Expert Systems Applications</em>, (pp. 254-263). London: Springer-Verlag. (Lecture Notes in <span>Computer</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>Science, 1134) . </li>
+  
+  <li><a id="haj67" name="haj67"></a>H&aacute;jek, <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Dupac, V. (1967).  <i>Probability in science 
+  and engineering</i>. Prague: Academia. </li>
+  
+  <li><a id="he02" name="he02"></a>He, D., G&ouml;ker, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Harper, D.<span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>, (2002).  Combining evidence for automatic Web session identification.  <i>Information Processing and Management</i>, <b>38</b>(5), 727-742. </li>
+  
+  <li><a id="hol02" name="hol02"></a>H&ouml;lscher, C. &amp; Strube, G. (2000).  <a href="http://www.webcitation.org/5InwxD5ht">Web <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>behaviour of Internet experts and newbies</a>. In <em>9th International World Wide Web Conference, Amsterdam, May 15-19, 2000. Conference proceedings.</em> <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>10 September, 2006 from http://www9.org/w9cdrom/81/81.html</li> 
+
+  <li><a id="hub98" name="hub98"></a>Huberman, B.<span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>, Pirolli, P.L.T., Pitkow, <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>E. &amp; Lukose, <span>R++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>M. (1998).  
+  Strong regularities in World Wide Web surfing.  <i>Science</i>, <b>280</b>(5360), 94-97</li>
+  
+  <li><a id="jan00b" name="jan00b"></a>Jansen, B.<span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> (2000).  <a href="../6-1/paper87.html">The effect of query complexity on Web 
+  searching results.</a>   <i>Information research</i>, <b>6</b>(1).  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>1 February, 2006 from  http://InformationR.net/ir/6-1/paper87.html.</li>    
+
+  <li><a id="jan05a" name="jan05a"></a>Jansen, B.<span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; McNeese, M. D. (2005).  Evaluating the 
+  effectiveness of and patterns of <span>interactions</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>with automated searching assistance.  <i>Journal of the American Society for Information Science and Technology</i>, <b>56</b>(14), 1480-1503.</li>  
+  
+  <li><a id="jan06" name="jan06"></a>Jansen, B.<span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> (2006).  How are we  searching the World Wide Web?  <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>comparison</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of nine <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine transaction logs. <i>Information Processing &amp; Management</i>, <b>42</b>(1) 248-263.</li>  
+
+  <li><a id="jan05c" name="jan05c"></a>Jansen, B.<span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>, Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Pedersen, <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> (2005).  <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>temporal <span>comparison</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of AltaVista Web searching.  <i>Journal of the American Society for Information Science and Technology</i>, <b>56</b>(6), 559-570.</li>  
+
+  <li><a id="jan00a" name="jan00a"></a>Jansen, B.<span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>, Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Saracevic, T. (2000).  Real life, real 
+  users, and real needs: a study and analysis of user queries on the Web.  <i>Information Processing and Management</i>, <b>36</b>(2), 207-227.</li> 
+
+  <li><a id="jan98" name="jan98"></a>Jansen, B.<span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>, Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>, Bateman, <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Saracevic, T. (1998).  Real 
+  life information retrieval: a study of user queries on the Web. <i>SIGIR Forum</i>, <b>32</b>(1), 5-17. </li>
+
+
+  <li><a id="lau99" name="lau99"></a>Lau, T. &amp; Horvitz, E. (1999).  Patterns of search: analyzing and modelling Web query <span>dynamics</span>. <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> In <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Kay (Ed.) <em>UM99, Proceedings of the Seventh International Conference User Modelling</em>, (pp. 119-128).  New York, NY &amp; Vienna, Austria: Springer-Verlag. </li> 
+
+  <li><a id="nic03" name="nic03"></a>Nicholas, D., Huntington, P. &amp; Dobrowolski, T. (2003).  Re-appraising information seeking behaviour in a digital <span>environment</span>. <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>  <i>Journal of Documentation</i>, <b>60</b>(1), 24-43. </li> 
+
+  <li><a id="ozm05" name="ozm05"></a>Ozmutlu, H. C. &amp; Cavdur, F. (2005).  Application of automatic <span>topic</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>identification on Excite Web <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>engine data logs.  <i>Information Processing &amp; Management</i>, <b>41</b>(5), 1243-1262. </li> 
+
+  <li><a id="ozm04" name="ozm04"></a>Ozmutlu, S., Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Ozmutlu, H. C. (2004).   <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>day</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>in the life of Web searching: an exploratory study.  <i>Information Processing &amp; Management</i>. <b>40</b>(2), 319-345. </li> 
+  
+  <li><a id="ozm06" name="ozm06"></a>Ozmutlu, S., (2006).  Automatic new <span>topic</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>identification using   muliple <span>linear</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>regression.  <i>Information Processing &amp; Management</i>, <b>42</b>(4), 934-950. </li> 
+
+  <li><a id="sio91" name="sio91"></a>Siochi, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>C. &amp; Ehrich, <span>R++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>W. (1991). <span>Computer</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>analysis of user interfaces based on repetition in transcripts of user sessions.  <i>ACM Transactions on Information Systems</i>, <b>9</b>(4), 309-335. </li> 
+
+  <li><a id="spi99" name="spi99"></a>Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>, Bateman, <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Jansen, B.<span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> (1999).  Searching the Web: 
+a <span>survey</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of EXCITE users.  <i>Internet Research: Electronic Networking Applications and Policies</i>, <b>9</b>(2), 117-128. </li> 
+
+  <li><a id="spi00" name="spi00"></a>Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>, Jansen, B. <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Ozmultu, H.C. (2000).  Query  reformulation and relevance feedback by Excite users.  <i>Internet Research: Electronic Networking Applications and Policies</i>, <b>10</b>(4), 317-328. </li> 
+  
+  <li><a id="spi01" name="spi01"></a>Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>, Wolfram, D. Jansen, M. B. <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Saracevic, T. (2001).   Searching the Web: the public and their queries.  <i>Journal of the American Society for Information Science and Technology</i>, <b>52</b>(3), 226-234. </li> 
+
+  <li><a id="spi04" name="spi04"></a>Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> &amp; Jansen, B. <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> (2004).  <em>Web search: public searching of the Web.</em> Dordrecht, the Netherlands: Kluwer Academic Publishers.</li> 
+ 
+  <li><a id="wild04" name="wild04"></a>Wildemuth, B. (2004). The effects of <span>domain</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>knowledge on 
+  <span>search</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>tactic formulation.  <i>Journal of the American Society for Information Science and Technology</i>, <b>55</b>(3) 246-258. </li> 
+  
+  <li><a id="will98" name="will98"></a>Willett, P., Barnard, <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>M. &amp; Downs, G.M. (1998).  Chemical similarity searching. <i>Journal of Chemical and Information <span>Computing</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>Science</i>, <b>38</b>(6), 983-996.</li> 
+  
+  <li><a id="zuk99" name="zuk99"></a>Zukerman, I., Albrecht, D.W. &amp; Nicholson, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>E. (1999).  Predicting users' requests on the WWW. In <span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> Kay (Ed.) <em>UM99, Proceedings of the Seventh International Conference User Modelling</em>, (pp. 275-284).  New York,NY &amp; Vienna, Austria: Springer-Verlag.</li> 
+    </ul>
+  </fieldset>
+  </form>
+  <br />
+  <form action="#">
+<fieldset>
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>navy; border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>navy; font-weight: bold;">How to cite this paper</legend>
+<div align="center"><br />Whittle, M., Eaglestone, B., Ford, N., Gillet, V.<span>J++</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> and Madden, <span>A+</span>. <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> (2006). &quot;Query <span>transformations</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and their role in Web searching by the general public&quot; &nbsp; <em>Information Research</em>, <strong>12</strong>(1) paper 276 [Available at http://InformationR.net/ir/12-1/paper276.html]</div>
+<br />
+</fieldset>
+</form>
+<br />
+<table cellspacing="10" align="center">
+	<tr>
+		<td colspan="3" align="center" style="background-color: maroon; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>
+	<tr>
+		<td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;query transformation&quot; (&quot;Web searching&quot; OR &quot;information searching&quot;) &quot;search engines&quot;" />  <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" />
+<input type="hidden" name="num" value="100" />
+					</td>
+				</tr>
+			</table>
+</form>
+		</td>
+		<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;query transformation&quot; (&quot;Web searching&quot; OR &quot;information searching&quot;) &quot;search engines&quot;"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+</td>
+<td align="center" valign="top">
+<form method="get" action="http://www.live.com/" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;query transformation&quot; (&quot;Web searching&quot; OR &quot;information searching&quot;) &quot;search engines&quot;"></input> <br />
+<input type="submit" name="sa" value="Windows Academic"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+
+		</td>
+	</tr>
+</table>
+  <hr size="1" style="color: Maroon;" />
+  
+  <h2><a id="app" name="app"></a>Appendix</h2>
+  
+<table width="600" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;" align="center">
+    <caption align="bottom"><br /><strong>Table A1. The following <span>primary</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>codes are used to 
+    describe the <span>main</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>features</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of a given modification (Where a code is <span>followed</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>
+    by a value <i>k</i> in parenthesis, <i>k</i> records the sequential position of the most 
+    similar previous query. Where it is missing the code always <span>refers</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>to a 
+    transformation from the immediately preceding query or none at 
+    all)</strong></caption>
+    
+    <tr>
+      <th valign="middle">Code</th>
+      <th>Query Transformation</th></tr>
+    <tr>
+      <td align="center">U </td>
+      <td align="left">A unique query. Only used for a 
+        single query session. </td></tr>
+    <tr>
+      <td align="center">N </td>
+      <td align="left">A new query (recognised by being at 
+        the start of a session or having low textual similarity to preceding 
+        queries) appearing during a session of at least two queries. </td></tr>
+    <tr>
+      <td align="center">R </td>
+      <td align="left">A repeated query with the same page 
+        rank - <span>probably</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>seeking relevance feedback. </td></tr>
+    <tr>
+      <td align="center">P </td>
+      <td align="left">A repeated query with increased page 
+        rank - further <span>investigation</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of results from the current query. </td></tr>
+    <tr>
+      <td align="center">p </td>
+      <td align="left">A repeated query with reduced page 
+        rank - further <span>investigation</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>of results from the current query by 
+        returning to earlier pages. </td></tr>
+    <tr>
+      <td align="center">I(<i>k</i>) </td>
+      <td align="left">Indicates an <span>identical</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>query 
+        (including quotation marks and <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>operators) to the one in the <i>k</i>'th position. This excludes <span>identical</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>queries 
+        in the immediately preceding position, which are covered by <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>'R', 
+        'P' and 'p' in Table 1. </td></tr>
+    <tr>
+      <td align="center">J(<i>k</i>) </td>
+      <td align="left">Indicates an <span>identical</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>query apart 
+        from quotation marks, and/or <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>+ marks. </td></tr>
+    <tr>
+      <td align="center">C(<i>k</i>) </td>
+      <td align="left">A conjoint modification, which 
+        extends query <i>k</i> and retains it as a 
+        sub-phrase. </td></tr>
+    <tr>
+      <td align="center">D(<i>k</i>) </td>
+      <td align="left">A disjoint modification, which 
+        reduces a query <i>k</i> in which it is <span>contained</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>as 
+        a sub-phrase. </td></tr>
+    <tr>
+      <td align="center">S(<i>k</i>) </td>
+      <td align="left">A modified query that has a 
+        sub-phrase in common with query <i>k</i>; this 
+        sub-phrase is shorter than either query in question. The sub-phrase 
+        forms only part of the prior query. </td></tr>
+    <tr>
+      <td align="center">s(<i>k</i>) </td>
+      <td align="left">As S(<i>k</i>) 
+        above but in this case the number of words in common is also greater 
+        than the word-length of the common sub-phrase: an indication of some 
+        re-ordering of words, word insertion or removal. </td></tr>
+    <tr>
+      <td align="center">W(<i>k</i>) </td>
+      <td align="left">A modified query with a single word 
+        in common with query <i>k</i>. The single word forms 
+        only part of the prior query </td></tr>
+    <tr>
+      <td align="center">w(<i>k</i>) </td>
+      <td align="left">A modified query that has more than 
+        one word in common with query <i>k</i> but these are 
+        separated in one or both queries. Usually indicates an insertion or word 
+        replacement between common words. </td></tr>
+    <tr>
+      <td align="center">M(<i>k</i>) </td>
+      <td align="left">A modified query recognised on the 
+        basis of some textual similarity with a previous query above the 
+        threshold level. It cannot be further categorised as one of the above 
+        and <span>probably</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>contains changed word endings. </td></tr>
+    <tr>
+      <td align="center">Z(<i>k</i>) </td>
+      <td align="left">Queries not recognised as similar but 
+        found to have a single word in common with query <i>k</i>. This word is <span>probably</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>short, in <span>comparison</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>
+        with the query length; <span>frequently</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>'and' 'of' or 'in'. </td></tr>
+    <tr>
+      <td align="center">z(<i>k</i>) </td>
+      <td align="left">Queries not recognised as similar but 
+        found to have more than one word (as above, usually short) in common 
+        with query <i>k</i>. </td></tr></table>
+<table width="600" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;" align="center">
+    <caption align="bottom"><br /><strong>Table A2. The supplementary <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>shown here may appear 
+    before (B,b,Q,q) or after (-) one of the <span>primary</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>transformation <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>listed 
+    in Table A1. </strong></caption>
+
+    
+    <tr>
+      <th valign="middle">Code</th>
+      <th>Query Transformation</th></tr>
+    <tr>
+      <td align="center">B </td>
+      <td align="left">Indicates the inclusion of a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>
+        operator (+, AND, OR, NOT). </td></tr>
+    <tr>
+      <td align="center">b </td>
+      <td align="left">Indicates the removal of a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>
+        operator. </td></tr>
+    <tr>
+      <td align="center">Q </td>
+      <td align="left">Indicates the inclusion of quote 
+        marks. </td></tr>
+    <tr>
+      <td align="center">q </td>
+      <td align="left">Indicates the removal of quotation marks 
+      </td></tr>
+    <tr>
+      <td align="center">_ </td>
+      <td align="left">Delay <span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>indicating prolonged 
+        inactivity prior to a <span>subsequent</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>query. </td></tr></table>
+		
+  
+<h3>Coding</h3>
+<p>The following pseudo code represents the <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>used to generate the query transformation <span>codes</span>. <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>  It is <span>essentially</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a double loop over the queries that retrieves the most similar pairs and then applies a series of <span>tests</span>  <span class="exper" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>on the pairs to <span>establish</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>a code.  Details of the similarity methods used will be given elsewhere.  These are <span>represented</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>here as <em>T<sub>i</sub><sup>B</sup></em>, <em>T<sub>i</sub><sup>Q</sup></em> for the <span>Boolean</span>, <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> and quotation mark modifications, <em>T<sub>i</sub><sup>P</sup></em>, the <span>primary</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>code and, <em>T<sub>i</sub><sup>D</sup></em>, the delay code.  We <span>assume</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>that <i>n</i> queries have previously been identified in a session.  The <span>symbol</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><i>Q<sub>i</sub></i> represents the <i>i</i>th query and <i>Q<sub>i</sub></i><sup>*</sup> the same query stripped of quotation marks and <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>symbols</span>. <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>  The corresponding page rank value, read from the logs, is <span>represented</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>by <i>P<sub>i</sub></i>.  Coding <span>symbols</span>  <span class="quanti" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>are shown italicised and the <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>themselves are shown plain.  Other terms are identified in the code or are self-explanatory. </p>
+
+<h4>Code A1 : Algorithm for code identification</h4>
+
+<p><b>Input:</b>  <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>set of <i>n</i> queries from a single user session.</p>
+
+<p><b>Output:</b>  <span>A+</span>  <span class="compus" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>set of four query transformation <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><i>T<sub>i</sub><sup>B</sup></i>, <i>T<sub>i</sub><sup>Q</sup></i>, <i>T<sub>i</sub><sup>P</sup></i> ,<i>T<sub>i</sub><sup>D</sup></i>  for each query  <i>i.</i></p>
+
+<p><b>Process:</b></p>
+
+<p><b>for</b> <i>i</i>= 1<i> </i><b>to</b> <i>n</i> <span style="margin-left: 90px;">// <em>Label first query transformation</em></span></p>
+<p><i>Q<sub>i</sub></i> = a query</p>
+
+<p><i>T<sub>i</sub><sup>B</sup></i> = <i>f</i> ;  <i>T<sub>i</sub><sup>Q</sup></i>  = <i>f</i> ; <i>T<sub>i</sub><sup>P</sup></i> = <i>f</i> ;  <i>T<sub>i</sub><sup>D</sup></i>  = <i>f</i></p>
+
+<p><b>end for</b><br /></p>
+<p><span style="margin-left: 90px;">// <em>Count and strip out quotation marks and <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>
+terms from</em> <i>Q<sub>1</sub></i></span></p>
+
+<p><i>Q</i><sub>1</sub> => <i>Q</i><sub>1</sub><sup>*</sup></p>
+<p><b>if</b>(<i>N<sub>Q</sub></i>(1) > 1) <b>then</b> <i>T</i><sub>1</sub><i><sup>Q </sup></i>= Q</p>
+<p><b>if</b>(<i>N<sub>B</sub></i>(1) > 0) <b>then</b> <i>T</i><sub>1</sub><i><sup>B </sup></i>= B</p>
+<p><b>if</b>(<i>n</i> > 1) <b>then</b> <i>T</i><sub>1</sub><i><sup>P</sup></i> = N</p>
+<p><b>if</b>(<i>n</i> == 1) <b>then</b> <i>T</i><sub>1</sub><i><sup>P</sup></i> = U<br /></p>
+<p><b>for</b> <i>i</i> = 2 <b>to</b> <i>n</i>  <span style="margin-left: 90px;">//  <i>Loop over remaining queries      
+</i></span></p>
+
+<p><span style="margin-left: 90px;"> //   <em>First </em><i>compare Q<sub>i</sub></i> with Q<i><sub>i-</sub></i><i><sub>1</sub></i></span></p>
+
+<p><b>if </b>(timestamp(<i>i</i>) - timestamp(<i>i</i>-1) = delay limit) <b>then</b> <i>T<sub>i</sub><sup>D</sup></i>  = _ </p>
+<p><b>if </b>(<i>Q<sub>i</sub>== <sub> </sub>Q<sub>i-</sub></i><sub>1</sub>) <b>then</b><sub> </sub></p>
+<p>if(<i>P<sub>i</sub>  </i>&lt; <i> P<sub>i-</sub></i><sub>1</sub>) then <i>T<sub>i</sub><sup>P</sup> </i>= p  <span style="margin-left: 90px;"> // <i> Decreased page rank</i></span></p>
+
+<p>if(<i>P<sub>i</sub>  </i>> <i> P<sub>i-</sub></i><sub>1</sub>)  then <i>T<sub>i</sub><sup>P</sup> </i>= P   <span style="margin-left: 90px;">// <i> Increased page rank</i></span></p>
+
+<p>if(<i>P<sub>i</sub>  </i>== <i> P<sub>i-</sub></i><sub>1</sub>) then <i>T<sub>i</sub><sup>P</sup> </i>= R <span style="margin-left: 90px;">// <em> Repeat query</em></span></p>
+
+<p><b>else</b> <span style="margin-left: 90px;"><em>search for most similar previous query</em></span></p>
+
+<p><span style="margin-left: 90px">//  <i>Count and strip out quotation marks and <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>terms from</i> <i>Q<sub>i </sub></i> </span></p>
+
+<p><i>Q<sub>i</sub></i> => <i>Q<sub>i</sub></i><sup>*</sup></p>
+
+<p><em>N<sub>B</sub></em>(<em>i</em>) = number of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>terms in query <i>i</i></p>
+
+<p><em>N<sub>Q</sub></em>(<em>i</em>) = number of quotation marks in query <i>i<br /></i><br /></p>
+
+<p><b>for</b> <i>j</i> = 1 <b>to</b> <i>i</i>-1</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compare <i>Q<sub>i</sub></i><sup>*</sup> with <i>Q<sub>k</sub></i><sup>*</sup>  and find similarity </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record the most similar <i>Q<sub>k</sub></i><sup>*</sup>  set <i>k </i>= <i>j </i></p>
+<p><b>end for</b></p>
+
+<p> Compare  <i>Q<sub>i</sub></i><sup>*</sup> with <i>Q<sub>k</sub></i><sup>*</sup>:</p>
+<p>Obtain smallest word count = <i>W<sub>min</sub></i></p>
+<p>Count common words = <i>N<sub>com</sub></i></p>
+<p>Find largest common sub-phrase; word count = <i>MCS</i></p>
+
+<p><span style="margin-left: 120px">// <em>Comparisons above similarity threshold QST</em></span></p>
+<p><b>if</b> (similarity(<i>Q<sub>i</sub></i><sup>*</sup> , <i>Q<sub>k</sub></i><sup>*</sup>)  >=  <i>QST</i>) <b>then</b><i></i></p>
+
+<h2 style="margin-left: 36pt;">Assign <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and quotation mark <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><em>T<sub>i</sub><sup>B</sup> </em>,  <em>T<sub>i</sub><sup>Q</sup></em> (Code A2)</h2>
+
+<p> <b>if</b>(<i>Q<sub>i</sub></i> == <i>Q<sub>k</sub></i>)  <b>then</b>   <i>T<sub>i</sub><sup>P</sup> </i>= I                
+// <em>Identical queries</em></p>
+
+<p><b>elseif</b>( <i>MCS</i> = <i>W<sub>i</sub></i> ) <b>then<span style="margin-left: 90px;">//</span> </b><em>Common phrase</em></p>
+
+<p><b>if</b>( <i>W<sub>j</sub> </i>> <i>W<sub>i</sub></i> ) <b>then</b>  <i>T<sub>i</sub><sup>P</sup> </i>= C <span style="margin-left: 90px;">// <em>Conjoint modification</em></span></p>
+
+<p><b> if</b>( <i>Wj</i> &lt; <i>W<sub>i</sub></i> ) <b>then</b>  <i>T<sub>i</sub><sup>P</sup> </i>= D <span style="margin-left: 90px;">// <em>Disjoint modification</em></span></p>
+
+<p><b>if</b>(<i>Wj</i> = <i>W<sub>i</sub></i> ) <b>then</b>  <i>T<sub>i</sub><sup>P</sup> </i>= J<span style="margin-left: 90px;">// <em>Identical apart from <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>or quotation marks</em></span></p>
+
+<p><b>endif</b></p>
+
+<p><b>if</b>( (<i>MCS</i> = 0)  AND  (<i>N<sub>com</sub></i> > 0))  <i>T<sub>i</sub><sup>P</sup> </i>= X<span style="margin-left: 90px;"> // Error - should not happen</span></p>
+
+<p><b>if</b>(<i>MCS</i> = 1) <b>then</b></p>
+<p><span style="margin-left: 30px;">If (<i>N<sub>com</sub></i> > <i>MCS</i>) <b>then</b> <i>T<sub>i</sub><sup>P</sup> </i>= w    // <em>Single words in common</em></span></p>
+
+<p>If(<i>N<sub>com</sub></i> = <i>MCS</i>)  <b>then</b>  <i>T<sub>i</sub><sup>P</sup> </i>= W         // <em>Single common word</em></p>
+
+<p><b>endif</b></p>
+
+<p><b>if</b>(<i>MCS</i> != 1) <b>then</b></p>
+<p><b>if</b> ( (<i>MCS</i> !=> 0) AND (<i>MCS</i> &lt; <i>W<sub>min</sub></i>)) <b>then</b> <span style="margin-left: 60px;">   // <em>MCS shorter than shortest query</em></span></p>
+
+<p><b>if</b> (<i>N<sub>com</sub></i> > <i>MCS</i>) then <i>T<sub>i</sub><sup>P</sup> </i>= s  <span style="">// <em>Common sub-phrase with re-ordering</em></span></p>
+<p><b>if</b> (<i>N<sub>com</sub></i> = <i>MCS</i>) then  <i>T<sub>i</sub><sup>P</sup> </i>= S  <span style="margin-left: 60px;"> // <em>Common sub-phrase</em></span></p>
+<p><b>endif</b></p>
+<p><b>endif</b></p>
+
+<p><b>if</b> ( (<i>MCS</i> = 0) AND (<i>N<sub>com</sub></i> = 0))  <b>then  </b><i>T<sub>i</sub><sup>P</sup> </i>= M  <span style="margin-left: 60px;">// <em>Similar queries but no common words or phrase</em></span></p>
+<p><b>endif</b></p>
+
+<p><span style="margin-left: 150px;"> // <em>Comparisons below similarity threshold QST</em></span> </p>
+
+<p><b>if</b>( (similarity(<i>Q<sub>i</sub></i>, <i>Q<sub>k</sub></i>) &lt; QST) AND (<i>MCS</i> 
+> 0 ) )  <b>then</b>                                     
+</p>
+<h2 style="margin-left: 36pt">Assign <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>and quotation mark <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span> <em>T<sub>i</sub><sup>B</sup> </em>, <em>T<sub>i</sub><sup>Q</sup></em>  (Code A2)</h2>
+
+<p><span style="margin-left: 30px;"><b>if</b> (<i>N<sub>com</sub></i> = 1) <b>then </b><i>T<sub>i</sub><sup>P</sup> </i>= Z </span> <span style="margin-left: 90px;">            //  <em>One similar word</em></span></p>
+
+<p><span style="margin-left: 36pt;"><b>if</b> (<i>N<sub>com</sub></i> >1) <b>then</b>  <i>T<sub>i</sub><sup>P</sup> </i>= z </span>                          <span style="margin-left: 60px;">       //  <em>More than one similar word</em> </span> </p>
+
+<p><b>endif</b></p>
+<p><b>end for</b>                       
+<span style="margin-left: 120px;">      // <em>End loop over i<br /><br /></em></span></p>
+
+<h4>Code A2.   Process assigning quotation mark and <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>terms for a transformation between query <i>i</i> and an earlier query <i>k</i>.</h4>
+
+<p><strong>Input:</strong> Quote mark and <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><span>term</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>count for queries <i>i</i> and <i>k</i>.</p>
+
+<p><strong>Output: Query transformation <span>codes</span>  <span class="quali" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span><i>T<sub>i</sub><sup>B</sup> </i>,<i>T<sub>i</sub><sup>Q</sup></i> for query</strong><i><strong>i.<br /></strong></i></p>
+
+<p><strong>Process:</strong></p>
+
+<p>if(<i>N<sub>Q</sub></i>(<i>i</i>) - <i>N<sub>Q</sub></i>(<i>k</i>)  1) then <i>T<sub>i</sub><sup>Q</sup></i> = Q       <span style="margin-left: 30px;">   // <em>Assign quotation mark codes</em></span></p>
+
+<p>if(<i>N<sub>Q</sub></i>(<i>i</i>) - <i>N<sub>Q</sub></i>(<i>k</i>) &lt; -1) then <i>T <sub>i</sub><sup>Q</sup></i> = q</p>
+
+<p>if(<i>N<sub>B</sub></i>(<i>i</i>) - <i>N<sub>B</sub></i>(<i>k</i>) > 0) then <i>T<sub>
+i</sub><sup>B</sup></i> = B <span style="margin-left: 60px;">       // <em>Assign <span>Boolean</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>codes</em></span></p>
+
+<p>if(<i>N<sub>B</sub></i>(<i>i</i>) - <i>N<sub>B</sub></i>(<i>k</i>) &lt; 0) then <i>T<sub>i</sub><sup>B</sup></i> = b<i>        </i></p>
+
+
+<hr size="1" style="color: Maroon;" />
+
+
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper276" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the authors, 2006. <br />Last updated: 21 August, 2006
+</div></td>
+
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var 0="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper276.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&0="+0;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?0='+0+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own <span>free</span>  <span class="conce" style="width:1px;border-width:108px 36px 108px 36px;position:relative;">.</span>site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;0=281971&amp;js=No&amp;" alt="online web site analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+</table>
+
+
+<table align="center"><tr><td><div class="button">
+<ul>
+	<li><a href="infres121.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+</div></td></tr></table>
+
+<hr size="3" style="colour: maroon;" />
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/12-1/paper276.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:36:03 GMT -->
+</html>
+
+
+

@@ -1,0 +1,832 @@
+<!doctype html public "-//W3C//DTD <span>HTML</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/7-4/paper139.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:57 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<title>An improved method of studying user-system <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by combining transaction log analysis and protocol analysis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<meta name="keywords" content="transaction logging, end user studies, methodology, protocol analysis, user system <span>interaction</span>" <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>>
+
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> content="The paper reports a <span>novel</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>approach to studying user-system <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that   captures a complete record of the searcher's actions, the system responses and synchronised talk-aloud comments from the searcher. The data is recorded unobtrusively and is available for later analysis. The approach is set in context by a discussion of transaction logging and protocol analysis and examples of the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>logging  in operation are presented">
+
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="An improved method of studying user-system <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by combining transaction log analysis and protocol analysis">
+
+<meta name="DC.Creator" content="Jillian <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Griffiths; <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Hartley; Jonathan P. Willson">
+
+<meta name="DC.Subject" content="transaction logging, end user studies, methodology, protocol analysis, user system <span>interaction</span>" <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>>
+
+<meta name="DC.Description" content="The paper reports a <span>novel</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>approach to studying user-system <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that captures a complete record of the searcher's actions, the system responses and synchronised talk-aloud comments from the searcher. The data is recorded unobtrusively and is available for later analysis. The approach is set in context by a discussion of transaction logging and protocol analysis and examples of the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>logging   in operation are presented">
+
+<meta name="DC.Publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>T.D. Wilson">
+<meta name="DC.Coverage.PlaceName" content="Global">
+
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center" colspan="5"><h4>Information Research, Vol. 7 No. 4, July 2002,</h4></td></tr>
+  <tr> 
+    <td><a href="infres74.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3>
+
+<h1>An improved method of studying user-system <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by combining transaction log analysis and protocol analysis </h1>
+  
+<h4><a href="mailto:j.r.griffiths@mmu.ac.uk">Jillian <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Griffiths</a>, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Hartley and Jonathan P. Willson <br>
+
+Department of Information and Communications <br>
+  Manchester Metropolitan University <br>
+  Manchester <br>
+  United Kingdom</h4>
+
+<br><br>
+	<div align="center"><b>Abstract</b></div>
+	
+
+<blockquote>The paper reports a <span>novel</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>approach to studying user-system <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that captures a complete record of the searcher's actions, the system responses and synchronised talk-aloud comments from the searcher. The data is recorded unobtrusively and is available for later analysis. The approach is set in context by a discussion of transaction logging and protocol analysis and examples of the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>logging in operation are presented.</blockquote>
+  
+<h2>Introduction</h2> 
+
+<p>The <span>investigation</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of how people use electronic information resources is important 
+  as a means of understanding how to make <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>more usable and as a means of 
+  understanding information-seeking behaviour. Important developments have been 
+  the use of transaction logging data and of protocol analysis. However a trend 
+  in understanding information-seeking behaviour and in information system evaluation 
+  has been the <span>move</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>from <span>controlled</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>experiments to the study of information seeking 
+  in a natural <span>setting</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> The <span>collection</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of transaction logging data of end users 
+  searching full text electronic information sources in a natural <span>setting</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>poses 
+  numerous challenges and <span>raises</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>methodological <span>concerns</span>. <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> This paper explores 
+  the challenges and describes a <span>novel</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>approach that was developed to address 
+  the limitations of traditional quantitative methodologies as applied to <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  databases. The transaction logs for the research project were required to provide 
+  more <span>qualitative</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>data, capturing the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>from start to finish as experienced 
+  and seen by end users.</p>
+  
+<p>The paper <span>discusses</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>transaction log analysis and protocol analysis as methods 
+  of data <span>collection</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>before outlining the <span>novel</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>methodology in detail, illustrating 
+  its operation with some examples of the data collected and concluding with a 
+  brief discussion on its use in a number of projects. The intention of the paper 
+  is to concentrate on the methodology itself rather than report results of specific 
+  research. Appendices are included which provide system requirements/technical 
+  detail and contact information of suppliers. </p>
+  
+<h2>Transaction Log Analysis </h2>
+
+<p>A useful definition of Transaction Log Analysis has been provided by <a href="#pet93">Peters 
+<em>et al.</em> </a> (1993) who characterise it as: </p>
+
+  
+ <blockquote>...the study of electronically recorded <span>interactions</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>between on-line information retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and the persons who <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>for the information found in those <span>systems</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></blockquote> 
+
+<p>Furthermore noting that its 
+  use as a research methodology is relatively new, they have <span>divided</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>its development 
+  into three phases: </p>
+<ul>
+  <li>mid 1960s to mid 1970s - <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>placed on evaluating system <span>performance</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> 
+    rather than on user behaviour and <span>performance</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Meister and Sullivan's (1967) 
+    evaluation of user reactions being one of the first uses of transaction log 
+    analysis; </li>
+  <li>late 1970s to mid 1980s - first <span>applications</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of transaction log analysis 
+    to the study of on-line catalogue <span>systems</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> equal interest in how the system 
+    was used and in the searching behaviour of end users; and </li>
+  <li>late 1980s to date - diversification of transaction log application, usually 
+    focusing on use of operational information retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by end users. 
+  </li>
+</ul>
+<p>Peters <em>et al.</em>  have identified a variety of uses of transaction log data namely:</p>
+
+<ul>
+  <li>improving an information retrieval system; </li>
+  <li>improving human utilisation of the system; </li>
+  <li>improving human (and system) understanding of how the system is used by 
+    information seekers; </li>
+  <li>identification of how a system is being used by end users; and </li>
+  <li>study of <span>prototype</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>or potential system improvements. </li>
+</ul>
+
+<p>Transaction-logging <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>are usually a <span>feature</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of automated library <span>systems</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> 
+  which can be classified into two broad categories: </p>
+<ul>
+  <li>systems which count transactions as they occur; and </li>
+  <li>systems which store the text of the transactions (<a href="#fla93">Flaherty, 1993</a>). </li>
+</ul>
+<p>Whilst <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the first type may provide useful management information 
+  to librarians, it is only <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the latter type which provide useful data 
+  for researchers because they capture and store users' <span>entries</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and provide for 
+  retrieval of the stored data. Additionally some <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>will also record information 
+  about the <span>response</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>returned by the system. Flaherty identifies <span>typical</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>transaction 
+  log data elements as:</p>
+<ul>
+  <li>patron's entry; </li>
+
+  <li>date and time; </li>
+  <li>terminal identification; </li>
+  <li>search file; </li>
+  <li>number of hits; and </li>
+  <li>system <span>response</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(not all systems). </li>
+</ul>
+<p><a href="#ble98">Blecic <em>et al.</em></a>  (1998) define transaction log analysis as "the <span>detailed</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and systematic 
+  examination of each <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>command or query by a user and the following database 
+  result or output by the OPAC" (p.40). According to this definition transaction 
+  log <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>which do not record the system <span>response</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to the user input are not 
+  true transaction logging <span>systems</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></p>
+
+  
+<p>Transaction logging <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>have limitations. <a href="#han90">Hancock-Beaulieu <em>et al.</em></a>  (1990) 
+  noted that whilst transaction logs could provide useful diagnostic evidence 
+  of procedural and conceptual problems, they also had specific limitations. These 
+  limitations include a <span>lack</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of "information or the right type of data to inform 
+  adequately on how or why users searched in the way they did" (p.11). </p>
+<p>Other restrictions include: </p>
+<ul>
+  <li>not all <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>have logging facilities; </li>
+  <li>problems in identifying individual <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>sessions; </li>
+  <li>system <span>response</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>not always recorded; and </li>
+
+  <li>volume of data generated causes <span>difficulties</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>for analysis. </li>
+</ul>
+<p>Having identified the limitations of existing <span>systems</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> <a href="#bea90">Beaulieu <em>et al.</em></a>  (1990)  developed a PC-based transaction logging <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>package, OLIVE. This system 
+  logged the user-host dialogue, condensed and summarised the data, played back 
+  the logon screen, acted as an agent in a three-way exchange by intercepting 
+  the user-host dialogue, and was able to include pre- and post-search questionnaires. 
+  This could be adapted for use across different OPACs. This system concentrated 
+  more on "screen logging rather than a transaction logging <span>focus</span>" <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (p.73).</p>
+  
+<p>Kurth (1993) noted that, </p>
+
+<blockquote>...<span>students</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of transaction log data have begun to ask as many questions about what the transaction logs cannot reveal as they have  asked about what transaction logs can reveal. (<a href="#kur93">Kurth, 1993: 98</a>).</blockquote> 
+
+
+<p>According to Kurth these limitations <span>fall</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>into four categories:</p>
+<ul>
+  <li>system factors; </li>
+  <li>user/search process factors; </li>
+  <li>data analysis factors; and </li>
+  <li>ethical and legal factors . </li>
+</ul>
+<p>System factors, which impede the <span>collection</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of transaction log data, are <span>divided</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  by Kurth into:</p>
+
+<ul>
+  <li>mechanical; </li>
+  <li>temporal; </li>
+  <li>spatial; and </li>
+  <li>intersystem factors. </li>
+</ul>
+<p>Mechanical limitations include such elements as complex <span>programming</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>requirements 
+  and immense data size. Other system factors are determined by the fact that 
+  "on-line <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>are unique entities which exist in time and space" (p.99). 
+  Thus, changes to a bibliographic database, modifications to commands, indexing 
+  and displays will impact on the researcher's ability to replicate searches, 
+  and the same system on the same <span>day</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>will behave differently over a <span>network</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> 
+  Intersystem factors are concerned with the development of transaction logging 
+  subsystems which vary widely, making comparisons across different on-line <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  difficult.</p>
+  
+
+<p>A <span>major</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>"user/search process" limitation identified by <a href="#kin87">Kinsella and Bryant</a> 
+  (1987) is the inability to isolate and characterise individual users of on-line 
+  <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>in order to describe the pattern of their use. Users' <span>perceptions</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of 
+  their searches are not recorded, transaction logs cannot measure the information 
+  needs that users' are unable to <span>express</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>in their <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>statements</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(input), 
+  and they cannot <span>reflect</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>users' satisfaction with <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>results (output). As Kurth
+ states, "[the fact] that transaction logs are unable to address such <span>cognitive</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>aspects of on-line searching behaviour is a true <span>limit</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the methodology" (<a href="#kur93">Kurth, 1993: 100</a>). 
+  Supplementary research, such as questionnaires, protocol analysis and interviews, 
+  must be undertaken in order to build a fuller picture of searching behaviour, 
+  success and satisfaction. Kurth identifies data analysis issues as being threefold: 
+</p>
+<ul>
+  <li>execution; </li>
+  <li>conception; and </li>
+  <li>communication.</li>
+
+</ul>
+<p>Execution creates <span>collection</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> <span>storage</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and analysis problems related to the 
+  large size and complexity of the data set. Conceiving a method of analysis that 
+  is appropriate to both the data analysed and the research question asked is 
+  also <span>crucial</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to the success of the study. The limitations discussed above combine 
+  to create a large number of variables to control when developing a methodology 
+  for analysing transaction log data. Communication problems <span>arise</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>when researchers:</p>
+<ul>
+  <li>fail to sufficiently define terms and measurement <span>tools</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>upon which their 
+    transaction log analysis will depend; and </li>
+  <li>fail to provide descriptions of their methodologies in <span>sufficient</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>detail 
+    to allow other researchers to <span>test</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and verify their results. </li>
+</ul>
+<p>Whilst transaction log analysis has <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>value as a data <span>collection</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  method, it has its limitations and it is best used in conjunction with a method 
+  which captures data regarding users' real information needs, comments and reactions 
+  whilst using a system and satisfaction with the system.</p>
+<h2>Protocol analysis</h2>
+<p>Protocol analysis has been widely used across many research areas and has stimulated 
+  <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>debate about its merits and limitations as a method of eliciting 
+  information from the participant. There has been significant development and 
+  use of verbal protocol analysis in educational <span>psychology</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(for example <a href="#eri80">Ericsson 
+  &amp; Simon, 1980</a>; <a href="#lon96">Long &amp; Bourg, 1996</a>) and as such it is relevant to <span>con0er</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>lessons from this area. However, think-aloud protocols have been used increasingly 
+  in information retrieval research (<a href="#fla93">Flaherty, 1993</a>; <a href="#kee78">Keen &amp; Wheatley, 1978</a>; <a href="#mar84">Markey, 1984</a>; <a href="#han87">Hancock, 1987</a>; <a href="#man98">Manglano <em>et al.</em> , 1998</a>).</p>
+
+<p>Hancock-Beaulieu <em>et al.</em>  have argued that <a href="#eri80">Ericsson and Simon's</a> (1980) paper on 
+  verbal reports as data "has led to the use of protocols or spoken thoughts in 
+  task analysis and decision making processes in a number of ... areas" (<a href="#han90">Hancock-Beaulieu <em>et al.</em>1990: 6</a>). Ericsson and Simon's <span>central</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>proposal is that verbal reports are data   and, as such, <span>require</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>explication of the <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by which the reports are  generated, and the ways in which they are sensitive to <span>experimental</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>factors. 
+  As a method for understanding the <span>cognitive</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>processes of subjects, doubts had 
+  been raised about the validity of verbal reports (<a href="#las23">Lashley, 1923</a>; <a href="#nis77">Nisbett &amp; 
+  Wilson, 1977</a>). Ericsson and Simon <span>sought</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to evolve a methodology for verbal 
+  reporting which would address the limitations that had discredited it by proposing 
+  a <span>move</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>away from informal analysis of verbalised information toward objective 
+  procedures for <span>collection</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and analysis. The model they propose for the verbalisation 
+  processes of subjects is based upon the theoretical <span>framework</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of human information 
+  processing theory (<a href="#new72">Newell and Simon, 1972</a>; <a href="#and73">Anderson and Bower, 1973</a>; <a href="#sim79">Simon,  1979</a>). Ericsson and Simon conclude that, </p>
+
+<blockquote>...verbal reports, elicited with care  and interpreted with full understanding of the circumstances under which they  were obtained, are a valuable and thoroughly <span>reliable</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>source of information  about <span>cognitive</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>processes. (<a href="#eri80">Ericsson &amp; Simon, 1980: 247</a>).</blockquote>
+
+<p>Long and Bourg report on three areas of research where verbal protocol analysis provides unique information:</p>
+
+<ul>
+  <li>the study of <span>inferential</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>processing during text comprehension; </li>
+  <li>the study of individual differences in comprehension performance; and </li>
+
+  <li>the study of conversational discourse and storytelling. </li>
+</ul>
+
+<p>Long and Bourg's <span>major</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>premise is that.</p> 
+
+<blockquote>readers do not provide a veridical report of their <span>underlying</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>mental</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>processes when they 'think aloud' ... rather, they construct a text <span>representation</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and then use it to 'tell a story' about 
+  their understanding" (<a href="#lon96">Long &amp; Bourg, 1996: 329</a>). </blockquote>
+  
+  <p>Further, Long and Bourg in discussing <a href="#mag91">Magliano and Graesser's</a> work (1991) state that &quot;verbal protocols are an important component 
+  of the three-pronged method [for studying <span>inferential</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>processing during comprehension]&quot;
+
+  (p.330). They put forward that verbal protocols provide a rich and <span>detailed</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  database that can be used to generate hypotheses about what knowledge-based 
+  inferences <span>occur</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>during <span>reading</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and that verbal protocols can be used to identify 
+  the knowledge structures that supply inferences. In the opinion of Long and 
+  Bourg:</p>
+  
+<blockquote>  verbal protocol analysis is ideal for identifying those inferences that 
+  involve access to world knowledge and those that involve access to prior text 
+  information. We are somewhat less convinced that verbal protocols provide valuable 
+  information about the memory operations that underlie these inferences" ()</blockquote>
+
+<p>The second area of study often utilising protocol analysis is the study of 
+  individual differences. Here, verbal protocols are used to <span>investigate</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>individual 
+  differences in readers' text <span>representations</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and comprehension <span>strategies</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Long 
+  and Bourg examined several studies in this area and <span>concluded</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that verbal protocol 
+  analysis led to interesting hypotheses about differences in the text <span>representations</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  constructed by individuals, who vary in <span>reading</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>skill and memory capacity. Further 
+  they noted that verbal protocols also lead to hypotheses about individual differences 
+  in learning <span>strategies</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and production skills. Research into the affect of learning 
+  styles (<a href="#for93a">Ford <em>et al.</em>, 1993a</a> and <a href="#for93b">1993b</a>) and <span>cognitive</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>styles (<a href="#gri96">Griffiths, 1996</a>) 
+  on successful information retrieval may be informed by this second approach. 
+  The <span>third</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>research area discussed by Long and Bourg is that of conversational 
+  discourse. Long and Bourg posit that "readers use their text <span>representation</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  to tell a story about their understanding of a story" (<a href="#lon96">Long &amp; Bourg, 1996: 335</a>) and, as such, verbal protocols may provide useful information about some of the principles 
+  involved in conversational discourse.</p>
+
+  
+<p>As long ago as 1978, protocol analysis was used to describe the searching behaviour 
+  of a group of <span>experimental</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>searchers. Keen and Wheatley conducted an <span>experiment</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  in which five different <span>kinds</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of printed subject indexes were searched and, 
+  from transcripts of the verbalised tape-recordings, evidence of the way the 
+  <span>entries</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>were processed by the user was found. The <span>test</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>focused on one user and 
+  was <span>designed</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to contrast this with two other methods for capturing a comprehensive 
+  record of the <span>search</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> The two other methods under <span>investigation</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>were the use 
+  of <span>detailed</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>record sheets and marking the index copies. Keen and Wheatley <span>concluded</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  that "as an analogy to recording searching, verbalised recorded indexing be 
+  used as a tool for exploring the indexing process and studying indexing aboutness" 
+  (<a href="#kee78">Keen and Wheatley, 1978: 430</a>). Keen has used the think-aloud methodology in <span>subsequent</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>studies (<a href="#kee95">Keen, 1995</a>).</p>
+  
+<p><a href="#mar84">Markey</a> (1984) utilised protocol analysis to study manual searching of a library  catalogue. With minimal prompting, users were encouraged to talk aloud as they 
+  searched. Their <span>statements</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>were recorded onto an audio tape and transcribed 
+  to produce a flow chart of the different steps of the complete <span>search</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> From 
+  these protocols, patterns of searching behaviour emerged and models of different 
+  types of searches were identified. Transcription and coding was, however, a 
+  time consuming task.</p>
+  
+<p><a href="#han90">Hancock-Beaulieu <em>et al.</em></a>  (1990) identified the <span>main</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>limitations of protocol analysis 
+  as being two-fold:</p>
+
+<ul>
+  <li>fears that a <span>direct</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>approach would interfere and possibly distort the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+    process; and </li>
+  <li>transcription and <span>subsequent</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>coding is time consuming and cumbersome. </li>
+</ul>
+<p>To minimise these problems <a href="#han87">Hancock</a> (1987) <span>devised</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>a combined observation and 
+  talk aloud <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to study searchers using a microfiche catalogue. Subjects 
+  were encouraged to talk aloud as they searched to give an indication of what 
+  they were looking for and to confirm whether or not they succeeded. The <span>direct</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  observation of searchers' actions provided Hancock with the <span>framework</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the 
+  activity and in this way the searchers' actions confirmed what they said they 
+  were doing. The verbal protocol data provided <span>details</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>which could not be <span>easily</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  <span>observed</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>or which were not observable.</p>
+<h2>A new methodological approach</h2>
+<p>The foregoing analysis indicates that whilst there has been <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>methodological 
+  innovations in the study of user system <span>interaction</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> there is scope for further 
+  improvement. Ideally we believe that transaction log analysis <span>ought</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to have 
+  the following features:</p>
+
+<ul>
+  <li>show real time; </li>
+  <li>show elapsed time; </li>
+  <li>show mouse movement of end user; </li>
+  <li>show input of end user; </li>
+  <li>show <span>response</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the system, e.g. <span>error</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>messages, retrieved items; </li>
+  <li>be unobtrusive; </li>
+
+  <li>give control to the researcher; </li>
+  <li>synchronise transaction log with verbal protocols; and </li>
+  <li>be used across different interfaces. </li>
+</ul>
+<p>We believe that the method outlined here meets these criteria and therefore 
+  <span>constitutes</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>a <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>step forward. The approach can utilise either of 
+  two types of technology. The first consists of a <span>PC</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to video converter, called 
+  Grand Art, produced by Imagine Graphics. This <span>equipment</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>consists of <span>hardware</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  and <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that was connected between a <span>PC</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and monitor and a standard VHS 
+  video recorder. Once the <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>is installed, the screen output is unobtrusively 
+  re-routed to the video and recorded, and simultaneously displayed on the monitor 
+  to the end user (see <a href="#app1">Appendix 1</a> for system requirements). The second is Lotus 
+  ScreenCam <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that, once loaded, records all screen activity onto disc 
+  in the form of a film. Lotus ScreenCam is the authors preferred option as it 
+  records <span>directly</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to <span>PC</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(see <a href="#app2">Appendix 2</a> for system requirements). </p>
+
+<p>With both of these <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the end result is a real time film of the searching 
+  session. Each of these technologies is able to record the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>session from 
+  start to finish in real time, showing pauses, movements made by mouse, input 
+  by participants, system responses (for example, <span>error</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>messages, retrieved results 
+  lists, instructions and prompts etc.) as well as a user's comments and as they 
+  work through their <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>session. Importantly, use of different electronic 
+  resources can be logged without any changes to the system. These films can be 
+  played back for analysis at a later date through a standard video player and 
+  television set or viewed <span>directly</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>on a <span>PC</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> This method of recording the end 
+  users' <span>interactions</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>with electronic resources can also be described as "screen 
+  logging" (<a href="#fla73">Flaherty, 1993:.73</a>) and provides a more <span>qualitative</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>observational 
+  approach to transaction logging.</p>
+<p>The benefits of using Grand Art/ScreenCam as a method of transaction logging 
+  are threefold:</p>
+<p>1. Screen logging con0erations</p>
+<ul>
+  <li>captures everything that the user sees and interacts with on the screen 
+  </li>
+  <li>shows system <span>response</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></li>
+</ul>
+<p>2. Researcher con0erations</p>
+
+<ul>
+  <li>unobtrusive </li>
+  <li>controlled by researcher </li>
+  <li>analysis off-line (at researcher's convenience) </li>
+  <li>video/stored files have archival permanence </li>
+</ul>
+<p>3. Practical con0erations</p>
+<ul>
+
+  <li>portable </li>
+  <li>cost effective </li>
+  <li>can be used on standard <span>equipment</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></li>
+</ul>
+<p>The <span>main</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>limitation is that the data has to be transcribed by the researcher 
+  before analysis is possible although this allows for an in-depth knowledge of 
+  each <span>search</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> The data may be qualitatively or quantitatively analysed, for example, 
+  entered into an analytical <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>package such as SPSS, Atlas.ti etc. Transcription 
+  may take a variety of forms dependent on the requirements of the research. For 
+  example, <span>linear</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>pathways may be <span>drawn</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>showing each <span>action</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the user and the 
+  system, thus:</p>
+<p>Opening screen <img src="forward.gif" alt="Forward arrow"> types <i>&quot;export 
+  licence&quot;</i> <img src="forward.gif" alt="Forward arrow"> selects F1 [help] <img src="forward.gif" alt="Forward arrow"> 
+  selects ESCAPE <img src="forward.gif" alt="Forward arrow"> selects <img src="return.gif" alt="Return"> <img src="forward.gif" alt="Forward arrow"> 
+  selects SPACEBAR [to change operator from AND to OR] <img src="forward.gif" alt="Forward arrow"> 
+  selects <img src="return.gif" alt="Return"> <img src="forward.gif" alt="Forward arrow"> types <i>&quot;export 
+  licences&quot;</i> <img src="forward.gif" alt="Forward arrow"> deletes <i>&quot;export licences&quot;</i> 
+  <img src="forward.gif" alt="Forward arrow"> selects <img src="up.gif" alt="Upwards arrow"> [to go up] <img src="forward.gif" alt="Forward arrow"> 
+  selects SPACEBAR [to change to AND] <img src="forward.gif" alt="Forward arrow"> selects <img src="up.gif" alt="Upwards arrow"> 
+  [to go up] <img src="forward.gif" alt="Forward arrow"> types <i>&quot;*&quot;</i> [at end of <i> 
+  &quot;export licence*&quot;</i> ] <img src="forward.gif" alt="Forward arrow"> selects F5 [search] 
+  <img src="forward.gif" alt="Forward arrow"> &quot;SEARCHING&quot; <img src="forward.gif" alt="Forward arrow"> [2 ARTICLES 
+  found] <img src="forward.gif" alt="Forward arrow"> selects F9 [to view headlines] <img src="forward.gif" alt="Forward arrow"> 
+  selects F2 [to go back to <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>screen] <img src="forward.gif" alt="Forward arrow"> deletes <i>&quot;licence*&quot;</i> 
+  <img src="forward.gif" alt="Forward arrow"> selects <img src="return.gif" alt="Return"> <img src="forward.gif" alt="Forward arrow"> 
+  selects <img src="return.gif" alt="Return"> <img src="forward.gif" alt="Forward arrow"> types<i> &quot;licence*&quot;</i> 
+  <img src="forward.gif" alt="Forward arrow"> selects F5 [search] <img src="forward.gif" alt="Forward arrow"> &quot;SEARCHING&quot; 
+  <img src="forward.gif" alt="Forward arrow"> [7 ARTICLES found] <img src="forward.gif" alt="Forward arrow"> selects F9 
+  [to view headlines] <img src="forward.gif" alt="Forward arrow"> selects <img src="down.gif" alt="Downwards arrow"> [to 
+  <span>move</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>down to 5th article] <img src="forward.gif" alt="Forward arrow"> selects <img src="up.gif" alt="Upwards arrow"> 
+  [to <span>move</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to 1st article] <img src="forward.gif" alt="Forward arrow"> selects F9 [to view text] <img src="forward.gif" alt="Forward arrow"> 
+  selects <img src="down.gif" alt="Downwards arrow"> [to <span>move</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>down text] <img src="forward.gif" alt="Forward arrow"> selects 
+  F4 [to view headlines] <img src="forward.gif" alt="Forward arrow"> selects F10 [to exit] <img src="forward.gif" alt="Forward arrow"> 
+  &quot;DO YOU WANT TO FINISH? PRESS Y TO QUIT OR N TO CANCEL&quot; <img src="forward.gif" alt="Forward arrow"> 
+  selects Y</p>
+
+  
+<p>In this example a user is searching a newspaper on <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>for information to 
+  satisfy their own need. User input is <span>denoted</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by <i>"italics"</i>, user selections 
+  of system <span>features</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>is <span>denoted</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by CAPITALS, system <span>response</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by "CAPITALS" and 
+  researcher notes are enclosed by [ …]. This example is a real <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by a user 
+  participating in a study currently being undertaken by Griffiths. Searches 
+  may also be presented graphically in the form of <span>visual</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>maps</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></p>
+  
+<p>With Grand Art the participants' spoken comments can be recorded <span>directly</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>onto 
+  the same videotape as the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>is being conducted by connecting a microphone 
+  to the video recorder. Recording via ScreenCam <span>requires</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>connection of a microphone 
+  to the <span>PC</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Thus a complete record of the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>can be captured with a synchronised 
+  voice-over of the participant. <a href="#han87">Hancock</a> (1987) <span>observed</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>searchers' actions in 
+  order to build a <span>framework</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of activity and then used these actions to confirm 
+  what participants' said they were doing. Grand Art and ScreenCam captures all 
+  user and system activity along with participants' spoken aloud thoughts.</p>
+<p>The following screen shots are presented to give an indication of the system 
+  in use and the manner in which transaction log data and verbal protocol data 
+  are brought together, although such a static example does not provide true picture 
+  of the benefits of the film version. The examples are taken from a recording 
+  of a user's searching session on a newspaper on <span>CD-ROM</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> </p>
+<h2>Example of transaction log and verbal protocol</h2>
+<p>The following presents an abridged example of a user's <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>on Chadwyck-Healey's 
+  <i>The Guardian on <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(including The Observer) </i>and the verbalisations 
+  made during the <span>search</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Actions taken by the user are <span>denoted</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by CAPITALS and 
+  verbalisations by <i>italics</i>. <span>Observational</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>notes by the researcher are 
+  indicated by the use of square brackets.</p>
+
+<p>[Start of search]</p>
+<div align="center"><img src="p139fig01.gif" width=548 height=339 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>1"></div>
+<div align="center">Figure 1</div>
+
+<p><i>It's telling me the special keys are F1 and Escape but it doesn't tell me 
+  how to <span>move</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>around the page, so I'm going to guess that I have to use the arrow 
+  key.</i> USES DOWN ARROW TO MOVE TO THE OPTION 'SECTION OF PAPER' </p>
+  
+<div align="center"><img src="p139fig02.gif" width=548 height=336 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>2"></div> 
+<div align="center">Figure 2 </div>
+
+<p><i>So which section of the paper do I want to choose? This is asking hard questions 
+  at this stage. I don't know. But it defaults to All Sections, but I <span>actually</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  want substantial articles. So let me, I was wondering, if I press Return. Again 
+  it's not telling me what to do</i>. PRESSES ENTER.</p>
+
+  
+<div align="center"><img src="p139fig03.gif" width=548 height=337 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>3"></div> 
+<div align="center">Figure 3 </div>
+
+<p><i>Oh, so it's saying Sections means whether I want The Guardian or The Observer, 
+  not the <span>sections</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>within it. This time at least it's telling me to Enter to select.</i> 
+  PRESSES ENTER. <i>So that takes me back to</i> [user anticipates the next screen].</p>
+  
+<div align="center"><img src="p139fig04.gif" width=550 height=337 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>4"></div> 
+<div align="center">Figure 4</div> 
+
+<p><i>Oh! </i>[user shows surprise as the screen appears, as they incorrectly 
+  anticipated where the system would take them to]<i>. Well now it's going on, 
+  telling me the options. Home, World, Features. Now, will Features? Again it's 
+  not clear whether Features will be both Home and Foreign/World or Features is 
+  some other category. I'm going to press F1.</i> PRESSES F1. <i>For the first 
+  time I feel I need to ask for Help</i>.</p>
+
+  
+<div align="center"><img src="p139fig05.gif" width=551 height=337 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>5"></div> 
+<div align="center">Figure 5 </div> 
+
+  <p><i>Now the Help has come up</i> [reads from screen]. <i>The database has been 
+  organised into <span>familiar</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>sections</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>- well they aren't, that's why I'm using Help</i> 
+  [continues to read out loud and then pauses]. <i>So I can <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>one or more 
+  selected sections</i> [continues to read out loud]. <i>I think that's so fundamental 
+  that that instruction</i> ["You may select a section by highlighting with the 
+  up and down arrow keys, then pressing &lt;SPACEBAR&gt;. When you have finished 
+  your selections, press &lt;ENTER&gt;"] <i>should have been displayed on screen 
+  without me having to <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>Help to find it. OK, so I'll press Escape to clear 
+  the message. It tells me I can read more but I think I've got the message.</i> 
+  PRESSES ESCAPE. [The user goes on to select Home News, Foreign/World, Features 
+  and Leaders as <span>sections</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the newspaper to be searched].</p>
+
+  
+<div align="center"><img src="p139fig06.gif" width=553 height=339 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>6"></div>
+<div align="center">Figure 6</div>
+
+  <p><i>So I've chosen Home, Foreign, Features and Leaders. I'm happy with those 
+  dates</i> [pause] a<i>nd now it's saying do I want to <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>Headline, Byline 
+  or Text. Well I want all of those</i> [pause]. <i>Well , where do I put my <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  terms in?</i> PRESSES DOWN ARROW FOR TEXT SEARCH. <i>Text search?</i> PRESSES 
+  UP ARROW FOR HEADLINE SEARCH. <i>I wanted to <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>Text and Headline, it's 
+  not clear, again. Help?</i> <i>F1 Help</i>. PRESSES F1.</p>
+
+  
+<div align="center"><img src="p139fig07.gif" width=553 height=341 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>7"></div>
+<div align="center">Figure 7 </div>
+
+  <p>[reads Help] <i>And all that's telling me is how to select the options, up and 
+  down arrow keys or using the first <span>letter</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the option. That's bugger all use 
+  I think</i>. PRESSES ENTER FOR MORE HELP.</p>
+  
+<div align="center"><img src="p139fig08.gif" width=550 height=339 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>8"></div>
+<div align="center">Figure 8</div>
+
+  <p><i>It's implying that I can only have one <span>main</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>menu <span>choice</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> so I'll Escape.</i> 
+  PRESSES ESCAPE.</p>
+
+  
+<div align="center"><img src="p139fig09.gif" width=556 height=341 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>9"></div>
+<div align="center">Figure 9</div>
+
+  <p><i>Well it will have to be a Text Search then</i>. PRESSES DOWN ARROW FOR TEXT 
+  SEARCH. <i>It's not telling me whether a Text Search includes Headline searching. 
+  So, I press,</i> [pause] <i>it's telling me to press Spacebar to view Headlines. 
+  No, but I'm doing a Text Search. I guess I'll just have to hit Enter. Again 
+  there's nothing on screen that I can see.</i> PRESSES ENTER.</p>
+  
+<div align="center"><img src="p139fig10.gif" width=550 height=337 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>10"></div> 
+
+<div align="center">Figure 10 </div>
+
+  <p>[reads from screen] <i>Type in a word or phrase plus Enter to <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the Story 
+  Text Index. So again it, </i>[pause]<i> I'm not, </i>[pause]<i> proximity? </i>[pause]<i> 
+  So, I want to type privacy</i> [user's first term] TYPES PRIVACY.</p>
+
+  
+<div align="center"><img src="p139fig11.gif" width=551 height=337 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>11"></div>
+<div align="center">Figure 11</div>
+
+    <p>[pause] <i>Exact Match, or Word Between, no I don't want an Exact Match. In 
+  Same Paragraph? No, is there another option?</i> [pause] <i>So, it's either 
+  going to be Exact Match or In Same Paragraph. Well, I just want it in the same 
+  article</i> [pause]. <i>F2 is giving me an explanation but that's</i> [pause]. 
+  <i>Am I going to have to use Help again?</i> PRESSES F1.</p>
+
+  
+<div align="center"><img src="p139fig12.gif" width=551 height=340 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>12"></div>
+<div align="center">Figure 12</div>
+
+  <p>[reads] <i>It looks like I can't do what I want to do so I'll have to Escape.</i> 
+  PRESSES ESCAPE.</p>
+  
+<div align="center"><img src="p139fig13.gif" width=551 height=339 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>13"></div>
+<div align="center">Figure 13</div>
+
+  <p><i>I'll just have to choose.</i> TYPES INTERNET.</p>
+
+  
+<div align="center"><img src="p139fig14.gif" width=549 height=336 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>14"></div>
+<div align="center">Figure 14</div>
+
+  <p><i>Privacy space internet, In Same Paragraph</i>. PRESSES DOWN ARROW FOR 'IN 
+  SAME PARAGRAPH'. [pause] <i>Hit Return.</i> PRESSES ENTER. <i>So now it's searching.</i></p>
+  
+<div align="center"><img src="p139fig15.gif" width=551 height=337 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>15"></div>
+<div align="center">Figure 15</div>
+
+  <p><i>And now it's found three stories. Press Spacebar, but then it's also saying 
+  on screen privacy and Internet in story it's found eleven stories. But it's 
+  selected three, which I'm guessing is telling me that it's only found three 
+  where they are in the same paragraph, but I've got to remember that from the 
+  screen before. I'm not very happy about that. It <span>raises</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>a lot of questions.</i></p>
+  
+<div align="center"><img src="p139fig16.gif" width=551 height=344 alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>16"></div>
+<div align="center">Figure 16</div>
+
+<p>[the user <span>continued</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by examining the articles retrieved from the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and 
+  then quitting the application].</p>
+<h2>Conclusion</h2>
+<p>The use of Grand Art or ScreenCam enables transaction logging of end user <span>interactions</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  and system responses across any number of different interfaces and as such it 
+  is unlike those traditional transaction logging <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>which are part of library 
+  automated <span>systems</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> The <span>equipment</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>is robust and easy to operate, all relevant 
+  data is captured on a single media format and users may be individually identified. 
+  This approach fulfils the definition of transaction logging as proposed by <a href="#ble98">Blecic 
+  <em>et al.</em></a>  (1998) and overcomes many of the problems of more traditional methods 
+  of logging data. <span>A+</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>user's <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>with an information retrieval system can 
+  be viewed more fully and in greater detail than traditional transaction logging 
+  <span>systems</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></p>
+
+<p>This method of data <span>collection</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and analysis can be used in a variety of situations 
+  including the study of information seeking behaviour, information retrieval, 
+  IR, research (use and evaluation of systems), human <span>computer</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>interaction</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> HCI, 
+  (design, development and usability aspects) on any type of electronic resource. 
+  This approach was first developed for a research project which <span>sought</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to identify 
+  end user information seeking behaviour in relation to full text <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(<a href="#gri96">Griffiths, 
+  1996</a>). Further research (which developed from this initial project) is currently 
+  being undertaken and again utilises this transaction logging approach (<a href="#gri02">Griffiths, 
+  2002</a>). This work aims to determine the success factors of end user searching 
+  in relation to <span>cognitive</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>styles, HCI and IR. Both of these projects have required 
+  <span>extensive</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>user <span>testing</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>where transaction logging has been critical and this 
+  methodology has been proven to provide rich data <span>suitable</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>for analysis in a 
+  variety of ways, both quantitative and <span>qualitative</span>. <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> This methodological approach 
+  has also been used in research looking at web based resource use of sighted 
+  and blind/visually impaired users (<a href="#cra02">Craven, 2002</a>; <a href="#cra02b">Craven and Griffiths, 2002</a>). 
+  It also has wider implications in, for example, <span>presentation</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of reports, use 
+  in <span>teaching</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> or pre-recorded examples of searching <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>for demonstration 
+  to an audience.</p>
+  
+<h2>References</h2>
+<ul>
+<li><a name="and73"></a>Anderson, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>R. and Bower, G.H. (1973) <i>Human associative memory.</i> Washington, 
+  DC: V.H. Winston.</li><br>
+
+  
+<li><a name="ble98"></a>Blecic, D., Bangalore, N.S., Dorsch, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>L., Henderson, C.L., Koenig, M.H. and 
+  Weller <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>C. (1998) &quot;Using transaction log analysis to improve OPAC retrieval 
+  results.&quot; <i>College and Research Libraries</i>, <strong>59</strong>(1), 39-50.</li><br>
+  
+<li><a name="cra02"></a>Craven, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (2002) <a href="http://www.cerlim.ac.uk/projects/nova.htm">NoVA (Non-Visual Access to the Digital Library) project website.</a> Manchester: Manchester Metropolitan University, CERLIM.   Available at: http://www.cerlim.ac.uk/projects/nova.htm  [Site visited 12th July 2002]</li><br>
+
+<li><a name="cra02b"></a>Craven, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and Griffiths, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>R. (2002) &quot;30,000 different users, 30,000 different 
+  needs? <span>Design</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and delivery of distributed resources to your user community&quot;. 
+  In Brophy, P., Fisher, S., Clarke, Z., <span>eds</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> <i>Libraries without walls: the 
+  delivery of library services to distant users: proceedings of the 4th Libraries 
+  Without Walls Conference, 15th-17th September 2001.</i> London: Library Association 
+  [in press].</li><br>
+
+  
+<li><a name="cra87"></a>Crawford, W. (1987) <i>Patron access: issues for online catalogs.</i> Boston, MA: 
+  G.K. Hall. </li><br>
+  
+<li><a name="eri80"></a>Ericsson, K.<span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and Simon, H.<span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1980) &quot;Verbal reports as data.&quot; <i>Psychological 
+  Review,</i> <b>87</b>(3), 215-251.</li><br>
+  
+<li><a name="fla93"></a>Flaherty P. (1993) &quot;Transaction logging systems: a descriptive summary.&quot; <i>Library 
+  Hi Tech</i>, <b>11</b>(2), 67-78.</li><br>
+
+  
+<li><a name="for93a"></a>Ford, N. <em>et al.</em>  (1993a) &quot;Cognitive styles and online searching.&quot; <i>Information 
+  Research News</i>, <b>4</b>(1), 29-32.</li><br>
+  
+<li><a name="for93b"></a>Ford, N. (1993b) &quot;Cognitive styles and the <span>design</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of information <span>systems</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>&quot;
+  <i>Information Research News</i>, <b>4</b>(1), 14-22.</li><br>
+
+  
+<li><a name="gri96"></a>Griffiths, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>R. (1996) <i>Development of a specification for a full text <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  user interface.</i> MPhil thesis. Manchester: Manchester Metropolitan University.</li><br>
+  
+<li><a name="han87"></a>Hancock, M. (1987) &quot;Subject searching behaviour at the library catalogue and 
+  at the shelves: implications for online interactive catalogues.&quot; <i>Journal 
+  of Documentation, </i><b>43</b>(4), 308-321.</li><br>
+    
+<li><a name="han90"></a>Hancock-Beaulieu, M., Robertson, S. and Nielsen, C. (1990) <i>Evaluation of 
+  online catalogues: an assessment of methods</i>. London: The British Library 
+  Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>Department (BL Research Paper 78).</li><br>
+
+  
+<li><a name="kee78"></a>Keen, E.M. and Wheatley, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1978) <i>Evaluation of printed subject indexes 
+  by <span>laboratory</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>investigation</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>( EPSILON)</i>. Aberystwyth: College of Librarianship 
+  Wales.</li><br>
+  
+<li><a name="kee95"></a>Keen, E.M. (1995) <i>Interactive ranked retrieval project</i>. London: British 
+  Library Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>Department. British Library report 6200.</li><br>
+  
+<li><a name="kin87"></a>Kinsella, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and Bryant P. (1987) &quot;Online public access catalogue research 
+  in the United Kingdom: an overview.&quot; <i>Library Trends, </i><b>35</b>(4), 619-629.</li><br>
+
+  
+<li><a name="kur93"></a>Kurth M. (1993) &quot;The <span>limits</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and limitations of transaction log analysis.&quot; <i>Library Hi Tech, </i><b>11 </b>(2), 98-104.</li><br>
+  
+<li><a name="las23"></a>Lashley, K.S. (1923) &quot;The behaviouristic interpretation of consciousness II.&quot;  <i>Psychological Review,</i> <b>30</b>, 329-353.</li><br>
+
+  
+<li><a name="lon96"></a>Long, D. I. and Bourg, T. (1996) &quot;Thinking aloud: telling a story about a story.&quot;  <i>Discourse Processes,</i> <b>21</b>, 329-339.</li><br>
+  
+<li><a name="mag91"></a>Magliano, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>P. and Graesser, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>C. (1991) &quot;A three-pronged method for studying   <span>inference</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>generation in literary text.&quot; <i>Poetics, </i><b>20</b>, 193-232.</li><br>
+
+  
+<li><a name="man98"></a>Manglano, V., Beaulieu, M. and Robertson, S. (1998) &quot;Evaluation of interfaces for IRS: modelling end-user searching behaviour.&quot; Paper presented at British 
+  <i>Computer Society Information Retrieval Specialist Group Colloquium,</i> Grenoble.</li><br>
+  
+<li><a name="mar84"></a>Markey, K. (1984) <i>Subject searching in library catalogs: before and after 
+  the <span>introduction</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of online catalogs.</i> Dublin, OH: OCLC.</li><br>
+  
+<li><a name="mei67"></a>Meister, D. and Sullivan D. (1967) <i>Evaluation of user reactions to a <span>prototype</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> on-line information retrieval system.</i> <span>Oak</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>Brook, IL: Bunker-Ramo Corporation. (Report to NASA by the Bunker-Ramo Corporation. Report Number NASA CR-918.)</li><br>
+
+  
+<li><a name="new72"></a>Newell, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and Simon, H.<span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1972) <i>Human problem <span>solving</span>. <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></i> Englewood Cliffs, NJ: Prentice Hall.</li><br>
+  
+<li><a name="nis77"></a>Nisbett, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>E. and Wilson, T.D. (1977) &quot;Telling more than we know: verbal reports on <span>mental</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>processes.&quot; <i>Psychological Review, </i><b>84</b>, 231-259.</li><br>
+  
+<li><a name="pet93"></a>Peters, T. (1993) &quot;The history and development of transaction log analysis.&quot;  <i>Library Hi Tech,</i> <b>11</b>(2), 41-66.</li><br>
+
+  
+<li><a name="sim79"></a>Simon, H.<span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1979) <i>Models of thought.</i> New Haven, CT: Yale University 
+  Press.</li><br></ul>
+  <br>
+  <hr color="#ff00ff" SIZE=3>
+  <br><a name="app1"></a>
+<h2>Appendix 1 - Supplier and technical information for Grand Art</h2>
+<p><a href="http://www.keyzone.co.uk/frame_pc.html">http://www.keyzone.co.uk/frame_pc.html</a></p>
+<ul>
+
+  <li>supports standard VGA <span>modes</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(0-13). </li>
+  <li>NTSC system supports 16 million colours at 640x480. </li>
+  <li>PAL system (UK) supports 64k colours at 800x600. </li>
+  <li>allows simultaneous VGA monitor/TV viewing. </li>
+  <li>bundled with microphone, <span>suitable</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>for <span>presentation</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> </li>
+  <li>PAL TV system can be changed to 60Hz field rate, to reduce field flicker. 
+  </li>
+
+  <li>composite NTSC (PAL) signal video output. </li>
+  <li>analogue RGB video output (scart). </li>
+  <li>separate Y/C NTSC (PAL) (S-Video) 4-pin output. </li>
+  <li>dimensions: 129mm x 103mm x 26mm.</li>
+</ul>
+<p>Cost <span>details</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>can be obtained from the above website.</p>
+<br>
+<hr color="#ff00ff" SIZE=3>
+
+<br><a name="app2"></a>
+<h2>Appendix 2 - Supplier and technical information for Lotus ScreenCam</h2>
+<p><a href="http://www.lotus.com/home.nsf/welcome/screencam">http://www.lotus.com/home.nsf/welcome/screencam</a></p>
+<p>Lotus ScreenCam is released in a variety of formats for the Windows 95 and 
+  Windows NT4x platforms. Each release is <span>designed</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to work for specific operating 
+  <span>systems</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> There is currently no version for Windows 2000 or Windows XP. The Windows 
+  95 release will work on Windows 98 (and variants) with some limitations (due 
+  to some video cards driver/chip set manufacturers that do not comply with <span>Microsoft</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+  recommendations and standards). </p>
+<p><b>ScreenCam for Win95 system requirements:</b></p>
+<p>Systems requirements for ScreenCam are <span>IBM</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>or compatible <span>PC</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>certified for use 
+  with MS Windows 95. VGA 16-colour or higher graphics adapter and monitor. Parallel 
+  port or sound card-enabled device <span>supported</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by Windows 95, speaker(s) or headphones, 
+  microphone and mouse. 10MB <span>free</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>space is recommended for recording.</p>
+<p><b>ScreenCam for NT4.0 System Requirements:</b></p>
+<p>Systems requirements for ScreenCam for WinNT4.0 are <span>IBM</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>or compatible <span>PC</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>certified 
+  for use with MS Windows NT4.0, S3 compatible graphics adapter. Parallel port 
+  or sound card-enabled device <span>supported</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by Windows 85, speaker(s) or headphones, 
+  microphone and mouse. 10MB <span>free</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>space is recommended for recording.</p>
+<p>Cost <span>details</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>can be obtained from the above website.</p>
+
+<hr color=#ff00ff SIZE=3>
+<div align="center" style="width: 668px; height: 79px;">
+<h4>How to cite this paper:</h4>
+Griffiths, Jillian <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>, Hartley, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>, Willson, Jonathan P. (2002) &quot;An improved method of studying user-system <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by combining transaction log analysis and protocol analysis&quot;  <em><strong>Information Research</strong></em>, <strong>7</strong> (4)&nbsp;&nbsp;&nbsp;Available at:  http://InformationR.net/ir/7-4/paper139.html
+<br>
+&copy; the authors, 2002. &nbsp;&nbsp;Updated: 9th July 2002</div>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:7edL0KGV4oIJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres74.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><IMG SRC="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper139" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/7-4/paper139.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:57 GMT -->
+</html>

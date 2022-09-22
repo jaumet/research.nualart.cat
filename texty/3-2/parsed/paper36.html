@@ -1,0 +1,629 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/3-2/paper36.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:18:22 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<title>Discovering the Hidden Secrets in Your Data - the Data Mining <span>Approach</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to Information</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="data mining, health information, medical informatics,knowledge discovery,neural networks,">
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> content="Nowadays, digital information is relatively easy to capture and fairly inexpensive to store. The digital <span>revolution</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>has seen collections of data grow in size, and the complexity of the data therein increase. Advances in technology have resulted in our ability to meaningfully analyse and understand the data we gather lagging far behind our ability to capture and store these data . It is often the case that large collections of data, however well structured, conceal implicit patterns of information that cannot be readily detected by conventional analysis techniques . Such information may often be usefully analysed using a set of techniques <span>referred</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to as knowledge discovery or data mining. These techniques <span>essentially</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>seek to build a better understanding of data, and in building characterisations of data that can be used as a basis for further analysis,  extract value from <span>volume</span>. <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> This paper describes a number of <span>empirical</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>studies of the use of the data mining approach to the analysis of health information.">
+<meta name="VW96.objecttype" content="Database">
+<link rel=schema.vw96 href="http://vancouver-webpages.com/VWbot/VW96-schema.html">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.title" content="Discovering the Hidden Secrets in Your Data - the Data Mining <span>Approach</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to Information">
+<meta name="DC.creator" content="<span>Michael</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>Lloyd-Williams">
+<meta name="DC.subject" content="knowledge discovery through data mining using neural networks">
+<meta name="DC.<span>description</span>" <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> content="Nowadays, digital information is relatively easy to capture and fairly inexpensive to store. The digital <span>revolution</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>has seen collections of data grow in size, and the complexity of the data therein increase. Advances in technology have resulted in our ability to meaningfully analyse and understand the data we gather lagging far behind our ability to capture and store these data . It is often the case that large collections of data, however well structured, conceal implicit patterns of information that cannot be readily detected by conventional analysis techniques . Such information may often be usefully analysed using a set of techniques <span>referred</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to as knowledge discovery or data mining. These techniques <span>essentially</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>seek to build a better understanding of data, and in building characterisations of data that can be used as a basis for further analysis,  extract value from <span>volume</span>. <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> This paper describes a number of <span>empirical</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>studies of the use of the data mining approach to the analysis of health information.">
+<meta name="DC.publisher" content="Department of Information Studies, University of Sheffield">
+
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 3  No. 2, September 1997</h4></td></tr>
+  <tr> 
+    <td><a href="infres32.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color="#ff00ff" size="3">
+
+
+<h1>Discovering the hidden secrets in your data - the data mining approach to information</font></h1>
+<p>
+<h4>Michael Lloyd-Williams<br>Department of Information Studies<br>University of Sheffield</h4>
+<br><br>
+
+<h2>Introduction</h2>
+
+<p> Nowadays, digital information is relatively easy to capture and
+fairly inexpensive to store. The digital <span>revolution</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>has seen collections
+of data grow in size, and the complexity of the data therein increase.
+Advances in technology have resulted in our ability to meaningfully
+analyse and understand the data we gather lagging far behind our
+ability to capture and store these data  (<a href="#fayy1">Fayyad, <i>et al.</i> 1996</a>). <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>question commonly arising as a result of this state of affairs is, having gathered
+such quantities of data, what do we <span>actually</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>do with it? (<a href="#fayy2">Fayyad &amp; Uthurasamy, 1996</a>)</p>
+
+<p> It is often the case that large collections of data, however
+well structured, conceal implicit patterns of information that
+cannot be readily detected by conventional analysis techniques
+(<a href="#lloy">Lloyd-Williams, <i>et al.</i>, 1995</a>). Such information may often be usefully analysed using a set of techniques <span>referred</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to as <i>knowledge discovery</i> or<i>
+data mining. </i>These techniques <span>essentially</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>seek to build a
+better understanding of data, and in building characterisations
+of data that can be used as a basis for further analysis (<a href="#limb">Limb & Meggs, 1995</a>),
+extract <i>value</i> from <i>volume </i>(<a href="#scar">Scarfe & Shortland, 1995</a>). This paper describes a number of <span>empirical</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>studies of the use of the data mining approach
+to the analyse of health information. The context is unimportant,
+the examples described serving to highlight the factors perceived
+as influencing the success or otherwise of the data mining approach
+in each case, and to illustrate the generic <span>difficulties</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that
+may be encountered during the data mining process, and how these
+<span>difficulties</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>may be overcome. </p>
+
+<h2>Knowledge discovery and data mining</h2>
+
+<p> It is generally <span>accepted</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that the reason for capturing and storing
+large <span>amounts</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of data is due to the belief that there is valuable
+information implicitly coded within it (<a href="#fayy2">Fayyad & Uthurasamy, 1996</a>). An important issue is therefore how is this hidden information (if it exists at all)
+to be revealed? Traditional methods of knowledge generation rely
+largely upon manual analysis and interpretation (<a href="#fayy1">Fayyad, et al</i>, 1996</a>). However, as data collections continue to grow in size and complexity, there
+is a corresponding <span>growing</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>need for more sophisticated techniques
+of analysis (<a href="#fayy1">Fayyad, <i>et al</i>, 1996</a>). One such innovative approach to the knowledge discovery process is known as <i>data mining</i>. </p>
+
+<p> Data mining is <span>essentially</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>the computer-assisted process of information
+analysis (<a href="#limb">Limb &amp; Meggs, 1995</a>) . This can be performed using either a top-down or a bottom-up approach. Bottom-up data mining <span>analyses</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>raw data
+in an attempt to discover hidden trends and groups, whereas the
+aim of top-down data mining is to <span>test</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>a specific hypothesis (<a href="#hedb">Hedberg, 1995</a>).
+Data mining may be performed using a variety of techniques, including
+intelligent agents, powerful database queries, and multi-dimensional
+analysis <span>tools</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>(<a href="#watt">Watterson,1995</a>). Multi-dimensional analysis <span>tools</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>include the
+use of neural networks, as described in this work. </p>
+
+<p> The data mining approach expedites the initial stages of information
+analysis, thereby quickly providing initial feedback that may
+be further and more thoroughly <span>investigated</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>if appropriate. The
+results obtained are not (unless otherwise specified) influenced
+by preconceptions of the <span>semantics</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of the data undergoing analysis.
+Patterns and trends may therefore be revealed that may otherwise
+remain undetected, and/or not con0ered. </p>
+
+<p> It should be stated at this juncture that this paper advocates
+the use of data mining techniques in <i>conjunction</i> with traditional
+<span>approaches</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to analysis, and not as a <span>direct</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>replacement. </p>
+
+<h2>The knowledge discovery process</h2>
+
+<p> According to researchers such as <a href="#fayy1">Fayyad, <i>et al</a></i> (1996), the
+process of knowledge discovery via data mining can be divided
+into four basic activities; <i>selection</i>, <i>pre-processing,</i>
+<i>data mining</i>, and <i>interpretation</i>. These stages are
+discussed in the following text. <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>graphical <span>representation</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of
+the general process is presented in <span>Figure</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>1. </p>  
+
+
+<h3>Selection</h3>
+
+<p>Selection involves creating the target
+data set, i.e. the data set to about undergo analysis. As discussed
+previously, <span>modern</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>datasets may be both large and complex. Large
+datasets which are not particularly complex may generally be subjected
+in their entirety to the analysis process (subject to technical
+constraints). Indeed, the <span>larger</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>the amount of available data,
+the greater the likelihood that an identifiable trend or pattern
+may be identified and statistically validated. However, if the
+dataset is relatively complex, it is often con0ered impractical
+to attempt to subject the complete dataset for analysis. It is
+a common misconception to <span>assume</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that the complete dataset should
+be submitted to the data mining <span>software</span>, <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> which in turn will automatically
+resolve any problems and make sense of any inconsistencies. This
+is not in fact the case, and is partly due to the probability
+that the data represents a number of different aspects of the
+<span>domain</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>which may not be <span>directly</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>related. Subjecting such data
+to automated analysis may result in the identification of meaningless
+patterns or trends, which in turn wastes time and effort. Careful
+thought should therefore be given as to the purpose of the analysis
+exercise, and a target dataset created which contains data that
+reflects this purpose.</p>
+
+<h3>Pre-processing</h3>
+
+<p>Pre-processing involves preparing the dataset
+for analysis by the data mining <span>software</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to be used. This may
+involve resolving undesirable data <span>characteristics</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>such as missing
+data (non-complete fields), irrelevant fields, non-variant fields,
+skewed fields, and outlying data points. The pre-processing activities
+may result in the generation of a number of (potentially overlapping)
+subsets of the original target dataset.</p>  
+
+<p> Data fields are generally viewed as being complete if 70% or
+more of the records contain <span>values</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>(<a href="#spss">SPSS Inc., 1995</a>). In cases where the field
+is con0ered theoretically complete, but in fact is less than
+100% complete, various techniques such as <span>estimation</span>, <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> or assigning
+the category <span>mode</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>are available for producing <i>synthetic</i>
+data. The generation of <span>accurate</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span><span>values</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to <span>represent</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>missing data
+is currently one of the <span>main</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>research areas occupying the data
+mining <span>community</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>(<a href="#fayy3">Fayyad, <i>et al</i>, 1996</a>).</p>  
+
+<div><img src="mlwgif.gif" align="center"></div>
+<div><br>Figure 1: <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>Discovery Overview</div>
+
+<p> Depending upon the original <span>source</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of the data, and the storage
+format employed, pre-processing may also involve converting the
+data into a format acceptable to the data mining <span>software</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>being
+used. This initial <span>collection</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>and manipulation of data (during
+the <span>selection</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>and pre-processing stages) in the data mining process
+is sometimes <span>referred</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to as <i>collection</i> and <i>cleaning</i>
+[6]. </p> 
+
+<h3>Data mining</h3> 
+
+<p>This involves subjecting the cleaned data to analysis by the data mining <span>software</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>in an attempt to identify hidden trends or patterns, or to <span>test</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>specific hypotheses. It is recommended that any (apparently) significant results obtained are validated using traditional <span>statistical</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>techniques at this
+stage. </p>
+
+<h3>Interpretation</h3> 
+
+<p>
+This involves the analysis and interpretation
+of the results produced. This may well involve returning to previous
+stages to carry out additional activities in order to provide
+further information if necessary.  </p>
+
+<h2>Artificial Neural Networks</h2>
+
+<p>Artificial neural networks are defined as information processing
+<span>systems</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>inspired by the structure or architecture of the brain
+(<a href="#caud">Caudill &amp; Butler, 1990</a>) . They are constructed from interconnecting processing elements which are analogous to neurones. The two <span>main</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>techniques employed
+by neural networks are known as <i>supervised learning</i> and
+<i>unsupervised</i> <i>learning</i>. </p>
+
+<p> Supervised learning is <span>essentially</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>a two stage process; firstly
+training the neural <span>network</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to recognise different <span>classes</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of
+data by exposing it to a series of examples, and secondly, testing
+how well it has learned from these examples by supplying it with
+a previously unseen set of data. </p>
+
+<p> Unsupervised learning is so called as the neural <span>network</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>requires
+no initial information regarding the correct <span>classification</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of
+the data it is presented with. The neural <span>network</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>employing unsupervised
+learning is able to analyse a multi-dimensional data set in order
+to discover the natural clusters and sub-clusters that exist within
+that data. Neural networks using this <span>technique</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>are able to identify
+their own <span>classification</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>schemes based upon the structure of the
+data provided, thus reducing its dimensionality. Unsupervised
+pattern recognition is therefore sometimes called <i>cluster analysis</i>
+(<a href="#back">Backer, 1978</a>). </p>
+
+<p> The <span>empirical</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>studies presented in this paper were carried out primarily using the unsupervised learning <span>technique</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>based upon the Kohonen Self Organising Map. The principles underpinning the Kohonen Map have been described in some detail in works such as those by <a href="#koho">Kohonen</a> (1988) and <a href="#zupa">Zupan &amp: Gasteiger</a> (1993) , therefore only a brief <span>description</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>is provided here. The Kohonen Map is <span>essentially</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>constructed as a two dimensional grid of nodes. data are presented to each node in the grid simultaneously. Each node then competes in order to <span>represent</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>the data pattern currently being presented. One node will <i>win</i> this competition, and will have its <span>parameters</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>altered so that if this same data pattern were to appear again, the same node would have the best chance of winning. The overall effect is a two dimensional grid of nodes, that each <span>respond</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to some subset or cluster of the incoming multidimensional data. Differing patterns are <span>represented</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>by nodes that are separated on the grid by varying <span>distances</span>, <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> according to the level of difference. In summary, the Kohonen Map <span>maps</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>the high-dimensional continuous space occupied by the input data patterns into a lower-dimensional discrete space <span>formed</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>by an organised lattice of nodes (<a href="#wilk">Wilkins, <i>et al.</i>, 1993</a>). The Kohonen Map approach has been widely and successfully used in multivariate data analysis, and being closely related to other methods (such as the k-means type), is often seen as the best <span>choice</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of analysis method from an interpretational point of view (<a href="#murt">Murtagh &amp: Hernández-Pajares, <i>et al.</i>, 1995</a>).</p>
+
+<h2>Emprical studies</h2>
+
+<p> This section present <span>details</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of three <span>empirical</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>studies of the
+use of the data mining approach in the analysis of health information.
+The information analysed during these studies was extracted from
+the World Health Organisation's <i>Health for All Database</i>,
+<i>the Babies at Risk of Intrapartum Asphyxia</i> database, and
+a series of databases <span>containing</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>infertility information. These
+studies <span>represent</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>both successful and unsuccessful instances of
+data mining activities, and are <span>intended</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to assist in highlighting
+the factors perceived as influencing the outcome of each of the
+projects concerned.</p>
+
+<h3>The <i>Health for All</i> database</h3>
+
+<p> The World Health Organisation's (WHO) <i>Health for All (HFA)
+</i>Database was created to make health-related data collected
+by the WHO available to <span>out0e</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>users. The Database contains statistical
+indicators for the WHO HFA targets relating to Health-for-All
+in Europe by the year 2000. These include: better health, mortality/morbidity,
+lifestyles conducive to health, healthy <span>environment</span>, <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> health services,
+and health policies. Other <span>statistical</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>indicators relate to demographics,
+socio-economics and other supplementary health-related information.
+Data are present for all European countries and includes those
+countries in existence before, and after the recent political
+changes in <span>central</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>and eastern Europe as well as the former Soviet
+Republics. Data are included from 1970 to 1993 inclusive, although
+it is important to note that there are gaps in the data that are
+available. </p>
+
+ <p>The approach taken to analyse the HFA database generally corresponded
+with that illustrated in <span>Figure</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>1. During the <span>selection</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>process,
+mortality data relating to the following conditions was extracted
+form the HFA database; life expectancy at birth; <span>probability</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of
+dying before five years of age; infant mortality; post-neonatal
+mortality; standardised death rates (SDR) for circulatory diseases;
+SDR for malignant neoplasms; SDR for external causes of injury
+and poisoning; SDR for suicide and self-inflicted injury. </p>
+
+<p> Data were extracted for 39 European countries. Although a far
+higher number of countries are <span>represented</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>on the Database, the
+data could only be con0ered complete for 39 of them. The data
+were then converted into a format acceptable to the <span>software</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>being
+used. An <span>underlying</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>aim of the study was to track any changes
+in the data that may have occurred over the years for the same
+<span>samples</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of countries in order to examine whether any patterns
+identified remained consistent over time. This necessitated the
+<span>selection</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of data that were separated by intervals of three to
+four years (where possible) since it was <span>expected</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that changes,
+if any, would be more apparent on this time scale. Three years
+were chosen, giving three subsets of data (1982, 1986, and 1989).
+The extracted data was then analysed by custom written Kohonen
+Self Organising Map <span>software</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>in order to identify possible groupings.
+Finally, standard <span>statistical</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>techniques were used to evaluate
+the validity of the groupings. This <span>investigation</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>therefore made
+use of the bottom-up data mining approach described previously.</p>
+
+
+<p> Preliminary work resulted in two <span>distinct</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>groups or clusters of countries in each year being apparent (<a href="#lloy2">Lloyd-Williams, <i>et al.</i>, 1996</a>). It was <span>observed</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that all countries in the first of the groups were from Central and Eastern Europe or from the former Soviet Republics, while all countries in the second group were from Northern (i.e., the Nordic countries), Western, or Southern Europe. <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>two-sample t-test was used to validate the groupings identified. The results obtained confirmed that the identified groups were significantly different or separated from each other.</p>
+
+<p> In addition to the geographical division, the <span>classification</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>also <span>appeared</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to <span>reflect</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>differences in wealth. Countries in the first of the groups were relatively poor; all countries (excluding the former Soviet Union) had GNP per capita of less than US$5,000 in 1989 (the latest year for which GNP <span>figures</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>were available). Countries in the second of the groups were relatively wealthy; all countries had GNP per capita exceeding US$5,000 (except Portugal, whose 1989 GNP per capita is just under US$4,300). <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>t-test was performed, and the result indicated a significant difference between the two groups in terms of GNP per capita. The observation that the <span>classification</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>appeared to <span>reflect</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>two different GNP groups suggested that GNP could be inter-related with the health indicators. In order to further explore this <span>possibility</span>, <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> the coefficient of correlation was calculated between GNP and all <span>seven</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>HFA indicators used in the initial analysis. Results obtained indicated that GNP is <span>strongly</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>and positively correlated with life expectancy, and <span>strongly</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>but negatively correlated with the SDR for diseases of the circulatory system. <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>small and positive correlation was found to exist between GNP and the SDR for malignant neoplasms, but fairly large negative correlations between GNP and all the other indicators, except the SDR for suicide and self-inflicted injury. Overall, the available data indicated that death rates for malignant neoplasms tended to <span>rise</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>with increasing affluence, while death rates for other diseases tended to <span>fall</span>. <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span></p>
+
+<p> Further work was then performed in order to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>a finer <span>classification</span>. <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> This work resulted in the identification of six groups, which were <span>essentially</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>sub-divisions of the two groups produced by the
+preliminary work (<a href="#lloy3">Lloyd-Williams &amp; Williams, 1996</a>). Characteristics of the groups ranged from the lowest life expectancy, coupled with the highest <span>probability</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of dying before five and infant mortality rate, to the highest mean life expectancy, coupled with the lowest <span>probability</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of dying before five, and infant mortality rate. Over time, mean life expectancy increased, while the <span>probability</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of dying before five and infant mortality rate both decreased for all groups. Detailed summary statistics of each group may be found elsewhere (<a href="#willi">Williams, 1995</a>)</p>
+
+<p> Group membership of all six groups remained relatively stable over the <span>period</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>under con0eration. Eight of the 39 countries did experience movement between groups over the years, however in all such cases, cumulative movement was <span>limited</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to an adjacent group. </p>
+
+ <p>In order to validate the groupings identified, <span>Euclidean</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>distances
+were calculated, and the generalised t-test used to <span>test</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>if the
+<span>underlying</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>means of each group <span>pair</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>were significantly different
+from each other. Results obtained confirm that the identified
+groups were significantly different or separated from each other.
+The classifications obtained can therefore be said to be valid
+based upon the available data.</p>  
+
+<p> The success of the application of the data mining approach to
+the analysis of the HFA database may be attributed to a number
+of factors as follows. Careful initial data <span>selection</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>and associated
+pre-processing ensured that that the target dataset was largely
+complete, <span>containing</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>only highly relevant data appropriate to
+the <span>investigation</span>. <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> No non-variant or skewed fields were included.
+Similarly, no fields in the available data <span>contained</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>outlying
+data points. The dataset processed could therefore in this instance
+be viewed as being an ideal subject for the data mining. </p>
+
+<h3>The <em>Babies at Risk of Intrapartum Asphyxia </em>database</h3>
+
+<p> The <i>Babies at Risk of Intrapartum Asphyxia</i> database was
+analysed in conjunction with staff at the Sheffield Children's
+Hospital. This database contains data collected from a wider study
+on the relationship between intrapartum asphyxia and neonatal
+encephalopathy. Neonatal encephalopathy is a <span>condition</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>characterised
+by impairment of consciousness, abnormalities of muscle tone and
+of feeding. There is also frequent evidence of injury to other
+organs such as the heart, kidney, and gastrointestinal system.
+Neonatal encephalopathy is thought to <span>arise</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>when there is significant
+intrapartum asphyxia, that is, the foetus is deprived of oxygen
+during labour. </p>
+
+<p> The <i>Babies at Risk of Intrapartum Asphyxia</i> database contains
+<span>detailed</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>obstetric data, including cardiotocogram (CTG) traces
+taken during labour. Both the foetal heart rate (FHR) and the
+uterine <span>contractions</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>are <span>represented</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>on the trace produced. Also
+present on the database are pre-labour assessments of maternal
+and antenatal risk factors that might influence the outcome of
+the labour. Factors relating to the <span>quality</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of intrapartum obstetric
+care are also recorded.</p> 
+
+<p> In order to construct the database, the CTG traces were analysed
+by dividing each trace into thirty-minute epochs, and then examining
+each epoch for abnormal FHR patterns. <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span><i>severity score</i>
+was then applied to each abnormality detected. Each of the 128
+patients <span>represented</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>on the database is therefore associated with
+a number of epochs, the average being fourteen (the minimum being one,
+and the maximum being forty). Each epoch in turn is further described
+using a number of <span>parameters</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>presenting various aspects of the
+associated FHR. </p>
+
+<p> All the activities relating to data capture, analysis, and initial
+database construction were carried out by medical staff involved
+in the wider study on the relationship between intrapartum asphyxia
+and neonatal encephalopathy. The target dataset was therefore
+created primarily for use within this study, rather than for analysis
+using neural networks.</p> 
+
+<p> Due to the purpose of the <span>main</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>study, much of the data represented
+on the database are encoded, rather than being specifically <span>represented</span>. <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>
+For instance, the baseline FHR in beats per minute (bpm) recorded
+on the database varies from 100-109 at the lowest level, to &gt;180
+at its highest. The baseline FHR is recorded on a scale of -2
+(representing 100-109 bpm) to +3 (representing &gt;180 bpm). These
+<span>figures</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>represent whether or not the baseline FHR is slower or
+faster than would be <span>expected</span>. <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> The bradycardia parameter is used
+to <span>indicate</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>a slow FHR (&lt; 100 bpm). In the absence of bradycardia,
+this parameter is set to <span>zero</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>(normal). <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span><span>period</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of greater than
+three minutes with recovery is <span>represented</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>by a value of +3, and
+a value of +4 if there is no recovery. This use of a <span>zero</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>value
+to <span>indicate</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>a normal <span>reading</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>is employed in a large proportion
+of the <span>parameters</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of the database. </p>
+
+<p> The Kohonen Self Organising Map <span>software</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>employed to analyse
+the dataset expects the data therein to be presented on an interval
+or ordinal scale. That is, that the <span>range</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of parameter values
+stand in some relationship to each other. The <span>software</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>also expects
+<span>values</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that lie adjacent to each other within a parameter range
+to be similar to each other. However, some <span>parameters</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>on the database
+occupy a nominal scale where parameter <span>values</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>do not relate to
+each other. For instance, the uterine <span>contractions</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>parameter is
+<span>represented</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>as <span>zero</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>(normal), +3 (over-contracting), or +1 (the
+recording of the <span>contraction</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>on the trace is technically poor).
+This parameter was therefore con0ered to be inappropriate for
+use in its existing form, and removed from the target dataset.</p>
+
+<p> Initial analysis work was not without its <span>difficulties</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>due to
+the nature of the data involved. At one stage of processing, 52%
+of the available dataset presented <span>parameters</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that were all set
+to <span>zero</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>(indicating a normal response), apart from the baseline
+FHR. This extremely high level of non-variant data resulted in
+no discernible patterns being detectable at the early stage of
+work. </p>
+
+<p> After performing further <span>selection</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>and pre-processing activities
+(including the removal of the majority of non-variant data), some
+success was <span>achieved</span>. <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> Two <span>distinct</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>groups were identified within
+the database, and their existence statistically validated using
+a two-sample t-test. Further work involved the training of a neural
+<span>network</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>employing the radial basis function (RBF) approach to
+recognise the two groups, and to differentiate between members
+of these groups. During this <span>period</span>, <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> an overall <span>probability</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of
+correct recognition of 85% was <span>achieved</span>, <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> providing further evidence
+that the groups identified did exist within the database.</p> 
+
+<p> Further work on the database resulted in a refinement of the
+original two groups being <span>achieved</span>. <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> The resulting four groups
+were again found to be statistically different from each other,
+each exhibiting specific combinations of FHR patterns. The use
+of the RBF <span>software</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>again resulted in successful identification
+of the groups, with 100% of records within the first group, 97%
+of records within the second group, and 99% of records within
+the <span>third</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>and fourth groups being correctly identified. </p>
+
+<p> Although the identification of statistically <span>valid</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>groups may
+<span>indicate</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that this data mining exercise was successful, it should
+be noted that the data used to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>these groups represented
+only a proportion of that available. The high proportion of non-variant
+data present precluded much of the database from being used in
+the analysis process. Further <span>limiting</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>factors in this case included
+the use of a nominal scale to <span>represent</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>certain <span>parameters</span>. <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> The
+fact that the data provided had already undergone pre-coding also
+restricted the ability to perform any <span>subsequent</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>meaningful data
+manipulation, as the original data <span>values</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>were in many instances
+<span>unknown</span>. <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span></p> 
+
+<h3>Infertility databases</h3>
+
+<p> Despite recent improvements in infertility diagnosis and the
+increase in sophistication and variety of treatment techniques,
+there still appears to be great <span>difficulty</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>in successfully predicting
+how a particular patient will <span>respond</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to a specific course of
+treatment. Although many types of data can be collected which
+in theory are relevant to the likelihood of successful treatment,
+in reality the complexity of the <span>interactions</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>between these parameters
+appear to be beyond the capabilities of conventional methods of
+analysis. The <span>primary</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>aim of this <span>investigation</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>was therefore
+to <span>investigate</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>the use of the data mining approach in assisting
+in the prediction of whether a specific patient would be successfully
+treated using a particular treatment pathway. Against this background,
+three databases holding data relating to three different aspects
+of infertility diagnosis and treatment were provided for analysis
+using the data mining approach.</p> 
+
+<p> The first of these databases <span>contained</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span><span>details</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of patients who
+had undergone ovulation induction with gonadotrophins. This database
+was analysed in conjunction with staff at the Jessop Hospital,
+Sheffield. This database holds 17 <span>parameters</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>for each of the 122
+patients <span>represented</span>, <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> including information relating to the treatment
+outcome, i.e. whether the patient became pregnant or not. The
+<span>main</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>objective of this study was to attempt to identify the combination
+of <span>characteristics</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that <span>appeared</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to <span>indicate</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>a successful treatment
+outcome.</p>
+
+<p> <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>second database <span>containing</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span><span>details</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of patients who had undergone
+stimulated cycles of IVF treatment was analysed in conjunction
+with staff at St. <span>Michael</span>' <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>s Hospital, Bristol. Each of the 403
+patients <span>represented</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>on this database had three fertilised eggs
+implanted (the optimal number to achieve one successful pregnancy
+whilst avoiding multiple pregnancies). For each patient, there
+were therefore four possible outcomes (0-3 pregnancies). The main
+aim of this study was to identify the <span>characteristics</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of patients
+who are most likely to achieve a single successful pregnancy,
+the clinicians wishing to avoid the potential for multiple (and
+hence possibly complicated) pregnancies.</p> 
+
+<p> <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span><span>third</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>database <span>containing</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span><span>details</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of 65 patients who had undergone
+natural cycle IVF treatment was also analysed in conjunction with
+staff at St. <span>Michael</span>' <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>s Hospital, Bristol. Each patient is represented
+on the database by 12 <span>parameters</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>and a corresponding diagnostic
+category (endometriosis, tubal damage, or unexplained infertility).
+The aim of this study was slightly different fro the previous
+two described in attempting to determine whether the specific
+<span>combination</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of 12 parameter <span>values</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>could be associated with the
+diagnostic category of the patient. </p>
+
+<p> The data mining approach <span>failed</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to provide the information that
+was specifically required in all three of the cases described.
+During the initial stages of <span>investigation</span>, <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> all three datasets
+<span>appeared</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>initially to be highly <span>suitable</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>for analysis using the
+data mining approach. Despite the fact that some <span>parameters</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>represented
+data <span>values</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>using a nominal scale, the original databases exhibited
+little missing data, few irrelevant fields, no non-variant fields,
+few skewed fields, and few outlying data points. Any <span>limited</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>undesirable
+<span>characteristics</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>originally present were removed during the selection
+and pre-processing activities.</p>
+
+<p> The <span>main</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>problem encountered during this <span>investigation</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>appears
+to be fundamental in that the patterns representing the information
+required were not evident within the available datasets. It was
+therefore <span>concluded</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that the data mining approach was unable to
+assist in the analysis of the data provided. This <span>appeared</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to
+be primarily due to the fact that the <span>range</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of factors that fully
+determine a couple's ability to conceive is not known. It is therefore
+<span>reasonable</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to <span>assume</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>that in this case, the pattern (or a recognisable
+proportion) <span>formed</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>by these factors is not present in the data
+currently being accumulated by the clinical staff. </p>
+
+<h2>Conclusions</h2>
+
+<p> This paper has provided an <span>introduction</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to the concepts of knowledge
+discovery and data mining. The <span>empirical</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>studies presented are
+<span>intended</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to highlight the factors perceived as contributing to
+the success or otherwise of the data mining approach. </p>
+
+<p> It should be evident from the studies described that the potential
+for success is largely determined prior to the <span>actual</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>data mining
+activity, i.e. during the activities performed in the production
+of the cleaned data. Extreme care should therefore be taken during
+the <span>selection</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>and pre-processing activities in order to ensure
+wherever possible that the target dataset <span>actually</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>contains relevant
+and usable data, and that these data are in a form <span>suitable</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>for
+use. </p>
+
+<p> This latter point is particularly relevant, as the form required
+by the providers may not be compatible with that required for
+the data mining process. This was evidenced by the analysis of
+the Babies at Risk of Intrapartum Asphyxia database, where coding
+activities performed as a result of a wider study precluded much
+of the data from analysis by neural networks. The likelihood of
+success of a data mining project  is therefore highly dependent
+upon the <span>quality</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>and format of the data made available.</p>
+
+<p> It is also apparent from these studies (and in particular, the
+analysis of the infertility databases), that if the data provided
+does not contain useful information within the context of the
+<span>focus</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>of the <span>investigation</span>, <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> then the use of neural networks cannot
+generate such information any more than traditional analysis techniques
+can. However, it may well be the case that the use of neural networks
+for data mining allows this <span>conclusion</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to be <span>reached</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>more quickly
+than might ordinarily be the case. </p>
+
+<p> Finally, it should be stated once more that this paper advocates
+the use of data mining as an approach that can be used to expedite
+the initial stages of information analysis in order that the results
+obtained may be more thoroughly <span>investigated</span>. <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> It should be used
+in conjunction with traditional <span>approaches</span>, <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> not in <span>direct</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>competition.</p>
+
+<h2>References</h2>
+<ul>
+<li><a name="back">Backer, E.</a> (1978) <i>Cluster Analysis by Optimal Decomposition of Induced Fuzzy Sets.</i> Delftse Universitaire Pers. Thesis: Delft University.
+
+<li><a name="caud">Caudill, M</a>. &amp; Butler, C. (1990) <i>Naturally Intelligent Systems</i>. Cambridge: <span>MIT</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>Press.
+
+<li><a name="fayy2">Fayyad, U.</a> &amp; Uthurasamy, <span>R++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> (1996) &quot;Data Mining and <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>Discovery in Databases&quot; <i>Communications of the ACM</i>, 39(11), 24-26.
+
+<li><a name="fayy1">Fayyad, U.,</a> Piatetsky-Shapiro, G. &amp; Smyth, P. (1996) &quot;The
+KDD Process for Extracting Useful <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>from Volumes of Data&quot; <i>Communications of the ACM</i>, 39(11), 27-34.
+
+<li><a name="fayy3">Fayyad, U.</a>, Piatetsky-Shapiro, G., Smyth, P. &amp; Uthurasamy, <span>R++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> (1996) <i>Advances in <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>Discovery and Data Mining</i>. Cambridge: AAAI/MIT Press.
+
+<li><a name="hedb">Hedberg, S.<span>R++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> </a>(1995) &quot;The Data Gold Rush&quot; <i>Byte</i>, 20(10), 83-88.
+
+<li><a name="koho">Kohonen, T.</a> (1988) <i>Self-Organisation and Associative Memory</i>. New York: Springer-Verlag.
+
+<li><a name="limb">Limb, P.<span>R++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>,</a> &amp; Meggs, G.<span>J++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> (1995) &quot;Data Mining -Tools and Techniques&quot; <i>British Telecom Technology Journal</i>, 12(4), 32-41.
+
+<li><a name="lloy">Lloyd-Williams, M</a>., Jenkins, <span>J++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>, Howden-Leach, H., Mathur, M., Morris, C &amp; Cooke, I. (1995) &quot;Knowledge <span>Discovery</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>in an Infertility Database Using Artificial Neural Networks&quot;<i> IEE Colloquium on <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>Discovery in Databases</i>.<i> </i>IEE Digest No:1995/021(B).
+
+<li><a name="lloy3">Lloyd-Williams, M</a>. &amp; Williams, S. (1996) &quot;A Neural Network <span>Approach</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>to Analysing Healthcare Information&quot;, <i>Topics in Health Information Management</i>, 17(2), 26-33.
+
+<li><a name="lloy2">Lloyd-Williams, M.</a>, Williams, S, Bath, P. &amp; Morris, C. (1996) &quot;Knowledge <span>Discovery</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>in the WHO <i>Health for All</i> Database: Developing <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>Taxonomy of Mortality Patterns for European Countries&quot;,  <u>In</u>: Richards, B. &amp; de Glanville,H. (eds) <i>Current Perspectives in Healthcare <span>Computing</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> Proceedings of HC96,</i> pp. 551-556.  Weybridge: BJHC.
+
+<li><a name="murt">Murtagh, F. </a>&amp; Hern&aacute;ndez-Pajares, M. (1995) &quot;The Kohonen Self-Organizing Map Method: An Assessment&quot; <i>Journal of Classification</i> 12, 165-190.
+
+<li><a name="scar">Scarfe, <span>R++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span></a> &amp; Shortland, <span>R++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span><span>J++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> (1995) &quot;Data Mining Applications in BT&quot;<i> IEE Colloquium on <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>Discovery in Databases</i>.<i> </i>IEE Digest No:1995/021(B).
+
+<li><a name="spss">SPSS Inc. </a>(1995) <i>Neural Connection Applications Guide</i>. Chicago: SPSS Inc. 
+
+<li><a name="watt">Watterson, K. </a>(1995) &quot;A Data Miner's Tools&quot; <i>Byte</i> 20(10), 91-96. 4.
+
+<li><a name="wilk">Wilkins, M. F.</a>, Boddy, L., &amp; Morris, C. W. (1993) &quot;Kohonen Maps and Learning Vector Quantization: Neural Networks for Analysis of Multivariate Biological Data&quot; <i>Binary</i>, 6, 64-72.
+
+<li><a name="willi">Williams, T.S.</a> &quot;<i>Knowledge <span>Discovery</span>  <span class="exper" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>in the WHO Health for All Database: Developing <span>A+</span>  <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>Taxonomy of Mortality Patterns for European Countries</i>&quot; MSc Thesis, University of Sheffield,
+Sheffield, England, 1995
+
+<li><a name="zupa">Zupan, <span>J++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span></a> &amp; Gasteiger, <span>J++</span>. <span class="compus" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> (1993) <i>Neural Networks for Chemists</i>. Weinheim: VCH.
+</ul>
+<hr color="#ff00ff" size="3">
+
+<h5><i>This paper was originally presented at the SCGISA &amp; RRL.net
+Workshop on Health and Crime Data Analysis, <span>held</span>  <span class="quanti" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span>at the Novotel,
+Sheffield, May 1997</i></h5>
+
+<hr color="#ff00ff" size="1">
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Lloyd-Williams, <span>Michael</span>  <span class="quali" style="width:1px;border-width:78px 26px 78px 26px;position:relative;">.</span> (1997) &nbsp; &quot;Discovering the hidden secrets in your data - the data mining approach to information&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>3</strong>(2) Available at: http://informationr.net/ir/3-2/paper36.html</p>
+<p style="text-align : center">&copy; the author, 1997.</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:jnGw9yoFaQAJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres32.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper36" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 28 December 2002</h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color="#ff00ff" size="3">
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/3-2/paper36.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:18:23 GMT -->
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <p>&nbsp;</p>
+                <li class="sidebar-brand">
+                    <span>1st session: <br />concepts & practice<br />Feb 21st 2015</span>
+                </li>
+                <p>&nbsp;</p><p>&nbsp;</p>
+                <li><a href="#intro">1.1 Intro</a></li>
+                <li><a href="#data1">1.2 Data</a></li>
+                <li><a href="#visualization">1.3 Visualization</a></li>
+                <li><a href="#process">1.4 The process of creating data visualizations</a></li>
+                <li><a href="#preparing">1.5 Preparing your visualizations for 2nd session.</a></li>
+                <hr />
+                <li class="sidebar-brand">
+                    <span>2nd session: <br />practice & practice<br />Feb 28st 2015</span>
+                </li>
+                <p>&nbsp;</p><p>&nbsp;</p>
+                <li><a href="#two">2.1 Choice of tools</a></li>
+                <li><a href="#">2.2 Data formatting</a></li>
+                <li><a href="#">2.3 Building visualizations</a></li>
+                <li><a href="#">2.4 Publishing visualizations</a></li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+              <div id="" class="row">
+                <div class="col-lg-7">
+                  <date>University of Canberra, 21 & 28 February 2015</date>
+                  <h1>Data visualization for researchers</h1>
+                  <p>by Jaume Nualart</p>
+                  <p>This seminar is organized by Jo&euml;lle Vandermensbrugghe (Graduate Research Office) and it is addressed to PhD students, mainly</p>
+                  <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                </div>
+              </div>
+<!--------------------------->
+              <div id="intro" class="row">
+                <div class="col-lg-7">
+                  <h1>Introduction</h1>
+                  <p>what are we going to do? Why data visualization </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-7 item">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Welcome & presentation</p>
+                </div>
+                <div class="col-lg-7 item">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Why data visualization?</p>
+                </div>
+                <div class="col-lg-7 item">
+                  <p><img class="item" src="./images/glyphicons-152-new-window.png" /><a href="http://en.wikipedia.org/wiki/Anscombe%27s_quartet" target="Anscombe">Anscombe’s quartet</a></p>
+                </div>
+                <div class="col-lg-7 item">
+                  <p><img class="item" src="./images/glyphicons-152-new-window.png" />Data visualization is a mutidisciplinary field:</p>
+                  <ul>
+                    <li><a href="images/inventors.pdf" target="inventions">Data vis inventions list</a></li>
+                    <li><a href="images/wordle-vis-tools.png" target="invertors">Inventiors professions tag cloud</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-7 item">
+                  <p><img class="item" src="./images/glyphicons-534-lab.png" />Practice: answer the question "Who we are?"</p>
+                  <ul>
+                    <li>Build seminar people dataset: <a href="http://piratepad.net/UCseminar-datavis" target="people_dataset-edit">Piratepad: add your self here</a></li>
+                  </ul>
+                </div>
+              </div>
+<!-- DATA1 ------------------------->
+              <div id="data1" class="row">
+                <div class="col-lg-7 item">
+                  <h1>Data</h1>
+                  <p>mining, formats and transformations</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-7 item">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Data types</p>
+                  <ul>
+                    <li><a href="images/Shneiderman-sevent-data-types.png" target="shneiderman">The seven data types of Shneiderman</a></li>
+                    <li><a href="images/Andy-Kirk-Data-types.png" target="AndyKirk">Andy Kirk's data types</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-7 item">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Data formats</p>
+                  <ul>
+                    <li><a href="http://en.wikipedia.org/wiki/Comma-separated_values" target="csv">CSV</a>, <a href="http://en.wikipedia.org/wiki/Tab-separated_values" target="tsv">TSV</a></li>
+                    <li><a href="http://en.wikipedia.org/wiki/XML" target="xml">XML</a></li>
+                    <li><a href="http://en.wikipedia.org/wiki/JSON" target="json">JSON</a></li>
+                    <li>Online converters, e.g, <a href="http://shancarter.github.io/mr-data-converter/" target="converters">Mr Data Converters</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-7 item">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Data transformations</p>
+                  <ul>
+                    <li><a href="images/ben-fry-data-science.jpg" target="BenFry">Ben Fry data process</a></li>
+                    <li><a href="images/Andy-Kirk--data-transformations.png" target="AndyKirt_data_transformations">Andy Kirk's data-transformations</a></li>
+                    <li>Spreadsheets/Excel: online or desktop</li>
+                    <li><a href="http://www-969.ibm.com/software/analytics/manyeyes/#/create" target="manyeyes">Many Eyes</a></li>
+                    <li><a href="http://openrefine.org/" target="openrefine">Open Refine</a></li>
+                    <li>Google Fusion Tables:</li>
+                    <ul>
+                      <li><a href="https://www.google.com/fusiontables" target="google-fusion-tables">Google Fusion Tables</a></li>
+                      <li><a href="https://support.google.com/fusiontables/answer/184641" target="google-fusion-tables-tutorial">Google Fusion Tables Tutorials</a></li>
+                      <li><a href="https://www.google.com/fusiontables/DataSource?dsrcid=implicit&redirectPath=data" target="googlefusiontrables-example">Create new google fusion table</a></li>
+                    </ul>
+                    <li>Scripting: python, R, etc...</li>
+                  </ul>
+                </div>
+              </div>
+<!-- VISUALIZATION ------------------------->
+              <div id="visualization" class="row">
+                <div class="col-lg-7 item">
+                  <h1>Visualization</h1>
+                  <p>Examples, examples & examples</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-7">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Visualization Types:</p>
+                  <ul>
+                    <li><a href="http://guides.library.duke.edu/vis_types" target="duke_univ">Duke University Libraries</a></li>
+                    <li><a href="http://www.visual-literacy.org/periodic_table/periodic_table.html" target="vis_periodic_table">Periodic table of visualization methods</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-7">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" /><a href="https://github.com/mbostock/d3/wiki/Gallery" target="D3gallery"">D3 Gallery</a></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-7">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Maps</p>
+                  <ul>
+                    <li><a href="http://www.vox.com/2014/11/17/7082317/language-maps-charts" target="23maps">23 maps and charts on language</a></li>
+			            <li><a href="http://qz.com/316906/the-dude-map-how-american-men-refer-to-their-bros/" target="dude_map">The dude map: How Americans refer to their bros</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-7">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Bad datavis!</p>
+                  <ul>
+                    <li><a href="http://viz.wtf/" target="viz.wtf">viz.wtf</a></li>
+                    <li><a href="http://gizmodo.com/8-horrible-data-visualizations-that-make-no-sense-1228022038" target="horrible-data-visualizations">Horrible data visualizations</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-7">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />3 levels of tools</p>
+                  <ul>
+                    <li>Graphic visualization software: <a href="http://www.tableau.com/public/how-it-works" target="tableau_public">Tableau public</a>, <a href="https://developers.google.com/chart/" target="Google_chart">Google chart</a>, <a href="http://www.creativebloq.com/design-tools/data-visualization-712402" target="36_best_tools">The 36 best tools for data visualization</a></li>
+                    <li>SAAS tools: <a href="http://www-969.ibm.com/software/analytics/manyeyes/#/create" target="manyeyes">Many Eyes</a>, <a href="http://keen.github.io/dashboards/" target="dashboard">Dashboard</a>, <a href="http://en.wikipedia.org/wiki/Plotly" target="Plotly">Plotly</a></li>
+                    <li>Inforgraphics:</li>
+                      <ul>
+                        <li><a href="http://infographicreator.com/" target="infographics">Infographi Creator</a></li>
+                        <li><a href="http://www.creativebloq.com/infographic/tools-2131971" target="1_tool_infographic">10 free tools for creating infographics</a></li>
+                        <li><a href="https://magic.piktochart.com/" target="piktochart">Pikto Chart</a></li>
+                        <li>mind maps: <a href="https://www.google.com.au/search?q=mind+maps&es_sm=122&source=lnms&tbm=isch&sa=X&ei=meziVLT0Fsa3mAX_mIGwDQ&ved=0CAgQ_AUoAQ&biw=1745&bih=905" target="google_images_mindmaps">Examples google images</a>, <a href="" target=""></a>, <a href="" target=""></a></li>
+                        <li><a href="http://www.tiki-toki.com/" target="Create timelines">Create timelines</a></li>
+                      </ul>
+                    <li>Coding:</li>
+                      <ul>
+                        <li>Easy coding: <a href="http://www.highcharts.com/" target="highcharts">HighCharts7</a> or <a href="http://www.chartjs.org/" target="Chart.js">Chart.js or <a href="https://developers.google.com/chart/interactive/docs/gallery" target="GoogleChartsAPI">Google Charts API</li>
+                        <li>Coding tools (free license): <a href="http://d3js.org/" target="d3js">d3js</a>, <a href="http://raphaeljs.com/" target="Raphaehttp://www.r-project.org/l">RaphaelJS</a>, <a href="" target="">R</a>, etc...</li>
+                      </ul>
+                </div>
+              </div>
+<!-- PROCESS ------------------------->
+              <div id="process" class="row">
+                <div class="col-lg-7 item">
+                  <h1>The process of creating data visualizations</h1>
+                  <p></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-7">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Data scientist skills</p>
+                  <ul>
+                    <li><a href="images/1.0-2015-modern-data-scientist--skill-set.jpg" target="data_scientist">Modern data scientist</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-7">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Functions of data visualization:</p>
+                  <ul>
+                    <li><a href="images/1.2-purposes-cloud.png" target="Andy-Kirt-purposes-cloud">Purposes of a visualization [from: "Data visualization: a successful design process" by Andy Kirk 2012]</a></li>
+                    <li>Main three goals:
+                      <ul>
+                        <li>To explain the data</li>
+                        <li>To explore the data</li>
+                        <li>To exhibit the data</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-8">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Dealing with design
+                   <ul>
+                    <li>Dealing with colors: Agave, <a href="http://paletton.com/" target="paletton">online paletton</a>, <a href="http://www.creativebloq.com/colour/tools-colour-schemes-12121430" target="28_best-color-scheme-tools">The 28 best tools for choosing a colour scheme</a>, etc.</li>
+                    <li>Dealing with icons: <a href="http://glyphicons.com/" target="glyphicons">Glyphicons</a>, etc.</li>
+                    <li>Dealing with fonts: <a href="https://www.google.com/fonts/" target="google_fonts">google fonts</a>, etc.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-7">
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Several concepts</p>
+                  <ul>
+                    <li>visualization & exploration</li> 	
+                    <li>diagrams & infographies</li>
+                    <li>visual truth & lies</li>
+                    <li>interaction & animation</li>
+                    <li>storytelling: </li>
+                      <ul>
+                        <li><a href="http://www.thefunctionalart.com/p/about-book.html" target="Cairo">Alberto Cairo and his "Functional Art"</a></li>
+                        <li><a href="images/daily-rituals.png" target="daily-rituals">Daily rituals</a></li>
+                        <li><a href="images/Worlds-deadliest-animals.jpg" target="Worlds-deadliest-animals">World's deadliest animals</a></li>
+                        <li><a href="images/Storytelling-7-genres.jpg" target="storytelling_generes">Genres of Storytelling</a></li>
+                      </ul>
+                    
+                  </ul>
+                </div>
+              </div>
+<!-- PREPARING ------------------------->
+              <div id="preparing" class="row">
+                <div class="col-lg-7">
+                  <h1>Preparing your data visualizations for 2nd session</h1>
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Describe your data</p>
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Describe the intention of your data</p>
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Conversation about best visualization options</p>
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Describe tasks to be done during the week to prepare the data.</p>
+                </div>
+              </div>
+
+<!-- SESSION 2 ############################################################# -->
+              <hr />
+              <div id="two" class="row">
+                <div class="col-lg-7">
+                  <h1><b>2nd session: <br />practice & practice Feb 28st 2015</b></h1>
+                  <p><img class="item" src="./images/glyphicons-50-star.png" />Next week we are going to put all this theoretical in practice
+                  <ul>
+		    <li>Defining goals of the visualization:</li>
+			<ul>
+				<li>Task oriented: do it solve  a task or several? Describe them</li>
+				<li>Storitelling oriented: which is the history and context of your discurse?</li>
+				<li>Tool oriented: to be used in specific contexts. To use for a specific dataset that will be shown multiple times.</li>
+				<li>what else?</li>
+			</ul>
+                    <li>2.1 Defining the data </li>
+			<ul>
+				<li>Dataset description: number of records, data-type, fields, distinct values of fields, rage,...</li>
+				<li></li>
+			</ul>
+                    <li>2.1 Choice of tools</li>
+			<ul>
+				<li>Explore: Area, Tableau public, </li>
+				<li>D3 visualizations: <a href="https://github.com/mbostock/d3/wiki/Gallery" target="D3gallery"">D3 Gallery</a></li>
+				<li>Test code: <a href="http://jsfiddle.net/" target="_jsfiddle">jsfiddle</a></li>
+			</ul>
+                    <li>2.2 Data formatting</li>
+			<ul>
+				<li>Formating data tools: desktop software (google refine, tableau public, etc), spreadsheets, scripts  </li>
+				<li>Data insights: mining, patterns, trends, irregularities </li>
+			</ul>
+                    <li>2.3 Building visualizations</li>
+			<ul><li>see 2,1</li></ul>
+                    <li>2.4 Publishing visualizations</li>
+			<ul>
+				<li>Online, interective, animated images</li>
+				<li>Static images</li>
+				<li>Printing</li>
+				<li>Reuse of visualization elements integrated in other projects</li>
+			</ul>
+                  </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+  <hr />
+  <div>
+    <p>The icons are Creative Commons (BY-3.0) from <a href="http://glyphicons.com/" title="GLYPHICONS is a library of precisely prepared monochromatic icons and symbols, created with an emphasis on simplicity and easy orientation." target="glyphicons">GLYPHICONS.com</a>.
+  </div>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+page-content.htmlSO you can
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+a>A</span>T<span class=e>E</span>X / T<span class=e
+size-thumbnail wp-image-144 aligncenter src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/lyx-logo-150x150.jpg alt=lyx-logo width=150 height=150 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/lyx-logo-150x150.jpg 150w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/lyx-logo-88x88.jpg 88w
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+size-thumbnail wp-image-149 aligncenter src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/cccb-150x150.jpg alt=cccb width=150 height=150 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/cccb-150x150.jpg 150w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/cccb-88x88.jpg 88w
+aligncenter wp-image-150 size-medium src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/C1-300x226.jpg alt=C1 width=300 height=226 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/C1-300x226.jpg 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/C1.jpg 1024w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/C1-973x733.jpg 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/C1-508x382.jpg 508w
+aligncenter wp-image-151 size-medium src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/C4-300x226.jpg alt=C4 width=300 height=226 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/C4-300x226.jpg 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/C4.jpg 1024w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/C4-973x733.jpg 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/C4-508x382.jpg 508w
+aligncenter size-medium wp-image-152 src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/A1-300x226.jpg alt=A1 width=300 height=226 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/A1-300x226.jpg 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/A1.jpg 1024w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/A1-973x733.jpg 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/A1-508x382.jpg 508w
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-caption aligncenter
+size-medium wp-image-16 src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/uclaims-300x214.png alt=Layout design can improve text analysis outputs width=300 height=214 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/uclaims-300x214.png 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/uclaims-508x363.png 508w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/uclaims.png 525w
+wp-caption-text
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+size-thumbnail
+  wp-image-157 alignleft src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/tresnak-1-150x150.jpg alt=tresnak (1) width=150 height=150 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/tresnak-1-150x150.jpg 150w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/tresnak-1-88x88.jpg 88w
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-image-168
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-caption aligncenter
+wp-image-189 size-medium src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/AtlasOfKnowledge-citation-p132-300x225.jpg alt=AtlasOfKnowledge-citation-p132 width=300 height=225 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/AtlasOfKnowledge-citation-p132-300x225.jpg 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/AtlasOfKnowledge-citation-p132-1024x768.jpg 1024w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/AtlasOfKnowledge-citation-p132-973x730.jpg 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/09/AtlasOfKnowledge-citation-p132-508x381.jpg 508w
+wp-caption-text
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-caption aligncenter
+wp-image-21 size-large src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-5b-1024x505.png alt=Discharge summary improved with text analysis and layout design width=620 height=306 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-5b-1024x505.png 1024w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-5b-300x148.png 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-5b-973x480.png 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-5b-508x251.png 508w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-5b.png 1123w
+wp-caption-text
+ size-medium wp-image-22 aligncenter src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-6b-300x277.png alt=Figure-6b width=300 height=277 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-6b-300x277.png 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-6b-508x469.png 508w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-6b.png 815w sizes=(max-width: 300px) 100vw, 300px /></a><a href={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Slide1.png rel=lightbox[19]
+ size-medium wp-image-24 aligncenter src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Slide2-300x208.png alt=Slide2 width=300 height=208 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Slide2-300x208.png 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Slide2-1024x709.png 1024w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Slide2-973x674.png 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Slide2-508x352.png 508w
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-caption aligncenter
+wp-image-6 size-full src=http://research.nualart.cat/wp-content/uploads/2015/07/crossreadsIII-screenshot.png alt=Crossreads III detail width=777 height=521 srcset=http://research.nualart.cat/wp-content/uploads/2015/07/crossreadsIII-screenshot.png 777w, http://research.nualart.cat/wp-content/uploads/2015/07/crossreadsIII-screenshot-300x201.png 300w, http://research.nualart.cat/wp-content/uploads/2015/07/crossreadsIII-screenshot-508x341.png 508w
+wp-caption-text
+nav nav-pills
+myactive
+myactive
+myactive
+myactive
+nav nav-pills
+c1
+c2
+c3
+c4
+c5
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+aligncenter wp-image-27 size-full src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/DataForResearchers-seminar.png alt=DataForResearchers-seminar width=837 height=476 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/DataForResearchers-seminar.png 837w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/DataForResearchers-seminar-300x171.png 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/DataForResearchers-seminar-508x289.png 508w
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-caption aligncenter
+size-medium wp-image-11 src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-1-300x155.jpg alt=Screenshot of Area interface width=300 height=155 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-1-300x155.jpg 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-1-1024x531.jpg 1024w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-1-973x504.jpg 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-1-508x263.jpg 508w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-1.jpg 1314w
+wp-caption-text
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+aligncenter wp-image-40 size-full src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2014/06/Crossreads-I.png alt=Crossreads-I width=924 height=578 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2014/06/Crossreads-I.png 924w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2014/06/Crossreads-I-300x188.png 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2014/06/Crossreads-I-508x318.png 508w
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-caption aligncenter
+wp-image-34 size-full src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Crossreads-II.png alt=Detail of Crossreads (v2) width=975 height=452 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Crossreads-II.png 975w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Crossreads-II-300x139.png 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Crossreads-II-973x451.png 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Crossreads-II-508x236.png 508w
+wp-caption-text
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-caption aligncenter
+wp-image-46 size-large src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/PosterA1-Crossreads-700x1024.png alt=DL2014 conference: Crossreads. Towards a rhizomatic narrative width=620 height=907 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/PosterA1-Crossreads-700x1024.png 700w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/PosterA1-Crossreads-205x300.png 205w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/PosterA1-Crossreads-973x1424.png 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/PosterA1-Crossreads-508x743.png 508w
+wp-caption-text
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-caption aligncenter
+wp-image-50 size-full src=http://research.nualart.cat/wp-content/uploads/2015/08/Area-49-textvis-cases.png alt=Detail of the 49 reviewed cases width=902 height=561 srcset=http://research.nualart.cat/wp-content/uploads/2015/08/Area-49-textvis-cases.png 902w, http://research.nualart.cat/wp-content/uploads/2015/08/Area-49-textvis-cases-300x187.png 300w, http://research.nualart.cat/wp-content/uploads/2015/08/Area-49-textvis-cases-508x316.png 508w
+wp-caption-text
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-caption alignnone
+wp-image-56 size-large src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/JaumeNualart-Poster-kioloa2014-723x1024.png alt=JaumeNualart-Poster-kioloa2014 width=620 height=878 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/JaumeNualart-Poster-kioloa2014-723x1024.png 723w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/JaumeNualart-Poster-kioloa2014-212x300.png 212w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/JaumeNualart-Poster-kioloa2014-973x1377.png 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/JaumeNualart-Poster-kioloa2014-508x719.png 508w
+wp-caption-text
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+aligncenter wp-image-61 size-full src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Texty-of-a-IR-issue.png alt=Texty-of-a-IR-issue width=992 height=575 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Texty-of-a-IR-issue.png 992w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Texty-of-a-IR-issue-300x174.png 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Texty-of-a-IR-issue-973x564.png 973w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Texty-of-a-IR-issue-508x294.png 508w
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+aligncenter wp-image-65 size-full src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/PdV-software.png alt=PdV-software width=778 height=52 srcset={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/PdV-software.png 778w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/PdV-software-300x20.png 300w, {{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/PdV-software-508x34.png 508w sizes=(max-width: 778px) 100vw, 778px /></a>Here a couple screenshots from the show:<a href={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/PendentDeVot1.png rel=lightbox[64]
+page-content.html
+wrapper
+post
+post-header.html
+post-title
+post-meta.html
+post-content
+wp-caption aligncenter
+wp-image-11 size-large src={{ site.url }}{{ site.baseurl }}/wp-content/uploads/2015/08/Figure-1-1024x531.jpg alt=Screenshot of Area interface width=620
+wp-caption-text
+page-content.html
+wrapper
+post.html
+post-header.html
+post-title.html
+post-content.html
+page-content.html
+wrapper
+post.html
+post-header.html
+post-title.html
+post-content.html

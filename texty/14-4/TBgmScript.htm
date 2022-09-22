@@ -1,0 +1,93 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/14-4/TBgmScript.htm by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 21:02:26 GMT -->
+<head>
+  <title>Greasemonkey script</title>
+</head>
+<body>
+
+<p>Downloading <a href="https://addons.mozilla.org/en-US/firefox/addon/748">Greasemonkey</a></p>
+<hr>
+<pre style="margin-left: 50px">
+// ==UserScript==
+</pre>
+<table width=500 border=0 style="margin-left: 50px">
+
+<tr><td width=200>// @name</td><td>General SPARQL tester</td></tr>
+
+<tr><td width=200>// @author </td><td>Put your name here</td></tr>
+<tr><td width=200>// @date</td><td>Put date here</td></tr>
+<tr><td width=200>// @namespace</td><td>Enter a namespace here</td></tr>
+<tr><td width=200>// @include</td><td>Enter a page URL here</td></tr>
+<tr><td width=200>// @exclude</td><td>Enter a page URL here</td></tr>
+</table>
+<pre style="margin-left: 50px">
+// ==/UserScript==
+
+(function()
+{
+
+  try {
+
+var endpoint;
+var query;
+var rawQuery;
+
+//////////////////////////////////////////////////////////////////////////////////////
+//  Uncomment one of these SPARQL endpoints
+
+//endpoint = "http://www.dbpedia.org/sparql";  //dbpedia
+//endpoint = "http://data.linkedmdb.org/sparql"; //movie database
+//endpoint = "http://dbtune.org/jamendo/sparql/"; //jamendo
+//endpoint = "http://www4.wiwiss.fu-berlin.de/dblp/sparql"; //dblp
+//endpoint = "http://go.bio2rdf.org/sparql";  //gene ontology
+//endpoint = "http://geneid.bio2rdf.org/sparql"; //gene id
+//endpoint = "http://uniprot.bio2rdf.org/sparql"; //UniProt
+//endpoint = "http://mesh.bio2rdf.org/sparql"; //MESH
+//endpoint = "http://www4.wiwiss.fu-berlin.de/dailymed/sparql"; //dailymed
+//endpoint = "http://www4.wiwiss.fu-berlin.de/diseasome/sparql"; //diseasome
+//endpoint = "http://data.linkedct.org/sparql"; //linkedct
+//endpoint = "http://mesh.bio2rdf.org/sparql";   //mesh
+//endpoint = "http://taxonomy.bio2rdf.org/sparql";  //NEWT
+
+
+////////////////////  Query variable /////////////////////////////////////////////////////////
+
+rawQuery = "select distinct ?concept where { [] a ?concept } limit 50";
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// HTTPRequest code with MIME type 'text/html'
+
+query = encodeURIComponent(rawQuery);
+	
+GM_xmlhttpRequest({
+    method: 'GET',
+    url: endpoint + '?query=' + query,
+    headers: {
+        'User-agent': 'Mozilla/4.0 (compatible) Greasemonkey',
+        'Accept': 'text/html',    
+    },
+
+    onload: function(responseDetails) {
+   
+    ////////////////////////////////////////////////////////////////////////////////
+    // Shows results in alert()
+	  alert(responseDetails.responseText);
+	  
+    }
+});
+
+   } catch (eErr) {
+      alert ("Greasemonkey error: " + eErr);
+   }
+
+   return;
+
+}) ();
+
+
+</pre>
+</body>
+
+<!-- Mirrored from informationr.net/ir/14-4/TBgmScript.htm by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 21:02:26 GMT -->
+</html>

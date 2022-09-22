@@ -1,0 +1,2900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<!-- Mirrored from informationr.net/ir/14-1/paper395.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:47 GMT -->
+<head> 
+<title>Term based comparison metrics for controlled and uncontrolled indexing languages</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" /> 
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" /> 
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" /> 
+  <!--Enter appropriate data in the content fields-->
+  <meta name="dc.title"
+  content="Term based comparison metrics for controlled and uncontrolled indexing languages"
+  />
+  <meta name="dc.creator" content="Benjamin M. Good, Joseph T. Tennis" />
+  <meta name="dc.subject" content="This paper describes a new automated protocol for measuring terminological aspects of controlled and uncontrolled indexing languages on the Web.  As the diversity of different sources and forms of Web-based metadata continues to expand, methods for comparing different instantiations provide vital knowledge to those that seek to use and to understand these structures.  In this work, we focused specifically on characterizations of the sets of natural language terms used within different indexing languages. The metrics proved sufficient to differentiate between instances of different languages and to enable the identification of term-set patterns associated with indexing languages produced by different kinds of information system.  In particular, we found that distinct groups of term-set features appear to distinguish the tags produced by social tagging from other indexing languages."
+  />
+  <meta name="dc.description" content="Introduction. We define a collection of metrics for describing and comparing sets of terms in controlled and uncontrolled indexing languages and then show how these metrics can be used to characterize a set of languages spanning folksonomies, ontologies, and thesauri. Method. Metrics for term set characterization and comparison were identified and programs for their computation implemented.  These programs were then used to identify descriptive features of term sets from twenty-two different indexing languages  and to measure the direct overlap between the terms.  Analysis. The computed data were analysed using manual and automated techniques including visualization, clustering and factor analysis.  Distinct subsets of the metrics were sought that could be used to distinguish between the uncontrolled languages produced by social tagging systems (folksonomies) and the controlled languages produced using professional labour.   Results. The metrics proved sufficient to differentiate between instances of different languages and to enable the identification of term-set patterns associated with indexing languages produced by different kinds of information system.  In particular, distinct groups of term-set features appear to distinguish folksonomies from the other languages.     Conclusions. The metrics organized here and embodied in freely available programs provide an empirical lens useful in beginning to understand the relationships that hold between different,  controlled and uncontrolled indexing languages."
+  />
+  <meta name="dc.subject.keywords"
+  content="bibliometrics, indexing, information products, research methods,bioinformatics "
+  />
+  <!--leave the following to be completed by the Editor-->
+  <meta name="robots" content="all" />
+  <meta name="dc.publisher" content="Professor T.D. Wilson" />
+  <meta name="dc.coverage.placename" content="global" />
+  <meta name="dc.type" content="text" />
+  <meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+  <meta name="dc.identifier" scheme="URI"
+  content="../.._" />
+  <meta name="dc.relation.IsPartOf" content="../.._" />
+  <meta name="dc.format" content="text/html" />
+  <meta name="dc.language" content="en" />
+  <meta name="dc.rights"
+  content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+  <meta name="dc.date.available" content="2009-03-15" />
+  <script type="text/javascript" language="javascript">
+ 
+ 
+                var flag;
+                flag = true;
+                function doChangeFont()
+                {
+                        if (flag)
+                        {
+                        var htmlDoc = document.getElementsByTagName('head').item(0);
+                        var css = document.createElement('link');
+                        css.setAttribute('rel', 'stylesheet');
+                        css.setAttribute('type', 'text/css');
+                        css.setAttribute('href', '../sans.css');
+                        htmlDoc.appendChild(css);
+                        flag = false;
+                        } 
+                        else
+                        {
+                        var htmlDoc = document.getElementsByTagName('head').item(0);
+                        var css = document.createElement('link');
+                        css.setAttribute('rel', 'stylesheet');
+                        css.setAttribute('type', 'text/css');
+                        css.setAttribute('href', '../IRstyle2.css');
+                        htmlDoc.appendChild(css);
+                        flag = true;
+                        }        
+                }
+  </script>
+  <style type="text/css">
+ 
+ .button {
+        width: 45em;
+        padding: 0 0 0 0;
+        font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+        font-size: small;
+        font-weight: bold;  
+        background-color: #ffffff;
+        color: #000000;
+        display: inline;
+        text-align: center;
+        }
+                
+ 
+ .button ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                border: none;
+                display: inline;
+                }
+                
+ .button li {
+                margin: 0;
+                font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+            font-size: small;
+            font-weight: bold;  
+                background-color: #fff000<!-- #2175bc; -->
+                color: #000000;
+                text-decoration: none;
+                display: inline;
+                }
+ 
+ .button li a:hover {
+                background-color: azure;
+                color: #ff0000;
+                width: auto;
+                }
+                
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+        }
+ 
+legend {
+    color: white;
+    background-color: #5E96FD;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+  </style>
+</head>
+
+<body bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+<tbody>
+<tr>
+<td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 14 no. 1, March, 2009</span><br /><br />
+<div class="button">
+<ul>
+<li><a href="infres141.html">Contents</a> | </li>
+<li><a href="../iraindex.html">Author index</a> | </li>
+<li><a href="../irsindex.html">Subject index</a> | </li>
+<li><a href="../search.html">Search</a> | </li>
+<li><a href="../index-2.html">Home</a> </li>
+</ul></div></td></tr>
+<tr>
+<td>&nbsp;</td></tr></tbody></table>
+<hr style="COLOR: #5E96FD" size="1" />
+
+<h1>Term based comparison metrics for controlled and uncontrolled indexing languages</h1>
+<br />
+
+
+<div style="margin-left: 10%; margin-right: 10%;">
+<h4><a href="#authors">B.M. Good</a><br />
+Michael Smith Foundation for Health Research/Canadian Institute for Health Research Bioinformatics Training Programme, University of British Columbia, Heart + Lung Research Institute at St. Paul's Hospital Vancouver, BC, Canada<br />
+<a href="#authors">J.T. Tennis</a><br />
+The Information School, University of Washington, Box 352840, Mary Gates Hall, Seattle, WA 98195-2840, USA</h4>
+</div>
+<br />
+
+<form action="#">
+  <fieldset>
+    <legend>Abstract </legend>
+    <blockquote>
+<strong>Introduction.</strong> We define a collection of metrics for describing and comparing sets of terms in controlled and uncontrolled indexing languages and then show how these metrics can be used to characterize a set of languages spanning folksonomies, ontologies and thesauri.<br />
+<strong>Method.</strong> Metrics for term set characterization and comparison were identified and programs for their computation implemented. These programs were then used to identify descriptive features of term sets from twenty-two different indexing languages and to measure the direct overlap between the terms. <br />
+<strong>Analysis.</strong> The computed data were analysed using manual and automated techniques including visualization, clustering and factor analysis. Distinct subsets of the metrics were sought that could be used to distinguish between the uncontrolled languages produced by social tagging systems (folksonomies) and the controlled languages produced using professional labour. <br />
+<strong>Results.</strong> The metrics proved sufficient to differentiate between instances of different languages and to enable the identification of term-set patterns associated with indexing languages produced by different kinds of information system. In particular, distinct groups of term-set features appear to distinguish folksonomies from the other languages. <br />
+<strong>Conclusions.</strong> The metrics organized here and embodied in freely available programs provide an empirical lens useful in beginning to understand the relationships that hold between different, controlled and uncontrolled indexing languages.
+</blockquote>
+  </fieldset>
+</form>
+<br />
+
+
+<div align="center">
+
+<input type="button" value="change font" class="btn"
+style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: #5E96FD;"
+onclick="doChangeFont()" /></div>
+<br />
+
+
+<h2>Introduction</h2>
+
+<p>We are in an era of a rapidly expanding number and diversity of systems for
+organizing information. Wikis, collaborative tagging systems and semantic Web
+applications represent broad categories of just a few emerging frameworks for
+storing, creating, and accessing information. As each new kind of information
+system appears, it is important to understand how it relates to other kinds of
+system. This understanding allows us to answer a variety of important
+questions, which will shape the way future systems are designed. Does
+the new system represent a less expensive way to achieve the same functionality
+as another? Might it be fruitfully combined with another approach? How similar
+is it to an exemplar in its domain?</p>
+
+<p>In addition to deriving theoretical answers to questions at the level of the
+kind of system, such as, How does social tagging relate to professional
+indexing? (<a href="#fei06">Feinberg 2006</a>; <a href="#ten06">Tennis
+2006</a>) or, How do the ontologies of computer science relate to the
+classifications of library and information science?, as addressed by Soergel
+(<a href="#soe99">1999</a>), it is also now of practical importance to find
+answers to specific instance-level questions. For example, Al-Khalifa
+and Davis (<a href="#alk07">2007</a>) attempt to answer the question, How do
+the tags provided by <a href="http://delicious.com/" target="_blank">Delicious</a> users relate
+to the terms extracted by the Yahoo indexing algorithm over the same documents?
+and Morrison (<a href="#mor08">2008</a>) asks, How do the results of searches
+performed on social tagging systems compare to those performed on full Web
+search engines? Answers to such questions provide vital knowledge to system
+designers, because, in the age of the Web, information systems do not operate
+in isolation from one another. It is both possible and beneficial to integrate
+components of different systems to create symbiotic aggregates that meet the
+needs of specific user groups better than any single system could, and doing so
+depends upon the knowledge of how the different systems relate. Would Yahoo
+automatic indexing be improved through incorporation of indexes provided by
+Delicious users? Comparative analyses of the components of the two systems
+can help tell us.</p>
+
+<p>Both comparative studies of information systems in the abstract and efforts
+to design specific instances of new integrative systems can benefit from
+mechanisms that help to identify the specific similarities and differences that
+obtain between different systems. One facet of this is empirical, reproducible,
+quantitative methods of investigation. To inform both kinds of enquiry,
+empirical protocols that allow for reproducible, quantitative comparison would
+be beneficial. However, the term <em>information system</em> covers a vast
+and ill-defined set of things, each of which is composed of many complex
+components operating together in many different contexts to achieve a variety
+of different purposes. To conduct useful empirical comparisons of such systems,
+1) hypotheses must be evaluated in light of the many contributing qualitative
+factors, and 2) reproducible metrics must be devised that can be used to test
+assumptions. While qualitative interpretations of the differences that hold
+between different kinds of information system continue to advance, there are
+few practical, reproducible metrics defined for use in empirical comparisons of
+system components. </p>
+
+<p>Our broad goal in this work is to define a set of measurements, which can be
+taken of information systems, that are meaningful, widely applicable, and
+reproducible. The specific set of metrics introduced here do not intend nor
+pretend to be exhaustive nor definitive, in fact, we suggest that is not an
+attainable goal given the complexity of the systems under scrutiny. Rather, we
+advance them as an early set of candidates in what we expect will be a broad
+pool of metrics, which will continue to expand and be refined indefinitely. In
+light of these goals, the metrics defined here are meant for the
+characterization of one key component common to the vast majority of
+information systems in current operation, the language used to index the
+resources of interest within the system.</p>
+
+<p>Zhang (<a href="#zha06">2006:121</a>) defines an indexing language as
+&lsquo;<em>the set of terms used in an index to represent topics or features of
+documents and the rules for combining or using those terms</em>&rsquo;. As the
+emphasis here is on empirical observation and many of the information systems
+under consideration offer little or no rules for the application nor of the
+construction of the terms, we will operate under the broader definition of
+indexing languages as <em>sets of terms used in an index to represent topics
+or features</em>. Notice that this definition spans both controlled
+languages, such as institutionally maintained thesauri, and uncontrolled
+languages, such as the sets of keywords generated by social tagging systems.
+Examples of indexing languages, as defined here, thus include the <a
+href="http://www.nlm.nih.gov/bsd/disted/mesh/index.html" target="_blank">Medical Subject
+Headings (MeSH) thesaurus</a>, the Gene Ontology as described by Ashburner
+<em>et al</em>. (<a href="#ash00">2000</a>), and the <a href="http://www.connotea.org/" target="_blank">Connotea</a> folksonomy as described by Lund <em>et al</em>. (<a href="#lun05">2005</a>). Each of these
+languages, though varying in relational structure, purpose, and application, is
+composed of a set of terms that represent aspects of the resources within the
+information systems that utilize them. Through comparisons of the features of
+these indexing languages, we hope to start work that will eventually allow us
+insight that will enable us to gain a better understanding not just of the
+relations between the languages, but, through them, of the relations between
+the systems that generate and use them.</p>
+
+<p>In this work, we advance an approach to the automated, quantitative
+characterization of indexing languages through metrics based simply on the sets of
+terms used to represent their concepts. These metrics are divided into two
+groups, intra-set and inter-set. The intra-set metrics provide views on the
+shape of the sets of terms in aggregate. The inter-set metrics provide a
+coherent approach to the direct comparison of the overlaps between different
+term sets. The paper is divided into two main sections. The first
+section describes each of the metrics in detail and the second presents the
+results from a quantitative comparison of twenty-two different indexing
+languages. Results are provided for each language individually, using the
+intra-set metrics, and for each language pair, using the inter-set metrics. In
+addition to the broad all-against-all comparison, we present a more detailed
+exploration of the similarities and differences, revealed using the proposed
+metrics, that hold between controlled and uncontrolled indexing languages. </p>
+
+<h2>Metrics for comparing term sets</h2>
+
+<p>In this work we focus on the set of terms used to represent the concepts
+that compose indexing languages. Relationships between the terms or the
+concepts that they represent are not analysed at this stage because some
+languages, such as many folksonomies, do not display the explicitly defined
+relationship structures present in other forms, such as thesauri and
+ontologies. This view allows us to produce metrics that are applicable to a
+broad array of different indexing languages and can serve as the foundation for
+future efforts that expand the comparative methodology. In the following
+section, we identify a group of specific, measurable characteristics of term
+sets. From these we can measure similarities and differences between indexing
+languages based on quantifiable characteristics that they all share. </p>
+
+<h3>Intra-term set measures</h3>
+
+<p>Measurements taken at the level of the set define what might be termed the
+shape of the term set. Such features of a term set include its size,
+descriptive statistics regarding the lengths of its terms, and the degree of
+apparent modularity present in the set. Measures of modularity expose the
+structure of the term set based on the proportions of multi-word terms and the
+degrees of sub-term re-use. These measures of modularity include two main
+categories, Observed Linguistic Precoordination and Compositionality. </p>
+
+<p>Observed Linguistic Precoordination indicates whether a term appears to be a union of multiple terms based
+on syntactic separators. For example, the MeSH term
+<strong><em>Fibroblast Growth Factor</em></strong> would be observed to be a linguistic
+precoordination of the terms <strong><em>Fibroblast</em></strong>, <strong><em>Growth</em></strong>
+and <strong><em>Factor</em></strong> based on the presence of spaces between the terms. As
+explained in Tables <a href="#tab1">1</a> and <a href="#tab2">2</a>, we
+categorize terms as uniterms (one term), duplets (combinations of two terms),
+triplets (combinations of three terms) or quadruplets or higher (combinations
+of four or more terms). Using these categorizations, we also record the
+flexibility of a term set as the fraction of sub-terms (the terms that are used
+to compose duplets, triplets, and quadplus terms) that also appear as uniterms.</p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 1: Examples of Observed Linguistic Precoordination term classifications</strong><br />
+  <br />
+  </caption>
+  <tbody>
+    <tr>
+<th><a name="tab1" id="tab1"></a>Terms</th>
+<th>Observed Linguistic Precoordination <br />Sub-term Number</th>
+<th>Naming convention</th>
+    </tr>
+    <tr>
+<td>ontology
+</td>
+<td align="center">1</td>
+<td align="center">uniterm</td>
+    </tr>
+    <tr>
+<td>ontology evaluation
+</td>
+<td align="center">2</td>
+<td align="center">duplet</td>
+    </tr>
+    <tr>
+<td>Fibroblast Growth Factor
+</td>
+<td align="center">3</td>
+<td align="center">triplet
+</td>
+    </tr>
+    <tr>
+<td>United States of America
+</td>
+<td align="center">4</td>
+<td align="center">quadruplet or higher
+</td>
+    </tr>
+    <tr>
+<td>Type 5 Fibroblast Growth Factor</td>
+<td align="center">5</td>
+<td align="center">quadruplet or higher
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 2: Explanation of the Observed Linguistic Precoordination flexibility measure </strong><br />
+  (The flexibility for the term set listed in the first columns is equal to 0.17 (1 divided by 6) because there is one sub-term <em>Web</em>, which is also a uniterm out of a total of six sub-terms.) <br />
+  </caption>
+  <tbody>
+    <tr>
+<th><a name="tab2" id="tab2"></a>Terms</th>
+<th>Uniterms</th>
+<th>Sub-terms</th>
+<th>Consolidated<br /> sub-terms</th>
+<th>Both consolidated<br /> and uniterms</th>
+    </tr>
+    <tr style="background-color: #B7FFFD;">
+<td align="center">Semantic Web
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center">Semantic
+</td>
+<td align="center">Semantic
+</td>
+<td align="center"> &nbsp;
+</td>
+    </tr>
+    <tr style="background-color: #B7FFFD;">
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center">Web
+</td>
+<td align="center">Web
+</td>
+<td align="center">Web
+</td>
+    </tr>
+    <tr>
+<td align="center">Web
+</td>
+<td align="center">Web
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+    </tr>
+   <tr style="background-color: #B7FFFD;">
+<td align="center">Social Web
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center">Social
+</td>
+<td align="center">Social
+</td>
+<td align="center"> &nbsp;
+</td>
+    </tr>
+    <tr style="background-color: #B7FFFD;">
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center">Web
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+    </tr>
+    <tr>
+<td align="center">Planet
+</td>
+<td align="center">Planet
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+    </tr>
+    <tr style="background-color: #B7FFFD;">
+<td align="center">Do Re Mi
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center">Do
+</td>
+<td align="center">Do
+</td>
+<td align="center"> &nbsp;
+</td>
+    </tr>
+    <tr style="background-color: #B7FFFD;">
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center">Re
+</td>
+<td align="center">Re
+</td>
+<td align="center"> &nbsp;
+</td>
+    </tr>
+    <tr style="background-color: #B7FFFD;">
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center">Mi
+</td>
+<td align="center">Mi
+</td>
+<td align="center"> &nbsp;
+</td>
+    </tr>
+    <tr>
+<td align="center">Star
+</td>
+<td align="center">Star
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+<td align="center"> &nbsp;
+</td>
+    </tr>
+   <tr style="background-color: #B7FFFD;">
+<td width="248" colspan="3" valign="top"> &nbsp;
+</td>
+<td align="center">6
+</td>
+<td align="center">1
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Observed Linguistic Precoordination measurements described here were adapted from term-set
+characteristics, originally identified by Van Slype (<a
+href="#van76">1976</a>), for gauging the quantifiable features of a thesaurus.
+Van Slype developed and used these metrics in the process of suggesting
+revisions to the ISO standard based on
+comparisons of the attributes of a sample of thesauri to the prescriptions of
+the standard. Our intent in using these, and related, metrics is to make it
+possible to explore the consequences of adding a similar, empirical aspect to
+studies of modern indexing languages. </p>
+
+<p>The Observed Linguistic Precoordination measures were extended with related measures of compositionality as
+introduced by Ogren <em>et al</em>. (<a href="#ogr04">2004</a>).
+Compositionality measures include a) the number of terms that contain another
+complete term as a proper substring, b) the number of terms that are contained
+by another term as a proper substring, c) the number of different complements
+used in these compositions, and d) the number of different compositions created
+with each contained term. A complement is a sub-term that is not itself an
+independent member of the set of terms. For example, the term set containing
+the two terms {<em>macrophage</em>, <em>derived from macrophage</em>}
+contains one complement, <em>derived from</em>. A composition is a
+combination of one term from the term set with another set of terms (forming
+the suffix and/or the prefix to this term) to form another term in the set. For
+example, in the Academic Computing Machinery subject listing, the term
+<em>software program verification</em> contains three sub-terms that are
+also independent terms (<em>software</em>, <em>program</em>, and
+<em>verification</em>). According to our definition, this term would be
+counted as three compositions: <em>software</em>+suffix,
+prefix+<em>program</em>+suffix, prefix+<em>verification</em>. As
+another example, the term <em>denotational semantics</em> would only
+result in one composition because <em>semantics</em> is an independent
+term while <em>denotational</em> is not (and thus is a complement as
+defined above).</p>
+
+<p>Modularity is indicative of the <em>factors</em> that go into the semantics
+of a term set, and shape its use. Here we are guided by Soergel's rubric
+from concept description and semantic factoring. He tells us,</p> 
+
+<blockquote>...we may note that often conceptual structure is reflected in linguistic structure; often
+multi-word terms do designate a compound concept, and the single terms
+designate or very nearly designate the semantic factors. Example: Steel pipes =
+steel:pipes [demonstrating the factoring] (<a href="#soe74">Soergel
+1974:75</a>). </blockquote>
+
+<p>The relative presence or absence of modular structure within a
+term set thus provides some weak indication of its conceptual structure. For
+example, even though an indexing language may not explicitly declare
+relationships between its terms, semantic relationships may sometimes be
+inferred between terms that share, for example, common sub-terms (<a
+href="#ogr04">Ogren <em>et al</em>. 2004</a>). The potential to detect
+re-usable semantic factors that may be indicators of semantic structure within
+a term set makes modularity metrics important axes for the comparison of
+different term sets. </p>
+
+<p>Together, these measurements combine to begin to form a descriptive picture
+of the shape of the many diverse term sets used in indexing languages. Table <a
+href="#tab3">3</a> lists and provides brief definitions for all of the term set
+measurements taken.</p>
+
+<a name="tab3" id="tab3"></a><table width="80%" border="1" cellspacing="0" cellpadding="5" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 3: Parameters of term sets </strong></caption>
+  <tbody>
+  <tr><th>Measure</th><th>Definition</th></tr>
+    <tr>
+<th width="163" valign="top">Number distinct terms</th>
+<td width="280" valign="top">The number of syntactically unique terms in the set.</td>
+    </tr>
+    <tr>
+<th width="163" valign="top">Term length</th>
+<td width="280" valign="top">The length of the terms in the set. We report the mean, minimum, maximum, median, standard deviation, skewness, and coefficient of variation for the term lengths in a term set.</td>
+    </tr>
+    <tr>
+<th width="163" valign="top">Observed Linguistic Precoordination uniterms, duplets, triplets, quadplus</th>
+<td width="280" valign="top">We report both the total number and the fraction of each of these categories in the whole term set.</td>
+    </tr>
+    <tr>
+<th width="163" valign="top">Observed Linguistic Precoordination flexibility</th>
+<td width="280" valign="top">The fraction of Observed Linguistic Precoordination sub-terms (the
+  independent terms that are used to compose precoordinated terms) that also appear as uniterms.</td>
+    </tr>
+    <tr>
+<th width="163" valign="top">Observed Linguistic Precoordination number sub-terms per term</th>
+<td width="280" valign="top">The number of sub-terms per term is zero for a uniterm (<em>gene</em>), two for a duplet (<em>gene ontology</em>), three for a triplet (<em>cell biology class</em>), and so on. We report the mean, maximum, minimum, and median number of sub-terms per term in a term set.</td>
+    </tr>
+    <tr>
+<th width="163" valign="top">Contains another</th>
+<td width="280" valign="top">The terms that contain another term from the same set. Both the total and the proportion of terms that contain another are reported.</td>
+    </tr>
+    <tr>
+<th width="163" valign="top">Contained by another</th>
+<td width="280" valign="top">The terms that are contained by another term from the same set. Both the total and the proportion of terms that are contained by another are reported</td>
+    </tr>
+    <tr>
+<th width="163" valign="top">Complements</th>
+<td width="280" valign="top">A complement is a sub-term that is not itself an independent member of the set of terms. The total number of distinct complements is reported.</td>
+    </tr>
+    <tr>
+<th width="163" valign="top">Compositions</th>
+<td width="280" valign="top">A composition is a combination of one term from the term set with another set of terms (forming the suffix and/or the prefix to this term) to form another term in the set. The   total number of compositions is reported.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Inter-term set measures</h3>
+
+<p>The descriptions of term set shape described above are useful in that they
+can be applied to any set of terms independently and because they provide
+detailed descriptions of the term sets, but, from the perspective of
+comparison, more direct methods are also applicable. To provide a more exact
+comparison of the compositions of sets of terms used in different languages, we
+suggest several simple measures of set similarity. Each of the measures is a
+view on the relation between the size of the intersection of the two term sets
+and the relative sizes of each set. The members of the intersection are
+determined through exact string matches applied to the term sets (after a
+series of syntactic normalization operations). As depicted in Figure <a
+href="#fig1">1</a> and explained below, these intersections are used to produce
+measures of precision, Recall, and Overlap (the F-measure). </p>
+
+<h4>Context considerations in inter-set comparisons</h4>
+
+<p>The equivalence function used when conducting direct set comparisons of the
+components of different indexing languages is important. In this preliminary
+work, we rely on the simplistic notion that a term in one indexing language is
+equivalent to a term in another language if and only if, after syntactic
+normalization, the terms are identical. Synonymy, hyponymy and polysemy are not
+considered and, thus, the measured overlaps are purely syntactic. When
+considering indexing languages used in similar contexts; for example, as might
+be indicated when two different languages are used to index the same set of
+documents by similar groups of people, this function provides useful
+information because the same words are likely to be used for similar purposes.
+However, the greater the difference in context of application between the
+indexing languages being compared, the greater the danger that this simple
+function will not yield relevant data. Logical extensions of this work would
+thus be to make use of semantic relations, for example of synonymy, present
+within the indexing languages, as well as natural language processing
+techniques, to develop additional equivalence functions that operate on a more
+semantic level. That being said, with or without such extensions, any empirical
+comparison should always be interpreted in light of the contexts within which
+the different indexing languages operate.</p>
+
+<h4>Quantifying set similarity</h4>
+
+<p>Once methods for assessing the equivalence relationship are established
+(here post-normalization string matching), it is possible to quantify the
+relations between the resultant sets in several different ways. For example,
+Al-Khalifa and Davis (<a href="#alk07">2007</a>) find what they term
+<em>percentage overlap</em> by dividing the size of the intersection of the two sets
+by the size of the union of the sets and multiplying by 100. They use this
+measure to quantify the similarity of the sets of terms used to index the same
+documents produced by different indexing systems. For example, to find the
+percentage overlap between the set F {A,B,C} and the set K{A,G,K,L} , the size
+of the intersection {A} is 1, the size of their union {A,B,C,G,K,L} is 6 and
+thus the percentage overlap is 100(1/6)= 17%.</p>
+
+<p>While a useful measurement, this equation misses key information regarding
+the relative sizes of the two sets.  To capture the size
+discrepancies and the asymmetry of the relationship, we employ additional
+metrics typically used to evaluate class prediction algorithms. </p>
+
+<p>Binary class prediction algorithms are often evaluated on the basis of
+relations between sets of true and false positive and negative predictions (<a
+href="#wit00">Witten &amp; Frank 2000</a>). These relations are quantified with
+measures of Accuracy, precision and Recall. Accuracy is the number of correct
+predictions divided by the number of false predictions. precision is the number
+of true positives divided by the number of predicted positives. Recall is the
+number of true positives divided by the number of both true and false
+positives. precision and Recall are often summarized with the F-measure, which
+equates to their harmonic mean. </p>
+
+<p>Hripcsak and Rothschild (<a href="#hri05">2005</a>) showed that, by
+arbitrarily assigning one set as the <em>true positives</em> and the other
+as the <em>predicted positives</em>, the F-measure can be used to measure
+the degree of agreement between any two sets. Because it is commutative, the
+choice of which set to assign as <em>true</em> makes no difference to the
+outcome. Figure <a href="#fig1">1</a> illustrates the idea of using precision,
+Recall, and the F-measure as generic set comparison operators. The logic goes
+as follows, if set A is conceptualized as an attempt to predict set B, the
+number of items in both sets (the intersection) corresponds to the number of
+true positives for the predictor that produced A; the number of items in A
+corresponds to the number of true positives plus the number of false positives;
+and the number of items in B corresponds to the number of true positives plus
+the number of false negatives. From this perspective, accuracy thus equates to
+percentage overlap as described by Al-Khalifa and Davis (<a
+href="#alk07">2007</a>). In addition, precision and Recall can be used for the
+asymmetric quantification of the similarity of the two sets and the F-measure
+can be used to provide a symmetric view of the overlap between the sets that
+takes into account their relative sizes.</p>
+
+
+<div align="center">
+<a name="fig1" id="fig1"></a> <img src="p395fig1.png" alt="figure 1" /></div>
+<div align="center"><strong>Figure 1: Set comparison operations</strong></div>
+
+<h2>Demonstration and evaluation of proposed metrics</h2>
+
+<p>The metrics described above are intended to be useful in scientific
+enquiries regarding the relationships that hold between different indexing
+languages. This information, in turn,  should then be useful in informing
+assumptions about the relationships between the information systems that
+generate and use these languages. As such, it should be possible to use the
+metrics to answer specific questions. We chose the following questions as
+demonstrative examples:</p>
+
+<ol>
+  <li>Are the intra-set characteristics of the folksonomies emerging from
+collaborative tagging systems sufficient to distinguish them from term sets
+associated with indexing languages created using professional labour? (We
+assume that the difference in kind between these groups will be expressed
+in a difference in shape as expressed in the intra-set measures.)</li>
+  <li>How much direct overlap exists between terms from the <em>Connotea</em>,
+Bibsonomy, and <em>CiteULike</em> folksonomies, and terms from MeSH? These
+folksonomies are used to describe tens of thousands of the same resources
+as MeSH, hence we expect some overlap in representation, but how much is
+there in reality?</li>
+</ol>
+
+<p>To answer these questions and thus demonstrate example applications of the
+proposed set of metrics, we implemented programs that calculate each intra- and
+inter-set metric described above. In the text that follows, we describe the
+application of these programs to the automated characterization and comparison
+of twenty-two different indexing languages. </p>
+
+<h3>Sample</h3>
+
+<p>We gathered a sample of twenty-two different term sets. The terms were extracted
+from folksonomies, thesauri, and ontologies, all of which are currently in
+active use. Our domains span biology, medicine, agriculture, and computer
+science; however, the sample set is biased towards biology and medicine.
+Ontologies constitute the most common type of structure in the sample simply
+because more of them were accessible than the other forms, Table <a
+href="#tab4">4</a> lists the subjects of the study (note that there are more
+than twenty-two listed because multiple versions for some of the larger term sets were
+considered separately).</p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 4: Term sets</strong><br />
+  (Each of the term sets evaluated in this study is listed here. See <a
+  href="#app1">Appendix 1</a> for additional information about these
+  languages.)<br />
+  </caption>
+  <tbody>
+<tr>
+<th><a name="tab4" id="tab4"></a>Name</th>
+<th>Abbreviation</th>
+<th>Source syntax</th>
+<th>Type</th>
+<th>Domain</th>
+</tr>
+<tr>
+<td width="122" valign="top">Academic Computing Machinery subject listing</td>
+<td width="77" valign="top" style="text-align: center;">ACM 1997</td>
+<td width="72" valign="top" style="text-align: center;">OWL</td>
+<td width="68" valign="top" style="text-align: center;">thesaurus</td>
+<td width="103" valign="top" style="text-align: center;">computer science</td>
+</tr>
+<tr>
+<td width="122" valign="top">Agriculture Information and Standards  ontology</td>
+<td width="77" valign="top" style="text-align: center;">AG</td>
+<td width="72" valign="top" style="text-align: center;">OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">agriculture</td>
+</tr>
+<tr>
+<td width="122" valign="top">Bibsonomy</td>
+<td width="77" valign="top" style="text-align: center;">Bibsonomy</td>
+<td width="72" valign="top" style="text-align: center;">text</td>
+<td width="68" valign="top" style="text-align: center;">folksonomy</td>
+<td width="103" valign="top"  style="text-align: center;">general/academic</td>
+</tr>
+<tr>
+<td width="122" valign="top">BioLinks</td>
+<td width="77" valign="top" style="text-align: center;">BioLinks</td>
+<td width="72" valign="top" style="text-align: center;">OWL</td>
+<td width="68" valign="top" style="text-align: center;">thesaurus</td>
+<td width="103" valign="top"  style="text-align: center;">bioinformatics</td>
+</tr>
+<tr>
+<td width="122" valign="top">Biological Process branch of the Gene Ontology</td>
+<td width="77" valign="top" style="text-align: center;">GO_BP</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+<tr>
+<td width="122" valign="top">Cell Type Ontology</td>
+<td width="77" valign="top" style="text-align: center;">CL</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+<tr>
+<td width="122" valign="top">Cellular Component branch of the Gene  Ontology</td>
+<td width="77" valign="top" style="text-align: center;">GO_CC</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+<tr>
+<td width="122" valign="top">Chemical Entities of Biological  Interest</td>
+<td width="77" valign="top" style="text-align: center;">CHEBI</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+<tr>
+<td width="122" valign="top">CiteULike</td>
+<td width="77" valign="top" style="text-align: center;">CiteULike</td>
+<td width="72" valign="top" style="text-align: center;">text</td>
+<td width="68" valign="top" style="text-align: center;">folksonomy</td>
+<td width="103" valign="top"  style="text-align: center;">general/academic</td>
+</tr>
+<tr>
+<td width="122" valign="top">Common Anatomy Reference Ontology</td>
+<td width="77" valign="top" style="text-align: center;">CARO</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+<tr>
+<td width="122" valign="top">Connotea</td>
+<td width="77" valign="top" style="text-align: center;">Connotea</td>
+<td width="72" valign="top" style="text-align: center;">text</td>
+<td width="68" valign="top" style="text-align: center;">folksonomy</td>
+<td width="103" valign="top" style="text-align: center;">general/academic</td>
+</tr>
+<tr>
+<td width="122" valign="top">Environment Ontology</td>
+<td width="77" valign="top" style="text-align: center;">ENVO</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+<tr>
+<td width="122" valign="top">Foundational Model of Anatomy (preferred labels + synonyms)</td>
+<td width="77" valign="top" style="text-align: center;">FMA +  synonyms</td>
+<td width="72" valign="top" style="text-align: center;">OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology/medicine</td>
+</tr>
+<tr>
+<td width="122" valign="top">Foundational Model of Anatomy (preferred labels)</td>
+<td width="77" valign="top" style="text-align: center;">FMA PrefLabels</td>
+<td width="72" valign="top" style="text-align: center;">OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology/medicine</td>
+</tr>
+<tr>
+<td width="122" valign="top">Medical Subject Headings (descriptors +  entry terms)</td>
+<td width="77" valign="top" style="text-align: center;">MeSH With All  Labels</td>
+<td width="72" valign="top" style="text-align: center;">XML</td>
+<td width="68" valign="top" style="text-align: center;">thesaurus</td>
+<td width="103" valign="top" style="text-align: center;">biology/medicine</td>
+</tr>
+<tr>
+<td width="122" valign="top">Medical Subject Headings (descriptors)</td>
+<td width="77" valign="top" style="text-align: center;">MeSH PrefLabels</td>
+<td width="72" valign="top" style="text-align: center;">XML</td>
+<td width="68" valign="top" style="text-align: center;">thesaurus</td>
+<td width="103" valign="top" style="text-align: center;">biology/medicine</td>
+</tr>
+<tr>
+<td width="122" valign="top">Molecular Function branch of the Gene  Ontology</td>
+<td width="77" valign="top" style="text-align: center;">GO_MF</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+<tr>
+<td width="122" valign="top">National Cancer Institute Thesaurus  (preferred labels + synonyms)</td>
+<td width="77" valign="top" style="text-align: center;">NCI Thesaurus +  synonyms</td>
+<td width="72" valign="top" style="text-align: center;">OWL</td>
+<td width="68" valign="top" style="text-align: center;">thesaurus</td>
+<td width="103" valign="top" style="text-align: center;">biology/medicine</td>
+</tr>
+<tr>
+<td width="122" valign="top">National Cancer Institute Thesaurus (preferred labels)</td>
+<td width="77" valign="top" style="text-align: center;">NCI Thesaurus PrefLabels</td>
+<td width="72" valign="top" style="text-align: center;">OWL</td>
+<td width="68" valign="top" style="text-align: center;">thesaurus</td>
+<td width="103" valign="top" style="text-align: center;">biology/medicine</td>
+</tr>
+<tr>
+<td width="122" valign="top">Ontology for Biomedical Investigation</td>
+<td width="77" valign="top" style="text-align: center;">OBI</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology/medicine</td>
+</tr>
+<tr>
+<td width="122" valign="top">Phenotype Ontology</td>
+<td width="77" valign="top" style="text-align: center;">PATO</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+<tr>
+<td width="122" valign="top">Protein Ontology</td>
+<td width="77" valign="top" style="text-align: center;">PRO</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+<tr>
+<td width="122" valign="top">Sequence Ontology</td>
+<td width="77" valign="top" style="text-align: center;">SO</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+<tr>
+<td width="122" valign="top">Thesaurus of EIONET, the European,  Environment, Information, and Observation Network</td>
+<td width="77" valign="top" style="text-align: center;">GEMET</td>
+<td width="72" valign="top" style="text-align: center;">SKOS/RDF</td>
+<td width="68" valign="top" style="text-align: center;">thesaurus</td>
+<td width="103" valign="top" style="text-align: center;">environment</td>
+</tr>
+<tr>
+<td width="122" valign="top">Zebrafish Anatomy</td>
+<td width="77" valign="top" style="text-align: center;">ZFA</td>
+<td width="72" valign="top" style="text-align: center;">OBO/OWL</td>
+<td width="68" valign="top" style="text-align: center;">ontology</td>
+<td width="103" valign="top" style="text-align: center;">biology</td>
+</tr>
+  </tbody>
+</table>
+
+<p>The indexing languages considered here were chosen for three general
+reasons: (1) they were freely available on the Web, (2) most of the terms
+associated with the indexing languages had representations in English and (3)
+we sought popular examples spanning both controlled and uncontrolled indexing
+languages. Availability on the Web not only made data collection for the
+present study easier, it increases the likelihood that the study could be
+repeated by others in the future. By constraining the natural language of
+origin for the indexing languages under study, the likelihood that the measured
+differences between term sets were the results of factors aside from
+differences in, for example, typical grammatical structure of the source
+languages, was increased. Finally, by sampling from a broad range of the known
+types of indexing language, as suggested, for example, in the typology of
+Tudhope (<a href="#tud06">2006</a>), we hoped to show the generic nature of the
+metrics introduced here and to offer some basic exploratory comparisons of the
+broad groups of controlled and uncontrolled languages. </p>
+
+<p>Although we provide results for all of the inter-term set comparisons, the
+emphasis of the set comparisons is on the relationship between MeSH and the
+uncontrolled indexing languages. To partially decrease the problems, noted
+above, associated with conducting syntactic comparisons of indexing languages
+operating in different contexts, uncontrolled languages were sought that were
+used to index many of the same documents as MeSH. Folksonomies emanating from
+social tagging services targeted towards academic audiences thus compose the
+set of uncontrolled languages in the sample. </p>
+
+<h3>Data analysis</h3>
+
+<p>Once each of the term sets was collected (see <a href="#app1">Appendix
+1</a>), two levels of term normalization were applied corresponding to the
+intra-set analysis (phase 1) and the inter-set analysis (phase 2). Both phases
+were designed based on the premise that most of the terms in the structures
+were English words. Though there were certainly some non-English terms present
+in the folksonomy data, notably German and Spanish, these terms constituted a
+relatively small minority of the terms in the set and, as such, we do not
+believe they had any significant effect on the results.</p>
+
+<h4>Phase 1 term normalization</h4>
+
+<p>Phase 1 normalization was designed primarily to help consistently delineate
+the boundaries of compound words, especially in the case of the folksonomies.
+The operations were:</p>
+<ol>
+  <li>All non-word characters (for example, comma, semi-colon, underline and hyphen) were mapped to
+spaces using a regular expression. So the term
+<em>automatic-ontology_evaluation</em> would become <em>automatic
+ontology evaluation</em>.</li>
+  <li>CamelCase compound words were mapped to space separated words:
+<em>camelCase</em> becomes <em>camel case</em>.</li>
+  <li>All words were made all lower case (<em>case-folded</em>).</li>
+  <li>Any redundant terms were removed such that, after operations 1-3, each
+term in a set composed a string of characters that was unique within that
+set.</li>
+</ol>
+
+<p>All of the intra-set measurements (Size and Flexibility for example) were
+taken after Phase 1 normalization. Phase 2 normalization was applied before the
+set-intersection computations (for the inter-set measurements).</p>
+
+<h4>Phase 2 term normalization</h4>
+
+<p>Phase 2 normalization was intended to reduce the effects of uninformative
+inconsistencies such as <em>dolphins</em> not matching
+<em>dolphin</em> when estimating the intersections of the term sets.</p>
+<ol>
+  <li>Phase 1 normalization was applied.</li>
+  <li>Porter stemming was applied to all terms and sub-terms (<a
+href="#por80">Porter 1980</a>).</li>
+  <li>All sub-terms were sorted alphabetically.</li>
+  <li>All terms and sub-terms with less than two characters were removed.</li>
+  <li>All terms and sub-terms matching words from a popular English stop-word
+list were removed (<a href="#ran08">Default... 2008</a>)</li>
+</ol>
+
+<p>These additional steps resulted in an average reduction in the total number
+of distinct terms per term set of 13% with the most substantial difference seen
+for the <em>MeSH all</em> term set, which included both the preferred
+labels for each descriptor and all of the alternate labels, at 52%. The set of
+just the preferred labels for the MeSH descriptors was only reduced by 3%. This
+demonstrates that the normalization step was successful in reducing redundancy
+within the term sets because the <em>MeSH all</em> set intentionally
+includes many variations of the same term while the preferred labels are
+intended to be distinct. Figure <a href="#fig2">2</a> plots the reduction in
+the (non-redundant) term set size between phase 1 and phase 2 normalization for
+all the term sets.</p>
+
+<div align="center">
+<a name="fig2" id="fig2"></a><img src="p395fig2.png" alt="figure 2" /><br />
+<strong>Figure 2: The effect of phase 2 normalization on the size of the term
+set</strong><br />
+(For each term set, the chart displays the ratio of its size after phase 2
+normalization versus its size after phase 1 normalization.)</div>
+
+<p>After normalization, the shape of each of the term sets was first assessed
+individually using the intra-set measures. Then each of the term sets was
+compared directly to all others using the inter-set metrics. </p>
+
+<h2>Intra-set findings</h2>
+
+<p>The intra-set measures displayed a broad range of diversity across all of
+the samples and provided some preliminary evidence of the presence of distinct
+shapes associated with term sets originating from controlled versus
+uncontrolled information organization structures. The collected measurements
+are provided in Tables 5 to 7 and discussed below. </p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 5: Size and composition of term sets</strong><br />
+  (The term sets are grouped into three types: folksonomies are indicated in
+  green, thesauri in yellow, and ontologies in blue. The maximum and minimum
+  values for each column are indicated by the uncolored cells.) <br />
+  </caption>
+  <tbody>
+<tr>
+<th><p><a name="tab5" id="tab5"></a>Term set</p>
+</th>
+<th>Number distinct terms</th>
+<th>OLP mean number sub-terms per term</th>
+<th>OLP max number sub-terms per term</th>
+<th>OLP median number sub-terms per term</th>
+<th>Complements</th>
+<th>Compositions</th>
+</tr>
+<tr style="background-color: #b7ffb9;">
+<td width="131" valign="top" style="text-align: left;">Bibsonomy</td>
+<td width="54" valign="top" style="text-align: center;">48120</td>
+<td width="59" valign="top" style="text-align: center;">0.63</td>
+<td width="52" valign="top" style="text-align: center;">21</td>
+<td width="51" valign="top" style="text-align: center;background-color:#ffffff">0</td>
+<td width="77" valign="top" style="text-align: center;">16448</td>
+<td width="76" valign="top" style="text-align: center;">25881</td>
+</tr>
+<tr style="background-color: #b7ffb9;">
+<td width="131" valign="top">CiteULike</td>
+<td width="54" valign="top" style="text-align: center;background-color:#ffffff">234223</td>
+<td width="59" valign="top" style="text-align: center;background-color:#ffffff">0.56</td>
+<td width="52" valign="top" style="text-align: center;">14</td>
+<td width="51" valign="top" style="text-align: center;background-color:#ffffff">0</td>
+<td width="77" valign="top" style="text-align: center;">62364</td>
+<td width="76" valign="top" style="text-align: center;">127118</td>
+</tr>
+<tr style="text-align: center;  background-color: #b7ffb9;">
+<td width="131" valign="top" style="text-align: left;">Connotea</td>
+<td width="54" valign="top">133455</td>
+<td width="59" valign="top">1.49</td>
+<td width="52" valign="top">33</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">119486</td>
+<td width="76" valign="top">183980</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="131" valign="top" style="text-align: left;">ACM 1997 (OWL version)</td>
+<td width="54" valign="top">1194</td>
+<td width="59" valign="top">2.47</td>
+<td width="52" valign="top">15</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">583</td>
+<td width="76" valign="top">654</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="131" valign="top" style="text-align: left;">AG (English terms)</td>
+<td width="54" valign="top">28432</td>
+<td width="59" valign="top">1.34</td>
+<td width="52" valign="top">7</td> 
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">7146</td>
+<td width="76" valign="top">10018</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="131" valign="top" style="text-align: left;">BioLinks</td>
+<td width="54" valign="top">90</td>
+<td width="59" valign="top">1.87</td>
+<td width="52" valign="top">6</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top" style="background-color:#ffffff">9</td>
+<td width="76" valign="top" style="background-color:#ffffff">9</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="131" valign="top" style="text-align: left;">GEMET</td>
+<td width="54" valign="top">5207</td>
+<td width="59" valign="top">1.68</td>
+<td width="52" valign="top">7</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">2201</td>
+<td width="76" valign="top">3809</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="131" valign="top" style="text-align: left;">MeSH PrefLabels</td>
+<td width="54" valign="top">24766</td>
+<td width="59" valign="top">1.67</td>
+<td width="52" valign="top">20</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">8333</td>
+<td width="76" valign="top">11162</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="131" valign="top" style="text-align: left;">MeSH With All Labels</td>
+<td width="54" valign="top">167081</td>
+<td width="59" valign="top">2.35</td>
+<td width="52" valign="top">27</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">90032</td>
+<td width="76" valign="top">163010</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">CARO</td>
+<td width="54" valign="top" style="background-color:#ffffff">50</td>
+<td width="59" valign="top">2.38</td>
+<td width="52" valign="top" style="background-color: #ffffff">4</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">21</td>
+<td width="76" valign="top">22</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">CHEBI</td>
+<td width="54" valign="top">73465</td>
+<td width="59" valign="top" style="background-color: #ffffff">8.88</td>
+<td width="52" valign="top" style="background-color:#ffffff">241</td>
+<td width="51" valign="top">3</td>
+<td width="77" valign="top">255506</td>
+<td width="76" valign="top">289469</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">CL</td>
+<td width="54" valign="top">1268</td>
+<td width="59" valign="top">2.57</td>
+<td width="52" valign="top">9</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">1171</td>
+<td width="76" valign="top">1529</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">ENVO</td>
+<td width="54" valign="top">2001</td>
+<td width="59" valign="top">1.49</td>
+<td width="52" valign="top">10</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">925</td>
+<td width="76" valign="top">1452</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">FMA plus  synonyms</td>
+<td width="54" valign="top">120243</td>
+<td width="59" valign="top">5.81</td>
+<td width="52" valign="top">18</td>
+<td width="51" valign="top" style="text-align: center;background-color:#ffffff">6</td>
+<td width="77" valign="top">255632</td>
+<td width="76" valign="top">545648</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">FMA  Preflabels</td>
+<td width="54" valign="top">75147</td>
+<td width="59" valign="top">6.14</td>
+<td width="52" valign="top">18</td>
+<td width="51" valign="top" style="background-color:#ffffff">6</td>
+<td width="77" valign="top">169042</td>
+<td width="76" valign="top">352541</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">GO_BP</td>
+<td width="54" valign="top">42482</td>
+<td width="59" valign="top">5.00</td>
+<td width="52" valign="top">33</td>
+<td width="51" valign="top">5</td>
+<td width="77" valign="top">33667</td>
+<td width="76" valign="top">79062</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">GO_CC</td>
+<td width="54" valign="top">3539</td>
+<td width="59" valign="top">3.45</td>
+<td width="52" valign="top">14</td>
+<td width="51" valign="top">3</td>
+<td width="77" valign="top">2493</td>
+<td width="76" valign="top">3821</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">GO_MF</td>
+<td width="54" valign="top">30843</td>
+<td width="59" valign="top">4.83</td>
+<td width="52" valign="top">62</td>
+<td width="51" valign="top">4</td>
+<td width="77" valign="top">18941</td>
+<td width="76" valign="top">26138</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">NCI hesaurus &sbquo; preflabels</td>
+<td width="54" valign="top">60980</td>
+<td width="59" valign="top">3.38</td>
+<td width="52" valign="top">31</td>
+<td width="51" valign="top">3</td>
+<td width="77" valign="top">107413</td>
+<td width="76" valign="top">148151</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">NCI Thesaurus + synonyms</td>
+<td width="54" valign="top">146770</td>
+<td width="59" valign="top">3.81</td>
+<td width="52" valign="top">73</td>
+<td width="51" valign="top">3</td>
+<td width="77" valign="top" style="background-color: #ffffff">391297</td>
+<td width="76" valign="top" style="background-color: #ffffff">592554</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">OBI</td>
+<td width="54" valign="top">764</td>
+<td width="59" valign="top">2.20</td>
+<td width="52" valign="top">8</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">288</td>
+<td width="76" valign="top">315</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">PATO</td>
+<td width="54" valign="top">2162</td>
+<td width="59" valign="top">1.57</td>
+<td width="52" valign="top">7</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">1162</td>
+<td width="76" valign="top">2780</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">PRO</td>
+<td width="54" valign="top">837</td>
+<td width="59" valign="top">4.28</td>
+<td width="52" valign="top">32</td>
+<td width="51" valign="top">5</td>
+<td width="77" valign="top">552</td>
+<td width="76" valign="top">767</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">SO</td>
+<td width="54" valign="top">2104</td>
+<td width="59" valign="top">2.86</td>
+<td width="52" valign="top">18</td>
+<td width="51" valign="top">3</td>
+<td width="77" valign="top">2342</td>
+<td width="76" valign="top">3183</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="131" valign="top" style="text-align: left;">ZFA</td>
+<td width="54" valign="top">3250</td>
+<td width="59" valign="top">2.40</td>
+<td width="52" valign="top">8</td>
+<td width="51" valign="top">2</td>
+<td width="77" valign="top">2255</td>
+<td width="76" valign="top">3616</td>
+</tr>
+  </tbody>
+</table>
+
+<br /><br />
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 6: Modularity measurement ratios</strong><br />
+  (The term sets are grouped into three types: folksonomies are indicated in
+  green, thesauri in yellow, and ontologies in blue. The maximum and minimum
+  values for each column are indicated by the uncolored cells.)<br />
+  </caption>
+  <tbody>
+<tr>
+<th width="82" valign="top"><a name="tab6" id="tab6"></a>Term set</th>
+<th width="54" valign="top">OLP uniterms</th>
+<th width="50" valign="top">OLP duplets</th>
+<th width="50" valign="top">OLP triplets</th>
+<th width="54" valign="top">OLP quadplus</th>
+<th width="59" valign="top">OLP flexibility</th>
+<th width="50" valign="top">Contains  another</th>
+<th width="77" valign="top">Contained by another</th>
+</tr>
+<tr style="text-align: center; background-color: #b7ffb9;">
+<td width="82" valign="top" style="text-align: left;">Bibsonomy</td>
+<td width="54" valign="top">72.7%</td>
+<td width="50" valign="top">21.7%</td>
+<td width="50" valign="top">4.2%</td>
+<td width="54" valign="top">1.5%</td>
+<td width="59" valign="top">56.6%</td>
+<td width="50" valign="top">25.8%</td>
+<td width="77" valign="top">13.7%</td>
+</tr>
+<tr  style="text-align: center; background-color: #b7ffb9;">
+<td width="82" valign="top" style="text-align: left;">CiteULike</td>
+<td width="54" valign="top" style="background-color:#ffffff;">75.8%</td>
+<td width="50" valign="top">18.8%</td>
+<td width="50" valign="top">4.3%</td>
+<td width="54" valign="top">1.2%</td>
+<td width="59" valign="top" style="background-color:#ffffff;">68.2%</td>
+<td width="50" valign="top">23.8%</td>
+<td width="77" valign="top">9.6%</td>
+</tr>
+<tr  style="text-align: center; background-color: #b7ffb9;">
+<td width="82" valign="top" style="text-align: left;">Connotea</td>
+<td width="54" valign="top">44.8%</td>
+<td width="50" valign="top">35.1%</td>
+<td width="50" valign="top">12.4%</td>
+<td width="54" valign="top">7.7%</td>
+<td width="59" valign="top">43.8%</td>
+<td width="50" valign="top">51.7%</td>
+<td width="77" valign="top">18.2%</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="82" valign="top" style="text-align: left;">ACM 1997 (OWL version)</td>
+<td width="54" valign="top">18.5%</td>
+<td width="50" valign="top">40.9%</td>
+<td width="50" valign="top">18.4%</td>
+<td width="54" valign="top">22.2%</td>
+<td width="59" valign="top">9.2%</td>
+<td width="50" valign="top">40.3%</td>
+<td width="77" valign="top">12.8%</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="82" valign="top" style="text-align: left;">AG (English terms)</td>
+<td width="54" valign="top">34.3%</td>
+<td width="50" valign="top" style="background-color:#ffffff;">63.1%</td>
+<td width="50" valign="top" style="background-color:#ffffff;">2.2%</td>
+<td width="54" valign="top" style="background-color:#ffffff;">0.4%</td>
+<td width="59" valign="top">15.6%</td>
+<td width="50" valign="top">32.5%</td>
+<td width="77" valign="top">11.0%</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="82" valign="top" style="text-align: left;">BioLinks</td>
+<td width="54" valign="top">35.6%</td>
+<td width="50" valign="top">31.1%</td>
+<td width="50" valign="top">14.4%</td>
+<td width="54" valign="top">18.9%</td>
+<td width="59" valign="top">6.5%</td>
+<td width="50" valign="top" style="background-color:#ffffff;">8.9%</td>
+<td width="77" valign="top" style="background-color:#ffffff;">8.9%</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="82" valign="top" style="text-align: left;">GEMET</td>
+<td width="54" valign="top">27.5%</td>
+<td width="50" valign="top">54.4%</td>
+<td width="50" valign="top">13.9%</td>
+<td width="54" valign="top">4.1%</td>
+<td width="59" valign="top">26.6%</td>
+<td width="50" valign="top">51.7%</td>
+<td width="77" valign="top">16.0%</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="82" valign="top" style="text-align: left;">MeSH PrefLabels</td>
+<td width="54" valign="top">37.3%</td>
+<td width="50" valign="top">37.1%</td>
+<td width="50" valign="top">15.7%</td>
+<td width="54" valign="top">9.8%</td>
+<td width="59" valign="top">15.8%</td>
+<td width="50" valign="top">35.1%</td>
+<td width="77" valign="top">10.5%</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td width="82" valign="top" style="text-align: left;">MeSH With All Labels</td>
+<td width="54" valign="top">16.4%</td>
+<td width="50" valign="top">40.6%</td>
+<td width="50" valign="top">28.1%</td>
+<td width="54" valign="top">14.9%</td>
+<td width="59" valign="top">23.1%</td>
+<td width="50" valign="top">62.0%</td>
+<td width="77" valign="top">10.4%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">CARO</td>
+<td width="54" valign="top">4.0%</td>
+<td width="50" valign="top">54.0%</td>
+<td width="50" valign="top" style="background-color:#ffffff;">38.0%</td>
+<td width="54" valign="top">4.0%</td>
+<td width="59" valign="top">3.7%</td>
+<td width="50" valign="top">44.0%</td>
+<td width="77" valign="top">12.0%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">CHEBI</td>
+<td width="54" valign="top">22.1%</td>
+<td width="50" valign="top">18.8%</td>
+<td width="50" valign="top">11.2%</td>
+<td width="54" valign="top">47.9%</td>
+<td width="59" valign="top">33.2%</td>
+<td width="50" valign="top">73.7%</td>
+<td width="77" valign="top">20.9%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">CL</td>
+<td width="54" valign="top">15.3%</td>
+<td width="50" valign="top">35.3%</td>
+<td width="50" valign="top">28.0%</td>
+<td width="54" valign="top">21.4%</td>
+<td width="59" valign="top">6.3%</td>
+<td width="50" valign="top">80.6%</td>
+<td width="77" valign="top">13.4%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">ENVO</td>
+<td width="54" valign="top">37.3%</td>
+<td width="50" valign="top">47.6%</td>
+<td width="50" valign="top">10.4%</td>
+<td width="54" valign="top">4.6%</td>
+<td width="59" valign="top">26.6%</td>
+<td width="50" valign="top">51.6%</td>
+<td width="77" valign="top">17.3%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">FMA plus synonyms</td>
+<td width="54" valign="top">1.2%</td>
+<td width="50" valign="top">6.9%</td>
+<td width="50" valign="top">11.7%</td>
+<td width="54" valign="top">80.2%</td>
+<td width="59" valign="top">15.0%</td>
+<td width="50" valign="top">95.1%</td>
+<td width="77" valign="top">24.6%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">FMA Preflabels</td>
+<td width="54" valign="top">1.4%</td>
+<td width="50" valign="top" style="background-color:#ffffff;">5.2%</td>
+<td width="50" valign="top">8.8%</td>
+<td width="54" valign="top" style="background-color:#ffffff;">84.6%</td>
+<td width="59" valign="top">16.6%</td>
+<td width="50" valign="top" style="background-color:#ffffff;">95.5%</td>
+<td width="77" valign="top" style="background-color:#ffffff;">25.3%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">GO_BP</td>
+<td width="54" valign="top" style="background-color:#ffffff;">0.8%</td>
+<td width="50" valign="top">14.4%</td>
+<td width="50" valign="top">18.1%</td>
+<td width="54" valign="top">66.7%</td>
+<td width="59" valign="top">3.7%</td>
+<td width="50" valign="top">87.1%</td>
+<td width="77" valign="top">20.7%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">GO_CC</td>
+<td width="54" valign="top">9.1%</td>
+<td width="50" valign="top">26.7%</td>
+<td width="50" valign="top">22.3%</td>
+<td width="54" valign="top">41.9%</td>
+<td width="59" valign="top">7.0%</td>
+<td width="50" valign="top">57.0%</td>
+<td width="77" valign="top">19.5%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">GO_MF</td>
+<td width="54" valign="top">4.0%</td>
+<td width="50" valign="top">8.2%</td>
+<td width="50" valign="top">20.4%</td>
+<td width="54" valign="top">67.5%</td>
+<td width="59" valign="top" style="background-color:#ffffff;">2.3%</td>
+<td width="50" valign="top">58.2%</td>
+<td width="77" valign="top">11.0%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">NCI Thesaurus - preflabels</td>
+<td width="54" valign="top">14.8%</td>
+<td width="50" valign="top">25.8%</td>
+<td width="50" valign="top">22.5%</td>
+<td width="54" valign="top">36.9%</td>
+<td width="59" valign="top">22.3%</td>
+<td width="50" valign="top">77.9%</td>
+<td width="77" valign="top">17.2%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">NCI Thesaurus + synonyms</td>
+<td width="54" valign="top">16.8%</td>
+<td width="50" valign="top">20.1%</td>
+<td width="50" valign="top">17.5%</td>
+<td width="54" valign="top">45.6%</td>
+<td width="59" valign="top">37.5%</td>
+<td width="50" valign="top">81.3%</td>
+<td width="77" valign="top">24.8%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">OBI</td>
+<td width="54" valign="top">19.5%</td>
+<td width="50" valign="top">42.1%</td>
+<td width="50" valign="top">25.1%</td>
+<td width="54" valign="top">13.2%</td>
+<td width="59" valign="top">7.7%</td>
+<td width="50" valign="top">32.2%</td>
+<td width="77" valign="top">13.6%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">PATO</td>
+<td width="54" valign="top">36.6%</td>
+<td width="50" valign="top">40.0%</td>
+<td width="50" valign="top">17.7%</td>
+<td width="54" valign="top">5.7%</td>
+<td width="59" valign="top">42.8%</td>
+<td width="50" valign="top">57.6%</td>
+<td width="77" valign="top">32.2%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">PRO</td>
+<td width="54" valign="top">11.1%</td>
+<td width="50" valign="top">6.0%</td>
+<td width="50" valign="top">11.8%</td>
+<td width="54" valign="top">71.1%</td>
+<td width="59" valign="top">12.1%</td>
+<td width="50" valign="top">69.7%</td>
+<td width="77" valign="top">17.6%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">SO</td>
+<td width="54" valign="top">12.8%</td>
+<td width="50" valign="top">29.8%</td>
+<td width="50" valign="top">27.5%</td>
+<td width="54" valign="top">30.0%</td>
+<td width="59" valign="top">17.2%</td>
+<td width="50" valign="top">76.4%</td>
+<td width="77" valign="top">22.6%</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td width="82" valign="top" style="text-align: left;">ZFA</td>
+<td width="54" valign="top">17.4%</td>
+<td width="50" valign="top">36.4%</td>
+<td width="50" valign="top">26.0%</td>
+<td width="54" valign="top">20.3%</td>
+<td width="59" valign="top">13.7%</td>
+<td width="50" valign="top">60.9%</td>
+<td width="77" valign="top">14.7%</td>
+</tr>
+  </tbody>
+</table>
+
+<br /><br />
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 7: Measurements of term length</strong><br />
+  (The term sets are grouped into three types: folksonomies are indicated in
+  green, thesauri in yellow, and ontologies in blue. The maximum and minimum
+  values for each column are indicated by the uncolored cells.)<br />
+  </caption>
+  <tbody>
+<tr>
+<th><a name="tab7" id="tab7"></a>Term set</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Median</th>
+<th>Standard Deviation</th>
+<th>Skewness</th>
+<th>Coefficient of variation</th>
+</tr>
+<tr style="text-align: center; background-color: #b7ffb9;">
+<td valign="top" style="text-align: left;">Bibsonomy</td>
+<td valign="top" style="background-color:#ffffff">10.19</td>
+<td valign="top">196.00</td>
+<td valign="top" style="background-color:#ffffff">9.00</td>
+<td valign="top">6.59</td>
+<td valign="top">5.17</td>
+<td valign="top">0.65</td>
+</tr>
+<tr style="text-align: center; background-color: #b7ffb9;">
+<td valign="top" style="text-align: left;">CiteULike</td>
+<td valign="top">12.38</td>
+<td valign="top">80.00</td>
+<td valign="top">11.00</td>
+<td valign="top">7.35</td>
+<td valign="top">1.83</td>
+<td valign="top">0.59</td>
+</tr>
+<tr style="text-align: center; background-color: #b7ffb9;">
+<td valign="top" style="text-align: left;">Connotea</td>
+<td valign="top">15.29</td>
+<td valign="top">268.00</td>
+<td valign="top">13.00</td>
+<td valign="top">14.14</td>
+<td valign="top" style="background-color:#ffffff">7.56</td>
+<td valign="top">0.92</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td valign="top" style="text-align: left;">ACM 1997 (OWL version)</td>
+<td valign="top">21.70</td>
+<td valign="top">94.00</td>
+<td valign="top">20.00</td>
+<td valign="top">10.96</td>
+<td valign="top">1.48</td>
+<td valign="top">0.51</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td valign="top" style="text-align: left;">AG (English terms)</td>
+<td valign="top">15.29</td>
+<td valign="top">48.00</td>
+<td valign="top">15.00</td>
+<td valign="top" style="background-color: #ffffff">5.67</td>
+<td valign="top" style="background-color:#ffffff">0.12</td>
+<td valign="top">0.37</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td valign="top" style="text-align: left;">BioLinks</td>
+<td valign="top">16.30</td>
+<td valign="top">45.00</td>
+<td valign="top">15.00</td>
+<td valign="top">9.12</td>
+<td valign="top">0.74</td>
+<td valign="top">0.56</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td valign="top" style="text-align: left;">GEMET</td>
+<td valign="top">15.48</td>
+<td valign="top">54.00</td>
+<td valign="top">15.00</td>
+<td valign="top">6.73</td>
+<td valign="top">0.67</td>
+<td valign="top">0.43</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td valign="top" style="text-align: left;">MeSH PrefLabels</td>
+<td valign="top">17.46</td>
+<td valign="top">98.00</td>
+<td valign="top">16.00</td>
+<td valign="top">8.71</td>
+<td valign="top">1.29</td>
+<td valign="top">0.50</td>
+</tr>
+<tr style="text-align: center; background-color: #fefdc2;">
+<td valign="top" style="text-align: left;">MeSH With All  Labels</td>
+<td valign="top">20.36</td>
+<td valign="top">112.00</td>
+<td valign="top">19.00</td>
+<td valign="top">9.29</td>
+<td valign="top">0.93</td>
+<td valign="top">0.46</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">CARO</td>
+<td valign="top">20.96</td>
+<td valign="top"  style="background-color:#ffffff">35.00</td>
+<td valign="top">20.00</td>
+<td valign="top">7.24</td>
+<td valign="top">0.30</td>
+<td valign="top" style="background-color:#ffffff">0.35</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">CHEBI</td>
+<td valign="top">36.12</td>
+<td valign="top" style="background-color:#ffffff">831.00</td>
+<td valign="top">21.00</td>
+<td valign="top" style="background-color:#ffffff">45.44</td>
+<td valign="top">4.01</td>
+<td valign="top" style="background-color:#ffffff">1.26</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">CL</td>
+<td valign="top">19.35</td>
+<td valign="top">72.00</td>
+<td valign="top">18.00</td>
+<td valign="top">9.59</td>
+<td valign="top">1.07</td>
+<td valign="top">0.50</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">ENVO</td>
+<td valign="top">12.43</td>
+<td valign="top">73.00</td>
+<td valign="top">11.00</td>
+<td valign="top">7.80</td>
+<td valign="top">2.32</td>
+<td valign="top">0.63</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">FMA plus synonyms</td>
+<td valign="top">38.26</td>
+<td valign="top">125.00</td>
+<td valign="top">36.00</td>
+<td valign="top">16.45</td>
+<td valign="top">0.64</td>
+<td valign="top">0.43</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">FMA Preflabels</td>
+<td valign="top" style="background-color:#ffffff">40.35</td>
+<td valign="top">125.00</td>
+<td valign="top" style="background-color:#ffffff">38.00</td>
+<td valign="top">17.03</td>
+<td valign="top">0.59</td>
+<td valign="top">0.42</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">GO_BP</td>
+<td valign="top">39.71</td>
+<td valign="top">160.00</td>
+<td valign="top">37.00</td>
+<td valign="top">18.63</td>
+<td valign="top">1.38</td>
+<td valign="top">0.47</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">GO_CC</td>
+<td valign="top">26.50</td>
+<td valign="top">96.00</td>
+<td valign="top">23.00</td>
+<td valign="top">15.29</td>
+<td valign="top">1.00</td>
+<td valign="top">0.58</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">GO_MF</td>
+<td valign="top">39.82</td>
+<td valign="top">322.00</td>
+<td valign="top">38.00</td>
+<td valign="top">19.61</td>
+<td valign="top">1.45</td>
+<td valign="top">0.49</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">NCI Thesaurus - preflabels</td>
+<td valign="top">25.87</td>
+<td valign="top">208.00</td>
+<td valign="top">22.00</td>
+<td valign="top">17.36</td>
+<td valign="top">1.86</td>
+<td valign="top">0.67</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">NCI Thesaurus + synonyms</td>
+<td valign="top">26.67</td>
+<td valign="top">342.00</td>
+<td valign="top">23.00</td>
+<td valign="top">19.96</td>
+<td valign="top">2.25</td>
+<td valign="top">0.75</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">OBI</td>
+<td valign="top">18.69</td>
+<td valign="top">62.00</td>
+<td valign="top">17.00</td>
+<td valign="top">9.46</td>
+<td valign="top">0.99</td>
+<td valign="top">0.51</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">PATO</td>
+<td valign="top">14.96</td>
+<td valign="top">46.00</td>
+<td valign="top">14.00</td>
+<td valign="top">7.33</td>
+<td valign="top">0.67</td>
+<td valign="top">0.49</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">PRO</td>
+<td valign="top">26.38</td>
+<td valign="top">162.00</td>
+<td valign="top">27.00</td>
+<td valign="top">13.82</td>
+<td valign="top">1.40</td>
+<td valign="top">0.52</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">SO</td>
+<td valign="top">19.87</td>
+<td valign="top">142.00</td>
+<td valign="top">18.00</td>
+<td valign="top">11.86</td>
+<td valign="top">1.58</td>
+<td valign="top">0.60</td>
+</tr>
+<tr style="text-align: center; background-color: #b9ecfd;">
+<td valign="top" style="text-align: left;">ZFA</td>
+<td valign="top">18.45</td>
+<td valign="top">72.00</td>
+<td valign="top">18.00</td>
+<td valign="top">8.72</td>
+<td valign="top">0.54</td>
+<td valign="top">0.47</td>
+</tr>
+  </tbody>
+</table>
+
+<p>Table <a href="#tab5">5</a> contains the non-ratio measurements of the size
+and the composition of the term sets. From it, we can see that there is a wide
+range in the size and degrees of modularity of the term sets under study. The
+largest term set was the <a href="http://www.citeulike.org/">CiteULike</a>
+folksonomy at 234,223 terms and the smallest was the Common Anatomy Reference
+ontology (<a href="#hae08">Haendel <em>et al</em>. 2008</a>) at just fifty terms.
+There was also substantial variation in the total number of Observed Linguistic Precoordination sub-terms per
+term, with the CHEBI ontology (<a href="#deg08">Degtyarenko <em>et al</em>.
+2008</a>) averaging 8.88 while the <a
+href="http://www.bibsonomy.org/">Bibsonomy</a> folksonomy averaged just 0.63.
+This is suggestive of differences in the relative compositionality of the
+different term sets, with the ontologies being much more modular in general
+than the folksonomies. </p>
+
+<p>The sub-terms per term measurement highlights the uniqueness of the CHEBI
+ontology within the context of our sample; its terms include both
+normal language constructs like <em>tetracenomycin F1 methyl
+ester</em> and chemical codes like  <em>methyl
+3,8,10,12-tetrahydroxy-1-methyl-11-oxo-6,11-dihydrotetracene-2-carboxylate</em>.
+Although both term structures are highly modular in this large ontology, the
+latter are clearly driving the very high observed mean number of sub-terms per
+term. </p>
+
+<p>Table <a href="#tab6">6</a> focuses specifically on illustrating the amount
+of modularity apparent in these term sets. It displays the percentages of
+uniterms, duplets, triplets, and quadplus terms; the flexibility, and the
+percentages of terms that contain other terms or are contained by other terms.
+The <em>CiteULike</em> folksonomy has the highest percentage of uniterms at 75.8%,
+followed closely by the <em>Bibsonomy</em> folksonomy at 72.7%, while the two lowest
+percentages are observed for the Foundational Model of Anatomy (FMA) (including
+synonyms), described by Rosse and Mejino (<a href="#ros03">2003</a>), at 1.2%
+and the Biological Process (BP) branch of the Gene Ontology, described by
+Ashburner <em>et al.</em> (<a href="#ash00">2000</a>) at 0.8%. This tendency
+towards increased compositionality in these ontologies and decreased
+compositionality in these folksonomies is also apparent in the percentage of
+their terms that contain other complete terms from the structure, with more
+than 95% of the FMA terms containing other FMA terms and only 23.8% of the
+Bibsonomy terms containing another <em>Bibsonomy</em> term. As might be expected, larger
+average term lengths, as presented in Table <a href="#tab7">7</a>, appear to
+correlate to some extent with some of the measures indicating increased
+compositionality. The highest correlation for a compositionality measure with
+average term length was observed for Observed Linguistic Precoordination Quad Plus (r-squared 0.86) while the
+lowest was for containedByAnother (r-squared 0.13). The highest mean term
+length observed was 40.35 characters for the preferred labels for the FMA and
+the lowest was 10.19 for the <em>Bibsonomy</em> terms. </p>
+
+<h3>Factor analysis</h3>
+
+<p>Following the collection of the individual parameters described above,
+exploratory factor analysis was applied to the data to deduce the major
+dimensions. Before executing the factor analysis, the data were pruned
+manually to reduce the degree of correlation between the variables. The
+features utilized in the factor analysis were thus limited to <em>percent of uniterms</em>, <em>percent of
+duplets</em>, <em>percent of quadplus</em>, <em>flexibility</em>, <em>percent of containsAnother</em>, <em>percent of containedByAnother,</em> <em>mean number of sub-terms per term</em>, <em>mean term length</em>, and the <em>coefficient of variation
+for term length</em>. Maximum likelihood factor analysis, as implemented in the R
+statistical programming environment by the R Development Core Team (<a
+href="#rde08">2008</a>), was applied using these variables for all of the
+sampled term sets. Three tests were conducted with 1, 2, and 3 factors to be
+fitted respectively. In each of these tests, the dominant factor, which might
+be labelled <em>term complexity</em>, was associated with the variables:
+<em>percent of quadplus</em>, <em>mean term length</em>, and <em>mean sub-terms per term</em>. In the 2-factor test,
+the secondary factor was most associated with the <em>percent of uniterms</em> and the
+<em>flexibility</em>. Finally, in the 3 factor analysis, the third factor was associated
+with percent of <em>containsAnother</em> and percent <em>containedByAnother</em>. Table <a href="#tab8">8</a> provides the factor loadings for the 3-factor test. </p>
+
+<br /><br />
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 8: Factor loadings from maximum likelihood factor analysis
+  using three factors</strong><br />
+  (The loadings for the dominant variables are indicated in bold.) </caption>
+  <tbody>
+<tr>
+<th width="111" valign="top"><a name="tab8" id="tab8"></a>Variable</th>
+<th width="111" valign="top">Factor1</th>
+<th width="111" valign="top">Factor2</th>
+<th width="111" valign="top">Factor3</th>
+</tr>
+<tr>
+<td width="111" valign="top">pct.OLP.uniterms</td>
+<td width="111" valign="top" style="text-align: center;">-0.321</td>
+<td width="111" valign="top" style="text-align: center;">-0.537</td>
+<td valign="top" style="text-align: center; font-weight: bold;" width="111">0.774</td>
+</tr>
+<tr>
+<td width="111" valign="top">pct.OLP.duplets</td>
+<td width="111" valign="top" style="text-align: center;">-0.907</td>
+<td width="111" valign="top" style="text-align: center;">-0.131</td>
+<td width="111" valign="top" style="text-align: center;">-0.275</td>
+</tr>
+<tr>
+<td width="111" valign="top">pct.OLP.quadplus</td>
+<td width="111" valign="top" style="text-align: center; font-weight: bold;">0.876</td>
+<td width="111" valign="top" style="text-align: center;">0.409</td>
+<td width="111" valign="top" style="text-align: center;">-0.24</td>
+</tr>
+<tr>
+<td width="111" valign="top">OLP.flexibility</td>
+<td width="111" valign="top" style="text-align: center;">-0.199</td>
+<td width="111" valign="top" style="text-align: center;"></td>
+<td width="111" valign="top"  style="text-align: center; font-weight: bold;">0.94</td>
+</tr>
+<tr>
+<td width="111" valign="top">pct.containsAnother
+</td>
+<td width="111" valign="top" style="text-align: center;">0.421</td>
+<td width="111" valign="top" style="text-align: center; font-weight: bold;">0.814</td>
+<td width="111" valign="top" style="text-align: center;">-0.171</td>
+</tr>
+<tr>
+<td width="111" valign="top">pct.containedByAnother</td>
+<td width="111" valign="top" style="text-align: center;">0.206</td>
+<td width="111" valign="top" style="text-align: center; font-weight: bold;">0.756</td>
+<td width="111" valign="top" style="text-align: center;">0.173</td>
+</tr>
+<tr>
+<td width="111" valign="top">Mean.Term Length</td>
+<td width="111" valign="top" style="text-align: center; font-weight: bold;">0.769</td>
+<td width="111" valign="top" style="text-align: center;">0.438</td>
+<td width="111" valign="top" style="text-align: center;">-0.321</td>
+</tr>
+<tr>
+<td width="111" valign="top">Coefficient.of.variation. Term.Length</td>
+<td width="111" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="111" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="111" valign="top" style="text-align: center;">0.54</td>
+</tr>
+<tr>
+<td width="111" valign="top">OLP.mean.number.sub.terms.per.term</td>
+<td width="111" valign="top" style="text-align: center; font-weight: bold;">0.665</td>
+<td width="111" valign="top" style="text-align: center;">0.518</td>
+<td width="111" valign="top" style="text-align: center;">-0.216</td>
+</tr>
+  </tbody>
+</table>
+
+<h3>Controlled versus uncontrolled term sets</h3>
+
+<p>The data presented in Tables 5 to 7 provide evidence that the metrics captured
+here are sufficient to distinguish between term sets representing different
+indexing languages. To assess their utility in quantifying differences between
+indexing languages emanating from different kinds of information system, we
+tested to see if they could be used to differentiate between the languages
+produced by professional labour (the thesauri and the ontologies) and languages
+generated by the masses (the folksonomies). </p>
+
+<p>This examination was conducted using manual inspection of the data,
+multi-dimensional visualization, and cluster analysis. At each step, we tested
+to see if the data suggested the presence of a distinct constellation of
+intra-set parameters associated with the term sets drawn from the folksonomies.
+For some subsets of variables, the difference was obvious. For example, as
+Figure <a href="#fig3">3</a> illustrates, both the <em>percent of uniterms</em> and the <em>Observed Linguistic Precoordination flexibility</em> measurements were sufficient to separate the folksonomies from the other term sets independently. For other subsets of variables, the differences
+were less clear and, in some cases, the folksonomies did not group together.</p>
+
+<p>Figures 4 to 10 use radar-charts to illustrate the shapes associated with the
+three folksonomies in the sample as well as representative ontologies and
+thesauri. Radar charts were chosen because they make it possible to visualize
+large numbers of dimensions simultaneously. Though it would be possible to
+reduce the number of features in the charts, for example using the results from
+the factor analysis presented above, we chose to present all of the
+measurements taken. These figures, which capture all of the features measured
+for a given term set in a single image, suggest fairly distinct patterns in the
+term sets associated with the different kinds of information system present in
+our sample. However, when utilizing all of the variables, the borders of the
+various categories are not entirely clear. For example, the <em>Bibsonomy</em> and
+<em>CiteULike</em> folksonomies appear to be nearly identical in these charts but, while
+similar, the <em>Connotea</em> folksonomy shows substantial variations. </p>
+
+<p>In various iterations of cluster analysis we repeatedly found that the
+<em>Bibsonomy</em> and the <em>CiteULike</em> term sets grouped tightly together and that
+<em>Connotea</em> was generally similar to them but that this similarity was strongly
+influenced by the specific subset of the metrics used. In one specific analysis
+presented in Good &amp; Tennis (<a href="#goo08">2008</a>), Ward&rsquo;s method
+identified a distinct cluster containing just the folksonomies using the
+following parameters: <em>percent of uniterms</em>, <em>percent of duplets</em>, <em>flexibility</em>, <em>percent contained by another</em>, <em>standard deviation of term length</em>, <em>skewness of term length</em>, and <em>number of complements</em>. </p>
+
+<div align="center">
+<a name="fig3" id="fig3"></a><img src="p395fig3.png" alt="fig3" /><br />
+<strong>Figure 3: %Uniterms verse Observed Linguistic Precoordination flexibility </strong><br />
+(Either metric is sufficient to form a linear separator between the term sets
+originating from folksonomies (the three in the upper right corner) and the
+controlled terms from the other information organization structures in the
+sample. The Pearson correlation coefficient for <em>percent of uniterms</em> and <em>Observed Linguistic Precoordination flexibility</em>
+is 0.79. )</div>
+
+<p>These results indicate that the answer to the first question, namely:
+Are the terms from folksonomies shaped differently than the terms from
+controlled vocabularies? is, generally, yes. Subsets of these metrics
+can be used to separate folksonomies from the controlled vocabularies using a
+variety of methods. However, <em>Bibsonomy</em> and <em>CiteULike</em> are clearly much more
+similar to each other than either is to <em>Connotea</em>. Without advancing a
+definitive answer as to why this is the case, we offer several possible
+explanations. First, one clear technical difference between <em>Connotea</em> and the
+other two systems is that it allows spaces in its tags. For example, it is
+possible to use the tag <em>semantic Web</em> in <em>Connotea</em>, but, in
+Bibsonomy or <em>CiteULike</em>, one would have to use a construct like
+<em>semanticWeb</em>, <em>semantic-Web</em>, or
+<em>semanticWeb</em> to express the same term. Though the syntactic
+normalization we utilized will equate <em>semantic-Web</em> with
+<em>semantic Web</em> (and detect the two-term composition), the term
+semanticWeb would not match and would be classified by the system as a uniterm.
+This difference suggests that there may be more compound terms in <em>Bibsonomy</em> and
+<em>CiteULike</em> than our metrics indicate; however, this aspect of the tagging system
+may also act to discourage the use of complex tags by the <em>Bibsonomy</em> and
+<em>CiteULike</em> users. Aside from differences in the allowed syntax of these
+uncontrolled indexing languages, this may also be an effect of the differing
+communities that use these systems. While <em>Connotea</em> is clearly dominated by
+biomedical researchers, <em>Bibsonomy</em> is much more influenced by computer
+scientists and <em>CiteULike</em> seems to have the broadest mixture. Perhaps the
+biomedical tags are simply longer and more complex than in other fields. A
+final possibility, one that we will return to in the discussion of the direct
+measures of term-set overlap, is that <em>Connotea</em> may be disproportionately
+affected by the automatic import of terms from controlled vocabularies, in
+particular MeSH, as tags within the system. </p>
+
+<div align="center"><img src="p395fig4.png" width="472" height="253"  alt="figure 4" /><br /><br /><strong>Figure 4: Radar graph of the MeSH thesaurus</strong></div>
+
+<br /><br />
+<div align="center">
+<img src="p395fig5.png" width="563" height="237"  alt="figure 5" /><br /><br />
+<strong>Figure 5: Radar graph of the Association for Computing Machinery (ACM) thesaurus</strong></div>
+
+<br /><br />
+
+<div align="center">
+<img src="p395fig6.png" width="548" height="242" alt="fig6" /><br /><br />
+<strong>Figure 6: Radar graph of the <em>Connotea</em> folksonomy</strong></div>
+
+<br /><br />
+
+<div align="center">
+<img src="p395fig7.png" width="533" height="251" alt="fig7" /><br /><br />
+<strong>Figure 7: Radar graph of the <em>Bibsonomy</em> folksonomy</strong></div>
+
+<br /><br />
+
+<div align="center">
+<img src="p395fig8.png" width="565" height="266"  alt="fig8" /><br /><br />
+<strong>Figure 8: Radar graph of the <em>CiteULike</em> folksonomy</strong></div>
+
+<br /><br />
+
+<div align="center">
+<img src="p395fig9.png" width="605" height="255"  alt="fig9" /><br /><br />
+<strong>Figure 9: Radar graph of term set from Gene Ontology Biological Process
+(GO_BP)</strong></div>
+
+<br /><br />
+
+<div align="center">
+<img src="p395fig10.png" width="601" height="263"  alt="fig10" /><br /><br />
+<strong>Figure 10: Radar graph of term set from the Foundational Model of
+Anatomy (FMA)</strong></div>
+
+
+
+<h3>Inter-set findings</h3>
+
+<p>Following the intra-set results, the inter-set comparisons indicate high
+diversity in the term sets present in the sample while also highlighting
+interesting relationships between them. Figures <a href="#fig11">11</a> and <a
+href="#fig12">12</a> provide an overview of the all-against-all comparison of
+each of the term sets using the F-measure and the measures of precision and
+recall respectively. They show that, in general, there was a very low amount of
+overlap between most of the pairs that were examined. This is likely a direct
+result of the wide variance of contexts associated with the diverse indexing
+languages represented in the sample. Though the sample was biased towards
+ontologies in the biomedical domain, biomedical is an extremely broad term. For
+example, the domains of items intended to be indexed with the different
+languages ranged from amino acid sequences, to biomedical citations, to tissue
+samples. That there was not much direct overlap in general is unsurprising.</p>
+
+<p>Aside from overlaps between different term sets drawn from the same
+structure (e.g.,  between a version of MeSH with only the preferred labels and a
+version that included all of the alternate labels), the greatest
+overlap, as indicated by the F-measure, was found between the Zebrafish Anatomy
+(ZFA) ontology (<a href="#spr08">Sprague <em>et al</em>. 2008</a>) and the Cell
+ontology (CL) (<a href="#bar05">Bard <em>et al</em>. 2005</a>) at (f = 0.28).
+This overlap results because the ZFA ontology contains a large proportion of
+cell-related terms that are non-specific to the Zebrafish, such as
+<em>mesothelial cell</em> and <em>osteoblast</em>. </p>
+
+
+<div align="center">
+<a name="fig11" id="fig11"></a><img src="p395fig11.jpg" alt="figure 11" /></div>
+<div align="center"><br /><strong>Figure 11: All against all comparison using the F-measure </strong><br
+/>
+(The white intensity of each cell (or anti-redness) is determined by the
+overlap (F-measure) of the term set indicated on horizontal and vertical axes.
+As the relationship is commutative, either side of the diagonal is
+identical.)</div>
+
+<br /><br />
+
+<div align="center">
+<a name="fig12" id="fig12"></a><img src="p395fig12.jpg" alt="figure 12" /></div>
+<div align="center"><br /><strong>Figure 12: All against all comparison using Precision/Recall
+</strong><br />(The white intensity of each cell (or anti-redness) is determined by the
+Precision of the term set indicated on the horizontal axis in its coverage of
+the term set indicated on the vertical axis. The chart may also be read as the
+Recall of the term set indicated on the vertical axis in its coverage (or
+prediction) of the term set on the horizontal axis.)</div>
+
+
+
+<p>Table <a href="#tab9">9</a> lists the F-measure, precision and recall
+estimates for the term-set pairs with the highest F-measures. Aside from the
+ZFA/CL comparison, the greatest overlaps were observed for the
+inter-folksonomy pairs, MeSH and the <a href="http://www.fao.org/">Agricultural
+Information Management Standards thesaurus</a> (Ag), MeSH and the National
+Cancer Institute thesaurus (NCI) (<a href="#sio07">Sioutos <em>et al</em>.
+2007</a>), and MeSH and <em>Connotea</em> (<a href="#lun05">Lund <em>et al.</em>
+2005</a>). </p>
+
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 9: Term set pairs with the highest F-measures
+  </strong></caption>
+  <tbody>
+<tr>
+<th width="111" valign="top"><a name="tab9"
+  id="tab9"></a>Comparison pair
+</th>
+<th width="111" valign="top">F(x,y)</th>
+<th width="111" valign="top">P(x,y) = r(y,x)</th>
+<th width="111" valign="top">R(x,y) = P(y,x)</th>
+</tr>
+<tr>
+<td width="111" valign="top">cl vs. zfa</td>
+<td width="111" valign="top" style="text-align: center;">0.28</td>
+<td width="111" valign="top" style="text-align: center;">0.46</td>
+<td width="111" valign="top" style="text-align: center;">0.20</td>
+</tr>
+<tr>
+<td width="111" valign="top">citeulike vs. <em>Connotea</em></td>
+<td width="111" valign="top" style="text-align: center;">0.22</td>
+<td width="111" valign="top" style="text-align: center;">0.17</td>
+<td width="111" valign="top" style="text-align: center;">0.30</td>
+</tr>
+<tr>
+<td width="111" valign="top">bibsonomy vs. <em>Connotea</em></td>
+<td width="111" valign="top" style="text-align: center;">0.19</td>
+<td width="111" valign="top" style="text-align: center;">0.37</td>
+<td width="111" valign="top" style="text-align: center;">0.13</td>
+</tr>
+<tr>
+<td width="111" valign="top">bibsonomy vs. <em>CiteULike</em></td>
+<td width="111" valign="top" style="text-align: center;">0.16</td>
+<td width="111" valign="top" style="text-align: center;">0.47</td>
+<td width="111" valign="top" style="text-align: center;">0.09</td>
+</tr>
+<tr>
+<td width="111" valign="top">ag_EN vs. mesh_prefLabel</td>
+<td width="111" valign="top" style="text-align: center;">0.15</td>
+<td width="111" valign="top" style="text-align: center;">0.14</td>
+<td width="111" valign="top" style="text-align: center;">0.17</td>
+</tr>
+<tr>
+<td width="111" valign="top">ncithesaurus_prefLabel vs. mesh_prefLabel</td>
+<td width="111" valign="top" style="text-align: center;">0.14</td>
+<td width="111" valign="top" style="text-align: center;">0.10</td>
+<td width="111" valign="top" style="text-align: center;">0.24</td>
+</tr>
+<tr>
+<td width="111" valign="top">mesh_prefLabel vs. <em>Connotea</em></td>
+<td width="111" valign="top" style="text-align: center;">0.12</td>
+<td width="111" valign="top" style="text-align: center;">0.36</td>
+<td width="111" valign="top" style="text-align: center;">0.07</td>
+</tr>
+  </tbody>
+</table>
+
+<h4>MeSH versus the folksonomies</h4>
+
+<p>The second specific, demonstrative question put forward above, and one of
+the early motivators for this project, was the question of how the terms from
+MeSH compare to the terms from academic folksonomies. To answer this question,
+Tables <a href="#tab10">10</a> and <a href="#tab11">11</a> delineate the
+overlaps in terms of precision, recall, and the F-measure that were observed
+between the three folksonomies in our sample and the MeSH thesaurus (including
+one version with just the preferred labels and another that included alternate
+terms). Of the three folksonomies, <em>Connotea</em> displayed the greatest degree of
+overlap with MeSH in terms of the F-measure, precision, and recall for both the
+preferred labels and the complete MeSH term set. The precision of the <em>Connotea</em>
+terms with respect to the MeSH preferred labels was 0.073, the recall 0.363,
+and the F-measure was 0.122. </p>
+
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 10: Precision/Recall estimates of the similarity between MeSH
+  and three folksonomies. </strong><br />
+  (Each cell in the table may be read as either the precision of the term set
+  identified for the row with respect to the term set identified by the column
+  or the recall of the column with respect to the row. For example, the first
+  cell indicates that the precision of <em>CiteULike</em> with respect to mesh_all
+  (including alternate term labels) and the recall of mesh_all with respect to
+  <em>CiteULike</em> is 0.047.) </caption>
+  <tbody>
+<tr>
+<th width="74" valign="top"><a name="tab10" id="tab10"></a>term set</th>
+<th width="74" valign="top">mesh_all</th>
+<th width="74" valign="top">mesh_prefLabel</th>
+<th width="74" valign="top">Bibsonomy</th>
+<th width="74" valign="top">CiteULike</th>
+<th width="74" valign="top">Connotea</th>
+</tr>
+<tr>
+<td width="74" valign="top">CiteULike</td>
+<td width="74" valign="top" style="text-align: center;">0.047</td>
+<td width="74" valign="top" style="text-align: center;">0.030</td>
+<td width="74" valign="top" style="text-align: center;">0.094</td>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+<td width="74" valign="top" style="text-align: center;">0.170</td>
+</tr>
+<tr>
+<td width="74" valign="top">Connotea</td>
+<td width="74" valign="top" style="text-align: center;">0.104</td>
+<td width="74" valign="top" style="text-align: center;">0.073</td>
+<td width="74" valign="top" style="text-align: center;">0.129</td>
+<td width="74" valign="top" style="text-align: center;">0.297</td>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+</tr>
+<tr>
+<td width="74" valign="top">Bibsonomy</td>
+<td width="74" valign="top" style="text-align: center;">0.075</td>
+<td width="74" valign="top" style="text-align: center;">0.047</td>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+<td width="74" valign="top" style="text-align: center;">0.470</td>
+<td width="74" valign="top" style="text-align: center;">0.370</td>
+</tr>
+<tr>
+<td width="74" valign="top">mesh_all</td>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+<td width="74" valign="top" style="text-align: center;">0.301</td>
+<td width="74" valign="top" style="text-align: center;">0.039</td>
+<td width="74" valign="top" style="text-align: center;">0.122</td>
+<td width="74" valign="top" style="text-align: center;">0.155</td>
+</tr>
+<tr>
+<td width="74" valign="top">mesh_prefLabel</td>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+<td width="74" valign="top" style="text-align: center;">0.081</td>
+<td width="74" valign="top" style="text-align: center;">0.263</td>
+<td width="74" valign="top" style="text-align: center;">0.363</td>
+</tr>
+  </tbody>
+</table>
+
+<br /><br />
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+  <caption align="bottom"><br />
+  <strong>Table 11: F measures of the similarity between MeSH and three
+  folksonomies </strong> </caption>
+  <tbody>
+<tr>
+<td width="74" valign="top"><a name="tab11" id="tab11"></a>&nbsp;</td>
+<th width="74" valign="top">Bibsonomy</th>
+<th width="74" valign="top">CiteULike</th>
+<th width="74" valign="top">Connotea</th>
+<th width="74" valign="top">mesh_all</th>
+<th width="74" valign="top">mesh_prefLabel</th>
+</tr>
+<tr>
+<th width="74" valign="top">Bibsonomy</th>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+<td width="74" valign="top" style="text-align: center;">0.157</td>
+<td width="74" valign="top" style="text-align: center;">0.191</td>
+<td width="74" valign="top" style="text-align: center;">0.051</td>
+<td width="74" valign="top" style="text-align: center;">0.059</td>
+</tr>
+<tr>
+<th width="74" valign="top">CiteULike</th>
+<td width="74" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+<td width="74" valign="top" style="text-align: center;">0.217</td>
+<td width="74" valign="top" style="text-align: center;">0.068</td>
+<td width="74" valign="top" style="text-align: center;">0.054</td>
+</tr>
+<tr>
+<th width="74" valign="top">Connotea</th>
+<td width="74" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="74" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+<td width="74" valign="top" style="text-align: center;">0.124</td>
+<td width="74" valign="top" style="text-align: center;">0.122</td>
+</tr>
+<tr>
+<th width="74" valign="top">mesh_all</th>
+<td width="74" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="74" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="74" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+<td width="74" valign="top" style="text-align: center;">0.462</td>
+</tr>
+<tr>
+<th width="74" valign="top">mesh_prefLabel</th>
+<td width="74" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="74" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="74" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="74" valign="top" style="text-align: center;">&nbsp;</td>
+<td width="74" valign="top" style="text-align: center;">1.000</td>
+</tr>
+  </tbody>
+</table>
+
+<p>The fact that the <em>Connotea</em> term set contains nearly 9000 MeSH terms (36% of
+the entire set of preferred labels) suggests a) that there are a number of
+biomedical researchers using <em>Connotea</em> and b) that they have chosen, one way or
+another, to utilize MeSH terminology in the organization of their publicly
+accessible resource collections. How these terms came to be used in this manner
+is a more difficult question. In some cases, the <em>Connotea</em> users likely
+recreated the MeSH terms when going about their normal tagging practices;
+however, the relatively high level of overlap is suggestive of other underlying
+factors. </p>
+
+<h4>Batch import in folksonomies</h4>
+
+<p><em>Connotea</em>, as well as the other social tagging systems in the study, offers a
+way to import data from other sources automatically. For example, it is
+possible to export bibliographic information from applications such as Endnote
+and then import these records as bookmarks within the <em>Connotea</em> system. This
+opens up the possibility that tags generated outside of the <em>Connotea</em> system,
+such as MeSH indexing by MEDLINE, can wind up in the mix of the tags contained
+within the <em>Connotea</em> folksonomy. </p>
+
+<p>To help assess the impact of imported tags on the contents of the <em>Connotea</em>
+folksonomy, we identified and removed a subset of the <em>Connotea</em> tags that were
+highly likely to have been imported through the use of additional information
+about the context of the creation of the tags, and then recomputed all of the
+metrics defined above. In a social bookmarking system like <em>Connotea</em>, tags are
+added to the system as descriptive annotations of Web resources. When a
+bookmark is posted to the system by a particular user, the tags associated with
+it, as well as a timestamp, are associated with the entry. Sets of bookmarks
+posted via batch import, for example from the contents of an Endnote library,
+will all have nearly identical timestamps associated with them. Thus, by
+pruning out tags originating only in posts submitted by the same user during
+the same minute, we constructed a new <em>Connotea</em> term set that should be more
+representative of the terms actually typed in directly by the users. </p>
+
+<p>Figure <a href="#fig13">13</a> shows the differences between the pruned
+<em>Connotea</em> term set (Connotea_no_batch) and the original dataset on both
+intra-set measures and measures of direct overlap with the MeSH preferredLabel
+term set. In every metric except for the skewness of the lengths of the terms,
+the pruned <em>Connotea</em> term set more closely resembled the other folksonomies. For
+example, in the pruned set, the % uniterms increased by about 10%, the %
+quadplus decreased by more than 30% and the flexibility increased by about 10%.
+The overlap with the MeSH prefLabels decreased from 0.12 to 0.11 with respect
+to the F measure, the precision decreased from 0.363 to 0.266, and the recall
+decreased from 0.073 to 0.069. </p>
+
+<div align="center">
+<a name="fig13" id="fig13"></a><img src="p395fig13.png" alt="figure 13" /><br />
+<strong>Figure 13: Differences between the full <em>Connotea</em> term set and <em>Connotea</em>
+term set with batch uploaded bookmark posts removed </strong> </div>
+
+<p>It appears the process of batch uploading bookmarks in <em>Connotea</em>, in
+cooperation with other personal information management practices such as the
+use of Endnote, has influenced the contents of the <em>Connotea</em> folksonomy. In
+particular, many MeSH terms appear to have been incorporated into it. Since
+most other folksonomies, including the others evaluated here, also have
+automated upload capabilities, it is highly likely that similar results may be
+observed within them. While this phenomenon makes the interpretation of
+folksonomy datasets more complex by obscuring the origins of the data, its
+illumination should provide new opportunities for investigation. For example,
+perhaps it would be possible to track the migration of terms across the
+boundaries of different systems through the addition of a temporal attribute to
+the inter-set metrics suggested here. Such data might help to explain the
+origins of the terms utilized in different indexing languages. One would assume
+for example, that many of the terms that now overlap between MeSH and the
+folksonomies appeared first in MeSH and then migrated over somehow; however, in
+the future, perhaps this process might be reversed as folksonomies are mined
+for candidate extensions to controlled vocabularies. </p>
+
+<h2>Discussion</h2>
+
+<p>Robust, reproducible methods for comparing different information systems are
+vital tools for scientists and system developers faced with what has been
+called &lsquo;<em>an unprecedented increase in the number and variety of formal and
+informal systems for knowledge representation and organization</em>&rsquo; (<a
+href="#ten08">Tennis &amp; Jacob 2008</a>). Indeed, we are in a Cambrian Age of
+Web-based indexing languages. Metrics and tools, such as the system for
+indexing language characterization described here, can be used to provide
+information about how the many emerging kinds of information systems relate to
+one another. It can also be used in the design of new systems that incorporate
+ideas inspired by such comparisons, as suggested by the University of
+California&rsquo;s Bibliographic Services Task Force (<a
+href="#bib05">2005</a>), or, as demonstrated by Good <em>et al.</em> (<a
+href="#goo06">2006</a>) and Willighagen <em>et al.</em> (<a
+href="#wil07">2007</a>), explicitly combine multiple extant systems to form
+novel hybrids.</p>
+
+<p>In the research presented above, we introduced metrics for the automatic
+characterization and set-theoretic comparison of sets of terms from indexing
+languages. Using these metrics, we provided a broad-spectrum analysis of twenty-two
+different languages. Within the data gathered in this exploratory analysis, we
+identified suggestive patterns associated with the terms that compose
+folksonomies versus the terms from controlled vocabularies as well as directly
+quantifying the degree of overlap present across each of the sets in the
+sample. Of particular interest is the apparent migration of terms across the
+boundaries of the different systems, in particular from MeSH into the
+folksonomies. Though the results presented here are informative, the main
+contribution of this work is the enumeration and implementation of the
+comparative protocol. </p>
+
+<p>Future term set analyses, particularly if they can be integrated with rich
+qualitative dimensions, might be put to any number of novel uses. Given the
+definition of these metrics and the provision of tools for their calculation,
+it would now be straightforward to test whether any of the term-based
+measurements are related to other attributes of information systems. For
+example, it might be interesting to test to see if any of these factors were
+predictive of system performance; e.g., is the percentage of uniterms in the
+tags that compose a folksonomy correlated with the performance of that
+folksonomy in the context of a retrieval task? If that answer turned out to be
+yes, then it would offer an easy way to estimate the retrieval performance of
+different systems and might suggest ways to improve performance, for example by
+adapting the tagging interface to encourage the contribution of more complex
+tags. Other potential applications include: comparative quality evaluation,
+term set warrant and the identification of relationships between term-set shape
+and theoretical types of indexing language.</p>
+
+<h3>Comparative quality evaluation</h3>
+
+<p>From the perspective of systems evaluation, one particular use of the
+methods defined here might be in gold-standard based quality assessments
+similar to those described by Dellschaft and Staab (<a href="#del06">2006</a>)
+for the automated, comparative evaluation of ontologies. If a particular
+indexing language is judged to be of high quality for some particular context,
+other structures might be evaluated for their quality in that or a very similar
+context based on their similarity to this gold-standard. For example, for the
+purpose of indexing biomedical documents for an institutional information
+retrieval system like MEDLINE, many would consider MeSH as a gold standard. The
+similarity of another indexing language, such as a folksonomy, to this standard
+might thus be used as a measure of its quality for indexing biomedical
+documents for retrieval. The principle advantage of such an approach is that it
+can be completely automatic, potentially helping to avoid the intensive manual
+labour and possible subjectivity associated with manual evaluations. The
+disadvantages are that, for any real, new application, (a) a gold standard is
+unlikely to exist and (b) any acceptable evaluation would still have to be
+informed by extensive qualitative alignment of the contextual attributes of the
+intended application in comparison with the gold standard. </p>
+
+<h3>Term-set warrant</h3>
+
+<p>The creators and maintainers of indexing languages often require
+justifications for the inclusion or exclusion of classes within their
+structures (<a href="#beg86">Beghtol 1986: 110-111</a>). These justifications,
+referred to as warrants, may come in many forms, though the most commonly
+discussed is probably <em>literary warrant</em>. Essentially a particular
+kind of warrant bases the justification for the contents of an indexing
+language on a particular kind of empirical evidence (e.g., user requests) or
+argument (e.g., philosophical or scientific warrant). The inter-set metrics may
+provide data useful in the development of a new kind of warrant based upon the
+overlap between different structures. Essentially, such a <em>term-set
+warrant</em> might be invoked to justify the inclusion of terms or the
+concepts they represent based on the presence or absence of those terms in
+other structures.</p>
+
+<h3>Relationship of term-set shape to theoretical type</h3>
+
+<p>It is tempting to think that this approach, or some extension of it, could
+be used to describe meaningful types of indexing languages, not from design
+requirements, but from the actualization of those design requirements manifest
+in and observable to us in the shape of term sets. This could provide a weak
+empirical corroboration for types of indexing languages in use, not only
+according to standard or theory, but based on empirical evidence of term
+corpus. Defending and making use of such inferences would require a solid
+understanding of the meaning of the different shapes. The work presented here
+is exploratory and future work will have to substantiate any claim at deriving
+type from these empirical factors. However, we can see that, in this sample,
+there were clear distinctions between the shapes of controlled and uncontrolled
+vocabularies, demonstrating at this stage that we can hypothesize that
+folksonomies have a particular shape in relation to both thesauri and
+ontologies. Future studies may take advantage of the increasing number of
+different indexing languages to, for example, attempt to define the
+relationship of term-set shape to the breakdown of theoretical type within the
+controlled vocabularies. </p>
+
+<h2>Future work</h2>
+
+<p>The metrics derived and applied here operate at what amounts to a syntactic
+level and no specific attempt, other than rudimentary term normalization,
+was made to identify the concepts present in the different indexing languages.
+A natural extension of this work would be to apply natural language processing
+technology to make this attempt. The rough indications of semantic similarity
+provided by the inter-term set comparisons could be made much more robust if
+the comparisons were made at the level of concepts rather than terms, for
+example making it possible to equate synonymous terms from different languages.
+</p>
+
+<p>Aside from the incorporation of natural language processing technology for
+concept identification, it would be useful to consider the analysis of
+predicate relationships between the terms (e.g.,  the hierarchical structure) and
+the analysis of the relationships between terms and the items they may be used
+to index. Metrics that captured these additional facets of information systems,
+characteristic of their form and application, would provide the opportunity for
+much more detailed comparisons, thus forming the raw materials for the
+derivation and testing of many new hypotheses. </p>
+
+<p>There remain many indexing languages, both controlled and uncontrolled, that
+are available online that have not been characterized with the methods and from
+the naturalistic perspective adopted here. In addition to improving and
+expanding methods, the majority of future work will be the application of these
+tools to the analysis of other languages.</p>
+
+<h2>Conclusion</h2>
+
+<p>We are at the very beginning of a rapid expansion in the number and the
+diversity of different frameworks for the organization of information. As more
+and more information systems come into the world, the application of
+expository, reproducible protocols for their comparative analysis, such as the
+one described in this article, will lead to ever increasing abilities to
+illuminate and thus build upon this expanding diversity of form and content.</p>
+
+<h2>Note</h2>
+
+<p><strong>Availability</strong>. All materials, including the programs generated to conduct the term set analysis and the term sets analysed, are freely available at <a href="http://biordf.net/~bgood/tsa/" target="_blank">http://biordf.net/~bgood/tsa/</a>. </p>
+
+<h2>Acknowledgements</h2>
+
+<p>B.M. Good is supported by a University of British Columbia Graduate Student Fellowship.</p>
+
+<h2><a id="authors" name="authors" />About the authors</h2>
+
+<p>Joseph T. Tennis is an Assistant Professor at the Information School of the University of Washington, Associate Member of the Peter Wall Institute for Advanced Study at The University of British Columbia, and Reviews Editor for Knowledge Organization.  He is also a member of the Dublin Core Usage Board.  He received his M.L.S. from Indiana University and the Ph.D. in Information Science from the University of Washington.  He works in classification theory, the versioning of classification schemes and thesauri (subject ontogeny), and the comparative discursive analysis of metadata creation and evaluation, both contemporary and historical.  He can be contacted at <a href="mailto:jtennis@u.washington.edu">jtennis@u.washington.edu</a></p>
+
+<p>Benjamin M. Good is a Ph.D. candidate in Bioinformatics at the University of British Columbia.  He received his M.Sc. in Evolutionary and Adaptive Systems from the University of Sussex and his B.Sc. in Cognitive Science from the University of California at San Diego.  His current research focuses on the design of mass-collaborative strategies for building and automated methods for characterizing the content of the semantic Web.  He can be contacted at: <a href="mailto:goodb@interchange.ubc.ca">
+goodb@interchange.ubc.ca</a> </p>
+
+<form action="#">
+  <fieldset>
+<legend
+style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+<ul>
+<li><a id="alk07" name="alk07"></a>Al-Khalifa, H. &amp; Davis, H. (2007).   Exploring the value of folksonomies for creating semantic metadata.   <em>International Journal on Semantic Web and Information Systems</em>,  <strong>3</strong>(1), 13-39. </li>
+  
+  <li><a name="ash00" id="ash00"></a>Ashburner, M., Ball, C. A., Blake, J.A., Botstein, D., Butler, H., Cherry, J. M., <em>et al</em>. (2000). Gene ontology: tool for the unification of biology. <em>Nature Genetics</em>, <strong>25</strong>(1), 25-29.</li>
+  
+<li><a name="bar05" id="bar05"></a>Bard, J., Rhee, S. Y. &amp; Ashburner,  M. (2005). An ontology for cell types. <em>Genome Biology</em>, <strong>6</strong>(2), R21.</li>
+  
+<li><a name="beg86" id="beg86"></a>Beghtol C. (1986). Semantic validity: concepts of warrant in bibliographic classification systems.   <em>Library Resources &amp; Technical Services</em>,   <strong>30</strong>(2), 109-125.</li>
+
+<li><a name="ran08" id="ran08"></a><a href="http://www.ranks.nl/tools/stopwords.html">Default English stopwords</a>. (2008). Amsterdam: 1ste Kreuze BV.  Retrieved 26 February 2009 from http://www.ranks.nl/tools/stopwords.html</li>
+
+<li><a name="deg08" id="deg08"></a>Degtyarenko, K., de Matos, P., Ennis, M., Hastings, J., Zbinden, M., McNaught, A., <em>et al</em>.. (2008).  ChEBI: a database and ontology for chemical entities of biological   interest. <em>Nucleic Acids Research</em>, <strong>36</strong>(Database issue), D344-350.</li>
+  
+<li><a name="del06" id="del06"></a>Dellschaft, K. &amp; Staab, S. (2006). On how to perform a gold standard based evaluation of ontology learning. In Isabel Cruz, Stefan Decker, Dean Allemang, Chris Preist, Daniel Schwabe, Peter Mika, <em>et al.</em> <em>Proceedings of the 2006 International Semantic Web Conference</em>, (pp. 228-241).  Berlin, Heidelberg: </li>
+  
+<li><a name="fei06" id="fei06"></a>Feinberg, M. (2006). <a href="http://dlist.sir.arizona.edu/1783/01/feinberg.pdf">An examination of authority in social classification systems</a>. In J. Furner &amp; J.T.  Tennis, (Eds.), <em>Proceedings of the 17th Workshop of the American Society for Information Science and Technology Special Interest Group in Classification Research, Austin, Texas.</em> Retrieved 26 February, 2009 from  http://dlist.sir.arizona.edu/1783/01/feinberg.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5esiE7yRX)</li>
+
+<li><a name="goo06" id="goo06"></a>Good, B., Kawas, E., Kuo, B. &amp; Wilkinson, M. (2006). iHOPerator: user-scripting a personalized bioinformatics Web, starting with the iHOP Website. <em>BMC Bioinformatics</em>, <strong>7</strong>(1), 534.</li>
+
+<li><a name="goo08" id="goo08"></a>Good, B.M. &amp; Tennis, J.T. (2008). <a   href="http://www.asis.org/Conferences/AM08/posters/78.html">Evidence of term-structure differences among folksonomies and controlled indexing languages</a>. Poster presentation at the Annual Meeting of the American Society for Information Science and Technology, Columbus, OH, USA. Retrieved 19 January 2009 from http://www.asis.org/Conferences/AM08/posters/78.html  (Archived by WebCite&reg; at http://www.webcitation.org/5et58YQBG)</li>
+
+<li><a name="hae08" id="hae08"></a>Haendel, M.A., Neuhaus, F., Osumi-Sutherland, D., Mabee, P.M., Mejino Jr., J.L.V., Mungall, C.J., <em>et al</em>. (2008). CARO: the Common Anatomy Reference Ontology. In A. Burger, D. Davidson and R. Baldock (Eds.), <em>Anatomy ontologies for bioinformatics: principles and practice</em> (pp. 327-349). London: Springer.</li>
+  
+<li><a name="hri05" id="hri05"></a>Hripcsak, G. &amp; Rothschild, A.S. (2005). Agreement, the F-measure, and reliability in information retrieval. <em>Journal of the American Medical Association</em>, <strong>12</strong>(3), 296-298.</li>
+  
+<li><a name="lun05" id="lun05"></a>Lund, B., Hammond, T., Flack, M. &amp; Hannay, T. (2005). <a href="http://www.dlib.org/dlib/april05/lund/04lund.html">Social bookmarking tools (II): a case study - Connotea.</a> <em>D-Lib Magazine</em>, <strong>11</strong>(4). Retrieved 26 February, 2009 from http://www.dlib.org/dlib/april05/lund/04lund.html  (Archived by WebCite&reg; at http://www.webcitation.org/5et5FPQXR)</li>
+  
+<li><a name="mor08" id="mor08"></a>Morrison, P.J. (2008). Tagging and searching: search retrieval effectiveness of folksonomies on the World Wide Web. <em>Information Processing and Management</em>, <strong>44</strong>(4), 1562-1579.</li>
+  
+<li><a name="ogr04" id="ogr04"></a>Ogren, P.V., Cohen, K.B., Acquaah-Mensah, G.K., Eberlein, J. &amp; Hunter, L. (2004). The compositional structure of gene ontology terms. <em>Proceedings of the Pacific Symposium on Biocomputing</em>, 2004, 215-225.</li>
+  
+<li><a name="por80" id="por80"></a>Porter, M. F. (1980). An algorithm for suffix stripping. <em>Program</em>, <strong>14</strong>(3), 130-137.</li>
+
+<li><a name="rde08" id="rde08"></a>R Foundation for Statistical Computing. <em>R Development Core Team</em> (2008). <a   href="http://cran.r-project.org/doc/manuals/refman.pdf">R: a language and environment for statistical computing</a>. Retrieved 26 February 2009 from http://cran.r-project.org/doc/manuals/refman.pdf</li>
+
+<li><a name="ros03" id="ros03"></a>Rosse, C. &amp; Mejino, J.J.L.V.  (2003). A reference ontology for biomedical informatics: the foundational model of anatomy. <em>Journal of Biomedical Informatics</em>, <strong>36</strong>(6), 478-500.</li>
+
+<li><a name="sio07" id="sio07"></a>Sioutos, N., de Coronado, S., Haber,  M.W., Hartel, F.W., Shaiu, W.L. &amp; Wright, L.W. (2007). NCI thesaurus: a semantic model integrating cancer-related clinical and molecular information. <em>Journal of Biomedical Informatics</em>, <strong>40</strong>(1), 30-43.</li>
+
+<li><a name="soe74" id="soe74"></a>Soergel, D. (1974). <em>Indexing languages and thesauri: construction and maintenance</em>. Los Angeles, CA: Melville Publishing Company</li>
+  
+<li><a name="soe99" id="soe99"></a>Soergel, D. (1999). The rise of ontologies or the reinvention of classification. <em>Journal of the American Society for Information Science</em>, <strong>50</strong>(12), 1119-1120.</li>
+
+<li><a name="spr08" id="spr08"></a>Sprague, J., Bayraktaroglu, L., Bradford, Y., Conlin, T., Dunn, N., Fashena, D., <em>et al</em>.  (2008). The Zebrafish Information Network: the zebrafish model organism   database provides expanded support for genotypes and phenotypes.  <em>Nucleic Acids Research</em>, <strong>36</strong>(Database issue), D768-772.</li>
+
+<li><a name="ten06" id="ten06"></a>Tennis, J. T. (2006). <a  href="http://dlist.sir.arizona.edu/2091/">Social tagging and the next steps for indexing</a>. In J. Furner &amp; J.T. Tennis, (Eds.), <em>Proceedings of the 17th Workshop of the American Society for Information Science and Technology Special Interest Group in Classification Research,</em> Austin, Texas<em>.</em> Available at [http://dlist.sir.arizona.edu/2091/]</li>
+
+<li><a name="ten08" id="ten08"></a>Tennis, J.T. &amp; Jacob, E.K. (2008). Toward a theory of structure in information organization frameworks. In Cl&eacute;ment. Arsenault &amp; Joseph T. Tennis,  (Eds.). <em>Culture and identity in knowledge organization: proceedings of the Tenth International ISKO Conference, 5-8 August 2008, Montreal, Canada</em>, (pp. 262-268) W&uuml;rzburg, Germany: Ergon.</li>
+
+<li><a name="tud06" id="tud06"></a>Tudhope, D. (2006). <em>A tentative typology of KOS: towards a KOS of KOS?</em> Paper presented at the <em>5th European NKOS Workshop</em>, Alicante, Spain. [<a href="http://bit.ly/12QbDC">PowerPoint presentation</a> retrieved 26 February, 2009 from http://bit.ly/12QbDC] </li>
+  
+  <li><a name="bib05" id="bib05"></a>University of California Libraries. <em>Bibliographic Services Task Force</em>.  (2005). <em><a href="http://libraries.universityofcalifornia.edu/sopag/BSTF/Final.pdf">Rethinking how we provide bibliographic services for the University of California.</a></em> Retrieved 8 July, 2008 from http://libraries.universityofcalifornia.edu/sopag/BSTF/Final.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5eshFEjEt)</li>
+
+<li><a name="van76" id="van76"></a>Van Slype, G. (1976). <em>Definition of the essential characteristics of thesauri</em>. Brussels: Bureau Marcel van Dijk.</li>
+
+<li><a name="wil07" id="wil07"></a>Willighagen, E., O'Boyle, N., Gopalakrishnan, H., Jiao, D., Guha, R., Steinbeck, C., <em>et al</em>.  (2007). Userscripts for the life sciences. <em>BMC Bioinformatics</em>,  <strong>8</strong>(1), 487.</li>
+
+<li><a name="wit00" id="wit00"></a>Witten, I.H. &amp; Frank, W. (2000).  <em>Data mining: practical machine learning tools with Java implementations</em>, San Francisco, CA: Morgan Kaufmann.</li>
+
+<li><a name="zha06" id="zha06"></a>Zhang, X. (2006). Concept integration of document databases using different indexing languages. <em>Information Processing and Management</em>, <strong>42</strong>(1), 121-135. </li>
+</ul>
+  </fieldset>
+</form>
+
+<form action="#">
+  <fieldset>
+<legend
+style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">How
+to cite this paper</legend>
+
+<div>
+<br />
+Good, B.M. &amp; Tennis, J.T. (2009). &quot;Term based comparison metrics for controlled and uncontrolled indexing languages&quot;. <em>Information Research</em>, <strong>14</strong>(1) paper 395. [Available at http://InformationR.net/ir/14-1/paper395.html]</div><br />
+  </fieldset>
+</form>
+
+<br />
+<table cellspacing="10" align="center">
+  <tbody>
+<tr>
+<td colspan="3" align="center"
+style="background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+  <form method="get" action="http://scholar.google.com/scholar"
+  target="_blank">
+
+<table bgcolor="#ffffff">
+<tbody>
+  <tr>
+<td nowrap="nowrap" valign="top" align="center"
+height="32"><input type="hidden" name="q" size="31"
+maxlength="255"
+value="(&#34;indexing languages&#34; OR ontologies OR thesauri OR &#34;social tagging&#34;) comparison)"/> <br />
+
+<input type="submit" value="Scholar Search" name="sa"
+style="font-size: small; font-family: Verdana; font-weight: bold;"
+/> <input type="hidden" name="num" value="100" /> </td>
+  </tr>
+</tbody>
+</table>
+  </form>
+</td>
+<td align="center" valign="top"><!-- Search Google -->
+
+  <form method="get" action="http://www.google.com/custom"
+  target="_blank">
+
+<table bgcolor="#ffffff">
+<tbody>
+  <tr>
+<td nowrap="nowrap" valign="top" align="center"
+height="32"><input type="hidden" name="q" size="31"
+maxlength="255"
+value="(&#34;indexing languages&#34; OR ontologies OR thesauri OR &#34;social tagging&#34;) comparison)" /><br />
+
+<input type="submit" value="Google Search" name="sa"
+style="font-family: Verdana; font-weight: bold; font-size: small;"
+/> <input type="hidden" name="client"
+value="pub-5081678983212084" /> <input type="hidden"
+name="forid" value="1" /> <input type="hidden" name="ie"
+value="ISO-8859-1" /> <input type="hidden" name="oe"
+value="ISO-8859-1" /> <input type="hidden" name="cof"
+value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"
+/> <input type="hidden" name="hl" value="en" /> </td>
+  </tr>
+</tbody>
+</table>
+  </form>
+</td>
+<td align="center" valign="top">
+  <form method="get" action="http://www.live.com/" target="_blank">
+
+			<table bgcolor="#ffffff"> 
+				<tr> 
+ 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(&#34;indexing languages&#34; OR ontologies OR thesauri OR &#34;social tagging&#34;) comparison)"></input> <br /> 
+<input type="submit" name="sa" value="Windows Live"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input> 
+<input type="hidden" name="num" value="100"></input> 
+					</td> 
+				</tr> 
+			</table> 
+  </form>
+</td>
+</tr>
+  </tbody>
+</table>
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+
+<div align="center">
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo"
+/> <a href="http://del.icio.us/post"
+onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark
+This Page</a> </div>
+<hr size="1" style="color: #5E96FD;" />
+
+<h2><a name="app1" id="app1"></a>Appendix 1. Data collection: assembly of term sets</h2>
+
+<h3>MeSH</h3>
+<ol>
+  <li>Files representing the 2008 release of MeSH were downloaded from <a href="http://www.nlm.nih.gov/mesh/filelist.html">http://www.nlm.nih.gov/mesh/filelist.html</a> on 11 February 2008.</li>
+  <li>The preferred labels for the terms were taken from the downloaded file 'mshd2008.txt'.</li>
+  <li>The union of the preferred labels and the synonyms (mesh all) was extracted from the downloaded MeSH XML file 'desc2008' using a Java program.</li>
+  <li>The MeSH terms with comma separated adjectives, like 'Cells, Immobilized', were programmatically re-ordered to reflect a more natural English language usage of adjective-noun, such as 'Immobilized Cells'. This step was taken to facilitate comparison with the other indexing languages that tended much more towards this form.</li> 
+</ol>
+
+<h3>OWL/RDF formatted thesauri and ontologies</h3>
+
+<p>Unless otherwise, noted, all the labels for the concepts and their synonyms were extracted from the files using custom Java code built with the <a href="http://jena.sourceforge.net/">Jena OWL/RDF API</a>.</p>
+
+<h4>ACM &ndash; Association for Computing Machinery</h4>
+
+<p>An OWL-XML version of the 1998 ACM thesaurus was acquired from Miguel Ferreira of the Department of Information Systems at the University of Minho.</p>
+
+<h4>AG &ndash; AGROVOC thesaurus from the Agricultural Information Management Standards initiative</h4>
+
+<p>An OWL-XML file containing the thesaurus ('ag_2007020219.owl') was downloaded from <a href="http://www.fao.org/aims/ag_download.htm">http://www.fao.org/aims/ag_download.htm</a></p>
+
+<h4>BioLinks</h4>
+
+<p>BioLinks is a subject listing used to organize the <a href="http://bioinformatics.ca/links_directory/">bioinformatics links directory</a>. An OWL version of these subject headings was composed by one of the authors in August of 2007, and is available at <a href="http://biordf.net/~bgood/ont/BioLinks.owl">http://biordf.net/~bgood/ont/BioLinks.owl</a>.</p>
+
+<h4>Open Biomedical Ontologies (OBO)</h4>
+
+<p>The daily OWL versions of the following ontologies from the <a
+href="http://obofoundry.org/">OBO foundry</a> were downloaded from <a
+href="http://www.berkeleybop.org/ontologies/">http://www.berkeleybop.org/ontologies/</a>
+on 11 February 2008.</p>
+<ul>
+  <li>Gene Ontology (biological process, molecular function, cellular component)</li>
+  <li>CARO &ndash; common anatomy reference ontology</li>
+  <li>CHEBI &ndash; chemical entities of biological interest</li>
+  <li>CL &ndash; cell ontology</li>
+  <li>ENVO &ndash; environment ontology</li>
+  <li>FMA &ndash; an OWL version of the Foundational Model of Anatomy</li>
+  <li>NCI Thesaurus &ndash; National Cancer Institute thesaurus</li>
+  <li>OBI &ndash; Ontology for Biomedical Investigations</li>
+  <li>PATO &ndash; Phenotypic Quality ontology</li>
+  <li>PRO &ndash; Protein Ontology</li>
+  <li>SO &ndash; Sequence Ontology</li>
+  <li>ZFA &ndash; Zebrafish Anatomy and Development Ontology</li>
+</ul>
+
+<h4>GEMET</h4>
+
+<p>GEMET - the thesaurus used by the European Environment Information and Observation Network - was downloaded from <a href="http://www.eionet.europa.eu/gemet/rdf?langcode=en">http://www.eionet.europa.eu/gemet/rdf?langcode=en</a> on 15 February 2008. The English terms were extracted from the provided HTML table.</p>
+
+<h4>Folksonomies (collections of tags created in social bookmarking systems)</h4>
+<ul>
+  <li>Connotea <br />
+The <em>Connotea</em> folksonomy was extracted from 377885 posts to <em>Connotea</em>
+collected prior to 12 December 2007. The <a
+href="http://www.connotea.org/wiki/WebAPI">Connotea Web API</a> and the <a
+href="http://code.google.com/p/connotea-java/">Connotea Java library</a>
+were used to gather and process the data.
+  </li>
+  <li>Bibsonomy <br />
+The <em>Bibsonomy</em> tag set was extracted from a 1 January 2008 export of the
+Bibsonomy database. It is available for research upon request from <a
+href="mailto:Webmaster@bibsonomy.org">Webmaster@bibsonomy.org</a>.</li>
+  <li>CiteULike <br />
+The <em>CiteULike</em> tag set was extracted from a 31 December 2007 export of
+the <em>CiteULike</em> database. Daily versions of this database are available for
+research purposes from <a
+href="http://www.citeulike.org/faq/data.adp">http://www.citeulike.org/faq/data.adp</a>.
+  </li>
+</ul>
+<br />
+<hr size="3" style="color: #5E96FD;" />
+<br />
+
+
+<table align="center" cellpadding="10">
+  <tbody>
+<tr>
+<td align="center" valign="top">
+  <div><a href="http://www.digits.com/" target="_blank"><img src="http://counter.digits.com/?counter={5385d0af-d46d-bb04-b1bd-7505892ee845}&amp;template=simple" alt="Hit Counter by Digits" border="0"  /></a><br /><a href="http://www.digits.com/" target="_blank">Hit Counter by Digits</a></div>
+
+</td>
+<td align="center" valign="top">
+  <div>
+  &reg; the authors, 2009. <br />
+  Last updated: 2 March, 2009 </div>
+</td>
+<td align="center" valign="middle"><img src="../valid-xhtml10.gif"
+  alt="Valid XHTML 1.0!" height="16" width="44"
+  /><!--ONESTAT SCRIPTCODE START--> <!--
+  // Modification of this code is not allowed and will permanently disable your account!
+  // Account ID : 281971
+  // Website URL: http://InformationR.net/ir/
+  // Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+  --> 
+
+  <div id="OneStatTag">
+
+  <table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+  <td align="center"><script type="text/javascript">
+ 
+<!--
+function OneStat_Pageview()
+{
+var d=document;
+var sid="281971";
+var CONTENTSECTION="";
+var osp_URL=d.URL;
+var osp_Title=d.title;
+var t=new Date();
+var p="http"+(d.URL.indexOf('paper395.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+p+="&url="+escape(osp_URL);
+p+="&ti="+escape(osp_Title);
+p+="&section="+escape(CONTENTSECTION);
+p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+p+="&tz="+escape(t.getTimezoneOffset());
+p+="&ch="+escape(t.getHours());
+p+="&js=1";
+p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+if(typeof(screen)=="object"){
+p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+}
+d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+
+</script>
+
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0"
+src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;"
+alt="online Web site analytics" /></a> </noscript>
+  </td>
+</tr>
+<tr>
+  <td align="center">
+<div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';">
+<a href="http://www.onestat.com/"
+style="text-decoration:none;">online Web site analytics</a><br
+/>
+</div>
+  </td>
+</tr>
+</tbody>
+  </table>
+  </div>
+  <!--ONESTAT SCRIPTCODE END-->
+</td>
+</tr>
+  </tbody>
+</table>
+<hr size="3" style="color: #5E96FD;" />
+
+<table align="center">
+  <tbody>
+<tr>
+<td>
+  <div class="button">
+
+  <ul>
+  <li><a href="infres141.html">Contents</a> | </li>
+  <li><a href="../iraindex.html">Author index</a> | </li>
+  <li><a href="../irsindex.html">Subject index</a> | </li>
+  <li><a href="../search.html">Search</a> | </li>
+  <li><a href="../index-2.html">Home</a></li>
+  </ul> 
+
+  </div>
+</td>
+</tr>
+  </tbody>
+</table>
+<script type="text/javascript" src="http://www.google-analytics.com/urchin.js">
+ </script>
+<script type="text/javascript">
+ 
+_uacct = "UA-672528-1";
+urchinTracker();</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/14-1/paper395.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:47 GMT -->
+</html>

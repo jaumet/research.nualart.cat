@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"> 
+    <title>CentredNets</title> 
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <script src="./js/raphael-1.5.2.min.js"></script> 
+    <script src="./js/jquery-1.5.min.js"></script> 
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.3/themes/base/jquery-ui.css" type="text/css"/>
+  </head>
+  <body>
+    <div id="main" class="map"></div>
+    <div id="main2" class="map"></div>
+    <div id="slider" data-wjs-element="main main2"></div>
+        <div id="name"></div>
+  </body>
+  
+  <script src="./data/gen4.js"></script> 
+  <script>
+    $(document).ready(function(){
+    		// config
+    		var radius = 10;
+    		
+		// Creating map 1
+		var paper = Raphael(1, 1, 900, 900);
+		// Creating map 2
+		var paper2 = Raphael(950, 1, 900, 900);
+		
+		// Creating 2 array-like with all the nodes
+		var st = paper.set();
+		var st2 = paper2.set();
+		
+		// nodes map 1		
+		function donode(myid, posx, posy, radius, fill) {
+			c = paper.circle(posx, posy, radius)
+				.attr("fill", "blue");
+				//.attr("fill", fill);
+			c.id = myid;
+			c[0].onmouseover =  function () {
+				$("#name").css('position','absolute')
+					.css('left',node[myid][0]+10)
+					.css('top',node[myid][1]-30)
+					.append(node[myid][3])
+					.show();
+			}
+			c[0].onmouseout =  function () {
+				$("#name").empty()
+					.hide();
+			}
+			st.push(c);
+		}
+		
+		// nodes map 2
+		function donode2(myid, posx, posy, radius, fill) {
+			c2 = paper2.circle(posx, posy, radius)
+				.attr("fill", "red");
+			c2.id = myid;
+			c2[0].onmouseover =  function () {
+				$("#name").css('position','absolute')
+					.css('left',node[myid][0]+960)
+					.css('top',node[myid][1]-30)
+					.append(node[myid][3])
+					.show();
+			}
+			c2[0].onmouseout =  function () {
+				$("#name").empty()
+					.hide();
+			}
+			st2.push(c2);
+		}
+		// do nodes 1 and 2
+		for (var i = 0; i < node.length; i++) {
+			donode(i, node[i][0], node[i][1], radius, node[i][2]);
+			donode2(i, node[i][0], node[i][1], radius, node[i][2]);
+		}	
+		
+		// interaction: show similarities on click
+		var renode = function () {
+			for (var i = 0; i < st.length; i++) {
+				if (i!=this.id)	{	
+					if (s[this.id][i] == "0.0") {
+						st[i].attr({"r": 10})
+							.attr({"fill": "white"})
+							.attr({"fill-opacity": 0.1})
+							.attr({"stroke": "black"})
+							.attr({"stroke-width": "3px"});
+						st2[i].attr({"r": 10})
+							.attr({"fill": "white"})
+							.attr({"fill-opacity": 0.1})
+							.attr({"stroke": "black"})
+							.attr({"stroke-width": "3px"});
+					} else {
+						st[i].attr({"r": s[this.id][i]})
+							//.attr({fill: node[i][2]})
+							.attr({fill: "blue"})
+							.attr({"fill-opacity": 0.5});
+						st2[i].attr({"r": s[this.id][i]})
+							//.attr({fill: node[i][2]})
+							.attr({fill: "red"})
+							.attr({"fill-opacity": 0.5});
+					}
+				} else {
+					st[i].attr({"fill": "black"})
+						.attr({"r": 10})
+						.attr({"fill-opacity": 1});
+					st2[i].attr({"fill": "black"})
+						.attr({"r": 10})
+						.attr({"fill-opacity": 1});
+				}
+			}
+		};
+		// create interaction in map 1 and 2
+		st.click(renode);
+		st2.click(renode);
+
+		// slider map 1 and 2 opacity
+		//Step 1: set up the slider with some options. The valid values for opacity are 0 to 1
+		//Step 2: Bind an event so when you slide the slider and stop, the following function gets called
+		$('#slider').slider({ 
+			min: 0, 
+			max: 1, 
+			step: 0.01, 
+			value: 0,
+			orientation: "horizontal",
+			slide: function(e,ui){
+				$('#main').css('opacity', ui.value);
+				$('#main2').css('opacity', ui.value)
+			}
+		})
+	// FIXME hardcoded zoom onload 
+	//function zoom() {
+            document.body.style.zoom = "67%" 
+        //}
+    });
+  </script>
+</html>

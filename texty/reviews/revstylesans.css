@@ -1,0 +1,48 @@
+
+	h1 {
+		COLOR: navy; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: large; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-ALIGN: center
+	}
+	blockquote {
+		BACKGROUND-COLOR: #FFFFCE;
+		COLOR: black;
+		FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		FONT-SIZE: small;
+		FONT-STYLE: italic;
+		FONT-WEIGHT: 500;
+		MARGIN-LEFT: 50px;
+		MARGIN-RIGHT: 50px;
+		TEXT-ALIGN: justify
+	}
+	h2 {
+		COLOR: #330099;
+		FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		FONT-SIZE: medium;
+		FONT-STYLE: normal;
+		FONT-WEIGHT: bold;
+		TEXT-ALIGN: left
+	}
+	h3 {
+		COLOR: #5163AA;
+		FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		FONT-SIZE: medium;
+		FONT-STYLE: normal;
+		FONT-WEIGHT: bold;
+		TEXT-ALIGN: left
+	}
+
+	h4 {
+		color: maroon; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: medium; FONT-STYLE: italic; FONT-WEIGHT: bold; TEXT-ALIGN: center
+	}
+
+	p {
+		COLOR: black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: small; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-ALIGN: justify
+	}
+	li {
+		COLOR: black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: small; FONT-STYLE: normal; FONT-WEIGHT: normal
+	}
+	ol {
+		COLOR: black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: small; FONT-STYLE: normal; FONT-WEIGHT: normal
+	}
+	ul {
+		COLOR: black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE:small; FONT-STYLE: normal; FONT-WEIGHT: normal
+	}

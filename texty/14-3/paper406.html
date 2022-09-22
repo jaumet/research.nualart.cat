@@ -1,0 +1,950 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<!-- Mirrored from informationr.net/ir/14-3/paper406.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:21:18 GMT -->
+<head> 
+<title>Propuesta de indicadores m&eacute;tricos para gestores sociales de noticias: an&aacute;lisis de la prensa digital espa&ntilde;ola en Men&eacute;ame
+</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" /> 
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" /> 
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" /> 
+ 
+<!--Enter appropriate data in the content fields--> 
+<meta name="dc.title" content="Propuesta de indicadores métricos para gestores sociales de noticias: Análisis de la prensa digital española en Menéame"/> 
+<meta name="dc.creator" content="Enrique Ordu&ntilde;a-Malea, José-Antonio Ontalba-Ruipérez" /> 
+<meta name="dc.subject" content="Information science, Bibliometrics" /> 
+<meta name="dc.description" content="Introduction. Social bookmarking sites such as Digg, Men&eacute;ame, etc. have become a reference for the digital press. Therefore, news producers wish to position themselves in such systems to gain visibility and to increase traffic to their Websites. This paper proposes two bibliometric indicators to calculate the presence and impact of the press in social bookmarking systems, providing both qualitative and quantitative measures. Method. The Weighted Comments Impact (ICP) is proposed as an indicator of the impact of a news medium over a month, and the Media Power Factor (FPM) is proposed as an indicator of the overall impact of a news medium over a month. To validate these parameters, a longitudinal retrospective descriptive analysis of the content of news sent to the Men&eacute;ame social bookmarking site over sixteen months has been carried out. Results. The validation of the Weighted Comments Impact shows that the digital medium which has reached the highest average value is El Pa&iacute;s, followed by 20 Minutos and El Mundo, which is consistent with the overall ranking of comments received. The validation of the Media Power Factor, however, indicates that 20 Minutos is the digital newspaper with the highest value, followed by El Pa&iacute;s and El Mundo. Conclusions.The main finding of this study is that the parameters proposed are valid for calculating the degree of impact of the digital press in a social bookmarking site." /> 
+
+<meta name="dc.subject.keywords" content="social bookmarking sites, digital press, Men&eacute;ame, Spain, bibliometrics" /> 
+ 
+<!--leave the following to be completed by the Editor--> 
+<meta name="robots" content="all" /> 
+
+<meta name="dc.publisher" content="Professor T.D. Wilson" /> 
+<meta name="dc.coverage.placename" content="global" /> 
+<meta name="dc.type" content="text" /> 
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" /> 
+<meta name="dc.identifier" scheme="URI" content="paper406.html" /> 
+<meta name="dc.relation.IsPartOf" content="infres143.html" /> 
+<meta name="dc.format" content="text/html" /> 
+<meta name="dc.language" content="es" /> 
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" /> 
+<meta name="dc.date.available" content="2009-09-15" /> 
+ 
+<script language="javascript" type="text/javascript"> 
+ 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script> 
+	
+<style type="text/css"> 
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+ 
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; --> 
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+ 
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+ 
+legend {
+    color: white;
+    background-color: #5E96FD;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+ 
+ 
+</style> 
+ 
+</head> 
+<body bgcolor="#ffffff"> 
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 14  no. 3, September, 2009</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres143.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+
+<hr style="COLOR: #5E96FD" size="1" /> 
+
+<h1 align="center">Propuesta de indicadores m&eacute;tricos para gestores sociales de noticias: an&aacute;lisis de la prensa digital espa&ntilde;ola en <em>Men&eacute;ame</em></h1> 
+<br /> 
+<div style="margin-left: 10%; margin-right: 10%;"> 
+<h4><a href="#authors">Enrique Ordu&ntilde;a-Malea</a> and <a href="#authors">Jos&eacute;-Antonio Ontalba-Ruip&eacute;rez</a><br />
+Instituto de Dise&ntilde;o y Fabricaci&oacute;n, Universidad Polit&eacute;cnica de Valencia, Spain</h4> 
+</div> 
+<br /> 
+ 
+<form action="#"> 
+<fieldset> 
+<legend>Resumen</legend> <br />
+ <blockquote>
+<strong>Introducci&oacute;n.</strong> La prensa digital quiere posicionarse en los Gestores Sociales de Noticias o GSN (Digg, Men&eacute;ame, etc.) para ganar visibilidad y aumentar el tr&aacute;fico de sus webs. Este trabajo pretende proponer unos indicadores bibliom&eacute;tricos que calculen la presencia e impacto de la prensa en los GSN. <br />  
+<strong>M&eacute;todo.</strong> Se propone el ICP (Impacto de Comentarios Ponderado) como indicador del impacto de un medio a lo largo de un mes a partir de los comentarios recibidos, y el FPM (Factor de Poder del Medio) como indicador global del impacto del medio a lo largo de un mes. Para la validaci&oacute;n de dichos par&aacute;metros se realiza un an&aacute;lisis de contenido descriptivo longitudinal retrospectivo de las noticias remitidas al GSN Men&eacute;ame durante 16 meses. <br />  
+<strong>Resultados.</strong> La validaci&oacute;n del ICP muestra a El Pa&iacute;s como el medio con mayor impacto en comentarios, seguido de 20 Minutos y El Mundo, hecho que concuerda con el ranking de comentarios totales recibidos. La validaci&oacute;n del FPM, en cambio, indica que 20 Minutos es el medio con un valor m&aacute;s alto, seguido por El Pa&iacute;s y El Mundo. <br /> 
+<strong>Conclusiones.</strong> Los par&aacute;metros propuestos son v&aacute;lidos para calcular el grado de impacto de la prensa digital en los GSN. </blockquote>
+</fieldset> 
+</form> 
+<br /> 
+
+<div align="center">
+<a href="#ingles">Abstract in English</a></div>
+<br />
+
+
+<div align="center"> 
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: #5E96FD;" onclick="doChangeFont()" /></div> 
+
+<br /> 
+ 
+<h2>Introducci&oacute;n</h2> 
+ 
+<p>La Web ha provocado un impacto irreversible en los distintos sistemas tradicionales de publicaci&oacute;n, cuyas limitaciones en rapidez, puntualidad, gesti&oacute;n y distribuci&oacute;n, entre otras, son cada vez m&aacute;s evidentes.</p> 
+<p>Disponer de una copia impresa ya no es un requisito para leer o enviar un documento textual, esto provoca que aparezcan nuevas formas de difusi&oacute;n y distribuci&oacute;n de la informaci&oacute;n (<a href="#han05">Hane y Pitkow 2005</a>), permitiendo de este modo la aparici&oacute;n de nuevos modelos de negocio (<a href="#lop07">L&oacute;pez S&aacute;nchez 2007</a>), pese a que las tipolog&iacute;as documentales (que no formatos) que las explicitan pr&aacute;cticamente no han cambiado.</p> 
+<p>Por otra parte, el hecho de que todos los sistemas de publicaci&oacute;n se vean obligados en la Web a publicar en un mismo soporte (disco duro) documentos legibles por m&aacute;quina provoca la p&eacute;rdida de las fronteras tradicionales entre los distintos tipos de documentaci&oacute;n, tanto en funci&oacute;n de su soporte (papel, cinta magn&eacute;tica, DVD, etc.), como de sus formatos de presentaci&oacute;n fuera de l&iacute;nea (libro, revista, peri&oacute;dico, etc.).</p> 
+<p>Debido a esto, los distintos sistemas de publicaci&oacute;n, pese a seguir siendo diferentes en su esencia y motivaci&oacute;n, comienzan a converger y a presentar ciertos aspectos comunes.</p>
+<p>Entre los distintos sistemas de publicaci&oacute;n informativa (radio, televisi&oacute;n y prensa), esta convergencia es todav&iacute;a m&aacute;s acusada, pues su diferencia fuera de l&iacute;nea se basa en el formato de comunicaci&oacute;n. De hecho, "hoy, un peri&oacute;dico, una radio o una televisi&oacute;n en la Red llegan a parecerse tanto entre s&iacute;, que comienza a resultar anacr&oacute;nico seguirles llamando seg&uacute;n su viejo nombre" (<a href="#alb01">Albertos 2001</a>).</p>
+<p>La prensa ha tomado cierta ventaja con respecto a los dem&aacute;s medios tradicionales -radio y televisi&oacute;n- tanto en presencia como en protagonismo dentro de la Red, donde la lucha por la visibilidad es esencial. Esta ventaja se debe, en parte, a las limitaciones en ancho de banda y factores de compresi&oacute;n (<a href="#jim02">Jim&eacute;nez L&oacute;pez <em>et al.</em>  2002</a>) que imped&iacute;an hasta hace poco el adecuado desarrollo de la televisi&oacute;n y la radio en la Web.</p>
+<p>Debido a la gran presencia, audiencia, expansi&oacute;n y grado de desarrollo de la prensa digital, y teniendo en cuenta la comentada convergencia que se viene produciendo entre distintos sistemas de publicaci&oacute;n, su an&aacute;lisis puede servir de referente para conocer las futuras tendencias y modificaciones que puedan sufrir otros sistemas de publicaci&oacute;n, como por ejemplo el cient&iacute;fico.</p>
+<p>En ese sentido, el presente de la prensa digital pasa ineludiblemente por conocer su presencia en la Web social, pues &eacute;sta es el presente de Internet.</p>
+<p>De esta forma, el an&aacute;lisis de la presencia de la prensa digital espa&ntilde;ola en la Web social, as&iacute; como la propuesta y estudio de distintos m&eacute;todos para llevar esto a cabo, son los prop&oacute;sitos generales de este trabajo.</p>
+
+<h3>Recopilaci&oacute;n de noticias en la Web social</h3>
+
+<p>La llegada de la Web social provoca una evoluci&oacute;n de los servicios de recuperaci&oacute;n de noticias debido a la conjunci&oacute;n de dos factores: el desarrollo de unas herramientas y aplicaciones web preparadas para describir y compartir contenidos, y la aparici&oacute;n de un conjunto de usuarios, cada vez mayor y m&aacute;s influyente, que las solicita.</p>
+<p>Seg&uacute;n Lerman (<a href="#ler08">2008</a>), estas aplicaciones se caracterizan por los siguientes elementos:</p>
+<p>- Los usuarios crean informaci&oacute;n.<br />
+-	Los usuarios comentan la informaci&oacute;n, con palabras clave o etiquetas.<br />
+-	Los usuarios eval&uacute;an el contenido, de forma pasiva o activa.<br />
+-	Los usuarios crean redes sociales asignando a otros usuarios con intereses afines como amigos o contactos.<br /></p> 
+ 
+<p>Estas caracter&iacute;sticas (sobre todo las tres primeras) provocan la aparici&oacute;n de una nueva subclase de servicios de recopilaci&oacute;n de noticias, que se distingue de las anteriores (bases de datos, <em>clipping</em> y buscadores) en tanto que las empresas que proporcionan las noticias a los usuarios no son empresas que act&uacute;an como intermediarias, sino que los mismos usuarios se encargan de recopilarlas y ofrecerlas a los dem&aacute;s lectores (gracias al desarrollo del <em>software</em> comentado anteriormente).</p> 
+<p>Estos "servicios de recopilaci&oacute;n social de noticias", en la medida que han ido adoptando las caracter&iacute;sticas mencionadas por Lerman, han evolucionado desde su aparici&oacute;n. Se proponen las siguientes fases:</p>
+
+<h4>Fase I. Estructuraci&oacute;n autom&aacute;tica, recopilaci&oacute;n manual y publicaci&oacute;n controlada: canales de noticias</h4>
+
+<p>Corresponde al fen&oacute;meno conocido como redifusi&oacute;n y agregaci&oacute;n de contenidos y no debe confundirse con los servicios de agregaci&oacute;n de contenidos realizados por intermediarios.</p>
+<p>Es un servicio autom&aacute;tico, pues la noticia, publicada en un medio de informaci&oacute;n cualquiera, se describe y estructura autom&aacute;ticamente mediante un esquema de metadatos de noticias (como la familia RSS o <em>Atom</em>) a trav&eacute;s de un <em>script</em> que se inserta en el c&oacute;digo fuente del propio medio.</p>
+<p>Es tambi&eacute;n un servicio social, pues son los propios usuarios los que se suscriben a los canales de noticias que les interesan para recibir posteriormente las descripciones bibliogr&aacute;ficas de las mismas (e incluso el texto completo) en ciertas aplicaciones (agregadores de noticias) que ellos controlan, gestionan e incluso comparten.</p>
+<p>Finalmente, es un servicio de publicaci&oacute;n controlado, pues se depende de los canales de noticias que, desde el origen, los diferentes medios decidan que pueden redifundirse.</p>
+<p>La utilizaci&oacute;n de sistemas de sindicaci&oacute;n de contenidos mediante RSS aparece en la prensa espa&ntilde;ola en Internet en 2003 en el diario <em><a href="http://www.elmundo.es/" target="_blank">El Mundo</a></em> y la mayor&iacute;a de medios ya ofrecen hoy esta funcionalidad (<a href="#gua07">Guallar 2007</a>), aunque su utilizaci&oacute;n por el p&uacute;blico no est&aacute; siendo tan amplia como se esperaba (<a href="#fra07">Franganillo 2007</a>).</p>
+
+<h4>Fase II. Estructuraci&oacute;n y recopilaci&oacute;n manual, publicaci&oacute;n controlada: recopiladores sociales de noticias (RSN)</h4>
+
+<p>Esta fase se distingue de la anterior en que los metadatos que describen la noticia ya no son creados de forma autom&aacute;tica en el origen (en el medio), sino por los propios usuarios en el destino.</p>
+<p>La publicaci&oacute;n es controlada, pues existe un equipo de edici&oacute;n que decide, en funci&oacute;n de la calidad, importancia o veracidad de la noticia, entre otras consideraciones, si aprueba o no su publicaci&oacute;n.</p>
+<p>Una caracter&iacute;stica fundamental es que el servicio es totalmente abierto y, adem&aacute;s, funciona en su conjunto como una obra de referencia: es una recopilaci&oacute;n social de descripciones bibliogr&aacute;ficas de noticias.</p>
+<p>El servicio pionero fue <em><a href="http://slashdot.org/" target="_blank">
+Slashdot
+</a></em>, creado en septiembre de 1997, siendo su equivalente en Espa&ntilde;a <em><a href="http://barrapunto.com/" target="_blank">
+Barrapunto
+</a></em> en 2000. Estos servicios se convierten en mecanismos de creaci&oacute;n de esferas p&uacute;blicas en l&iacute;nea (<a href="#bao00">Baoill 2000</a> ; <a href="#poo05">Poor 2005</a>).</p>
+<p>Este car&aacute;cter abierto y su creciente popularidad y alto nivel de visitas, provoca la aparici&oacute;n del llamado "efecto <em>slashdot</em>", fen&oacute;meno por el que se colapsa una web a causa de la cantidad de visitas en poco tiempo redirigidas desde este servicio (<a href="#adl99">Adler, 1999</a> ; <a href="#not07">Notess 2007</a>).</p>
+
+<h4>Fase III. Estructuraci&oacute;n, recopilaci&oacute;n y publicaci&oacute;n social: editores sociales de noticias (ESN)</h4>
+
+<p>Supone la adaptaci&oacute;n completa de estos modelos de comunicaci&oacute;n period&iacute;stica a la Web 2.0. Los usuarios, adem&aacute;s de recopilar y describir las noticias, las ponderan mediante comentarios y votos decidiendo as&iacute; su publicaci&oacute;n o rechazo: las noticias se publican por promoci&oacute;n democr&aacute;tica; son editores sociales de noticias.</p>
+<p>El primer servicio de este estilo surge a la luz a finales de 2004 con <em><a href="http://digg.com/" target="_blank">
+Digg</a></em>. El &eacute;xito de este servicio lleva a la publicaci&oacute;n de su versi&oacute;n espa&ntilde;ola, <em>Men&eacute;ame</em>, en diciembre de 2005.</p>
+
+<h4>Fase IV. Tendencias futuras</h4>
+
+<p>La vertiginosa velocidad con la que estos servicios aparecen, evolucionan y caen en desuso en Internet hace dif&iacute;cil evaluar las posibles fases futuras de los servicios de recopilaci&oacute;n de noticias. Sin embargo, destacan dos servicios que denotan posibles tendencias futuras.</p>
+
+<p>Por una parte destaca <em><a href="http://es.corank.com/" target="_blank">CoRank</a></em>, servicio donde cada usuario se crea su propia recolecci&oacute;n de noticias que comparte con otros usuarios. Este servicio es similar al que proporcionan los agregadores de contenidos de canales de noticias (que tambi&eacute;n permiten compartir las suscripciones mediante un est&aacute;ndar de metadatos llamado <em><a href="http://www.opml.org/" target="_blank">
+OPML
+</a></em>), con la salvedad de que las noticias no llegan por redifusi&oacute;n, sino por recopilaci&oacute;n y descripci&oacute;n del propio usuario.</p>
+<p>Por otra parte, destaca el reciente <em>Yahoo! Buzz</em>, servicio que mezcla caracter&iacute;sticas de <em>Digg</em> y <em>Men&eacute;ame</em>, junto con las de los buscadores gratuitos como <em><a href="http://news.google.com/" target="_blank">
+Google News
+</a></em> o el propio buscador de <em>Yahoo!</em>  Podr&iacute;a encuadrar en la categor&iacute;a de buscador social gratuito de noticias.</p>
+<p>En adelante se usar&aacute; la denominaci&oacute;n GSN (gestores sociales de noticias) para designar de forma conjunta tanto a los RSN como a los ESN.</p>
+
+<h3>Estudios previos</h3>
+
+<p>Los estudios realizados, a fecha de hoy, de los GSN se podr&iacute;an dividir en las siguientes &aacute;reas:</p>
+<p><b>a) Trabajos descriptivos/recopilatorios</b></p>
+<p>Estudios centrados en la explicaci&oacute;n de una o varias herramientas, desde la &oacute;ptica de la Web 2.0. Suelen ser trabajos poco anal&iacute;ticos y provenientes de medios de prensa (<a href="#coh07b">Cohn 2007</a> ; <a href="#not07">Notess 2007</a>) y/o blogs, fundamentalmente.</p>
+<p><b>b) Estudios de usuarios</b></p>
+<p>Esta &aacute;rea de estudio tiene tres objetivos claramente diferenciados. En primer lugar, conocer el comportamiento de los usuarios desde un punto de vista sociol&oacute;gico. En segundo lugar, usar el conocimiento anterior para mejorar los algoritmos de publicaci&oacute;n de noticias en portada (pese a que &eacute;stos se suelen ocultar).</p>
+<p>Finalmente, conocer al usuario lo m&aacute;ximo posible para poder realizar campa&ntilde;as posteriores de marketing y publicidad, completamente personalizadas.</p>
+<p>Los primeros trabajos publicados acerca de este tema se centran en <em>Slashdot</em> (<a href="#poo05">Poor 2005</a> ; <a href="#kal07">Kaltenbrunner <em>et al.</em>  2007</a>) y posteriormente en <em>Digg</em>.</p>
+<p>Respecto a &eacute;ste, destacan los exhaustivos estudios realizados por Lerman (<a href="#ler08">2008</a>), fundamentalmente orientados a la propuesta de modelos matem&aacute;ticos con los que predecir la variaci&oacute;n del n&uacute;mero de votos que recibe una noticia con el tiempo, as&iacute; como la variaci&oacute;n del <em>ranking</em> de un usuario.</p>
+<p>Asimismo, se destaca la propuesta de un factor de ca&iacute;da de la atenci&oacute;n de los usuarios ante noticias nuevas basado en el n&uacute;mero m&aacute;ximo de votos que &eacute;stas alcanzan en un intervalo de tiempo (<a href="#wu07">Wu y Huberman 2007</a>).</p>
+<p><b>c) Estudios tem&aacute;ticos, de contenidos o tags.</b></p>
+<p>Esta &aacute;rea de trabajo se centra en el estudio de las etiquetas o tags mediante las que los usuarios describen las noticias que env&iacute;an al GSN.</p>
+<p>Pese a que a nivel internacional no se detecta ning&uacute;n estudio al respecto, a nivel espa&ntilde;ol se puede destacar el <em>Departamento de Lenguajes y Sistemas Inform&aacute;ticos</em> de la <em>Universidad de Sevilla</em> (<a href="#ros07">De la Rosa 2007</a>), orientados al estudio de <em>Men&eacute;ame</em>. </p>
+<p>Estos trabajos suponen un comienzo en la aplicaci&oacute;n de ciertos conceptos de la Bibliometr&iacute;a en gestores sociales de noticias.</p><br />
+<p>Se detecta, no obstante, una carencia de trabajos orientados al estudio de la fuente (autor&iacute;a) de las noticias y, por tanto, de la presencia de la prensa digital.</p>
+<p>En este sentido se puede rese&ntilde;ar el estudio realizado por <em>esCiudad.com</em> (<a href="#esc07">2007</a>), que se queda en los datos y apenas profundiza, los trabajos en curso de Eva Ferreras (<a href="#fer08">2008</a>) y diversas estad&iacute;sticas ofrecidas desde en el propio blog de <em>Men&eacute;ame</em> (<a href="#men07">2007</a>).</p>
+<p>Recientemente (<a href="#ord08">Ordu&ntilde;a-Malea y Ontalba-Ruip&eacute;rez 2008</a>), se ha realizado un primer estudio centrado en la presencia de la prensa digital espa&ntilde;ola en <em>Men&eacute;ame</em> (figura 1), el GSN con mayor impacto y audiencia en Espa&ntilde;a, a partir de m&eacute;todos cuantitativos (n&uacute;mero de noticias publicadas por medio) y cualitativos (promedio de votos y comentarios por noticia), asumiendo que los votos y los comentarios recibidos son un primer indicio de la calidad, o al menos el impacto, que una determinada noticia, y por tanto un determinado medio, tiene en un GSN.</p>
+
+
+<div align="center"><img src="p406fig1.jpg" alt="Figura 1: Portada de Men&eacute;ame (fuente: Men&eacute;ame)" width="640" height="395" border="0" /></div>
+<div align="center"><br /><strong>Figura 1: Portada de Men&eacute;ame (fuente:<em><a href="http://www.meneame.net/">Men&eacute;ame</a></em>)</strong></div>
+
+<h3>Influencia de los GSN en los medios de prensa</h3>
+
+<p>Tal es el poder de los principales GSN y el inter&eacute;s de la prensa en luchar por el espacio web que, en apenas unos a&ntilde;os, &eacute;sta ha pasado de intentar evitar que sus contenidos se difundieran sin su permiso a que pr&aacute;cticamente todos los peri&oacute;dicos digitales m&aacute;s importantes ya incluyan, a trav&eacute;s de un <em>plug-in</em>, enlaces en sus noticias para que puedan ser enviadas directamente a los gestores sociales de noticias y, as&iacute;, conseguir un mayor tr&aacute;fico (<a href="#fer08">Ferreras 2008</a>).</p>
+<p>En Espa&ntilde;a, este hecho todav&iacute;a es m&aacute;s significativo en medios como <em><a href="http://www.elpais.com/" target="_blank">El Pa&iacute;s</a></em>, si se tiene en cuenta que entre noviembre de 2002 y junio de 2005 hab&iacute;a sido el &uacute;nico medio espa&ntilde;ol que hab&iacute;a decidido cerrar el acceso libre a su sitio haci&eacute;ndolo completamente de pago (<a href="#gua07">Guallar 2007</a>).</p>
+<p>Este cambio radical en la pol&iacute;tica de los medios de prensa viene motivado por el aumento potencial de visitas que puede recibir un sitio web cuando una noticia publicada en dicho sitio ha logrado aparecer en la portada de alg&uacute;n GSN.</p>
+<p>El pionero en este aspecto, como se indic&oacute; al principio, fue <em>Slashdot</em>. Con posterioridad se ha repetido con diferente intensidad en los dem&aacute;s GSN provocando la aparici&oacute;n del "efecto <em>Digg</em>", "efecto <em>Men&eacute;ame</em>", etc.</p>
+<p>Con el objetivo de disponer de un nombre com&uacute;n a dicho fen&oacute;meno de forma independiente al servicio que lo provoque, en este trabajo se denominar&aacute; en adelante "efecto GSN". En otros trabajos (<a href="#not07">Notess 2007</a>) este efecto es definido como <em>DDoS attack (Distributed Denial of Service)</em>, definici&oacute;n centrada en la consecuencia t&eacute;cnica del fen&oacute;meno, pero que no hace referencia a su origen en un GSN, sino a cualquier ataque al servidor.</p>
+<p>La cantidad de visitas que recibe el medio, a riesgo de colapsar el servidor si se producen en gran n&uacute;mero y breve espacio de tiempo es, hoy por hoy, el principal aval de los medios para justificar precios por publicidad.</p>
+<p>De esta forma, los medios intentan aparecer en los distintos GSN bajo la hip&oacute;tesis de que existe una mayor probabilidad de ganar futuros lectores si aumenta el n&uacute;mero de noticias suyas &eacute;stos. Conjetura, por otra parte, todav&iacute;a no comprobada.</p>
+<p>Siguiendo con este razonamiento, no es de extra&ntilde;ar que los propios medios comiencen a plantearse la realizaci&oacute;n de campa&ntilde;as de publicidad para anunciarse en los GSN (<a href="#dan08a">Dans 2008a</a>). La publicidad en estos servicios es un punto de reflexi&oacute;n importante de cara al futuro.</p>
+
+<h3>Presencia de la prensa en un GSN y su an&aacute;lisis m&eacute;trico</h3>
+
+<p>Debido al creciente inter&eacute;s de los diferentes medios por aparecer en los distintos GSN como m&eacute;todo para obtener mayor visibilidad y, posiblemente, mayor audiencia en sus sedes web, la disponibilidad de unos indicadores que permitan medir la mayor o menor presencia e impacto de las noticias de un medio en un GSN se hace cada vez m&aacute;s necesaria.</p>
+<p>Un GSN, como se ha visto, forma hoy parte del sistema de publicaci&oacute;n informativo, mientras que los indicadores bibliom&eacute;tricos son v&aacute;lidos fundamentalmente para el sistema de publicaci&oacute;n cient&iacute;fico, pues asumen unos supuestos (<a href="#san90">Sancho 1990</a>) que hacen comprensibles sus c&aacute;lculos y soluciones.</p>
+<p>No obstante, debido entre otras cosas a la convergencia entre los sistemas de publicaci&oacute;n que se produce en la Web, tal como se rese&ntilde;a al comienzo, resulta comprensible pensar que la aplicaci&oacute;n de estos indicadores es posible en un GSN, con las modificaciones y salvedades oportunas.</p>
+<p>La introducci&oacute;n de indicadores bibliom&eacute;tricos en los GSN, como se ha visto anteriormente, es un aspecto hasta el momento poco abordado por la literatura, donde abundan m&aacute;s los estudios basados en &iacute;ndices de productividad.</p>
+<p>As&iacute; como el n&uacute;mero de noticias publicadas de un medio es un indicador de la productividad (o presencia) de un medio y el n&uacute;mero de comentarios y votos que las noticias reciben son indicadores cualitativos tanto de una supuesta calidad de las noticias como de una mayor actividad de los usuarios, se precisan indicadores que permitan medir el impacto que los medios presentan en el GSN.</p>
+<p>La utilidad de estos indicadores radica en la posibilidad de establecer un valor del impacto que las noticias de un determinado medio alcanzan en un GSN para poder comparar &eacute;ste con otros indicadores (como la audiencia web, por ejemplo), de una forma estandarizada y no basada &uacute;nicamente en aspectos meramente cuantitativos.</p>
+<p>De esta forma, los objetivos que se plantea este trabajo son los siguientes: </p>
+<p>- Proponer dos indicadores del impacto de un medio de prensa en un GSN, basados en la equivalencia noticia-art&iacute;culo y medio-autor:</p>
+<p>a)	El ICP (impacto de comentarios ponderado), como indicador del impacto de un medio a lo largo de un mes, a partir del c&aacute;lculo del Hcn (&iacute;ndice de comentarios a noticias), par&aacute;metro basado en el &iacute;ndice h pero aplicado a los comentarios que reciben las noticias de un determinado medio durante un mes.</p>
+<p>b)	El FPM (factor de poder del medio), como indicador global del impacto de un medio a lo largo de un mes, teniendo en cuenta tanto aspectos cuantitativos (n&uacute;mero de noticias), como cualitativos (votos y comentarios recibidos).</p>
+<p>- Validar los par&aacute;metros anteriores mediante su aplicaci&oacute;n a las noticias provenientes de medios de prensa espa&ntilde;oles publicadas en el GSN de mayor audiencia en Espa&ntilde;a (<em>Men&eacute;ame</em>), entre enero de 2007 y abril de 2008.</p>
+
+<h2>Material y m&eacute;todos</h2>
+
+<p>En primer lugar se detallan los indicadores propuestos en este trabajo (ICP y FPM) y finalmente la metodolog&iacute;a empleada para su validaci&oacute;n.</p>
+
+<h3>Impacto de comentarios ponderado (ICP)</h3>
+
+<p>El &iacute;ndice h (<a href="#hir05">Hirsch 2005</a>) es un indicador reciente que pretende medir el impacto de la productividad cient&iacute;fica de un autor.</p>
+<p>Un cient&iacute;fico tiene un &iacute;ndice h si "h" de sus N art&iacute;culos publicados tiene al menos h citas cada uno y el resto de art&iacute;culos (N-h), tiene menos de h citas recibidas cada uno de ellos.</p>
+<p>De este modo, para el autor mostrado en la tabla 1, tras ordenar sus art&iacute;culos por orden decreciente de citas recibidas, su &iacute;ndice h ser&iacute;a igual a 4.</p>
+
+<table width="40%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"> 
+<caption align="bottom"><br /><strong>Tabla 1: &iacute;ndice h para un autor cient&iacute;fico</strong></caption> 
+<tr>
+<th valign="middle">Autor X</th><th>Citas recibidas</th>
+</tr>
+<tr>
+<td>Art&iacute;culo 1</td><td align="center">20</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 2</td><td align="center">16</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 3</td><td align="center">14</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 4</td><td align="center">8</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 5</td><td align="center">4</td>
+</tr>
+</table>
+
+<p>Debido a la facilidad de c&aacute;lculo y a la debilidad de muchos profesionales por los <em>rankings</em>, el &iacute;ndice h tiene una gran aceptaci&oacute;n y su aplicaci&oacute;n y uso se expande cada vez m&aacute;s (<a href="#rod07">Rodr&iacute;guez Navarro e Imperial R&oacute;denas 2007</a>).</p>
+<p>As&iacute;, no es de extra&ntilde;ar que una de las primeras experiencias en aplicar indicadores bibliom&eacute;tricos en la Web social haya estado basada en el mismo, a partir de la propuesta del llamado Hc (<a href="#cab08">Cabezas 2008</a>), como indicador para evaluar el impacto de los comentarios de un blog y, por tanto, del impacto del mismo en la comunidad.</p>
+<p>No obstante, el &iacute;ndice h tiene una serie de limitaciones importantes, ya conocidas por los profesionales, basadas en que autores con carreras cient&iacute;ficas muy diferentes pueden alcanzar un mismo &iacute;ndice. La tabla 2 muestra un ejemplo:</p>
+
+
+<table width="50%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"> 
+<caption align="bottom"><br /><strong>Tabla 2: Comparativa de carreras cient&iacute;ficas con mismo &iacute;ndice h</strong></caption>
+<tr>
+<th>Art&iacute;culos</th><th>Citas recibidas (Autor 1)</th><th>Citas recibidas (Autor 2)</th><th>Citas recibidas (Autor 3)</th>
+</tr>
+<tr>
+<td>Art&iacute;culo 1</td><td align="center">20</td><td align="center">20</td><td align="center">20</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 2</td><td align="center">16</td><td align="center">16</td><td align="center">16</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 3</td><td align="center">14</td><td align="center">14</td><td align="center">14</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 4</td><td align="center">8</td><td align="center">8</td><td align="center">8</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 5</td><td align="center">4</td><td align="center">4</td><td align="center">4</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 6</td><td align="center">3</td><td align="center">0</td><td align="center">-</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 7</td><td align="center">3</td><td align="center">0</td><td align="center">-</td>
+</tr>
+<tr>
+<td>Art&iacute;culo 8</td><td align="center">3</td><td align="center">0</td><td align="center">-</td>
+</tr>
+</table>
+
+<p>Estos tres autores tendr&iacute;an un mismo &iacute;ndice h (igual a 4), pero con carreras muy diferentes.</p>
+<p>Esta cuesti&oacute;n, ya tratada en diversas publicaciones (<a href="#egg06">Egghe 2006</a>;<a href="#rou06">Rousseau 2006</a>), se plantea en el foro ISSI (<a href="#mar06">Mart&iacute;nez <em>et al.</em>  2006</a>) donde, de forma privada, varios profesionales aportan las siguientes consideraciones:</p>
+<p>- La idea detr&aacute;s del &iacute;ndice h es la consistencia de los art&iacute;culos de un autor, m&aacute;s all&aacute; del n&uacute;mero de citas recibidas.</p>
+<p>- Una buena idea ser&iacute;a poder encontrar un &iacute;ndice similar a la desviaci&oacute;n t&iacute;pica, pero en el caso del &iacute;ndice h.</p>
+<p>Tomando en consideraci&oacute;n estas ideas, en este trabajo se propone un indicador basado en el &iacute;ndice h pero aplicado a los comentarios que recibe una noticia de un medio de prensa en un GSN a lo largo de un mes; a este indicador se le aplica un &iacute;ndice de correcci&oacute;n para minimizar las limitaciones vistas anteriormente.</p>
+<p>El impacto de comentarios ponderado (ICP) se expresa mediante dos par&aacute;metros: el &iacute;ndice de comentarios propiamente dicho y un factor de correcci&oacute;n mostrado entre par&eacute;ntesis:</p>
+
+<div><em>ICP<sub>x</sub> = H<sub>CN<sub>x</sub></sub>(fc<sub>x</sub>)</em></div>
+
+<p>Donde <em>H<sub style="font-size: 70%;">CN<sub>x</sub></sub></em> (&iacute;ndice de comentarios a noticias) corresponde al equivalente al &iacute;ndice h aplicado a los comentarios de recibidos por las noticias de un medio en un GSN a lo largo de un mes "x". El par&aacute;metro <em>fc</em> expresa un factor de correcci&oacute;n o ponderaci&oacute;n.</p>
+<p>Por tanto, un medio de prensa tiene un &iacute;ndice de valor <em>H<sub style="font-size: 70%;">CN<sub>x</sub></sub></em>, si "<em>H<sub style="font-size: 70%;">CN<sub>x</sub></sub></em>" de sus <em>N<sub style="font-size: 70%;">M<sub>x</sub></sub></em> noticias publicadas a lo largo de un mes, tiene al menos <em>H<sub style="font-size: 70%;">CN<sub>x</sub></sub></em> comentarios y el resto de noticias <em>(N<sub style="font-size: 70%;">M<sub>x</sub></sub> &mdash; H<sub style="font-size: 70%;">CN<sub>x</sub></sub>)</em> tienen menos de <em>H<sub style="font-size: 70%;">CN<sub>x</sub></sub></em>.</p>
+<p>El factor de correcci&oacute;n, por su parte, sirve para ponderar la importancia de los trabajos con un n&uacute;mero de comentarios menor a <em>H<sub style="font-size: 70%;">CN<sub>x</sub></sub></em>.</p>
+<p>En este trabajo se plantean dos correctores, llamados "a" y "b", que se describen a continuaci&oacute;n:</p>
+
+<p><em>a) Factor de correcci&oacute;n "a":</em></p>
+
+<p>Se calcula simplemente mediante la media de comentarios para las noticias con un n&uacute;mero de comentarios menor a <em>H<sub style="font-size: 70%;">CN<sub>x</sub></sub></em> para el mes "x":</p>
+
+<div align="left"><img alt="equation" src="p406eq6.gif" align="middle" border="0" />;</div>
+
+<p>Este factor de correcci&oacute;n oscila entre los valores [0 <em>H<sub style="font-size: 70%;"> CN<sub>x</sub></sub>)</em>], donde:</p>
+
+<p><img alt="equation" src="p406eq7.gif" align="middle" border="0" /> = sumatorio de comentarios de aquellas noticias cuyo n&uacute;mero de comentarios sea inferior a <em>H<sub style="font-size: 70%;">CN<sub>x</sub></sub></em> en cada una de ellas;</p>
+<p><img alt="equation" src="p406eq5.gif" align="middle" border="0" /> = n&uacute;mero de noticias que alcanzan un n&uacute;mero de comentarios inferior a <em>H<sub style="font-size: 70%;"> CN<sub>x</sub></sub></em>.</p>
+
+<p>En caso de que <em>(N<sub style="font-size: 70%;">M<sub>x</sub></sub> &mdash; H<sub style="font-size: 70%;">CN<sub>x</sub></sub></em>
+
+<img alt="equation" src="p406eq5.gif" align="middle" border="0" /> sea igual a "0", el factor de correcci&oacute;n "a" es nulo (que no 0), y se expresa mediante el s&iacute;mbolo (-).</p>
+
+<p><em>b) Factor de correcci&oacute;n "b":</em></p>
+
+<p>Este factor de correcci&oacute;n pretende contemplar el porcentaje de noticias que quedan por debajo del umbral <em>H<sub style="font-size: 70%;"> CN<sub>x</sub></sub>)</em> respecto del total de noticias publicadas en dicho mes:</p>
+
+<div align="left"><img alt="equation" src="p406eq8.gif" align="middle" border="0" />;</div>
+
+<p>Este par&aacute;metro oscila entre los valores [0 1]. En caso de ser “1”, significa que todas las noticias tienen al menos <em>N<sub style="font-size: 70%;">M<sub>x</sub></sub></em> comentarios cada una.</p>
+
+<p>Tomando como base el caso planteado en la tabla 2, se puede calcular el ICP en un GSN, aplicando las siguientes equivalencias y asumiendo sus diferencias:</p>
+<p>Autor - Medio.<br /> 
+Art&iacute;culo - Noticia.<br /> 
+Cita recibida - Comentario recibido.<br /></p>
+<p>De esta forma, se obtendr&iacute;an los siguientes valores (tabla 3):</p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"> 
+<caption align="bottom"><br /><strong>Tabla 3: Impacto de comentarios ponderado</strong></caption>
+<tr>
+<th>Medio</th><th>ICP(a)</th><th>ICP(b)</th>
+</tr>
+<tr>
+<td align="center">1</td><td align="center">4(3.25)</td><td align="center">4(0.5)</td>
+</tr>
+<tr>
+<td align="center">2</td><td align="center">4(1)</td><td align="center">4(0.5)</td>
+</tr>
+<tr>
+<td align="center">3</td><td align="center">4(4)</td><td align="center">4(0.8)</td>
+</tr>
+</table>
+
+<p>Como se observa, el factor de correcci&oacute;n “a” pondera el valor del <em>H<sub style="font-size: 70%;"> CN<sub>x</sub></sub></em> y lo adecua a la actividad por debajo del mismo, premiando el impacto y la actividad para las noticias con un n&uacute;mero de comentarios inferior a <em>H<sub style="font-size: 70%;"> CN<sub>x</sub></sub></em> .</p>
+<p>Adem&aacute;s, el hecho de estar calculado s&oacute;lo para las noticias a lo largo de un mes, permite que no premie a los medios con una trayectoria m&aacute;s larga, tal como ocurre en el &iacute;ndice h (hecho que pondera el &iacute;ndice M mediante la consideraci&oacute;n de los a&ntilde;os de ejercicio cient&iacute;fico de los autores).</p>
+<p>El factor de correcci&oacute;n “b”, por su parte, premia lo contrario, es decir, es mayor cuantos menos art&iacute;culos por debajo del <em>H<sub style="font-size: 70%;"> CN<sub>x</sub></sub></em> (en teor&iacute;a, los menos citados) se poseen.</p>
+<p>Pese a que el indicador ICP sirve para evaluar el impacto de un medio en un GSN durante un mes, se propone igualmente la aplicaci&oacute;n de dicho factor de ponderaci&oacute;n para el &iacute;ndice h original.</p>
+
+<h3>Factor de poder del medio (FPM)</h3>
+
+<p>El Impacto de Comentarios Ponderado, no obstante, refleja una parte &uacute;nicamente de la importancia de un medio, dejando de lado el otro valor cualitativo estudiado con anterioridad: los votos.</p>
+<p>En este punto, se propone el c&aacute;lculo de un nuevo indicador, llamado Factor de Poder de un Medio (FPM), con el objetivo de calcular de una forma completa y diferente a la metodolog&iacute;a basada en Hirst, con el fin de conocer el poder que un medio tiene en un GSN.</p>
+<p>El FPM se calcula en este trabajo, al igual que el ICP, para un medio durante un intervalo de un mes. Su expresi&oacute;n matem&aacute;tica es la siguiente:</p>
+
+<div align="left"><em>FPM(x) = P<sub style="font-size: 70%;">Mx</sub> + I<sub style="font-size: 70%;">Mx</sub></em>
+</div>
+
+<p>Donde <em>P<sub style="font-size: 70%;">Mx</sub></em>  y <em>M<sub style="font-size: 70%;">Mx</sub></em> corresponden a la presencia (factor cuantitativo) y al impacto (factor cualitativo) del medio <em>m</em> en un mes <em>x</em>, respectivamente.</p>
+
+<p>La presencia del medio expresa el porcentaje de noticias de &eacute;ste respecto al total de noticias de medios publicadas en un GSN a lo largo del mes <em>x</em>, y se calcula de la siguiente forma:</p>
+
+<div align="left"><img alt="equation" src="p406eq12.gif" align="top" border="0" /></div>
+
+<p>Por su parte, el impacto del medio se calcula como la media del factor de poder de cada noticia en particular. Su expresi&oacute;n es la siguiente:</p>
+
+<div align="left"><img alt="equation" src="p406eq13.gif" align="top" border="0" /></div>
+
+<p>Donde el <em>FPN(x)</em> corresponde al Factor de Poder de la Noticia, que se calcula de la siguiente manera:</p>
+
+<div align="left"><img alt="equation" src="p406eq15.gif" align="top" border="0" /></div>
+
+<p>Donde:</p>
+
+<p><em>V<sub style="font-size: 70%;">Mx</sub></em> = N&uacute;mero de votos que ha recibido la noticia.</p>
+<p><img alt="equation" src="p406eq17.gif" align="middle" border="0" />= N&uacute;mero medio de votos realizados a noticias de medios de prensa, durante el mes <em>x</em>.</p>
+<p><em>C<sub style="font-size: 70%;">Mx</sub></em> = N&uacute;mero de comentarios que ha recibido la noticia.</p>
+<p><img alt="equation" src="p406eq19.gif" align="middle" border="0" />= N&uacute;mero medio de comentarios realizados a noticias de medios de prensa durante  el mes <em>x</em>.</p>
+
+<p>Los valores medios de los votos y comentarios, restringidos a medios de prensa para poder comparar en igualdad de condiciones, sirven para relativizar el valor de los votos y comentarios recibidos por una noticia, con respecto a la media.</p>
+<p>La raz&oacute;n fundamental para realizar esto es que no es lo mismo recibir 200 comentarios un mes en el que la media de comentarios (a noticias de prensa) ha sido 300, que en un mes en el que la media ha sido 500, donde el impacto de la noticia, pese a tener el mismo n&uacute;mero de comentarios, ha sido claramente inferior.</p>
+<p><em>I<sub style="font-size: 70%;">Mx</sub></em> no tiene l&iacute;mite superior, aunque es extra&ntilde;o que alcance valores muy superiores a "2".</p>
+<p>Por su parte, <em>P<sub style="font-size: 70%;">Mx</sub></em> tiene un valor m&aacute;ximo de "1", pues est&aacute; limitado por el n&uacute;mero m&aacute;ximo de noticias de prensa publicadas durante un mes. En el caso hipot&eacute;tico de que todas las noticias de prensa publicadas fuesen del mismo medio (algo dif&iacute;cil de suceder), su valor ser&iacute;a igual a "1".</p>
+<p>Puesto que este valor ser&aacute; bajo de forma general, se multiplica por "10", para obtener un valor del orden de cada uno de los componentes de <em>I<sub style="font-size: 70%;">Mx</sub></em>. Pese a ello, alcanzar un valor igual a "0.5" ya se considerar&aacute; de importancia.</p>
+<p>As&iacute;, el FPM alcanzar&aacute; valores que oscilar&aacute;n generalmente entre "1.5" y "2.5". Aquellos que bajen de este intervalo ser&aacute;n medios con poco poder, y los que superen el intervalo, medios con un gran poder en el GSN.</p>
+
+<h3>Validaci&oacute;n de los par&aacute;metros</h3>
+
+<p>An&aacute;lisis de contenido descriptivo longitudinal retrospectivo de las 23.373 noticias remitidas a <em>Men&eacute;ame</em> desde el 1 de enero de 2007 hasta el 30 de abril de 2008 (muestra total de 16 meses).</p>
+<p>El procedimiento se basa en recoger, para cada noticia publicada en <em>Men&eacute;ame</em>, la fecha de su publicaci&oacute;n, el n&uacute;mero de votos y comentarios recibidos y el medio, para con ello, posteriormente, decidir si esa noticia proviene de un medio nacional de prensa digital o no.</p>
+<p>Los datos relativos a las noticias publicadas se recogen manualmente de febrero a mayo de 2008 y son analizados durante el mes de junio. La captura se realiza a trav&eacute;s de la p&aacute;gina de portada (lugar donde se archivan la totalidad de noticias enviadas y publicadas desde el inicio de estos servicios) de <em>Men&eacute;ame</em>.</p>
+<p>Para los objetivos de este trabajo, no se considera noticia de prensa nacional digital a las enviadas desde blogs, medios de prensa extranjeros, ni otros medios de comunicaci&oacute;n, como p&aacute;ginas web de radio, televisi&oacute;n o portales tem&aacute;ticos. Sin embargo, s&iacute; que se tienen en cuenta las agencias de noticias, como <em>Reuters</em>, <em>Europa Press</em> o <em>BBC Mundo</em>, entre otras.</p>
+<p>De esta misma forma, no son consideradas como noticias de prensa nacional todas las enviadas desde las secciones de blogs de algunos peri&oacute;dicos digitales (periodismo ciudadano), pues el objetivo del trabajo es precisamente estudiar la visibilidad de las noticias formales y tradicionales, redactadas por profesionales en medios de prensa.</p>
+<p>Tampoco se consideran como tales el env&iacute;o de im&aacute;genes, vi&ntilde;etas o tiras c&oacute;micas, aunque &eacute;stas s&iacute; provengan de un medio de prensa nacional, por no considerarse estos env&iacute;os como noticias. Asimismo, quedan excluidas las noticias aparecidas en semanarios o revistas.</p>
+<p>Todos los datos son posteriormente volcados a una hoja de c&aacute;lculo <em>Excel</em>, desde la cual son analizados.</p>
+
+<h2>Resultados</h2>
+
+<p>El total de noticias enviadas a <em>Men&eacute;ame</em> durante el intervalo de muestreo ha sido de 23.373, de las cuales 8.505 (36,4%) se han considerado como noticias provenientes de medios de prensa digitales espa&ntilde;oles y, por tanto, constituyen la muestra de noticias sobre la que se aplican los indicadores propuestos.</p>
+
+<h3>Impacto de comentarios ponderado (ICP)</h3>
+
+<p>El an&aacute;lisis completo de los cinco medios con m&aacute;s n&uacute;mero de noticias en <em>Men&eacute;ame</em> se muestra en la tabla 4.</p>
+
+
+<table width="90%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"> 
+<caption align="bottom"><br /><strong>Tabla 4: &Iacute;ndice de comentarios a noticias (<em>I<sub style="font-size: 70%;">Mx</sub></em>) y factores de correcci&oacute;n</strong></caption>
+
+<tr>
+<th rowspan="2">Mes</th><th colspan="3">El Pa&iacute;s</th><th colspan="3">20 minutos</th><th colspan="3">El mundo</th><th colspan="3">La vanguardia</th><th colspan="3">El Peri&oacute;dico</th>
+</tr>
+<tr>
+<th>Hcn</th><th>f(a)</th><th>f(b)</th><th>Hcn</th><th>f(a)</th><th>f(b)</th><th>Hcn</th><th>f(a)</th><th>f(b)</th><th>Hcn</th><th>f(a)</th><th>f(b)</th><th>Hcn</th><th>f(a)</th><th>f(b)</th>
+</tr>
+<tr>
+<td>Enero</td><td>31</td><td>16,75</td><td>0,26</td><td>30</td><td>18,75</td><td>0,41</td><td>28</td><td>14,09</td><td>0,45</td><td>14</td><td>10,6</td><td>0,74</td><td>12</td><td>-</td><td>1</td>
+</tr>
+<tr>
+<td>Febrero</td><td>31</td><td>17,55</td><td>0,3</td><td>30</td><td>17,33</td><td>0,56</td><td>23</td><td>15,83</td><td>0,56</td><td>11</td><td>6,25</td><td>0,73</td><td>9</td><td>7</td><td>0,82</td>
+</tr>
+<tr>
+<td>Marzo</td><td>34</td><td>18,15</td><td>0,34</td><td>31</td><td>18,27</td><td>0,33</td><td>24</td><td>15,53</td><td>0,43</td><td>17</td><td>13,38</td><td>0,68</td><td>15</td><td>9,6</td><td>0,75</td>
+</tr>
+<tr>
+<td>Abril</td><td>28</td><td>17,13</td><td>0,38</td><td>25</td><td>14,45</td><td>0,46</td><td>23</td><td>12,96</td><td>0,48</td><td>19</td><td>11,64</td><td>0,58</td><td>19</td><td>12,67</td><td>0,68</td>
+</tr>
+<tr>
+<td>Mayo</td><td>28</td><td>17,63</td><td>0,44</td><td>30</td><td>22,26</td><td>0,61</td><td>27</td><td>18,45</td><td>0,57</td><td>19</td><td>11,2</td><td>0,66</td><td>20</td><td>17,29</td><td>0,74</td>
+</tr>
+<tr>
+<td>Junio</td><td>32</td><td>21,51</td><td>0,48</td><td>33</td><td>19,67</td><td>0,52</td><td>28</td><td>16,25</td><td>0,58</td><td>18</td><td>13,6</td><td>0,78</td><td>20</td><td>17</td><td>0,8</td>
+</tr>
+<tr>
+<td>Julio</td><td>31</td><td>20,52</td><td>0,48</td><td>29</td><td>20,6</td><td>0,54</td><td>26</td><td>16,8</td><td>0,63</td><td>17</td><td>13,67</td><td>0,65</td><td>17</td><td>7</td><td>0,94</td>
+</tr>
+<tr>
+<td>Agosto</td><td>33</td><td>22</td><td>0,42</td><td>22</td><td>16,89</td><td>0,71</td><td>29</td><td>17,95</td><td>0,59</td><td>16</td><td>10,75</td><td>0,8</td><td>16</td><td>13</td><td>0,8</td>
+</tr>
+<tr>
+<td>Septiembre</td><td>33</td><td>21,05</td><td>0,46</td><td>30</td><td>19,6</td><td>0,6</td><td>30</td><td>20,08</td><td>0,54</td><td>28</td><td>16,07</td><td>0,65</td><td>14</td><td>13</td><td>0,81</td>
+</tr>
+<tr>
+<td>Octubre</td><td>36</td><td>21,12</td><td>0,36</td><td>31</td><td>21,14</td><td>0,58</td><td>34</td><td>21,16</td><td>0,44</td><td>27</td><td>17,32</td><td>0,55</td><td>20</td><td>17,5</td><td>0,91</td>
+</tr>
+<tr>
+<td>Noviembre</td><td>37</td><td>23,67</td><td>0,43</td><td>33</td><td>22,59</td><td>0,47</td><td>30</td><td>18,17</td><td>0,46</td><td>27</td><td>19,36</td><td>0,71</td><td>21</td><td>15,8</td><td>0,81</td>
+</tr>
+<tr>
+<td>Diciembre</td><td>34</td><td>23,15</td><td>0,51</td><td>25</td><td>17,5</td><td>0,76</td><td>35</td><td>23,16</td><td>0,44</td><td>17</td><td>10,8</td><td>0,77</td><td>17</td><td>15,67</td><td>0,7</td>
+</tr>
+<tr>
+<td>Enero</td><td>34</td><td>22,93</td><td>0,45</td><td>36</td><td>25,9</td><td>0,63</td><td>29</td><td>20,31</td><td>0,5</td><td>27</td><td>20,2</td><td>0,73</td><td>24</td><td>19,2</td><td>0,83</td>
+</tr>
+<tr>
+<td>Febrero</td><td>38</td><td>26,88</td><td>0,48</td><td>31</td><td>25</td><td>0,62</td><td>37</td><td>26,56</td><td>0,54</td><td>26</td><td>19,35</td><td>0,6</td><td>13</td><td>-</td><td>1</td>
+</tr>
+<tr>
+<td>Marzo</td><td>37</td><td>24,27</td><td>0,45</td><td>35</td><td>23,28</td><td>0,58</td><td>36</td><td>24,78</td><td>0,57</td><td>26</td><td>16,58</td><td>0,68</td><td>15</td><td>14</td><td>0,88</td>
+</tr>
+<tr>
+<td>Abril</td><td>41</td><td>28,26</td><td>0,43</td><td>37</td><td>26,81</td><td>0,54</td><td>36</td><td>21,9</td><td>0,55</td><td>31</td><td>21,78</td><td>0,78</td><td>20</td><td>14,33</td><td>0,87</td>
+</tr>
+<tr>
+<th>MEDIA</th><th>34</th><th>21,41</th><th>0,42</th><th>31</th><th>20,63</th><th>0,56</th><th>30</th><th>19,00</th><th>0,52</th><th>21</th><th>14,53</th><th>0,69</th><th>17</th><th>13,79</th><th>0,83</th>
+</tr>
+</table>
+
+<p>Se observa c&oacute;mo el medio que ha alcanzado un valor m&aacute;ximo para <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em> ha sido <em>El Pa&iacute;s</em>, con un valor de 41 (abril 2008). El f(a) asociado a este valor (28,26) es, a su vez, el mayor alcanzado.</p>
+<p>Por otra parte, el valor m&iacute;nimo para <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em> lo ostenta <em>El Peri&oacute;dico de Catalunya</em>, con un valor de 9 (febrero 2007), mientras que el f(a) m&iacute;nimo calculado corresponde a <em>La vanguardia</em>, con 6,25 (febrero 2007).</p>
+<p>El f(b) m&aacute;ximo posible (1) lo alcanza &uacute;nicamente <em>El Peri&oacute;dico de Catalunya</em>, en dos ocasiones (enero 2007 y febrero 2008). El menor f(b) calculado corresponde a <em>El Pa&iacute;s</em>, con un valor de 0.26 (enero 2007).</p>
+<p>La evoluci&oacute;n mensual del <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em>, para cada medio, es mostrada en la figura 2.</p>
+
+<div align="center"><img src="p406fig2.jpg" alt="Figura 2: Evoluci&oacute;n del &iacute;ndice de comentarios a noticias" border="0" /></div>
+<div align="center"><br /><strong>Figura 2: Evoluci&oacute;n del &iacute;ndice de comentarios a noticias (<em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em>)</strong></div>
+
+<p>Se observa un primer grupo formado por <em>El Pa&iacute;s</em>, <em>20 Minutos</em> y <em>El Mundo</em>, que han aumentado sus resultados desde enero de 2007 hasta abril de 2008. En concreto, <em>El Pa&iacute;s</em> ha pasado de 31 a 41; <em>20 Minutos</em> de 30 a 37 y <em>El Mundo</em> de 28 a 36.</p>
+<p>Relativamente por debajo, pero con un crecimiento muy rese&ntilde;able, se sit&uacute;a <em>La Vanguardia</em>. Por &uacute;ltimo, y ya muy retrasado, aparece <em>El Peri&oacute;dico de Catalunya</em>.</p>
+<p>Se constata una diferencia importante entre estos resultados y los obtenidos por Ordu&ntilde;a-Malea y Ontalba-Ruip&eacute;rez (<a href="#ord08">2008</a>) para la evoluci&oacute;n del promedio de comentarios mensuales por noticia, donde <em>El Pa&iacute;s</em> alcanzaba unas cifras mucho m&aacute;s discretas, debidas sobre todo a la gran cantidad de noticias que publica mensualmente.</p>
+<p>Otro aspecto interesante de estudio es el an&aacute;lisis de los dos factores de correcci&oacute;n: f(a) y f(b).</p>
+
+<div align="center"><img src="p406fig3.jpg" alt="Figura 3: Comparativa Hcn y f(a) en El Pa&iacute;s y 20 Minutos" border="0" /></div>
+<div align="center"><br /><strong>Figura 3: Comparativa <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em> y f(a) en <em>El Pa&iacute;s</em> y <em>20 Minutos</em></strong></div>
+
+<p>El corrector f(a) es un indicativo de la cantidad de comentarios que reciben las noticias de un medio, en un mes, que no alcanzan <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em> comentarios. Es una manera de cuantificar la altura de la "larga cola" de comentarios.</p>
+<p>La figura 3 detalla la alta correlaci&oacute;n existente entre <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em> y su factor de correcci&oacute;n f(a), lo cual indica que, a mayor &iacute;ndice de comentarios, mayor es la cantidad de comentarios que reciben las noticias por debajo del umbral <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em>.</p>
+
+<div align="center"><img src="p406fig4.jpg" alt="Figura 4: Distribuci&oacute;n de los comentarios en marzo para El Pa&iacute;s" border="0" /></div>
+<div align="center"><br /><strong>Figura 4: Distribuci&oacute;n de los comentarios en marzo para <em>El Pa&iacute;s</em></strong></div>
+
+<p>La figura 4 muestra la distribuci&oacute;n de los comentarios para todas las noticias publicadas por <em>El Pa&iacute;s</em> en el mes de marzo de 2007 (mes con mayor <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em>), mostrando en rojo el punto umbral. La correlaci&oacute;n indica que cuanto m&aacute;s a la izquierda se sit&uacute;e el umbral -mayor <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em> - la media del n&uacute;mero de noticias por debajo de &eacute;ste ser&aacute; tambi&eacute;n mayor -mayor f(a)-. Por ello, a igualdad de <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em>, un mayor f(a) nos mostrar&aacute; una <em>larga cola</em> de mayor importancia y, por tanto, de mayor valor.</p>
+
+<p>Por su parte, el corrector f(b) es un indicador no de la altura de la larga cola, sino de su anchura, pues tiene en cuenta la cantidad de noticias que no superan el umbral respecto al total de noticias publicadas.</p>
+
+<div align="center"><img src="p406fig5.jpg" alt="Figura 5: Evoluci&oacute;n del factor f(b) en los medios (Men&eacute;ame)" border="0" /></div>
+<div align="center"><br /><strong>Figura 5: Evoluci&oacute;n del factor f(b) en los medios (<em>Men&eacute;ame</em>)</strong></div>
+
+<p>Como se observa en la figura 5, este corrector presenta niveles inversos al f(a) y, por tanto, tambi&eacute;n al <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em>.</p>
+<p>Se muestra un <em>ranking</em> pr&aacute;cticamente inverso al obtenido por los procedimientos anteriores. <em>El Peri&oacute;dico</em> muestra los niveles m&aacute;s elevados, llegando incluso en dos ocasiones (enero 2007 y febrero 2008) al valor m&aacute;ximo (igual a "1"). Esto significa que todas las noticias superan el umbral, no existiendo "larga cola".</p>
+<p>El corrector f(b) muestra de una forma sencilla c&oacute;mo los medios que publican una cantidad de noticias menor, tienen, en comparaci&oacute;n, un gran impacto en comentarios.</p>
+<p>Pese a ello, se debe tener en cuenta que para que un medio como <em>El Pa&iacute;s</em>, con la cantidad de noticias que publica, alcanzase unos valores semejantes en f(b), esto supondr&iacute;a una casi triplicaci&oacute;n de su <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em>. No obstante, este corrector puede marcar de alg&uacute;n modo la cantidad de noticias "menores" por mes en porcentaje.</p>
+<p>Finalmente, se muestra el ICP promediado para todos los meses, de forma que se obtenga un valor m&aacute;s real que el obtenido para un mes determinado, eliminando de esta forma el crecimiento debido a noticias puntuales con gran n&uacute;mero de comentarios.</p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"> 
+<caption align="bottom"><br /><strong>Tabla 5: Impacto de comentarios ponderado (ICP) promedio</strong></caption>
+
+<tr>
+<th>Medio</th><th>ICP(a)</th><th>ICP(b)</th>
+</tr>
+<tr>
+<td>El Pa&iacute;s</td><td>34(21,41)</td><td>34(0,42)</td>
+</tr>
+<tr>
+<td>20 Minutos</td><td>31(20,63)</td><td>31(0,56)</td>
+</tr>
+<tr>
+<td>El Mundo</td><td>30(19)</td><td>30(0,52)</td>
+</tr>
+<tr>
+<td>La vanguardia</td><td>21(14,53)</td><td>21(0,69)</td>
+</tr>
+<tr>
+<td>El Peri&oacute;dico de Catalunya</td><td>17(13,79)</td><td>17(0,83)</td>
+</tr>
+</table>
+
+<p>Se observa como la media del <em>H<sub style="font-size:70;"></sub>CN<sub>x</sub></em> concuerda con el <em>ranking</em> de comentarios totales recibidos, donde <em>El Pa&iacute;s</em> es primero (47.059 comentarios totales), seguido por <em>20 Minutos</em> (35.868), <em>El Mundo</em> (35.338), <em>La vanguardia</em> (17.988) y <em>El Peri&oacute;dico de Catalunya</em> (12.836).</p>
+
+<h3>Factor de poder del medio (FPM)</h3>
+
+<p>El FPM pretende ser un indicador global de la calidad e impacto de un medio en el GSN, de forma que se tengan en cuenta tanto aspectos cuantitativos (n&uacute;mero de noticias de ese medio publicadas) como cualitativos (votos y comentarios recibidos) y, adem&aacute;s, relativizarlos respecto a los valores obtenidos en cada mes.</p>
+<p>A continuaci&oacute;n se detallan en la tabla 6 los resultados obtenidos para los cinco medios de prensa m&aacute;s destacados en <em>Men&eacute;ame</em>.</p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"> 
+<caption align="bottom"><br /><strong>Tabla 6: Factor de poder del medio (FPM) en <em>Men&eacute;ame</em></strong></caption>
+<tr>
+<th rowspan="2">Mes</th><th>Imx</th><th>FPM</th><th>Imx</th><th>FPM</th><th>Imx</th><th>FPM</th><th>Imx</th><th>FPM</th><th>Imx</th><th>FPM</th>
+</tr>
+<tr>
+<th>El Pa&iacute;s</th><th>El Pa&iacute;s</th><th>El Mundo</th><th>El Mundo</th><th>20 minutos</th><th>20 minutos</th><th>La vanguardia</th><th>La vanguardia</th><th>El Peri&oacute;dico</th><th>El Peri&oacute;dico</th>
+</tr>
+<tr>
+<td>Enero</td><td>1,87</td><td>2,64</td><td>2,11</td><td>2,51</td><td>2,12</td><td>2,60</td><td>1,78</td><td>1,90</td><td>2,47</td><td>2,55</td>
+</tr>
+<tr>
+<td>Febrero</td><td>1,99</td><td>2,73</td><td>2,07</td><td>2,36</td><td>2,19</td><td>2,58</td><td>1,54</td><td>1,65</td><td>1,83</td><td>1,91</td>
+</tr>
+<tr>
+<td>Marzo</td><td>2,15</td><td>2,79</td><td>2,10</td><td>2,46</td><td>2,01</td><td>2,61</td><td>1,67</td><td>1,83</td><td>1,88</td><td>2,01</td>
+</tr>
+<tr>
+<td>Abril</td><td>1,75</td><td>2,26</td><td>1,81</td><td>2,14</td><td>1,97</td><td>2,35</td><td>2,06</td><td>2,29</td><td>2,25</td><td>2,44</td>
+</tr>
+<tr>
+<td>Mayo</td><td>1,75</td><td>2,16</td><td>2,03</td><td>2,33</td><td>2,53</td><td>2,85</td><td>1,60</td><td>1,79</td><td>2,03</td><td>2,20</td>
+</tr>
+<tr>
+<td>Junio</td><td>2,00</td><td>2,50</td><td>1,87</td><td>2,23</td><td>1,97</td><td>2,44</td><td>1,77</td><td>1,94</td><td>1,96</td><td>2,15</td>
+</tr>
+<tr>
+<td>Julio</td><td>1,90</td><td>2,41</td><td>1,96</td><td>2,29</td><td>2,27</td><td>2,71</td><td>1,58</td><td>1,79</td><td>2,38</td><td>2,52</td>
+</tr>
+<tr>
+<td>Agosto</td><td>1,83</td><td>2,47</td><td>2,22</td><td>2,62</td><td>1,99</td><td>2,25</td><td>1,62</td><td>1,79</td><td>1,97</td><td>2,13</td>
+</tr>
+<tr>
+<td>Septiembre</td><td>1,92</td><td>2,44</td><td>1,98</td><td>2,39</td><td>2,15</td><td>2,52</td><td>1,87</td><td>2,18</td><td>1,60</td><td>1,72</td>
+</tr>
+<tr>
+<td>Octubre</td><td>1,95</td><td>2,59</td><td>1,89</td><td>2,39</td><td>2,34</td><td>2,68</td><td>1,84</td><td>2,15</td><td>2,56</td><td>2,70</td>
+</tr>
+<tr>
+<td>Noviembre</td><td>2,09</td><td>2,65</td><td>1,96</td><td>2,38</td><td>2,09</td><td>2,55</td><td>2,08</td><td>2,33</td><td>1,95</td><td>2,12</td>
+</tr>
+<tr>
+<td>Diciembre</td><td>1,96</td><td>2,46</td><td>1,92</td><td>2,51</td><td>2,32</td><td>2,56</td><td>1,94</td><td>2,10</td><td>1,94</td><td>2,09</td>
+</tr>
+<tr>
+<td>Enero</td><td>1,92</td><td>2,39</td><td>1,83</td><td>2,19</td><td>2,01</td><td>2,37</td><td>1,93</td><td>2,17</td><td>2,34</td><td>2,46</td>
+</tr>
+<tr>
+<td>Febrero</td><td>2,07</td><td>2,61</td><td>2,00</td><td>2,48</td><td>1,94</td><td>2,29</td><td>1,79</td><td>2,09</td><td>1,89</td><td>1,98</td>
+</tr>
+<tr>
+<td>Marzo</td><td>1,83</td><td>2,36</td><td>2,36</td><td>2,76</td><td>1,87</td><td>2,26</td><td>1,97</td><td>2,22</td><td>1,82</td><td>1,93</td>
+</tr>
+<tr>
+<td>Abril</td><td>2,06</td><td>2,62</td><td>1,86</td><td>2,25</td><td>2,09</td><td>2,49</td><td>2,16</td><td>2,40</td><td>1,96</td><td>2,10</td>
+</tr>
+<tr>
+<th>TOTAL</th><th>31,03</th><th>40,08</th><th>31,96</th><th>38,29</th><th>33,88</th><th>40,10</th><th>29,20</th><th>32,60</th><th>32,83</th><th>35,01</th>
+</tr>
+</table>
+
+<p>La diferencia de valor entre el FPM calculado y el <em>I<sub style="font-size: 70%;">Mx</sub></em> es el valor debido al <em>P<sub style="font-size: 70%;">Mx</sub></em>, cuyo valor m&aacute;ximo, como se indica en el apartado dedicado a la metodolog&iacute;a, es "10", pero que raramente superar&aacute; la unidad.</p>
+<p>En la figura 6 se detalla la evoluci&oacute;n del <em>I<sub style="font-size: 70%;">Mx</sub></em> (impacto del medio) a lo largo de los meses.</p>
+
+<div align="center"><img src="p406fig6.jpg" alt="Figura 6: Evoluci&oacute;n del impacto del medio (Men&eacute;ame)" border="0" /></div>
+<div align="center"><br /><strong>Figura 6: Evoluci&oacute;n del impacto del medio (<em>I<sub style="font-size: 70%;">Mx</sub></em>) (<em>Men&eacute;ame</em>)</strong></div>
+
+<p>Se observa c&oacute;mo el impacto oscila en torno a un valor de 2. &Uacute;nicamente en dos ocasiones (<em>20 Minutos</em> en mayo de 2007 y <em>El Peri&oacute;dico</em> en octubre de 2007) logran alcanzar o superar los 2.5 puntos.</p>
+<p>La evoluci&oacute;n tiende a ser bastante irregular, sucedi&eacute;ndose subidas y bajadas pr&aacute;cticamente cada mes. Por ejemplo, <em>El Mundo</em> se sit&uacute;a en primera posici&oacute;n en marzo de 2008 y, por el contrario, &uacute;ltimo al mes siguiente.</p>
+<p>Por estas razones, se supone que un valor acumulado de este valor puede proporcionar lecturas m&aacute;s interesantes, pues el impacto mensual est&aacute; influenciado por el impacto de noticias determinadas y puntuales y, por ello, no responden a ninguna tendencia clara.</p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"> 
+<caption align="bottom"><br /><strong>Tabla 7: <em>I<sub style="font-size: 70%;">Mx</sub></em> y FPM acumulado en <em>Men&eacute;ame</em></strong></caption>
+<tr>
+<th>Medio</th><th>Imx</th><th>Medio</th><th>FPM</th>
+</tr>
+<tr>
+<td>20 Minutos</td><td>33,88</td><td>20 Minutos</td><td>40,01</td>
+</tr>
+<tr>
+<td>El Peri&oacute;dico</td><td>32,83</td><td>El Pa&iacute;s</td><td>40,08</td>
+</tr>
+<tr>
+<td>El Mundo</td><td>31,96</td><td>El Mundo</td><td>38,29</td>
+</tr>
+<tr>
+<td>El Pa&iacute;s</td><td>31,03</td><td>El Peri&oacute;dico</td><td>35,01</td>
+</tr>
+<tr>
+<td>La vanguardia</td><td>29,2</td><td>La vanguardia</td><td>32,6</td>
+</tr>
+</table>
+
+<p>Este aspecto se observa en la tabla 7, donde los resultados obtenidos son diferentes a los aportados por el resto de mediciones. En impacto acumulado a lo largo de los 16 meses, <em>El Pa&iacute;s</em> aparece en una discreta cuarta posici&oacute;n, siendo superado por <em>20 Minutos</em> (primera en impacto), por <em>El Peri&oacute;dico de Catalunya</em> y por <em>El Mundo</em>.</p>
+<p>Respecto al FPM acumulado, <em>El Pa&iacute;s</em> escala posiciones, apareciendo en segundo lugar. Se comprueba c&oacute;mo su alta presencia en n&uacute;mero de votos propicia esta subida.</p>
+<p>Finalmente, <em>20 Minutos</em> queda como el medio con m&aacute;s poder en <em>Men&eacute;ame</em>, en funci&oacute;n de los c&aacute;lculos debidos a los indicadores propuestos.</p>
+
+<h2>Conclusiones</h2>
+
+<p>1. Los par&aacute;metros propuestos en el trabajo (ICP y FPD) son v&aacute;lidos para calcular el grado de impacto de la prensa digital en los GSN, aportando m&aacute;s informaci&oacute;n que los meros indicadores cuantitativos basados en el conteo de n&uacute;mero de noticias, votos y comentarios recibidos.</p>
+<p>2. El an&aacute;lisis de la evoluci&oacute;n mensual del ICP muestra unos resultados diferentes al de la evoluci&oacute;n de los comentarios por noticia, ofreciendo datos m&aacute;s ajustados a tendencias que a oscilaciones provocadas por noticias puntuales con gran impacto. No obstante, el <em>ranking</em> del ICP promedio (en los meses estudiados) concuerda con el <em>ranking</em> de comentarios totales recibidos.</p>
+<p>3. La altura de la larga cola de los comentarios a un medio durante un mes, f(a), es, de forma general, proporcional al valor del Hcn (punto umbral). Este hecho se cumple para los cinco medios con m&aacute;s presencia en <em>Men&eacute;ame</em>.</p>
+<p>4. La evoluci&oacute;n de la anchura de la larga cola de los comentarios a un medio durante un mes, f(b), es, de forma general, inversamente proporcional a la evoluci&oacute;n del valor del Hcn (punto umbral). Este aspecto, sin embargo, no se cumple para <em>El Mundo</em>, quien, a pesar de tener menor Hcn que <em>20 Minutos</em>, tambi&eacute;n tiene menor f(b), lo que indica que posee una "larga cola" m&aacute;s estrecha y m&aacute;s corta que <em>20 Minutos</em>, por lo que se deduce que su impacto real (en comentarios recibidos) est&aacute; siendo menor.</p>
+<p>5. El FPM presenta valores que oscilan en torno a 2 y muestra claramente el impacto mensual de las noticias de un medio. No obstante, para un an&aacute;lisis m&aacute;s completo, es preferible su valor acumulado durante varios meses, para poder realizar <em>rankings</em> de impacto de medios.</p>
+<p>6. El Imx muestra c&oacute;mo <em>El Pa&iacute;s</em>, pese a ser el medio con m&aacute;s n&uacute;mero de noticias publicadas en <em>Men&eacute;ame</em>, es solamente el 4º en impacto. <em>20 Minutos</em> se sit&uacute;a el primero (33,88), seguido por <em>El Peri&oacute;dico de Catalunya</em> (32,83) y <em>El Mundo</em> (31,96).</p>
+<p>7. El medio de prensa con mayor factor de poder (FPM) es <em>20 Minutos</em>, seguido de cerca por <em>El Pa&iacute;s</em>, que alcanza un valor alto gracias sobre todo a la gran presencia, medida en n&uacute;mero de noticias publicadas, que tiene en <em>Men&eacute;ame</em>. Le siguen en el <em>ranking El Mundo, El Peri&oacute;dico de Catalunya</em> y, m&aacute;s rezagado, <em>La vanguardia</em>.</p>
+
+<h2><a id="authors" name="authors" />About the authors</h2>
+
+<p>Enrique Ordu&ntilde;a-Malea es ingeniero t&eacute;cnico de telecomunicaciones (EPSG), licenciado en documentaci&oacute;n (UPV) y master en contenidos y aspectos legales en la sociedad de la informaci&oacute;n. Es ayudante de investigaci&oacute;n en la UPV y redactor jefe del Anuario ThinkEPI. <a href="mailto:enorma@upv.es">enorma@upv.es</a></p>
+
+<p>Jos&eacute;-Antonio Ontalba-Ruip&eacute;rez es licenciado en geograf&iacute;a e historia, licenciado y doctor en documentaci&oacute;n. Actualmente es profesor de los estudios de documentaci&oacute;n en la Universidad Polit&eacute;cnica de Valencia  <a href="mailto:joonrui@upv.es">joonrui@upv.es</a></p>
+
+<form action="#"> 
+<fieldset> 
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend> 
+
+<ul>
+<li><a id="adl99" name="adl99"></a>Adler, S. (1999).<a href="http://www.webcitation.org/5ebf251Uo">The slashdot effect: an analysis of three internet publications</a>. <em>Linux Gazette</em>, (38). Retrieved 10 September, 2008 from http://linuxgazette.net/issue38/adler1.html (Archived by WebCite&reg; at http://www.webcitation.org/5ebf251Uo)</li> 
+
+<li><a id="alb01" name="alb01"></a>Albertos, Jos&eacute; Luis M. (2001). <a href="http://www.webcitation.org/5ebf251VF">El mensaje period&iacute;stico en la prensa digital</a>. <em>Estudios sobre el mensaje period&iacute;stico</em>, No. 7. Retrieved 10 September, 2008 from http://www.ucm.es/info/perioI/Period_I/EMP/Numer_07/7-3-Pone/7-3-01.htm (Archived by WebCite&reg; at http://www.webcitation.org/5ebf251VF)</li>
+
+<li><a id="bao00" name="bao00"></a>Baoill, A. &Oacute;. (2000). Slashdot and the public sphere. <em>First Monday</em>, <strong>5</strong> (9).</li>
+
+<li><a id="cab08" name="cab08"></a>Cabezas, A. (2007, Diciembre 10). <a href="http://www.webcitation.org/5ebf251Vu">El &iacute;ndice Hc. Aplicaci&oacute;n a los 12 blogs m&aacute;s destacados de Biblioteconom&iacute;a y Documentaci&oacute;n</a>. <em>Documentaci&oacute;n, biblioteconom&iacute;a e informaci&oacute;n</em>. Retrieved 10 September, 2008 from http://www.lacoctelera.com/documentacion/post/2007/12/10/el-aandice-hc-aplicaciain-los-12-blogs-maas-destacados-de (Archived by WebCite&reg; at http://www.webcitation.org/5ebf251Vu)</li>
+
+<li><a id="coh07b" name="coh07b"></a>Cohn, D. (2007, Jan/Feb). Digg This. <em>Columbia Journalism Review</em>, <strong>45</strong>(5), 8-9.</li>
+
+<li><a id="dan08a" name="dan08a"></a>Dans, E. (2008a). <a href="http://www.webcitation.org/5ebf251WD">Men&eacute;ame, social media y publicidad</a>. <em>El blog de Enrique Dans</em>. Retrieved 10 September, 2008 from http://www.enriquedans.com/2008/04/meneame-social-media-y-la-publicidad.html (Archived by WebCite&reg; at http://www.webcitation.org/5ebf251WD)</li>
+
+<li><a id="ros07" name="ros07"></a>De la Rosa Troyano, F. F. (2007, July 18). <em><a href="http://www.webcitation.org/5ipdRmTKG">Trabajo Men&eacute;ame.</a></em> Retrieved 10 September, 2008 from http://www.lsi.us.es/~ffrosat/index.php/Ffrosat/TrabajoMeneame (Archived by WebCite&reg; at http://www.webcitation.org/5ipdRmTKG</li>
+
+<li><a id="egg06" name="egg06"></a>Egghe, L. (2006). Theory and practice of the g-index. <em>Scientometrics</em>, <strong>69</strong>(1), 131-152.</li>
+
+<li><a id="esc07" name="esc07"></a>Esciudad (2007, April). <a href="http://www.webcitation.org/5ebf251Wg">Los reyes de Meneame</a>. esCiudad.com.  Retrieved 10 September, 2008 from http://www.esciudad.com/meneame.html (Archived by WebCite&reg; at http://www.webcitation.org/5ebf251Wg) </li>
+
+<li><a id="fer08" name="fer08"></a>Ferreras Rodr&iacute;guez, E. M. (2008). Nuevas herramientas en el ecosistema digital: la promoci&oacute;n social de noticias en castellano. An&aacute;lisis de Men&eacute;ame. [En imprenta]</li>
+
+<li><a id="fra08" name="fra08"></a>Franganillo, J. (2008). Necesidad de buenas pr&aacute;cticas en la redifusi&oacute;n de contenido digital. <em>Anuario ThinkEPI 2008</em>, 17-19.</li>
+
+<li><a id="gua07" name="gua07"></a>Guallar, J. (2007). La renovaci&oacute;n de los diarios digitales: redise&ntilde;os y web 2.0. <em>El profesional de la informaci&oacute;n</em>, <strong>16</strong>(3), 235-242.</li>
+
+<li><a id="han05" name="han05"></a>Hane, P.J. &amp; Pitkow, J. (2005, March). <a href="http://www.webcitation.org/5ipeU8cKC">Moreover, the news aggregator: interview with Jim Pitkow</a>. <em>Information Today</em>, <strong>22</strong>(3). Retrieved 6 August, 2009 from http://www.infotoday.com/it/mar05/hane.shtml (Archived by WebCite&reg; at http://www.webcitation.org/5ipeU8cKC) </li> 
+
+<li><a id="hir05" name="hir05"></a>Hirsch, J. E. (2005). <a href="http://arxiv.org/PS_cache/physics/pdf/0508/0508025v5.pdf">An index to quantify an individual's scientific research output</a>. <em>Proceedings of the National Academy of Sciences</em>, <strong>102</strong>(46), 16569-16572. Retrieved 10 September, 2008 from http://arxiv.org/PS_cache/physics/pdf/0508/0508025v5.pdf</li>
+
+<li><a id="jim02" name="jim02"></a>Jim&eacute;nez L&oacute;pez, M. &Agrave;., Gonz&aacute;lez Quesada, A. &amp; Fuentes, M. E. (2002). Diaris digitals a Internet: panorama actual i expectativas professionals per als bibliotecaris i documentalistes. <em>Item</em>, No. 32, 27-44.</li>
+
+<li><a id="kal07" name="kal07"></a>Kaltenbrunner, A., G&oacute;mez Vicenç, M. A., Meza Rodrigo, B. J. &amp; L&oacute;pez, V. (2007). <a href="http://www.webcitation.org/5ebf251X7">Homogeneus Temporal Activity Patterns in a large online communication space</a>. <em>Proceedings of the BIS 2007 Workshop on Social Aspects of the Web Poznan, Poland, April 27</em>. Retrieved 10 September, 2008 from http://ftp.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-245/paper1.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5ebf251X7)</li>
+
+<li><a id="ler08" name="ler08"></a>Lerman, K. (2008). <a href="http://arxiv.org/PS_cache/cs/pdf/0612/0612046v1.pdf">Social networks and social information filtering on digg</a>. Retrieved 10 September, 2008 from http://arxiv.org/PS_cache/cs/pdf/0612/0612046v1.pdf</li>
+
+<li><a id="lop07" name="lop07"></a>L&oacute;pez S&aacute;nchez, J. I. (2007). <a href="http://www.mityc.es/NR/rdonlyres/DA658866-A29D-4C4B-87D1-D9978CACEE0E/0/213.pdf">Evoluci&oacute;n de los modelos de negocio en internet: situaci&oacute;n actual en Espa&ntilde;a de la econom&iacute;a digital</a>. <em>Econom&iacute;a industrial</em>, No. 364, 213-229. Retrieved 10 September, 2008 from http://www.mityc.es/NR/rdonlyres/DA658866-A29D-4C4B-87D1-D9978CACEE0E/0/213.pdf</li>
+
+<li><a id="mar06" name="mar06"></a>Mart&iacute;nez, P., Felip, L. &amp; Ordu&ntilde;a-Malea, E. (2006, November 06). H index question. Message posted to Scientometrics, Informetrics and Cybermetrics, archived at http://listserv.rediris.es/archives/issi.html</li>
+
+<li><a id="men07" name="men07"></a>Men&eacute;ame: blog oficial (2007, April 10). <a href="http://www.webcitation.org/5ebf251YJ">Estad&iacute;sticas hist&oacute;ricas de noticias</a>. Retrieved 10 September, 2008 from http://blog.meneame.net/2007/04/10/estadisticas-historicas-de-noticias (Archived by WebCite&reg; at http://www.webcitation.org/5ebf251YJ)</li>
+
+<li><a id="not07" name="not07"></a>Notess, G. R. (2007). Community filtering: digg, slashdot, and the social web. <em>Online</em>, <strong>31</strong>(1), 45-47.</li> 
+
+<li><a id="ord08" name="ord08"></a>Ordu&ntilde;a-Malea, E. &amp; Ontalba-Ruip&eacute;rez, J-A. (2008). Presencia de la prensa digital espa&ntilde;ola en la Web social. <em>El profesional de la informaci&oacute;n</em>, <strong>17</strong>(5), 511-518.</li>
+
+<li><a id="poo05" name="poo05"></a>Poor, N. (2005). <a href="http://www.webcitation.org/5ebf251Z6">Mechanisms of an online public sphere: The website Slashdot</a>. <em>Journal of Computer-Mediated Communication</em>, <strong>10</strong>(2). Retrieved 10 September, 2008 from http://jcmc.indiana.edu/vol10/issue2/poor.html (Archived by WebCite&reg; at http://www.webcitation.org/5ebf251Z6)</li> 
+
+<li><a id="rod07" name="rod07"></a>Rodr&iacute;guez Navarro, A. &amp; Imperial R&oacute;denas, J. (2007). <a href="http://www.webcitation.org/5ebf251ZF">&iacute;ndice h. Gu&iacute;a para la evaluaci&oacute;n de la investigaci&oacute;n espa&ntilde;ola en ciencia y tecnolog&iacute;a utilizando el &iacute;ndice h</a>. [Madrid]: Consejer&iacute;a de Educaci&oacute;n. Direcci&oacute;n General de Universidades e Investigaci&oacute;n, 2007. Retrieved 10 September, 2008 from http://www.madrimasd.org/informacionidi/biblioteca/Publicacion/coleccion-madrimasd (Archived by WebCite&reg; at http://www.webcitation.org/5ebf251ZF)</li>
+
+<li><a id="rou06" name="rou06"></a>Rousseau, R. (2006). <a href="http://www.webcitation.org/5ebf251ZO">New developments related to the Hirsch index</a>. <em>Science focus</em>, <strong>1</strong>(4), 23-24. Retrieved 10 September, 2008 from http://eprints.rclis.org/archive/00006376/01/Hirsch_new_developments.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5ebf251ZO)</li>
+
+<li><a id="san90" name="san90"></a>Sancho, R. (1990). Indicadores bibliom&eacute;tricos utilizados en la evaluaci&oacute;n de la Ciencia y la Tecnolog&iacute;a. Revisi&oacute;n bibliogr&aacute;fica. <em>Revista Espa&ntilde;ola de Documentaci&oacute;n Cient&iacute;fica</em>, <strong>13</strong>(3/4), 842-865.</li> 
+
+<li><a id="wu07" name="wu07"></a>Wu, F. &amp; Huberman, B. A. (2007). <a href="http://arxiv.org/PS_cache/arxiv/pdf/0704/0704.1158v1.pdf">Novelty and collective attention</a>. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, <strong>104</strong>(45), 17599-17601. Retrieved 10 September, 2008 from http://arxiv.org/PS_cache/arxiv/pdf/0704/0704.1158v1.pdf</li>
+<li><a id="yah08" name="yah08"></a>Yahoo! Buzz. Retrieved 10 September, 2008 from http://buzz.yahoo.com/</li>
+</ul>
+</fieldset> 
+</form> 
+<br />
+
+<form action="#">
+<fieldset>
+<legend><a id="ingles" name="ingles" />Abstract in English </legend>
+<blockquote>
+<strong>Introduction</strong>. Social bookmarking sites such as <em>Digg</em>, <em>Men&eacute;ame</em>, etc. have become a reference for the digital press. Therefore, news producers wish to position themselves in such systems to gain visibility and to increase traffic to their Websites. This paper proposes two bibliometric indicators to calculate the presence and impact of the press in social bookmarking systems, providing both qualitative and quantitative measures.<br />
+<strong>Method</strong>. The Weighted Comments Impact (ICP) is proposed as an indicator of the impact of a news medium over a month, and the Media Power Factor (FPM) is proposed as an indicator of the overall impact of a news medium over a month. To validate these parameters, a longitudinal retrospective descriptive analysis of the content of news sent to the Men&eacute;ame social bookmarking site over sixteen months has been carried out.<br />
+<strong>Results</strong>. The validation of the Weighted Comments Impact shows that the digital medium which has reached the highest average value is <em>El Pa&iacute;s</em>, followed by <em>20 Minutos</em> and <em>El Mundo</em>, which is consistent with the overall ranking of comments received. The validation of the Media Power Factor, however, indicates that <em>20 Minutos</em> is the digital newspaper with the highest value, followed by <em>El Pa&iacute;s</em> and <em>El Mundo</em>.<br />
+<strong>Conclusions</strong>.The main finding of this study is that the parameters proposed are valid for calculating the degree of impact of the digital press in a social bookmarking site.
+
+</blockquote>
+</fieldset>
+</form>
+<br />
+
+ 
+<form action="#"> 
+<fieldset> 
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">How to cite this paper</legend> 
+<div><br /> 
+Ordu&ntilde;a-Malea, E. &amp; Ontalba-Ruip&eacute;rez, J-A. (2009). &quot;Propuesta de indicadores m&eacute;tricos para gestores sociales de noticias: an&aacute;lisis de la prensa digital espa&ntilde;ola en <em>Men&eacute;ame</em>&quot;. <em>Information Research</em>, <strong>14</strong>(3) paper 406. [Available from 8 August, 2009 at http://InformationR.net/ir/14-3/paper406.html]</div> 
+</fieldset> 
+</form> 
+ 
+<table cellspacing="10" align="center"> 
+	<tr> 
+		<td colspan="3" align="center" style="background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr> 
+	<tr> 
+		<td align="center" valign="top"> 
+ 
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;social bookmarking&quot; (newspapers OR &quot;news media&quot;) bibliometrics Spain"></input> <br /> 
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input> 
+<input type="hidden" name="num" value="100"></input> 
+					</td> 
+				</tr> 
+			</table> 
+ 
+</form> 
+		</td> 
+		<td align="center" valign="top"> 
+<!-- Search Google --> 
+ 
+<form method="get" action="http://www.google.com/custom" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;social bookmarking&quot; (newspapers OR &quot;news media&quot;) bibliometrics Spain"></input><br /> 
+
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input> 
+<input type="hidden" name="client" value="pub-5081678983212084"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+ 
+<input type="hidden" name="ie" value="ISO-8859-1"></input> 
+<input type="hidden" name="oe" value="ISO-8859-1"></input> 
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input> 
+<input type="hidden" name="hl" value="en"></input> 
+					</td> 
+				</tr> 
+			</table> 
+</form> 
+</td> 
+<td align="center" valign="top"> 
+<form method="get" action="http://www.live.com/" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+ 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;social bookmarking&quot; (newspapers OR &quot;news media&quot;) bibliometrics Spain"></input> <br /> 
+
+<input type="submit" name="sa" value="Windows Live"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input> 
+<input type="hidden" name="num" value="100"></input> 
+					</td> 
+				</tr> 
+			</table> 
+</form> 
+ 
+		</td> 
+	</tr> 
+</table> 
+ 
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> --> 
+<div align="center"> 
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo" /> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a> 
+</div> 
+<hr size="1" style="color: #5E96FD;" /> 
+ 
+<table align="center" cellpadding="10"> 
+
+<tr><td align="center" valign="top"><div><!-- Start of SimpleHitCounter Code -->
+<div align="center"><a href="http://www.simplehitcounter.com/" target="_blank"><img src="http://simplehitcounter.com/hit.asp?uid=474758&amp;f=255&amp;b=16777215" border="0" height="18" width="83" alt="free hit counters" /></a><br /><a href="http://www.simplehitcounter.com/" target="_blank"><font size="-3">free hit counters</font></a></div>
+<!-- End of SimpleHitCounter Code -->
+
+</div></td> 
+ 
+<td align="center" valign="top"><div> 
+&copy; the authors, 2009. <br />Last updated: 6 August, 2009
+</div></td> 
+ 
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START--> 
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+--> 
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'> 
+<script type="text/javascript"> 
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper406.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+ 
+OneStat_Pageview();
+//--> 
+</script> 
+<noscript> 
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a> 
+</noscript> 
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div> 
+<!--ONESTAT SCRIPTCODE END--> 
+
+</td></tr> 
+</table> 
+<hr size="3" style="color: #5E96FD;" /> 
+ 
+<table align="center"><tr><td><div class="button"> 
+ 
+
+<ul>
+	<li><a href="infres143.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul> 
+
+</div></td></tr></table> 
+ 
+ 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
+</script> 
+<script type="text/javascript"> 
+_uacct = "UA-672528-1";
+urchinTracker();
+</script> 
+</body> 
+
+<!-- Mirrored from informationr.net/ir/14-3/paper406.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:21:18 GMT -->
+</html> 
+

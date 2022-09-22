@@ -1,0 +1,1116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from informationr.net/ir/14-2/paper398.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:14:18 GMT -->
+<head> 
+ 
+ 
+<title>D-Fussion: a <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>SDI service for the research <span>community</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in digital libraries</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /> 
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" /> 
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" /> 
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" /> 
+ 
+<!--Enter appropriate data in the content fields--> 
+<meta name="dc.title" content="D-Fussion: a <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>SDI service for the research <span>community</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in digital libraries" />
+<meta name="dc.creator" content="Jose Manuel Morales-del-Castillo, Eduardo Peis, Juan Manuel Moreno, Enrique Herrera-Viedma" />
+<meta name="dc.subject" content="Paper about a filtering and recommender system based on <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web Technologies and fuzzy linguistic techniques." />
+<meta name="dc.<span>description</span>" <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> content="Introduction: In this paper we propose a multi-agent Selective Dissemination of Information service to improve the research <span>community</span>' <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>s access to digital library resources. The service also provides a new recommendation approach to satisfy researchers' specific information requirements. Method: The service model is developed by jointly applying <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web technologies (used to define rich descriptions of resources and a concept scheme that helps in indexing and retrieving tasks), fuzzy linguistic modelling techniques (both ordinal and 2-tuple-based <span>approaches</span>, <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> that allow us to flexibly <span>represent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and handle information that is subject to a certain <span>degree</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of uncertainty), as well as content-based and collaborative filtering techniques. Analysis: An <span>experiment</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>has been carried out to <span>test</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the <span>performance</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the proposed model using a <span>prototype</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> and several experts have been asked to assess the recommendations provided by the system. Results: The outcomes of the <span>experiment</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>reveal that the proposed model is feasible and efficient in terms of precision and recall. Conclusions: <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web technologies and fuzzy linguistic modelling provide the means to develop value-added services for digital libraries that improve users' access to resources of  interest to them. <span>Furthermore</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> the recommendation approach here proposed allows researchers to satisfy specific information needs not covered by traditional recommender <span>systems</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>" />
+<meta name="dc.subject.keywords" content="digital libraries, research <span>community</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> filtering and recommender <span>systems</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>web, fuzzy linguistic modelling" />
+ 
+<!--leave the following to be completed by the Editor--> 
+<meta name="robots" content="all" /> 
+<meta name="dc.publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>T.D. Wilson" /> 
+<meta name="dc.coverage.placename" content="global" /> 
+<meta name="dc.type" content="text" /> 
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" /> 
+<meta name="dc.identifier" scheme="URI" content="paper398.html" /> 
+<meta name="dc.relation.IsPartOf" content="infres142.html" /> 
+<meta name="dc.format" content="text/html" /> 
+<meta name="dc.language" content="en" /> 
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" /> 
+<meta name="dc.date.available" content="2009-06-15" /> 
+ 
+<script language="javascript" type="text/javascript"> 
+ 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script> 
+	
+<style type="text/css"> 
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+ 
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; --> 
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+ 
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+ 
+legend {
+    color: white;
+    background-color: #5E96FD;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy;
+    border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy;
+    font-weight: bold;
+}
+ 
+ 
+</style> 
+ 
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head><body bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 14  no. 2, June, 2009</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres142.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+	
+<hr style="color: rgb(94, 150, 253);" size="1" />
+
+<h1>D-Fussion: a <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>selective disssemination of information service for the research <span>community</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in digital libraries</h1>
+<br />
+<div style="margin-left: 10%; margin-right: 10%;"> 
+  <h4><a href="#authors">Jos&eacute; Manuel Morales-del-Castillo</a>, 
+    <a href="#authors">Eduardo Peis</a><br />
+    Department of Library and Information Science, University of Granada, Granada, Spain</h4>
+  <h4><a href="#authors">Juan Manuel Moreno</a><br />
+    Department of Information and Communication Engineering, University of Murcia, Murcia, Spain</h4>
+  <h4><a href="#authors">Enrique Herrera-Viedma</a><br />
+    Department of <span>Computer</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Science and Artificial Intelligence, University of Granada, Granada, Spain</h4>
+</div>
+<br />
+<form action="#">
+  <fieldset>
+  <legend>Abstract </legend>
+  <blockquote> <strong>Introduction.</strong> In this paper we propose a multi-agent Selective Dissemination of Information service to improve the research <span>community</span>' <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>s access to digital library resources. The service also provides a new recommendation approach to satisfy researchers' specific information requirements.<br />
+    <strong>Method.</strong> The service model is developed by jointly applying <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web technologies (used to define rich descriptions of resources and a concept scheme that helps in indexing and retrieving tasks), fuzzy linguistic modelling techniques (both ordinal and 2-tuple-based <span>approaches</span>, <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> that allow us to flexibly <span>represent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and handle information that is subject to a certain <span>degree</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of uncertainty), as well as content-based and collaborative filtering techniques.<br />
+    <strong>Analysis.</strong> An <span>experiment</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>has been carried out to <span>test</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the <span>performance</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the proposed model using a <span>prototype</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and several experts have been asked to assess the recommendations provided by the system.<br />
+    <strong>Results.</strong> The outcomes of the <span>experiment</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>reveal that the proposed model is feasible and efficient in terms of precision and recall.<br />    
+<strong>Conclusions.</strong> <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web technologies and fuzzy linguistic modelling provide the means to develop value-added services for digital libraries, which improve users' access to resources of interest to them. <span>Furthermore</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> the recommendation approach here proposed allows researchers to satisfy specific information needs not covered by traditional recommender <span>systems</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>
+  </blockquote>
+  </fieldset>
+</form>
+<br />
+<div align="center"> 
+  <input value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: rgb(94, 150, 253);" onclick="doChangeFont()" type="button" />
+</div>
+<br />
+<h2>Introduction</h2>
+<p>Nowadays, one of the most relevant challenges information <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>have to face 
+  is achieving <span>accurate</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>information retrieval. It is becoming necessary to develop 
+  <span>tools</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to effectively manage the large <span>volume</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of resources and 
+  rationalize Web users' access to information that interests them. This 
+  problem becomes even more critical for the academic and research <span>community</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>because of the <span>intrinsic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>characteristics of the scientific literature and the specific 
+  information needs of its users (<a href="#pal09">Palmer <em>et al.</em> 2009</a>).</p>
+  
+<p>  Traditionally, academic libraries have been the <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>point of access to scientific 
+  information for the university <span>community</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(especially when developed on a digital platform). 
+  Many of them also offer their users filtering and recommender services (<a href="#gei01">Geisler <em>et al.</em> 2001</a>; <a href="#hua02">Huang <em>et al.</em> 2002</a>) to ease the task of selecting relevant 
+  <span>documents</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>that fit their requirements (usually defined in a personal user profile) 
+  (<a href="#kuf00">Kuflik and Shoval 2000</a>).</p>
+  
+<p>  <span>Nevertheless</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> most recommender <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>only <span>suggest</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>resources fitting user&#8217;s 
+  needs (i.e., a set of resources that enable users to deepen their knowledge 
+  in a specific domain), but rarely take into account different <span>approaches</span>. <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> For 
+  instance, it is quite usual for researchers to look for <span>documents</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in 
+  domains different from the one they are interested in (although related to it 
+  in a certain degree), so that they are able to open new research <span>lines</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>or create 
+  interdisciplinary working groups. Obviously, in this case the recommendation 
+  generated by the system should be appreciably different to that in their usual 
+  profile.</p>
+  
+<p>  In this work we propose a system capable of working with several recommending 
+  policies (i.e., those policies that define the <span>parameters</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for recommendations 
+  made by the system) through the joint application of different technological 
+  <span>solutions</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> which tackle the problem of efficiently accessing information. The 
+  system is based on a multi-agent platform, where several <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>agents actively 
+  process and exchange information with another agents in the Web (<a href="#hen01">Hendler 2001</a>; 
+  <a href="#mae94">Maes 1994</a>), and also assist users in information retrieval tasks (<a href="#bre98">Brenner <em>et al.</em> 1998</a>; <a href="#faz00">Fazlollahi <em>et al.</em> 2000</a>; <a href="#jen98">Jennings 1998</a>).</p>
+
+<p>  However, because information can be <span>represented</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in heterogeneous ways on the 
+  Web, the <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>handicap multi-agent <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>have to face is <span>finding</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>a communication 
+  protocol agile and flexible enough to ease communication among agents and between 
+  agents and users. The application of fuzzy linguistic techniques can help us 
+  to tackle these communication problems through the definition of linguistic 
+  tags (<a href="#zad75A">Zadeh 1975a</a>, <a href="#zad75B">1975b</a>, <a href="#zad75C">1975c</a>) that allow representing <span>qualitative</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>phenomena from 
+  a quantitative approach.</p>
+  
+  <p>Additionally, we propose using <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web technologies (<a href="#ber01">Berners-Lee <em>et al.</em> 2001</a>) as common <span>syntactic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and data model <span>framework</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for representing 
+  information and enabling <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>agents to access and process resources at 
+  a <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>level.</p>
+  
+<h2>Instrumental layout</h2>
+
+<h3>Value-added services for digital libraries</h3>
+
+<p>As users&#8217; information requirements are becoming more and more specific 
+  and complex (<a href="#mar00">Marchionini 2000</a>), digital libraries have to make an extra effort 
+  to provide users with more and better services. One way to satisfy this objective 
+  is by developing value-added services, which allow customizing and easing the access 
+  of users to content of interest. Among these services we can find, for 
+  example, content syndication (<a href="#kra08">Kraft <em>et al.</em> 2008</a>) and filtering 
+  and recommendation services (<a href="#hua02">Huang <em>et al.</em> 2002</a>).</p>
+  
+<p>  Lately, and mainly thanks to the popularisation of Weblogs, there has arisen 
+  the need for <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to <span>publish</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and spread new content quickly. Syndication 
+  services fulfil this objective by providing individuals with easy access to 
+  the content of a Website of interest without having to visit that specific site. 
+  This is <span>achieved</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by means of hyperlink lists called feeds or channels that can 
+  be defined using simple mark-up vocabularies, such as Atom (<a href="#not05">Nottingham 2005</a>) 
+  or RSS (<em>Really Simple Syndication, Rich Site Summary </em>or<em> RDF Site Summary</em>) in 
+  any of its versions (<a href="#rss07">RSS history 2007</a>). The structure of these feeds consists of two elements: the first where the channel is described by a series of basic metadata, 
+  and the second where different information items (which <span>represent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the Web resources 
+  to be diffused) are defined.</p>
+  
+ <p> On the other hand, filtering and recommendation services are based on the application 
+  of different techniques that manage a series of processes that are oriented 
+  to provide users just the information that meets their needs or is of interest 
+  to them. In textual domains these services are usually developed using multi-agent 
+<span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(among others) to meet these objectives:</p>
+
+<ul>
+  <li>evaluate and filter resources normally <span>represented</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in <span>XML</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>or <span>HTML</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>format;</li>
+  <li> assist people in <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and retrieval tasks (<a href="#res97">Resnick and Varian 1997</a>).</li>
+</ul>
+
+<p>Traditionally, these <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>are classified in two <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>categories (<a href="#pop01">Popescul <em>et al.</em> 2001</a>): content-based and collaborative recommendation <span>systems</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Content-based 
+  recommendation <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>filter information and generate recommendations by comparing 
+  a set of keywords defined by the user with the terms that <span>represent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the content 
+  of <span>documents</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> ignoring any information given by other users. On the other hand, 
+  collaborative filtering <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>use the information provided by several users 
+  to recommend <span>documents</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to a specific user, ignoring the different ways the content 
+  is <span>represented</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> The current trend is to develop <span>hybrid</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>that deploy the 
+  advantages of both <span>approaches</span>. <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> </p>
+  
+<p>  In libraries, these services usually take the form of Selective Dissemination 
+  of Information services which, depending on the profile of subscribed users, 
+  periodically (or when required by the user) generate a series of information 
+  alerts which notify them of the resources in the library that fit their interests 
+  (<a href="#aks98">Aksoy <em>et al.</em> 1998</a>; <a href="#fol92">Foltz and Dumais 1992</a>).</p>
+  
+<p>  Selective dissemination of information services have been studied in different research areas, such as the multi-agent <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>development <span>domain</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(<a href="#dec99">Decker <em>et al.</em> 1997</a>; <a href="#kuo95">Kuokka and Harada 1995</a>) and, of course, in the digital libraries <span>domain</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(<a href="#fae01">Faensen <em>et al.</em> 2001</a>). At the present <span>day</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> many of these services are implemented through Web platforms based on a multi-agent architecture where there is a set of <span>intermediate</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>agents that compare user&#8217;s profiles with the <span>documents</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> and different input-output agents that <span>deal</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>with subscriptions to the service and display generated alerts to users (<a href="#alt00">Altinel and <span>Franklin</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>2000</a>; <a href="#yan99">Yan and García-Molina 1999</a>). Usually, the information is structured according to a certain data model, and users&#8217;   profiles are defined using a series of keywords that are compared to descriptors or to the full text of <span>documents</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+  
+<p>Despite their usefulness, these services have some deficiencies:</p>
+
+<ol>
+  <li> the communication processes among agents, and between agents and users, 
+    are hindered by the different ways in which information is <span>represented</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in 
+    the documents;</li>
+  <li> the heterogeneity in the <span>representation</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of information makes it <span>impossible</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>
+    to re-use such information in other processes or <span>applications</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>
+  </li>
+</ol>
+
+<p>A possible solution to these deficiencies consists in enriching information 
+  <span>representation</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>using a common <span>vocabulary</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and data model that are understandable 
+  by humans as well as by <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>agents. The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web project (<a href="#ber01">Berners-Lee, Hendler and Lassila 2001</a>) uses the idea of information comprehensible to humans 
+  and agents and provides the means to develop a <span>universal</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>platform for the exchange 
+  of information. </p>
+  
+<h3>Semantic Web technologies</h3>
+
+<p>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web (<a href="#ber00">Berners-Lee 2000</a>) tries to extend the model of the present 
+  Web using a series of standard <span>languages</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>that enable the <span>description</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of Web 
+  resources to be enriched so that they become semantically accessible. To do 
+  this, the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web is based on two fundamental ideas: i) <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>tagging 
+  of resources, so that information can be <span>understood</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>both by humans and computers, 
+  and ii) the development of intelligent agents (<a href="#hen01">Hendler 2001</a>) capable of operating 
+  at a <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>level with those resources and infer new knowledge from them (in 
+  this way it is possible to shift from keyword <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to the retrieval of concepts).</p>
+  
+<p>  The <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>backbone of the project is the Resource Description Framework 
+  <span>vocabulary</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(<a href="#bec04">Becket 2004</a>), which provides a data model to <span>represent</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> exchange, 
+  link, add and re-use structured metadata of distributed information sources and, 
+  therefore, make them <span>directly</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>understandable by <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>agents. The resource 
+  <span>description</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>framework</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>structures the information into individual assertions 
+  (resource, property, and property value triples) and uniquely characterises 
+  resources by means of Uniform Resource Identifiers, allowing 
+  agents to make inferences about them using Web ontologies (<a href="#gru95">Gruber 1995</a>; <a href="#gua98">Guarino 1998</a>; ) or to work with them using simpler <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>structures like conceptual schemes or thesauri.</p>
+  
+  <p>As we can see, the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web basically works with information written in 
+  natural language (although structured in a way that can be interpreted by machines). 
+  For this reason, it is usually difficult to <span>deal</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>with problems that <span>require</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>
+  operating with linguistic information that has a certain <span>degree</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of uncertainty 
+  (such as, for instance, when quantifying the user&#8217;s satisfaction in relation 
+  to a product or service). <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>possible solution could be the use of fuzzy linguistic 
+  modelling techniques as a tool for improving the communication between system 
+  and user.  The formal <span>description</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of such a model is presented in the <a href="#app">
+Appendix</a>.</p>
+  
+
+<h2>D-Fussion: a selective dissemination of information service prototype</h2>
+
+<p>With all the instrumental <span>tools</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>described, in this paper we propose developing 
+  a selective dissemination of information service for digital libraries 
+  whose target population is the research <span>community</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> This service is known as 
+  D-Fussion. This model has been developed as an improvement on the 
+  multi-agent information retrieval and filtering system (<a href="#her07">Herrera-Viedma <em>et al.</em> 2007</a>). Upon that basic infrastructure we propose defining a service that delivers 
+  current awareness bulletins that briefly describe resources recently <span>acquired</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>
+  by the library or that are potentially interesting for users. We have also simplified 
+  the previous model defining only three <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>agents (interface, task and 
+  information agents), which are distributed in a five-level hierarchical architecture:</p>
+  
+<ul>
+  <li><em>Level 1. User level</em>: where users interact with the system by developing different tasks. For example, users can define the set of weighted preferences that <span>represent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>their interests, or provide the feedback required by the system.</li>
+  <li> <em>Level 2. Interface level</em>: where the interface agent develops its activity as a mediator between users and the task agent. The agent is also capable of carrying out simple filtering operations on behalf of the user.</li>
+  <li> <em>Level 3. Task level</em>: where the task agent (normally one per interface agent) carries out the <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>load of operations performed in the system, such as the generation of information alerts or the management of profiles and RSS feeds.</li>
+  <li> <em>Level 4. Information agents level</em>: where several information agents can access the system's repositories, thereby playing the role of mediators between information sources and the task agent.</li>
+  <li> <em>Level 5. Resources level</em>: includes all information sources the system can access, such as a full-text <span>documents</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>repository and a set of resources described using resource <span>description</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>framework-based vocabularies (RSS feeds <span>containing</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>items featured by the digital library, a user profile repository and a thesaurus that describes the specialization <span>domain</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the library).
+  </li>
+</ul>
+
+<p>The <span>underlying</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>semantics</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the different elements that make up the system (i.e., their <span>characteristics</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and the <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>relations defined among them) are defined through several interoperable Web ontologies described using the <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.w3.org%2FTR%2Fowl-features%2F&amp;date=2009-05-05" target="_blank">OWL</a> <span>vocabulary</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(<a href="#mcg04">McGuinness and van Harmelen 2004</a>).</p>
+
+<div align="center"><img src="p398fig1.png" alt="Levels of the D-Fussion service" width="468" height="306" /></div>
+<div align="center"><br /><strong>Figure 1: Levels of the D-Fussion service</strong></div>
+
+<h3>New recommendation approach</h3>
+
+<p>As we have commented before, a given recommender system will provide recommendations about a specific resource according to the opinions given about that resource by different experts with a profile similar to that of the active user (if it is a collaborative recommender system) or according to the similarity of the resource to other resources assessed by the active user (in the case of content-based recommender systems).</p>
+
+<p>To measure the likeness among profiles or resources we can find many similarity functions such as Salton&rsquo;s <span>cosine</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(<a href="#sal71">Salton 1971</a>; <a href="#sal75">Salton <em>et al.</em> 1975</a>), Dice coefficient (<a href="#van79">van Rijsbergen 1979</a>) or Jaccard coefficient (<a href="#ror99">Rorvig 1999</a>; <a href="#jac12">Jaccard 1912</a>), to mention a few. Traditionally, in recommender <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>similarity functions are interpreted in a <span>linear</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>way, i.e., the higher the similarity measure of a resource or profile is, the more likely it is to generate a recommendation. This is what we have called the mono-disciplinary approach since it lets users deepen their knowledge in a specific area.</p>
+
+<p>Nevertheless, it is quite common (and almost a requirement) for researchers to keep the track of new developments and advances in other fields, related to their specialization <span>domain</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> In this way, it is possible for them to widen their research scope, open new research <span>lines</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and create multidisciplinary work groups.</p>
+
+<p>In such circumstances, users need recommendations about resources whose topics are related to (but do not <span>exactly</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>fit) their preferences, but without modifying their profile at all. In this case it makes sense to <span>con0er</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>as relevant an interval of mid-range similarity <span>values</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>instead of those close to one (i.e., both extremely similar and dissimilar similarity <span>values</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>are discarded).</p>
+
+<p>So it would be necessary to define some kind of center function (<a href="#yag07">Yager 2007</a>) that enables us to constrain the <span>range</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of similarity <span>values</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>we are going to <span>con0er</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>as relevant. In our model, the interpretation of similarity is defined by a Gaussian function &micro; as the following:</p>
+
+<div align="center"><img alt="formula2" src="p398form2.png" width="228" height="31" /></div>
+
+<p>where Sim (p<sub><font size="-1">i</font></sub>, p<sub><font size="-1">j</font></sub>) is the similarity measure among the resources p<sub><font size="-1">i</font></sub> and p<sub><font size="-1">j</font></sub> , and k represents the centre value around which similarity is relevant to generate a recommendation (in this case k=0&rsquo;5).</p>
+
+<div align="center"><img src="p398fig2.png" alt="Gaussian center function" width="306" height="145" /></div>
+<div align="center"><br /><strong>Figure 2: Gaussian centre function</strong></div>
+
+<h2>Prototype elements</h2>
+
+<p>We have defined four basic component elements in this model: a thesaurus, a user profile repository, a full-text <span>documents</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>repository, and one or several RSS feeds. Let us <span>con0er</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>each element in more detail.</p>
+
+<h3>Thesaurus</h3>
+
+<p>Thesauri are widely-used in traditional libraries for describing and accessing resources. Thesauri are quite similar to ontologies since is possible to define a hierarchical structure for a set of relevant concepts pertaining to a specific knowledge <span>domain</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by making explicit the <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>relationships among these concepts (basically <span>equivalence</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> hierarchical and associative relations).</p>
+
+<p>Although ontologies are much more expressive than thesauri, in this model we have chosen to use a thesaurus to <span>represent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the work <span>domain</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the digital library, because requirements defined for this model allow us to use a simple concept scheme, such as a thesaurus which is much easier to develop and <span>maintain</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>than an <span>ontology</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> In our model, component terms of the thesaurus define the <span>expression</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>domain of both the <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>terms of RSS items and users&rsquo; preferences.</p>
+
+<p>This thesaurus has been defined using SKOS (<a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2F&amp;date=2009-05-05" target="_blank">Simple <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Organization System</a>) (<a href="#isa08">Isaac and Summers 2008</a>), a mark-up language that allows the migration of a  paper thesaurus to the Web. As a <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>vocabulary</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> the enriched metadata <span>description</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>it provides allows us to equate thesauri with light-weight Web ontologies and eases importing and merging different thesaurus from other digital libraries.</p>
+
+<h3>User profiles</h3>
+
+<p>User profiles can be defined as structured <span>representations</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>that contain personal data, interests and preferences of users, which can be processed by <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>agents to customise the service to users' requirements. In our model these profiles are basically defined with <a href="http://en.wikipedia.org/wiki/FOAF_(software)" target="_blank">FOAF</a> (Friend of a friend) (<a href="#bri05">Brickley and Miller 2005</a>), a specific RDF/XML <span>vocabulary</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for describing people, and a non-standard <span>vocabulary</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of our own to define information fields not included in FOAF.</p>
+
+<p>Profiles are generated at the moment the user is registered in the system, and they are structured in four parts: a public profile that includes data related to users' identity and institutional affiliation (which can be accessed by other users); a private profile that holds the user&rsquo;s interests and preferences about the <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the alerts they wish to  receive; a security profile that store a user ID and a password; and a recommendations log, which records the assessments made by the user about different resources.</p>
+
+<h3>RSS feeds</h3>
+
+<p>To create the current awareness bulletins we have chosen <a href="http://web.resource.org/rss/1.0/" target="_blank">RSS 1.0</a> (RDF Site Summary) (<a href="#beg01">Beged-Dov <em>et al.</em> 2001</a>), a <span>vocabulary</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>that allows managing hyperlinks lists in an easy and flexible way. It uses the RDF/XML syntax and data model, and it is <span>easily</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>extensible thanks to the use of modules that allow <span>extending</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the <span>vocabulary</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>without modifying its core each time we want to add new describing elements. In this model several modules are used: the DC module, to describe the basic bibliographic information of RSS items utilising Dublin Core Metadata Initiative elements (<a href="#dub08">Dublin Core Metadata Initiative 2008</a>), the syndication module to allow <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>agents to synchronise and update RSS feeds, and the taxonomy module to assign topics to items.</p>
+
+<h3>Documents</h3>
+
+<p>The system has access to a full-text <span>documents</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>repository (i.e., the stock of the digital library) although agents in the system do not process them <span>directly</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>because most of them are in <span>HTML</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>or PDF format and they <span>lack</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>appropriate metadata. Therefore, in our model, agents have to work with surrogates <span>instead</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> i.e., RSS items which include basic bibliographic data, a set of <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>terms and a hyperlink to their corresponding full-text document.</p>
+
+<h2>Prototype modules</h2>
+
+<p>The following modules carry out the different functions and activities defined for D-Fussion:</p>
+
+<ol>
+  <li><em>RSS feeds and user profiles generation module</em>: This module is comprised of two sub-modules that <span>essentially</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>work the same way. In the <em>User profiles generation sub-module</em> users are able to characterize their profiles by defining personal data and weighted preferences (whose <span>weight</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is set by users themselves using a linguistic label). The RSS feeds generation sub-module allows digital library managers to create the feeds to be used as current awareness bulletins.</li>
+  <li><em>Information push module</em>: This module is responsible for generating and managing the information alerts to be provided to users (so it can be con0ered as the D-Fussion service core).</li>
+  <li><em>Feedback or user profiles updating module</em>: In this module the updating of user profiles is carried out according to users&rsquo; assessments of the set of resources recommended by the service. This updating process consists of recalculating the <span>weight</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>associated with each preference and adding new <span>entries</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to the recommendations&rsquo; log stored in every profile. </li>
+  <li><em>Collaborative recommendation module</em>: The aim of this module is to generate recommendations about a specific resource according to the assessments provided by different experts with a profile similar to that of the active user.</li>
+</ol>
+
+<p>It should be noted that the way these modules accomplish their assigned tasks is not recommendation approach dependent. Choosing one approach or another only affects the interpretation of the outcomes obtained in both information push and collaborative recommendation modules. Next, we describe in detail the above enumerated modules.</p>
+
+<h3>RSS feeds and user profiles generation module</h3>
+
+<p>As stated above, in this module we can differentiate two sub-modules (although they both basically function in a similar way): <em>User profiles generation</em> and <em>RSS feeds generation</em>.</p>
+
+<p>In the <em>User profiles generation sub-module</em>, users are asked to fill in a form where they must specify a set of basic personal data that will be stored in their public profile, before a login and password are given to grant secure access to the library. Both of these are stored in the security profile.</p>
+
+<p>Subsequently, users are required to define their interests or preferences. To do so, users must specify those keywords or concepts that best define their information needs. Later, the system lexically compares those concepts with the terms of the thesaurus using as similarity measure the edit tree <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(<a href="#lev66">Levenshtein 1966</a>). This function compares character strings and returns the same <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>introduced</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>when there is an <span>exact</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>match, or the <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>lexically similar to the given <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>if there is no <span>exact</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>match. If the suggested <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>satisfies a user&rsquo;s expectations, it will be <span>added</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to their profile. In those cases where the suggested <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is not satisfactory, the system must provide alternative ways to define preferences. We propose to use an application that enables users to browse the system thesaurus and select terms by themselves. An example of this type of <span>applications</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fthmanager.sourceforge.net%2F&amp;date=2009-05-05" target="_blank">ThManager</a><sup><a href="#foot1">i</a></sup>, a project of the University of Zaragoza (Spain), which allows editing, visualizing, and going through structures defined in SKOS.</p>
+
+<p>Each of the terms selected by users to define their areas of interest has an associated linguistic <span>weight</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>value (tagged as &lt;<em>relev</em>&gt;). This represents the <span>degree</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of interest of the user about a specific <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and allows the interface agent to generate a ranking <span>list</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of recommended resources.</p>
+
+<p>Defining weights is a fundamental task for several reasons:</p>
+
+<ul>
+  <li>weights are a determining factor used to <span>calculate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>both the relevance of RSS items according to users' preferences and the similarity among user profiles;</li>
+  <li>    the user profile updating process consists of modifying the weights associated with user preferences.</li>
+</ul>
+
+<p>The <span>range</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of possible <span>values</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for these weights is defined by a group of <span>seven</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>linguistic labels extracted from the fuzzy linguistic variable <em>Relevance degree</em>, whose <span>expression</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>domain is defined by the linguistic <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>set S={<em>null, very low, low, middle, high, very high, total</em>}.</p>
+
+<p>The recommendations log area of the profiles is not generated in this module but in the feedback module (as described in a next section).</p>
+
+<p>In the <em>RSS feeds generation sub-module</em>, system administrators or site managers can create and update the RSS feeds of the system in a semi-automatic way through an interface where they can input the different elements needed to describe both the RSS channel and its items. The <span>description</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the channel is static (i.e., is not susceptible to changes) and includes a title, a brief summary of the content and frequency with which items are updated. Description of the items is continually renewed, deleting out-of-date items and adding new ones according to the updating frequency defined in the channel <span>description</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> To do so, the task agent periodically checks the document repository seeking for <span>documents</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>that have not yet been described, but that are RSS items. Once these <span>documents</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>have been located, information agents are responsible for extracting the data needed to generate their <span>description</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>from a Web information <span>source</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(such as, for instance, a database or a public access repository). Then, the task agent proceeds to generate the <span>description</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the items by defining a title, an author, a content summary and a link to the <span>primary</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>resource.</p>
+
+<p>If the data provided by information agents is <span>wrong</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>or incomplete, system managers are responsible for correcting or completing them. <span>Nevertheless</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> there must always be a careful human supervision (carried out by system managers) of the assignment of topics terms that describe the content of any resource. To ease this task, we use a tool that helps in the process of assigning topics to the items. It works in an analogous way to the preference <span>selection</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>process in the <em>User profiles generation sub-module</em>: the administrator suggests a series of terms that are matched with the terms of the thesaurus using the edit tree <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and the matched terms will be assigned as <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>terms. Here, the system suggests a series of lexically similar terms that site managers can use or not, depending on their own criterion.</p>
+
+<div align="center"><img src="p398fig3.png" alt="RSS feeds and user profiles generation module" width="267" height="391" /></div>
+<div align="center"><br /><strong>Figure 3: RSS feeds and user profiles generation module</strong></div>
+
+<h3>Information push or alerts module</h3>
+
+<p>Selective dissemination of information service <span>performance</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is based on generating passive queries to RSS feeds about the preferences stored in the user&rsquo;s profile without the need of an explicit request from the user (an information delivery <span>technique</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>known as information push). In such a way, users are alerted to new resources fitting their information requirements without having to request them each time they access the system. This process is developed as follows:</p>
+
+<p><em>Step 1</em>: Users must provide their user-name and password in order to get authenticated access to the library.</p>
+
+<p><em>Step 2</em>: Once the user is identified the task agent proceeds to match the user's preferences with the content descriptors of the <em>n</em> items in the RSS feed, thus identifying those resources that fit the user's specific information needs. In this case, <span>instead</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of using a <span>lexical</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>matching of the strings of both terms, the task agent measures their <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>similarity. To do this we use the <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>similarity function defined by Oldakowsky and Byzer (<a href="#old05">2005</a>) which allows measuring the distance between two concepts in a taxonomy (or thesaurus) described as an RDF graph. This similarity is defined as follows:</p>
+
+  <div align="center">sim<sub style="font-size: 60%;">c</sub>(c<sub style="font-size: 60%;">1</sub>, c<sub style="font-size: 60%;">2</sub>) = 1 - d<sub style="font-size: 60%;">c</sub>(c<sub style="font-size: 60%;">1</sub>, c<sub style="font-size: 60%;">2</sub>)</div>
+  <blockquote>
+    <p align="left">The distance d<sub style="font-size: 60%;">c</sub> between two concepts represents the path to be <span>followed</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to get from one to another through their closest common parent (ccp). This distance is <span>measured</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>as follows:</p>
+    <p align="center">d<sub style="font-size: 60%;">c</sub>(c<sub style="font-size: 60%;">1</sub>, c<sub style="font-size: 60%;">2</sub>)= d<sub style="font-size: 60%;">c</sub> (c<sub style="font-size: 60%;">1</sub>, ccp) + d<sub style="font-size: 60%;">c</sub>(c<sub style="font-size: 60%;">2</sub>, ccp)<br />
+      <br />
+    d<sub style="font-size: 60%;">c</sub>(c, ccp)= milestone (ccp) - milestone(c)</p>
+    <p>where each concept in the taxonomy is assigned a marker or milestone. This marker can be <span>measured</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by applying both a <span>linear</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>or exponential function (depending on the <span>characteristics</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and requirements of our system). If we choose the <span>linear</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>function, the milestone is calculated as follows:</p>
+    <p align="center">milestone (n) = 1 &minus; [<em>l</em> (n) / <em>l</em> (N )]</p>
+    <p>where <em>l</em>(n) is the depth of the n node in the hierarchical structure and <em>l</em>(N) represents the deepest hierarchical level in the taxonomy. If we opt to use the exponential milestone then we have to apply the function defined by Zhong <em>et al.</em> (<a href="#zho02">2002</a>):</p>
+    <p align="center">milestone (n) =1 / 2k <sup><em>l(n)</em></sup></p>
+    <p>where k is a factor with a value of &gt;1, which indicates the milestone ratio decrease as a <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is deeper in the thesaurus tree structure. The value given for k factor <span>depends</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>on thesaurus depth.</p>
+  </blockquote>
+
+<p><em>Step 3</em>: Once it has defined the similarity between preferences and <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>terms, the system is able to measure the relevance of a resource regarding a specific user profile. To do this, we have defined the concept of <em>semantic overlap</em>, the aim of which is to ease the problem of measuring similarity using taxonomic operators. All concepts in a taxonomy are related to a certain <span>degree</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> so the similarity between two of them would never reach 0 and we could find relevance <span>values</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>higher than 1.</p>
+
+      <p>The <span>underlying</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>idea in this concept is determining areas of maximum <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>intersection between concepts in a taxonomy. To clarify the concept, here is an example of measuring relevance between two user profiles (the procedure can be extrapolated to measure the relevance among resources or between profiles and resources).</p>
+
+    <p>Let P<sub style="font-size: 60%;">1</sub> the profile of the active user to be matched with another user profile P<sub style="font-size: 60%;">2</sub>, where:</p>
+
+  <blockquote>
+    <p align="center">P<sub style="font-size: 60%;">i</sub>= [p<sub style="font-size: 60%;">1</sub>, p<sub style="font-size: 60%;">2</sub>,&hellip;, p<sub style="font-size: 60%;">N</sub>] and P<sub style="font-size: 60%;">j</sub>= [p'<sub style="font-size: 60%;">1</sub>, p'<sub style="font-size: 60%;">2</sub>, &hellip;, p'<sub style="font-size: 60%;">M</sub>]</p>
+
+    <p>being p<sub style="font-size: 60%;">1</sub>,...<sub style="font-size: 60%;">N</sub>  and  p'<sub style="font-size: 60%;">1</sub>,...,<sub style="font-size: 60%;">M</sub>  the preferences defined in P<sub style="font-size: 60%;">i</sub> and P<sub style="font-size: 60%;">j</sub> <span>respectively</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+
+    <p>Graphically, we could <span>represent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>preferences as simple closed <span>curves</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>with an area of one unit squared and the similarity between two terms as the intersection of their areas. According to these starting assumptions the following relevance function is defined:</p>
+
+    <div align="center"><img alt="<span>formula</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>3" src="p398form3.png" width="348" height="64" /></div>
+	
+    <p>where H<sub style="font-size: 60%;">k</sub>  is a function that obtains the k maximum similarity <span>values</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>between preferences p<sub style="font-size: 60%;">i</sub> and p<sub style="font-size: 60%;">j</sub>,  &#969;<sub style="font-size: 60%;">i</sub> and &#969;<sub style="font-size: 60%;">j</sub> are the associated weights to p<sub style="font-size: 60%;">i</sub> and p<sub style="font-size: 60%;">j</sub> <span>respectively</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(obviously, if we are comparing profiles and resources the <span>weight</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>associated to <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>terms is zero), N is the number of preferences defined for p<sub style="font-size: 60%;">i</sub> and M the number of those defined for p<sub style="font-size: 60%;">j</sub>.<br />
+      Although <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>overlap implies assuming a loss of information (that may not always be re0ual), using it improves the coherence of the system since the <span>range</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of relevance <span>values</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is restricted to the (0,1] interval. </p>
+</blockquote>
+
+<p><em>Step 4</em>. Once it has determined both similarity and relevance, the interface agent displays to the active user those items for which relevance is equal, or which overcome a predefined relevance threshold <em>t</em> (the value of which is near to 1), thus discarding those resources with lower relevance <span>values</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Then, selected items are sorted according to this relevance value which is expressed as a 2-tuple value (i.e., a linguistic label and an <span>integer</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>representing its symbolic translation).</p>
+
+<p><em>Step 5</em>. Finally, the interface agent generates a notification (displayed on the welcome page of the digital library) that notifies users that there are new resources fitting their information needs. This notification <span>links</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to the listing of resources recommended by the system and allows user-imposing additional filtering constraints (such as selecting a specific document type) and accessing full-text <span>documents</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> If there are no new items the user will also be alerted to this circumstance.</p>
+  
+  <div align="center"><img src="p398fig4.png" alt="Information push module" width="307" height="355" /></div>
+  <div align="center"><br /><strong>Figure 4: <em>Information push</em> module</strong></div>
+  
+  <h3>Feedback or user profiles updating module</h3>
+  
+  <p>As we have noted, service <span>performance</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is based on the definition of passive queries to RSS feeds about the preferences stored in the user&rsquo;s profile without the need of an explicit request from the user (information push). Therefore, updating user profiles becomes a critical task since, although profiles are meant to store users&rsquo; long-term preferences, the system must be able to <span>detect</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>any subtle change in these preferences over time to provide <span>accurate</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>recommendations. </p>
+
+    <p>In our model, the profiles updating process is managed through a simple elicitation <span>mechanism</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> which applies fuzzy linguistic techniques and exploits the feedback provided by users. Assuming the premises settled by the ordinal linguistic modelling theory we have developed a simple <span>mechanism</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to update user profiles through the application of fuzzy linguistic techniques.</p>
+
+    <p>This <span>mechanism</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is based on the updating of weights associated with preferences in a profile according to the satisfaction <span>degree</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><em>ej</em> (defined by the user about a specific resource), which is extracted from the linguistic variable <em>Satisfaction degree</em>, and whose <span>expression</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>domain is S&rsquo;= {<em>null, very low, low, middle, high, very high, total</em>}).</p>
+
+    <p>We have defined a matching function similar to those used to model threshold weights in weighted queries (<a href="#her01">Herrera-Viedma 2001</a>). This function rewards the weights associated with preferences that match the <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>terms present in assessed resources and penalises the weights if the assessment is not positive.</p> 
+
+    <p>Nevertheless, the updating process will only be carried out in a preference with the maximum similarity value when matched with <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>terms of an item. In this way, only the preference that has pushed the user to assess the resource in such a manner will be rewarded or penalised.</p>
+
+    <p>Therefore, the more resources the user assesses, the more precise the <span>mechanism</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>becomes, because it will be easier for the service to &ldquo;learn&rdquo; to select those <span>documents</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>that are likely to be more interesting for the user according to the preferences stored in their profile.</p>
+
+  <p>This evaluation process is not only useful for updating users&rsquo; profiles, but also (as we will see in the next section) for improving the system itself, as the feedback provided by the user can be re-used to create a collaborative recommendation system which can exploit the experience and knowledge of each user to benefit the whole <span>community</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of users.</p>
+
+  <p>Let e<sub style="font-size: 60%;">j</sub> &#8712;S&rsquo; the <span>degree</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of satisfaction, and &#969;<sup style="font-size: 60%;">i</sup><sub style="font-size: 60%;">li</sub>&#8712; S the <span>weight</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>associated to property i (in this case i= Preference) which value is l, then we define the updating function <em>g:</em> S&#8242; x S &#8594; S: </p>
+
+  <div style="text-align:center"><img src="p398form4.png" alt="formula_4" width="248" height="47" /></div>
+
+  <div style="text-align:center"><em>s</em><sub style="font-size: 70%;">a</sub>, <em>s</em><sub style="font-size: 70%;">b</sub> &#8712; <em>H</em> = {0,...,<em>T</em>}</div>
+  
+  <p>where,  (i) s<sub style="font-size: 70%;">a</sub>= &#969;<sup style="font-size: 70%;">i</sup><sub style="font-size: 70%;">li</sub> ; (ii) s<sub style="font-size: 70%;">b</sub> = e<sub style="font-size: 70%;">j</sub> ; (iii) <em>a</em> and <em>b</em> are indexes of linguistic labels whose value ranges from 0 and T (being T the cardinality of the set S minus one), and (iv) &beta; is a bonus value defined as &beta;=round(2|b-a|/T ) which rewards or penalizes the <span>weight</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of preferences.</p>
+
+  <p>Each recommendation made by the user is also stored in the recommendation log area of their profile and the <span>entries</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in the log are composed by the satisfaction <span>degree</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>e<sub style="font-size: 70%;">j </sub>, a URI that identifies the recommended resource, and a register date.</p>
+
+  <p>With this registry of assessments the system is able to function as a collaborative recommender system and generate recommendations according to the opinions of users with a similar profile.</p>
+  
+  <h3>Collaborative recommendation module</h3>
+  
+  <p>Be0es providing content-based recommendations by measuring similarity between resources and user profiles, the D-Fussion service <span>yields</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>collaborative recommendations based on the opinion suggested by other users of the library with a profile similar to that of the active user. The following steps give an overview of this process:</p>
+
+  <ul>
+    <li><em>Step 1</em>. The task agent carries out a clustering process on the user profiles repository to find out experts with similar preferences to those of the active user. Similarity measurement is analogous to the process described in the information push module.</li>
+    <li> <em>Step 2</em>. Once it has defined the set of similar users, the task agent looks in the recommendation log of each user profile in the set for recommendations made upon any retrieved resource. If it finds any, the agent proceeds to aggregate the different linguistic assessments found using the LOWA fuzzy linguistic operator (<a href="#her97">Herrera and Herrera-Viedma 1997</a>). The outcome is a new linguistic label extracted from the linguistic variable <em>Satisfaction degree</em>, whose <span>expression</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>domain is R&rsquo;= {<em>null, very low, low, middle, high, very high, total</em>}. </li>
+    <li> <em>Step 3</em>. The generated recommendation is displayed to the user with the outcome expressed as a linguistic label.</li>
+    <li><em>Step 4</em>. If required by the user, the system is also able to provide a <span>list</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the <span>names</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of experts whose opinion has been used to generate the collaborative recommendation and a link to their public profile. In such a way, users are not only given a set of resources and their associated recommendations but are also allowed to discover other researchers who can be con0ered potential research collaborators.</li>
+  </ul>
+  
+  <p>Additionally, if the system could get knowledge about the skill level of users or their typology (such as <span>students</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> teachers or researchers) it could be possible to add new filtering <span>features</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to improve collaborative recommendations. In this way, a user could be provided, for instance, with recommendations defined by other users with both similar interests and skills.</p>
+
+  <div align="center"><img src="p398fig5.png" alt="Collaborative recommendation module" width="333" height="386" /></div>
+<div align="center"><br /><strong>Figure 5: <em>Collaborative recommendation</em> module</strong></div>
+  
+  <h2>Recommendation items display sample</h2>
+  
+  <p>When D-Fussion provides users with an information alert it is possible for them to decide which recommendation approach (monodisciplinary or multidisciplinary) is the more appropriate at that point in time to satisfy their information needs. Depending on the approach selected, D-Fussion displays recommendations as a <span>list</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of items with a title, an <span>abstract</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and a hyperlink to the full-text document. Next to the item there are also displayed three different elements:</p>
+
+  <ol>
+    <li>A relevance value expressed as a 2-tuple.</li>
+    <li>A collaborative recommendation defined by a linguistic label. This recommendation value may not appear if the item hasn&rsquo;t been assessed yet. When the collaborative recommendation is generated, its linguistic label is displayed as an active text that, when clicked on, shows the <span>names</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of experts whose appraisals have been used to generate that recommendation. In such a way, users are able to discover other users with similar interests and access their public profile to get in contact with them.</li>
+    <li>A menu where users can select a linguistic label to define their assessment (or satisfaction degree) about the corresponding item. This element is not available in the multidisciplinary approach, however, because it does not make sense to assess resources that do not fit users&rsquo; needs (we have to take into account that these appraisals are later on used to update users&rsquo; preferences).</li>
+  </ol>
+  <p>Figure 6 displays a screenshot of D-Fussion displaying a <span>list</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of results according to the monodisciplinary approach.</p>
+  <div align="center"><img src="p398fig6.png" alt="REcommendation alert screen" width="490" height="360" /></div>
+  <div align="center"><br /><strong>Figure 6: Recommendation alert screen</strong></div>
+  
+  <h2>Experimental setup and evaluation</h2>
+  
+<p>To analyse the behaviour of the D-Fussion model <span>interaction</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>we have created a <span>prototype</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>system, which will evaluate its overall <span>performance</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in terms of precision and recall. The <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>aim of this <span>experiment</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is determining whether the system achieves the original goal of recommending useful resources to its users. We have chosen a random <span>sample</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of twelve researchers in the field of Library and Information Science from the University of Granada.</p>
+
+  <p>The evaluation of this first version of D-Fussion has been based on a set of experiments <span>designed</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to measure the capability of the system to recommend research resources that better fit users&rsquo; preferences. <span>Nevertheless</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> although the system is able to provide both content-based and collaborative recommendations, the <span>experiment</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is <span>limited</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to the evaluation of the content-based recommendation module due to the <span>lack</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of <span>sufficient</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>collaborative recommendations  (that is, since the system is not fully implemented yet it suffers from cold start problem (<a href="#sch02">Schein <em>et al.</em> 2002</a>)).</p>
+  
+  <h3>Evaluation metrics</h3>
+  
+  <p>In the field of filtering and recommender <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>there is a set of well-known and widely-used measures of precision, recall and F1 that make possible assessing the <span>quality</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the generated recommendations (<a href="#cao07">Cao and Li 2007</a>; <a href="#cle66">Cleverdon and Keen 1966</a>; <a href="#sar00">Sarwar <em>et al.</em> 2000</a>). To <span>calculate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>these metrics we need a contingency <span>table</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to categorize the items according to users&rsquo; information needs (see Table 1).</p>
+  
+  
+   <table style="border: <span>medium</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="50%" align="center" border="1" cellpadding="3" cellspacing="0">
+  <caption align="bottom">
+  <br />
+  <strong>Table 1: Contingency table</strong>
+  </caption>
+  <tbody>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Recommended</th>
+      <th>Not recommended</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <td><strong>Relevant</strong></td>
+      <td align="center"> Nrs </td>
+      <td align="center"> Nrn </td>
+      <td align="center"> Nr </td>
+    </tr>
+    <tr>
+      <td><strong>Irrelevant</strong></td>
+      <td align="center"> Nis</td>
+      <td align="center"> Nin </td>
+      <td align="center"> Ni </td>
+      
+    </tr>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td align="center"> Ns </td>
+      <td align="center"> Nn </td>
+      
+      <td align="center"> N </td>
+    </tr>
+  </tbody>
+</table>
+
+
+  
+  <p>Here we have classified the items in four basic categories: relevant suggested items (Nrs), relevant non-suggested items (Nrn), irrelevant suggested items (Nis) and irrelevant non-suggested items (Nin). We have also defined other categories to <span>represent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the <span>sum</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of selected items (Ns), non-selected items (Nn), relevant items (Nr), irrelevant items (Ni), and the whole set of items (N). According to these categories we define the measures used in our <span>experiment</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>as follows:</p>
+
+  <p><strong>Precision</strong>: It is defined as the ratio of selected relevant items to selected items, i.e., the <span>probability</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of a selected item to be relevant.</p>
+
+  <div align="center"><img src="p398form5.png" alt="formula_5" width="59" height="40" /></div>
+  
+  <p><strong>Recall</strong>: It is defined as the ratio of selected relevant items to relevant items, i.e., the <span>probability</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of a relevant item to be selected.</p>
+
+  <div align="center"><img src="p398form6.png"  alt="formula_6" width="60" height="40" /></div>
+  <p><strong>F1</strong>: It is defined as a <span>combination</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>metric that <span>equals</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>both the weights of precision and recall.</p>
+  <div align="center"><img src="p398form7.png" alt="formula_7" width="104" height="40" /></div>
+  
+  <h3>Experimental results</h3>
+  
+  <p>The goal of the <span>experiment</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>was to <span>test</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the <span>performance</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of D-Fussion in the generation of <span>accurate</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and relevant recommendations for the users of the system (only con0ering the mono-disciplinary search). </p>
+
+    <p>We have focused on just one <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>category among the twelve top categories defined in the thesaurus, so at least one of the topics defined for relevant resources and one of the experts&rsquo; preferences must be semantically constrained to the same sub-domain within Library and Information Science. In this way we can achieve better <span>terminological</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>control overe subjects and preferences and extrapolate the output data for the whole thesaurus. In this case, the sub-domain selected is <em>Archival science</em> so the set of possible preference (and topic) <span>values</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>rises to ninety-six different concepts.</p>
+
+    <p>We con0ered an RSS feed with thirty items obtained from the <a href="http://www.webcitation.org/query?url=http%3A%2F%2Feprints.rclis.org%2F&amp;date=2009-05-07" target="_blank">E-LIS open access repository</a>, <span>finding</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>only ten of them as semantically relevant (i.e., with at least one subject pertaining to the sub-domain <em>Archival science</em>), and a set of twelve experts who have defined at least one preference pertaining to the sub-domain archival science.</p>
+
+    <p>Therefore, in this <span>experiment</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the system recommended a set of ten resources and users were then asked to assess the results, explicitly stating which of the recommended items could be con0ered as relevant. To allow the system always to retrieve ten resources we relaxed the filtering constraints and threshold <span>limits</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+
+<p>With these starting premises the <span>experiment</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>was carried out and the results are shown in Table 2:</p>
+
+  <table style="border: <span>medium</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="80%" align="center" border="1" cellpadding="3" cellspacing="0">
+  <caption align="bottom">
+  <br />
+  <strong>Table 2: <span>Experimental</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>contingency table</strong>
+  </caption>
+  <tbody>
+    <tr>
+      <th>&nbsp;</th>
+      <th>User 1</th>
+      <th>User 2</th>
+      <th>User 3</th>
+	  <th>User 4</th>
+	  <th>User 5</th>
+	  <th>User 6</th>
+	  <th>User 7</th>
+	  <th>User 8</th>
+	  <th>User 9</th>
+	  <th>User 10</th>
+	  <th>User 11</th>
+	  <th>User 12</th>
+    </tr>
+    <tr>
+      <td><strong>Nrs</strong></td>
+      <td align="center">6</td>
+      <td align="center">5</td>
+      <td align="center">3</td>
+	  <td align="center">6</td>
+	  <td align="center">4</td>
+	  <td align="center">5</td>
+	  <td align="center">5</td>
+	  <td align="center">4</td>
+	  <td align="center">6</td>
+	  <td align="center">3</td>
+	  <td align="center">7</td>
+	  <td align="center">6</td>
+    </tr>
+    <tr>
+      <td><strong>Nrn</strong></td>
+      <td align="center">2</td>
+      <td align="center">3</td>
+      <td align="center">2</td>
+	  <td align="center">1</td>
+	  <td align="center">2</td>
+	  <td align="center">3</td>
+	  <td align="center">2</td>
+	  <td align="center">2</td>
+	  <td align="center">2</td>
+	  <td align="center">2</td>
+	  <td align="center">1</td>
+	  <td align="center">2</td>
+    </tr>
+    <tr>
+      <td><strong>Nis</strong></td>
+      <td align="center">4</td>
+      <td align="center">5</td>
+      <td align="center">7</td>
+	  <td align="center">4</td>
+	  <td align="center">6</td>
+	  <td align="center">5</td>
+	  <td align="center">5</td>
+	  <td align="center">6</td>
+	  <td align="center">2</td>
+	  <td align="center">7</td>
+	  <td align="center">3</td>
+	  <td align="center">4</td>
+    </tr>
+	
+	<tr>
+      <td><strong>Nr</strong></td>
+      <td align="center">8</td>
+      <td align="center">8</td>
+      <td align="center">5</td>
+	  <td align="center">7</td>
+	  <td align="center">6</td>
+	  <td align="center">8</td>
+	  <td align="center">7</td>
+	  <td align="center">6</td>
+	  <td align="center">8</td>
+	  <td align="center">5</td>
+	  <td align="center">8</td>
+	  <td align="center">8</td>
+    </tr>
+	
+	<tr>
+      <td><strong>Ns</strong></td>
+      <td align="center">10</td>
+	  <td align="center">10</td>
+	  <td align="center">10</td>
+	  <td align="center">10</td>
+	  <td align="center">10</td>
+	  <td align="center">10</td>
+	  <td align="center">10</td>
+	  <td align="center">10</td>
+	  <td align="center">10</td>
+	  <td align="center">10</td>
+	  <td align="center">10</td>
+	  <td align="center">10</td>
+	</tr>
+  </tbody>
+</table>
+
+  <p>The corresponding <span>values</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for precision, recall and F1 are shown in Table 3, being <span>respectively</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the average precision, recall and F1 metrics 50%, 70,66% and 58,19%. <span>Figure</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>7 shows a graph representing the precision, recall and F1 for each user and it reveals a quite good <span>performance</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the system.</p>
+  
+  <table style="border: <span>medium</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="50%" align="center" border="1" cellpadding="3" cellspacing="0">
+  <caption align="bottom">
+  <br />
+  <strong>Table 3: Detailed <span>experimental</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>results</strong>
+  <br />
+  </caption>
+  <tbody>
+    <tr>
+      <th width="15%">&nbsp;</th>
+      <th width="32%">Precision (%) </th>
+      <th width="32%">Recall (%) </th>
+      <th width="21%">F1 (%) </th>
+    </tr>
+    <tr>
+      <td><strong>User 1</strong></td>
+      <td align="center"> 60.00 </td>
+      <td align="center"> 75.00 </td>
+      <td align="center"> 66.67 </td>
+    </tr>
+    <tr>
+      <td><strong>User 2</strong></td>
+      <td align="center"> 50.00 </td>
+      <td align="center"> 62.50 </td>
+      <td align="center"> 55.56 </td>
+    </tr>
+    <tr>
+      <td><strong>User 3</strong></td>
+      <td align="center"> 30.00 </td>
+      <td align="center"> 60.00 </td>
+      <td align="center"> 40.00 </td>
+    </tr>
+	<tr>
+      <td><strong>User 4</strong></td>
+      <td align="center"> 60.00 </td>
+      <td align="center"> 85.71 </td>
+      <td align="center"> 70.59 </td>
+    </tr>
+	<tr>
+      <td><strong>User 5</strong></td>
+      <td align="center"> 40.00 </td>
+      <td align="center"> 66.67 </td>
+      <td align="center"> 50.00 </td>
+    </tr>
+	<tr>
+      <td><strong>User 6</strong></td>
+      <td align="center"> 50.00 </td>
+      <td align="center"> 62.50 </td>
+      <td align="center"> 55.56 </td>
+    </tr>
+	<tr>
+      <td><strong>User 7</strong></td>
+      <td align="center"> 50.00 </td>
+      <td align="center"> 71.43 </td>
+      <td align="center"> 58.82 </td>
+    </tr>
+	<tr>
+      <td><strong>User 8</strong></td>
+      <td align="center"> 40.00 </td>
+      <td align="center"> 66.67 </td>
+      <td align="center"> 50.00 </td>
+    </tr>
+	<tr>
+      <td><strong>User 9</strong></td>
+      <td align="center"> 60.00 </td>
+      <td align="center"> 75.00 </td>
+      <td align="center"> 66.67 </td>
+    </tr>
+	<tr>
+      <td><strong>User 10</strong></td>
+      <td align="center"> 30.00 </td>
+      <td align="center"> 60.00 </td>
+      <td align="center"> 40.00 </td>
+    </tr>
+	<tr>
+      <td><strong>User 11</strong></td>
+      <td align="center"> 70.00 </td>
+      <td align="center"> 87.50 </td>
+      <td align="center"> 77.78 </td>
+    </tr>
+	<tr>
+      <td><strong>User 12</strong></td>
+      <td align="center"> 60.00 </td>
+      <td align="center"> 75.00 </td>
+      <td align="center"> 66.67 </td>
+    </tr>
+	<tr>
+      <td><strong>Average</strong></td>
+      <td align="center"><strong> 50.00 </strong></td>
+      <td align="center"><strong> 70.66 </strong></td>
+      <td align="center"><strong> 58.19 </strong></td>
+    </tr>
+  </tbody>
+</table>
+  
+  <div align="center"><img src="p398fig7.png" alt="Precision, recall and F1 outcomes" width="484" height="316" /></div>
+  <div align="center"><br /><strong>Figure 7: Precision, recall and F1 outcomes</strong></div>
+  
+ 
+<h2>Conclusions</h2>
+
+<p>Libraries are <span>moving</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to the Web, as are the services they provide to users (such as selective dissemination of information services). D-Fussion is a multi-agent selective dissemination of information service <span>prototype</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>designed to be used in digital libraries by the research <span>community</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> which provides an integrated solution to minimize the problem of accessing relevant information in vast document repositories. The <span>prototype</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>has been developed by combining <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web technologies and several fuzzy linguistic modelling techniques, which allow the defining of a richer <span>description</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of information thus improving communication processes and user-system <span>interaction</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+
+<p>D-Fussion allows the generation of both mono-disciplinary recommendations (which are oriented to dig deep into users' specialization areas) and multi-disciplinary recommendations (which allow users eliciting resources whose topics are tangentially related to their preferences). While a mono-disciplinary approach implies a lineal interpretation of similarity, in the multi-disciplinary approach the system falls back on a centre function, which enables the system to reinterpret similarity measures.</p>
+
+<p>The <span>prototype</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>has been evaluated and <span>experimental</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>results show that D-Fussion is reasonably effective in terms of precision and recall, although further <span>detailed</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>evaluations may be necessary.</p>
+
+<p>Future <span>lines</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of research will <span>focus</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>on integrating in the system <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>capable of merging thesauri from different digital libraries, thus achieving an <span>extension</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>coverage.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>The research reported here was <span>supported</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by the Consejería de Innovaci&oacute;n, Ciencia y Empresa. Junta de Andaluc&iacute;a, Spain (project SAINFOWEB - 00602) and the Ministerio de Educaci&oacute;n y Ciencia,
+Spain (project FUZZYLING - TIN2007-61079).</p>
+  
+<h2><a id="authors" name="authors" />About the authors</h2>
+<p>Jos&eacute; M. Morales del Castillo is Assistant <span>Professor</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in Library and Information 
+  Science of the University of Granada. He can be contacted at <a href="mailto:josemdc@ugr.es">
+josemdc@ugr.es</a>. <br /><br />
+Eduardo Peis is Full <span>Professor</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>
+  in the Library and Information Science Department of the University of Granada 
+  He can be contacted at <a href="mailto:epeis@ugr.es">epeis@ugr.es</a>.<br /><br /> 
+  Juan M. Moreno is Assistant <span>Professor</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in the Department of Information 
+  and Communication Engineering of the University of Murcia. He can be contacted at <a href="mailto:juanm.moreno@carm.es">jmmoreno@um.es</a> <br /><br />
+  Enrique Herrera-Viedma is Senior Lecturer in the <span>Computer</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Science and Artificial Intelligence Department of the University of Granada. He can be contacted at <a href="mailto:viedma@decsai.ugr.es">
+viedma@decsai.ugr.es</a></p>
+
+<form action="#">
+  <fieldset>
+  <legend style="border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy; border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy; padding: 0.1ex 0.5ex; color: white; background-color: rgb(94, 150, 253); font-size: medium; font-weight: bold;">References</legend>
+  <ul>
+    <li><a id="aks98" name="aks98"></a> Aksoy, D., Altinel, M., Bose, <span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>, &Ccedil;etintemel, U., <span>Franklin</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> M.<span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>, Wang, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> and other. (1998). Research in data broadcast and dissemination. In S. Nishio &amp; F. Kushio, (Eds.), <em>Proceedings of the 1st International Conference on Advanced Multimedia Content Processing</em> (pp. 194-207). London: Springer-Verlag.</li>
+
+    <li><a id="alt00" name="alt00"></a>Altinel, M. &amp; <span>Franklin</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> M.<span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (2000). Efficient filtering of <span>XML</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>documents</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for selective dissemination of information. In <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> El Abbadi, M.L. Brodie, S. Chakravarthy, U. Dayal, N. Kamel &amp; 
+G. Sclageter, (Eds.), <em>VLDB 2000: Proceedings of the 26th International Conference on Very Large Data Bases September 10-14, 2000, Cairo, Egypt</em> (pp. 53-64). San Francisco: Morgan Kaufmann Publishers.</li>
+
+    <li><a id="bec04" name="bec04"></a>Beckett, D. (Ed.) (2004). <a href="http://www.webcitation.org/5dDMaJQK4">RDF/XML Syntax Specification (Revised)</a>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December, 2008 from http://www.w3.org/TR/rdf-syntax-grammar/ (Archived by WebCite&reg; at http://www.webcitation.org/5dDMaJQK4).</li>
+	  
+    <li><a id="beg01" name="beg01"></a>Beged-Dov, G., Brickley, D., Dornfest, <span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>, Davis, I., Dodds, L., Eisenzopf, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> and others . (2001). <a href="http://www.webcitation.org/5dDNFuyvx">RDF Site Summary (RSS) 1.0</a>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December, 2008 from http://web.resource.org/rss/1.0/spec (Archived by WebCite&reg; at http://www.webcitation.org/5dDNFuyvx).</li>
+	  
+    <li><a id="ber00" name="ber00"></a>Berners-Lee, T. (2000). <a href="http://www.webcitation.org/5dDNfFAiT">Semantic Web - XML2000</a>. Boston, MA: W3C. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December, 2008 from http://www.w3.org/2000/Talks/1206-xml2k-tbl/ (Archived by WebCite&reg; at http://www.webcitation.org/5dDNfFAiT).</li>
+	  
+    <li><a id="ber01" name="ber01"></a>Berners-Lee, T., Hendler, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Lassila, O. (2001, May). <a href="http://www.webcitation.org/5dDNxFY5z">The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web: a new form of Web content that is meaningful to computers will unleash a <span>revolution</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of new possibilities</a>. <em>The Scientific American</em>, <strong>279</strong>(5). <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December, 2008 from http://www.sciam.com/article.cfm?id=the-semantic-web (Archived by WebCite&reg; at http://www.webcitation.org/5dDNxFY5z).</li>
+	  
+    <li><a id="bre98" name="bre98"></a>Brenner, W., Zarnekow, <span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Wittig, H. (1998). <em>Intelligent <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>agent: foundations and applications</em>. Heidelberg: Springer-Verlag.</li>
+	  
+    <li><a id="bri05" name="bri05"></a>Brickley, D. &amp; Miller, L. (2005). <a href="http://www.webcitation.org/5dDPYJywl">FOAF <span>vocabulary</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>specification</a>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December, 2008 from http://www.xmlns.com/foaf/0.1/ (Archived by WebCite&reg; at http://www.webcitation.org/5dDPYJywl).</li>
+	  
+    <li><a id="cao07" name="cao07"></a>Cao, Y. &amp; Li, Y. (2007). An intelligent fuzzy-based recommendation system for consumer electronic products. <em>Expert Systems with Applications</em>, <strong>33</strong>(1), 230-240.</li>
+	  
+    <li><a id="cle66" name="cle66"></a>Cleverdon, C.W., Mills, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Keen, E.M. (1966). <em>Factors determining the <span>performance</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of indexing <span>systems</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Vol. 2, <span>Test</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>results</em>. Cranfield, England: ASLIB Cranfield Project.</li>
+	  
+    <li><a id="dec99" name="dec99"></a> Decker K., Sycara K. &amp; Williamson M. (1999). Middle-agents for the Internet. In <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>L. Ralescu &amp; <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>G. Shanahan, (Eds.), <em>Fuzzy logic in artificial intelligence (IJCAI-97)</em> (pp. 578-83). Heidelberg: Springer-Verlag.</li>
+	  
+    <li><a id="dub08" name="dub08"></a>Dublin Core Metadata Initiative. (2008, January 14). <em><a href="http://www.webcitation.org/5eue90N5w">Dublin Core metadata element set, Version 1.1</a></em>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December 2008 from http://www.dublincore.org/documents/dces/. (Archived by WebCite&reg; at 
+http://www.webcitation.org/5eue90N5w).</li>
+	  
+    <li><a id="fae01" name="fae01"></a>Faensen, D., Faultstich, L., Schweppe, H., Hinze, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Steidinger, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (2001). Hermes: a notification service for digital libraries. In E.<span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Fox &amp; C.L. Borgman, (Eds.), <em>Proceedings of the Joint ACM/IEEE-CS Joint Conference on Digital Libraries</em> (pp. 373-80). New York, NY: ACM Press.</li>
+	  
+    <li><a id="faz00" name="faz00"></a>Fazlollahi, B., Vahidov, <span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>M. &amp; Allev, <span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (2000). Multi-agent distributed intelligent system based on fuzzy decision making. <em>International Journal of Intelligent Systems</em>, <strong>15</strong>(9), 849-858.</li>
+	  
+    <li><a id="fol92" name="fol92"></a>Foltz, P.W. &amp; Dumais, S.T. (1992). Personalized information delivery: an analysis of information filtering methods. <em>Communications of the ACM</em>, <strong>35</strong>(12), 51-60.</li>
+	  
+    <li><a id="gei01" name="gei01"></a>Geisler G., McArthur, D. &amp; Giersch, S. (2001). Developing recommendation services for a digital library with uncertain and changing data. In E.<span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Fox &amp; C.L. Borgman, (Eds.), <em>Proceedings of the 1st ACM/IEEE-CS Joint Conference on Digital Libraries</em> (pp. 199-200). New York, NY: ACM Press.</li>
+	  
+    <li><a id="gru95" name="gru95"></a>Gruber, T.<span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (1995). Toward principles for the <span>design</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of ontologies used for knowledge sharing. <em>International Journal of Human-Computer Studies</em>, <strong>43</strong>(5-6), 907-928.</li>
+	  
+    <li><a id="gua98" name="gua98"></a>Guarino, N. (1998). Formal <span>ontology</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and information <span>systems</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> In N. Guarino, (Ed.), <em>Formal <span>ontology</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in information systems</em> (pp. 3-17). Amsterdam: IOS Press.</li>
+	  
+    <li><a id="hen01" name="hen01"></a>Hendler, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (2001, March-April). Agents and the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web. <em>IEEE Intelligent Systems</em>, <strong>16</strong>(2), 30-37.</li>
+	  
+    <li><a id="her97" name="her97"></a>Herrera, F. &amp; Herrera-Viedma, E. (1997). Aggregation operators for linguistic weighted information. <em>IEEE Transactions on Systems, Man and Cybernetics</em>, <strong>27</strong>(5), 646-656.</li>
+	  
+    <li><a id="her96" name="her96"></a>Herrera, F., Herrera-Viedma, E. &amp; Verdegay, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>L. (1996). Direct approach processes in group decision making using linguistic OWA operators. <em>Fuzzy Sets and Systems</em>, <strong>79</strong>(2), 175-190.</li>
+	  
+    <li><a id="her00" name="her00"></a>Herrera, F. &amp; Martinez, L. (2000). <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>2-tuple fuzzy linguistic <span>representation</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>model for computing with words. <em>IEEE Transactions on Fuzzy Systems</em>, <strong>8</strong>(6), 746-752.</li>
+	  
+    <li><a id="her01" name="her01"></a>Herrera-Viedma, E. (2001). Modelling the retrieval process of an information retrieval system using an ordinal fuzzy linguistic approach. <em>Journal of the American Society for Information Science</em>, <strong>52</strong>(6), 460-475.</li>
+	  
+    <li><a id="her07" name="her07"></a>Herrera-Viedma, E., Peis, E., Morales-del-Castillo, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>M. &amp; Anaya, K. (2007). Improvement of Web-based service information <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>using fuzzy linguistic techniques and <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web technologies. In <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Liu, D. Ruan &amp; G. Zhang, (Eds.), <em>E-Service intelligence: methodologies, technologies and applications</em> (pp. 647-666). Berlin; Heidelberg: Springer-Verlag.</li>
+	  
+    <li><a id="hua02" name="hua02"></a>Huang, Z., Chung, W., Ong, T. &amp; Chen, H. (2002). <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>graph-based recommender system for digital library. In W. Hersh &amp; G. Marchionini, (Eds.), <em>Proceedings of the 2nd ACM/IEEE-CS Joint Conference on Digital Libraries </em>(pp. 65-73). New York, NY: ACM Press.</li>
+	  
+    <li><a id="isa08" name="isa08"></a>Isaac, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Summers, E. (Eds.) (2008). <em><a href="http://www.webcitation.org/5dDPijeCO">SKOS simple knowledge organization system primer</a></em>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December, 2008 from http://www.w3.org/TR/skos-primer/ (Archived by WebCite&reg; at http://www.webcitation.org/5dDPijeCO).</li>
+	  
+    <li><a id="jac12" name="jac12"></a>Jaccard, P. (1912). The <span>distribution</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of flora in the Alpine zone. <em>The New Phytologist</em>, <strong>11</strong>(2), 37-50.</li>
+	  
+    <li><a id="jen98" name="jen98"></a>Jennings, N., Sycara, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Woolbridge, M. (1998). <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>roadmap of agent research and development. <em>Journal of Autonomous Agents and Multi-Agents Systems</em>, <strong>1</strong>(1), 7-38.</li>
+	  
+    <li><a id="kra08" name="kra08"></a>Kraft, D.B., Birkland, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Cramer, E.<span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (2008). N-Core: architecture and implementation of a flexible, collaborative digital library. In <span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Larsen, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Paepcke, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Borbinha &amp; M. Naarman (Eds.), <em>Proceedings of the 8th ACM/IEEE-CS Joint Conference on Digital Libraries</em> (pp. 313-322). New York, NY: ACM Press.</li>
+	  
+    <li><a id="kuf00" name="kuf00"></a>Kuflik, T. &amp; Shoval, P. (2000). Generation of user profiles for information filtering-research agenda. In E. Yannakoudakis, N.<span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Belkin, M. Leong &amp; P. Ingwersen, (Eds.), <em>Proceedings of the 23rd Annual International ACM SIGIR Conference on Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in Information Retrieval</em> (pp. 313-315). New York, NY: ACM Press.</li>
+	  
+    <li><a id="kuo95" name="kuo95"></a>Kuokka, D. &amp; Harada, L. (1995). Matchmaking for information agents. In M.N. Huhns and M.P. Singh (Eds.), <em>Readings in agents</em> (pp. 672-678). San Francisco, CA: Morgan Kaufmann.</li>
+	  
+    <li><a id="lev66" name="lev66"></a>Levenshtein, V.I. (1966). Binary <span>codes</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>capable of correcting deletions, insertions, and reversals. <em>Soviet <span>Physics</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Doklady</em>, <strong>10</strong>(8), 707-710.</li>
+	  
+    <li><a id="mae94" name="mae94"></a>Maes, P. (1994). Agents that reduce the work and information overload. <em>Communications of the ACM</em>, <strong>37</strong>(7), 30-40.</li>
+	  
+    <li><a id="mar00" name="mar00"></a>Marchionini, G. (2000). <em><a href="http://www.webcitation.org/5dDPt34bm">Research and development in digital libraries</a></em>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December, 2007 from http://ils.unc.edu/~march/digital_library_R_and_D.html (Archived by WebCite&reg; at http://www.webcitation.org/5dDPt34bm).</li>
+	  
+    <li><a id="mcg04" name="mcg04"></a>McGuinness, D.L. &amp; van Harmelen, F. (Eds.) (2004). <em><a href="http://www.webcitation.org/5dDQ5Fzyv">OWL Web <span>ontology</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>language overview</a></em>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December, 2008 from http://www.w3.org/TR/2004/REC-owl-features-20040210/ (Archived by WebCite&reg; at http://www.webcitation.org/5dDQ5Fzyv).</li>
+	  
+    <li><a id="not05" name="not05"></a>Nottingham, M. (2005). <a href="http://www.webcitation.org/5euedCsCl"><em>The Atom syndication format</em></a>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>23 February 2009 from http://atomenabled.org/developers/syndication/atom-format-spec.php (Archived by WebCite&reg; at http://www.webcitation.org/5euedCsCl).</li>
+	  
+    <li><a id="old05" name="old05"></a>Oldakowsky, <span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Byzer, C. (2005). <a href="http://www.webcitation.org/5dDQGZL3f"><em>SemMF: a <span>framework</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for calculating <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>similarity of objects <span>represented</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>as RDF graphs</em></a>. Poster presented at the 4th International <span>Semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Web Conference (ISWC2005). <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December, 2008 from http://www.corporate-semantic-web.de/pub/SemMF_ISWC2005.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5dDQGZL3f).</li>
+	  
+    <li><a id="pal09" name="pal09"></a>Palmer, C.L., Teffeau, L.C. &amp; Pirmann, C.M. (2009). <a href="http://www.oclc.org/programs/publications/reports/2009-02.pdf"><em>Scholarly information <span>practices</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in the online environment: themes from the literature and implications for library service development</em></a>. Dublin, OH: OCLC Research. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>26 February 2009 from http://www.oclc.org/programs/publications/reports/2009-02.pdf</li>
+
+    <li><a id="pop01" name="pop01"></a>Popescul, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>, Ungar, L.H., Pennock, D.M. &amp; Lawrence, S. (2001). Probabilistic models for unified-collaborative and content-based recommendation in sparse-data environments. In <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>S. Breese and D. Koller (Eds.), <em>Proceedings of the 17th Conference on Uncertainty in Artificial Intelligence (UAI)</em> (pp. 437-44). San Francisco, CA: Morgan Kaufmann.</li>
+	  
+    <li><a id="res97" name="res97"></a>Resnick, P. &amp; Varian, H.<span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (1997). Recommender <span>systems</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> <em>Special issue of Communications of the ACM</em>, <strong>40</strong>(3), 56-58.</li>
+	  
+    <li><a id="ror99" name="ror99"></a>Rorvig, M.(1999). Images of similarity: a <span>visual</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>exploration of optimal similarity metrics and scaling properties of TREC topic&#8211;document sets. <em>Journal of the American Society for Information Science</em>, <strong>50</strong>(8), 639&#8211;651.</li>
+	  
+    <li><a id="rss07" name="rss07"></a><em>RSS history</em>. (2007, April 14). <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 December 2008 from <a href="http://www.webcitation.org/5eudZ0QQv">http://cyber.law.harvard.edu/rss/rssVersionHistory.html</a>. 
+(Archived by WebCite&reg; at http://www.webcitation.org/5eudZ0QQv).</li>
+	  
+    <li><a id="sal71" name="sal71"></a>Salton, G. (1971). The Smart retrieval system&#8211;experiments. In Salton, G. (Ed.), <em>Automatic document processing</em>. New York, NY: Prentice&#8211;Hall.</li>
+	  
+    <li><a id="sal75" name="sal75"></a>Salton, G., Wong, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Yang, C.S. (1975). <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>vector space model for automatic indexing. <em>Communications of the Association for <span>Computing</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Machinery</em>, <strong>18</strong>(11), 613&#8211;620.</li>
+	  
+    <li><a id="sar00" name="sar00"></a>Sarwar, B., Karypis, G., Konstan, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Riedl, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (2000). Analysis of recommendation <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for e-commerce. In <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Jhingran, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>M. Mason &amp; D. Tygar, (Eds.), <em>Proceedings of ACM E-Commerce 2000 conference</em> (pp. 158-167). New York, NY: ACM Press.</li>
+	  
+    <li><a id="sch02" name="sch02"></a>Schein, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>I., Popescul, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Ungar, L.H. (2002). <span>Methods</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and metrics for cold-start recommendations. In K. Jarvelin, M. Beaulieu, <span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Baeza-Yates &amp; S.H. Myaeng, (Eds), <em>Proceedings of the 25th Annual International ACM SIGIR Conference on Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in Information Retrieval (SIGIR 2002) </em>(pp. 253-260). New York, NY: ACM Press.</li>
+	  
+    <li><a id="van79" name="van79"></a>van Rijsbergen C. <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (1979). <em>Information retrieval</em>. London: Butterworths.</li>
+	  
+    <li><a id="yag07" name="yag07"></a>Yager <span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>R. (2007). Centered OWA operators. <em>Soft Computing</em>, <strong>11</strong> (7), 632-639.</li>
+	  
+    <li><a id="yan99" name="yan99"></a>Yan, T.W. &amp; Garcia-Molina H. (1999). The SIFT information dissemination system. <em>ACM Transactions on Database Systems</em>, <strong>24</strong>(4), 529-565.</li>
+	  
+    <li><a id="zad75A" name="zad75A"></a>Zadeh, L.<span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (1975 A). The concept of a linguistic variable and its <span>applications</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to <span>approximate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>reasoning: 1. <em>Information Sciences</em>, <strong>8</strong>(3), 199-249.</li>
+	  
+    <li><a id="zad75B" name="zad75B"></a>Zadeh, L.<span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (1975 B). The concept of a linguistic variable and its <span>applications</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to <span>approximate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>reasoning: 2. <em>Information Sciences</em>, <strong>8</strong>(4), 301-357.</li>
+	  
+    <li><a id="zad75C" name="zad75C"></a>Zadeh, L.<span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (1975 C). The concept of a linguistic variable and its <span>applications</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to <span>approximate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>reasoning: 3. <em>Information Sciences</em>,<strong> 9</strong>(1), 43-80.</li>
+	  
+    <li><a id="zho02" name="zho02"></a>Zhong, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>, Zhu, H., Li, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Yu, Y. (2002). <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>conceptual graph matching for <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>search. In U. Priss, D. Corbett &amp; G. Angelova, (Eds.), <em>Proceedings of the 10th International Conference on <span>Conceptual</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Structures: Integration and Interfaces (ICCS-02)</em> (pp. 92-106). London: Springer-Verlag.</li>
+  </ul>
+  </fieldset>
+</form>
+
+<form action="#">
+  <fieldset>
+  <legend style="border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy; border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy; padding: 0.1ex 0.5ex; color: white; background-color: rgb(94, 150, 253); font-size: medium; font-weight: bold;">How 
+  to cite this paper</legend>
+  <div><br />
+    Morales-del-Castillo, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>M., Peis, E., Moreno, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>M. &amp; Herrera-Viedma, E.  (2009). "D-Fussion: a <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>selective disssemination of information service for the research <span>community</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in digital libraries" <em>Information Research</em>, <strong>14</strong>(2) paper 398. [Available from 9 May, 2009 at http://InformationR.net/ir/14-2/paper398.html]</div>
+  </fieldset>
+</form>
+<p>[Ignore what follows: the editor will complete these sections]</p>
+<table align="center" cellspacing="10">
+  <tbody>
+    <tr> 
+<td colspan="3" style="background-color: rgb(94, 150, 253); color: white; font-family: verdana; font-size: small; font-weight: bold;" align="center">Find 
+  other papers on this subject</td>
+    </tr>
+    <tr> 
+<td valign="top" align="center"> <form method="get" action="http://scholar.google.com/scholar" target="_blank">
+    <table bgcolor="#ffffff">
+<tbody>
+  <tr> 
+    <td valign="top" align="center" height="32" nowrap="nowrap"><input name="q" size="31" maxlength="255" value="&quot;selective dissemination of information&quot; &quot;semantic Web&quot; &quot;digital libraries&quot;" type="hidden" /> 
+<br /> <input name="sa" value="Scholar Search" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit" /> 
+<input name="num" value="100" type="hidden" /> </td>
+  </tr>
+</tbody>
+    </table>
+  </form></td>
+<td valign="top" align="center"> 
+  <!-- Search Google -->
+  <form method="get" action="http://www.google.com/custom" target="_blank">
+    <table bgcolor="#ffffff">
+<tbody>
+  <tr> 
+    <td valign="top" align="center" height="32" nowrap="nowrap"><input name="q" size="31" maxlength="255" value="&quot;selective dissemination of information&quot; &quot;semantic Web&quot; &quot;digital libraries&quot;" type="hidden" />
+<br /> <input name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" type="submit" /> 
+<input name="client" value="pub-5081678983212084" type="hidden" /> 
+<input name="forid" value="1" type="hidden" /> <input name="ie" value="ISO-8859-1" type="hidden" /> 
+<input name="oe" value="ISO-8859-1" type="hidden" /> <input name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" type="hidden" /> 
+<input name="hl" value="en" type="hidden" /> </td>
+  </tr>
+</tbody>
+    </table>
+  </form></td>
+<td valign="top" align="center"> <form method="get" action="http://www.live.com/" target="_blank">
+    <table bgcolor="#ffffff">
+<tbody>
+  <tr> 
+    <td valign="top" align="center" height="32" nowrap="nowrap"><input name="q" size="31" maxlength="255" value="&quot;selective dissemination of information&quot; &quot;semantic Web&quot; &quot;digital libraries&quot;" type="hidden" /> 
+<br /> <input name="sa" value="Windows Live" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit" /> 
+<input name="num" value="100" type="hidden" /> </td>
+  </tr>
+</tbody>
+    </table>
+  </form></td>
+    </tr>
+  </tbody>
+</table>
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+<div align="center">
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo" /> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a>
+</div><br />
+<hr style="color: rgb(94, 150, 253);" size="1" /><br />
+<h2><a id="app" name="app" />Appendix - ordinal and 2-tuple-based fuzzy linguistic modelling</h2>
+
+<p>Fuzzy linguistic modelling (<a href="#zad75A">Zadeh 1975a</a>, <a href="#zad75B">1975b</a>, <a href="#zad75C">1975c</a>) supplies a set of <span>approximate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>techniques appropriate to <span>deal</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>with <span>qualitative</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>aspects of problems. The ordinal linguistic approach is defined according to a <span>finite</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>set S of linguistic labels arranged on a total order scale and with odd cardinality (7 or 9 tags):</p>
+
+<p align="center"><img alt="formula1" src="p398form1.png" width="141" height="25" /></p>
+
+<p>The <span>central</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>has a value of &#8220;approximately 0.5&#8221; and the <span>rest</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the terms are arranged symmetrically around it. The <span>semantics</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of each linguistic <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is given by the ordered structure of the set of terms, con0ering that each linguistic <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the <span>pair</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(s<sub style="font-size: 70%;">i</sub>, s<sub style="font-size: 70%;">T-i</sub>) is equally informative. Each label <em>si</em> is assigned a fuzzy value defined in the interval [0,1], that is described by a <span>linear</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>trapezoidal property function <span>represented</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by the 4-tupla (a<sub style="font-size: 70%;">i</sub>, b<sub style="font-size: 70%;">i</sub>, &#945;<sub style="font-size: 70%;">i</sub>, &#946;<sub style="font-size: 70%;">i</sub>) (the two first <span>parameters</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>show the interval where the property value is 1.0; the <span>third</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and fourth <span>parameters</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>show the left and right <span>limits</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the distribution). Additionally, we need to define the following properties:</p>
+
+<ol>
+  <li>The set is ordered: <img src="p398prop1.png" alt="formulaa" width="97" height="16" /></li>
+  <li>Negation operator: <img src="p398prop2.png" alt="formulab" width="154" height="18" /></li>
+  <li>Maximization operator: <img src="p398max.png" alt="formulac" width="174" height="19" /></li>
+  <li>Minimization operator: <img src="p398min.png" alt="formulad" width="171" height="19" /></li>
+</ol>
+
+<p>Additionally, it is necessary to define aggregation operators, as the <span>Linguistic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Weighted Averaging (<a href="#her97">Herrera and Herrera-Viedma 1997</a>), capable of combining and operating with linguistic information.</p>
+
+<p>To develop our model we also use an applied approach to model information: the 2-tuple based fuzzy linguistic modelling (<a href="#her00">Herrera and Martínez 2000</a>). This approach allows the <span>reduction</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the information loss usually yielded in the ordinal fuzzy linguistic modelling (since information is <span>represented</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>using a continuous model <span>instead</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of a discrete one) but keeping its straightforward word processing.</p>
+  
+<p>  In this context, if we <span>obtain</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>a value &#946;&#8712;[0, <em>g</em>] and &#946; &#8713;{0, &#8230;, <em>g</em>} as a result of a symbolic aggregation of linguistic information (<a href="#her97">Herrera and Herrera-Viedma 1997</a>; <a href="#her96">Herrera <em>et al.</em> 1996</a>), then we can define an approximation function to <span>express</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the obtained outcome as a value of the set S.</p>
+  
+<p>The fundamental base of this approach is the concept of symbolic translation (<a href="#her00">Herrera and Mart&iacute;nez 2000</a>). Let &#946; the result of aggregating the   indexes of a linguistic terms set S. Given i = round (&#946;) and &#945; = &#946; &#8211;i, such that i &#8712;[0, g] and &#945; &#8712;[-0.5, 0.5), then a is what we call symbolic translation, i.e., the difference between the information expressed by &#946; and the nearest linguistic label s<sub style="font-size: 60%;">i</sub>&#8712;S</p>
+
+<p>Therefore, given a linguistic <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>set S = {s<sub style="font-size: 60%;">0</sub>, s<sub style="font-size: 60%;">1</sub>, s<sub style="font-size: 60%;">2</sub>, s<sub style="font-size: 60%;">3</sub>, s<sub style="font-size: 60%;">4</sub>, s<sub style="font-size: 60%;">5</sub>, s<sub style="font-size: 60%;">6</sub>} and &#946; = 3.3 as a result of a symbolic aggregation operation, we could <span>represent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>this value through the linguistic 2-tuple &#916;( &#946; ) = (s<sub style="font-size: 60%;">3</sub>, +0.3).</p>
+
+<hr style="color: rgb(94, 150, 253);" size="1" />
+<table align="center" cellpadding="10">
+  <tbody>
+    <tr>
+<td valign="top" align="center"><div>  <a href="http://www.digits.com/" target="_blank"><img src="http://counter.digits.com/?counter={1b31f52a-070a-9674-11cd-c634b0ef4bce}&amp;template=simple" alt="Hit Counter by Digits" border="0"  />
+  </a> 
+  </div></td>
+<td valign="top" align="center"><div> © the authors, 2009. <br />
+    Last updated: 7 May, 2009 </div></td>
+	
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var 0="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper398.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&0="+0;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?0='+0+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own <span>free</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;0=281971&amp;js=No&amp;" alt="online Website analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online Website analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr></tbody>
+</table>
+<hr size="3" style="color: #5E96FD;" />
+
+<table align="center"><tr><td><div class="button">
+
+
+<ul>
+	<li><a href="infres142.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+
+</div></td></tr></table>
+<hr size="3" style="color: #5E96FD;" />
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+
+</body>
+
+<!-- Mirrored from informationr.net/ir/14-2/paper398.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:14:18 GMT -->
+</html>

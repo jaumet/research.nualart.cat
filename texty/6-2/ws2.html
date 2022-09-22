@@ -1,0 +1,279 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/6-2/ws2.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:16 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css" type="text/css">
+<title>A model of cognitive load for information retrieval: implications for user relevance feedback interaction</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="user relevance, feedback, query modification, relevance feedback, Web environment, cognitive load, task, model">
+<meta name="description" content="Preliminary experimentation demonstrates that although a system that allows for context specific spontaneity is likely to improve the acquisition of user relevance feedback, this is by no means a solution.  We believe that the problems associated with a lack of willingness to modify queries or to provide relevance feedback within the Web environment, are indicative of a high state of cognitive load.  A number of task and cognitive variables exist and need to be identified before a model of cognitive load for IR can be developed.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="A model of cognitive load for IR: implications for user relevance feedback interaction">
+<meta name="DC.Creator" content="Jonathan Back, Charles Oppenheim">
+<meta name="DC.Subject" content="user relevance, feedback, query modification, relevance feedback, Web environment, cognitive load, task, model">
+<meta name="DC.Description" content="Preliminary experimentation demonstrates that although a system that allows for context specific spontaneity is likely to improve the acquisition of user relevance feedback, this is by no means a solution.  We believe that the problems associated with a lack of willingness to modify queries or to provide relevance feedback within the Web environment, are indicative of a high state of cognitive load.  A number of task and cognitive variables exist and need to be identified before a model of cognitive load for IR can be developed.">
+<meta name="DC.Publisher" content="T.D. Wilson, Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 6 No. 2, January 2001</h4></td></tr>
+  <tr> 
+    <td><a href="infres62.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+      
+      <h1>A model of cognitive load for IR: implications for user relevance feedback interaction</font></h1>
+
+      <h4 align=center><a href="mailto:j.back@lboro.ac.uk">Jonathan Back</a> and <a href="mailto:c.oppenheim@lboro.ac.uk">Charles Oppenheim</a><br> Department of Information Science<br>Loughborough University, UK</h4>
+	   
+	   <div align=center><b>Abstract</b></div>
+
+<blockquote>
+Preliminary experimentation demonstrates that although a system that allows
+for context specific spontaneity is likely to improve the acquisition of
+user relevance feedback, this is by no means a solution.  We believe that
+the problems associated with a lack of willingness to modify queries or to
+provide relevance feedback within the Web environment, are indicative of a
+high state of cognitive load.  A number of task and cognitive variables
+exist and need to be identified before a model of cognitive load for IR can
+be developed.
+</blockquote>
+
+<br>
+
+<h2>Introduction</h2>
+
+<p>Web search engine queries, on average, comprise less than three search terms. Comprehensive query formulation is a rarity.  Query modification is not a typical occurrence.  <a href="#refs">Jansen, Spink, and Saracevic</a> (2000) found that a considerable majority of Excite search engine users (67%) did not submit more than one query, and only 5% of users utilized User Relevance Feedback (URF).  A number of search engines have attempted to incorporate URF to enable query modification.  URF is an interactive process in which the users are encouraged to utilise their domain knowledge to allow the generation of more comprehensive queries.  The effectiveness of an information retrieval (IR) system can be measured in terms of how long it takes for a user to find sufficient relevant information, or discover that no relevant information exists.  A typical Web query can retrieve hundreds of thousands of results.  Document relevancy ranking is therefore important in minimising the time spent by an individual searching. Within the laboratory environment, experimentation demonstrates that URF can be used to provide improved document rankings <a href="#refs">(Harman, 1992)</a>.</p>
+
+<p>However, implementation of an on-line URF mechanism is not straightforward, as every interaction with a document changes a user’s state of knowledge.  The view of relevance might, as a consequence also change; URF should reflect the changing needs of a user and be captured within the context of a user’s relevancy determination process.  Search engines do not support browsing behaviour.  Viewing a document, navigating back to the search engine page and then submitting a dichotomous relevance judgement is clearly not an ideal method of obtaining URF.  It is not surprising, therefore, that very few users are prepared to do this.  Users must be able to revise their query and relevance judgements to reflect their fluctuating understanding while they browse documents./P>
+
+<h2>Preliminary findings</h2>
+
+<p>Ranking error is the degree to which the actual document rankings, performed by a Web search engine, deviate from the optimal rankings, identified by experiment participants.  Preliminary experimentation performed by <a href="#refs">Back, Oppenheim, and Summers</a> (2000) utilised URF for automatic query expansion.</p>
+
+<p>The figure below shows the extent ranking error can be minimised by the use of different URF capturing techniques.</p>
+
+<div align="CENTER"><img src="ws2fig1.gif"></div>
+
+<p>URF (a):  The ‘check-box’ approach to obtaining relevance judgements.  This approach is the most commonly adopted and is also the least successful.</p>
+
+<div align="CENTER"><img src="ws2fig2.gif"></div>
+
+<p>URF (b):  Unsurprisingly performs better than URF (a) because the relevancy associated with a document has been specified to a greater degree.  Outside the laboratory environment, specifying the degree of relevancy can be complicated.  A user would be required to spend a considerable amount of time cross-evaluating documents.</p>
+
+<div align="CENTER"><img src="ws2fig3.gif"></div>
+
+<p>URF (c):  A contextually specific and spontaneous method of obtaining relevance judgements. While users browse documents, they are asked to mark what they consider to be the most relevant passages using a highlighting tool.  This was the most successful approach.</p>
+
+<div align="CENTER"><img src="ws2fig4.gif"></div>
+
+ <h2>Problems with on-line URF implementation</h2>
+
+<p>Although a system that allows for context specific spontaneity is likely to improve the acquisition of URF, this is by no means a solution.  The majority of Web search engines favour automated feedback techniques.  Those that have implemented URF have found very little evidence of improved search effectiveness.  Many researchers and practitioners suggest that information visualisation that incorporates URF is the future for IR on the Web.  Information visualisation techniques aim to limit the number of results returned to a user by clustering.  This can accelerate the user’s relevancy determination process considerably.  However, it can be argued that this activity does not support the cognitive model of a user because domain knowledge is only gathered at an abstract level.  The user may as a consequence discard relevant clusters during the problem definition stage.  Actual domain knowledge is essential in order to make an accurate relevancy judgement.  Furthermore, the value associated with irrelevant or partially relevant information when acquiring domain knowledge is not appreciated by visualisation techniques.</p>
+
+<h2>Cognitive load</h2>
+
+
+<p>The term &quot;cognitive load&quot; has been used loosely within IR research, mostly in reference to Human Computer Interaction (HCI) issues.  Although the term has been utilized frequently, the only IR study that has attempted to define the concept was performed by <a href="#refs">Hu, Ma, and Chau</a> (1999).  They examined the effectiveness of designs (graphical or list-based) that best supported the communication of an object’s relevance.  Cognitive load was used as a measure of information processing effort a user must expend to take notice of the visual stimuli contained in an interface and comprehend its significance.  It was assumed that users would prefer an interface design that requires a relatively low cognitive load and at the same time, can result in high user satisfaction.  A self-reporting method was used to obtain individual users’ assessments of the cognitive load associated with a particular interface.  The focus of this study was interface design, so the use of the term &quot;cognitive load&quot; was valid from a HCI viewpoint.  However, as we will attempt to demonstrate, the concept of cognitive load during IR can be extended far beyond interface design.</p>
+
+<p>In IR, the concept of cognitive load rarely extends beyond the ideas presented by <a href="#refs">Miller</a> (1956).  In Miller’s famous paper  &quot;The magical number seven plus or minus two&quot;, a human’s capacity for processing information was explored.  It was concluded that short-term memory (working memory) has a limited retention.  The study by Hu, Ma, and Chau is typical of much research in IR that advocates attempts to minimise cognitive load during interface design by recognising the limitations of working memory.</p>
+
+<p>Some of the more insightful studies in IR have shown that recognising the limitations of working memory may not be the only method of minimising cognitive load.  <a href="#refs">Beaulieu</a> (1997) suggested that there is a need to consider cognitive load not just in terms of the number and presentation of options, but more importantly to take account of the integration and interaction between them.  Beaulieu, however, was not the first, as <a href="#refs">Chang and Rice</a> (1993) had proposed that interactivity could reduce cognitive load.  Although these studies point to ‘interaction’ as being an important factor, they do not explain why or how.</p>
+
+<p>Many IR researchers use the term &quot;cognitive load&quot; with a limited understanding of Cognitive Load Theory.  This theory has been developed by educational psychologists and is documented by <a href="#refs">Sweller</a> (1988; 1994).  Learning structures (schemas) are used during problem solving.  IR can be viewed as a problem solving process <a href="#refs">(Kuhlthau, Spink, and Cool, 1992)</a>.  The psychologist <a href="#refs">Cooper</a> (1998) explains that Cognitive Load Theory can be used to describe learning structures.  Intrinsic cognitive load is linked to task difficulty, while extraneous cognitive load is linked to task presentation.  If intrinsic cognitive load is high, and extraneous cognitive load is also high, then problem solving may fail to occur.  When intrinsic load is low, then sufficient mental resources may remain to enable problem solving from any type of task presentation, even if a high level of extraneous cognitive load is imposed.  Modifying the task presentation to a lower level of extraneous cognitive load will facilitate problem solving if the resulting total cognitive load falls to a level within the bounds of mental resources.</p>
+
+<p>Clearly, there is more to the concept of cognitive load than careful interface design. In IR it would be tempting to associate intrinsic cognitive load (task difficulty) with query difficulty, and extraneous cognitive load (task presentation) with interactivity.  However, this would be too simplistic. A greater number of task and cognitive variables exist and need to be identified before cognitive load in IR can be defined.</p>
+
+<blockquote>  
+We believe that the problems associated with a lack of willingness to modify queries or to provide RF within the Web environment, are indicative of a high state of cognitive load.  <b>Cognitive load can be measured by the difficulty associated with providing a relevancy judgement.</b> If the cognitive load is high, then providing the system with URF is unlikely. 
+</blockquote>
+
+<h2>Theoretical model</a></h2>
+
+<p><a href="#refs">Kuhlthau</a> (1993) explained that uncertainty is a cognitive state which commonly causes affective symptoms of anxiety and lack of confidence.  Uncertainty due to a lack of understanding, a gap in meaning, or a limited construct, initiates the process of information seeking.  She suggested that six corollaries exist.  We have simplified and re-interpreted these corollaries as follows.</p>
+
+
+<ul>
+<b><i>Process corollary</i></b>
+<li>Understanding information results in a shift from uncertainty to clarity.</li>
+
+<b><i><br>Formulation corollary</i></b>
+<li>Individual interpretations of information may result in uncertainty or clarity.</li>
+
+<b><i><br>Redundancy corollary</i></b>
+<li>Balance of redundant (known) and unique (unknown) information is critical.  Too much either way results in uncertainty.</li>
+
+<b><i><br>Mood corollary</i></b>
+<li>An invitational mood is more appropriate for the early stages of the search (definition) and an indicative mood is more appropriate for the later stages (resolution).  Uncertainty may arise if this is not the case.</li>
+
+<b><i><br>Prediction corollary</i></b>
+<li>If expectations are not met then uncertainty may increase.</li>
+
+<b><i><br>Interest corollary</i></b>
+<li>Interest may lead to a reduction of uncertainty due to intellectual engagement.</li>
+</ul>
+
+<p>Kuhlthau concluded by suggesting that uncertainty can result in a user being less prepared to interact with a system.  We believe that uncertainty can be considered as one of the components that contribute to cognitive load.</p>
+
+<p><a href="#refs">Wilson et al.</a> (2000) showed that it is possible to measure the level of uncertainty  experiment participants have at each stage of the problem-solving process in which they are involved.  Wilson et al. speculated that two different ideas of uncertainty exist. Affective uncertainty is associated with affective dimensions such as pessimism/optimism.  Cognitive state uncertainty is associated with more rational judgements about the problem stages.</p>
+
+<blockquote>Complex data collection during an empirical investigation of cognitive load will enable a data-driven model to be derived instead of a purely theoretical one.  A wider range of task and cognitive data will be collected, enabling new components of cognitive load to be uncovered.  <b><i>Cognitive load is not, as currently assumed, based on only the following three components:</b></i></p>
+
+<p><b>Domain knowledge:</b> User’s knowledge of the information need under investigation.  Cognitive load reduces as more domain knowledge is captured.</p>
+
+<p><b>Cognitive state uncertainty:</b> User’s overall level of doubt associated with the search process.  Cognitive load reduces as the user becomes more confident that their information need can be addressed.</p>
+
+<p><b>Retrieval performance:</b> Cognitive load increases as the number of potentially relevant documents identified by the IR system increase.</p>
+</blockquote>  
+
+<p>The figure below outlines our novel theoretical model of cognitive load for IR during the search process.  This model may provide an insight into why different types of URF are required during the search process, and why users are sometimes unprepared to provide a system with URF.</p>
+
+<div align="CENTER"><img src="ws2fig5.gif"></div>
+
+<p align="CENTER"><b><i>Key to URF types:</b></i></p>
+
+<div align="CENTER"><img src="ws2fig6.gif"></div>
+
+<p><b>All URF techniques:</b></p>
+
+<p>Usability is limited by average load.  URF techniques that place too much cognitive load on the user are unlikely to be utilised.</p>
+
+<p><b>Term-suggestion URF:</b></p>
+
+<p>Located above <i>the retrieval performance line</i> indicating that it is a recall tactic.  Useful when domain knowledge is limited and prevents the user from generating their own terms for query expansion.</p>
+
+<p><b>Judgement URF:</b></p>
+
+<p>Located above <i>the retrieval performance line</i> indicating that it is a recall tactic.  Could be used as a precision tactic but negative relevance judgements are too discriminating within the Web search engine exact match environment.  Judgement URF is useful when domain knowledge is sufficient to make accurate document relevancy judgements.</p>
+
+<p><b>Visualisation URF:</b></p>
+
+<p>Located below <i>the retrieval performance line</i> indicating that it is a precision tactic.  Useful when domain knowledge is sufficient to make accurate cluster relevancy judgements.  Unlikely to be used when the <i>cognitive state uncertainty line</i> approaches <i>the domain knowledge line</i> because the user’s information need has possibly been sufficiently addressed.</p>
+
+<h2>Research status</h2>
+
+<p>Now that a theoretical model has been proposed, it needs to be tested.  The primary objective of our experimental methodology is to justify the proposed components of cognitive load and to identify new ones.  Collection of task and cognitive data will be extensive, enabling a data-driven model to be established.</p>
+
+<p>The first stage of experimentation will evaluate a range of URF techniques within the Web environment.  Simulated work tasks will be assigned to experiment participants.  Queries submitted to the system will be pre-defined; participants will only be able to modify the query using URF.   Pre-defined queries will be short, representative of a typical Web search engine query.  Participants who have had extensive IR experience will be able to select the URF technique that they consider to be the most appropriate for a particular problem stage of the search process.  Participants who have had limited IR experience will be restricted to utilising a specific URF technique.  This first stage of experimentation will test the hypothesis that the effectiveness of a specific URF technique is dependent on user domain knowledge, user cognitive state uncertainty, and the problem stage, i.e. URF effectiveness is limited by cognitive load.</p>
+
+<p>The second stage of experimentation will be an evaluation of prototype software that we will develop.  The software will attempt to predict the most appropriate URF technique at a particular problem stage.  This prediction will be based upon both the system state and the user state.  The acquisition of cognitive variables will be required to enable a prediction.  The difficulty associated with acquiring these variables without increasing cognitive load will be investigated.  This second stage of experimentation will test the hypothesis that the acquisition and utility of URF needs to be optimised by considering cognitive load, thereby allowing significant IR performance improvements.</p>
+
+<hr color=#ff00ff size=1>
+
+<h2><a name=refs></a>References</h2>
+
+<ul>
+
+<li>Back, Oppenheim, &amp; Summers.  (2000).   Relevance statistics: how important is spontaneous relevance feedback during Web search engine usage?  Paper submitted to the <i>Journal of the American Society for Information Science</i>.
+
+<li>Beaulieu, M.  (1997).  Experiments on interfaces to support query expansion. <i>Journal of Documentation, 53</i>, (1), 8-19.
+
+<li>Chang, S. &amp; Rice, R.E.  (1993).  Browsing a multidimensional framework.  <i>Annual Review of Information Science &amp; Technology, 28</i>, 619-627.
+
+<li>Cooper, G.  (1998, December).  Research into cognitive load theory and instructional design at UNSW.  University of New South Wales, Sydney, Australia.  http://www.arts.unsw.edu.au/eductaion/CLT_NET_Aug_97.html
+
+<li>Harman, D. (1992). Relevance feedback and other query modification techniques. In:<i> </i>Frakes, W. B. and Baeza-Yates, R. (Ed.). <i>Information Retrieval Data Structures and Algorithms</i>.  (pp. 241-263). Englewood Cliffs, New Jersey: Prentice Hall.
+
+<li>Hu, P.J.H., Ma, P.C., &amp; Chau, P.Y.K.  (1999).  Evaluation of user interface designs for information retrieval systems: a computer-based experiment.  <i>Decision Support Systems, 27</i>, (1-2), 125-143.
+
+<li>Jansen, B.J., Spink, A., &amp; Saracevic, T.  (2000).  Real life, real users, and real needs: a study and analysis of user queries on the Web.  <i>Information Processing and Management, 36</i>, 207-227.
+
+<li>Kuhlthau, C.  (1993).  A principle of uncertainty for information seeking.  <i>Journal of Documentation, 49</i>, 4, 339-355.
+
+<li>Kuhlthau, C., Spink, A., &amp; Cool, C.  (1992).  Exploration into stages in the information search process in online information retrieval.  <i>Proceedings of the ASIS annual meeting, 29</i>, 67-71.
+
+<li>Miller, G.A.  (1956).  The magical number seven plus or minus two: Some limits on our capacity for processing information.  <i>Psychological Review, 63</i>, 81-97.
+
+<li>Sweller, J.  (1988).  Cognitive load during problem solving: Effects on learning. <i>Cognitive Science, 12</i>, 257-285.
+
+<li>Sweller, J.  (1994).  Cognitive load theory, learning difficulty and instructional design.  <i>Learning and Instruction, 4</i>, 295-312.
+
+<li>Wilson, T.D., Ford, N.J., Ellis, D., Foster, A.E., &amp; Spink, A.  (2000, August).  Uncertainty and its correlates.  Paper presented at <i>Information Seeking in Context, 2000</i>, Gothenburg, Sweden.
+
+</ul>
+
+<hr color=#85fca9 size=4>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+
+<p style="text-align : left; color : black;"> Back, Jonathan and Oppenheim, Charles (2001) &nbsp; &quot;A model of cognitive load for IR: implications for user relevance feedback interaction&quot;. &nbsp;Information Research, <strong>6</strong>(2)  Available at: http://InformationR.net/ir/6-2/ws2.html</p>
+
+<p style="text-align : center">&copy; the author, 2001.  Updated: 5th January 2001</div>
+
+<hr color=#85fca9 size=4>
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres62.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/ws2" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>		
+
+<hr color=#85fca9 size=4>
+
+
+
+     </td></tr></tbody></table></body>
+<!-- Mirrored from informationr.net/ir/6-2/ws2.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:16 GMT -->
+</html>

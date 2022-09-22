@@ -1,0 +1,462 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/2-4/paper22.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:29 GMT -->
+<head>
+<title>Word variant identification in Old French</title>
+<link rel="stylesheet" href="../IRstyle.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="Generator" content="<span>Microsoft</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>Word 97">
+  <meta name="keywords" content="historical texts, machine-readable, spelling, language, standardisation, <span>medieval</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> vernacular, writers, alternative spellings, variant forms, searching, <span>computer</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>methods, variant historical spellings">
+  <meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> content="Increasing numbers of historical texts are available in machine-readable form, which retain the original spelling, which can be very different from the modern-day equivalents due to the natural evolution of a language, and because the concept of standardisation in spelling is comparatively <span>modern</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  Among <span>medieval</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>vernacular writers, the same word could be spelled in different ways and the same author (or scribe) might even use several alternative spellings in the same passage. Thus, we do not know,a priori, how many variant forms of a particular word there are in such texts, let alone what these variants might be.  Searching on the <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>equivalent, or even the commonest historical variant, of a particular word may thus fail to retrieve an appreciable number of occurrences unless the searcher already has an <span>extensive</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>knowledge of the language of the <span>documents</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>   Moreover, even specialist scholars may be unaware of some idiosyncratic variants.  Here, we <span>con0er</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the use of <span>computer</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>methods to retrieve variant historical spellings.">
+  <meta name="VW96.objecttype" content="Document">
+  <meta name="ROBOTS" content="ALL">
+  <meta name="DC.Title" content="Word Variant Identification in Old French">
+   <meta name="DC.Creator" content="Peter Willett">
+  <meta name="DC.Subject" content="historical texts, machine-readable, spelling, language, standardisation, <span>medieval</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> vernacular, writers, alternative spellings, variant forms, searching, <span>computer</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>methods, variant historical spellings">
+  <meta name="DC.Description" content="Increasing numbers of historical texts are available in machine-readable form, which retain the original spelling, which can be very different from the modern-day equivalents due to the natural evolution of a language, and because the concept of standardisation in spelling is comparatively <span>modern</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  Among <span>medieval</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>vernacular writers, the same word could be spelled in different ways and the same author (or scribe) might even use several alternative spellings in the same passage. Thus, we do not know,a priori, how many variant forms of a particular word there are in such texts, let alone what these variants might be.  Searching on the <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>equivalent, or even the commonest historical variant, of a particular word may thus fail to retrieve an appreciable number of occurrences unless the searcher already has an <span>extensive</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>knowledge of the language of the <span>documents</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>   Moreover, even specialist scholars may be unaware of some idiosyncratic variants.  Here, we <span>con0er</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the use of <span>computer</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>methods to retrieve variant historical spellings.">
+  <meta name="DC.Publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>T.D. Wilson">
+  <meta name="DC.Coverage.PlaceName" content="Global">
+  <title>Word Variant Identification in Old French</title>
+  
+  <link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+  <script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 2  No. 4, April  1997</h4></td></tr>
+  <tr> 
+    <td><a href="infres24.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+	
+	<h1>Word variant identification in Old French</h1>
+<h4 align="center">Alan <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> O'Rourke, Alexander M. Robertson,
+<a href="mailto:p.willett@shef.ac.uk">Peter Willett</a><br>
+Department of Information Studies, <br>
+University of Sheffield, Sheffield S10 2TN</h4>
+
+<h4 align="center"><a href="mailto:p.eley@shef.ac.uk">Penny Eley</a> and Penny Simons<br>
+Department of French<br>
+University of Sheffield, Sheffield S10 2TN</h4>
+
+
+<h2>Introduction</h2>
+<p>
+There are increasing numbers of historical texts available in
+machine-readable form.  These texts retain the original spelling,
+which can be very different from the modern-day equivalents due
+to the natural evolution of a language, and to the fact that the
+concept of standardisation in spelling is a comparatively modern
+one.  Among <span>medieval</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>vernacular writers, the same word could be
+spelled in different ways and the same author (or scribe) might
+even use several alternative spellings in the same passage.  For
+example, the French text used in our experiments (described below)
+variously gives the name of the chief villain as <i>Hoiaus, Hoiax,
+Hoiel,</i> and <i>Oiaus.</i>  Thus, we do not know, <i>a priori</i>,
+how many variant forms of a particular word there are in such
+texts, let alone what these variants might be.  Searching on the
+<span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>equivalent, or even the commonest historical variant, of
+a particular word may thus fail to retrieve an appreciable number
+of occurrences unless the searcher already has an <span>extensive</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>knowledge
+of the language of the <span>documents</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>   Moreover, even specialist
+scholars may be unaware of some idiosyncratic variants.  Here,
+we <span>con0er</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the use of <span>computer</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>methods to retrieve variant historical
+spellings.</p>
+
+<p>
+Staff in the Department of French have been editing twelfth-century
+French narrative poems and analysing the word-variants in them.
+ Traditionally, this has involved teams of researchers recording
+and <span>classifying</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>each word occurrence, but this has now become
+impractical for texts of non-trivial size.  Previous work in the
+Department of Information Studies has <span>investigated</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the searching
+of historical <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>text using <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>developed for detecting
+spelling errors (<a href="#rob">Robertson &amp; Willett, 1993</a>).  In this paper
+we summarise the results of applying these <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to medieval
+French literature; full <span>details</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of the experiments are provided
+by <a href="#oro">O'Rourke (1995)</a>.</p>
+
+<h2>The Text</h2>
+<p>
+<i>Ille et Galeron</i> is a narrative poem telling of heroism
+and romance, composed by Gautier d'Arras in the <span>late</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>twelfth century
+and consisting of 6592 <span>lines</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of text arranged in octosyllabic
+rhyming couplets.  The two extant manuscripts are from the end
+of the thirteenth century: one (P) is in Paris and the other (W)
+in Nottingham.  The two manuscripts preserve rather different
+versions of the text, and it seems possible that Gautier himself
+composed two versions of the poem at different times for slightly
+different audiences.  Our work uses the P text, together with
+an <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>translation.  There has been no attempt to combine
+the manuscripts into a consensus view, but as some <span>lines</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>are missing
+from P, a small number of <span>lines</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>from W have been incorporated
+to fill obvious gaps.  Modern punctuation has been <span>added</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>as the
+original contains none.</p>
+
+<p>
+The poem is written in Old French, and a study of the rhyme-words
+suggests that Gautier himself <span>wrote</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in the literary form of the
+language which was gaining currency in his <span>day</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> and which was
+becoming more standardised than the spoken word.  However, the
+thirteenth-century <span>scribe</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of P seems to have been of Picard <span>origin</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>
+and <span>introduced</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>a <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>number of dialectal variant forms
+into the text that he copied.</p>
+
+<h2>Spelling Correction Methods</h2>
+
+<p>
+The methods that we use for identifying word variants in historical
+texts are based on methods that have been developed for automatic
+spelling correction.  Thus, in a word processing system, a mis-spelt
+word is searched against a <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of correct spellings to
+find the most similar, with the expectation that this will be
+the correct spelling.  In the present context, we <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>a modern
+word against a <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of historical forms, with the most similar
+being possible variants of the query word that should be con0ered
+for inclusion in the query.</p>
+
+<p>
+There are three <span>main</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>sources of spelling errors in <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>texts:
+the input device, the text content, and the spelling skills of
+the author.  Some 80% of errors are predictable and can be ascribed
+to four simple processes:</p>
+
+<ul>
+<li>Insertion of a single character, e.g., <i>accounnt</i> for
+<i>account</i>;
+<li>Omission of a single character, e.g., <i>acount</i> for <i>account</i>;
+<li>Substitution of one correct character by one incorrect character,
+e.g., <i>accoant</i> for <i>account</i>;
+<li>Transposition of two adjacent characters, e.g., <i>accuont</i>
+for <i>account</i>
+</ul>
+
+<p>
+The first two are by far the commonest, though combinations and
+repetitions of the four are also possible (<a href="#dam">Damerau, 1964</a>).  First
+letters are resistant to errors, while vowels and the letters
+<i>w, y, h</i>, suffer a disproportionate number of corruptions.
+ For instance, the vowels constitute less than a quarter of the
+alphabet but account for three-fifths of spelling errors.  <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>misspelling
+<span>tends</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to be shorter than the correct form.  The longer a word
+is,  the more <span>variation</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>there is in the <span>length</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of its erroneous
+variants (<a href="#yan">Yannakoudakis &amp; Fawthrop, 1983</a>).  The <span>third</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>character
+seems especially at risk and the likelihood of a <span>letter</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>being
+involved in an <span>error</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>is <span>proportional</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to its frequency in the text
+(<a href="#pol2">Pollock &amp; Zamora, 1983</a>).</p>
+
+<p>
+Spelling correction may be effected by either absolute or relative
+methods (<a href="#pol1">Pollock, 1982</a>).  The former <span>depend</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>on a knowledge of
+previous errors.  It is <span>limited</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>because such errors are unlikely
+to recur in short pieces of text, and it cannot be applied to
+<span>medieval</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><span>documents</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> because these contain a number of equally
+<span>valid</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>variants,  rather than one &quot;correct&quot; and several
+&quot;wrong&quot; forms, as <span>occurs</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>with <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>texts.  The relative
+method looks for &quot;similarity&quot; between words,  and regards
+them as strings of characters.  There are three types of similarity
+(<a href="#fau">Faulk, 1964</a>):</p>
+
+<ul>
+<li>Material:  the extent to which the strings contain the same
+characters;
+<li>Ordinal:  whether the matched characters <span>occur</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in the same
+order in the two strings;
+<li>Positional:  whether the matched elements <span>occur</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in the same
+<span>positions</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in the two strings.
+</ul>
+
+<p>
+Of these, ordinal similarity seems most appropriate for the purposes
+of variant identification, and all of the methods we have tested
+are of this type.  </p>
+
+<p>
+It should be noted that concepts of  &quot;right&quot; and  &quot;wrong&quot;
+spelling are not applicable to searching historical databases,
+as all variants were equally acceptable at the time of <span>writing</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>
+ <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>further problem is that, ideally, the historical text may need
+to be read as phrases rather than single words, as some of the
+variant old-form spellings may be <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>words in their own right
+but with meanings that would not fit their context; however, the
+word-based methods con0ered here are not appropriate for this
+level of sophistication.</p>
+
+<p>
+<span>Methods</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of spelling correction that have been applied to historical
+text are: reverse <span>error</span>, <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> phonetic and non-phonetic coding, <i>n</i>-grams,
+and dynamic <span>programming</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  All of these methods, <span>details</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of which
+are given by <a href="#rob">Robertson and Willett</a> (1993), <span>regard</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>words as strings
+of twenty-seven characters,  the twenty-six letters of the modern
+alphabet and a space, but cannot take account of their meanings
+in context.  The previous work con0ered only <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>from the
+sixteenth to the eighteenth <span>centuries</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>but the methods should be
+text independent, so that they can be applied to a wide variety
+of texts, topics, historical periods and languages</p>
+<h2>
+Methodology</h2>
+
+<h3>Preparation of the text</h3>
+<p>
+We stripped out all of the words from the poem, sorted the resulting
+file and removed all of the <span>duplicates</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to form a <i>master <span>dictionary</span>. <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>
+</i> We parsed the text, <span>sentence</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>by <span>sentence</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> splitting the screen
+to display the French text and <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>translation simultaneously
+in order to construct a triple <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of each word in the
+Medieval text (the <i>old-form</i>), its <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>French equivalent
+(the <i>modern-form</i>) and an <span>approximate</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>English meaning.
+ Together these three sets of words comprise the <span>test</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>collection
+that was used for our experiments.  In selecting <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>French
+words, we <span>attempted</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to preserve the morphology of the old-form
+word.  This meant using some words which are listed in a modern
+French <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>as &quot;archaic.&quot;  Such words,  though
+they may still be used in print and poetically, are unlikely to
+be heard in <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>daily speech or to be first choices in end-user
+searching.  For instance, we used <i>affoler </i>as the modern
+equivalent of <i>afoler</i>, but a <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>French speaker would
+be likely to start searching on <i>tuer</i>, much as an English
+searcher would start with <i>to kill </i>rather than  <i>to slay.</i>
+ As the work is written as rhyming couplets, the endings of rhyme
+words may be subject to <span>variation</span>, <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> and syncopated forms may be
+used to make the <span>lines</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>scan.</p>
+
+<p>
+Some <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>French equivalents could be identified from a high-quality
+contemporary <span>dictionary</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> while more <span>obscure</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>words were found in
+Godefroy's <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of ninth to fifteenth century French.  
+This provides equivalent meanings in French contemporary with
+its publication (1884-1902).  There is unfortunately room for
+<span>error</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in the second translation of  these terms into <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>because
+the meaning of the &quot;modern&quot; French word may also have
+changed in the last century.  Finding appropriate tenses and moods
+of irregular verbs <span>proved</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>especially difficult, as in many places
+the present tense appears to be used for completed events to increase
+the sense of drama and <span>action</span>. <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>hard core of unmatchable words
+was still outstanding at the end of the project.  From the triple
+<span>dictionary</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> a <i>postings dictionary</i> was prepared.  This consists
+of pairs of words with the modern-form first, as it was used as
+the <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><span>term</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> <span>followed</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>by the old-form as found in the text.
+ There is one <span>pair</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for each old-form variant.</p>
+
+
+
+<h3>Matching methods</h3>
+<p>
+In our experiments. we focused on the methods which had yielded
+the best results in the work using the historical <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>texts
+(<a href="#rob">Robertson &amp; Willett, 1993</a>).  These are <i>n-gram matching,</i>
+and <i>longest common subsequences</i> (LCS).</p>
+
+<h4>N-grams</h4>
+
+<p>
+An <i>n</i>-gram is a string of <i>n </i>adjacent characters derived
+from a word at least <i>n</i> characters long.  <i>Digrams </i>have
+a <span>length</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of two, and <i>trigrams</i> have a <span>length</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of three. 
+One padding space is <span>added</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>at each end of the word in the case
+of digrams, and three in the case of trigrams.  <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>word of <i>n</i>
+characters will have <i>n</i>+1 digrams, and <i>n</i>+2 trigrams.
+ For example, the word TORNEROIT is processed to generate the
+digrams</p>
+<p>
+<center>*T TO OR RN NE ER RO OI IT T*</center>
+<p>
+and the trigrams 
+<p>
+<center>**T *TO TOR ORN RNE NER ERO ROI OIT IT* T**</center>
+<p>
+where &quot;*&quot; denotes a leading or trailing space.  The
+modern-form of a query word is broken up into its constituent
+<i>n</i>-grams; the old-form of each of the words in the master
+<span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>is broken up in the same way, and the <span>degree</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of match
+is the number of <i>n</i>-grams in common, normalised for length
+by the <i>Dice coefficient</i>.  If <i>X</i> is the number of
+<i>n</i>-grams in the <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>old-form, <i>Y</i> is the number
+of  <i>n</i>-grams in the query <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>form, and <i>C</i> is the
+number of <i>n</i>-grams in common, then the Dice coefficient
+is defined to be</p>
+
+<div align="center"><img src="Image51.gif" width=46 height=41></div>
+
+Values of the coefficient <span>range</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>from <span>zero</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> where there are no
+<i>n</i>-grams at all in common, to unity, where the sets of <i>n</i>-grams
+are <span>identical</span>. <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  The putative matching old-forms are then sorted
+in descending order according their Dice coefficient <span>values</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span></p>
+
+<h4>Longest Common Subsequences (LCS)</h4>
+
+<p>
+If <i>A</i> and <i>C</i> are strings of <span>length</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><i>m</i> and <i>n</i>
+(with both <i>m</i> and <i>n</i> being <img src="Image52.gif">
+1 and with <i>m</i> <img src="Image53.gif"> <i>n</i>) such that
+<i>C</i> could be obtained by deleting <span>zero</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>or more elements from
+<i>A</i>, then <i>C</i> is a <i>subsequence</i> of <i>A</i>. 
+Thus COURSE, for example, is a subsequence of<i> </i>COMPUTER
+SCIENCE.  String <i>C</i> is a <i>common subsequence </i>of strings
+<i>A </i>and <i>B</i> if it is a subsequence of both; it is the
+<i>longest common subsequence</i>, or LCS, if it is a common subsequence,
+and if it is at least as long as any other common subsequence
+of <i>A</i> and <i>B</i>.  The Dice coefficient is again used
+for normalisation, but this time <i>X</i> and <i>Y </i>are the
+lengths of the words being matched, and <i>C</i>  is the length
+of the LCS.</p>
+
+<h2>Results and Discussion</h2>
+<p>
+The effectiveness of retrieval was evaluated in a manner analogous
+to that used for the evaluation of <span>experimental</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>document retrieval
+<span>systems</span>. <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  For all of the matching methods (digrams, trigrams and
+LCS), we took each of the modern-forms in the postings <span>dictionary</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>
+constructed a <span>list</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of the ten or twenty words in the master dictionary
+which are its nearest matches, and then compared this <span>list</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>against
+the <span>list</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of old-forms in the postings <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>which are equivalent
+to the query modern-form (<i>appropriate old-forms).</i>  The
+<i>recall </i>of a <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>is defined to be the percentage of the
+appropriate variants that are retrieved.  If a modern-form has
+a set, <i>A,</i> of appropriate old-forms, and a set, <i>B&#184;</i>
+of appropriate old-forms has been retrieved, then the recall is:</p>
+
+<div align="center"><img src="Image53.gif">  100</div>
+
+
+We found that recall rates of about 70% can be <span>achieved</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in the
+French text.  This is lower than for the historical <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>texts,
+where recall rates of 85-95% could be <span>achieved</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>(<a href="#rob">Robertson &amp;
+Willett, 1993</a>), but, as the French text is some three hundred
+years older, its <span>vocabulary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>is likely to be even more divergent
+from <span>modern</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>language.  Overall, LCS performed better than <i>n</i>-gram
+matching, and digrams were nearly always better than trigrams.
+ In fact, there were no digram retrieval failures that could be
+corrected by trigrams, while LCS was noticeably superior in this
+respect, with 225 retrieval failures by one or both of the <i>n</i>-gram
+methods that were retrieved by the LCS <span>search</span>. <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  That said, there
+were some word pairs that were matched by digrams, but not by
+LCS, <i>e.g.,</i>  <i>peur:paor</i> (although the similar pair
+<i>peur:paour</i> was matched by LCS alone).  By contrast, there
+are some matched pairs which elude all three of the <span>algorithms</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>
+<i>e.g.,</i> <i>peu:poi</i> Although LCS is the best of the
+methods that we have tested for both <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and French, it is
+very demanding of <span>computational</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>time (Robertson &amp; Willett,
+1993), and thus digram matching would <span>probably</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>be the method of
+<span>choice</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for incorporation into an operational system.  </p>
+
+<p>
+In <span>conclusion</span>, <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> these experiments have demonstrated that techniques
+for processing <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>text of the sixteenth to eighteenth centuries
+can be applied without modification to French text of the thirteenth
+century, though the comparative effectiveness is rather less due
+to the greater age of the French text.</p>
+
+<h2>References</h2>
+
+<p>
+<a name="dam"></a>Damerau, F. (1964) <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><span>technique</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for <span>computer</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>detection and correction
+of spelling errors.  <i>Communications of the ACM, </i><b>7</b><i>,</i>
+171-176.
+<p>
+<a name="fau"></a>Faulk, <span>R++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>D. (1964) An inductive approach to language translation.
+ <i>Communications of the ACM, </i><b>7</b><i>, </i>647-653.
+<p>
+<a name="oro"></a>O'Rourke, <span>A+</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>J<i>. </i>(1995)<i> <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>Comparison of Several Algorithms
+in the Retrieval of Words from a Medieval French Romance</i>.
+ University of Sheffield, Department of Information Studies, unpublished
+MSc dissertation.
+<p>
+<a name="pol1"></a>Pollock, <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>J. (1982) Spelling <span>error</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>detection and correction by
+computer: some notes and a bibliography.  <i>Journal of Documentation,
+38,</i> 282-281.
+<p>
+<a name="pol2"></a>Pollock, <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>J. &amp; Zamora, <span>A+</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> (1983) Collection and characterisation
+of spelling errors in scientific and scholarly text.  <i>Journal
+of the American Society for Information Science</i>, <b>34</b><i>,</i>
+51-58.
+<p>
+<a name="rob"></a>Robertson, <span>A+</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>M. &amp; Willett, P. (1993) <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><span>comparison</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of spelling-correction
+methods for the identification of word forms in historical text
+databases.  <i>Literary and <span>Linguistic</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>Computing, </i><b>8</b><i>,</i>
+143-152.
+<p>
+<a name="yan"></a>Yannakoudakis, E.<span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> &amp; Fawthrop, D. (1983) The rules of spelling
+errors.  <i>Information Processing and Management, </i><b>19</b><i>,
+</i>87-99.<br>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">O'Rourke, Alan <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>, Robertson, Alexander M., Willett, Peter, Eley, Penny, &amp; Simons, Penny (1996)&nbsp; &quot;Word variant identification in Old French&quot;&nbsp;<em>Information Research</em>, <strong>2</strong>(4) Available at: http://informationr.net/ir/2-4/paper22.html</p>
+<p style="text-align : center">&copy; the authors, 1997, 2000. Updated: 3rd April 2000</p>
+<hr color="#ff00ff" size="1">
+<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:nAPnhxdA7ZsJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+<hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres24.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper22" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 14 December 2002</h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/2-4/paper22.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:29 GMT -->
+</html>
+

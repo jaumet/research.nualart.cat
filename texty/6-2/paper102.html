@@ -1,0 +1,713 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/6-2/paper102.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:24:42 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 97">
+<title>Bridging information requirements and information needs assessment: do
+scenarios and vignettes provide a link?</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="vignettes, critical incident technique, information behaviour, research, methodology, object oriented analysis, use case scenarios, CRC  cards, storyline, scripts, information requirements, data collection, software engineering">
+<meta name="description" content="The aim of the paper is to compare the philosophies of the vignette and critical incident techniques in information behaviour research, with the methodologies used in object oriented analysis such as use case scenarios and CRC (class, responsibility, collaboration) cards. The principles of object oriented analysis are outlined, noting the emphasis on obtaining the &quot;storyline&quot; or &quot;scripts&quot; for information requirements analysis through use cases and CRC cards.&nbsp; The critical incident technique and vignettes are used to obtain valid interpretations of users&quot; information behaviour, using a storyline approach for data collection (and analysis) which is similar to that of object oriented analysis. Some examples illustrate how techniques developed in object oriented analysis could be used for data display in information behaviour studies. Concludes that the methods developed by software engineering could be adapted usefully for information behaviour research.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Bridging information requirements and information needs assessment: do scenarios and vignettes provide a link?">
+<meta name="DC.Creator" content="Christine Urquhart">
+<meta name="DC.Subject" content="vignettes, critical incident technique, information behaviour, research, methodology, object oriented analysis, use case scenarios, CRC  cards, storyline, scripts, information requirements, data collection, software engineering">
+<meta name="DC.Description" content="The aim of the paper is to compare the philosophies of the vignette and critical incident techniques in information behaviour research, with the methodologies used in object oriented analysis such as use case scenarios and CRC (class, responsibility, collaboration) cards. The principles of object oriented analysis are outlined, noting the emphasis on obtaining the &quot;storyline&quot; or &quot;scripts&quot; for information requirements analysis through use cases and CRC cards.&nbsp; The critical incident technique and vignettes are used to obtain valid interpretations of users&quot; information behaviour, using a storyline approach for data collection (and analysis) which is similar to that of object oriented analysis. Some examples illustrate how techniques developed in object oriented analysis could be used for data display in information behaviour studies. Concludes that the methods developed by software engineering could be adapted usefully for information behaviour research.">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+
+
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 6 No. 2, January 2001</h4></td></tr>
+  <tr> 
+    <td><a href="infres62.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<h1>Bridging information requirements and information needs assessment: do
+scenarios and vignettes provide a link?</h1>
+
+<h4 align="center"><a href="mailto:cju@aber.ac.uk">Christine Urquhart</a><br>
+Department of Information and Library Studies<br>
+University of Wales<br>
+Aberystwyth</h4>
+
+
+<div align="center"><b>Abstract</b></div>
+
+<blockquote>The aim of the paper is to compare the philosophies of the vignette and critical incident techniques in information behaviour research, with the methodologies used in object oriented analysis such as use case scenarios and CRC (class, responsibility, collaboration) cards. The principles of object oriented analysis are outlined, noting the emphasis on obtaining the &quot;storyline&quot; or &quot;scripts&quot; for information requirements analysis through use cases and CRC cards.&nbsp; The critical incident technique and vignettes are used to obtain valid interpretations of users&quot; information behaviour, using a storyline approach for data collection (and analysis) which is similar to that of object oriented analysis. Some examples illustrate how techniques developed in object oriented analysis could be used for data display in information behaviour studies. Concludes that the methods developed by software engineering could be adapted usefully for information behaviour research.</blockquote>
+
+<br>
+
+<h2>Introduction</h2>
+
+<p>With the growing emphasis on qualitative research in studies of information
+behaviour, any relationship between information behaviour analysis and
+the structured approach to information requirements analysis of conventional
+systems analysis seems remote. Information behaviour research is concerned
+with a deeper understanding of information needs and use, through sense
+making as proposed by Dervin (1986) or, for example, features, as proposed
+by <a href="#ref2">Ellis</a> (1989).A later integration by <a href="#ref5">Wilson</a> (1999) of the research in the field proposes a problem solving model which considers uncertainty,
+though in a slightly different manner from the phenomenological viewpoint
+of <a href="#ref2">Kulhthau&quot;s</a> view of uncertainty (1991). Conventional systems analysis
+of the hard structured type (for example SSADM, Structured Systems Analysis
+and Design Methodology) approaches information requirements analysis with
+the aim of providing three views of the data. There is a formal role for
+the &quot;user&quot; in SSADM, but this &quot;user involvement&quot; may in fact be limited.
+Structured methodologies can be criticised for their failure to involve
+the &quot;user&quot;, or fully comprehend their possible role. Inevitably, possibly
+the &quot;user&quot; role is often that of a nominal user representative. It might
+appear that these apparently very different schools of thought have very
+little to learn from each other in the methods that are used to investigate,
+analyse and &quot;display&quot; (<a href="#ref3">Miles &amp; Huberman, 1994</a>) the data collected in
+their investigations of user behaviour. New developments in object oriented
+analysis methods have similarities to the methods that might be used to
+investigate information needs and use in information behaviour studies.
+For example, object oriented techniques such as use case analysis and the
+development of use case scenarios are similar to the &quot;critical incidents&quot;
+and vignettes used in studies of information behaviour (<a href="#ref4">Urquhart &amp;
+Hepworth, 1995</a>) (<a href="#ref2">Davies <i>et al</i>, 1997</a>) (<a href="#ref4">Urquhart, 1999</a>). The underlying philosophy is similar though the physical manifestation may be different. For those using the techniques there may be opportunities to learn from the other
+school of thought, particularly in the way the analysis of the data can
+be displayed - sometimes a difficulty for qualitative researchers when
+attempting to explain their analysis convincingly to those who are more
+attracted to quick visual overview rather than reading a long textual account.
+The quality of qualitative research is often judged on the extent to which
+the results are credible. Enough raw data should be provided to give
+that evidence but the number of words produced in most qualitative research
+means that data should be condensed in a way which makes sense to
+those reading the research reports. Charts and diagrams often help to focus
+a reader on the main themes which emerge from the data.</p>
+<br>
+<h2>Information systems and human activity systems</h2>
+
+<p>Object oriented analysis aims to overcome some of the problems of the structured
+methodologies (such as SSADM), which can become a rigid straitjacket on
+systems development. Efforts to reduce problems and redesign often appear
+to have the effect of discouraging the re-investigation of changing user
+needs. Soft systems methodology, as developed by <a href="#ref1">Checkland</a> (1981) provides
+a general approach to the real, and messy problems of management in many
+organisations. <a href="#ref1">Checkland &amp; Holwell</a> (1998) argue that information systems
+are more than &quot;data manipulation&quot; systems and that the study of the human
+activity systems is vital to an understanding of what an effective information
+system might look like.</p>
+
+
+<p>For systems developers, communication between analyst and the system users
+is important and &quot;sharing a language&quot; (<a href="#ref1">Crowe <i>et al.</i>, 1996</a>) more than just a common understanding of the meaning of technical terms within the organisational
+domain. There are subtleties of meaning and interpretations of situations
+which need to be considered, and there are likely to be many differences
+between the &quot;formal rules&quot;, and what people actually do, and between what
+they think they are expected to do, and what they would prefer to do. A
+study (<a href="#ref2">Davies <i>et al.</i>, 1992</a>) of an academic library illustrated the tensions
+that governed communication. Information systems designers who ignore these
+disparities do so at their peril.</p>
+
+&nbsp;
+<h2>Development of use case scenarios and CRC cards</h2>
+
+<p>Understanding the &quot;stories&quot; that are told within the human activity systems is thus an important part of systems analysis though the extent to which this analysts
+formally document this varies. Often the possible &quot;scenarios&quot; are treated
+informally rather than formally as more effort is put into formal data
+analysis.</p>
+
+
+<p>One approach to object oriented analysis uses the concepts of roles and interactions. Object Requirements Capture and Analysis, ORCA, (<a href="#ref3">McLean <i>et al.</i>. 1994</a>) is
+based on much the same premise as <a href="#ref1">Checkland&quot;s</a> Soft Systems Methodology
+(1981) in that analysis should not be based on a statement of initial requirements.
+The specifications require an understanding of the Old World, identification
+of problems and their causes, before proceeding to proposing justifiable
+changes for a New World.</p>
+
+<p><a href="#ref2">Jacobson</a> (1992) developed a more formal approach to scenarios with his Objectory
+method for object oriented technology. In this, the &quot;use case&quot; is introduced
+as a more formal method for requirements capture and initial planning.
+Use cases are usually associated with use case diagrams, and use case scenarios
+(and almost inevitably there are some variations in the ways these terms
+are interpreted and applied in practice). Fundamentally, they provide a
+way of depicting and structuring the interaction of a real world Actor
+(person, organisation or external system) with the application being studied.
+The Actors are users of the system, and they have goals, or what could
+be viewed as &quot;things that must be done&quot;. For a retail system the goals
+or use cases concern the &quot;ordering of goods&quot;, &quot;delivery of goods&quot; and &quot;payment
+for goods&quot;. The scenarios can be divided into the success scenarios, when
+all goes according to plan, and the extensions deal with use cases where
+there is a problem. The company may be out of stock, or the customer may
+wish to return the goods, or the payment method may be different. Sometimes
+it is important to distinguish between system interactions and actual user
+goals, and deal with goals first, as suggested by <a href="#ref2">Fowler</a> (1997). For information
+service users the goal may be to obtain a document: the system interaction
+may concern the inter-library loan procedures. There should be a sequence
+of interactions in a compound system interaction (and requesting an inter-library
+loan would be a compound interaction) and that sequence would be the basis
+of a scenario. For <a href="#ref1">Cockburn</a> (1997) the key feature of a scenario is the
+absence of alternatives, and this definition of a scenario appears to relate
+closely to the Object Behaviour Analysis &quot;script&quot; as described by <a href="#ref3">Rubin
+&amp; Goldberg</a> (1992).</p>
+
+<p>One similar structured approach to user involvement in the process of object-oriented development is the use of CRC cards - Class, Responsibility and Collaboration cards. The technique uses small teams, including users who are &quot;domain
+experts&quot;, with the aim of discovering the objects, the classes that the
+system comprises, their responsibilities (what they do) and their collaboration,
+how they interact with other objects in the system. The technique is aimed
+at a better, deeper understanding of the problem situation so that the
+information system developed provides a proper solution. Brainstorming
+is used to derive provisional classes and behaviour and role-playing is
+then used to work through some scenarios, &quot;living the system&quot; according
+to <a href="#ref1">Bellin &amp; Simone</a> (1997). The use case methods have been developed
+in various other ways, e.g. task scripts, by <a href="#ref2">Graham</a> (1996), textual use
+case specifications in natural language as formulated by <a href="#ref3">Rolland &amp;
+Ben Achour</a> (1998) and flowgraphs to illustrate control flow semantics,
+proposed by <a href="#ref4">Van den Berg &amp; Simon</a> (1999).</p>
+
+<p>What all these ideas on object oriented technology share is an emphasis on the
+storyline - seeing the information system in terms of the events and interactions,
+and the sequences which tell a meaningful story to the system users. There
+is an emphasis also on identifying, and discovering what happens, or should
+happen when co-operations are faulty or the use cases are &quot;extended&quot; or
+become &quot;abuse cases&quot;.</p>
+
+<br>
+<h2>Scripts and stereotypes in information retrieval</h2>
+
+<p>There is an emphasis on object oriented analysis on what <a href="#ref4">Schank &amp; Abelson</a>
+(1977) term &quot;scripts&quot;, usual patterns of interaction, and <a href="#ref2">Graham</a> (1996)
+has developed the idea of task scripts (for completion of goals) and side
+scripts (the stereotypical exceptions). Information retrieval research
+has also used the &quot;script&quot; concept in development of the user interface.
+In the model of information retrieval design proposed by <a href="#ref1">Belkin <i>et al.</a></i> (1995)scripts are proposed as prototypical interactions. The scripts are construed
+as a pattern of moves, or &quot;abstract&quot; dialogues, the purpose of this research
+being the production of a better interactive information retrieval system
+which will respond appropriately to the stage the user is at in the search.
+There are four proposed dimensions to any information seeking strategy:
+method of interaction (scanning/searching), goal of interaction (learning/selecting),
+mode of retrieval (recognition/specification) and resource considered (information/meta-information). Information seeking strategies are then represented as example scripts, a series of moves required to achieve desired results, and for each strategy there will be a arrangement of goals which organise the set of moves. The problem, of course, is to predict the likely combination of scripts which
+will correspond to the switches made by real users from one information
+seeking strategy to another.</p>
+
+<h2>Potential and actual information system use</h2>
+
+<p>Much of information systems analysis in organisations is based on the premise
+that users will routinely be using the information system in their work,
+and that these systems will be &quot;operative&quot; rather than &quot;supportive&quot; as
+defined by <a href="#ref3">Malmsjo</a> (1999). Many information systems of interest to library
+and information science professionals are &quot;supportive&quot; for users rather
+then &quot;operative&quot; and this distinction affects the approaches that have
+to be taken to understanding user behaviour. We choose whether or not to
+use such &quot;supportive&quot; systems and often we choose whether or not to make
+use of the search results obtained, for example. Actual system use may
+thus be a small proportion of potential use, and the emphasis in information
+behaviour research may be on the patterns of information need and use and
+the perceived preferences for certain information sources as opposed to
+others. Similarly, we may obtain information, in the form of the output
+of a database search, but the actual impact or use in practice may be hard
+to assess, as the actual use may be some time in the future.</p>
+
+<h3>Assessing patterns of actual use of information retrieved</h3>
+
+<p>Mapping possible patterns of use is difficult with so many variables affecting
+use or potential use. <a href="#ref4">Smithson</a> (1989) examined the contribution of cited
+references in students&quot; dissertations of an online search found that a
+small (and individually variable) percentage of documents retrieved actually
+contributed to the students&quot; dissertations. Some of the problems concerned
+the users&quot; inability to find the documents to make a final judgment. <a href="#ref5">Wang</a>
+(1996) obtained similar findings in a study of research students and faculty
+working on a research project, and suggests that subtle changes in information
+needs while working on a project can be mapped by changes in cognitive
+structures. Needs and estimations of relevance alter in some way and the
+success of a search, whether done by an intermediary or by the user, will
+be hard to judge in terms of the contribution made to a list of references.
+On the other hand, such objective evidence of effective system use (or
+ineffective system use) may be an indicator of the success (or not) of
+a training programme, and more meaningful when training is delivered informally,
+rather than in formal classroom settings. In that case it may be necessary
+to track trends in time and consider the behaviour of a cohort, rather
+than the behaviour of individuals within a cohort. One aim of the GIVTS
+project (1999) was the evaluation of the effectiveness of Internet training
+on evidence-based sources through analysis of the references cited in audit
+project reports, which form part of the summative assessment required for
+general (family) practitioner trainees in the UK. It proved impossible
+to evaluate the training itself, but investigation of the data provided
+(titles of projects plus references) did show variations in the emphasis
+placed on quality sources of information. There are many factors involved
+- the formulation of questions around the clinical problem topic, the emphasis
+placed on the need for a systematic review of the literature, accessibility
+of databases, development of an appropriate search strategy, skills for
+searching, and critical appraisal skills. It is somewhat paradoxical that
+systems which are &quot;supportive&quot; may be anything but supportive in practice
+for the inexperienced and infrequent user. If the system is supportive,
+and all the external conditions are right, then the user can negotiate
+an effective route for information seeking, assessment and use. The problem
+is that of co-ordination and <a href="#ref4">Spink</a> (2000) emphasises the importance of
+the information feedback loop as the basis of human information co-ordinating
+behaviour.</p>
+
+
+<p>Studying feedback implies that studies of information behaviour should include longitudinal studies, such as the &quot;Uncertainty&quot; project (<a href="#ref5">Wilson, 1999</a>).The problem for
+longitudinal studies is the time required, and, related to that, the risks
+of a high drop-out rate. For example, of 34 video-recorded (with concomitant
+field observations) users of OPAC machines in one study, only four of the
+subjects for the recorded cases took part in the longitudinal study (<a href="#ref5">Zeitlyn
+<i>et al.</i>, 1999</a>).</p>
+
+<br>
+<h2>Identifying general patterns of information use</h2>
+
+<p>Identifying the longitudinal development of information seeking behaviour is not, apparently, an easy task, though there have been some studies which track the behaviour of an individual (e.g. a case study by <a href="#ref3">Kuhlthau</a> (1997) of an individual,
+starting from secondary school, through university and to work as a securities
+analyst). Those developing and funding information services would like
+to predict with more accuracy the likely take-up of new services, the barriers
+which might have to be overcome to make the service truly supportive and
+the opportunities which the users perceive, and learn to perceive, from
+their perspective, of the services. From the marketing point of view, information
+managers need to assess the likely segments of the market for services.</p>
+
+
+<p>In view of the difficulty of studying information behaviour over a long period
+of time, or what might be termed the whole story, other techniques have
+been used to capture brief episodes in the story. This section discusses
+some examples of these techniques and their applications, showing some
+similarities between the general philosophy of this approach and the use
+case scenario ideas of object oriented analysis.</p>
+
+<h3>Critical incident technique</h3>
+
+<p>One technique which may be used to help identify patterns of use or potential
+use, is the critical incident technique, which examines a brief, but memorable
+information seeking episode. It is therefore useful for examination of
+the occasional, or at any rate non-compulsory, use of &quot;supportive&quot; information
+systems. Often the incident is explored through an interview, but it is
+possible to use a questionnaire format. In the Value project (<a href="#ref4">Urquhart
+&amp; Hepworth, 1995</a>) the technique was used to examine the patterns of
+information seeking behaviour among groups of doctors. A critical incident
+questionnaire was sent once a week for four weeks to the sample (just under
+300 medical staff (hospital staff and general practitioners) at 11 sites)
+asking, for one incident in the previous week, the purposes for which information
+was sought, the sources used, and the degree of success obtained. A similar
+technique was used in the EVINCE project (<a href="#ref2">Davies <i>et al.</i>, 1997</a>) to analyse
+the patterns of information behaviour among nursing, midwifery and health
+visiting staff. The type of questions which could be answered through this
+application of the critical incident technique were:</p>
+
+<p>What are the purposes associated with use of colleagues (informal sources of
+information)?</p>
+
+<p>Results for medical staff indicated clearly that personal education and updating
+was often associated with the need for information on a rare condition
+or specific patient problem. Nursing staff appeared to use colleagues as
+information sources more than the doctors did, with informal updating linked
+in this case more usually to drug therapy queries. The nurses&quot; pattern
+was more complex than that of the doctors, reflecting their needs for information
+for teaching and mentoring colleagues, patient education and patient care
+administration.</p>
+
+<p>The results could thus be analysed to show the patterns of purposes associated with particular sources of information, and, similarly the patterns of sources
+associated with particular purposes of information need. Both surveys demonstrated
+convincingly that the library use was closely associated with formal and
+informal continuing education needs, and research, rather than patient
+care problems on their own. For doctors, use of a database such as MEDLINE
+was primarily associated with personal research needs, while for nurses
+computer based resources such as the CINAHL database was primarily for
+formal course work.</p>
+
+<p>The critical incident technique may also be used to profile groups of users,
+as was possible with the Value project results. For EVINCE, various groupings
+were attempted but there were few significant differences between the groups,
+suggesting either that the sample sizes were too small to show an effect
+(possible) or that differences in information behaviour among nursing staff
+are likely to be at the individual level, not at group level. One could
+not therefore predict the likely patterns of information behaviour on the
+basis of the assigned task role and place of work (hospital versus community,
+for example).</p>
+
+<p>Critical incidents, to some extent, represent information use &quot;stories&quot; which are
+complete or near complete. Replication of the techniques in other setting
+provides a means of tracking changes in information behaviour of the groups
+in general. <a href="#ref1">Bradshaw</a> (1997), for example, adapted the Value and EVINCE
+methodology for a study of networked CD-ROM services in one hospital setting,
+and extended the methodology to cover social workers, and clinical psychologists.
+The findings suggested, for example, that networking did affect the patterns
+of use, but that the motivation for use (education (course work for nurses)
+and research) remained similar to the Value and EVINCE results.</p>
+
+<h3>Vignettes</h3>
+
+<p>Vignettes are short scenarios presented to subjects, who are then asked to describe their possible actions in those circumstances (or else to describe how
+they think others would react in the circumstances). Vignettes have been
+used to prompt information users into revealing their information seeking
+strategies and choice of information sources (<a href="#ref4">Urquhart, 1999</a>), when direct
+questioning might be less productive. <a href="#ref4">Van de Wijngaert</a> (1999) has used
+a similar technique, policy capture analysis, to examine media choices
+among students. The aim of vignettes used in this way is to present a realistic
+situation with which the subjects can identify. Similar aims appear to
+have led to the inclusion of a simulated work task situation as one of
+the sub-components investigated for an interactive information retrieval
+framework by <a href="#ref1">Borlund</a> (2000). The effectiveness of the simulated work task
+situation was compared with the simple indicative request and the subjects&quot;
+own information needs. Results suggest that the simulated work task situation
+produces the same behaviour as the real information needs, although subjects
+spent longer on their own needs. In comparing the simulated work task situations
+with the indicative requests, a more mixed picture emerges, and this reflects
+the observations that some EVINCE vignettes worked better than others,
+generally when the subjects had some experience of the situation, or the
+topic was of universal interest (<a href="#ref4">Urquhart, 1999</a>), a finding which Borlund
+confirmed for their evaluation setting.</p>
+
+<br>
+<h3>Vignettes in data analysis and presentation</h3>
+
+<p>Vignettes may also be used to present data analysis, an example in the information
+studies field being the narrative &quot;week in the life of&quot; a social services
+department in Project INISS (<a href="#ref5">Wilson &amp; Streatfield, 1980</a>).The aim is
+to condense the mass of textual information into a meaningful display which
+should fulfil several functions, but notably one of allowing the reader
+an insight into how the data was analysed in a particular research context.
+Vignettes may be used iteratively to help the researcher and subject agree
+on a common understanding of the situation (e.g., <a href="#ref2">Greenhalgh <i>et al.</i>, 1998</a>)
+and for use cases in systems development that common understanding is the
+aim. To develop an information system, however, the interest is not simply
+in the &quot;average&quot; or &quot;representative behaviour as might be expressed in
+the primary of &quot;happy day&quot; scenario but also in the secondary or alternative
+scenarios which deal with the exceptions to the primary scenario. Use case
+diagrams have rules for how to display the extensions to the primary use
+case, and in some complex conditions it may be better to draw the secondary
+scenario separately (see <a href="#ref3">Schneider &amp; Winters, 1998</a>, for example).</p>
+
+<br>
+<h2>Applications of scenarios in information behaviour studies</h2>
+
+<p>Formal scenario writing, with the amount of detail required to document the flow
+of events, is possibly not a technique that can be used in its entirety
+in studies of information behaviour but there are ideas that might be borrowed
+and extended in a different way. Documenting and displaying information
+seeking pathways in use case type diagrams, showing optional sequences
+of events, can help debate these issues. Too often users&quot; information seeking
+problems are seen solely in terms of &quot;access to resources&quot; but users&quot; reasons
+for seeking new information (or not), and their estimation of the benefits
+to be obtained are often far more complex (<a href="#ref4">Urquhart, 1999</a>). Where there
+are choices to be made, with a plethora of electronic information sources
+available, influencing events and optional sequences can be mapped using
+use case diagram ideas, and some of the search strategies used by students
+in the JUSTEIS project, First Cycle (2000, Section 6.6)</p>
+
+
+<p>The figures (Figures 1, 2, 3) illustrate some of the alternative and supplementary
+routes chosen by students when their search route demands that. In Figure
+1 &quot;update using NASA web site&quot; is a regular search scenario which supplements
+the primary scenario of finding course notes on the Web to complete a laboratory
+report. The student also uses the library for background reading and books,
+to obtain alternative references that may be unique (that other students
+would not obtain).</p>
+
+<div align="center"><img src="p102fig1.gif" width="560" height="312" border="0" alt=""></div> 
+<div align="center">Figure 1: Finding course notes scenario</div>
+
+<p>Figure 2 illustrates that the process of searching for
+recent journal reference, using BIDS ISI was prompted by an IT course given
+to the student on BIDS. The student scans, and reviews the results of the
+search, and if the selected journals are not available, repeats the search
+by scanning using different keywords. Occasionally a search of electronic
+journals (full-text) contributes to the review stage.</p> 
+
+<div align="center"><img src="p102fig2.gif" width="564" height="412" border="0" alt=""></div> 
+<div align="center">Figure 2: Searching for recent journal references for laboratory write-up</div>
+
+<p>In Figure 3, the failure of a link led the student to revert to emailing personal contacts.</p>
+
+<div align="center"><img src="p102fig3.gif" width="511" height="323" border="0" alt=""></div> 
+<div align="center">Figure 3: Locating information on a sports team</div>
+
+<p>These Figures represent preliminary work on the data display, and would
+be refined in the light of further data analysis and discussion.&nbsp;
+Such diagrams can be used to illustrate graphically to those involved in
+training in use of electronic information services just what students do
+in the process of searching, the ways in which they might revise their
+searching strategies (JUSTEIS 2000, Section 6.2.3),&nbsp; and the way in
+which advice from academic staff and LIS staff is sought, and acted on,
+in the process of the search.&nbsp; Diagrams which show by the &quot;extend&quot;
+notation which other 'scripts' are used in the searching process help to
+make sense of a vast mass of textual data from interview transcripts.&nbsp;
+Such real-life examples provide a valuable feedback into training needs
+analysis for library and information services, as well as showing graphically
+the actual search strategies that students adopt.&nbsp; It is a more informative
+way of representing findings than merely reporting the relative popularity
+of various sources.&nbsp; There are some limitations, of course, in that
+some students' searching strategies are (apparently) rather muddled and
+constraints on their time limit the alternative routes they are willing
+to try.&nbsp; Even so, the strategies are worthy of some more formal analysis.</p>
+
+<br>
+<h2>CRC cards and focus groups</h2>
+
+<p>Focus groups are now frequently used in LIS research, often with the aim of encouraging participation and stimulating thought to providing unexpected insights
+and contributions that might be less easy to obtain in a one-to-one interview
+(<a href="#ref2">Goulding, 1997</a>). One assumption of focus groups is that the group effect
+will produce more details about information behaviour than might be obtained
+from one-to-one interviewing. Similarly, the brainstorming used in the
+CRC card technique is used on the basis of the benefits of group problem
+solving. It is debatable whether brainstorming does in fact produce more
+ideas about a problem than might be obtained from the group working individually
+(<a href="#ref1">Buchanan &amp; Huczynski, 1997</a>) but for the purposes of information needs
+or information requirements discussions, CRC cards or focus groups may
+encourage a shared understanding of the concepts, the events and procedures
+that may be involved in an information system or situation. Using a modified
+CRC card technique may help, for example, in structuring focus group data
+to illustrate the responsibilities and roles of the stakeholders in an
+information seeking situation. The CRC technique is aimed, of course, at
+system development and therefore make use of documentation that states
+system requirements, reports generated, as well as interviews with users.
+The main function of CRC technique is to examine the system behaviour and
+ensure that the developers do discover and define the right classes required
+for software development. The technique makes extensive use of brainstorming
+and role play.&nbsp; One aim of the role play is to find the false assumptions,
+the bits of the system that do not work together in quite the way some
+people might assume. At this stage of the JUSTEIS (2000) work one can only
+make speculate what the results of the second cycle will add to the first
+cycle findings, but there are indications from the data that there is some
+degree of mismatch between expectations of patterns of service use and
+actual use of information services.&nbsp; The structured role play that
+CRC involves could be adapted to the training situation, so that focus
+groups could first investigate the situation generally, and then in a second
+round of focus groups analyse exactly what might be happening (or not happening)
+through structured role play.</p>
+
+<br>
+<h2>Conclusion</h2>
+
+<p>Techniques such as the critical incident technique and vignettes are used at various
+stages in the data collection and analysis of information behaviour. Such
+techniques share, to a greater or lesser extent, the idea of a &quot;story&quot;
+or &quot;sense-making&quot; storyline, which is useful in either eliciting details
+about information behaviour from users or displaying data meaningfully.
+Asking users for details of their experience in an information seeking
+incident, or presenting them with a realistic scenario, seems more likely
+to elicit a more valid interpretation of information behaviour than might
+be obtained from transaction logging or asking about frequency of information
+source use. Similarly, analysing observational data using the vignette
+provides a meaningful method of data display which can be discussed with
+users and then refined if necessary.</p>
+
+
+<p>More recent developments in information requirements analysis in software development in object oriented technology are working on parallel lines, though there
+is little sign of any cross-fertilisation between ideas and techniques
+used by researchers working in information behaviour and and those used
+by systems analysts. This paper has shown the similarities in the approaches,
+despite the differing provenance (software engineering and information
+science). The CRC card techniques, and the use case diagram techniques
+used in object oriented analysis may be useful in helping to structure
+and present data in information behaviour studies, and may help communication
+with the research subjects. Such structured techniques from the field of
+systems analysis might help overcome some of the problems of data display
+for qualitative research in information seeking and use.</p>
+
+<h2><a name="ref1"></a>References</h2>
+<ul>
+<li>Belkin, N. J., Cool, C., Stein, A. and Thiel, U. (1995) “Cases, scripts, and information-seeking strategies: on the design of interactive information retrieval systems.“ <i>Expert Systems with Applications,</i> <b>9</b>, 379-395.</li>
+
+<li>Bellin,D. and Simone, S. S. (1997) <i>The CRC card book.</i> Reading, MA: Addison-Wesley.</li>
+
+<li>Borlund, P. (2000) “Experimental components for the evaluation of interactive information retrieval systems.” <i>Journal of Documentation,</i> <b>56</b>, 71-90.</li>
+
+<li>Bradshaw, C. M.(1997) <i>An evaluation of the contribution of networked CD-ROM information services to reflective practice and clinical decision making at Ashworth
+Hospital Authority. </i>MSc dissertation. Manchester, UK: Manchester Metropolitan
+University.</li>
+
+<li>Buchanan, D. and Huczynski, A. (1997) <i>Organizational behaviour: an introductory text. 3rd</i> edition. London: Prentice-Hall. pp.276-280.</li>
+
+<li>Checkland, P. and Holwell, S.(1998) <i>Information, systems and information systems: making sense of the field.</i> Chichester: Wiley.</li>
+
+<li>Checkland, P. B.(1981) <i>Systems thinking, systems practice.</i> Chichester: John Wiley.</li>
+
+<li>Cockburn, A. (1997) “Goals and use cases.” “Using goal-based use cases.” (series
+of two articles) <i>Journal of Object Oriented Programming</i>, 35-40 and 56-64 (also available online at http://members.aol.com/acockburn/papers/usecases.htm [Accessed 20 August 1999]</li>
+
+<li>Crowe, M., Beeby, R. and Gammack, J. (1996) <i>Constructing systems and information: a process view.</i> Maidenhead: McGraw-Hill. pp.98-108.</li>
+
+<li><a name="ref2"></a>Davies, A., Kirkpatrick, I. and Oliver, N. (1992)&nbsp; "The organisational culture of an academic library: implications for library strategy .”<i>British
+Journal of Academic Librarianship,</i> <b>7</b>, 69-89.</li>
+
+<li>Davies, R., Urquhart, C.J., Smith, J., Massiter, C. and Hepworth, J.B.(1997)
+<i>Establishing the value of information to nursing continuing education:
+report of the EVINCE project.</i>  Boston Spa: BLDSC. (British Library RIC report 44)</li>
+
+<li>Dervin, B. and Nilan, M. (1986) “Information needs and uses.” <i>Annual Review
+of Information Science and Technology,</i> <b>21</b>, 3-33.</li>
+
+<li>Ellis, D. (1989) “A behavioural approach to information retrieval design.” <i>Journal of Documentation,</i> <b>45</b>, 171-212.</li>
+
+<li>Fowler, M.(1997)&nbsp;UML distilled: applying the standard object modeling language.Reading, MA: Addison Wesley. p.44.</li>
+
+<li>Goulding, A. (1997) “Joking, being aggressive and shutting people up: the use of
+focus groups in LIS research.” <i>Education for Information,</i> <b>15</b>,
+331-341.</li>
+
+<li>Graham, I.(1996) “Task scripts, use cases and scenarios in object oriented analysis.”<i>Object Oriented Systems</i>, <b>3</b>, 123-142.</li>
+
+<li>Greenhalgh, T., Helman, C. and Chowdury, A. M. (1998) “Health beliefs and folk models of diabetes in British Bangladeshis: a qualitative study.” <i>British Medical Journal,</i> <b>316</b>, 978-983.</li>
+
+<li>Jacobson, I., Christersen, M., Jonsson, P. and Overgaard, G. (1992) <i>Object-oriented software engineering: a use case driven approach</i>. Reading, MA: Addison-Wesley.</li>
+
+<li>JUSTEIS (2000)&nbsp; JISC Usage Surveys: Trends in Electronic Information Services.(First cycle report) Online. [Available: http://www.dil.aber.ac.uk/dils/Research/Justeis/JISCTop.htm.]</li>
+
+<li>Kuhlthau, C.C. (1991) “Inside the search process: information seeking from the user’s perspective.” <i>Journal of the American Society for Information Science,
+</i> <b>42</b>, 361-371.</li>
+
+<li><a name="ref3"></a>Kuhlthau, C.C. (1997) “The influence of uncertainty on the information seeking behaviour of a securities analyst,” in: <i>Information seeking in context: proceedings of an international conference on research in information needs, seekingand use in different contexts,</i> 14-16 August 1996, Tampere, Finland, edited by P. Vakkari, R. Savolainen, B. Dervin. London: Taylor Graham. pp. 268-274.</li>
+
+<li>Malmsjo, A.(1999).“ Conditions for designing different kinds of information systems,” in: <i>Exploring the contexts of information behaviour, proceedings of
+the second international conference on research in information needs, seeking
+and use in different contexts, </i>13-15 August 1998, Sheffield, UK, edited
+by T. D. Wilson and D. K. Allen. London: Taylor Graham. pp. 609-625.</li>
+
+<li>McLean, R., Stepney, S., Smith, S., Tordoff, N., Gradwell, D., Hoverd, T. and Katz, S. (1994) <i>Analysing systems: determining requirements of object-oriented
+development</i>. London: Prentice Hall.</li>
+
+<li>Miles, M.B., and Huberman, A.M.(1994) <i>Qualitative data analysis</i>. 2nd
+edition. London: Sage.</li>
+
+<li>Rolland, C., and Ben Achour, C. (1998) “Guiding the construction of textual use case specifications.” <i>Data &amp; Knowledge Engineering,</i> <b>25</b>, 125-160.</li>
+
+<li>Rubin, K. and Goldberg, A. (1992)&nbsp; “Object behavior analysis.” <i>Communications of the ACM</i>, <b>35</b>, 48-62.</li>
+
+<li>Schank, R.C. and Abelson, R.(1977) <i>Scripts, plans, goals and understanding.&nbsp;</i>Boston, MA: Lawrence Erlbaum.</li>
+
+<li>Schneider, G. and Winters, J.P. (1998) <i>Applying use cases: a practical guide.</i> Reading, MA: Addison Wesley.</li>
+
+<li>Smithson, S.(1989) “The evaluation of information retrieval systems: a case study
+approach,” in: <i>Prospects for intelligent retrieval: Informatics 10,
+</i>proceedings of a conference jointly sponsored by Aslib, Aslib Informatics
+Group and the BCS Information Retrieval Specialist Group, 21-23 March 1989,
+Cambridge. London: Aslib.</li>
+
+<li><a name="ref4"></a>Spink, A. (2000)“ Toward a theoretical framework for information science.” <i>Informing Science&nbsp; <b>3</b>, 73-75. [Available online at http://www.inform.nu/Articles/Vol3/inedxv3n2.htm Accessed 14 February 2000]</li>
+
+<li>Urquhart, C.J.(1999)&nbsp; <i>Models of information value based on reliability and risk for clinical decision making</i>. Aberystwyth: University of Wales Aberystwyth, PhD thesis, Chapter 5.</li>
+
+<li>Urquhart, C.J. (1999)&nbsp; “Using vignettes to diagnose information seeking strategies: opportunities and possible problems for information use studies of health professionals”, in: <i>Exploring the contexts of information behaviour: proceedings of the 2nd international conference on research in information needs, seeking and use in different contexts</i>, 13-15 August 1998, Sheffield, UK, edited by T.D. Wilson
+and D.K. Allen. London: Taylor Graham, pp. 277-289.</li>
+
+<li>Urquhart, C.J. and Hepworth, J.B.(1995) <i>The value to clinical decision making of information supplied by NHS library and information services.</i>  Boston Spa: BLDSC. (British Library R&amp;D Report 6205.)</li>
+
+<li>Urquhart, C., Massiter, C., Thomas, R., Smith, J. and Sharp, S. (1999) <i>Getting information to vocational trainees: report of the GIVTS project.</i>. London: LIC. (Library and Information Commission Research Report 26) [Also available at http://www.dil.aber.ac.uk/dils/Research/RFocus5/5sub/Resource/GIVTS0.htm]</li>
+
+<li>Van de Wijngaert, L. (1999) “A policy capturing study of media choice: the effect
+information of needs and user characteristics on media choice,” in: <i>Exploring
+the contexts of information behaviour: proceedings of the 2nd international
+conference on research in information needs, seeking and use in different
+contexts</i>, 13-15 August 1998, Sheffield, edited by T.D. Wilson and
+D.K. Allen. London: Taylor Graham. pp.463-478.</li>
+
+<li>Van den Berg, K.G., and Simon, A.J.H. (1999) “Control-flow semantics of
+use case in UML.”<i>Information and Software Technology,</i> <b>41</b>, 651-659.</li>
+
+<li><a name="ref5"></a>Wang, P. (1997) “Users’ information needs at different stages of a research project: a cognitive view,” in: <i>Information seeking in context: proceedings of
+an international conference on research in information needs, seeking and
+use in different contexts,</i> 14-16 August 1996, Tampere, Finland, edited
+by P. Vakkari, R. Savolainen, B. Dervin. London: Taylor Graham. pp. 307-318.</li>
+
+<li>Wilson, T.D. (1999) “Exploring models of information behaviour: the “Uncertainty”
+project,” in:. <i>Exploring the contexts of information behaviour, </i>proceedings
+of the second international conference on research in information needs,
+seeking and use in different contexts, 13-15 August 1998, Sheffield, UK,
+edited by T.D. Wilson and D.K. Allen. London: Taylor Graham. pp.55-65.</li>
+
+<li>Wilson, T.D.(1999) “Models in information behaviour research.” <i>Journal of Documentation,</i> <b>55</b>, 249-270.</li>
+
+<li>Wilson, T.D., and Streatfield, D.R. (1980) <i><a href="http://informationr.net/tdw/publ/INISS">You can observe a lot…A study of information use in local authority social service departments</a></i>. Sheffield:
+University of Sheffield Postgraduate School of Librarianship and Information
+Science. (Occasional Publications no. 12) [Retrieved 12 August 2003 from http://InformationR.net/tdw/publ/INISS]</li>
+
+<li>Zeitlyn, D., David, M., Bex, J. (1999) <i>Knowledge lost in information: patterns
+of use and non-use of networked bibliographic resources.</i> London: King’s College, (BLRIC report RIC/G/313) (Office for Humanities Communication, Publication no.11) </li>
+</ul>
+
+<hr color="#ff00ff" size="3">
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+
+<p style="text-align : left; color : black;">Urquhart, Christine  (2001) &nbsp; &quot;Bridging information requirements and information needs assessment: do scenarios and vignettes provide a link?&quot;. &nbsp;Information Research, <strong>6</strong>(2)  Available at: http://InformationR.net/ir/6-2/paper102.html</p>
+
+<p style="text-align : center">&copy; the author, 2001.  Updated: 19th December 2000</div>
+
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;q=link:qRkEE9XJp6sJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres62.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper102" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>		
+<hr color=#ff00ff size=3>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/6-2/paper102.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:24:42 GMT -->
+</html>

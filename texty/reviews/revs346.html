@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/reviews/revs346.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:34:52 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Book Review: Semantic Web for the working ontologist: modeling in RDF, RDFS and OWL.</title>
+<!--the layoout and text stylesheets-->
+<link href="reviews.css" media="all" rel="stylesheet" />
+
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+<meta name="DC.Title" content="Book review: Semantic Web for the working ontologist: modeling in RDF, RDFS and OWL." />
+<meta name="DC.Creator" content="T.A. Brooks" />
+<meta name="DC.Subject" content="Semantic Web ontologies" />
+<meta name="DC.Description" content="Book review" />
+<meta name="DC.Subject.keywords" content="semantic Web, ontologies, OWL, RDF, RDFS" />
+<meta name="distribution" content="global" />
+<meta name="robots" content="ALL" />
+<meta name ="description" content="book review" />
+<meta name="DC.Type" content="text" />
+<meta name="DC.Identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="revs346.html"/>
+<meta name="DC.Relation.IsPartOf" content="../14-3/infres143.html" />
+<meta name="DC.Format" content="text/html" />
+<meta name="DC.Language" content="en" />
+<meta name="DC.Date.Available" content="2009-09-15" />
+<meta name="DC.Publisher" content="Professor T.D. Wilson" />
+<meta name="DC.Rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="DC.Coverage.placename" content="global" />
+</head>
+
+
+<body class="mocha">
+<div id="main_wrapper">
+<div id="header">
+	<div id="header_inner">
+		<img src="../mini_logo2.gif" width="336" height="45" alt="header" /><br />
+		<!-- end header_nav -->
+ 	</div><!-- end header_inner -->
+</div>
+<!-- end header -->
+<div id="nav">
+	<div id="nav_inner">
+<ul>
+	<li><a href="reviews.html"><strong>New reviews</strong></a></li>
+	<li><a href="reviews.html#past"><strong>Past reviews</strong></a></li>
+	<li><a href="reviews.html#srev"><strong>Software reviews</strong></a></li>
+	<li><a href="../index-2.html"><strong>Home</strong></a></li>
+</ul>
+	</div><!-- end nav_inner -->
+</div><!-- end nav -->
+
+<div id="content">
+	<div id="content_inner">
+	<h2>BOOK AND SOFTWARE REVIEWS</h2>
+	<br />
+   <h3>Allemang, Dean and Hendler, James. <em>Semantic Web for the working ontologist: modeling in RDF, RDFS and OWL.</em> Burlington, MA: Morgan Kaufmann, 2008. xvii, 330 p.   ISBN-13 9780123735560 $49.95</h3>
+<br />
+
+
+<p>The expression <em>working ontologist</em> infers the existence of the complementary expression: a <em>non-working ontologist</em>. Consideration of this complement suggests why the authors modified <em>ontologist</em> with working: '<em>The aim of this book is not to motivate or pitch the Semantic Web but to provide the tools necessary for working with it</em>' (p. 1).  While many ontological tools remain theoretical achievements, a working ontologist gets his hands dirty applying ontologies to information stores in use. The impulse to enrich Internet resources with ontologies flows from the ambitions of the Semantic Web to architect information so that inferences can be made. Allemang and Hendler focus on the relationships among data points and links among data stores that can be exploited to make information smarter. </p> 
+
+<p>The Linking Open Data movement [<a href="#ref">1</a>] and its goal of extending the Web with a data commons comprising open data sets architected as RDF (Resource Description Framework), which would include links among data items from different data sources, compel the need for this book.  Practicality poses the questions Which ontology to use? And, How does one apply it? This book answers both questions.  The self learner will be delighted to discover an appendix of frequently asked questions, such as 'How can I represent tabular data in RDF' with page directions to chapter discussion.  The tone of the book reflects the authors experience in teaching workshops to non-programmers who face the challenge of transforming their relational databases to RDF web resources.</p>
+ 
+<p>The authors bridge to their fundamental discussion of RDF with a database metaphor.  This strategy seemed very clever to me because many legacy information stores are relational databases, and their database administrators will need both the motivation and a clear pathway to RDF architecture in order to ease the transformation of a data silo to a pool of RDF records.  Step-by-step, the authors point to the similarities between relational tuple architecture and the RDF triple architecture.  The implication is that by transforming a relational database and enriching it with ontologies, the data resource becomes more expressive, and therefore more useful.</p>
+
+<p>The intellectual progression of the book is from RDF as information architecture to RDF schema (RDFS) as a method of conceptually manipulating RDF records.  The focus is on terms such as <span style="font-family: monospace;">rdfs:subClassOf</span> and <span style="font-family: monospace;">rdfs:subPropertyOf</span> with solutions of challenges such as how to represent <em>researcher</em> is a special case of <em>analyst</em> in RDFS.  Blocked-out discussions that consider parallel concepts of object-oriented programming are nested in the text.  For example, one discussion considers the sets created by RDFS from the point of view of sets in object-oriented programming.  Obviously the authors have realized that a major segment of their readership will be programmers with an object-oriented background who have been assigned the task of applying ontologies to RDF stores.</p>
+
+<p>	The authors use a presentation of RDFS-Plus as a gateway to OWL (Web Ontology Language).  RDFS-Plus represents the authors' selection of OWL constructs that are common to many vendors and have proven useful among the early adopters of Semantic Web technologies.   Included are terms such as <span style="font-family: monospace;">owl:inverseOf</span>, <span style="font-family: monospace;">owl:TransitiveProperty</span> and <span style="font-family: monospace;">owl:equivalentClass</span>.  The presentation of RDFS-Plus and OWL is a step up in complexity and sophistication.</p>
+
+<p>	There are two chapters that consider ontology applications <em>in the wild</em> or, put another way, examples of real-world working systems.  RDFS-Plus is illustrated with a discussion of SKOS (Simple Knowledge Organization System) and FOAF (Friend of a Friend).  The SKOS discussion will feel very familiar to librarians as the focus is on broader terms, narrower terms, and scope notes, and so on.  OWL is illustrated by reference to a United States federal government initiative to organize information to facilitate sharing, and the thesaurus of the National Cancer Institute.  The latter exemplifies the strength of OWL is precisely specify relationships among terms.</p>
+
+<p>	This book makes a very positive contribution to the transformation of the Semantic Web into an everyday reality.   There are very rapid changes in this area of technology, semantics and the Web: One can only hope that the authors issue a new edition in a year or two and continue to guide the working ontologist.</p>
+
+<h5>Terrence A. Brooks<br />
+Associate Professor<br />
+Information School<br />
+University of Washington<br />
+Seattle, WA  98133<br />
+
+<h2>References</h2>
+
+<p>1.	<em><a href="http://www.webcitation.org/5j4Udjo4H">Linking open data: W3C SWEO community project</a></em>. (2009). Retrieved 16 August, 2009 from http://esw.w3.org/topic/SweoIG/TaskForces/CommunityProjects/LinkingOpenData  (Archived by WebCite&reg; at http://www.webcitation.org/5j4Udjo4H)</p>
+
+
+
+
+	</div><!-- end nav_inner -->
+</div><!-- end nav -->
+<div id="promo">
+	<div id="promo_inner">
+	<iframe  src="http://rcm.amazon.com/e/cm?t=informatirese-20&amp;o=1&amp;p=8&amp;l=as1&amp;asins=0321525566&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=FFFFFF&amp;bg1=FFFFFF&amp;f=ifr&amp;npa=1" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+					<script type="text/javascript"><!--
+google_ad_client = "pub-5081678983212084";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text";
+google_ad_channel = "";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+
+<div id="footer">
+	<div id="footer_inner">
+		<hr size="1" style="color:maroon;">
+<h3>How to cite this review</h3>
+<p>Brooks, T.A.  (2009).  Review of:  Allemang, Dean and Hendler, James. <em>Semantic Web for the working ontologist: modeling in RDF, RDFS and OWL.</em> Burlington, MA: Morgan Kaufmann, 2008.   <em>Information Research</em>, <strong>14</strong>(2), review no. R346  [Available at: http://informationr.net/ir/reviews/revs346.html</a>]</p>
+
+<hr size="1" style="color:maroon;" />
+	<div align="center">
+<img  src="valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" />
+</div>
+</div>
+</div>
+
+</div><!--end main wrapper-->
+
+</body>
+
+<!-- Mirrored from informationr.net/ir/reviews/revs346.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:34:52 GMT -->
+</html>
+

@@ -1,0 +1,209 @@
+HU: merger    Saved: 22/04/01 20:41:21
+ATLAS.ti Atlas Prolog Notation (APN) Version: WIN 4.2
+
+CLAUSE: hermUnit (id, date, author, dateOfLastAccess, primSuff, protection, comment)
+
+hermUnit (merger!, 3135258266, Super, 3165423378, 2, private,  !).
+
+
+CLAUSE: coAuthor (accountName)
+card (coAuthor, 0).
+
+coAuthor (SUPER).
+
+
+CLAUSE: pt (longName, dosName, date, author,dateOfLastAccess, fragmentSuffix, comment, mediatype, encoding)
+card (pt, 2).
+
+pt (P 1: buffalo.txt!, D:\Documents\Research\KALIPER\buffalo.txt|, 3135258315, Super, 3135258913, 13,  !, txt, 0).
+pt (P 2: buffalo.txt!, G:\InformationRnet\IR\Reviews\sofrev08\buffalo.txt|, 3165252896, Super, 3165254262, 10,  !, txt, 0).
+
+
+CLAUSE: q (id, date, author, dateOfLastAccess, firstFewLetters, von, bis, comment)
+card (q, 23).
+
+q (1:1, 3135258377, Super, 3135258377, SOME BASIC FACTS ABOUT OUR MER..!, 1 @ 11, 33 @ 11,  !).
+q (1:2, 3135258391, Super, 3135258392, Department of Communication!, 4 @ 13, 31 @ 13,  !).
+q (1:3, 3135258414, Super, 3135258414, School of Information and Libr..!, 1 @ 14, 41 @ 14,  !).
+q (1:4, 3135258427, Super, 3135258427, School of Information Studies!, 5 @ 16, 33 @ 16,  !).
+q (1:5, 3135258453, Super, 3135258453, What Will Happen to the Master..!, 1 @ 21, 11 @ 27,  !).
+q (1:6, 3135258474, Super, 3135258484, What Programs Does Communicati..!, 1 @ 36, 14 @ 39,  !).
+q (1:7, 3135258708, Super, 3135258708, Any New Joint Degrees Planned?..!, 1 @ 41, 23 @ 46,  !).
+q (1:8, 3135258857, Super, 3135258857, How Did the Merger Come About?..!, 1 @ 48, 55 @ 59,  !).
+q (1:9, 3135258872, Super, 3135258872, the Provost issued Planning UB..!, 28 @ 49, 30 @ 50,  !).
+q (1:10, 3135258893, Super, 3135258893, low cost!, 24 @ 51, 32 @ 51,  !).
+q (1:11, 3135258898, Super, 3135258898, efficiency!, 37 @ 51, 46 @ 51,  !).
+q (1:12, 3135258907, Super, 3135258907, successful graduate profession..!, 2 @ 52, 41 @ 52,  !).
+q (1:13, 3135258913, Super, 3135258913, respectable reputation!, 1 @ 53, 22 @ 53,  !).
+q (2:1, 3165253477, Super, 3165254053, The American Library Associati..!, 9 @ 25, 11 @ 27,  !).
+q (2:2, 3165254083, Super, 3165254097, In the 1997 spring semester th..!, 1 @ 49, 30 @ 50,  !).
+q (2:3, 3165254109, Super, 3165254124, SILS was recognized for its lo..!, 51 @ 50, 55 @ 59,  !).
+q (2:4, 3165254154, Super, 3165254154, low cost!, 24 @ 51, 31 @ 51,  !).
+q (2:5, 3165254179, Super, 3165254179, efficiency!, 37 @ 51, 46 @ 51,  !).
+q (2:6, 3165254189, Super, 3165254189, successful!, 2 @ 52, 11 @ 52,  !).
+q (2:7, 3165254198, Super, 3165254198, reputation!, 13 @ 53, 22 @ 53,  !).
+q (2:8, 3165254212, Super, 3165254212, cognate disciplines!, 6 @ 56, 24 @ 56,  !).
+q (2:9, 3165254240, Super, 3165254240, that we make connections with ..!, 32 @ 55, 34 @ 57,  !).
+q (2:10, 3165254262, Super, 3165254262, We were also listed as major p..!, 37 @ 57, 55 @ 59,  !).
+
+
+CLAUSE: code (id, date, author, dateOfLastAccess, comment)
+card (code, 21).
+
+code (accreditation!, 3165254053, Super, 3165254053,  !).
+code (BA iin Communication!, 3135258474, Super, 3135258615,  !).
+code (Causes!, 3135258857, Super, 3135259003,  !).
+code (cognate disciplines!, 3165254212, Super, 3165254212,  !).
+code (collaboration!, 3165254240, Super, 3165254240,  !).
+code (Department of Communication!, 3135258391, Super, 3135258818, What Programs Does Communication Offer?
+They will continue to offer a BA in Communication (a
+very popular undergraduate major), and a MA and Ph.D. in
+Communication.!).
+code (efficiency!, 3135258898, Super, 3165254179,  !).
+code (ICT initiative!, 3165254262, Super, 3165254262,  !).
+code (joint degrees!, 3135258708, Super, 3135258732,  !).
+code (low cost!, 3135258893, Super, 3165254154,  !).
+code (Merger!, 3135258359, Super, 3135258987,  !).
+code (MLS programme!, 3135258453, Super, 3135258633,  !).
+code (PhD programme!, 3135258484, Super, 3135258624,  !).
+code (reputation!, 3165254198, Super, 3165254198,  !).
+code (respectable reputation!, 3135258913, Super, 3135259061,  !).
+code (School of Information and Library Studies!, 3135258414, Super, 3135259061,  !).
+code (School of Information Studies!, 3135258427, Super, 3135258732,  !).
+code (SILS in University plan!, 3165254124, Super, 3165254124,  !).
+code (successful!, 3165254189, Super, 3165254189,  !).
+code (successful graduate professional program!, 3135258907, Super, 3135259034,  !).
+code (university planning!, 3135258872, Super, 3165254097,  !).
+
+
+CLAUSE: codeRelation (id, icon, thesRel, menuItem, mathPropList, displayAttributes, explanation)
+card (codeRelation, 5).
+
+codeRelation (BTP, [], G, is part of, [transitive], (000000 1 1 U), The part-of relation links objects, not
+concepts of different abstractional level (as does ISA)!).
+codeRelation (CAUSA, =>, N, is cause of, [transitive], (000000 1 1 U), Used for representing causal links,
+processes, etc.!).
+codeRelation (ISA, isa, O, is a, [transitive], (000000 2 1 U), The ISA relation links specific concepts to
+general concepts. It is widely used to represent
+structural relationships in knowledge based
+systems (expert systems).
+It is also used for structuring the term base of
+descriptors in information-retrieval systems. Such
+structured descriptor sets are labeled "thesauri".!).
+codeRelation (PROP, *}, P, is property of, [asymmetric], (000000 1 1 D),  !).
+codeRelation (ASSO, ==, R, is associated with, [symmetric], (000000 1 1 R), Relates concepts without subsumption.!).
+
+
+CLAUSE: hyperRelation (id, icon, thesRel, menuItem, mathPropList, displayAttributes, explanation)
+card (hyperRelation, 0).
+
+
+
+CLAUSE: hyperLink (relation_id, source, sink, date, author, comment)
+card (hyperLink, 0).
+
+
+
+CLAUSE: memo (id, date, author, dateOfLastAccess, type, text{,filename})
+card (memo, 0).
+
+
+
+CLAUSE: codeLink (relation_id, source, sink, date, author, comment)
+card (codeLink, 14).
+
+codeLink (ASSO, Department of Communication!, BA iin Communication!, 3135258606, GUEST,  !).
+codeLink (BTP, Merger!, Department of Communication!, 3135258596, GUEST,  !).
+codeLink (ASSO, School of Information Studies!, joint degrees!, 3135258730, GUEST,  !).
+codeLink (CAUSA, Causes!, Merger!, 3135258985, GUEST,  !).
+codeLink (ASSO, School of Information and Library Studies!, MLS programme!, 3135258632, GUEST,  !).
+codeLink (ASSO, Department of Communication!, PhD programme!, 3135258623, GUEST,  !).
+codeLink (PROP, efficiency!, School of Information and Library Studies!, 3135259052, GUEST,  !).
+codeLink (PROP, low cost!, School of Information and Library Studies!, 3135259023, GUEST,  !).
+codeLink (BTP, Merger!, School of Information and Library Studies!, 3135258574, GUEST,  !).
+codeLink (PROP, respectable reputation!, School of Information and Library Studies!, 3135259060, GUEST,  !).
+codeLink (PROP, successful graduate professional program!, School of Information and Library Studies!, 3135259033, GUEST,  !).
+codeLink (BTP, Department of Communication!, School of Information Studies!, 3135258654, GUEST,  !).
+codeLink (BTP, School of Information and Library Studies!, School of Information Studies!, 3135258669, GUEST,  !).
+codeLink (ISA, Causes!, university planning!, 3135258998, GUEST,  !).
+
+
+CLAUSE: cq (code, quotations)
+card (cq, 21).
+
+cq (accreditation!, [2:1 ]).
+cq (BA iin Communication!, [1:6 ]).
+cq (Causes!, [1:8 ]).
+cq (cognate disciplines!, [2:8 ]).
+cq (collaboration!, [2:9 ]).
+cq (Department of Communication!, [1:2 ]).
+cq (efficiency!, [1:11 2:5 ]).
+cq (ICT initiative!, [2:10 ]).
+cq (joint degrees!, [1:7 ]).
+cq (low cost!, [1:10 2:4 ]).
+cq (Merger!, [1:1 ]).
+cq (MLS programme!, [1:5 ]).
+cq (PhD programme!, [1:6 ]).
+cq (reputation!, [2:7 ]).
+cq (respectable reputation!, [1:13 ]).
+cq (School of Information and Library Studies!, [1:3 ]).
+cq (School of Information Studies!, [1:4 ]).
+cq (SILS in University plan!, [2:3 ]).
+cq (successful!, [2:6 ]).
+cq (successful graduate professional program!, [1:12 ]).
+cq (university planning!, [1:9 2:2 ]).
+
+
+CLAUSE: mq (memo, quotations)
+card (mq, 0).
+
+
+
+CLAUSE: codeFamily (id, date, author, comment, codes)
+card (codeFamily, 0).
+
+
+
+CLAUSE: memoFamily (id, date, author, comment, memos)
+card (memoFamily, 0).
+
+
+
+CLAUSE: ptFamily (id, date, author, comment, pts)
+card (ptFamily, 0).
+
+
+
+CLAUSE: scode (id, date, author, dateOfLastAccess, comment, queryTerm)
+card (scode, 0).
+
+
+
+CLAUSE: netWork (id, date, author, comment, nodes)
+card (netWork, 2).
+
+netWork (Merger!, 3135258499, Super,  !, [ Kode: BA iin Communication! 51 @ 165! Kode: Department of Communication! 199 @ 227! Kode: Merger! 436 @ 106! Kode: MLS programme! 873 @ 217! Kode: PhD programme! 61 @ 289! Kode: School of Information and Library Studies! 544 @ 223! Kode: School of Information Studies! 391 @ 315! Kode: joint degrees! 356 @ 414! Kode: Causes! 433 @ 23! Kode: efficiency! 811 @ 94! Kode: low cost! 715 @ 85! Kode: respectable reputation! 550 @ 97! Kode: successful graduate professional program! 844 @ 138! Kode: university planning! 592 @ 28!]).
+netWork (new!, 3165423378, Super,  !, []).
+
+
+CLAUSE: mmLink (source, sink)
+card (mmLink, 0).
+
+
+
+CLAUSE: mcLink (source, sink)
+card (mcLink, 0).
+
+
+
+CLAUSE: cmLink (codeSource, memoSink)
+card (cmLink, 0).
+
+
+
+CLAUSE: settings (bookMark, pt, fragment, code, memo, fFilter,fSort, kFilter, kFamily, kSort, mFilter, mFamily, mSort)
+card (settings, 1).
+
+settings (bookMark(, ), 2, ,  !,  !, All, Nummer, All,  !, Alphabetisch, All,  !, Alphabetisch).
+
+

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>NIPS 2013 Viewer</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <script src="js/jquery.tablesorter.js"></script>
+        <script type="text/javascript" src="data/visference-config.js"></script>
+        <script type="text/javascript" src="data/myData.js"></script>
+        <script type="text/javascript" src="data/myTopic.js"></script>
+        <script type="text/javascript">
+        var tcolors = ['#66FF33','#66FFCC','#FFCC33','#FF8833','#CC6666',
+                      '#FF6699','#9966CC','#C0C0C0'];
+        $(document).ready(function() {
+        	function count(){
+				var vis = $("#myTable2 tr").filter(':visible').length -1;
+				$("#counter").html(vis);
+			}
+	        var isInteger = function(a) {
+			    return ((typeof a !== 'number') || (a % 1 !== 0)) ? false : true;
+			};
+
+			thead = '<thead class="header"><tr id="header">';
+	                thead += '<th>Query Id</th><th>Sys Id</th>';
+	                thead += '<th>Query Prop</th><th>Sys Prop</th>';
+	                thead += '<th>Top Words</th>';
+	                thead += '</tr></thead>';
+			var items = [thead];
+			var it = ''; 
+			$.each(TOPICS, function(key1, val1) {
+                                var topval = 0;
+				$.each(val1, function(key, val) {
+	                                if ( key === "topic" ) {
+                                            topval = val;
+	                                    val = val+1;
+                                        }                                
+                                        if ( key=="words" ) {
+             var usevar = val.substring(0,120);
+             var ii = usevar.lastIndexOf(" ");
+             usevar = usevar.substring(0,ii);
+	    it = it +'<td style="background-color: '+tcolors[topval]+';">'
+               + usevar + '</td>';
+       } else
+	    it = it +'<td>' + val + '</td>';
+                              	});
+                                items.push('<tr>' + it + '</tr>');
+				it = ''; 
+			});
+			$('<table/>', {
+				'class': 'tablesorter',
+				'id': 'myTable2',
+				html: items.join('')
+			}).appendTo('#list2');
+			count();
+			// Align left the columns Words:
+			$("#myTable2 tr td:nth-child(1)").addClass("tabletitle");
+        });
+
+        $(document).ready(function() {
+        	function count(){
+				var vis = $("#myTable tr").filter(':visible').length -1;
+				$("#counter").html(vis);
+			}
+	        var isInteger = function(a) {
+			    return ((typeof a !== 'number') || (a % 1 !== 0)) ? false : true;
+			};
+
+			thead = '<thead class="header"><tr id="header">';
+			$.each(FIELDS[0], function(i, e) {
+				if ( (e['role'] == "table" 
+                                     || e['role'] == "table-area")
+                                   && 
+                                    ( i.substring(0,5) !== "topic"
+                                      || parseInt(i.substring(5,7)) <= MAX_TOPICS )
+                                   )
+                                 {
+                                       if  ( i.substring(0,5)== "topic" ) {
+                                          var ti = parseInt(i.substring(5,7))-1;
+                                         thead += '<th style="background-color:'+tcolors[ti] + ';">'
+                                             e['human']+'</th>';
+                                   } else
+				      thead += '<th>'+e['human']+'</th>';
+				}
+			});
+	        thead += '</tr></thead>';
+			var items = [thead];
+			var it = ''; var circle;
+			$.each(DATA, function(key1, val1) {
+				$.each(val1, function(key, val) {
+					if (key == "title" || key == "id" || key == "author" ) {
+						circle = val;
+					}
+					else if (key == "identifier") {
+                                                var resa = val.split(" ");
+						circle = "<a href=\"http://media.nips.cc/nipsbooks/nipspapers/paper_files/nips26/"+resa[1]+".pdf\" target=\""+resa[1]+"_pdf\">PDF</a><br /> <a href=\"http://papers.nips.cc/paper/"+resa[0]+"\" target=\""+resa[1]+"_abs\">ABS</a>";
+					}
+					else if (key.substring(0,5) === "topic") {
+                                                var ti = parseInt(key.substring(5,7))-1;                                 
+                                                var cval = 40*val/MAX_T;
+						circle = '<span class="circle" style="color:transparent;background-color:'+tcolors[ti]+';height:'+cval+'px;width:'+cval+'px;">'+val+'</span>';
+					}
+					else if (key == "bm25") {
+                                                if ( val<0 ) val = 0;
+                                                var cval = 40*val/MAX_B;
+						circle = '<span class="circle" style="color:transparent;height:'+cval+'px;width:'+cval+'px;">'+val+'</span>';
+					}
+					else if (key == "tpsc") {
+                                                if ( val<0 ) val = 0;
+                                                var cval = 40*(MAX_P-val)/(MAX_P-MIN_P);
+						circle = '<span class="circle" style="color:transparent;height:'+cval+'px;width:'+cval+'px;">'+val+'</span>';
+					}
+                                        if ( key.substring(0,5) !== "topic"
+                                             || parseInt(key.substring(5,7)) <= MAX_TOPICS ) {
+                                           it = it +'<td>' + circle + '</td>';
+}
+				});
+				items.push('<tr>' + it + '</tr>');
+				it = ''; 
+			});
+			$('<table/>', {
+				'class': 'tablesorter',
+				'id': 'myTable',
+				html: items.join('')
+			}).appendTo('#list');
+			$("#myTable").tablesorter({ 
+				sortList: [[0,0]], sortInitialOrder: "desc"
+			});
+			count();
+			// Align left the columns Title and Authors:
+			$("#myTable tr td:nth-child(2)").addClass("tabletitle");
+			$("#myTable tr td:nth-child(3)").addClass("tabletitle");
+			
+		});
+        </script>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+	<!--Post bootstrap-->
+	<div id="title"><h2>2013 NIPS Proceedings</h2>
+        <p><b>Advances in Neural Information Processing Systems 26</b></p>
+	</div>
+	<div id="tablecontainer">
+		<h3>Query</h3>
+		<p id="myquery">
+                  query
+		</p>
+                <script>
+        $(document).ready(function() {
+                var topicHash = {};
+			$.each(TOPICS, function(key1, val1) {
+                                var topval = 0;
+				$.each(val1, function(key, val) {
+	                                if ( key === "topic" ) {
+                                            topval = val;
+                                        }                                
+                                        if ( key=="words" ) {
+                     var ww;
+                     var WS = val.split(" ");
+                     for (ww in WS) {  
+                         if ( topicHash[String(WS[ww])]==undefined )
+                                 topicHash[String(WS[ww])] = topval; }
+                     } 
+                      });
+	           });
+        COLORQUERY = '';
+        var ww;
+        var QS = QUERY.split(" ");
+        for (ww in QS) {  
+           var wc = topicHash[QS[ww].toLowerCase()];
+           if ( wc==undefined )
+                COLORQUERY = COLORQUERY + QS[ww] + " ";
+           else
+                COLORQUERY = COLORQUERY + '<span style="background-color:'
+                         +tcolors[wc] + ';">'+ QS[ww] + '</span> ';
+        }
+        var qtext = document.getElementById("myquery");
+         qtext.innerHTML=COLORQUERY;
+        });
+</script>          
+		<h3>List of matched topics</h3>
+		<div id="list2">
+		</div>
+		<h3>List of matched papers</h3>
+		<div id="list">
+		</div>
+	</div>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<svg id="mysvg" width="847" height="520" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <g transform="translate(0, 10)">
+    <g class="links" fill="none" stroke-opacity="0.4">
+    <path d="M5,47.98636129696343C213,47.98636129696343,213,32.986361296963636,421,32.986361296963636" stroke-width="41.80391147709727" style="stroke:rgb(191, 105, 105);">
+    </path>
+    <path class="root" d="M5,94.24858466289241C213,94.24858466289241,213,89.24858466289258,421,89.24858466289258" stroke-width="50.72053525476068" style="stroke: rgb(191, 105, 105);">
+    </path>
+    <path class="root" d="M5,26.042202779207383C213,26.042202779207383,213,1.04220277920761,421,1.04220277920761" stroke-width="2.0844055584148222" style="stroke: rgb(191, 105, 105);">
+    </path>
+    <path class="root" d="M5,150.23803396809055C213,150.23803396809055,213,155.23803396809024,421,155.23803396809024" stroke-width="61.258363355635616" style="stroke: rgb(191, 105, 105);">
+    </path>
+    <path class="root" d="M5,221.86052496139988C213,221.86052496139988,213,236.86052496139948,421,236.86052496139948" stroke-width="81.98661863098302" style="stroke: rgb(191, 105, 105);">
+    </path>
+    <path class="root" d="M5,368.9269171384457C213,368.9269171384457,213,393.92691713844545,421,393.92691713844545" stroke-width="212.1461657231086" style="stroke: rgb(191, 105, 105);">
+    </path>
+    <path d="M426,32.986361296963636C634,32.986361296963636,634,32.98636129696352,842,32.98636129696352" stroke-width="41.80391147709727" style="stroke: rgb(191, 179, 105);">
+    </path>
+    <path d="M426,89.24858466289258C634,89.24858466289258,634,89.24858466289247,842,89.24858466289247" stroke-width="50.72053525476068" style="stroke: rgb(130, 191, 105);">
+    </path>
+    <path d="M426,1.04220277920761C634,1.04220277920761,634,1.0422027792074964,842,1.0422027792074964" stroke-width="2.0844055584148222" style="stroke: rgb(105, 191, 154);">
+    </path>
+    <path d="M426,155.23803396809024C634,155.23803396809024,634,155.2380339680907,842,155.2380339680907" stroke-width="61.258363355635616" style="stroke: rgb(105, 154, 191);">
+    </path>
+    <path d="M426,236.86052496139948C634,236.86052496139948,634,236.86052496140005,842,236.86052496140005" stroke-width="81.98661863098302" style="stroke: rgb(130, 105, 191);">
+    </path>
+    <path d="M426,393.92691713844545C634,393.92691713844545,634,393.9269171384457,842,393.9269171384457" stroke-width="212.1461657231086" style="stroke: rgb(191, 105, 179);">
+    </path>
+    </g>
+
+    <g class="nodes" font-family="Arial, Helvetica" font-size="16">
+    <g>
+    <rect class="b" x="0" y="24.99999999999997" height="450.00000000000006" width="5">
+    </rect>
+    <text class="b" x="11" y="250" dy="0.35em" text-anchor="start">Implementation</text>
+    </g>
+    <g>
+    <rect class="b1" x="421" y="195.86721564590798" height="81.98661863098317" width="5" >
+    </rect>
+    <text class="b1" x="415" y="236.86052496139956" dy="0.35em" text-anchor="end">Enforcement Mechanism</text>
+    </g>
+    <g>
+    <rect class="b3" x="421" y="12.084405558415" height="41.803911477097245" width="5" >
+    </rect>
+    <text class="b3" x="415" y="32.98636129696362" dy="0.35em" text-anchor="end">UN Signatory</text>
+    </g>
+    <g>
+    <rect class="b5"  x="421" y="124.60885229027244" height="61.25836335563554" width="5" >
+    </rect>
+    <text class="b5" x="415" y="155.2380339680902" dy="0.35em" text-anchor="end">International Mission/Force/Similar</text>
+    </g>
+    <g>
+    <rect class="b4" x="421" y="63.888317035512245" height="50.72053525476019" width="5" >
+    </rect>
+    <text class="b4" x="415" y="89.24858466289234" dy="0.35em" text-anchor="end">Other International Signatory</text>
+    </g>
+    <g>
+    <rect class="b2" x="421" y="1.9895196601282805e-13" height="2.084405558414801" width="5" >
+    </rect>
+    <text class="b2" x="415" y="1.0422027792075994" dy="0.35em" text-anchor="end">Referendum for agreement</text>
+    </g>
+    <g>
+    <rect class="b6" x="421" y="287.8538342768911" height="212.14616572310865" width="5" >
+    </rect>
+    <text class="b6" x="415" y="393.92691713844545" dy="0.35em" text-anchor="end">Source</text>
+    </g>
+    <g>
+    <rect class="b2" x="842" y="8.526512829121202e-14" height="2.084405558414801" width="5" >
+    </rect>
+    <text class="b2" x="836" y="1.0422027792074857" dy="0.35em" text-anchor="end">(18)</text>
+    </g>
+    <g>
+    <rect class="b6" x="842" y="287.85383427689135" height="212.1461657231085" width="5" >
+    </rect>
+    <text class="b6" x="836" y="393.9269171384456" dy="0.35em" text-anchor="end">(1832)</text>
+    </g>
+    <g>
+    <rect class="b3" x="842" y="12.084405558414886" height="41.803911477097245" width="5" >
+    </rect>
+    <text class="b3" x="836" y="32.98636129696351" dy="0.35em" text-anchor="end">(361)</text>
+    </g>
+    <g>
+    <rect class="b4" x="842" y="63.88831703551213" height="50.72053525476076" width="5" >
+    </rect>
+    <text class="b4" x="836" y="89.24858466289251" dy="0.35em" text-anchor="end">(438)</text>
+    </g>
+    <g>
+    <rect class="b5" x="842" y="124.60885229027289" height="61.25836335563565" width="5" >
+    </rect>
+    <text class="b5" x="836" y="155.23803396809072" dy="0.35em" text-anchor="end">(529)</text>
+    </g>
+    <g>
+    <rect class="b1" x="842" y="195.86721564590854" height="81.98661863098283" width="5" >
+    </rect>
+    <text class="b1" x="836" y="236.86052496139996" dy="0.35em" text-anchor="end">(708)</text>
+    </g>
+    </g>
+    </g>
+</svg>

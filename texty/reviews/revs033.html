@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/reviews/revs033.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:30:45 GMT -->
+<head>
+<link rel="stylesheet" href="revstyle.css" type="text/css" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="revstylesans.css" />
+<script language=javascript>
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', 'revstylesans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', 'revstyle.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+ 
+<title>Languages of the Web</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name ="description" content="book review" />
+<meta name="Keywords"  content="css, style-sheets, XML, XHTML" />
+<meta name="distribution" content="global" />
+<meta name="rating" content="General" />
+<meta name="DC.Title" content="Review: Languages of the Web" />
+<meta name="ROBOTS" content="ALL" />
+<meta name="DC.Subject" content="css, style-sheets, XML, XHTML" />
+<meta name="DC.Creator" content="T.D. Wilson" />
+<meta name="DC.Description" content="book review" />
+<meta name="DC.Publisher" content="Prof. T.D. Wilson" />
+</head>
+<body link="#0000ff" vlink="#800080">
+<table width="80%"><tr>
+<td bgcolor="#ffffff" width="3%" valign="top">&nbsp;</td></tr>
+<tr><td width="15%" bgcolor="#ffffff" valign="top">
+		<table align="center" style="font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold;">
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td align="right"><a href="../about.html">About IR</a></td></tr>
+		<tr><td align="right"><a href="../editors.html">Editors</a></td></tr>
+		<tr><td align="right"><a href="../author1.html">Author instructions</a></td></tr>
+		<tr><td align="right"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0/" target="_blank">Copyright</a></td></tr>
+				<tr><td>&nbsp;</td></tr>
+		<tr><td align="right"><a href="../iraindex.html">Author index</a></td></tr>
+		<tr><td align="right"><a href="../irsindex.html">Subject index</a></td></tr>
+		<tr><td align="right"><a href="../search.html">Search</a></td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td align="right"><a href="reviews.html">Reviews</a></td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td align="right"><a href="../register.html">Register</a></td></tr>
+		<tr><td align="right"><a href="../index-2.html">Home</a></td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td align="right"><img  src="valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="31" width="88" /></td></tr>
+		</table>
+		</td>
+<td bgcolor="white" width="2" valign="top">&nbsp;</td>		
+<td bgcolor="blue" width="1" valign="top">&nbsp;</td>
+<td bgcolor="white" width="10" valign="top">&nbsp;</td>
+<td width="2%">&nbsp;</td>
+<td width="82%">
+
+<h3>The languages of the Web</h3>
+
+<h3><em><a href="#mey">CSS Pocket Reference</a></em>, by Eric A. Meyer<br />
+<em><a href="#val">XHTML</a></em>, by Chelsea Valentine &amp; Chris Minnick<br />
+<em><a href="#ray">Learning XML</a></em>, by Erik T. Ray
+</h3>
+
+
+<h2>Introduction</h2>
+
+<p>A bewildering set of initials is now associated with the Web's formatting languages, we not only have the original Hyper-Text Mark-up Language, HTML, but now XML, XHTML, DHTML, and CSS - and there are even more.  It is probably true to say, however, that there are more Web documents that use basic HTML than anything else and, for many originators of those documents, anything else would probably be a waste of time. If all we want to do is to design a home-page for yourself, the more it avoids the bells and whistles, the more likely it is to be usable. When we move on from the simplest applications, however, we begin to find a need for different kinds of features that standard HTML is either not very good at delivering or does not provide at all.</p>
+
+<h2><a name="mey"></a>Style sheet fundamentals</h2>
+
+<p>Still at a relatively basic level, consider this electronic journal: we need to make the appearance of each paper reasonably similar to give some idea of a 'house style'. That is, if you use the journal regularly, and if you come across a page as a result of using a search engine, you will immediately recognize it as an Information Research paper. The way this is achieved (although not yet entirely to my satisfaction) is by using a Cascading Style Sheet (CSS) for every paper. A CSS is succinctly defined by Eric Meyer, the author of our first book, as, '...the W3C standard for controlling the visual presentation of web pages.' [W3C is the World Wide Web Consortium, the voluntary standards organization for Web-related matters, founded in 1994.]</p>
+
+<p>A CSS controls the visual presentation of Web pages through the assignment of a 'style' to all tags (or as many as the Web designer thinks appropriate) used in a document, or, indeed, across an entire Web site. A typical CSS for a paragraph tag might read:</p>
+
+<p>&lt;P STYLE=&quot;font-size: 14pt;   color: navy;  font-family: Arial, sans-serif;&quot;&gt;</p>
+
+<p style="font-size: 14pt;   color: navy;  font-family: Arial, sans-serif;">Which produces the effect shown here.</p>
+
+<p>The paragraph style shown above exhibits the basis features of CSS. &lt;P&gt; is the <b><i>selector</i></b>, that is the indicator of the part of the text to be 'styled'; following the selector is the <b><i>declaration</i></b>, where 'color', 'font-size', and 'font-family' are  <b><i>properties</i></b> and '10pt',  'navy',  'Arial' and 'sans-serif' are <b><i>values</i></b>.</p>
+
+<p>In the case shown above, the style is given at the point of use on the page; however, in most cases an entire style sheet will be provided either in the 'head' section of the page, or in a separate file which is called up when the page is loaded. Using the &lt;LINK&gt; element in the head section of a page does this. For example, a style sheet for Information Research might be called by using:</p>
+
+<p>&lt;LINK REL=&quot;stylesheet&quot; TYPE=&quot;text/css&quot; HREF=&quot;irstyle.css&quot;></p>
+
+<p>Virtually every aspect of the visual presentation of text can be covered by using CSS, from the font face and size to background colours and borders. The tag of the following paragraph has been given a STYLE statement that produces the following result:</p>
+
+<span style="background-color: Aqua; border: medium ridge Fuchsia; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: medium; font-style: italic; margin: auto auto auto auto; padding: 25px; width: 600px; background-position: center; margin-left: 50px; text-align: justify;">So, where does the 'cascade' enter the picture? Here's Meyer: "The cascade order provides a set of rules for resolving conflicts between different style sheets. Styles with more weight (those defined at a more specific level) take precedence over styles with lower weight."</span>
+
+<p>This means that a style statement at the page level will have priority over style defined in the HEAD section.</p>
+
+<p>Meyer's little book (it really will fit into a (large) shirt pocket) deals with these basic issues and then provides two reference lists. The first list is of all properties that can be assigned in CSS, together with information on which browsers support them, up to Internet Explorer 5.5 and Netscape Navigator 6.0. The second list is a kind of extension of the first, which shows how the browsers support CSS on the Macintosh and Windows operating systems.</p>
+
+<p>This is a useful book and certainly well worth the price to the professional Web designer.</p>
+
+<span style="font-size: small; font-style: italic; font-family: serif; font-weight: bold; color: Maroon;"><a href="http://www.meyerweb.com/eric/">Eric A. Meyer</a>  <i>CSS Pocket Reference</i>. Sebastopol, CA: <a href="http://www.oreilly.com/">O'Reilly</a>, 2001.  91pp. ISBN 0-596-00120-7  Price $9.95</span>
+
+<h2><a name="val"></a>XHTML, the future of HTML</h2>
+
+<p>CSS are simply an extension to standard HTML, providing more ways to represent the text than with HTML alone. With XHTML we move on to rather different ground. This too is an extension of HTML (the X, as in XML, means 'extensible'), but of a rather more significant kind. The authors of <i>XHTML</i> describe their aims as being to explain (in shortened form): </p>
+
+<ul>
+<li>the relationship between XHTML and HTML and between XHTML and XML;</li>
+<li>how to use XHTML as readily as HTML;</li>
+<li>how to use the XML structure of XHTML properly, so that maximum benefit may be derived from it;</li>
+<li>how to convert HTML to XHTML;</li>
+<li>the mechanisms available in XHTML to control how a page will looked when viewed in a browser;</li>
+<li>how to deal with multimedia and graphics;</li>
+<li>how to provide interactivity; for example, through forms;</li>
+<li>how to use advanced linking techniques; and</li>
+<li>emerging trends in Web design and the impact of the XML and XHTML specifications.</li>
+</ul>
+
+<p>As a Web designer with a specific interest, my questions are rather simple: What is the relationship between HTML and XHTML?, Why should I use XHTML for <i>Information Research</i>?, and What are the implications for browser users if I do switch? These are the questions I shall try to answer in this review, as far as I can discover the answers from the text.</p>
+
+<p>First, as to the HTML/XHTML relationship. The answer is found in the first chapter and is rather straightforward.  HTML version 4.01 has been decreed by the W3C as the final version of the mark-up language. In future, all development will focus on XHTML, which is defined as a 'vocabulary' (or special application) of XML. XHTML documents, therefore, are XML documents and XHTML serves the purpose of rewriting the HTML standard in terms of XML. </p>
+
+<p>Everyone who is bothering to read this review will be aware that HTML has grown in rather haphazard ways. Originally a sub-set of SGML it has been amended by the browser vendors (Microsoft and Netscape) to serve more than the original purpose of the layout of scientific documents. The aim of XHTML is to take HTML back to its roots as a genuine mark-up language, by imposing the stricter syntax of XML.</p>
+
+<p>How does this work? Well, the first thing we have to learn is that it all depends upon which 'flavour' of XHTML we intend to use - the Transitional, the Strict, or the Frameset. The Transitional version is so-called because it has all the elements of HTML 4.01, and allows backward compatibility with older browsers, while the Strict version does not allow any of the HTML elements or attributes (such as FONT and its attributes like 'color') that affect page presentation - that function is left to style-sheets. The purpose of the Frameset version is probably evident from the name - it is designed for those who wish to present pages in frames.</p>
+
+<p>Given these different flavours, however, <em>all</em>  XHTML documents must observe the syntax rules of XML. Some of these are relatively painless, such as XML being case-sensitive - lower-case text is used for all elements and attributes; that all elements must have both opening and closing tags; or that quotation marks are required for attribute values.  Others require a little more thought, especially if you use an HTML editor which doesn't function according to XML, thus, in Homesite, if I hit the &lt;br&gt; button, I get the notation shown, while in XHTML it ought to appear as &lt;br /&gt;, observing the rule that all 'empty' elements require a space before the '/' and the &gt; symbol (as well as the rule that closing tags are required for all elements). All elements must also be nested properly, i.e., the element you opened last must be closed first, thus &lt;p&gt;&lt;em&gt;<strong>this sequence</strong>&lt;/p&gt;&lt;/em&gt; is incorrect, while &lt;p&gt;&lt;em&gt;<strong>this is</strong>&lt;/em&gt;&lt;/p&gt; correct.</p>
+
+<p>To ride a hobby-horse for a moment, I generally try to nest elements correctly in any event, and one of the things that annoys me about conversion programs, such as that that comes with Word, is that the conversions appear to function simply on the sequence of keystrokes used by a writer &ndash; invariably, this means that the nesting is incorrect and the end-tags of elements can crop up in all kinds of unexpected places.</p>
+
+<p>The simple rules of XHTML are as set out above: however, to be a valid XTML document, using the XHTML vocabulary, you must also ensure that some other rules are observed:</p>
+
+<blockquote>First, you have to become acquainted with the XML concept of a DTD, or Document Type Definition. A DTD is a statement of what tags a document can use and what they may contain. For XHTML there are three possible DTDs, related to the 'flavours' discussed earlier, that is, DTDs for the Transitional, Strict, and Frameset possibilities. Your XHTML must adhere to one of these DTDs, to be recognized as a valid XML document. </blockquote>
+
+<blockquote>Secondly, a valid document must begin with an XML declaration along with a DOCTYPE declaration that specifies which of the three 'flavours' is being followed.</blockquote>
+
+<blockquote>Thirdly, an XHTML 'namespace' must be declared: this is necessary because XML allows for the creation of elements by authors and system developers that are specific to their applications. The namespace declaration simply tells the system where the information on those elements can be found. Since XHTML is a public vocabulary of XML, the namespace is also public and the url appears in the &lt;html&gt; element.</blockquote>
+
+<p>Thus, the beginning of an XHTML document (using the Strict definition) will have the following initial statements:</p>
+ 
+<p>&lt;?xml version="1.0"&gt;<br />
+&lt;!DOCTYPE html<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"DTD/xhtml-strict.dtd"&gt;<br />
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</p>
+
+<p>It seems that this is just about all you need to know to get started, but of course, there's more to it than this. To begin with, you have to ensure that you are using the elements specified in XHTML specification and <strong>only</strong> those elements. Consequently, more than seventy pages are taken up with an alphabetical list of the approved elements, along with the rules for their use. There follow chapters on converting HTML to XHTML (and a freeware package, HTML Tidy, is provided on the CD-ROM to assist with this), on working with Web development tools (such as editors), and, of course, a chapter on working with style sheets. A persuasive example is offered to show the economy that results from using style sheets - and, of course, if you put a style sheet (or a set of style sheets) in a separate file, all the pages in an entire site can be 'styled' without having to re-write the styles on each occasion.</p>
+
+<p>With the chapter on styles, we come to the end of the basic XHTML information and, thereafter, the chapters deal with what might be called the 'bells and whistles'. So, after style sheets, we have treatment of XSL, the Extensible Stylesheet Language; XForms - an extension (still in progress) of the forms feature of HTML; working with scipts and other things; using multimedia and graphics; and advanced linking techniques (where we learn more Xs - XLink, XPointer, and XPath). The final two chapters deal with the benefits of extensibility, and the future of XHTML and XML. There are also appendixes covering the W3C specification for XHTML, tables of XHTML elements and attributes, an alphabetical list of CSS properties, a compendium of HTML, XML and XHTML resources, and a glossary.</p>
+
+<p>What of those other two questions of mine? Why should I use XHTML for <em>Information Research</em>? Well, since HTML is being replaced by XHTML, it seems wise to do so, and, who knows, perhaps turning the papers into XML documents through XHTML will give rise to other possibilities. And the question of browsers? This is trickier because older browsers are not XML processors and may do odd things like not recognizing the XHTML definition string. However, given that the latest browsers from Microsoft and Netscape are freely available, as is Amaya, from W3C itself, and the price of Opera is low, I cannot see this being a problem for too long. And is there <strong><em>really</em></strong> anyone out there who is still using a text-based browser for <strong><em>serious</em></strong> Web surfing and searching?</p>
+
+<p>This is a useful book and anyone thinking of moving on from HTML (as I guess we all must) will want it, or something like it, to help them to make the move. It is more of a desk reference than a textbook, but does include some instructional material along the way.</p>
+
+<p>However, I have some grouses: the type-size is too small for easy reading and appears to be rather 'thin' on the page; the authors are also rather repetitious at times and occasionally either obtuse or confusing in their use of language - what are we to make of a sentence like this, for example: 'Markup is intended to describe the part of content that makes up a document.' particularly when we are later on the same page told, '...the main purpose of markup is to describe content.' Perhaps a better editor could have reduced the text to the point at which a larger type-size could have been used without increasing the number of pages, as well as making it more immediately intelligible.</p>
+
+<span style="font-size: small; font-style: italic; font-family: serif; font-weight: bold; color: Maroon;"><a href="http://www.lanw.com/staff/cvbio.htm">Chelsea Valentine</a> &amp; <a href="http://www.minnickweb.com/home.html">Chris Minnick</a> <i>XHTML</i>. Indianapolis, IN: <a href="http://www.newriders.com/">New Riders Publishing</a>, 2001. xix, 408, [20] pp. ISBN 0-7357-1034-1 Includes CD-ROM with examples and third-party software. Price $39.99/£30.99</span>
+
+<h2><a name="ray"></a>...and on to XML?</h2>
+
+<p>And so we move on to XML proper, somewhat prepared by now for that seemingly arcane world. Somewhat confusingly, although 'XML' means Extensible Markup Language, XML is <em>not</em> a markup language, but '...a toolkit for creating, shaping, and using markup languages', as Erik Ray tells us on the first page of the Preface to his <em>Learning XML</em>. But then, even more confusingly, we are told that XML is a 'data storage toolkit', that 'XML can store and organize just about any kind of information in a form that is tailored to your needs'. This appears to be overstating things, to say the least. The markup languages, or XML vocabularies that are produced according to the rules of XML, do not 'store' anything, they describe documents - the storage of those documents is something quite separate, taking some physical form such as a server disc, or whatever. A good editor ought to have picked up something like this and prevented it, but it seems that publishers are spending less and less on the editorial process these days, encouraged, presumably, by the delivery of electronic copy from the author.</p>
+
+<p>However, now that another grouse is off my mind, what kind of a book has Ray produced here? Well, the first five chapters deal with the basics of XML, from a general introduction, the basics of markup - elements, attributes, entities, along with XML-specific concepts such as namespaces, and the idea of an 'application' or 'vocabulary'; using links in XML documents, introducing XPointer, XLinks and another DTDs and XML Schema.</p>
+
+<p>These chapters are all well illustrated with appropriate diagrams and examples. For example, the chapter on 'Markup and core concepts' has an extensive illustration of the application of the basic XML rules in the shape of the XML application, DocBook, a markup language for technical documentation. Similarly, in the chapter on stylesheets, the illustration is that of a stylesheet for an XHTML document. I found the treatment here rather more helpful than in the previous book, with good diagrams used to illustrate points. Finally, the chapter on document models uses a 'bare bones' version of DocBook to illustrate the concept of a document type definition. This is quite complicated enough for a beginner to take on board! Evidence of the speed with which XML and its various spin-offs are developing is that DTDs are now in the process of being replaced by XML Schemas. The reason for this is that, paradoxically, DTDs do not follow the rules of XML, whereas XSchemas (as they are also called) do. XSchemas also allow for predefined data types, such as time, date, Boolean, etc., thereby providing for validation to catch entry errors in, for example, mobile applications.</p>
+
+<p>The last three chapters deal with 'transforming' XML documents; the internationalisation of XML by the adoption of Unicode as the character coding standard; and programming for XML. </p>
+
+<p>The chapter on transforming documents is probably the most important of these for the beginner in XML. Transformation involves the use of another 'X', XSLT or Extensible Style Language for Transformation. XSLT allows you to write a stylesheet which will take an XML document and convert it into, for example, an XHTML document. The examples here would have been more useful if a CD-ROM had been included, but all of them are to be found in a .zip file on the <a href="http://www.oreilly.com/catalog/learnxml/">O'Reilly Web site for the book</a>.</p>
+
+<p>In spite of my beginning grouse, this is a sound piece of work on XML.  Clearly, with a developing standard such as XML nothing ever stays still for long and the various applications and tools appear at a disconcerting rate. However, if you begin with a book like this and take in the fundamentals thoroughly, there is no reason why future developments will not be manageable.</p>
+
+<span style="font-size: small; font-style: italic; font-family: serif; font-weight: bold; color: Maroon;"><a href="http://world.std.com/~eray/biz/resume.html">Erik T. Ray</a> <i>Learning XML</i>. Sebastopol, CA: <a href="http://www.oreilly.com/">O'Reilly</a>, 2001. xii, 354 pp. ISBN 0-596-00046-4  Price $34.95</span>
+
+<h5>Professor Tom Wilson<br />
+Publisher/Editor-in-Chief<br />
+June 2001</h5>
+<hr size="2" style="color:#000080;" />
+
+</td>
+<td width="1%">&nbsp;</td></tr>
+</table>
+
+</body>
+
+<!-- Mirrored from informationr.net/ir/reviews/revs033.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:30:45 GMT -->
+</html>

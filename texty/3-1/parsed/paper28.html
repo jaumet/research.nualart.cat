@@ -1,0 +1,794 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/3-1/paper28.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:38:07 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="../IRstyle.css">
+<title>The TAPin electronic libraries project and the experience at the University of Birmingham </title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="networked learner support, on-line learning, online, distance <span>education</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> telematics, university, academic, library, information literacy">
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> content="The TAPin Project and its implementation at the University of   Birmingham is described. Local issues and key <span>features</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of a <span>hybrid</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>approach to   Networked Learner Support are addressed. The methods of NLS adopted included   electronic mail and the Internet. The key role in NLS played by subject   librarians is stressed. Transfer of skills to learners by means of targeted  individual training and a web guide is discussed.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<link rel=schema.vw96 href="http://vancouver-webpages.com/META/VW96-schema.html">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="The TAPin electronic libraries project and the experience at the 
+  University of Birmingham ">
+<meta name="DC.Creator" content="Tracy K. Mulvaney">
+<meta name="DC.Subject" content="The TAPin electronic libraries project and the experience at the 
+  University of Birmingham ">
+<meta name="DC.Description" content="The TAPin Project and its implementation at the University of  Birmingham is described. Local issues and key <span>features</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of a <span>hybrid</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>approach to  Networked Learner Support are addressed. The methods of NLS adopted included  electronic mail and the Internet. The key role in NLS played by subject  librarians is stressed. Transfer of skills to learners by means of targeted  individual training and a web guide is discussed.">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 3  No. 1, July 1997</h4></td></tr>
+  <tr> 
+    <td><a href="infres31.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+  <h1>The TAPin electronic libraries project and the experience at the University of Birmingham </h1>
+  <h4>Tracy K Mulvaney<br>Education Liaison Librarian<br> Learning and Research Support, Information Services, <br>University of Birmingham, Birmingham, UK
+<br>
+
+<div align="center">Abstract</div>
+  
+<blockquote>  The TAPin Project and its implementation at the University of 
+  Birmingham is described. Local issues and key <span>features</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of a <span>hybrid</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>approach to 
+  Networked Learner Support are addressed. The methods of NLS adopted included 
+  electronic mail and the Internet. The key role in NLS played by subject 
+  librarians is stressed. Transfer of skills to learners by means of targeted 
+  individual training and a web guide is discussed. </blockquote>
+  <br>
+  <h3>Introduction</h3>
+  
+  <p>The University of Birmingham became involved with the 
+  Training and Awareness Programme in Networks (TAPin) Project in 1995. The 
+  project, funded through the HEFCE Electronic Libraries programme(1), aims to</p> 
+  
+  <blockquote>"<span>establish</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>models for the effective transfer of skills in 
+    utilising networked resources"(2) </blockquote>
+	
+<p>	It aims to change the 
+  Information Technology culture within the academic <span>community</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by strengthening 
+  internal support <span>roles</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for both librarians and academic staff. From this 
+  position of shared knowledge and combined strengths, TAPin will deliver 
+  effective and carefully targeted training and support by </p>
+  
+  <blockquote>"... enhancing the expertise of academic staff in the 
+    appropriate exploitation of networked information resources" (3) 
+  </blockquote>
+  
+<p>  As the expertise of academic staff member increase, this will 
+  have a positive effect on the IT culture of the institution. Further, if the 
+  expertise is to be maintained, internal support needs to take account of the 
+  technologies under scrutiny. Full <span>details</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of the TAPin project have been 
+  reported elsewhere(4). This paper focuses on the implementation of the TAPin 
+  Model at the University of Birmingham and addresses some of the issues 
+  surrounding support for the technologies. One of the strengths of TAPin was 
+  its "focused, local and <span>practical</span>" <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> approach to developing and adapting methods 
+  of support for the effective transfer of skills. The <span>focus</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>on local 
+  implementation allowed the TAPin team at Birmingham to develop <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of 
+  support and training (online and others) which could take account of local 
+  circumstances.</p> 
+  
+<p>The recent development of networked technology into the educational 
+  <span>environment</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>has prompted a re-examination of the support for, and support of, 
+  training. Subject librarians have always played a key role in providing this 
+  support and training for information retrieval. This traditional role can 
+  perhaps best be seen as re-active. With the increase in IT, subject librarians 
+  are able to become more pro-active using the networked technology available. 
+  This key role builds on, and extends, the approach endorsed by Follet(5) and 
+  Fielden(6). By <span>taking</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>a leading role in supporting emerging technologies, 
+  subject librarians act as significant cultural change agents in the 
+  educational <span>environment</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>they are part off.</p>
+   
+<p>In adopting the TAPin model to the local <span>environment</span>, <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> it became apparent 
+  that Networked Learner Support(7) is an integral <span>feature</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of this approach. The 
+  Support <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>formed</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>a <span>hybrid</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>approach using both new and existing 
+  technologies. In order to understand the support <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>provided, it is 
+  necessary to provide some detail about the institution of the University of 
+  Birmingham and the local <span>environment</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in which it operates.</p> 
+  
+  <h3>The University of Birmingham</h3>
+  
+<p>  The University of Birmingham was <span>founded</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  by a Royal Charter granted in 1900. There are 32 Schools which are <span>divided</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  into 7 Faculties. It has over 15000 full time <span>students</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and over 1300 staff. 
+  Networked services form part of the remit for Information Services.</p>
+   
+  <h3>Information Services at the University of Birmingham</h3>
+  
+  <p>Information 
+  Services at the University was <span>established</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in October 1995 in order to 
+  "integrate the planning, management and delivery of academic information 
+  services to support the <span>teaching</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> learning and research on campus"(8). The 
+  convergence into Information Services of the University Library, Academic 
+  <span>Computing</span>, <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Television and Film Services, together with the Centre for <span>Computer</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  Based Learning strengthened the provision of Information Services on campus 
+  and saw networked access to the new technologies put high on the agenda. The 
+  libraries of Information Services comprise 10 libraries with the <span>Main</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Library 
+  and the Education site Library housing the <span>education</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>stock.</p> 
+  
+  <p>Following the convergence a new Learning and Research Support Division was 
+  <span>established</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> The Division brings together staff from a <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of information, 
+  computing and media <span>backgrounds</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and skills to "deliver support for <span>teaching</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> 
+  learning and research"(9). The division is organised into four <span>discipline</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  based teams including Commerce and <span>Social</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Science, Education and <span>Law</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> LRS is 
+  positioned to support both open and resource based <span>modes</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of study using IT and 
+  networked information resources. This local power base of combined skills and 
+  shared knowledge of networked resources was in its infancy when the University 
+  joined the TAPin project.</p> 
+  
+  <p>The Information and <span>Computing</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Systems Division manages and develops the 
+  University's <span>network</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and other <span>central</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and distributed computing facilities. <span>A+</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  <span>modern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>High Speed Campus Network (HSCN) <span>network</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>management station was 
+  recently installed to facilitate networked access on campus and this <span>network</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  (HSCN) is connected to the academic <span>network</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> SuperJANET. Although there is no 
+  agreed ongoing HSCN investment strategy to ensure the <span>continued</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>use of the 
+  infrastructure, a draft strategy is in progress.</p>
+  
+  <p>The reorganised management and service structures allows Information 
+  Services to be responsive (and hence pro-active) to the changing academic 
+  shape of the University. The infrastructure helps to promote networked support 
+  and ensured a good reception for the TAPin Project.</p>
+   
+  <h3>The TAPin project at the University of Birmingham</h3>
+  
+<p>  The University of 
+  Birmingham participated in two of the four subject areas targeted for the 
+  TAPin project - Education and Life Sciences. For the <span>purposes</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of this paper, 
+  the approach adopted is described for implementation within the Education 
+  subject area. All the librarians involved in TAPin at the University 
+  contributed to the development of the model and helped pull together the 
+  networked learner support delivery <span>mechanisms</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p>
+   
+  <h3>The School of Education</h3>
+  
+ <p> The Education subject area at the University 
+  of Birmingham forms part of the School of Education in the Faculty of 
+  Education and Continuing Studies. The School <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>research degrees, initial 
+  teacher <span>education</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and professional development of teachers and others engaged 
+  in <span>education</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p> 
+  
+  <h3>Research Base</h3>
+  
+  <p>The School has, over two assessment periods, <span>achieved</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  and sustained 5A standing in the RAE (10). It attracts a large number of 
+  externally funded research projects and regards itself as firmly in the top 
+  three national centres for <span>education</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>research. The strong research base in the 
+  School confirmed for the TAPin Trainer (the <span>term</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>used <span>throughout</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to describe 
+  the role of the subject librarian at the University of Birmingham) the 
+  importance of support for TAPin members (the <span>term</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>used <span>throughout</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to describe 
+  the academic staff members from the School of Education) if the networked 
+  resources were to be exploited to <span>maintain</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the RAE grade.</p>
+   
+  <h3>Equipment standards</h3>
+  
+  <p>For historical and cultural reasons, the School of 
+  Education supports both <span>PC</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>(c89) and Macintosh (c32) machines although not 
+  always to the same level. (MAC machines were originally bought by the Distance 
+  Education unit when they were a self financing department). This <span>lack</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of 
+  standardisation causes some <span>concern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>over the level of support. There are also 
+  indications that MAC <span>software</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>running on machines is falling behind the <span>PC</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  equivalents. Equivalent <span>software</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>is not <span>necessarily</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>loaded onto every machine 
+  within the department. Software is often loaded onto staff machines on request 
+  rather than as a matter of course by the IT support Officer in Education. The 
+  TAPin Trainer had to work closely with the <span>Computer</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Officer to ensure 
+  appropriate <span>software</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>was loaded. Issues of cross platform support pushed the 
+  potential delivery <span>mechanism</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>towards the Internet.</p>
+   
+  <p>The prevalence of MAC machines made <span>network</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>support even more difficult as 
+  the TAPin Trainer had to overcome a steep learning <span>curve</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>with MAC machines 
+  before training and the support could be <span>offered</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p>
+   
+  <p>The TAPin Annual Report had advised TAPin Trainers to target staff who had 
+  Internet access and a 486 or pentium processor <span>desktop</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>computer</span>. <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> However, this 
+  was not possible or <span>practical</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in the School of Education with this large 
+  number of MAC machines and whose users made up a large percentage of the TAPin 
+  <span>sample</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p> 
+  
+  <h3>Access to the Library Information Network</h3>
+  
+ <p> Access to a <span>major</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>networked 
+  resource available at the University, the Library Information <span>network</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>is not 
+  available using a MAC machine. The Library Information Network provides access 
+  to around 60 cd-roms and other networked databases but cannot be accessed from 
+  the desktops of 35% of academic staff in the School of Education. The scale of 
+  need, coupled with the diverse nature of <span>hardware</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and <span>software</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>available 
+  within the School, placed a high demand on the networked support which could 
+  be provided.</p>
+   
+  <h3>The Local <span>Approach</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by the University of Birmingham</h3>
+  
+  <p>The local approach 
+  to the implementation of the TAPin model has two parts. First, TAPin trainers 
+  set about <span>establishing</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the who, where and what could be developed in the 
+  model. Second, the issue of how training would take place and the networked 
+  support which could be provided were examined. The first issue will be dealt 
+  with briefly <span>followed</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by a more in depth examination of how the training was 
+  provided and <span>supported</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p>
+   
+  <h3>The Sample</h3>
+  
+  <p>A <span>sample</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of staff members (20%) within the School of 
+  Education at the University, who had taken part in the Initial Questionnaire 
+  Survey were identified to take part in the second stage. Staff members who 
+  expressed a desire to be trained and those who were generally keen to learn 
+  were targeted. All the targeted staff were research active. The model focused 
+  on supporting the research activities of TAPin members and bringing them up to 
+  speed on <span>network</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>skills. This reinforced the strong research base of the 
+  School. Supporting the technology for <span>teaching</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>was not addressed.</p>
+   
+  <p>A Training schedule was produced to take place on a flexible, informal 
+  basis, being <span>held</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>within their own offices, and inviting non-threatening and 
+  supportive training. This targeted approach would produce a "core of 
+  champions" for networked learning who would, in turn, cascade and transfer 
+  networked learning and support <span>throughout</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the School.</p>
+   
+  <h3>Networked Learner Support </h3>
+  
+  <p>The Training Programme <span>devised</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>covered a 
+  <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of electronic and printed information sources and can be found in 
+  <span>Appendix</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>A. The "Mix and Match" approach was felt <span>essential</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>given the wide 
+  <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of IT skills, <span>held</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by TAPin members &amp; identified by the TAPin 
+  questionnaires. As a result, several training methods and different levels of 
+  support were identified. Only those using the networked technologies will be 
+  described here under five headings</p>
+   
+  <blockquote>a) Orientation around Information Services 
+    <p>b) Training and support for networked Online and <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>resources 
+    <p>c) Training and support for the Internet as a research tool 
+    <p>d) Training and support for other IT <span>applications</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+    <p>e) Networked learner support for communication</p></blockquote>
+	
+  <h4>a) Orientation around Information Services</h4>
+  
+ <p> The recent transfer of the 
+  old electronic library guide to the new, updated Web Library Guide(11) 
+  coincided with the launch of the TAPin project at the University of 
+  Birmingham. The web library guide is a hypertext guide which gives guidance to 
+  users on the subjects and services available in the <span>Main</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Library. Research 
+  material <span>held</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in the <span>Main</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Library complements the focused collections built up 
+  in the Education Library.</p> 
+  
+  <p>This <span>mechanism</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of delivery support affords the user the ability to improve 
+  his or her library skills on an individual basis from the <span>network</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> The guide 
+  is being developed to link to a web study skills project.</p> 
+
+  <h4>b) Training and support for networked Online and <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  resources</h4>
+  
+ <h5>Work booklets on the Web(12)</h5>
+  
+  <p>The first area of 
+  support to be developed using online <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>was that of publications. 
+  <span>Publications</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>are perhaps one of the largest assets Information Services has. 
+  The <span>Publications</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>budget within Information Services is around twenty thousand 
+  pounds and covers a <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of guides and leaflets.</p>
+   
+  <p>It was felt that publications were a <span>suitable</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>support tool to mount on the 
+  web. This gave publications a certain "<span>added</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>value". It also allows MAC and <span>PC</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  users the opportunity to view them because of the cross platform nature of the 
+  Internet. Further, it ensured that materials were available "on demand", 
+  providing users the opportunity to approach their learning in an incremental 
+  way. This "time shift" element was seen as important for TAPin members, 
+  allowing users to work at their own pace at a time convenient to them.</p>
+   
+  <p>However, the <span>established</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>programme has over 100 publications and so it was 
+  not possible, nor deemed appropriate, to load them all. The work had to be 
+  prioritised. <span>A+</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>suite of work booklets, covering a <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of networked 
+  resources, were produced. The Internet "work booklet" lent itself to be 
+  initially launched on the web page, because the worked examples could become 
+  live <span>links</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> An example of the work booklet can be viewed in <span>Figure</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>1. (The 
+  irony of a web guide being on the web was not lost). The booklet described 
+  examples using Netscape browser.</p> 
+  
+  <center>
+  <h4>Figure 1</h4><a 
+  href="../mulfig1.gif" height="567" 
+  width="800"><img alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>1" height=200 src="mulfig11.gif" 
+  width=320> </a></center>
+  
+  <p>The Internet guide was produced using "front page" <span>software</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and then loaded 
+  onto the TAPin Web Page by the Web master. The advantage of loading the guide 
+  in <span>HTML</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>format is that it provides user to ability to browse. Also, the pages 
+  can be indexed by <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines and gateways. There are plans to mount the 
+  work booklets in a portable document format so that they can be printed out to 
+  look like their original paper format.</p>
+   
+  <p>Other work booklets in the suite were loaded but, initially, only as plain 
+  text files. This was partly because the services described in the work 
+  booklets were not available on the web. Once the booklets were launched on the 
+  web (even as plain text) the services described were transferred into the web 
+  environment! Support was being <span>offered</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>on a basic level but none the less was 
+  there. The work booklets enabled TAPin members to work at their own pace and 
+  to refer back to a particular resource.</p> 
+  
+  <h5>Production and maintenance costs</h5> 
+  
+  <p>Mounting the Guides put the information into the public <span>domain</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> and shifted 
+  the printing costs, to some extent, to the School, and away from the 
+  Information Services already heavily committed publications budget. Production 
+  and maintenance costs of the work booklets (in print and on the web) was 
+  expensive. It took around 40 <span>person</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>hours to produce and mount the guides. 
+  Revision was necessary as soon as the guides went live. (The TALIS Library 
+  catalogue and the BIDS service are now available on the Web!). Also, the TAPin 
+  assistant has had to spend time checking that the booklet <span>links</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>are still 
+  active. These costs, together with the time needed to learn new <span>software</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>such 
+  as Front Page, were borne by the TAPin project investment.</p>
+   
+  <p>Not all TAPin members welcomed this <span>move</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>away from supplying hard copy of 
+  publications (although in fact printed copies were still available). Printing 
+  in the School was not always easy and not all TAPin members had access to 
+  their own printers. This was compounded by the fact that several TAPin members 
+  worked from home and preferred to make hard copies. Concern was also expressed 
+  distance <span>education</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>students</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>(c800) may not be able to take advantage of this 
+  support because they did not have access to appropriate <span>equipment</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Although 
+  online delivery means wider dissemination, this support was not always 
+  welcomed.</p>
+   
+<h5>  User Guides loaded onto the Library Information Network</h5>
+   
+  <p>The Library information Network is networked across campus to <span>PC</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>based 
+  machines, and provides access to over 60 cd-rom and floppy diskettes 
+  databases. To help TAPin members utilise the research potential of the LIN the 
+  in-house guides have been made available under the &lt;F1&gt; function keys on 
+  the <span>Main</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Menu as plain text files on the <span>Main</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Library <span>CD</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Server. Distribution 
+  of the guides in this format ensures that when staff and <span>students</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>access the 
+  LIN in the Library or at their desk top, they are able to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>immediate 
+  support for the specific database being searched.</p> 
+  
+  <p>As with printed guides, web guides need to be kept current and <span>accurate</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> 
+  Re-writing the guides, although time consuming, is relatively cheap. Few 
+  printing costs are involved. The three key database guides to the <span>education</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  area have also been loaded onto the web on the TAPin pages to alert users to 
+  their existence. This is particularly important for the MAC users who do not 
+  have <span>direct</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>access to the LIN. Networked support is also provided by the 
+  Information and <span>Computing</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Systems division(13).</p> 
+  
+  <h4>c) Training and support for the Internet as a research tool</h4>
+  
+ <p> Training 
+  TAPin members to exploit the Internet for research fell into two areas. 
+  Members who had little or no knowledge of what the Internet was or members who 
+  had <span>difficulty</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>locating appropriate information. Complete novices were guided 
+  to the work booklets outlined above to begin their training. Following that, 
+  online support was <span>offered</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>through a current awareness service and a 
+  elementary gateway.</p> 
+  
+<h5>  Individual Current Awareness for TAPin members on the web(14)</h5>
+   
+  <p>Setting up a current awareness service is difficult, and no more so than on 
+  the web. TAPin members supplied five key terms to <span>represent</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>their research 
+  interests. The key to an effective Current Awareness Service is ensuring that 
+  the service is tailored. Obtaining keywords which adequately describe TAPin 
+  members interests was more difficult than <span>expected</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Several members did not 
+  want to commit themselves to only five specific keywords, whilst others 
+  <span>offered</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>very broad topics (ie. <span>education</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> management) without much <span>concern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  that this would generate too many resoruces. Information on the opening 
+  Current Awareness screen prompts TAPin members to advise if the key words they 
+  have supplied need to be updated.</p>
+   
+  <p>The key terms supplied were then used to <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>a number of gateways and 
+  <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines to locate useful resources. The resources were then evaluated 
+  for relevance and annotated by the TAPin trainer. They were then <span>added</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to the 
+  TAPin members page on the web.</p> 
+  
+  <p>To provide a sense of individuality, password control was <span>added</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> This 
+  entailed TAPin members to enter a password into their own Home page. There has 
+  received mixed reactions. Some felt it was yet another "thing" to remember 
+  when you are searching whilst others felt it provided them with a sense of 
+  privacy to what is, in effect, perhaps their own work. The networked support 
+  <span>mechanism</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>was able to inform the research base of the School for TAPin 
+  members.</p> 
+  
+  <p>Most searching is conducted once a month, although if resources are located 
+  at other times and fit the criteria they are mounted immediately. Using the 
+  web as a support tool ensures that the resources identified are current 
+  (although this is not always easy to establish). Further, it extends the <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  of services which can be identified for the TAPin member such as ftp sites or 
+  other <span>software</span>. <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p> 
+  
+  <p>Throughout the duration of the TAPin project, the Research team at TAPin 
+  have supplied <span>details</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of key educational resources they have located using the 
+  electronic mail system and the Internet. This helped in the initial stages 
+  once <span>details</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of the TAPin members interests were provided. Electronic mail was 
+  also used by TAPin partners to disseminate information on new resources which 
+  could be <span>added</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to this service. 
+  <p>The current awareness service adds value to networked support provided and 
+  alerts TAPin members to available networked resources. Support by Information 
+  Services for a current awareness service is a new development and its 
+  effectiveness yet to be realised.</p> 
+  
+<h5> Elementary Education Gateway(15)</h5>
+  
+  <p>During preparation for the TAPin members Training Programme it became 
+  obvious that there is no one single (or obvious) gateway to educational 
+  resources. TAPin members are directed towards SOSIG and/or specific Home Pages 
+  of other Schools of Education although little was available on the Information 
+  Services Home Page and the School of Education have yet to launch their own 
+  home page.
+   
+  <p>The TAPin Trainer set about devising an elementary gateway to educational 
+  resources using SOSIG(16) as a model. The Gateway was arranged in broad 
+  subject areas corresponding to the four management areas of the School of 
+  Education and which were <span>represented</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by the TAPin members. Resources were 
+  located using the same methods as the current awareness service, that is, by 
+  searching within a profile of key terms appropriate gateways and <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  engines. The resources were evaluated using criteria based on relevance, 
+  authority of the material and comparability with related sources. The 
+  resources were then <span>added</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to the web page with annotations. The opening page 
+  is shown in <span>Figure</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>2 
+  <center>
+  <h4>Figure2</h4><a 
+  href="../mulfig2.gif" height="567" 
+  width="800"><img alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>2" height=200 src="mulfig21.gif" 
+  width=320> </a></center>
+  
+  <p>The gateway seeks to inform staff of new sites, subject guides, <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  engines, discussion lists, FAQ archives, databases and <span>teaching</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>materials 
+  which have been mounted on the Internet. For the duration of the Project, the 
+  resources are mounted on the TAPin web pages at the University. At present 
+  this resource is not searchable. 
+  
+  <p>The TAPin web pages are complemented by the new Information Services 
+  Guide(17) which replaces the Library Home Page. The IS <span>Guide</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>is <span>beginning</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to 
+  provide, amongst other things, a FAQ on <span>reference</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>services. The development of 
+  the FAQ <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>a simple but effective means of dealing with large <span>volumes</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of 
+  related resource enquiries (see Electronic Enquiry Service). The IS <span>Guide</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  provides support across the divisions of Information Services for all staff 
+  and <span>students</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>at the University. There is a link to the <span>main</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Education 
+  Resources on the IS guide from the TAPin pages. Duplication of effort is 
+  avoided by the same individual being responsible for the two educational 
+  resources on the IS <span>Guide</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>&amp; TAPin.</p>
+   
+<h5>  Skills level</h5>
+  
+  <p>Providing and maintaining the Education Gateway to resources draws upon the 
+  TAPin Trainer's subject and technical expertise. This technical expertise was 
+  helped by the TAPin project. The Interim Report for TAPin (18) found that 
+  librarians were wanting in a number of key areas of networked skills, 
+  including loading items onto the Internet. This skills gap had to be addressed 
+  before networked support could be <span>offered</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> TAPin provided a comprehensive 
+  training programme receiving <span>contributions</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>from other Elib projects such as 
+  Netskills and Edulib (19, 20). This training programme enabled the networked 
+  support to be better managed. At the University of Birmingham, professional 
+  development of LRS staff is <span>achieved</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by attendance on courses organised by the 
+  Staff <span>Development</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Unit or other internal training session, many of which are 
+  organised through an Awareness Seminars programme. The training for TAPin 
+  Trainers and that provided by the University is provided at a cost to both the 
+  University (in releasing the TAPin Trainer) and to TAPin. In offering support 
+  account needs to be taken of the skills levels of the subject librarians 
+  involved.</p> 
+  
+  <h4>d) Training and support for other IT applications</h4>
+  
+  <p>Networked Learner 
+  Support in <span>sections</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>a) to c) can perhaps best be seen as an <span>extension</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of the 
+  subject librarians traditional role of offering training and support on 
+  printed information resources. Developments in IT and the convergence of 
+  Information Services has <span>extended</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the support to cover more generic IT 
+  <span>applications</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> This support is aided by inclusion in the converged Information 
+  Services of the Centre for <span>Computer</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Based Learning. Open Learning <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the 
+  potential for enhancing learning for all. Although the Open Learning Menu was 
+  not developed for TAPin, the TAPin trainer was able to call upon its support 
+  to help more technophobic TAPin members to improve their IT skills.</p>
+   
+<h5> Open Learning Menu</h5>
+   
+  <p>Information Services has developed an Open Learning System recently 
+  launched and <span>added</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to the Library Information Network. The Menu provides 
+  networked support to a <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of <span>computer</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>based learning and <span>computer</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>assisted 
+  learning packages which includes both in house material and commercially 
+  produced packages. The Menu <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>access to other IT <span>applications</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>including 
+  study skills, a student assessment facility and <span>computer</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>assisted language 
+  learning courseware for international <span>students</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> This type of networked support 
+  enables self paced learning over the <span>network</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Open Learning ensures that the 
+  process of learning encourages greater proficiency in the use of computing and 
+  IT skills.</p> 
+  <p>For other areas of IT <span>applications</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>not presently on the Open Learning Menu, 
+  or elsewhere, networked learner support was <span>limited</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> TAPin members are 
+  directed to commercial organisations who may provide demonstration discs of 
+  the application in question.</p> 
+  
+  <h4>e) Networked Learner support for communication </h4>
+  
+  <p>The Networked Learner 
+  Support outlined in the implementation of TAPin at Birmingham has described 
+  support for specific <span>applications</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and services to TAPin members. Networked 
+  Learner Support goes beyond this. The existing technologies can help 
+  facilitate communication between the information professional and academic 
+  staff. Communication and support were key elements in the successful 
+  implementation of the TAPin model. Email was already in place and is well 
+  <span>established</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>within Information Services and across the University. All TAPin 
+  members had access, and were users of, electronic mail. The strength it brings 
+  to the communication process is implicitly <span>accepted</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p> 
+  
+<h5>  Electronic Enquiry Service</h5>
+  
+  <p>The immediacy of support that electronic mail brings was recognised by the 
+  TAPin team. TAPin members were encouraged to email the TAPin Trainer with any 
+  enquiry they may have to build up an electronic enquiry service. The number of 
+  messages increased over time. The TAPin Trainer was able to receive and 
+  <span>respond</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to general enquiries about the networked technology. As the number of 
+  messages increase, the TAPin Trainer is using the information to build up a 
+  Frequently Asked Questions database for members of the School of Education. 
+  This way the information received can be turned into a "knowledge garden" for 
+  networked learner support.</p>
+   
+  <p>The existing infrastructure at the University enables the Electronic 
+  Enquiry Service to be effective because Information Services manages all 
+  aspects of networking on campus and thus informs the process of support. This 
+  infrastructure has also enabled the TAPin Trainer to receive networked support 
+  from "experts" within Information services by re-directing electronic mail 
+  messages as required.</p>
+   
+  <h5>Current Awareness Service by electronic mail</h5>
+  
+  <p>The Individual tailored pages for TAPin members are complemented by an 
+  electronic Current Awareness Service utilising the electronic mail system. In 
+  consultation with colleagues in the Collection <span>Development</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Division, a Current 
+  Awareness Service is to be <span>offered</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to TAPin members for help with the 
+  <span>selection</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of new books for their research. Use is made of the Bookfind <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  and other sources to produce <span>regular</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>listings of newly-published books in 
+  their chosen subject areas, including abstracts and contents pages, as well as 
+  bibliographic and ordering <span>details</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> This information will be sent by 
+  electronic mail to TAPin members when new updates are secured.</p> 
+  
+  <p>Several TAPin members reported that they preferred this method of support, 
+  if only because they used electronic mail daily and were alerted to the mail 
+  messages when they <span>appeared</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> With the Internet access, although the references 
+  were of interest, it was felt that this service could be backed up by emails 
+  alerting them to the new services which had been loaded. TAPin staff had 
+  originally shied away from using email as this would still entail TAPin 
+  members having to re-key into the browser the address of the resource which 
+  can often be quite long.</p> 
+  
+  <h5>"Core of Champions"</h5>
+  
+  <p>There is now a core of staff members in the School of Education who have 
+  equipped themselves with the skills and confidence necessary to exploit the 
+  networked resources. Informal chats (or networking) with the TAPin members 
+  <span>indicate</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that the "<span>added</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>value" the support brought was welcomed. TAPin 
+  members felt more confident in using the technology and utilising the support 
+  <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that were available. This core of champions will be able to act as 
+  cultural change agents within the School of Education. This cultural change 
+  will be documented in the forthcoming Impact study of TAPin. TAPin members 
+  also reported informally, that they have helped colleagues understand some of 
+  the networked information services available. The intention is that this "core 
+  of champions" will increase as networked learning grows.</p>
+   
+  <p>Networked Learner Support <span>requires</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>a good <span>balance</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of expertise, drawing on 
+  a <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>IT skills, subject knowledge and technical support. The delivery 
+  <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>outlined help to aid access to, and effective use of, the 
+  technology available to academic staff at the University.</p>
+   
+<h5>  <span>Critical</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>factors in the TAPin Implementation at the University </h5>
+  
+  <p>The provision of networked learner support described was provided within 
+  the confines of a Project aiming to support academic staff in utilising 
+  networked resources effectively. That Project targeted individual staff 
+  members and was able to provide training and resources for the TAPin Trainer. 
+  The implementation does, however, highlight several <span>features</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>which are more 
+  widely applicable when efforts are given over to networked support including</p>
+   
+  <ul>
+    <li>the need to develop a profile of skills for subject librarian and the 
+    individual learner 
+    <li>establish standard of <span>equipment</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>which is to be <span>supported</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+    <li>make time to provide effective support 
+    <li>build in substantial costs 
+    <li>make the support and training appropriate to the researchbase </li></ul>
+	
+  <h3>Summary</h3>
+  
+<p>  The methods of support adopted are <span>easily</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>understood</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and make 
+  use of the existing technology, <span>namely</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>electronic mail and the Internet. The 
+  flexible nature of the support ensures that support is up to date and can take 
+  account of new developments. Barriers to offering support, identified by 
+  TAPin, have been addressed including <span>equipment</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>levels and IT skills. The costs 
+  involved in supporting the model have yet to be fully realised, although the 
+  Impact study on the TAPin project at the end of 1997 will provide feedback on 
+  this. It is hoped that this outline of the implementation process of the TAPin 
+  model at Birmingham goes some way to informing the process of networked 
+  learner support.</p> 
+  
+  <h3>References </h3>
+  
+ <p> 1 Electronic Libraries Programme web pages found at <a 
+  href="http://www.ukoln.ac.uk/elib/">http://www.ukoln.ac.uk/elib/</a> </p>
+  <p>2 Flatten, K and MacKenzie, N. TAPin : Training and Awareness programme in 
+  networks - Interim Report. Centre for Information Research and Training, 
+  Faculty of <span>Computing</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and Information Studies, UCE, 1996 
+  <p>3 Opt. Cit. 
+  <p>4 <span>Publications</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>from the TAPin Team found at <a 
+  href="http://www.uce.ac.uk/TAPin/reports">http://www.uce.ac.uk/TAPin/reports</a> 
+  <p>5 Joint Funding Council's Libraries Review Group Report (Follett Report) 
+  December 1993 
+  <p>6 John Fielden Consultancy, Supporting expansion: <span>A+</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>report on human 
+  resources management in academic libraries, for the Joint Funding Councils' 
+  Libraries Review group (Fielden Report) Higher Education Funding Council for 
+  England, Bristol 1993 
+  <p>7 Fowell, S and Levy, P. Developing a new professional practice : a model 
+  for networked learner support in Higher Education. Journal of Documentation 51 
+  (4). 1996. p272 or found at Netlinks found at <a 
+  href="http://netways.shef.ac.uk/">http://netways.shef.ac.uk/</a> 
+  <p>8 Information Services Annual Report, University of Birmingham. Annual 
+  Report found at <a 
+  href="http://www.bham.ac.uk/isg/publications/annual/">
+http://www.bham.ac.uk/isg/publications/annual/</a> 
+
+  <p>9 Information Services Annual Report, University of Birmingham. Learning 
+  and Research Support found at <a 
+  href="http://www.bham.ac.uk/isg/lrsd/">http://www.bham.ac.uk/isg/lrsd/</a> 
+  <p>10 Research Assessment Exercise. The Outcome. Bristol. HEFCE. 1996 ISBN 
+  18597602 p120 
+  <p>11 Biddiscombe, <span>R++</span>, <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Knowles, K, Upton, I and Wilson, K. Developing a web 
+  library guide for an academic library : problems, <span>solutions</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and <span>future</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  possibilities. Program. 31 (1) January 1997 pp59-73 
+  <p>12 University of Birmingham work booklets on the TAPin pages found at <a 
+  href="http://www.bham.ac.uk/TAPin/">http://www.bham.ac.uk/TAPin/</a> 
+  <p>13 Craft, E and Haydock, I. Living with a <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>network</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Managing 
+  Information. December 1996. 3 (12). p39-41 
+  <p>14 Individualised Home Pages found at <a 
+  href="http://www.bham.ac.uk/TAPin/">http://www.bham.ac.uk/TAPin/</a> 
+  <p>15 Elementary Education Gateway can be found at <a 
+  href="http://www.bham.ac/TAPin/">http://www.bham.ac/TAPin/</a> 
+  <p>16 <span>Social</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Science Information Gateway found at <a 
+  href="http://www.sosig.ac.uk/">http://www.sosig.ac.uk/</a> 
+  <p>17 Information Services <span>Guide</span>, <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> University of Birmingham found at <a 
+  href="http://www.bham.ac.uk/isg/">http://www.bham.ac.uk/isg/</a> 
+  <p>18 Flatten, K and MacKenzie, N. TAPin : Training and Awareness programme in 
+  networks - Interim Report. Centre for Information Research and Training, 
+  Faculty of <span>Computing</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and Information Studies, UCE, 1996 p12 
+  <p>19 Netskills project found at <a 
+  href="http://www.netskills.ac.uk/">http://www.netskills.ac.uk/</a> 
+  <p>20 Edulib Project found at <a 
+  href="http://www.hull.ac.uk/">http://www.hull.ac.uk/</a>
+  <hr size="3" color="Blue" noshade> 
+  
+  <h3>APPENDIX A</h3>
+  <center>TAPin: Training and Awareness in Networks Training Programme - 
+ Mix and Match approach</center>
+ 
+  <p>In order to put together a tailored training programme suited to your own 
+  training requirements, please check the <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>below and prioritise those 
+  subjects which would be of benefit to you. Feel <span>free</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to mix and match any of 
+  the subject areas.</p> 
+  
+  <table border=0 cellspacing=2>
+    <tbody>
+    <tr>
+      <td><b>Subject to be covered</b></td>
+      <td><b>Training could include</b></td></tr>
+    <tr>
+      <td>Search Techniques</td>
+      <td>Search Techniques, boolean logic, truncation and proximity searching 
+        helping YOU to <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>more effectively</td></tr>
+    <tr>
+      <td>Databases</td></tr>
+    <tr>
+      <td>a) Bibliographic</td>
+      <td>Locating references for YOU using International ERIC, Applied <span>Social</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+        Science Index and Abstracts</td></tr>
+    <tr>
+      <td>b) Full Text</td>
+      <td>Locating full text articles using Business Periodicals OnDisc for 
+      YOU</td></tr>
+    <tr>
+      <td>The Internet</td>
+      <td>Examining Browser <span>software</span>, <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> using bookmarks, general navigation, 
+        telnet, gopher, ftp, web pages, urls of use to YOU</td></tr>
+    <tr>
+      <td>Search Engines and Subject Gateways </td>
+      <td>Showing YOU how to discriminate between <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines, evaluation 
+        techniques</td></tr>
+    <tr>
+      <td>JANET </td>
+      <td>Network services demonstration of BIDS, MIDAS for YOU</td></tr>
+    <tr>
+      <td>Bibliographic Software</td>
+      <td>Providing basic and <span>advanced</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>details of <span>setting</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>up and using this 
+        type of <span>software</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for YOUR NEEDS</td></tr>
+    <tr>
+      <td>Electronic Journals </td>
+      <td>Locating <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of E-Journals available to YOU</td></tr>
+    <tr>
+      <td>Discussion Lists </td>
+      <td>How to find out which lists are most appropriate for YOU</td></tr>
+    <tr>
+      <td>Document Delivery </td>
+      <td>Identifying <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of services available to YOU such as Uncover and 
+        British Library In0e Information</td></tr>
+    <tr>
+      <td>Printed material </td>
+      <td>Indexes and abstracts, encyclopedias, handbooks of interest to 
+    YOU</td></tr>
+    <tr>
+      <td>Other </td>
+      <td>Other services YOU need help with</td></tr></tbody></table>
+            <hr color=#ff00ff size=3>
+			<h5 align="left" style="">Paper presented at the <A href="http://netways.shef.ac.uk/rbase/2ndsym2.htm#programme">2nd  International Symposium on Networked Learner Support</A> 23rd-24th June 1997,  Sheffield, England<br><B>New services, <span>roles</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and partnerships for the on-line learning environment</B></h5>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Mulvaney, Tracy K.  (1997)&nbsp; &quot;The TAPin electronic libraries project and the experience at the University of Birmingham&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>3</strong>(1) Available at: http://informationr.net/ir/3-1/paper28.html</p>
+<p style="text-align : center">&copy; the author, 1997. Updated  7th August 1999</p>
+<hr color=#ff00ff size=3>
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres31.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper28" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 28 December 2002</h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/3-1/paper28.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:38:07 GMT -->
+</html>

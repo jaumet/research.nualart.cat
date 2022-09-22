@@ -1,0 +1,790 @@
+<!doctype html public "-//W3C//DTD <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/5-2/paper70.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:28 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<title>DA draws a circle: on document architecture and its relation to library and information science <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and research</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="architectural metaphor, meta-objects, databases, document architecture">
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> content="The architectural metaphor used in analyzing compound meta-objects such as referential databases might be applied also to the <span>primary</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>records these referential <span>tools</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>point to, thereby making way for the study of document architecture (DA). Library and information science has by and large been focussing on possible ways of determining the meanings of the objects of "input", whereas the materiality and the textual structure of the objects have been regarded as transparent, offering little or no room for problematization and discussion. The article argues for a revaluation of this somewhat delimiting <span>perspective</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Digital production and <span>distribution</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>reframe the ways in which objects and meta-objects might be construed. The mismatch of  traditional library institutions and <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(where the printed codex book and its derivatives have been the standard of measurement) and digital carriers for <span>bodies</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of text and the different architectures of these, suggests our great need for new fields of LIS research, where DA might <span>prove</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>a valuable tool. DA studies might also be useful in re-theorizing traditional <span>reading</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and <span>writing</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>technologies and their conditioning of textual carriers. ">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="DA draws a circle: on document architecture and its relation to library and information science <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and research">
+<meta name="DC.Creator" content="Mats Dahlstrom, Mikael Gunnarsson">
+<meta name="DC.Subject" content="architectural metaphor, meta-objects, databases, document architecture">
+<meta name="DC.Description" content="The architectural metaphor used in analyzing compound meta-objects such as referential databases might be applied also to the <span>primary</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>records these referential <span>tools</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>point to, thereby making way for the study of document architecture (DA). Library and information science has by and large been focussing on possible ways of determining the meanings of the objects of "input", whereas the materiality and the textual structure of the objects have been regarded as transparent, offering little or no room for problematization and discussion. The article argues for a revaluation of this somewhat delimiting <span>perspective</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Digital production and <span>distribution</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>reframe the ways in which objects and meta-objects might be construed. The mismatch of  traditional library institutions and <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(where the printed codex book and its derivatives have been the standard of measurement) and digital carriers for <span>bodies</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of text and the different architectures of these, suggests our great need for new fields of LIS research, where DA might <span>prove</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>a valuable tool. DA studies might also be useful in re-theorizing traditional <span>reading</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and <span>writing</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>technologies and their conditioning of textual carriers. ">
+<meta name="DC.Publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>T.D. Wilson">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 5  No. 2, January 2000</h4></td></tr>
+  <tr> 
+    <td><a href="infres52.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<h1>Document architecture draws a circle: on document architecture and its relation to library and information science <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and research</h1>
+<br>
+<h4 align="center"><a href="mailto:mats.dahlstrom@hb.se">Mats Dahlstr&ouml;m</a> and <a href="mailto:mikael.gunnarsson@hb.se">Mikael Gunnarsson</a><br>
+H&ouml;gskolan i Bor&aring;s<br>
+Bor&aring;s, Sweden</h4>
+<br><br>
+<div><a name=abstract>Abstract</div>
+
+<blockquote>The architectural metaphor used in analyzing compound meta-objects such as referential databases might be applied also to the <span>primary</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>records these referential <span>tools</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>point to, thereby making way for the study of document architecture (DA). Library and information science has by and large been focussing on possible ways of determining the meanings of the objects of "input", whereas the materiality and the textual structure of the objects have been regarded as transparent, offering little or no room for problematization and discussion. The article argues for a revaluation of this somewhat delimiting <span>perspective</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Digital production and <span>distribution</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>reframe the ways in which objects and meta-objects might be construed. The mismatch of  traditional library institutions and <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(where the printed codex book and its derivatives have been the standard of measurement) and digital carriers for <span>bodies</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of text and the different architectures of these, suggests our great need for new fields of LIS research, where DA might <span>prove</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>a valuable tool. DA studies might also be useful in re-theorizing traditional <span>reading</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and <span>writing</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>technologies and their conditioning of textual carriers. </blockquote>
+  <br><br>
+  
+<h2>Introduction</h2>
+
+<p>Throughout the ages, one of the <span>main</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interests for the  librarian and for library and information science (LIS) has been different types of referential and bibliographic databases. These (including catalogues and indexing &amp; abstracting services of different kinds) have been studied as compound 
+meta-objects <a href="#NOT1">(1)</a> providing pointers to and descriptions of other objects of <span>primary</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interest to the end-user. Characteristics of these meta-objects have been critical factors in 
+determining the <span>values</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of their use. Some of these <span>characteristics</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>may be metaphorically described as belonging to the <i>architecture</i> of meta-objects, which in practice is usually expressed in the "hierarchical" structuring of databases into records, fields and subfields or the "<span>relational</span>" <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> 
+structuring of databases into entities and relations.</p>
+
+<p>In no respect has the same <span>attention</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>been given to the kind of objects - the 
+textual containers - that they point to, as to their <span>characteristics</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>other than 
+those relevant in predefined cataloguing practice and, in the case of citation 
+indices, other than those that link scientific works together. Moreover, in 
+<span>Knowledge</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Organization, the preoccupation is with the rules and methods for 
+<span>classification</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and indexing. It seems as though one is reducing the objects of 
+"input" to their mere possible <span>inherent</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>meanings. The basic material form and 
+the factual, as well as the more <span>abstract</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> textual structure of the objects 
+have, to some <span>degree</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> been regarded as transparent and self-evident, almost 
+<span>axiomatic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>starting points, offering little or no room for problematization and 
+discussion.</p>
+
+<p>We argue for a revaluation of this somewhat delimiting <span>perspective</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> which we 
+see as a <i>per se </i>reasonable outcome of the multicentennial hegemony of 
+print technology. As print technology is complemented with digital technology, 
+and as the latter is on its way to reframe the ways in which meta-objects might 
+be construed, we want to emphasize the practice of <i>document studies</i>, 
+hitherto largely neglected in LIS <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and research. These studies must be 
+conducted <span>free</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>from media chauvinism<a href="#NOT2"> 
+(2)</a>, and may be realized in such subfields as e.g. production, management, 
+delivery, organization, history, theory, materialities and sociology of 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>as well as, of <span>prime</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interest to this particular article, <i>document 
+architecture </i>(DA). In this respect we may also relate to a number of 
+disciplines - e.g. literary theory and analytical bibliography - where basic 
+assumptions have been questioned pertaining to that <span>supposed</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>basic atomary unit 
+in the architecture of large document corpora, notably the codex book or a 
+journal issue. Digital carriers for <span>bodies</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of text are handled by traditional, 
+print-based institutions only with great <span>difficulty</span>, <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> at times with <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+loss of information, and quite often in a misleading way. <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>brief con0eration 
+of digital <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>vs <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>such as legal deposits or descriptive 
+cataloguing might by itself <span>suggest</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>our great need for new fields of research, 
+<span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and course syllabi in LIS <span>schools</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> <a 
+href="#NOT3">(3)</a> Studies of digital production 
+and <span>distribution</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>might also <span>prove</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to be of value in re-theorizing technologies 
+for <span>reading</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and <span>writing</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and their conditioning of textual carriers. This 
+crossover may yield a reassessment of document architecture in its own right, 
+and might thus make way for a rebirth of a subdiscipline largely disregarded in 
+LIS. But let us first dig somewhat deeper into the very concept of DA.</p>
+
+<h2><a name="The notion">The notion of document architecture</a></h2>
+
+<p>With document architecture (DA) we mean several things implied by the 
+metaphor <i>architecture</i>, be0es the formal definition of ISO 8879:1986 
+which reads "Rules for the formulation of text processing <span>applications</span>" <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (ISO 
+8879:1986 clause 4.97). We believe that as the architecture of a building 
+discloses a lot of e.g. the architect, his skill, the architectural <span>style</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and 
+its <span>underlying</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>truth-holdings of a functional and aesthetic building, DA 
+discloses a lot of the <span>practices</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and <span>underlying</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>theory of the production of the 
+document.</p>
+
+<p>DA as a concept is closely connected to a certain kind of "text processing 
+<span>applications</span>" <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, general markup <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(GML), where content is separated from 
+<span>presentation</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span></p>
+
+<p>This structural strategy for digital <span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is contrary to 
+<span>strategies</span>, <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> where <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>are <span>represented</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and processed with respect to their 
+outlook: their positioning on the screen or on a sheet of paper. The latter 
+<span>perspective</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>makes no difference between a picture and a <span>sequence</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of alphanumeric 
+characters. The former takes account for and stores unambiguous information on a 
+document's structural elements, and is exemplified by SGML, <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and originally 
+even <span>HTML</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> <a href="#NOT4">(4)</a> This strategy may 
+also contradict traditional text production <span>strategies</span>, <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> where the writer <span>tends</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+to <span>focus</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>on appearance. Our observations when <span>teaching</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>LIS point to the fact 
+that <span>students</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>learning <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>have extreme <span>difficulties</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in understanding this 
+concept of separation.<a href="#NOT5">(5)</a></p>
+
+<p>In the context of general markup <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the concept of DA serves the 
+purpose of signifying every more or less compelling system of rules that "deals 
+with the document's purpose, its audience, its possible media, and the variety 
+of ways that the document will be played, performed, displayed, accessed, 
+transmitted, or read". (<a href="#Turner">Turner</a>, 1996: 10) Thus a bundle 
+of instructions on how to render a document on a screen (such as a <span>style</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>sheet), 
+as well as how packets of metadata may be inserted into the document, is part of 
+the DA.</p>
+
+<p>However, as all these rules <span>depend</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>on more or less temporary conceptions of 
+how we might adequately produce <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and on technological constrains, the 
+study of DA has a much broader scope than the <span>purely</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>technical bits.</p>
+
+<p>The metaphor may be said to apply <i>both </i>to how these ideal models of 
+text production work and become expressed in different media, both digital and 
+analog, as structures of different document types, <i>and</i> how these models 
+(or styles) form taxonomies of different but related styles. DA may then be 
+studied as a matter of how to build, and - from the <span>perspective</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of aesthetics - 
+as investigations in different styles for different epochs, cultures and genres. 
+And perhaps in the context of a "sociology of <span>documents</span>" <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, as John Seely Brown 
+and Paul Duguid seem to suggest:</p>
+
+<blockquote>&quot;To fully assess the document's evolving role <span>requires</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>a broad 
+  understanding of both old and new <span>documents</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>.. They are also a powerful 
+  resource for constructing and negotiating social space.&quot; (<a 
+  href="#Brown">Brown &amp; Duguid</a>, 1996)</blockquote>
+  
+
+<p>With this conceptual background of DA, let us now turn to three <span>contexts</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> 
+where DA might be a tool for fuller understanding: information seeking, document 
+(re)production, and theories of technology.</p>
+
+<h2><a name="Information seeking">Document architecture and its importance for 
+Information seeking</a></h2>
+
+<p>Information seeking is often described as a "constructive process 
+characterized by uncertainty and confusion", where an "information <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is a 
+learning process".(<a href="#Kuhlthau">Kuhlthau</a>, 
+1993, pp 8-9) Thus the <span>description</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>seems to advocate for a <span>perspective</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>on 
+research and <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>based on user perspectives, leaving out the 
+system-oriented perspectives of the so called "bibliographic paradigm" (ibid., 
+p. 1). There is no denying the fact that information seeking is always performed 
+as actions highly dependent of personally situated and contextual factors, but 
+it is our view that if the impact of a changing technology on information 
+seeking will be determined, this must include an analysis of the relationships 
+between DA and document <span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>- an analysis that calls for questions 
+usually attributed to the domains of indexing and cataloguing, but extends their 
+scope radically.</p>
+
+<p>If we accept that <span>analyses</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of information seeking missions sometimes may be 
+characterized as investigations into how articulations of the needs of the users 
+relate to the way <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>are <span>represented</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in different types of meta-objects, 
+then we are also allowed to study the interplay of DA, document <span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+and user in an information seeking context. As far as we know, this kind of 
+study has hitherto not been dealt with explicitly to any satisfying <span>degree</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in 
+LIS domains. This is not the forum to elaborate further upon this, merely to 
+point out how different DAs are comprehended by different actors, and to hope 
+for increased interest in these questions. Further <span>empirical</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>investigations into 
+these matters would be welcomed, as we base our <span>presentation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>here solely on our 
+acquaintances with the web and our observations of how <span>students</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>deal</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>with 
+it.</p>
+<h3><a name=examples>Examples of how architectural changes affects information 
+seeking</a></h3>
+
+<p>In learning to use the web, <span>students</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in general have to get rid of several 
+misunderstandings of the <span>underlying</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>technologies. <a 
+href="#Pollock">Pollock &amp; Hockley</a> (1997), in 
+a 1995 study on PC-literate users conducting searches on the web, came to the 
+<span>conclusion</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>that "users need at least some understanding of basic Internet 
+concepts in order to carry out successful searches". This study shows, among 
+other things, how users fail to understand that articulation of their needs must 
+be formulated according to how technology makes up a <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>language. Among LIS 
+<span>students</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the awareness of this is increasing, but the <span>situation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is still too 
+much alikened to bibliographical database searching. There seems to be a strong 
+tendency towards being as precise as possible in the hope that <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines 
+will present <i>final</i> answers. It certainly would be better if <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+services expressed "<span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>results as 'suggestions' rather than 'hits'" (<a 
+href="#Pollock">ibid.</a>).</p>
+<p>The misconceptions of how web searches may be performed are fairly natural as 
+bibliographic <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>always have been important for the LIS field and are 
+<span>emphasized</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in most courses on information seeking, where the <span>main</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>question at 
+hand seems to be to find relevant textual objects and discriminate irrelevant 
+ones. </p>
+<p>In the following we will emphasize some architectural conditions of web 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>that affect the use of <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines and other <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>services on the 
+web. An example will be thoroughly elaborated, viz. how the concept of the title 
+of a document plays an important role in a known-item <span>search</span>. <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span></p>
+<h3><a name=titles>Different <span>worlds</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>- different titles</a></h3>
+<p>A known-item <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>occurs</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>when the user has a <span>limited</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>but correct 
+<span>description</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of an existing document. The user is sure of the fact that the 
+document exists, that its title and author are explicitly stated somewhere in 
+the document, and these assumptions are true to the <span>actual</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>state of the 
+docuverse. This <span>situation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is fairly different from when a user searches for 
+<span>unknown</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>documents.</p>
+<p>A known-item <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in a bibliographic database is highly <span>supported</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>by the 
+predictable, traditional DA. Almost every book has a stated title, 
+responsibility, editor etc. Different <span>codes</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for document <span>description</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> as for 
+instance the AACR2, prescribe that a <span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of a document must include a 
+statement of a document's title and author. It is obvious that, to some <span>degree</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> 
+conventions for producing <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>have been adapted to facilitate such 
+descriptions for the producer. The CIP is the most obvious example, where a 
+bibliographic <span>description</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is inserted into the document in a prescribed 
+position. Thus <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>making use of the CIP is an instance of a document type 
+that defines a position as well as a form of <span>expression</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for metadata <a 
+href="#NOT6">(6)</a> conforming to library practice. 
+These metadata are extracted, in accordance with cataloguing rules, from other 
+parts of the document, e.g. the title page, which in its turn is another element 
+of the conventional DA of a book.</p>
+<p>Consequently, the user searching for a known book may rely on the fact that 
+what he or she thinks is the title of a book is also true with respect to its 
+<span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in bibliographic databases. Exceptions are of course not too 
+rare, due to orthographic fallacies and the like, but there are apparent 
+correspondences between rules for generation of document <span>representations</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in 
+bibliographic databases and common sense apprehensions. </p>
+<p>The user carrying out a <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>on the web, in Alta Vista, Infoseek or some 
+other "<span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engine" can not rely on such a correspondence - for several 
+reasons. For example, according to <a 
+href="#Gudivada">Gudivada et al.</a> (1997), it has 
+been estimated that 20 % of the objects on the web <span>lack</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the title tag.</p>
+<p>Admittedly, formal <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>specifications do prescribe the declaration of a 
+title, but since current web browsers seem more or less to ignore if the <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+object conforms to formal rules or not, and since the producer of a web document 
+not always recognizes the importance of significant titles, the result is that 
+many web <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>anyhow <span>lack</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the title or have titles that make no sense. The 
+problem may become less frequent with a transition from <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to <span>XML</span>, <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> as the 
+latter imposes more strict regulations on the producers of browsers (XML 
+processors). This may happen if <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>processors, as is suggested (<a 
+href="#Goldfarb">Goldfarb</a>, 1998), won't accept 
+<i>ill-formed</i> <span>documents</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> which means that an <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>object, nonconformly 
+encoded, will not be rendered at all and consequently will be unusable. With 
+respect to this possible evolution it may be said that <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>architecture is 
+imposing further constrains on the writer and seems <span>limiting</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> but at the same 
+time makes <span>expressions</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of this architecture more predictable, for generators of 
+document <span>representations</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>as well as for readers. In the meantime it is a fact 
+that the user of a <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engine, especially a LIS student, expects that a 
+<span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>term</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>attributed by <code>title:</code><a 
+href="#NOT7">(7)</a> will match all <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>with 
+that <span>term</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in the title. The fact is though that as the (formal) title is that 
+part of the text manifested in the upper bar of the window, both readers and 
+writers tend to <span>regard</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the first heading or another visually <span>prominent</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>part as 
+the title. Neglecting the meaning of the title tag may also <span>cause</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the writer to 
+omit it. The mismatch of the architectural definition of a title and the user's 
+is obvious, and may be of critical importance, especially when the writer has 
+<span>represented</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the title with an in-line image, as images aren't indexed at all by 
+<span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines. </p>
+<p>As cataloguing <span>codes</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>are <span>beginning</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to adapt to new media in order to 
+incorporate pointers to resources on the web in library catalogues, rules for 
+determining the title of web <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>are formulated. This is as far as we can 
+see not done in a way that takes account of already existing (technical) 
+<span>definitions</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of the title or the unique architectures of web <span>documents</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> In fact 
+the ALA in a report last spring (<a 
+href="#CC:DA">CC:DA</a> 1998) came to the <span>conclusion</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+that existing schemes for metadata (TEI and the Dublin Core) are of <span>limited</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>use 
+in catalogue <span>integration</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> It all seems as a tentative strategy to treat web 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>as <span>expressions</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of the (inherently different) architecture of journal 
+articles, books or other types of printed <span>documents</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> This strategy often 
+concludes that the title is the visually most <span>prominent</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>part of the web object's 
+rendition, usually a declared heading or the text of a GIF or <span>JPEG</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>image, in 
+analogy with AACR2 rules for book <span>description</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> which (naturally) makes 
+references to <span>visual</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>appearance. </p>
+<p>This may lead to a <span>situation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>where not only do <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines and users 
+diverge in their <span>definitions</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of the title, in their models of what <span>constitutes</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+the architecture of a web site, but also where cataloguing rules develop another 
+conception of the DA of web objects. </p>
+<p>So if we say that different <span>worlds</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>take account of different titles, we may 
+also say this about other architectural phenomena. </p>
+<p>In a recent article on "citation in the digital era", Mats G. Lindquist 
+remarks that "libraries are tied to the book and <span>con0er</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>journals to be 
+fragmented books". (<a 
+href="#Lindquist">Lindquist</a>, 1999) <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>statement 
+that may be compared to the remark of Luciano Canfora, that "[f]or librarians, 
+the scroll was the 'unit of measurement'", implying that estimations of the 
+contents of the Alexandrian library in most sources were highly exaggerated, 
+since they were derived from "the practice of counting not works but scrolls". 
+(<a href="#Canfora">Canfora</a>, 1990, p. 189) Since 
+1994 we have seen that users may open <i>files</i>, <i>documents</i>, 
+<i>URLs</i> and <i>sites</i> in the Archive menu of the browsers. At the moment 
+we seem to be opening <i>pages</i> (in Netscape), though the word <i>page</i> 
+here merely resembles what is usually meant by that word. Abundant examples 
+witness to the fact that, as metaphors for a new technology are derived from 
+older information technologies, this may <span>cause</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>unnecessary ambiguity <a 
+href="#NOT8">(8)</a>. The concept of document is in 
+itself somewhat of a metaphor, whereas it signifies a way of <span>establishing</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+borders for a coherent whole, by the help of reifying a conception of a 
+<span>collection</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of entities into a coherent work, a document.</p>
+<p>Consequently, we believe that all this points to the relevance of a DA 
+<span>perspective</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> as it is important to elucidate the unique nature of the outcomes 
+of a <span>modern</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>technology.</p>
+<p>If we understand <i>technology</i> in its broadest sense, not restricted to 
+<i>modern</i> technology, we may approach its essence in much the same way as 
+Heidegger in <i><a href="#Heidegger">The Question 
+Concerning Technology</a> </i>(1977), where technology is described by 
+traditional "instrumental" and "anthropological" <span>definitions</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Technology, then, 
+may be seen as "a means to an end" where "human activity" takes place in 
+"bringing-forth". Thus <span>writing</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and <span>reading</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>may be seen as activities for 
+bringing forth human <span>expressions</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>- thereby using <span>tools</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> which put necessary 
+constrains on the activities. In these activities there is no way of becoming 
+independent of technology. <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>as well as inscribing <span>tools</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(like the pencil 
+or the keyboard) and <span>storage</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>media form a technology for <span>writing</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and <span>reading</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+technology in which we "dwell", rather than use as a simple tool.</p>
+<p>Thus, if we accept this view of technology as something that transforms, as 
+well as is transformed by, mankind, any change in technology will affect the 
+possibilities of <span>expression</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> and this must be regarded as a critical factor in 
+analyzing information seeking. </p>
+<h2><a name="Literary works">Document architecture as a tool for understanding 
+the production and construction of literary works</a></h2>
+<p>This view of technology might be of some assistance to us when con0ering 
+the importance of DA in the study and theory of <i>markup languages</i> as <span>tools</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+that shape, as well as are shaped by, our conception of possible DAs. As noted 
+above, the <span>term</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>DA even originates in the realm of markup <span>practices</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span></p>
+<h3><a name="markup as a theory">Markup as a theory of DA</a></h3>
+<p>DA becomes important when trying to understand metagrammars or schemes of how 
+textual works are and can be constructed, most apparently so when we <span>deal</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>with 
+the aforementioned markup <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for either the <span>direct</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>production of new 
+digital works or the digitization of works previously <span>represented</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in paper 
+<span>documents</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> As <span>Michael</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><a 
+href="#Sperberg">Sperberg-McQueen</a> notes (1991), 
+a markup of a text <a href="#NOT9">(9)</a> is in 
+fact a theory, or a theoretical statement, of this text. Extending this view, 
+then, a general markup language is a general theory of texts. Note that that 
+this usage of "texts" is more affiliated to that of text sociologists such as 
+e.g. Donald McKenzie and Jerome McGann than to that of the kind of bibliography 
+<span>represented</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>by e.g. Thomas G. Tanselle. The text concept of the latter is 
+<span>limited</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to the sequence(s) of linguistic alphanumerical signs, whereas the 
+former aims to include, in McGann's terms (<a 
+href="#McGann">McGann</a>, 1991), linguistic signs 
+<i>as well as</i> bibliographical <span>codes</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(such as typography, nature and <span>quality</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+of the <span>storage</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>medium</span>, <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> colouring etc), properties traditional bibliography would 
+describe as belonging to the document level rather than to the text level. <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+number of tags used in various DTD:s in fact <span>deal</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>with the <i>architecture</i> 
+of <span>documents</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> since a markup language is a tool for structurally handling 
+aspects and elements on different hierarchical and conceptual levels of the 
+document, not only textual strings at the linguistic level. In this way we might 
+<span>con0er</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>certain <span>families</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of markup <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>as theories of particular types of 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>or of genres, and as <span>statements</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>as to how these <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>or groups of 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>can in fact be constructed at all, and, finally and importantly, as 
+<span>tools</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>perhaps shaping the very production of <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and their 
+architectures.</p>
+<p>Con0er the universally <span>intended</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>grammar of SGML. SGML is not a markup 
+language <i>per se</i>, but might <span>instead</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>be regarded as a markup 
+<i>metagrammar</i> (certainly when we treat SGML in terms of an international 
+standard, i.e. ISO 8879:1986), a system of rules out of which <span>actual</span>, <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> derivative 
+markup <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in turn might be constructed. In practice, user communities 
+collaborate and <span>discuss</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>what types of elements are needed for certain types of 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and their markup (in particular when digitizing older literary works), 
+and a formal Document Type <span>Definition</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(DTD) is agreed upon <a 
+href="#NOT10">(10)</a>. This process has to include 
+the troublesome definition and consequent agreement on what are the important 
+<span>inherent</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>elements in the <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>at hand, i.e. an agreement on what 
+<i>constitutes</i> the <span>documents</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> <a 
+href="#NOT11">(11)</a> This DTD has to be <span>followed</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+in order for <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to be universally exchangeable and processable within the 
+<span>intended</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>user group. SGML was from its beginnings bound to the notion that DAs 
+in general were characterized by ordered hierarchies of content objects, textual 
+blocks that could not overlap. This was, in a manner of <span>speaking</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> the nature of 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>according to this theoretical view. Attempts were even made to 
+<span>establish</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>theories of the <span>ontological</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>status</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of texts as consisting of content 
+objects in a strict hierarchical order (<a 
+href="#DeRose">DeRose et al</a>, 1990 ; summed up 
+and elaborated in <a href="#Renear">Renear</a>, 
+1997). This <span>underlying</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>philosophy of SGML defined and constrained the 
+development of derivative applicational grammars - markup <i>languages</i> - 
+such as TEI and <span>HTML</span>, <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> thereby restricting these <span>tools</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to a particular concept of 
+DA. It soon turned out, however, that there in fact existed a number of document 
+types that did contain overlapping hierarchies <a 
+href="#NOT12">(12)</a>, contrary to the general 
+theory of SGML, and therefore could be marked up according to a DTD of SGML only 
+with <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>loss of adequacy. Where does that leave the "general" in 
+General Markup Languages?</p>
+<h3><a name="media transition">DA draws a media transitional circle</a></h3>
+<p>The explosive <span>growth</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of the web and the consequent widespread use of <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and 
+its <span>tools</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> along with more or less explicit demands of adequately encoded <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+<span>documents</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> have resulted in equal <span>growth</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and spread of this architectural 
+conception of SGML. The architectural view, upon which SGML and <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>originally 
+were based, thereby might justify itself in a, as it were, roundabout way. The 
+technological tool, the thing with which to write, will affect the thing 
+written. The particular DA conception in SGML and derived <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>will affect 
+the production, <span>collection</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> definition and analysis of <span>documents</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> both as 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>are originally produced electronically, and as paper-bound works are 
+being digitized, and might consequently be of <span>major</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interest to LIS. 
+(Interestingly enough, digitization has <span>offered</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>opportunities for reframing the 
+contents and architectures of manuscripts and printed books, forcing the 
+digitizing agents to <span>express</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> code and group digitized reproductions of not only 
+the <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>as entities, but also <i>parts of</i> the <span>documents</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> whereby the 
+entities as well as the parts can be handled in numerous ways, e.g. 
+restructuring, searching, downloading, printing (again!) and commercializing (<a 
+href="#G%F6ttingen">The Center for Retrospective 
+Digitization</a>, 1999). This makes way, in a manner of <span>speaking</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> for a more 
+literal version of the infamous <i>deconstruction</i> of works, but this time a 
+deconstruction not of the <span>inherent</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>meanings in works, but of the <span>direct</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>textual 
+<span>expression</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>as manifested in the physical <span>documents</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>) </p>
+<p>With this in mind, we might begin to analyze in what way text application 
+<span>tools</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>such as word processing <span>software</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>or markup <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>condition</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>how we are 
+able to produce and reproduce (when digitizing) works, and in what way they 
+constitute <span>statements</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>on possible DAs, as well as how the <span>tools</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>will affect e.g. 
+literary genres and the social organizing of literary life. </p>
+<p>In developing (general) markup <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and their DTDs, markup specialists 
+are now, in a sense, aiming for the disclosure of the <span>inherent</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>essence of texts 
+and <span>documents</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> In order to be able to adequately handle possible <span>future</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>document 
+production and architectures, it is of utmost importance in LIS <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and 
+research to closely follow these attempts and perhaps also to be part of 
+them.</p>
+<h2><a name=technology>Document architecture as an object of inquiry into 
+information technology</a></h2>
+<p>The use of traditional IR <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>tends</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to place <span>modern</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>technology as a 
+barrier to products of another technology. Modern technology is treated as a 
+mere tool for retrieving <span>representations</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of information re0ing in a <span>framework</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+of print technology. This may be the most fruitful way of interacting with 
+information <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in everyday practice. However, this apprehension may be of 
+less use when learning <span>modern</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>information technology as such.</p>
+<p><i>Mastering</i> information technology, for example word processing, is not 
+the same as to have an <i>understanding</i> of it. It is possible to learn word 
+processing and in the process acquiring no or little understanding of how 
+technology makes word processing possible. This results in problems in some 
+cases, as in the exchange of <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>between two subsequential versions of the 
+same word processing <span>software</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>or when changing to another word processing 
+<span>software</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> The transition from Wordperfect to MS Word has for most users not been 
+an easy one, even though there are apparent <span>underlying</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>similarities between 
+their respective architectures. It is an interesting question to ask, <i>why</i> 
+mastering the techniques of particular <span>software</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and <span>hardware</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>solutions</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>isn't 
+enough and <i>if</i> it really <span>isn't</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> We do not believe that it is, and the 
+answer may be approached from different perspectives.</p>
+<p>One of the reasons is the fact that <span>modern</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>information and communication 
+technology conceals a course of events that takes place in the <span>performance</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of 
+certain tasks. Hidden under sophisticated and supposedly user-friendly 
+interfaces are rather primitive but numerous events. It would be possible to say 
+that this essence in <span>modern</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>technology <span>tends</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to alienate its users, as was a 
+frequent argument during the 60s and 70s, when computers came to be <span>symbols</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for 
+"big brother" <a href="#NOT13">(13)</a>. Be that an 
+exaggeration or not, in the context of <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>this nature of concealment is 
+certainly problematic. </p>
+<p>If Bruner's statement that "the heart of the <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>process consists of 
+providing aids and dialogues for translating experience into more powerful 
+<span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>notation</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and ordering" (<a 
+href="#Bruner">Bruner</a>, 1966, p. 21) is <span>worth</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+con0ering, and we believe it is, then a <span>major</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>task will be to unveil the 
+concealed courses of events in a way that facilitates the experience of 
+technological foundations. The reason for the student's <span>difficulties</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to 
+understand concepts such as <i>file</i>, <i>server</i> or <i>network</i> may be 
+that they, <span>essentially</span>, <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> are elaborated abstractions. Consequently all those 
+terms turn out as abstractions of unexperienced phenomena. Then the teacher 
+finds him- or herself in a position where s/he has to tell beautiful stories the 
+student hopefully will believe and remember, and/or instruct the student on how 
+to perform a discrete and <span>purely</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>instrumental task. </p>
+<p>There is no true magic <span>inherent</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in technology. It's just that all <span>hardware</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+and <span>software</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>are built on a great amount of concealed abstractions. Several of 
+these abstractions are <span>founded</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>on different theories on the nature of language 
+and knowledge, as many investigations show.<a 
+href="#NOT14">(14)</a> Is it possible that if the 
+<span>underlying</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>assumptions of for example <span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>techniques could be 
+experienced and studied in a situated task, a thorough understanding would 
+become possible? </p>
+<p>Word processing is a common task that every student is <span>expected</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to carry out. 
+Problems with student's motivations and <span>lack</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of interest in learning word 
+processing, so often <span>observed</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in other courses, are often absent. There is 
+simply an obvious relation to necessary tasks. Word processing as a means to 
+technology <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>should therefore seem like a good starting point for 
+understanding technology. However, it is a fact that problems encountered during 
+these tasks are proprietary to particular products. Even though several tasks in 
+for example MS Word will be performed similarly to those in other word 
+processors, they are seldom <span>identical</span>. <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> The task of text alignment or <span>line</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>break 
+in general can not be learned by the use of one word processing application 
+alone. Another example is the insertion of in-line images, which can be done in 
+several ways, described by <span>software</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>designers in ambiguous dialog boxes of the 
+interface. How is the first-time user <span>expected</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to recognize the difference and 
+its consequential meanings between <i>storing</i> the image in the document as 
+<span>opposed</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to <i>linking</i> to an image, when both ways seem to produce the same 
+effect? Technology and the solution of tasks tend to stay intimately 
+intertwined, which makes it almost <span>impossible</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to decontextualize problem <span>solving</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+and make way for learning, or with the words of Bruner again, technology hinders 
+"independence of <span>response</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>from the immediate nature of the stimulus". (<a 
+href="#Bruner">Bruner</a>, 1966, p. 5)</p>
+<p>A study of explicit DAs in relation to a task like this one would possibly be 
+a remedy to this restrained <span>growth</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> As mentioned in the <span>beginning</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of this 
+article, DA deals with "rules for the formulation of text processing 
+application", but rules are not amenable nor explicit in the context of word 
+processing <span>applications</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Such rules are in fact found among the general markup 
+<span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(GML) like SGML, <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and <span>HTML</span>, <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> where technology may be stripped bare 
+of its sophisticated interfaces. </p>
+<p>GML reveals a lot more of what is going on "in0e". Users <span>frequently</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>delight 
+in seeing that a simple string of short text may <span>cause</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>an in-line image to 
+appear in the text, or to see that another string ties an object to a different 
+web site by a blue underlining. The same applies to changes made in a <span>separate</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+<span>style</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>sheet that may affect the colour and font of all first headings in a large 
+complex web site. This is like <i>playing</i> with technology, not just using it 
+as <i>a means to an end</i>.<a 
+href="#NOT15">(15)</a> </p>
+<h2><a name=implementation>The need for DA implementation</a></h2>
+<p>There are numerous <span>practices</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>within LIS <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and research where DA 
+studies might <span>prove</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to be an <span>essential</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>tool for gaining knowledge. <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>few 
+instances have been addressed in this article, but our scope might of course be 
+broadened to even further areas of LIS, for instance: a) the ever <span>growing</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>need 
+for <span>quality</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>aspects and critical <span>analyses</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of web contents and forms, and b) the 
+overwhelming, new <span>situation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in digital environments, where the malleable screen 
+<span>presentation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>form of an object is separated from its <span>storage</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>form, in which two 
+cases an understanding of the fundamental DA is <span>crucial</span>. <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> But the study of DA 
+should not be conceived of as a sub-discipline of electronic textuality solely. 
+Extending this study to objects of earlier technologies may be revealing for the 
+history of <span>writing</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>as a whole. The <span>introduction</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of the title page may for 
+example <span>reflect</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>important historical circumstances or changes in the 
+technologies and the infrastructures of that time. Moreover, a thorough 
+understanding of how different elements in different document types play 
+particular <span>roles</span>, <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> may serve in the work of cataloguing.</p>
+<p>A large number of traditional institutions and <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in library 
+environments are encountering obstacles in the digital world on account of their 
+being <span>essentially</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>print-based. The <span>established</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>systems can be "bent" to 
+accommodate the <span>qualities</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of digital <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>- or the other way around. The 
+obstacles can thus temporarily be by-passed through ad hoc-arrangements, but 
+will not be adequately handled, unless <span>solutions</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and theories are generated on 
+the basis of thorough understanding and analysis of the architectural essence of 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in general and, in the examples stated, of web environments and 
+digital objects in particular. This makes way for an architectural understanding 
+of <i>different</i> <span>kinds</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of media, structures and meta-objects. LIS <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+and research <span>ought</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>therefore implement the field of DA in order to perform 
+necessary investigations of existing and <span>future</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>developments of <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and 
+meta-objects. Students would be better prepared. LIS itself would be better 
+prepared.</p>
+<h2>Notes</h2>
+<p><a name=not1>(1)</a> The <span>term</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><i>meta-object</i> is borrowed from William <a 
+href="#Arms">Arms</a> (1997) and his colleagues' 
+<span>description</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of an "architecture for information in digital libraries". The <span>term</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+is for our part meant to <span>indicate</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>that many objects that serve as pointers to 
+library material are not really bibliographic.</p>
+<p><a name=not2>(2)</a> The <span>term</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><i>media chauvinism</i> has been borrowed from 
+Espen <a href="#Aarseth">Aarseth</a> (1997).</p>
+<p><a name=not3>(3)</a>The reassessment needed pertains, of course, largely to 
+the challenged concept of <i>document</i>, a concept “rooted in hundreds of 
+years of tradition, planted firmly in enormous and complex <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for 
+publishing, organization, and access. Yet it has become increasingly evident 
+that the archetypal concept of ‘document’ as ‘book’ <span>underlying</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>these <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is 
+insufficient to <span>deal</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>with a multitude of media formats, particularly diverse 
+electronic formats (...)”. (<a 
+href="#Schamber">Schamber</a>, 1996, p. 669). <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+retrospective <span>survey</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of the <span>difficulties</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>involved in defining the concept of 
+document is presented by <a 
+href="#Buckland">Buckland</a> (1997).</p>
+<p><a name=not4>(4)</a> It may be important to point out that even though the 
+SGML standard dates back to 1986, work on markup <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>based on separation 
+of content and <span>presentation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>dates back to the <span>late</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>1960s, according to one of 
+SGML's developer's, Charles <a 
+href="#Goldfarb">Goldfarb</a> (1998).</p>
+<p><a name=not5>(5)</a> Daniel <a 
+href="#Chandler">Chandler</a> (1995) attempts a 
+thorough <span>description</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and <span>classification</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>writing</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>strategies, where his 
+"architectural strategy" is most akin to that implied by general markup 
+<span>languages</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span></p>
+<p><a name=not6>(6)</a> What has been said about meta-objects may also apply to 
+this now widely used, at times even misused , <span>term</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Meta-objects <i>contain</i> 
+metadata, but <i>are</i> not always bibliographic data.</p>
+<p><a name=not7>(7)</a> An attribution possible in using several <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines, 
+e.g. <i>Alta Vista</i> and <i>Infoseek</i>.</p>
+<p><a name=not8>(8)</a> Of course, metaphors such as these are necessary 
+elements of the architecture, as - along with navigation <span>systems</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> indexing etc - 
+"the glue that holds together a web site". (<a 
+href="#Rosenfeld">Rosenfeld &amp; Morville</a>, 
+1998, s. 11) </p>
+<p><a name=not9>(9)</a> That is: the attribution to the linguistic elements of a 
+text with structural (and perhaps also presentationally intended) 
+metainformation <span>contained</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in "tags".</p>
+<p><a name=not10>(10)</a> <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>notable example of such a work within the humanistic 
+disciplines is the TEI, <i>Text Encoding Initiative</i>, resulting in a 
+particularly elaborate DTD (as well as a more manageable "light" version, the 
+TEI Lite) (<a href="#Burnard">Sperberg-McQueen &amp; 
+Burnard</a>, 1994).</p>
+<p><a name=not11>(11)</a> <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>task that might <span>prove</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to be difficult indeed. When 
+digitizing paper-bound works and their textual manifestations, we <span>frequently</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+have <span>difficulty</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>identifying, <span>explaining</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> and explicitly tagging a great number 
+of <span>features</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in such works, as we have grown so accustomed to them that they have 
+become more or less transparent.</p>
+<p><a name=not12>(12)</a> For instance printed drama, see <a 
+href="#Huitfeldt">Huitfeldt</a> (1999).</p>
+<p><a name=not13>(13)</a> At another end of this <span>chain</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is the practice of 
+commercial <span>software</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>producers to "protect" from the user some patented layers of 
+manipulation, thereby, in a sense, rendering the user impotent. This practice 
+has been analyzed and criticized by e.g. literary <span>theorists</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>such as Friedrich <a 
+href="#Kittler">Kittler</a> (1994).</p>
+<p><a name=not14>(14)</a> See for example <a 
+href="#Coyne">Richard Coyne</a>'s (1995) thorough 
+exposé on the theoretical foundations for <span>computational</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>design or the works of 
+Joseph <a href="#Weizenbaum">Weizenbaum</a> (1984), 
+Terry Winograd and Fernando Flores (<a 
+href="#Winograd">Winograd &amp; Flores</a>, 
+1986).</p>
+<p><a name=not15>(15)</a> Which, peculiarly enough is something that's not 
+allowed in some of our public libraries, where actions taken by the help of 
+computers must be good for something else or, as they put it, a task of 
+searching.</p>
+<h2><a name=references>References</a></h2>
+<blockquote>(All web references <span>checked</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>March 31, 1999.)</blockquote>
+<ul>
+
+<li><a name=aarseth>Aarseth</a>, E. (1997) <i>Cybertext : Perspectives on Ergodic 
+Literature</i>. Baltimore: Johns Hopkins UP.</li>
+
+<li><a name=arms>Arms</a>, W. Y., Blanchi, C. &amp; Overly, E. <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1997)<i> 
+</i><a 
+href="http://www.dlib.org/dlib/february97/cnri/02arms1.html">"An Architecture for Information in Digital Libraries"</a>. <i>D-Lib 
+Magazine</i>, <b>3</b> : 2.</li>
+
+<li><a name=brown>Brown</a>, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Seely, &amp; Duguid, P. (1996) <a 
+href="http://www.firstmonday.dk/issues/issue1/documents/index.html">"The <span>Social</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Life 
+of Documents"</a>. <i>First Monday</i>, <b>1 </b>: 1.</li>
+
+<li><a name=bruner>Bruner</a>, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1966) <i>Toward a Theory of Instruction</i>. 
+Cambridge, Mass.: <span>Harvard</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>UP.</li>
+
+<li><a name=buckland>Buckland</a>, M. (1997) "What is a 'Document'?". <i>Journal 
+of the American Society for Information Science</i>, <b>48</b>: 804-809.</li>
+
+<li><a name=canfora>Canfora</a>, L. (1990) <i>The vanished library</i>. Berkeley: 
+Univ. of Calif. Press. </li>
+
+<li><i><a name=cc:da>CC:DA</a><a 
+href="http://www.ala.org/alcts/organization/ccs/ccda/tf-tei2.html"> TF on Metadata and the Cataloging Rules: Final Report</a></i>. (1998) ALA, August 21, 1998.</li>
+
+<li><i><a name=göttingen>The Center for Retrospective Digitization</a>, Göttingen 
+State and University Library</i> (1999) <a 
+href="http://www.sub.uni-goettingen.de/gdz/en/gdz_main_en.html">Göttinger DigitalisierungsZentrum, 
+Niedersächsische Staats- und Universitätsbibliothek Göttingen.</a></li>
+
+<li><a name=chandler>Chandler</a>, D. (1995) <i><a 
+href="http://www.aber.ac.uk/~dgc/act.html">The Act of Writing: <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Media 
+Theory Approach</a></i>. Aberystwyth: Prifysgol Cymru (University of Wales).</li>
+
+<li><a name=coyne>Coyne</a>, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1995) <i>Designing Information Technology in the 
+Postmodern Age</i>. Cambridge, Mass.: <span>MIT</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Press.</li>
+
+<li><a name=derose>DeRose</a>, S., Durand, D., Mylonas, E. &amp; Renear, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> 
+(1990)<i> </i>"What Is Text, Really?". <i>Journal of <span>Computing</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in Higher 
+Education</i>, <b>1</b> : 2 (winter), 3-26.</li>
+
+<li><a name=goldfarb>Goldfarb</a>, C. (1998) <i>The <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Handbook</i>. New York: 
+Prentice Hall.</li>
+
+<li><a name=gudivada>Gudivada</a>, V. et al. (1997) "Information Retrieval On The 
+World Wide Web". <i>IEEE Internet Computing</i>, <b>1 </b>: 5, 58-68.</li>
+
+<li><a name=heidegger>Heidegger</a>, M. (1977) <i>The Question Concerning 
+Technology and other essays</i>. New York: Harper &amp; Row.</li>
+
+<li><a name=huitfeldt>Huitfeldt</a>, C. (1999) "Tekstkoding og tekststrukturer", 
+in: <i>Datahåndbok for humanister,</i> edited by E. Aarseth. Oslo: Ad Notam, 
+Gyldendal, pp. 123-146.</li>
+
+<li><a name=kittler>Kittler</a>, F. (1994)<b> </b>"Protected Mode", in:<b> </b>F. 
+Kittler, N. Bolz and Ch. Tholen,<i> <span>Computer</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>als Medium</i>. München: Fink, pp. 
+209-220.</li>
+
+<li><a name=kuhlthau>Kuhlthau</a>, Carol Collier (1993), <i>Seeking Meaning : <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+Process <span>Approach</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to Library and Information Services. </i>Norwood, NJ: Ablex. 
+</li>
+
+<li><a name=lindquist>Lindquist</a>, M. (1999) <a 
+href="http://www.press.umich.edu/jep/04-03/lindquist.html">“Not Your Father’s References : 
+Citations in the Digital Space”</a>. <i>Journal of Electronic Publishing</i>, 
+<b>4</b> : 3. </li>
+
+<li><a name=mcgann>McGann</a>, Jerome (1991), <i>The Textual Condition. </i>Princeton, N.<span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> : Princeton Univ. Press. </li>
+
+<li><a name=pollock>Pollock</a>, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Hockley, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1997) <a 
+href="http://www.dlib.org/dlib/march97/bt/03pollock.html">"What's Wrong with 
+Internet Searching"</a>. <i>D-Lib Magazine</i>, <b>3</b>: 3.</li>
+
+<li><a name=renear>Renear</a>, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1997) "Three (Meta)Theories of Textuality", 
+in: <i>Electronic Text : Investigations in <span>Method</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and Theory,</i> edited by K. 
+Sutherland. Oxford: Clarendon, pp. 107-126.</li>
+
+<li><a name=rosenfeld>Rosenfeld</a>, L. &amp; Morville, P. (1998) <i>Information 
+Architecture for the World Wide Web</i>. Sebastopol, CA: O'Reilly.</li>
+
+<li><a name=schamber>Schamber</a>, L. (1996) "What Is a Document? <span>Rethinking</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the 
+<span>Concept</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in Uneasy Times". <i>Journal of the American Society for Information 
+Science</i>, <b>47</b> : 669-671.</li>
+
+<li><a name=simone>Simone</a>, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1995) "The Body of the Text", in: <i>The 
+Future of the book,</i> edited by G. Nunberg. Berkeley: UCLA Press, pp. 
+239-251.</li>
+
+<li><a name=sperberg>Sperberg</a>-McQueen, C.M. (1991) "Text in the Electronic 
+Age : Textual <span>Study</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and Text Encoding, with Examples from Medieval Texts". 
+<i>Literary and <span>Linguistic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Computing</i>, <b>6</b> : 1, 34-46.</li>
+
+<li><a name=burnard>Sperberg</a>-McQueen, C.M. &amp; Burnard, L. (eds.) (1994) 
+<i>Guidelines for Electronic Text Encoding and Interchange (TEI P3)</i>. Oxford &amp;
+<span>Chicago</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> TEI.</li>
+
+<li><a name=turner>Turner</a>, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, Douglass, T., &amp; Turner, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1996) 
+<i>Readme.1st : SGML for Writers and Editors</i>. New York: Prentice Hall.</li>
+
+<li><a name=weizenbaum>Weizenbaum</a>, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1984) <i>Computer Power and <span>Human</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+Reason</i>. Harmondsworth: Penguin.</li>
+
+<li><a name=winograd>Winograd</a>, T. &amp; Flores, F. (1986) <i>Understanding 
+computers and cognition</i>. Norwood NJ: Ablex.</li></ul>
+
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Dahlstr&ouml;m, Mats &amp; Gunnarsson, Mikael (2000)&nbsp; &quot;Document architecture draws a circle: on document architecture and its relation to library and information science <span>education</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and research&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>5</strong>(2) Available at: http://informationr.net/ir/5-2/paper70.html</p>
+<p style="text-align : center">&copy; the authors, 2000. &nbsp;  Last updated: 5th January 2000</p>
+
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:_28Rgk8IB2MJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres52.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper70" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/5-2/paper70.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:28 GMT -->
+</html>

@@ -1,0 +1,823 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/6-1/paper87.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:15:29 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="<span>Microsoft</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>Word 97">
+<title>The effect of query complexity on Web searching results</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="query structure, information retrieval, World Wide Web, <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines, Alta Vista, Excite, FAST Search, Infoseek, Northern Light, complexity, <span>design</span>, <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> research">
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> content="This paper presents <span>findings</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>from a study of the effects of query structure on retrieval by Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services.  Fifteen queries were selected from the transaction log of a <span>major</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>service in simple query form with no <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators (e.g., <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators, phrase operators, etc.) and submitted to 5 <span>major</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>search engines - Alta Vista, Excite, FAST Search, Infoseek, and Northern Light.  The results from these queries became the baseline data.  The original 15 queries were then modified using the various <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators <span>supported</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>by each of the 5 <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines for a total of 210 queries.  Each of these 210 queries was also submitted to the applicable <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>service.  The results obtained were then compared to the baseline results.  <span>A+</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>total of 2,768 <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>results were returned by the set of all queries.  In general, increasing the complexity of the queries had little effect on the results with a greater than 70% overlap in results, on average.  Implications for the <span>design</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services and directions for <span>future</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>research are discussed.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<link rel=schema.vw96 href="http://vancouver-webpages.com/META/VW96-schema.html">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="The effect of query complexity on Web searching results">
+<meta name="DC.Creator" content="B.<span>J++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> Jansen">
+<meta name="DC.Subject" content="query structure, information retrieval, World Wide Web, <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines, Alta Vista, Excite, FAST Search, Infoseek, Northern Light, complexity, <span>design</span>, <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> research">
+<meta name="DC.Description" content="This paper presents <span>findings</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>from a study of the effects of query structure on retrieval by Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services.  Fifteen queries were selected from the transaction log of a <span>major</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>service in simple query form with no <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators (e.g., <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators, phrase operators, etc.) and submitted to 5 <span>major</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>search engines - Alta Vista, Excite, FAST Search, Infoseek, and Northern Light.  The results from these queries became the baseline data.  The original 15 queries were then modified using the various <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators <span>supported</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>by each of the 5 <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines for a total of 210 queries.  Each of these 210 queries was also submitted to the applicable <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>service.  The results obtained were then compared to the baseline results.  <span>A+</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>total of 2,768 <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>results were returned by the set of all queries.  In general, increasing the complexity of the queries had little effect on the results with a greater than 70% overlap in results, on average.  Implications for the <span>design</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services and directions for <span>future</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>research are discussed.">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 6 No. 1, October 2000</h4></td></tr>
+  <tr> 
+    <td><a href="infres61.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<h1>The effect of query complexity on Web searching results</h1>
+<h4 align="center">
+<a href="mailto:jjansen@acm.org">Bernard <span>J++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> Jansen</a><br>
+<span>Computer</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>Science Program<br>
+University of Maryland (Asian Division)<br>
+Seoul, 140-022 Korea</h4>
+
+<div align="CENTER"><b>Abstract</b></div>
+
+<blockquote>This paper presents <span>findings</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>from a study of the effects of query structure on retrieval by Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services.  Fifteen queries were selected from the transaction log of a <span>major</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>service in simple query form with no <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators (e.g., <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators, phrase operators, etc.) and submitted to 5 <span>major</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>search engines - Alta Vista, Excite, FAST Search, Infoseek, and Northern Light.  The results from these queries became the baseline data.  The original 15 queries were then modified using the various <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators <span>supported</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>by each of the 5 <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines for a total of 210 queries.  Each of these 210 queries was also submitted to the applicable <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>service.  The results obtained were then compared to the baseline results.  <span>A+</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>total of 2,768 <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>results were returned by the set of all queries.  In general, increasing the complexity of the queries had little effect on the results with a greater than 70% overlap in results, on average.  Implications for the <span>design</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services and directions for <span>future</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>research are discussed.</blockquote>
+
+
+<h2>Introduction</h2>
+
+<p>Information retrieval (IR) system searchers seldom use <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>searching techniques, such as <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators or phrase searching (<a href="#ref1">Borgman, 1996</a>; <a href="#ref2">Spink, <i><i>et al.</i></i>, in press</a>).  This has been especially true for Web searchers.  The vast majority of Web searchers make little use of <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>query techniques.  <a href="#ref2">Keily</a> (1997) conducted a study utilizing queries from two Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines, <a href="http://webcrawler.com/">WebCrawler</a>  and <a href="http://www.mckinley.com/magellan/">Magellan</a>.  Of the 2,000 queries, only 12% <span>contained</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span><span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators. <a href="#ref1">Hoelscher</a> (1998) presented data and analysis from <a href="http://www.fireball.de/">Fireball</a>, a German Web IR system.  The data set <span>contained</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>approximately 16 million queries.  Three percent (3%) of the queries <span>contained</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span><span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators, and 8% <span>contained</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>phrase searching.  Approximately 25% <span>contained</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>the 'must appear' operator, which was the plus sign (+).  <a href="#ref2">Silverstein, <i>et al.</i></a>, (1999) presented results from an analysis of just under one billion queries submitted to the <a href="http://www.altavista.com/">Alta Vista</a>  <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine.  The researchers do not report the specific occurrence of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators, but 20.4% of the queries <span>contained</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>some <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>query operator (i.e., +, -, &amp;, etc.).  <a href="#ref1">Jansen, <i>et al.</i></a> (2000) published a study concerning searching on the <a href="http://www.excite.com/">Excite</a> <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine.  In this analysis, approximately 8.5% of the queries <span>contained</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span><span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators.  Approximately 9% of the queries <span>contained</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>some other <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>query operator.</p>
+<p><a href="#ref1">Jones, <i>et al.</i></a> (1998) published research that focused on the <a href="http://www.nzdl.org/">New Zealand Digital Library</a>, a <span>collection</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of technical <span>computer</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>science <span>documents</span>. <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  They reported <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>occurrence in over 25% of the queries, which is a substantially higher usage than reported in other studies on Web searching.  This <span>figure</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>may be the result of the technical nature of the Web site's document <span>collection</span>. <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span></p>
+
+<p>The use of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators in these Web searching studies is substantially lower than the rates reported in studies of searchers using traditional information retrieval (IR) <span>systems</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>such as DIALOG or LEXUS/NEXUS.  For example, <a href="#ref2">Siegfried, <i>et al.</i></a> (1993) reported <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>usage of over 36% on the DIALOG system, which the researchers con0ered a low rate of usage.</p>
+
+<p>The implication of these <span>findings</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>leads to the question: Do Web searchers increase the <span>probability</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of <span>finding</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>relevant information by increasing the complexity their queries?  Advanced searching techniques are well known and one can find numerous articles on <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>searching <span>strategies</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>(<a href="#ref1">Dragutsky, 1998</a>), tutorials on searching training (<a href="#ref2">Sullivan, 2000</a>) and educational <span>classes</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>on searching <span>strategies</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>(<a href="#ref2">UC Berkeley, 1997</a>).  However, based on the Web studies referenced above, it appears that the majority of Web searchers continue to use very simple queries.</p>
+
+<p>Recent studies <span>suggest</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>that Web users are <span>finding</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>the information they want.  <span>A+</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span><span>survey</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of users on a <span>major</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine reports that almost 70% of the users stated that they had located relevant information on the <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine (<a href="#ref2">Spink, <i>et al.</i>, 1999</a>).  Additionally, Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines continue to attract large numbers of Web searchers.  Of the top ten Web sites in June 2000, 8 were Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines (<a href="#ref1">CyberAtlas, 2000</a>), implying that <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines are at least the best alternative available for <span>finding</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>information on the Web.  Obviously, something is amidst.  Searchers appear to be <span>finding</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>information using a <span>technique</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>that should be ineffective or at least inefficient.  To shed some light on this apparent paradox, this study investigates the effect of complex queries (i.e., those using <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>syntax, such as <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators) on the results retrieved by Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services relative to the results retrieved by simple queries (i.e., those with no <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>syntax).</p>
+
+
+<h2>Research Design</h2>
+
+
+<h3>Selection of Queries</h3>
+
+
+<p>Key to this research was the <span>selection</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of queries that accurately reflected the structure of Web queries.  Research shows that Web queries generally have two terms (<a href="#ref1">Jansen, <i>et al.</i>, 2000</a>; <a href="#ref2">Silverstein, <i>et al.</i>, 1999</a>), cover a variety of topics (<a href="#ref2">Wolfram, 1999</a>), and are primarily noun phrases (<a href="#ref1">Jansen, <i>et al.</i>, 2000</a>; <a href="#ref2">Kirsch, 1999</a>).  These criteria were used in selecting queries from an Excite <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>service transaction log.  The 54,573 queries in the transaction log were collected on 10 March 1997.  The specific query lengths reported by <a href="#ref1">Jansen, <i>et al.</i></a> (2000) are listed in Table 1.  The mean for query <span>length</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>(i.e., the number of terms in the query) was 2.21 terms with a standard deviation of 1.05 terms.  These statistics are in <span>line</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>with those reported by other Web studies (<a href="#ref2">Silverstein, et al, 1999</a>) and presentations on Web searching data (<a href="#ref2">Kirsch, 1999</a>; <a href="#ref2">Xu, 1999</a>).</p>
+
+<table align="center" border cellspacing=1 cellpadding=7 width=287>
+<caption align="bottom">Table 1: Query Length</caption>
+<tr><td width="33%" valign="TOP">Terms in query</td>
+<td width="33%" valign="TOP">Number of queries</td>
+<td width="33%" valign="TOP">Percent of all queries</td>
+</tr>
+
+<tr>
+<td align="center" width="33%" valign="TOP">More than 6</td>
+<td align="right" width="33%" valign="TOP">1,018</td>
+<td width="33%" valign="TOP"> 2</td>
+</tr>
+<tr>
+<td align="center" width="33%" valign="TOP">6</td>
+<td align="right" width="33%" valign="TOP">617</td>
+<td width="33%" valign="TOP">1</td>
+</tr>
+<tr>
+<td align="center"  width="33%" valign="TOP">5</td>
+<td align="right"  width="33%" valign="TOP">2,158</td>
+<td width="33%" valign="TOP">4</td>
+</tr>
+<tr>
+<td align="center"  width="33%" valign="TOP">4</td>
+<td align="right" width="33%" valign="TOP">3,789</td>
+<td width="33%" valign="TOP">7</td>
+</tr>
+<tr>
+<td align="center"  width="33%" valign="TOP">3</td>
+<td align="right" width="33%" valign="TOP">9,242</td>
+<td width="33%" valign="TOP">18</td>
+</tr>
+<tr>
+<td align="center"  width="33%" valign="TOP">2</td>
+<td align="right" width="33%" valign="TOP">16,191</td>
+<td width="33%" valign="TOP">32</td>
+</tr>
+<tr>
+<td align="center"  width="33%" valign="TOP">1</td>
+<td align="right" width="33%" valign="TOP">15,854</td>
+<td width="33%" valign="TOP">31</td>
+</tr>
+<tr>
+<td align="center"  width="33%" valign="TOP">0</td>
+<td align="right" width="33%" valign="TOP">2,584</td>
+<td width="33%" valign="TOP"> 5</td>
+</tr>
+<tr>
+<td align="center"  width="33%" valign="TOP"><b>Total</b></td>
+<td align="right" width="33%" valign="TOP">51,433</td>
+<td width="33%" valign="TOP">100</td>
+</tr>
+</table>
+
+
+<p>Based on the information in Table 1, approximately 93% of the Web queries <span>contained</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>between 0 and 4 terms, inclusive.  Since it is not meaningful to add query operators to queries of 0 or 1 terms, this study focused on queries with lengths between 2 and 4 terms inclusive.  This <span>range</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>represents a majority of Web queries, or approximately 57%.  Dropping queries <span>containing</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>5 or more terms is also justifiable.  First, only a small number of queries (7%) <span>fall</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>into this category.  Second, longer queries are most likely constructed by a subset of Web searchers using more sophisticated <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>techniques and would better be addressed in a <span>separate</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>study.</p>
+
+<p>Based on the general <span>distribution</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>from Table 1, queries of the following lengths were selected for this study: 1 query of 4 terms, 3 queries of 3 terms, and 11 queries of two terms.  Queries were selected on a variety of topics, since it has been reported that some <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines specialize in certain areas (<a href="#ref2">Neilsen/NetRating, 2000</a>).  All queries that <span>appeared</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>on the popular query lists (<a href="#ref2">Searchwords, 2000</a>) or that referenced popular entertainers, popular locations, popular songs, etc. were <span>eliminated</span>, <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> since Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines sometimes cache results from these highly queried topics (<a href="#ref1">Lesk, et al, 1997</a>).  For similar reasons, all queries that were obviously queries for pornography were <span>eliminated</span>. <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  With these goals and constraints as guides, the 15 queries displayed in Table 2 were selected.</p>
+
+
+<table align="center" border cellspacing=1 cellpadding=2 width=384>
+<caption align="bottom">Table 2: Queries from Excite Transaction Log.</caption>
+<tr><td width="33%" valign="TOP" height=16>
+<b>Number of Terms</b></td>
+<td width="67%" valign="TOP" height=16>
+<b>Query</b></td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+4</td>
+<td width="67%" valign="TOP" height=16>
+<p>   nicotine levels smokeless tobacco</td>
+</tr>
+<tr><td width="33%" valign="TOP" bgcolor="#ffffff" height=16>&nbsp;</td>
+<td width="67%" valign="TOP" bgcolor="#ffffff" height=16>&nbsp;</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+3</td>
+<td width="67%" valign="TOP" height=16>
+<p>  <span>attention</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>deficit disorder</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+3</td>
+<td width="67%" valign="TOP" height=16>
+<p>  flood plains definitions</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+3</td>
+<td width="67%" valign="TOP" height=16>
+<p>  <span>ice</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>cream cones</td>
+</tr>
+<tr><td width="33%" valign="TOP" bgcolor="#ffffff" height=16>&nbsp;</td>
+<td width="67%" valign="TOP" bgcolor="#ffffff" height=16>&nbsp;</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  bikini thong</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  christmas scenes</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  <span>dog</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>crate</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  physical therapist</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  rhubarb pie</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  <span>school</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>buses</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  social workers</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  trumpet winsock</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  welfare state</td>
+</tr>
+<tr><td width="33%" valign="TOP" height=16>
+2</td>
+<td width="67%" valign="TOP" height=16>
+<p>  time travel</td>
+</tr>
+</table>
+
+
+<p>Studies show that most Web searchers never view more than 10 results. <a href="#ref1">Hoelscher</a> (1998) reports that approximately 59% of the searchers viewed no more than 10 results.  <a href="#ref1">Jansen, <i>et al.</i></a> (2000) found that over 58% of the searchers viewed 10 <span>documents</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>or less.  Similarly, <a href="#ref2">Silverstein <i>et al.</i></a> (1999) reported that approximately 85% of the Web searchers viewed no more than 10 results.  Based on this overwhelming evidence of Web searcher behavior, only the first 10 results in the results <span>list</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>were selected for <span>comparison</span>. <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> Relevance judgements were not made concerning the results.  The ability of Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines to retrieve relevant <span>documents</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>has been <span>investigated</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>several times (<a href="#ref2">Leighton &amp; Srivastava, 1999</a>).  In terms of <span>quality</span>, <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> <a href="#ref2">Zumalt and Pasicznyuk</a> (1998) show that the <span>utility</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of the Web may match that of a professional <span>reference</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>librarian.</p>
+
+<h3>Searching Environment</h3>
+
+<p>Many Web sites offer searching features; however, this research focuses specifically on Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines.  Search engines are the <span>major</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>portals for users of the Web, with 71% of Web users accessing <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines to locate other Web sites (<a href="#ref1">CommerceNet/Nielsen Media, 1997</a>).  One in every 28 (3.5%) page views on the Web is a <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>results page (<a href="#ref1">Alexa In0er, 2000</a>).   Search engines are, without a <span>doubt</span>, <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> the IR <span>systems</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of the Web.  There are approximately 3,200 <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines on the Web (<a href="#ref2">Search Engine Watch, 2000</a>).  However, only a handful of these dominate the market in terms of Web traffic.  Among the better known, and those utilized in this research are Alta Vista, Excite, FAST Search, InfoSeek, and Northern Light.</p>
+
+<h4>Document Collections</h4>
+
+<p>To understand searching on the Web, it is important to have a clear understanding of the size of the document collections involved.  These Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines have individually indexed document collections that number in the millions of pages.  To facilitate <span>comparison</span>, <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> the document <span>collection</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>sizes are graphically displayed in the <span>Figure</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>1.</p>
+
+<div align="center"><img src="p87fig1.gif" width=423 height=240 border=0 title="<span>figure</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>1: Size of <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine document collections (millions of pages)" alt=""></div>
+<p>Figure 1: Size of Search Engine Document Collections (millions of pages)</p>
+
+<p>Even with this <span>magnitude</span>, <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> none of these document collections indexes the entire Web.  Current estimates on the size of the Web <span>range</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>from approximately 350 million active Web pages (<a href="#ref2">Nielsen/Net Rating, 2000</a>), to 500 million non-duplicate Web pages (<a href="#ref1">FAST Search, 2000</a>) to approximately 800 million Web pages (<a href="#ref2">Lawrence &amp; Giles, 1999</a>).  So, it is difficult to say precisely what percentage of the Web these <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines cover.  Regardless of the <span>exact</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>number, it is clear they all have indexed several million pages.  Referring to <span>Figure</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>1, Alta Vista and FAST Search have the largest collections at approximately 340 million pages.  Excite and Northern Light have document collections of 214 and 240 million pages, <span>respectively</span>. <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  Infoseek trails the pack with approximately 50 million pages.  The sheer size of these collections has a unique impact on Web searching, where searchers can <span>easily</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>be inundated with results.  Therefore, the <span>focus</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of searching on the Web is primarily a precision-based service (<a href="#ref2">Xu, 1999</a>).</p>
+
+<h4>Number of Visitors</h4>
+
+<p>In addition to the size of the document collections indexed, the reach of these <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines in number of searchers is also an important characteristic of Web searching.  The number of unique visitors to these <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines varies widely although most attract a high number of visitors, as illustrated in <span>Figure</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>2.</p>
+
+<div align="center"><img src="p87fig2.gif" width=406 height=235 border=0 title="<span>Figure</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>2: Number of unique visitors per month (thousands)." alt=""></div>
+<p>Figure 2: Number of Unique Visitors Per Month (thousands).</p>
+
+<div><font size=1>Notes:  The number of monthly unique visitors to Northern Light and FAST Search is estimated based on audience reach data from <a href="#ref1">Alexa Research</a> (2000).</div>
+
+<p>The data in <span>Figure</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>2 was collected from <a href="#ref1">Alexa Research</a> (2000), <a href="#ref2">Nielsen/NetRating</a> (2000), and <a href="#ref1">CyberAtlas</a> (2000) and represents the unique visitors to each site as of April 2000.  The number of unique visitors is only a rough proxy of number of queries because not all visitors may submit a query and some visitors may submit multiple queries.  See <a href="#ref2">Sullivan</a> (2000) for a discussion on the <span>difficulties</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of estimating the <span>actual</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>number of searches per site.  However, if one assumes that the percentage of <span>actual</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>searches relative to the total number of visits to a Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine is relatively <span>constant</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>across all <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines, one can get a general idea of the popularity of a <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine compared to the others.  With thousands of unique visitors per months, these <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services must be able to <span>respond</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>to a wide variety of topics and information needs. </p>
+
+<h4>Searching Rules</h4>
+
+
+<p>The five <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines offer a variety of <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>searching options.  For this research, only those <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>searching options that were available from the <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine's <span>main</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>page were utilized.  Of the five <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines used, 4 <span>offered</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>all <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>options from the <span>main</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>page.  One <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine, Alta Vista, does not support <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators on the <span>main</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>page.  In the case of Alta Vista, those <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>options were not <span>investigated</span>. <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span></p>
+
+
+<h3>Research Structure</h3>
+
+
+<p>All simple queries and appropriate complex queries were submitted to the five <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines on 21 May 2000.  The terms from the original queries were all lower case.  There were 75 simple queries and all returned at least 10 results.  As mentioned earlier, results beyond the first 10 were discarded, providing 750 results to use as the baseline.  Each of the 15 simple queries was then modified with the <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>searching operators <span>supported</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>by the various <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines.  Many <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines offer drop down boxes (e.g., language of results, document collections to search) for refining the <span>search</span>. <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  When drop down boxes were present on the <span>main</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>search page, the default options were utilized. In addition, "Power Searching" screens <span>offered</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>by some <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines were not utilized.  Instead, all <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>queries were submitted via the <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine's <span>main</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>search screen.</p>
+
+
+<h2>Results</h2>
+
+<p>A total of 150 complex queries was submitted.  Each <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine <span>offers</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>different <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>options; therefore, the number of complex queries varied for each <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine, as outlined in Table 3.</p>
+
+
+
+<table align="center" border cellspacing=1 cellpadding=2 width=521>
+<caption align="bottom">Table 3: Number of Complex Queries by Search Engine.</caption>
+<tr>
+<td valign="TOP" height=16 colspan=3>&nbsp;</td>
+<td valign="TOP" colspan=5 height=16><b>Search Options<br> Supported</b></td>
+</tr>
+
+<tr>
+<td align="center" valign="TOP"><b>Search Engine</b></td>
+<td align="center" valign="TOP"><b>Number of Simple Queries</b></td>
+<td align="center" valign="TOP"><b>Number of Complex Queries</b></td>
+<td align="center" valign="TOP"><b>+</b></td>
+<td align="center" valign="TOP" colspan=2><b>"</b></td>
+<td align="center" valign="TOP"><b>AND</b></td>
+<td align="center" valign="TOP"><b>OR</b></td>
+</tr>
+<tr>
+<td align="center" valign="TOP">Alta Vista</td>
+<td align="center" valign="TOP">15</td>
+<td align="center" valign="TOP">30</td>
+<td valign="TOP">X</td>
+<td align="center" valign="TOP" colspan=2>X</td>
+<td valign="TOP">&nbsp;</td>
+<td valign="TOP">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="TOP">Excite</td>
+<td align="center" valign="TOP">15</td>
+<td align="center" valign="TOP">60</td>
+<td align="center" valign="TOP">X</td>
+<td align="center" valign="TOP" colspan=2>X</td>
+<td align="center" valign="TOP">X</td>
+<td align="center" valign="TOP">X</td>
+</tr>
+<tr>
+<td  align="center" valign="TOP">FAST Search</td>
+<td align="center" valign="TOP">15</td>
+<td align="center" valign="TOP">30</td>
+<td align="center" valign="TOP">X</td>
+<td align="center" valign="TOP" colspan=2>X</td>
+<td valign="TOP">&nbsp;</td>
+<td valign="TOP">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="TOP">Infoseek</td>
+<td align="center" valign="TOP">15</td>
+<td align="center" valign="TOP">30</td>
+<td align="center" valign="TOP">X</td>
+<td align="center" valign="TOP" colspan=2>X</td>
+<td valign="TOP">&nbsp;</td>
+<td valign="TOP">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="TOP">Northern Light</td>
+<td align="center" valign="TOP">15</td>
+<td align="center" valign="TOP">60</td>
+<td align="center" valign="TOP">X</td>
+<td align="center" valign="TOP" colspan=2>X</td>
+<td align="center" valign="TOP">X</td>
+<td align="center" valign="TOP">X</td>
+</tr>
+<tr>
+<td align="center" valign="TOP"><b>Total Queries</b></td>
+<td align="center" valign="TOP">75</td>
+<td align="center" valign="TOP">210</td>
+<td align="center" valign="TOP">75</td>
+<td align="center" valign="TOP">75</td>
+<td align="center" valign="TOP" colspan=2>30</td>
+<td align="center" valign="TOP">30</td>
+</tr>
+</table>
+
+
+<p>From Table 3, all <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines <span>supported</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>the must appear (+) and phrase searching (") operators for a total of 75 queries each.  Excite and Northern Light support <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators AND and OR for a total of 30 queries each.  Of the 210 complex queries, 201 returned 10 or more results.  There were 9 queries that returned fewer than 10 results, all of which were phrase searching.  One query returned 1 result, and one query returned 7 results.  The remaining 7 queries returned 0 results and were not used in the <span>comparison</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>analysis.  All told, there were 2,018 results returned by the complex queries.  Combined with the 750 results from the simple queries, this gives 2,768 results.</p>
+
+<p>In comparing the results between the simple and complex queries, the match had to be <span>exact</span>. <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  The <span>documents</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>listed had to be the <span>identical</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>page at the same site.  Different pages from the same site were not counted as matches.  If a result <span>appeared</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>in both lists but in a different order, they were counted as a match as long as both were displayed in the top ten.</p>
+<h3>
+Simple Versus Complex Query Comparison</h3>
+
+<p>The aggregate results of the analysis of the 2,768 results are display in Table 4.</p>
+
+<table align="center" border cellspacing=1 cellpadding=7 width=457>
+<caption align="bottom">Table 4: Comparison of Simple versus Complex Queries</caption>
+<tr><td width="26%" valign="TOP">
+<b>Category</b></td>
+<td width="42%" valign="TOP">
+<b>Average Number of Results that Appear in Baseline</b></td>
+<td width="18%" valign="TOP">
+<b>Standard Deviation</b></td>
+<td width="13%" valign="TOP">
+<b>Mode</b></td>
+</tr>
+<tr><td width="26%" valign="TOP">
+<p>Simple Queries</td>
+<td align="center" width="42%" valign="TOP">
+10.0</td>
+<td align="center" width="18%" valign="TOP">
+0.0</td>
+<td align="center" width="13%" valign="TOP">
+10</td>
+</tr>
+<tr><td width="26%" valign="TOP">
+<p>Complex Queries</td>
+<td align="center" width="42%" valign="TOP">
+ 7.3</td>
+<td align="center" width="18%" valign="TOP">
+1.3</td>
+<td align="center" width="13%" valign="TOP">
+10</td>
+</tr>
+</table>
+
+
+
+<p>Reviewing the statistics in Table 4, the baseline mean for the simple queries was 10, and the mean for the complex queries was 7.3.  This means that, on average, 7.3 of the 10 results retrieved by the complex queries also <span>appeared</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>in the baseline results for the corresponding simple query on that <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine.  </p>
+
+
+<h3>Results by Search Engine</h3>
+
+
+<p>The <span>comparison</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>was also conducted for each <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine.  These results are displayed in Table 5.  </p>
+
+<table align="center" cellspacing=0 border=1 cellpadding=2 width=378>
+<caption align="bottom">Table 5: Comparison of Results by Search Engine.</caption>
+<tr><td width="33%" valign="TOP"><b>Search Engine</b></td>
+<td width="33%" valign="TOP"><b>Average Number of Results that Appear in Baseline</b></td>
+<td width="18%" valign="TOP"><b>Standard Deviation</b></td>
+<td width="16%" valign="TOP"><b>Mode</b></td>
+</tr>
+<tr><td width="33%" valign="TOP">Alta Vista</td>
+<td align="center" width="33%" valign="TOP">6</td>
+<td align="center" width="18%" valign="TOP">4.2</td>
+<td align="center" width="16%" valign="TOP">10</td>
+</tr>
+<tr><td width="33%" valign="TOP">Excite</td>
+<td align="center" width="33%" valign="TOP">9</td>
+<td align="center" width="18%" valign="TOP">2.5</td>
+<td align="center" width="16%" valign="TOP">10</td>
+</tr>
+<tr><td width="33%" valign="TOP">FAST Search</td>
+<td align="center" width="33%" valign="TOP">8</td>
+<td align="center" width="18%" valign="TOP">2.7</td>
+<td align="center" width="16%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="33%" valign="TOP">Infoseek</td>
+<td align="center" width="33%" valign="TOP">7</td>
+<td align="center" width="18%" valign="TOP">3.2</td>
+<td align="center" width="16%" valign="TOP">  9</td>
+</tr>
+<tr><td width="33%" valign="TOP">Northern Light</td>
+<td align="center" width="33%" valign="TOP">6</td>
+<td align="center" width="18%" valign="TOP">3.4</td>
+<td align="center" width="16%" valign="TOP">10</td>
+</tr>
+</table>
+
+<p>From examining Table 5, we see that Excite, FAST Search, and Infoseek will on average return 7 to 9 results <span>exactly</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>the same regardless of whether the query is simple or complex.  Alta Vista and Northern Light means are slightly lower at 6.  Alta Vista and Northern Light also have the largest standard deviations at 4.2 and 3.4 <span>respectively</span>. <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span></p>
+
+<h3>Results by Query Operator</h3>
+
+<p>The <span>comparison</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>was also conducted for each <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operator.  These results are displayed in Table 6.</p>
+
+<table align="center" cellspacing=0 border=1 cellpadding=2 width=398>
+<caption align="bottom">Table 6: Comparison of Results by Query Operator.</caption>
+<tr>
+<td align="center" width="21%" valign="TOP"><b>Query Operator</b></td>
+<td align="center" width="47%" valign="TOP"><b>Average Number of Results that Appear in Baseline</b></td>
+<td align="center" width="17%" valign="TOP"><b>Standard Deviation</b></td>
+<td align="center" width="15%" valign="TOP"><b>Mode</b></td>
+</tr>
+<tr>
+<td align="center" width="21%" valign="TOP"><b>+</b></td>
+<td align="center" width="47%" valign="TOP">7.3</td>
+<td align="center" width="17%" valign="TOP">3.6</td>
+<td align="center" width="15%" valign="TOP">10</td>
+</tr>
+<tr>
+<td align="center" width="21%" valign="TOP"><b>"</b></td>
+<td align="center" width="47%" valign="TOP">7.8</td>
+<td align="center" width="17%" valign="TOP">2.7</td>
+<td align="center" width="15%" valign="TOP">10</td>
+</tr>
+<tr>
+<td align="center" width="21%" valign="TOP"><b>AND</b></td>
+<td align="center" width="47%" valign="TOP">6.8</td>
+<td align="center" width="17%" valign="TOP">3.7</td>
+<td align="center" width="15%" valign="TOP">10</td>
+</tr>
+<tr>
+<td align="center" width="21%" valign="TOP"><b>OR</b></td>
+<td align="center" width="47%" valign="TOP">7.2</td>
+<td align="center" width="17%" valign="TOP">3.6</td>
+<td align="center" width="15%" valign="TOP">10</td>
+</tr>
+</table>
+
+<p>Table 6 shows that the highest correlation with the baseline results is with the phrase searching operator, the quotation mark (").  With this operator, almost 8 of the 10 results would also appear in the results <span>list</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>without the <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>search operator.  With the must appear operator (+), <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>intersection operator (AND) and <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>union operator (OR), approximately 7 of the <span>documents</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>in the results <span>list</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>would have <span>appeared</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>without the use of the <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators. </p>
+
+<h3>Results by Query</h3>
+
+<p>The analysis was also conducted for each query.  These results are displayed in Table 7.</p>
+
+<table align="center" cellspacing=0 border=0 cellpadding=2 width=532>
+<caption align="bottom">Table 7: Comparison of Results by Query.</caption>
+<tr><td width="44%" valign="TOP" height=39><b>Query</b></td>
+<td width="29%" valign="TOP" height=39><b>Average Number of Results that Appear in Baseline</b></td>
+<td width="14%" valign="TOP" height=39><b>Standard Deviation</b></td>
+<td width="13%" valign="TOP" height=39><b>Mode</b></td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">rhubarb pie</td>
+<td align="center" width="29%" valign="TOP">8.6</td>
+<td align="center" width="14%" valign="TOP">2.4</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">search engines</td>
+<td align="center" width="29%" valign="TOP">8.6</td>
+<td align="center" width="14%" valign="TOP">2.7</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">trumpet winsock</td>
+<td align="center" width="29%" valign="TOP">8.5</td>
+<td align="center" width="14%" valign="TOP">2.2</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">social workers</td>
+<td align="center" width="29%" valign="TOP">8.3</td>
+<td align="center" width="14%" valign="TOP">2.8</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">attention deficit disorder</td>
+<td align="center" width="29%" valign="TOP">8.1</td>
+<td align="center" width="14%" valign="TOP">2.2</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">physical therapist</td>
+<td align="center" width="29%" valign="TOP">8.1</td>
+<td align="center" width="14%" valign="TOP">2.5</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">welfare state</td>
+<td align="center" width="29%" valign="TOP">7.8</td>
+<td align="center" width="14%" valign="TOP">4.2</td>
+<td align="center"d width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">school buses</td>
+<td align="center" width="29%" valign="TOP">7.6</td>
+<td align="center" width="14%" valign="TOP">3.2</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">christmas scenes</td>
+<td align="center" width="29%" valign="TOP">7.4</td>
+<td align="center" width="14%" valign="TOP">3.3</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">bikini thong</td>
+<td align="center" width="29%" valign="TOP">6.9</td>
+<td align="center" width="14%" valign="TOP">3.5</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">dog crate</td>
+<td align="center" width="29%" valign="TOP">6.9</td>
+<td align="center" width="14%" valign="TOP">3.3</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">ice cream cones</td>
+<td align="center" width="29%" valign="TOP">6.6</td>
+<td align="center" width="14%" valign="TOP">3.6</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">time travel</td>
+<td align="center" width="29%" valign="TOP">6.6</td>
+<td align="center" width="14%" valign="TOP">4.1</td>
+<td align="center" width="13%" valign="TOP">10</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">nicotine levels smokeless tobacco</td>
+<td align="center" width="29%" valign="TOP">5.3</td>
+<td align="center" width="14%" valign="TOP">3.7</td>
+<td align="center" width="13%" valign="TOP">  3</td>
+</tr>
+<tr>
+<td width="44%" valign="TOP">flood plains definitions</td>
+<td align="center" width="29%" valign="TOP">3.9</td>
+<td align="center" width="14%" valign="TOP">4.4</td>
+<td align="center" width="13%" valign="TOP">  0</td>
+</tr>
+</table>
+
+<p>The highest occurrence of overlap between the simple and complex results lists occurred with the queries <i>rhubarb pie</i>, <i>search engines</i>, <i>trumpet winsock</i>, <i>social workers</i>, <i>attention deficit disorder</i> and <i>physical therapist</i>.  On average, about 8 of the 10 results for these queries were <span>identical</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>regardless of the presence or absence of <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>query syntax.  At the other end of the <span>spectrum</span>, <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> there was an overlap of approximately 4 results between the simple and complex queries with the query <i>flood plains definitions</i>.  It is interesting to note that the two queries with substantially lower <span>modes</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>had more than two terms.  </p>
+
+<h2>Discussion</h2>
+
+<p>Referring to the data in Table 4, a paired t-test shows that the results from the simple queries are statistically significantly different from the results for complex queries.  However, as with all statistics, one must ask what different does this make in the 'real world?'</p>
+
+<p>Does it make sense to learn and utilize the more complex searching operators if on average it is only going to present the searcher with 2.7 different results than retrieved by just typing in the query?  Are the 2.7 new results <span>worth</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>the increased chance of entering a query incorrectly?  As the complexity of queries increase so does the <span>probability</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of <span>error</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>(<a href="#ref1">Jansen &amp; Pooch, in press</a>).</p>
+
+<p>Findings <span>suggest</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>that the use of complex queries is not <span>worth</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>the trouble.  Based on their conduct, it appears that most Web searchers do not think it is <span>worth</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>the trouble either.  The behavior of Web searchers adheres to the principle of least effort (<a href="#ref2">Zipf, 1948</a>), which postulates that there are "useful" behaviors that are quick and easy to perform.  The very existence of these quick, easy behavior patterns then <span>cause</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>individuals to choose them, even when they are not <span>necessarily</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>the best behavior from a functional point of view.  However, they are good enough, and people will generally expend the least amount of effort to achieve what they want.  This can explain the behavior of Web searchers.  The results obtained via simple queries are good enough.</p>
+
+<p>The use of simple queries versus complex queries is also compelling when one compares the <span>modes</span>. <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  The <span>modes</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>for the simple and the complex queries are both 10, meaning that more than any other occurrence, the results from a simple and complex queries will be the same.  In reviewing the analysis by <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine, there was a great <span>deal</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of overlap between query results for all <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines, ranging from 60% for Alta Vista and Northern Light to 90% for Excite.  The <span>mode</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>for each of the <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines was 10, with the exception of Go/Infoseek with a <span>mode</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of 9.  With results being similar up to 90% of the time (e.g., Excite), one wonders why even have <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>searching syntax at all?  Studies and presentations show that the <span>failure</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>rates among Web searchers using <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>syntax is high (<a href="#ref1">Jansen, <i>et al.</i>, 2000</a>; <a href="#ref2">Xu, 1999</a>).  Why give searchers the opportunity to make mistakes?  This seems to be the tactic <span>followed</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>by FAST Search and Go / Infoseek that <span>limit</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>the searcher's options.</p>
+
+<p>In the analysis of the various <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>search operators, all had means of about 7, meaning on average approximately 7 of the 10 results were the same regardless of how simple or complex the query.  The <span>mode</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>for all operators was 10. It appears that no particular operator has a significantly greater or lessor impact on results.  The mean for phrase searching was a little higher at 7.8 and would have been a little higher except for a couple of the queries.  For example, one can make a good case that <i>nicotine levels smokeless tobacco</i> is not a <span>typical</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>phrase that one would <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>for.  However it is difficult to judge what searchers will do.  It is also interesting that the results from the must appear operator (+) and the <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>intersection operator (AND) are not the same.  With Excite, the results were <span>identical</span>. <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  With Northern Light, the results varied between the two operators.</p>
+
+<p>In comparing individual queries, 6 had means of over 8 results, meaning that regardless of what <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>syntax was used, at least 8 of the results were the same as the baseline on average.  Of these six queries, 1 was a three-term query and 5 were two-term queries.  The query <i>flood plains definitions</i> has a mean of 3.9, substantially lower than all other queries.  It was the only query with a mean less than 5.  Even though it was a three-term query, the means of the other three-term queries were much higher at 8.1 and 6.6.  Perhaps the <span>topic</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>or <span>term</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>choice was the determinate factor. </p>
+
+<p>The four-term query was also near the bottom of the <span>list</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>with a mean 5.3 and a <span>mode</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of 3.  Still, more than 50% of the results were the same regardless of how the query was entered.  With the four-term and one of the three-term queries at the bottom of the <span>list</span>, <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> it may <span>indicate</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>that increased query <span>length</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>will increase the <span>probability</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of different results from more complex queries.  However, increasing the query <span>length</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>would perhaps also mean a review of what <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>syntax operators are appropriate.  For example, as the query <span>length</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>increases phrase searching may no longer be a viable operator.  In fact, if we remove the effect of phrase searching from these two queries, the mean for <i>nicotine levels smokeless tobacco</i> increases to 5.8 and the mean for <i>flood plains definitions</i> increases to 4.6. </p>
+
+<h2>Conclusions and Future Research</h2>
+
+<p>This research indicates that the <span>typical</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>Web searcher is adhering to a very <span>reasonable</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>course of <span>action</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>by entering simple queries.  The use of more complex queries appears to have a very small impact on the results retrieved.  On average, 7.3 of the top ten results will be the same, regardless of how the query is entered.  The two or three different results may not be <span>worth</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>the increased effort required to learn the <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>searching rules or the increased risk of making a mistake.</p>
+<p>These results imply that Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine designers are doing a proper job of designing Web interfaces and ranking <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>that accommodate the searching patterns of their customers.  Some have criticized the <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>model as being too complex for most users (<a href="#ref2">Salton, <i><i>et al.</i></i>, 1993</a>).  On most Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines, the current interface consists of a <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>text box and a <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>button.  It is difficult to conceive of a simpler interface given current <span>software</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>and <span>hardware</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>technology.  The results also call into question the strategy by some Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services of having <span>separate</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>search pages for the <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>and proximity operators.  By forcing the more sophisticated users to go to another window, it may be discouraging the use of these <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators.  Of course, this may be the goal.</p>
+<p>This research also supports reviews that implementations of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>searching have many positive <span>features</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>that overcome the shortcoming of the <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>model.  These <span>practical</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span><span>features</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>are sometimes ignored in the theoretical <span>criticism</span>  <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span><span>systems</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>(<a href="#ref1">Frants, <i><i>et al.</i></i>, 1999</a>).  Additionally, it validates the position that the shortcomings of <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span><span>systems</span>, <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> while theoretically <span>valid</span>, <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> have <span>limited</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span><span>practical</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>impact (<a href="#ref2">Korfhage, 1997</a>), given the manner in which most people <span>search</span>. <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span></p>
+
+<p>The ranking <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of the Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services are also supportive of the <span>typical</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>usage pattern of Web searchers.  Based on the results of this research, one can conjecture that the ranking <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of these <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines adhere to the following rule: <i>Place at the top of the results <span>list</span>, <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> those <span>documents</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>that contain all the query terms and that have all the query terms near each other</i>.  This seems to be a <span>reasonable</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>course of <span>action</span>. <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  With a ranking <span>rule</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>like this, the use of <span>advanced</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>query syntax will have little impact on the results at the top of the <span>list</span>. <span class="quali" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span></p>
+
+<p>There are several avenues for <span>future</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span><span>investigation</span>. <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  The first is the use of a <span>larger</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>set of initial queries, increasing the number of simple queries from 15 to say 100.  <span>A+</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span><span>larger</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>set of simple queries would increase the diversity of <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>subjects and query terms.  The second would be to examine the effect of longer queries.  This research focused on the dominant behavior of Web searchers, short queries (generally about 2 terms) and viewing 10 or fewer <span>documents</span>. <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  It would be interesting to see if these same results <span>hold</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>as the query <span>length</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>or the number of results viewed increase. However, the impact in terms of <span>explaining</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>Web searching behavior would be less.  Finally, an exciting research area to explore would be the use negative operators and ways to present them to the searcher.  Some <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines now offer online thesauruses that automatically <span>suggest</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>terms for the user to add to the query.  It would be interesting to also offer <span>term</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>suggestions that the searcher may not want in the results.  These terms could then be <span>added</span>  <span class="quanti" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>to the query using the must not appear operator, usually a minus sign (-) or the <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>operators (AND NOT).</p>
+
+<h2>References</h2>
+
+<ul><a name="ref1"></a>
+    <li>Alexa In0er (2000). Alexa in0er's page. Available at:
+        <a href="http://in0er.alexa.com/in0er?cli=10">http://in0er.alexa.com/in0er?cli=10</a>.
+        [30 March 2000]</li>
+    <li>Alexa Research. (2000). <a
+        href="http://www.alexaresearch.com/clientdir/web_reports/top_websites_nonclient.cfm">The
+        Alexa 1000</a>. Available at: <a
+        href="http://www.alexaresearch.com/clientdir/web_reports/top_websites_nonclient.cfm">http://www.alexaresearch.com/clientdir/web_reports/top_websites_nonclient.cfm</a>
+        [30 August 2000]</li>
+    <li>Borgman, C. (1996). Why are online catalogs still hard to
+        use? <i>Journal of the American Society for Information
+        Science</i>. <b>47</b>(7), 493-503.</li>
+    <li>CommerceNet/Nielsen Media. (1997). Search engines most
+        popular method of surfing the Web. Available at: <a
+        href="http://www.commerce.net/news/press/0416.html">http://www.commerce.net/news/press/0416.html</a>
+        [30 August 2000]</li>
+    <li><a href="http://www.cyberatlas.com/">CyberAtlas</a>.
+        (2000) Available at: <a href="http://www.cyberatlas.com/">http://www.cyberatlas.com</a>
+        [30 May 2000]</li>
+    <li>Dragutsky, P. (1997). <a
+        href="http://www.suite101.com/article.cfm/search_engines/4825"><i>Boolean
+        basics</i></a>. Available at: <a
+        href="http://www.suite101.com/article.cfm/search_engines/4825">http://www.suite101.com/article.cfm/search_engines/4825</a>
+        [30 August 2000] (Note: you need to scroll down the page
+        to find this item; there is no internal link.)</li>
+    <li>FAST Search (2000<i>). FAST Search FAQ</i>. Available at:
+        <a href="http://www.ussc.alltheweb.com/faq.php3">http://www.ussc.alltheweb.com/faq.php3</a>
+        [1 May 1999]</li>
+    <li>Frants, V., Schairo, <span>J++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>, Taksa, I. &amp; Voiskunskii, V.
+        (1999). <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>search: current state and perspectives. <i>Journal
+        of the American Society for Information Science</i>. <b>50</b>(1):
+        86-95.</li>
+    <li>Hoelscher, C. (1998). How Internet experts <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>for
+        information on the Web. <em>World Conference of the World
+        Wide Web, Internet, and Intranet</em>, <em>Orlando, FL</em>.<em>,
+        1998. </em>Association for the Advancement of Computing
+        in Education. (Note: Published on <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>with no page
+        numbers.)</li>
+    <li>Jansen, B., &amp; Pooch, U. (In Press). Web user studies:
+        a review of and <span>framework</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>for <span>future</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>research. <i>Journal
+        of the American Society for Information Science</i>.
+        Forthcoming. Available in draft form at: <a
+        href="http://jimjansen.tripod.com/academic/pubs/wus.html">http://jimjansen.tripod.com/academic/pubs/wus.html</a>.[30th
+        August 2000]</li>
+    <li>Jansen, B. Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>, Bateman, <span>J++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>, &amp; Saracevic, T.
+        (1998). <a
+        href="http://jimjansen.tripod.com/academic/pubs/sigirforum98/forum98.html">Real
+        life information retrieval: a study of user queries on
+        the Web</a>. <i>SIGIR Forum</i>, <b>32</b>, 1, 5 - 17.
+        Available at: <a
+        href="http://jimjansen.tripod.com/academic/pubs/sigirforum98/forum98.html">http://jimjansen.tripod.com/academic/pubs/sigirforum98/forum98.html</a>.
+        [30th August 2000]</li>
+    <li>Jansen, B., Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>, &amp; Saracevic, T. (2000). Real
+        life, real users, and real needs: <span>A+</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>study and analysis of
+        user queries on the web. <i>Information Processing and
+        Management</i>. <b>36</b>(2), 207-227.</li>
+    <li>Jones, S., Cunningham, S. &amp; McNab, <span>R++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> (1998). Usage
+        analysis of a digital library. <em>T</em><cite>hird ACM
+        Conference on Digital libraries</cite>,<em> Pittsburgh,
+        PA</em>.<em> 1998</em>. ACM SIGIR. 293 - 294. Available
+        at <a
+        href="http://www.acm.org/pubs/citations/proceedings/dl/276675/p293-jones/">http://www.acm.org/pubs/citations/proceedings/dl/276675/p293-jones/</a>.
+        (Note: You must be a subscriber of the ACM Digital
+        Library to access the article.)</li>
+    <a name="ref2"></a><li>Keily, L. (1997). Improving resource discovery on the
+        Internet: the user <span>perspective</span>. <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> <em>21th International
+        Online Information Meeting, London, UK</em>, Learned
+        Information Europe Ltd. 205 &#150; 212.</li>
+    <li>Kirsch, S. (1998). The <span>future</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of Internet <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>(keynote
+        address). Paper presented at the 21st Annual
+        International ACM SIGIR Conference on Research and
+        <span>Development</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>in Information Retrieval, Melbourne,
+        Australia. Available at: <a
+        href="http://www.skirsch.com/stk.html/presentations/sigir.ppt">http://www.skirsch.com/stk.html/presentations/sigir.ppt</a>
+        [16 August 1999] </li>
+    <li>Korfhage, <span>R++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> (1997). <i>Information Storage and Retrieval</i>.
+        New York, NY: Wiley.</li>
+    <li>Lawrence, S. &amp; Giles, C. (1999). Accessibility of
+        information on the web. <i>Nature</i>, <b>400</b>, 107
+        &#150; 109.</li>
+    <li>Leighton, H. and Srivastava, <span>J++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> (1999). First 20
+        Precision among World Wide Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services (search
+        engines), <i>Journal of the American Society for
+        Information Science</i> <b>50</b>(1), 870-881.</li>
+    <li>Lesk, M., Cutting, D., Pedersen, <span>J++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>, Noreault, T., &amp;
+        Koll, M. (1997). Panel Session on &quot;real world&quot;
+        information retrieval. <i>SIGIR Forum</i>, <b>32</b>, 1,
+        1 - 4.</li>
+    <li><a href="http://www.nielsen-netratings.com/">Nielsen//NetRatings</a>
+        (2000). Available at: <a
+        href="http://www.nielsen-netratings.com/">http://www.nielsen-netratings.com/</a>
+        [11 August 1999]</li>
+    <li><a href="http://searchenginewatch.com/">Search Engine
+        Watch</a>. (2000). Available at: <a
+        href="http://searchenginewatch.com/">http://searchenginewatch.com</a>
+        [30 August 2000]</li>
+    <li><a href="http://www.searchwords.com/">SearchWords.com</a>
+        (2000). Available at: <a
+        href="http://www.searchwords.com/">http://www.searchwords.com</a>
+        [30 May 2000]</li>
+    <li>Siegfried, S., Bates, M., &amp; Wilde, D. (1993). A
+        profile of end-user searching behavior by humanities
+        scholars: the Getty online searching project report no.
+        2. <i>Journal of the American Society for Information
+        Science</i>, <b>44</b>(5), 273-291.</li>
+    <li>Silverstein, C., Henzinger, M., Marais, H. &amp; Moricz,
+        M. (1999). Analysis of a very large Web <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engine
+        query log. <i>SIGIR Forum</i>, <b>33</b>(1), 6 -12.</li>
+    <li>Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>, Bateman, <span>J++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>, &amp; Jansen, B. (1998). <a
+        href="../paper53.html">Searching
+        heterogeneous collections on the Web: behaviour of Excite
+        users.</a>. <i>Information Research</i>, <b>4</b>(2)
+        Available at: <a
+        href="../paper53.html">http://InformationR.net/ir/paper53.html</a>
+        [30 August 2000]</li>
+    <li>Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>, Wolfram, D., Jansen, B., &amp; Saracevic, T.
+        (In Press). The public and their queries. <i>Journal of
+        the American Society for Information Science. </i>Forthcoming.
+    </li>
+    <li>Sullivan, D. (2000). Search engine sizes. Available at: <a
+        href="http://searchenginewatch.com/reports/sizes.html">http://searchenginewatch.com/reports/sizes.html</a>
+        [30 August 2000] </li>
+    <li>University of California, Berkeley. Extension. (1997). <a
+        href="http://www.exo.net/uce/uce6_boolean.html">Online
+        searching and electronic research. Lesson 6: Introduction
+        to <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>logic.</a>&nbsp;Berkeley, CA: University of
+        California, Berkeley.&nbsp;&nbsp; Available at: <a
+        href="http://www.exo.net/uce/uce6_boolean.html">http://www.exo.net/uce/uce6_boolean.html</a>.
+        [30 August 2000]</li>
+    <li>Wolfram, D. (1999). Term co-occurrence in Internet search
+        engine queries: An analysis of the Excite data set. <i>Canadian
+        Journal of Information and Library Science</i>. <strong>24</strong>(2/3),
+        12-33. </li>
+    <li>Xu, <span>J++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> L. (1999) Internet <span>search</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>engines: real world IR
+        issues and challenges. Paper delivered at the <i>Conference
+        on Information and <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>Managemen</i>t<em>, Kansas
+        City, Missouri</em>. </li>
+    <li>Young, D. &amp; Shneiderman, B. (1993). <span>A+</span>  <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>graphical
+        filter/flow model for <span>Boolean</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>queries. <i>Journal of the
+        American Society for Information Science</i>,<b> 44</b>(1),
+        327-339.</li>
+    <li>Zumalt, <span>J++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> &amp; Pasicznyuk, <span>R++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> (1998). The Internet and
+        <span>reference</span>  <span class="conce" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>services: a real-world <span>test</span>  <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>of Internet
+        <span>utility</span>. <span class="exper" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span> <i>Reference and User Services Quarterly</i>, <b>38</b>(2),
+        165 &#150; 172.</li>
+</ul>
+
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+
+<p style="text-align : left; color : black;"> Jansen, Bernard <span>J++</span>. <span class="compus" style="width:1px;border-width:93px 31px 93px 31px;position:relative;">.</span>  (2000) &nbsp; &quot;The effect of query complexity on Web searching results&quot;. &nbsp;Information Research, <strong>6</strong>(1)  Available at: http://InformationR.net/ir/6-1/paper87.html</p>
+
+<p style="text-align : center">&copy; the author, 2000.  Updated: 30th August 2000</p>
+
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:XIQ4nBpDmQgJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres61.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper87" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>		
+<hr color=#ff00ff size=3>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/6-1/paper87.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:15:29 GMT -->
+</html>

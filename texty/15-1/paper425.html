@@ -1,0 +1,1000 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/15-1/paper425.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:33:43 GMT -->
+<head>
+<title>Using a two-stage technique to design a keyword suggestion system</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif"/>
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css"/>
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk"/>
+
+<!--Enter appropriate data in the content fields-->
+<meta name="dc.title" content="Using a two-stage technique to design a keyword suggestion system"/>
+<meta name="dc.creator" content="Lin-Chih Chen"/>
+<meta name="dc.subject" content="Two-Stage Technique Keyword Suggestion System"/>
+<meta name="dc.description" content="Introduction. The study of keyword suggestion in the field of search engine marketing is an important issue for paid search advertising or sponsored advertisements. The challenge of this issue is not only to suggest the relevant keywords, but also to find more such keywords. Method. In this paper, we propose a system, the main goal of which is not only to suggest a list of relevant keywords, but also to determine the degree of similarity between the user's query and each suggested keyword. Analysis. Three experiments were performed to illustrate the performance comparison between different systems and the relevant parameters considered in our system. Results. According to the results of the first experiment, our system was found to be better than other online systems. According to the results of the second experiment, we concluded that the performance of the latent semantic analysis probability model is better than the random probability model. According to the results of the third experiment, we verified that the termination criteria of our system could yield a cost effective solution within controlled period of time. Conclusions. In this paper, we make several contributions. First, we propose an intelligent system that is based on several semantic analysis methods. Second, we define a new performance metric to compare the results of different systems. Third, we design a combined technique to find a cost effective solution within controlled period of time."/>
+<meta name="dc.subject.keywords" content="Keyword Suggestion, Semantic Graph, Training Parameter, Cost Effective Solution, Training Stage, Suggestion Stage"/>
+
+<!--leave the following to be completed by the Editor-->
+<meta name="robots" content="all"/>
+<meta name="dc.publisher" content="Professor T.D. Wilson"/>
+<meta name="dc.coverage.placename" content="global"/>
+<meta name="dc.type" content="text"/>
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613"/>
+<meta name="dc.identifier" scheme="URI" content="paper425.html"/>
+<meta name="dc.relation.IsPartOf" content="infres151.html"/>
+<meta name="dc.format" content="text/html"/>
+<meta name="dc.language" content="en"/>
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/"/>
+<meta name="dc.date.available" content="2010-03-15"/>
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			}
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}
+		}
+
+	</script>
+
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: #5E96FD;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+
+
+</style>
+
+</head>
+<body bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif"
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 15  no. 1, March, 2010</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres151.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+<hr style="COLOR: #5E96FD" size="1"/>
+
+<h1>Using a two-stage technique to design a keyword suggestion system</h1>
+<br/>
+<div style="margin-left: 10%; margin-right: 10%;">
+<h4><a href="#author">Lin-Chih Chen</a><br/>
+Department of Information Management, National Dong Hwa University, Hualien 97401, Taiwan</h4>
+</div>
+<br/>
+
+<form action="#">
+<fieldset>
+<legend>Abstract </legend>
+<blockquote>
+<strong>Introduction.</strong> The study of keyword suggestion in the field of search engine marketing is an important issue for paid search advertising or sponsored advertisements. The challenge of this issue is not only to suggest the relevant keywords, but also to find more such keywords.<br/>
+<strong>Method.</strong> In this paper, we propose a system, the main goal of which is not only to suggest a list of relevant keywords, but also to determine the degree of similarity between the user's query and each suggested keyword.<br/>
+<strong>Analysis.</strong> Three experiments were performed to illustrate the performance comparison between different systems and the relevant parameters considered in our system.<br/>
+<strong>Results.</strong> According to the results of the first experiment, our system was found to be better than other online systems. According to the results of the second experiment, we concluded that the performance of the latent semantic analysis probability model is better than the random probability model. According to the results of the third experiment, we verified that the termination criteria of our system could yield a cost effective solution within a controlled period of time.<br/>
+<strong>Conclusions.</strong> In this paper, we make several contributions. First, we propose an intelligent system that is based on several semantic analysis methods. Second, we define a new performance metric to compare the results of different systems. Third, we design a combined technique to find a cost effective solution within controlled period of time.
+</blockquote>
+</fieldset>
+</form>
+
+<br/>
+<div align="center">
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: #5E96FD;" onclick="doChangeFont()"/></div>
+<br/>
+
+<h2>Introduction</h2>
+
+<p>Search engine marketing is a method of Internet marketing that increases the visibility of a company's Website in search engine listings. In this marketing method, the business opportunity of paid search advertising is growing fast. According to existing historical evidence, the growing scale of this marketing method is very fast compared to traditional advertising or other online marketing methods (<a href="#ell06">Elliott 2006</a>). In North American, the total market size of this marketing method was about US$12.2 billion in 2007, and it grew by 30% in 2006. Moreover, and even more significant, this marketing method spending is now projected to grow to US$25.2 billion in 2011 (<a href="#she08">Sherman 2008</a>).</p>
+
+<p>Search engine marketing can be divided into two broad areas: search engine optimization and pay-per-click (<a href="#she08">Sherman 2008</a>).</p>
+
+<p>Search engine optimization is the process of developing, customizing or retooling a Web page so that it achieves a sustained high-ranking on search engine listings. According to the literature (see, for example, <a href="#spi01">Spink <em><em>et al.</em></em> 2001</a>), the majority of users (85.2%) view only the first page of the listings. Thus, if the entry page of a Website can be placed into the top rankings by a suitable optimisation process, then it can achieve a best advertising effect. However, it is a hard task to place a Web page into the top rankings unless the quality of the page content is superior to others.</p>
+
+<p>Pay-per-click is another technique, whereby the advertisers typically bid on the advertisers' keyword list relevant to their target market. When the user's query matches the list, the advertiser's destination URL may be shown to the user. These links are called sponsored links or sponsored advertisements, and appear adjacent to or above the normal results. The search engine owners place the advertiser's destination URL into the top position of sponsored links for the advertiser who bids on the highest price and the bidding process may result in higher bidding price for popular keywords.</p>
+
+<p>Alternatively, the advertisers also can focus on relatively low-cost keywords or phrases, called <em>suggested keywords</em>, which are relevant to the popular keywords, by a keyword suggestion process. On the one hand, the advertisers can adequately bid on a large number of suggested keywords to minimize their total cost, although the advertising effect of these keywords may be lower than the popular keywords. On the other hand, the search engine owners must provide an appropriate tool to attract more advertisers to buy advertisements to maximize their total revenue. Thus, using a suitable keyword suggestion process to generate a list of target keywords is an important issue for advertisers and search engine owners. In this paper, we focus on to propose a new keyword suggestion process to the search engine owners. When this process is built from the search engine owners, the advertisers can bid on the suggested keywords generated from this process. If the suggested keywords are highly related to the popular keywords, the search engine owners should attract more advertisers to increase their advertising budget.</p>
+
+<p>Although many pay-per=click search providers exist in the current Internet, <em>Yahoo Search Marketing</em> (<a href="#yah06">Yahoo 2006</a>), <em>Google AdWords</em> (<a href="#goo06">Google 2006</a>), and Microsoft adCenter (<a href="#mic06">Microsoft 2006</a>) were the largest  in 2007 (<a href="#she08">Sherman 2008</a>).</p>
+
+<p><em>Yahoo</em> (formerly <em>Overture</em>, formerly <em>Goto.com</em>) was first to propose the concept of pay-per-click. Previously, the search engines had extracted the description values of the meta tags in HTML to obtain the description of the page content. Obviously, some webmasters may try to improve the ranking of their Website by a manual process to manipulate the content of the meta tags. <em>Goto.com</em> focused on roughly the top 1,000 most popular keywords, employing experts and consultants to create hand-crafted pages (<a href="#jan08">Jansen and Mullen 2008</a>) to overcome this problem. When <em>Goto.com</em> introduced the concept of sponsored search, each page was associated with a suggested keyword list. The suggested keyword list was open to bids and the advertisers could request to add the advertiser's keyword list into a suitable <em>suggested</em> keyword list by a bidding process. In other words, <em>Goto.com</em> could ensure that the advertising content was relevant to the suggested keyword list. Given the rapid growth of sponsored search, the bidding process is now partially automated (<a href="#mor07">Mordkovich and Mordkovich 2007</a>).</p>
+
+<p><em>Google</em> proposed an <em>AdWords</em> service in 2000 and it became <em>Google</em>'s main source of revenue (<a href="#goo08">2008</a>). The main characteristic of <em>AdWords</em> is the charging model of sponsored links, which uses the click through rate and cost per click to charge a suitable price for advertisers (<a href="#lve05">Lves 2005</a>). The advertisers can control the amount of budget and time they wish to spend on advertising.</p>
+
+<p>Microsoft was the last of the three big search engines (<em>Google</em>, <em>Yahoo</em> and <em>MSN Live Search</em>, now <em>Bing</em>) to develop its own pay-per-click service. Previously, the advertising of Microsoft was provided by <em>Overture</em>. Microsoft decided to launch its own <em>adCenter</em> service in 2006 when search engine marketing is growing fast. In <em>adCenter</em>, the position of sponsored links is decided by the advertisers' budget and is similar to  <em><em>Google AdWords</em></em>. The main difference between <em>adCenter</em> and <em>AdWords</em> is that the former is integrated with MSN's member database, that is, the advertisers can decide the position of sponsored links according to sex, age, and place of residence by tracking the member database.</p>
+
+<p>The existing providers fail to consider the semantic relationships between the user's query and the suggested keywords. That is, the relevant suggested keywords, not containing the input query, are often ignored to suggest.</p>
+
+<p>This paper proposes a novel keyword suggestion system, called LIK, to suggest relevant and important keywords, and to measure the degree of similarity between the user's query and each relevant keyword. This system contains the following two stages: training and suggestion. In the training stage, it updates the training parameter based on the methods of latent semantic analysis (<a href="#dee90">Deerwester <em><em>et al.</em></em> 1990</a>) and probabilistic latent semantic analysis (<a href="#hof99">Hofmann 1999</a>). In the suggestion stage, it first applies breadth-first search and the concept of inverse link to build a semantic graph. Then, it transforms the training parameter into the edge weight of the graph. Finally, the relevant keywords with the degree of similarity are suggested to the user for viewing or accessing according to the edge weight of the graph. In summary, the bases of latent semantic analysis, probabilistic latent semantic analysis and the semantic graph are all based on the semantic analysis between the query terms and the Web pages.</p>
+
+<p>We make the following salient contributions in this paper. We propose a system that is based on several semantic analysis methods. We define a new performance metric, DIST, to compare the experimental results of different systems to fairly evaluate the performance of different systems. Moreover, this metric also can be applied to evaluate other information retrieval problems, such as document clustering and content matching. We design several mechanisms to achieve highly cost effective and noticeable improvements.</p>
+
+<p>The rest of this paper is organized as follows. Next, previous research is reviewd; the following section presents the system's architecture, after which the performance comparisons between our system and other systems are shown, along with the simulation results for various parameters and the final section concludes the paper and discusses future directions.</p>
+
+<h2>Related work</h2>
+
+<p>In this section, we discuss two related literatures: keyword suggestion and termination criteria for probabilistic latent semantic analysis.</p>
+
+<h3>Keyword suggestion</h3>
+
+<p>Keyword suggestion is a relatively new and rapidly expanding research field, whose main goal is to generate a list of suggested keywords. Many systems are available on the Internet and currently available systems are shown in Table 1. <em><em>CatS</em></em> (<a href="#rad06">Radovanovic and Ivanovic 2006</a>) used a separate category tree that derived from the dmoz taxonomy to arrange all suggested keywords. <em><em>Highlight</em></em> (<a href="#wu03">Wu and Chen 2003</a>) adopted a lexical analysis and a probabilistic analysis to construct a concept hierarchy for all relevant keywords. <em><em>Credo</em></em> (<a href="#car04">Carpineto and Romano 2004</a>) applied a formal concept analysis to construct all suggested keywords in a hierarchy form that allows users to query Web pages and judges the relevant results. <em><em>Carrot2</em></em> (<a href="#osi05">Osinski and Weiss 2005</a>) used the sentences with variable length words as the candidate keywords, then, it utilized a suffix tree clustering to identify which one should be suggested. <em>Google Proximity Search</em> (<a href="#ran08">Ranks.NL 2008</a>) used several search engines to collect the relevant Web pages in response to the seed keyword, then, it expanded new suggested keywords in its proximity range. <em><em>Google AdWords</em></em> (<a href="#goo06">Google 2006</a>) and <em><em>Yahoo Search Marketing</em></em> (<a href="#yah06">Yahoo 2006</a>) analysed the content of the query log file to suggest the relevant keywords. <em><em>Clusty</em></em> (<a href="#seg07">Segev <em><em>et al.</em></em> 2007</a>) adopted the concept of concise all-pairs profiling to match all possible pairs of relevant keywords. <em>WordTracker</em> (<a href="#wor08">2008</a>) produced a list of suggested keywords by using the concept of query expansion.</p>
+
+<table width="60%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br/><strong>Table 1: The list of the online keyword suggestion systems that available on the Internet</strong></caption>
+<tr><td><strong>System</strong></td><td><strong>Access URL</strong></td></tr>
+<tr><td><a href="http://www.webcitation.org/query?url=http%3A%2F%2Fstribog.im.ns.ac.yu%2Fcats%2Fservlet%2FCatS%3FsearchEngine%3DAltaVista&amp;date=2010-03-07"><em>CatS</em></a></td><td>http://stribog.im.ns.ac.yu/cats/servlet/CatS?searchEngine=AltaVista</td></tr>
+<tr><td><a href="http://www.webcitation.org/query?url=http%3A%2F%2FHighlight.njit.edu%2F&amp;date=2010-03-06">Highlight</a></td><td>http://Highlight.njit.edu/</td></tr>
+<tr><td><a href="http://www.webcitation.org/query?url=http%3A%2F%2FCredo.fub.it%2F&amp;date=2010-03-06">Credo</a></td><td>http://Credo.fub.it/</td></tr>
+<tr><td><a href="http://www.webcitation.org/query?url=http%3A%2F%2Fsearch.Carrot2.org%2F&amp;date=2010-03-06">Carrot2</a></td><td>http://search.Carrot2.org/</td></tr>
+<tr><td><a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.rapidkeyword.com%2F&amp;date=2010-03-06">Google Proximity Search</a></td><td>http://www.rapidkeyword.com/</td></tr>
+<tr><td><a href="http://www.webcitation.org/query?url=https%3A%2F%2Fadwords.google.com%2F&amp;date=2010-03-06">Google AdWords</a></td><td>https://adwords.google.com/</td></tr>
+<tr><td><a href="http://www.webcitation.org/query?url=https%3A%2F%2Fsignup13.marketingsolutions.yahoo.com%2F&amp;date=2010-03-06">Yahoo Search Marketing</a></td><td>https://signup13.marketingsolutions.yahoo.com/</td></tr>
+<tr><td><a href="http://www.webcitation.org/query?url=http%3A%2F%2FClusty.com%2F&amp;date=2010-03-06">Clusty</a></td><td>http://Clusty.com/</td></tr>
+<tr><td><a href="http://www.webcitation.org/query?url=http%3A%2F%2Ffreekeywords.wordtracker.com%2F&amp;date=2010-03-06">WordTracker</a></td><td>http://freekeywords.wordtracker.com/</td></tr>
+<tr><td><a href="http://www.webcitation.org/query?url=http%3A%2F%2Fcayley.sytes.net%2FLIK_english&amp;date=2010-03-06">LIK</a></td><td>http://cayley.sytes.net/LIK_english</td></tr>
+</table>
+
+<h3>Termination criteria for probabilistic latent semantic analysis</h3>
+
+<p>A classical method to represent the co-occurrences of terms and documents is term matching. However, this method exists two problems: synonymy and polysemy. Deerwester <em>et al</em>. (<a href="#dee90">1990</a>) proposed a latent semantic analysis model to address the problem of synonymy. Latent semantic analysis uses the singular value decomposition, a mathematical technique that reduces the dimension of the matrix, to capture lexical similarities between terms and documents. However, it fails to deal with the problem of polysemy since a single vector in the result of singular value decomposition represents only one term (<a href="#ish02">Ishida and Ohta 2002</a>). Another drawback of latent semantic analysis is that it lacks a solid statistical foundation and, hence, is more difficult to use by combining it with other models (<a href="#hof99">Hofmann 1999</a>).</p>
+
+<p>To overcome these drawbacks, Hofmann (<a href="#hof99">1999</a>) proposed a probabilistic method, called probabilistic latent semantic analysis, to discover a latent semantic space from terms and documents. It is more flexible and has a more solid statistical foundation than standard latent semantic analysis. Additionally, probabilistic latent semantic analysis can deal with the problem of polysemy and can explicitly distinguish between different meanings and different types of term usage. Probabilistic latent semantic analysis uses an aspect model to identify the hidden semantic relationships among terms and documents. In the aspect model, the terms and documents are considered as independent of each other.</p>
+
+<p>Probabilistic latent semantic analysis uses an expectation maximization algorithm for maximum likelihood estimation; it also guarantees a convergent behaviour for the iterative procedure. The target of probabilistic latent semantic analysis is to maximize the log-likelihood function by using the expectation maximization algorithm. Probabilistic latent semantic analysis defines that a local optimal solution is reached if the improvement value of the log-likelihood function between two consecutive iterations is less than a predefined threshold.</p>
+
+<p>Although probabilistic latent semantic analysis can converge to the local optimal solution, it may take a long time to reach this solution. To achieve faster response time for expectation maximization algorithm, many researchers used the following two termination criteria to decide whether the algorithm should stop or whether the processing should proceed: (1) setting a fixed number of iterations to stop the algorithm or (2) using a more relaxed threshold to determine whether the algorithm should terminate.</p>
+
+<p>Some researchers (<a href="#gib05">Gibson <em><em>et al.</em></em> 2005</a>; <a href="#met07">Metaxoglou and Smith 2007</a>; <a href="#ngu07">Nguyen <em><em>et al.</em></em> 2007</a>) used a fixed number of iterations to stop the algorithm to save execution time when it cannot to reach the local optimal solution within the range of iterations.</p>
+
+<p>Other researchers used a more relaxed threshold to determine whether the algorithm should terminate. Ristad and Yianilos (<a href="#ris98">1998</a>) terminated the algorithm when the increased total probability of training corpus among consecutive iterations falls below a fixed threshold rate. Markatou (<a href="#mar00">2000</a>) calculated the weighted likelihood estimates on the bootstrap sub-samples that were drawn from whole data set by the method of moment estimates for each iteration. The algorithm should be terminated if the estimate values are less than or equal to a predefined quantile value. Zhang and Goldman (<a href="#zha01">2001</a>) first selected a set of unlabelled data in the expectation step, then they calculated a diverse density probability from all selected data in the maximization step. The algorithm should be terminated if the probability is less than or equal to a predefined probability value. Petersen and Winther (<a href="#pet05">2005</a>) applied a negative log-likelihood function as the cost function of the algorithm. <!-- Its termination criterion is defined as the relative change of the cost function between two consecutive iterations falls below a threshold value. --></p>
+
+<p>The expectation maximization algorithm uses a fixed number of iterations or a relaxed threshold as the termination criterion has the following two main problems. First, if it takes a small number of iterations or a larger threshold value, it may result in the difference being large compared with the final solution and the local optimal solution. Secondly, if it takes a large number of iterations or a small threshold value, it may result in the number of iterations becoming very large when the improvement value is very small when the solution is close to the local optimal solution.</p>
+
+<p>To solve theses problems, we decided to combine the concept of the improvement value and improvement progress history as the termination criterion. Since the improvement value and improvement progress history are not always equal for each iteration, the number of iterations required to run varies. That is, the combined technique can ensure that the number of iterations is dynamically determined. In summary, we focus on applying this technique to find a cost effective solution within a controlled period of time rather than to find the local optimal solution.</p>
+
+<h2>Keyword suggestion system</h2>
+
+<p>In this section, we propose an integrated keyword suggestion system, called LIK, as shown in Figure 1. The system involves the following two stages: training and suggestion, which are described below.</p>
+
+<h3>Training stage</h3>
+
+<p>The main objective of this stage is to generate the training parameter, called the query-by-document matrix, which is the main source of the suggestion stage, based on the methods of latent semantic analysis and probabilistic latent semantic analysis.</p>
+
+<p>First, the training stage uses the <em>AOL Query Log</em> (<a href="#aol06">AOL 2006</a>) as terms and all collected Web pages as documents to form a vector-space-model matrix. The query log consists of about twenty million search query terms collected from about 650,000 users. Then, this stage transforms the vector-space-model matrix into the query-by-document matrix using the latent semantic analysis and intelligent probabilistic latent semantic analysis modules.</p>
+
+<p>The core module of this stage is intelligent probabilistic latent semantic analysis, which is extended from the probabilistic latent semantic analysis method, and which improves the termination criteria of probabilistic latent semantic analysis. <!-- Compared to probabilistic latent semantic analysis, the termination criteria of intelligent probabilistic latent semantic analysis are not only to converge to the local optimal solution, but also to decide whether to terminate this stage according to the improvement value and improvement progress history for each iteration. --> The benefit of the second criterion is that it can prevent a relatively small improvement in performance when the solution is close to the local optimal solution. Thus, intelligent probabilistic latent semantic analysis can skilfully reduce the number of iterations required to run this stage and this property should be able to form the query-by-document matrix relatively quickly. In short, the purpose of intelligent probabilistic latent semantic analysis is intended to yield a cost effective solution within a controlled period of time rather than to reach the local optimal solution.</p>
+
+<p>The probabilistic latent semantic analysis method computes the relevant probability distributions by selecting the model parameters that maximize the probability of the observed data, i.e., the likelihood function. The standard method for maximum likelihood estimation is the expectation maximization algorithm. For a given initialization, the likelihood function increases with each iteration of the expectation maximization algorithm until the local optimal solution is reached, so that the quality of solution can be highly variable depends on the initialization values. <!-- In this stage, we use the latent semantic analysis probability model as the initial parameters through the latent semantic analysis module. --> Rather than trying to predict the best initial parameters from a set of data, this probability model focuses on how to find a good way to initialize.</p>
+
+<p>Repeatedly, the training stage consecutively executes the modules of latent semantic analysis and intelligent probabilistic latent semantic analysis in background to form a new query-by-document matrix. The detailed descriptions of these two modules follow..</p>
+
+<div align="center" id="fig-1"><img src="p425fig1.gif" alt="Figure 1: The system architecture of LIK" /></div>
+<div align="center"><br /><strong>Figure 1: The system architecture of LIK</strong></div>
+
+<h4>Latent semantic analysis module</h4>
+
+<p>The main objective of this module (marked 'A' in the figure) is to use the latent semantic analysis probability model to form the initial parameters. This model is based on a dual '<em>latent semantic analysis-and-probabilistic latent semantic analysis</em>' probability model developed by Ding (<a href="#din05">2005</a>) and Bellegarda (<a href="#bel08">2008</a>). We must accomplish the following three tasks to form this model: (a) use terms and documents to form a vector-space-model matrix; (b) use the result of the vector-space-model matrix to form the relevant latent semantic analysis parameters; and (c) transform these latent semantic analysis parameters into the latent semantic analysis probability model. All the above-mentioned three tasks are corresponding to "Form Vector-Space-Model", "Vector-Space-Model to Latent Semantic Analysis", and "Latent Semantic Analysis to Probability-Latent Semantic Analysis" sub-modules, respectively, as shown in the following lists.</p>
+
+<ul><li>Form vector-space-model sub-module</li></ul>
+
+<p>The main task of this sub-module (A.1 in Figure 1) is to calculate the co-occurrence weight in a vector-space-model matrix by a general search engine as shown in Figure 2, where <em>M</em> is all query terms derived from the 'AOL Query Log' and <em>N</em> is all the collected Web pages.</p>
+
+<div align="center" id="fig-2"><img src="p425fig2.gif" alt="Figure 2: The form of the vector-space-model matrix" /></div>
+<div align="center"><br /><strong>Figure 2: The form of the vector-space-model matrix</strong></div>
+
+<p>Currently, the element of the matrix, <em>w</em>(<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>), is using an SVV algorithm (<a href="#che05">Chen and Luh 2005</a>) to calculate its weight. SVV is based on the primacy effect of browsing behaviour (<a href="#lem00">Lempel and Moran 2000</a>; <a href="#mor01">Morris and Maisto 2001</a>; <a href="#pae00">Paepcke <em>et al.</em> 2000</a>), that is, the users prefer top ranking items in the search results and this preference gradually decreases. Based on the above observation, we first defined a user behaviour function (<a href="#che05">Chen and Luh 2005</a>) to state this effect, as shown in the following equation:</p>
+
+<div align="center"><img height="34" alt="equation" src="p425eq1.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>&alpha;</em> denotes the degree of the user preference for the first item; <em>l<sub>obj</sub></em> denotes the relative order of the object <em>obj</em> within an ordered item list <em>l</em>; and <em>&beta;</em> denotes the decline degree of the user preference.</p>
+
+<p>According to user behaviour function's definition, we then defined <em>w</em>(<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>) based on the dot product between different user behaviour functions that are derived from various search engines, as shown in the following equation:</p>
+
+<div align="center"><img height="50" alt="equation" src="p425eq2.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>e</em> is the number of search engines used in SVV; <em>s</em> is a search engine number; <em>&alpha;<sub>s,qi</sub></em> is the degree of the user preference for the first listing returned from search engine <em>s</em> in response to the user's query <em>q<sub>i</sub></em>; <em>x<sub>s,dj,qi</sub></em> is the relative order of a Web page <em>d<sub>j</sub></em> within the search listings <em>x</em> returned from <em>s</em> in response to <em>q<sub>i</sub></em>; and <em>&beta;</em> is the decline degree of the user preference. According to the definition of equation (2), we know that a Web page has a larger weight if it either wins more votes from different search engines or  ranks high in the listings of at least one search engine. More details of SVV are described in our previous work (<a href="#che05">Chen and Luh 2005</a>).</p>
+
+<ul><li>Vector-space-model to latent semantic analysis sub-module</li></ul>
+
+<p>The main task of this sub-module (A.2 in Figure 1) is to convert the vector-space-model matrix into the relevant latent semantic analysis parameters. Latent semantic analysis is an important information retrieval technique, which is used to solve the problem of synonymy. Latent semantic analysis finds a low-rank approximation matrix, which is smaller and less noisy than the vector-space-model matrix. For a fixed <em>k</em>, using a truncated singular value decomposition technique, which conserves <em>k</em> largest singular values and sets others tobe zero, to approximate the vector-space-model matrix, as shown in the following equation:</p>
+
+<div align="center"><img height="50" alt="equation" src="p425eq3.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>D<sub>k</sub></em>=diag(<em>&sigma;</em><sub>1</sub>,<em>&sigma;</em><sub>2</sub>,...,<em>&sigma;<sub>k</sub></em>) is a <em>k*k</em> diagonal matrix, which contain the singular value of the vector-space-model matrix arranged in decreasing order; <em>U<sub>k</sub></em>=(<em>u</em><sub>1</sub>,<em>u</em><sub>2</sub>,...,<em>u<sub>k</sub></em>) is a <em>M*k</em> left singular matrix, which is a unitary matrix; and <em>V<sub>k</sub></em>=(<em>v</em><sub>1</sub>,<em>v</em><sub>2</sub>,...,<em>v<sub>k</sub></em>) is a <em>N*k</em> right singular matrix, which is also a unitary matrix.</p>
+
+<ul><li>Latent semantic analysis to probability-latent semantic analysis sub-module</li></ul>
+
+<p>The main task of this sub-module (A.3) is to transform the relevant latent semantic analysis parameters, <em>U<sub>k</sub></em>, <em>D<sub>k</sub></em>, and <em>V<sub>k</sub></em> into the latent semantic analysis probability model that provides the initial parameters.</p>
+
+<p>Although probabilistic latent semantic analysis can converge to the local optimal solution (<a href="#hof01">Hofmann 2001</a>), its result is closely related to how one decides which methods are appropriate to initialize its parameters. According to literature reviews (<a href="#bra05">Brants 2005</a>; <a href="#bra02">Brants and Stolle 2002</a>), the initial parameters of probabilistic latent semantic analysis can be determined by using either random initialization or according to some prior knowledge.</p>
+
+<p>Hofmann (<a href="#hof01">2001</a>) proposed a dual model to express the relationship of latent semantic analysis and probabilistic latent semantic analysis. This model uses the parameters of probabilistic latent semantic analysis to estimate the relevant latent semantic analysis parameters, as shown in the following equations:</p>
+
+<div align="center"><img height="50" alt="equation" src="p425eq4.gif" width="800" align="top" border="0" /></div>
+<div align="center"><img height="50" alt="equation" src="p425eq5.gif" width="800" align="top" border="0" /></div>
+<div align="center"><img height="50" alt="equation" src="p425eq6.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>P</em>(<em>q<sub>i</sub></em>|<em>z<sub>k</sub></em>), <em>P</em>(<em>z<sub>k</sub></em>), and <em>P</em>(<em>d<sub>j</sub>|z<sub>k</sub></em>) are all probabilistic latent semantic analysis parameters, as described in section 3.1.2. After viewing equations (4) to (6), we can determine the initial parameters of probabilistic latent semantic analysis according to the result of singular value decomposition.</p>
+
+<p>However, singular value decomposition may introduce negative values in the elements of <em>U<sub>k</sub></em> and <em>V<sub>k</sub></em> matrices, and such values cannot be treated as a probability distribution. Thus, we cannot directly use the result of singular value decomposition to be the initial parameters.</p>
+
+<p>To solve the problem of negative values in singular value decomposition, Ding (<a href="#din05">2005</a>) and Bellegarda (<a href="#bel08">2008</a>) used a dual probability model to estimate the elements of <em>U<sub>k</sub></em> and <em>V<sub>k</sub></em>, as shown in the following equations, where <em>u<sub>k</sub></em> and <em>v<sub>k</sub></em> are the left and right singular vectors, respectively:</p>
+
+<div align="center"><img height="60" alt="equation" src="p425eq7.gif" width="800" align="top" border="0" /></div>
+<div align="center"><img height="60" alt="equation" src="p425eq8.gif" width="800" align="top" border="0" /></div>
+
+<p>Moreover, according to the definition of singular value decomposition, we know that the singular values of the vector-space-model matrix, <em>&sigma;<sub>k</sub></em>, are all larger than zero. Thus, we use a probability form to estimate the elements of <em>D<sub>k</sub></em>, as shown in the following equation:</p>
+
+<div align="center"><img height="60" alt="equation" src="p425eq9.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>f</em>(<em>&sigma;<sub>k</sub></em>) is any non-decreasing function and its value is larger than zero. According to the definition of singular value decomposition, <em>&sigma;<sub>i</sub></em>&ge;<em>&sigma;</em><sub><em>i</em>+1</sub>>0 where <em>i</em>&ge;1, we can guarantee <em>f</em>(<em>&sigma;<sub>i</sub></em>)&ge;<em>f</em>(<em>&sigma;</em><sub><em>i</em>+1</sub>)>0. Below, we will simulate three non-decreasing functions to verify that different <em>f</em>(<em>&sigma;<sub>k</sub></em>) functions how to affect the value of the objective function, as described in the following lists:</p>
+
+<ol>
+<li><em>f</em>(<em>&sigma;<sub>k</sub></em>)=<em>exp</em>(<em>&sigma;<sub>k</sub></em>): The property of this function is growing sufficiently fast. It means that the latent semantic analysis probability model reinforces <em>&sigma;<sub>k</sub></em> on the initial parameters.</li>
+<li><em>f</em>(<em>&sigma;<sub>k</sub></em>)=<em>sinh</em><sup>-1</sup>(<em>&sigma;<sub>k</sub></em>): The property of this function is growing sufficiently slow. It means that the latent semantic analysis probability model weakens <em>&sigma;<sub>k</sub></em> on the initial parameters.</li>
+<li><em>f</em>(<em>&sigma;<sub>k</sub></em>)=<em>&sigma;<sub>k</sub></em>: This function is represented as a control group.</li>
+</ol>
+
+<h4>Intelligent probabilistic latent semantic analysis module</h4>
+
+<p>The main objective of this module (B) is to generate the training parameter, called query-by-document matrix, which is then used for the suggestion stage. The basis of this module is the probabilistic latent semantic analysis developed by Hofmann (<a href="#hof99">1999</a>).</p>
+
+<p>To effectively generate the query-by-document matrix, we must accomplish the following two tasks: (a) adopt the probabilistic latent semantic analysis method to generate the query-by-document matrix and (b) use an adaptive mechanism to reduce the number of iterations required to run probabilistic latent semantic analysis. In the first task, we use the sub-modules <em>calculate query-by-document</em>, <em>likelihood function</em>, <em>expectation step</em>, and <em>maximization step</em> to generate the query-by-document matrix. In the second task, we use the sub-modules of <em>calculate improvement value</em>, <em>calculate consecutive non-improvement</em>, <em>max allow iteration</em> and <em>stop expectation maximization</em> to determine whether probabilistic latent semantic analysis should be terminated or not. All the above-mentioned sub-modules are shown in the following lists.</p>
+
+<ul><li>Calculate query-by-document sub-module</li></ul>
+
+<p>The main task of this sub-module (B.1) is to form the query-by-document matrix, as shown in Figure 3, based on the observed data.</p>
+
+<div align="center" id="fig-3"><img src="p425fig3.gif" alt="Figure 3: The form of the query-by-document matrix" /></div>
+<div align="center"><br /><strong>Figure 3: The form of the query-by-document matrix</strong></div>
+
+<p>Probabilistic latent semantic analysis applies a probabilistic aspect model to derive the element of the matrix, called <em>P</em>(<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>). Probabilistic latent semantic analysis assumes that term <em>q<sub>i</sub></em> and document <em>d<sub>j</sub></em> exist as a series of latent topics <em>Z</em>={<em>z</em><sub>1</sub>,...,<em>z<sub>k</sub></em>,...,<em>z<sub>L</sub></em>}, where <em>L</em> is the total number of topics. To calculate <em>P</em>(<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>), we first need to define the relevant parameters in the following lists:</p>
+
+<ol>
+<li><em>P</em>(<em>q<sub>i</sub></em>) denotes the probability that <em>q<sub>i</sub></em> has been selected</li>
+<li><em>P</em>(<em>q<sub>i</sub></em>|<em>z<sub>k</sub></em>) denotes the posterior probability of <em>q<sub>i</sub></em> given a latent topic <em>z<sub>k</sub></em></li>
+<li><em>P</em>(<em>z<sub>k</sub></em>|<em>q<sub>i</sub></em>) denotes the posterior probability of <em>z<sub>k</sub></em> given <em>q<sub>i</sub></em></li>
+<li><em>P</em>(<em>d<sub>j</sub></em>|<em>z<sub>k</sub></em>) denotes the posterior probability of <em>d<sub>j</sub></em> given <em>z<sub>k</sub></em></li>
+</ol>
+
+<p>Based on the parameters above, we now calculate the joint probability of an observed pair (<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>) by summing over all possible choices of <em>Z</em>={<em>z</em><sub>1</sub>,...,<em>z<sub>k</sub></em>,...,<em>z<sub>L</sub></em>} from which the observation could have been generated (it is clearly shown in Figure 4(a)), as shown in the following equation:</p>
+
+<div align="center"><img height="60" alt="equation" src="p425eq10.gif" width="800" align="top" border="0" /></div>
+
+<p>Then, by applying Bayes's rule, it is straightforward to transform equation (10) into the following form (it is clearly shown in Figure 4(b)), as shown in the following equation:</p>
+
+<div align="center"><img height="60" alt="equation" src="p425eq11.gif" width="800" align="top" border="0" /></div>
+
+<div align="center" id="fig-4"><img src="fig4.gif" alt="Figure 4: The aspect model of probabilistic latent semantic analysis" /></div>
+<div align="center"><br /><strong>Figure 4: The aspect model of probabilistic latent semantic analysis</strong></div>
+
+<ul><li>Likelihood function sub-module</li></ul>
+
+<p>The main task of this sub-module (B.2) is to calculate the value of the likelihood function L. To calculate the joint probability of an observed pair (<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>), probabilistic latent semantic analysis follows the likelihood principle to estimate the parameters <em>P</em>(<em>q<sub>i</sub></em>|<em>z<sub>k</sub></em>), <em>P</em>(<em>z<sub>k</sub></em>), and <em>P</em>(<em>d<sub>j</sub></em>|<em>z<sub>k</sub></em>) by maximization of the likelihood function <em>L<sub>n</sub></em>(<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>) at iteration <em>n</em>, as shown in the following equation:</p>
+
+<div align="center"><img height="60" alt="equation" src="p425eq12.gif" width="800" align="top" border="0" /></div>
+
+<ul><li>Expectation step sub-module</li></ul>
+
+<p>The main task of this sub-module (B.7) is to achieve the expectation step of the expectation maximization algorithm. The expectation maximization algorithm (<a href="#dem77">Dempster <em>et al.</em> 1977</a>) is a well-known method to perform maximum likelihood parameter estimation in latent variable models. Generally, the expectation and maximization steps are needed to perform in this algorithm alternately. In the expectation step, probabilistic latent semantic analysis can simply apply Bayes's formula to generate the latent variable <em>z<sub>k</sub></em> based on the current estimates of the parameters <em>q<sub>i</sub></em> and <em>d<sub>j</sub></em> as follows:</p>
+
+<div align="center"><img height="60" alt="equation" src="p425eq13.gif" width="800" align="top" border="0" /></div>
+
+<ul><li>Maximization step sub-module</li></ul>
+
+<p>The main task of this sub-module (B.8) is to achieve the maximization step of the expectation maximization algorithm. In the maximization step, probabilistic latent semantic analysis applies the Lagrange multipliers method (see (<a href="#hof01">Hofmann 2001</a>) for details) to solve the constraint maximization problem to get the following equations for re-estimated parameters <em>P</em>(<em>q<sub>i</sub></em>|<em>z<sub>k</sub></em>), <em>P</em>(<em>z<sub>k</sub></em>), and <em>P</em>(<em>d<sub>j</sub></em>|<em>z<sub>k</sub></em>) as follows:</p>
+
+<div align="center"><img height="65" alt="equation" src="p425eq14.gif" width="800" align="top" border="0" /></div>
+<div align="center"><img height="65" alt="equation" src="p425eq15.gif" width="800" align="top" border="0" /></div>
+<div align="center"><img height="65" alt="equation" src="p425eq16.gif" width="800" align="top" border="0" /></div>
+
+<p>Now, either intelligent probabilistic latent semantic analysis can substitute equations (7) to (9) or equations (14) to (16) into equations (11) and (12) until the termination criteria are reached.</p>
+
+<ul><li>Calculate improvement value (B.3), calculate consecutive non-improvement (B.4), max allow iteration (B.5), and stop expectation maximization (B.6) sub-modules</li></ul>
+
+<p>The main task of these sub-modules is to develop a performance-based termination criterion. This termination criterion can drastically reduce the number of iterations required to run at this stage, and it should be able to produce the training parameter relatively quickly.</p>
+
+<p>Probabilistic latent semantic analysis is a time consuming and expensive process for each iteration and is related to the convergence speed of the expectation maximization algorithm (<a href="#tso01">Tsoi 2001</a>). Dempster <em>et al.</em> (<a href="#dem77">1977</a>) proved that the log-likelihood function is monotonically increasing until the local optimal solution is reached. Hofmann (<a href="#hof04">2004</a>) proved that the time complexity is O(M*N*L), where O(M*N) is the time complexity of the expectation maximization algorithm for each iteration.</p>
+
+<p>However, in the information retrieval environment, the total number of query terms (<em>M</em>) and the total number of Web pages (<em>N</em>) are both large. Moreover, the total number of topics (<em>L</em>) is increased along with increased <em>M</em> and <em>N</em> (<a href="#ino05">Inoue 2005</a>). According to the observation of Kunder (<a href="#kun08">2008</a>), the number of query terms and Web pages is enormous and the number of Web pages is still increasing, and this situation might will result in system performance being quite disappointing when probabilistic latent semantic analysis is applied to solve various large-scale information retrieval problems.</p>
+
+<p>Thus, we must design an effective mechanism that skilfully balances cost (the number of iterations required to run) and performance (the value of the log-likelihood function). In this mechanism, we use the log-likelihood function (equation 12) to define the termination criteria (the <em>stop expectation maximization</em> sub-module), which are not only to converge to the local optimal solution, but also the maximum required number of iterations is reached. We discuss these two criteria below.</p>
+
+<p>In the first criterion, we define that the local optimal solution is reached if the improvement value between two consecutive iterations is less than a predefined threshold. We let <em>Diff<sub>n</sub></em> be the improvement value of the log-likelihood function at the <em>n<sup>th</sup></em> iteration (<em>calculate improvement value</em> sub-module), as shown in the following equation:</p>
+
+<div align="center"><img height="45" alt="equation" src="p425eq17.gif" width="800" align="top" border="0" /></div>
+
+<p>We then define the local optimal solution as shown in the following equation, where <em>&epsilon;</em> denotes the predefined threshold of the first criterion.</p>
+
+<div align="center"><img height="45" alt="equation" src="p425eq18.gif" width="800" align="top" border="0" /></div>
+
+<p>In the second criterion, the maximum required number of iterations is usually set as a fixed number through experiments. However, it is a difficult task to claim what the maximum required number of iterations should be. On the one hand, a large number of iterations may waste a significant amount of computing resources on a relatively small improvement. On the other hand, a small number iterations may result in the difference being large, compared with the final solution and the local optimal solution. It will be a cost-effective solution if the maximum required number of iterations is dynamically determined according to a case of real improvement for each iteration.</p>
+
+<p>We then formally define the second criterion as follows: the consecutive number of iterations without improvement is larger than the maximum allowable number of iterations without significant improvement at current iteration. We consider that is a sign that further computation could not yield much progress.</p>
+
+<p>The second criterion must define two important curves, one for the increasing cost curve and the other one for the decreasing performance curve. This criterion is fulfilled if there exists an iteration <em>n</em> such that the value of the cost curve is larger than the value of the performance curve. In the cost curve at iteration <em>n</em> #<em>IteNonImp<sub>n</sub></em>, the consecutive number of iterations without improvement (<em>calculate consecutive non-improvement</em> sub-module), is defined as the following equation:</p>
+
+<div align="center"><img height="45" alt="equation" src="p425eq19.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>avg</em>(<em>Diff</em><sub><em>n</em>-1</sub>) denotes the average of all <em>Diff<sub>s</sub></em>, 1&le;<em>s</em>&le;<em>n</em>-1. That is, the <em>n<sup>th</sup></em> iteration is said to make <em>no improvement</em> if <em>Diff<sub>n</sub></em> &lt; <em>avg</em>(<em>Diff</em><sub><em>n</em>-1</sub>). Next, in the performance curve at iteration <em>n</em> <em>MI<sub>n</sub></em>, the maximum allowable number of iterations without significant improvement (<em>max allow iteration</em> sub-module), is defined as the following equation:</p>
+
+<div align="center"><img height="55" alt="equation" src="p425eq20.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>L</em> denotes the total number of topics; <em>&sigma;</em>(<em>Diff<sub>n</sub></em>) denotes the standard deviation of all <em>Diff<sub>s</sub></em>, 1&le;<em>s</em>&le;<em>n</em>-1; <em>avg</em>(<em>&sigma;</em>(<em>Diff</em><sub><em>n</em>-1</sub>)) denotes the average of all <em>&sigma;</em>(<em>Diff<sub>s</sub></em>). As indicated in the definition of equation (20), the performance curve <em>MI<sub>n</sub></em> is dynamically determined based on the ratio of improvement history progress <em>Diff<sub>n</sub></em>/<em>avg</em>(<em>Diff</em><sub><em>n</em>-1</sub>) and the ratio of variation history progress <em>&sigma;</em>(<em>Diff<sub>n</sub></em>)/<em>avg</em>(<em>&sigma;</em>(<em>Diff</em><sub><em>n</em>-1</sub>)). If either <em>Diff<sub>n</sub></em>/<em>avg</em>(<em>Diff</em><sub><em>n</em>-1</sub>) or <em>&sigma;</em>(<em>Diff<sub>n</sub></em>)/<em>avg</em>(<em>&sigma;</em>(<em>Diff</em><sub><em>n</em>-1</sub>)) is large, there is a significant progress or variation progress in the log-likelihood function. Finally, let us formally define the second criterion as follows:</p>
+
+<div align="center"><img height="55" alt="equation" src="p425eq21.gif" width="800" align="top" border="0" /></div>
+
+<h3>Suggestion stage</h3>
+
+<p>The main objective of this stage is using the query-by-document matrix to generate the desirable result of our system by a keyword suggestion module. To suggest the relevant keywords, this stage first constructs a semantic graph. Then, it transforms the query-by-document matrix into the edge weight of each directed edge in the graph. Finally, it is sorting a list of suggested keyword according to the edge weight.</p>
+
+<h4>Keyword suggestion module</h4>
+
+<p>This main objective of this module ('C' in figure 1) is to adopt breadth-first-search and the concept of inverse link to build a semantic graph, called KeywordsNet and then this graph is applied to generate a list of suggested keywords.</p>
+
+<p>To generate a list of suggested keywords and the degree of similarity between the user's query and each suggested keyword, we must accomplish the following two tasks: (a) build a KeywordsNet and (b) transform the query-by-document matrix into the edge weight of KeywordsNet. These two tasks are corresponding to the <em>build KeywordsNet</em> and <em>calculate edge weight</em> sub-modules, as shown in the following lists.</p>
+
+<ul><li>Build KeywordsNet sub-module</li></ul>
+
+<p>The main task of this sub-module (C.1) is to build a KeywordsNet graph based on breadth-first-search and the concept of inverse link. In the graph, based on a user query <em>q<sub>i</sub></em>, nodes represent all candidate keywords <em>q<sub>ks</sub></em>s, and each directed edge (<em>q<sub>i</sub></em>,<em>q<sub>ks</sub></em>) between <em>q<sub>i</sub></em> and <em>q<sub>ks</sub></em> represents these two keywords exist in a strong semantic relationship and <em>q<sub>ks</sub></em> is suggested from <em>q<sub>i</sub></em>. Figure 5 is a partial KeywordsNet graph to illustrate the strong semantic relationships between <em>p2p</em> and some candidate keywords.</p>
+
+<div align="center" id="fig-5"><img src="p425fig5.gif" alt="Figure 5: The result of a partial KeywordsNet graph when qi is p2p" /></div>
+<div align="center"><br /><strong>Figure 5: The result of a partial KeywordsNet graph when q<sub>i</sub> is p2p</strong></div>
+
+<p><strong>Definition (strong semantic relationship)</strong>: <em>q<sub>i</sub></em> and <em>q<sub>ks</sub></em> exist in a strong semantic relationship feature and (<em>q<sub>i</sub></em>,<em>q<sub>ks</sub></em>) is a directed edge if and only if these two keywords satisfy at least one of the following three relationships: (1) equivalence, (2) hierarchy, and (3) association (<a href="#nis05">NISO 2005</a>). If there is an equivalent relationship between <em>q<sub>i</sub></em> and <em>q<sub>ks</sub></em>, these two keywords are expressing the same concept. If <em>q<sub>i</sub></em> and <em>q<sub>ks</sub></em> can obtain a parent-child relationship through an intermediate candidate keyword, these two keywords have a hierarchical relationship. If <em>q<sub>i</sub></em> and <em>q<sub>ks</sub></em> can obtain an ancestor-descendant relationship through a series of intermediate candidate keywords, these two keywords have an association relationship. Note that we only show the directed edges of the equivalence relationship to prevent needlessly complex in Figure 5.</p>
+
+<p>The main assumption of KeywordsNet is that if many important candidate keywords link to an important Web page, it can use the inverted index of the vector-space-model matrix to identify these important candidate keywords. KeywordsNet uses a series of recursive breadth-first-search calls to form a strong semantic relationship feature, as shown in the following pseudo code.</p>
+
+<blockquote><ol>
+<li>Algorithm Breadth-First-Search(<em>q<sub>i</sub></em> as string, <em>PathLength</em> as integer)</li>
+<li>{</li>
+<li style="text-indent: 20px;">If (<em>PathLength</em>><em>MaxLen</em>)</li>
+<li style="text-indent: 40px;">Return(<em>KeywordsNetGraph<sub>qi</sub></em>);</li>
+<li style="text-indent: 20px;">Else {</li>
+<li style="text-indent: 40px;"><em>D</em>=Fetch all important Web pages corresponding to <em>q<sub>i</sub></em>;</li>
+<li style="text-indent: 40px;">Foreach (<em>D</em> as <em>d<sub>j</sub></em>) {</li>
+<li style="text-indent: 60px;"><em>ImportantKEYS</em>=Use the inverted index of <em>d<sub>j</sub></em> listed in the vector-space-model matrix to identify all important candidate keywords corresponding to <em>q<sub>i</sub></em>;</li>
+<li style="text-indent: 60px;">Foreach (<em>ImportantKEYS</em> as <em>q<sub>ks</sub></em>) {</li>
+<li style="text-indent: 80px;"><em>KeywordsNetGraph<sub>qi</sub></em>+=(<em>q<sub>i</sub></em>,<em>q<sub>ks</sub></em>);</li>
+<li  style="text-indent: 80px;">Breadth-First-Search(<em>q<sub>ks</sub></em>, <em>PathLength</em>+1);</li>
+<li style="text-indent: 60px;">} End of Foreach</li>
+<li style="text-indent: 40px;">} End of Foreach</li>
+<li style="text-indent: 20px;">} End of Else</li>
+<li>} End of Algorithm</li>
+</ol></blockquote>
+
+<p>In the first recursive call, <em>q<sub>i</sub></em> generates a candidate keyword <em>q</em><sub><em>ks</em>(1)</sub>. Hence, <em>q<sub>i</sub></em> is equivalent to <em>q</em><sub><em>ks</em>(1)</sub> since they share a same concept (Web page) <em>d<sub>j</sub></em>. In the second recursive call, <em>q</em><sub><em>ks</em>(1)</sub> generates a candidate keyword <em>q</em><sub><em>ks</em>(2)</sub>. Hence, <em>q<sub>i</sub></em> and <em>q</em><sub><em>ks</em>(2)</sub> exist in a hierarchical relationship since the child candidate keyword <em>q</em><sub><em>ks</em>(2)</sub> can be accessed from the parent candidate keyword <em>q<sub>i</sub></em> through an intermediate candidate keyword <em>q</em><sub><em>ks</em>(1)</sub>. In the <em>t<sup>th</sup></em> (1 &lt; t &le; <em>MaxLen</em>) recursive call, <em>q</em><sub><em>ks</em>(t-1)</sub> generates a candidate keyword <em>q</em><sub><em>ks</em>(t)</sub>. Hence, <em>q<sub>i</sub></em> is associated with <em>q</em><sub><em>ks</em>(t)</sub> since there is a shortest path whose length is <em>t</em> from <em>q<sub>i</sub></em> to <em>q</em><sub><em>ks</em>(t)</sub>.</p>
+
+<p><strong>Example 1</strong> (build a partial keywordsNet)<br />In examples 1 and 2, we assume that the query terms are <em>q</em><sub>1</sub>=<em>p2p</em>", <em>q</em><sub>2</sub>=<em>peer to peer</em>, <em>q</em><sub>3</sub>=<em>in peer to peer</em>, <em>q</em><sub>4</sub>=<em>bittorrent</em>, <em>q</em><sub>5</sub>=<em>torrent find</em> and the collected Web pages are <em>d</em><sub>1</sub>=<em>en.wikipedia.org/wiki/Peer-to-peer</em>, <em>d</em><sub>2</sub>=<em>www.bittorrent.com</em>, <em>d</em><sub>3</sub>=<em>isohunt.com</em>. Figure 6 shows an example of the vector-space-model matrix by using our SVV algorithm.</p>
+
+<div align="center" id="fig-6"><img src="p425fig6.gif" alt="Figure 6: An example of the vector-space-model matrix" /></div>
+<div align="center"><br /><strong>Figure 6: An example of the vector-space-model matrix</strong></div>
+
+<ol>
+<li>For the case of the equivalence relationship, <em>q</em><sub>1</sub> is equivalent to <em>q</em><sub>2</sub> and <em>q</em><sub>3</sub> since they share a same Web page (concept) <em>d</em><sub>1</sub> and the directed edges are (<em>q</em><sub>1</sub>,<em>q</em><sub>2</sub>) and (<em>q</em><sub>1</sub>,<em>q</em><sub>3</sub>), respectively.</li>
+
+<li>For the case of the hierarchy relationship, <em>q</em><sub>4</sub> can be accessed from <em>q</em><sub>1</sub> through an intermediate keyword <em>q</em><sub>2</sub> since <em>q</em><sub>1</sub> is equivalent to <em>q</em><sub>2</sub> (these two keywords share a same Web page <em>d</em><sub>1</sub>) and <em>q</em><sub>2</sub> is equivalent to <em>q</em><sub>4</sub> (these two keywords share a same Web page <em>d</em><sub>2</sub>), and the directed edge is (<em>q</em><sub>1</sub>,<em>q</em><sub>4</sub>).</li>
+
+<li>For the case of the association relationship, <em>q</em><sub>5</sub> can be accessed from <em>q</em><sub>1</sub> through two candidate keywords <em>q</em><sub>2</sub> and <em>q</em><sub>4</sub> since we can find the relationship of <em>q</em><sub>1</sub>&rarr;<em>q</em><sub>2</sub>&rarr;<em>q</em><sub>4</sub>&rarr;<em>q</em><sub>5</sub>, where '&rarr;' is the equivalence relationship exists in any two candidate keywords, and the directed edge is (<em>q</em><sub>1</sub>,<em>q</em><sub>5</sub>).</li>
+</ol>
+
+<ul><li>Calculate edge weight sub-module</li></ul>
+
+<p>The main task of this sub-module (C.2) is to transform the query-by-document matrix into the edge weight of KeywordsNet. We use a cosine similarity metric (<a href="#sal89">Salton 1989</a>; <a href="#zha08">Zhang and Nasraoui 2008</a>) to achieve this transformation process, as shown in the following equation:</p>
+
+<div align="center"><img height="90" alt="equation" src="p425eq22.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>P</em>(<em>q<sub>x</sub></em>,<em>d<sub>j</sub></em>), <em>x</em>&isin;{<em>i</em>,<em>ks</em>}, denotes the element of the query-by-document matrix, which is the joint probability of an observed pair (<em>q<sub>x</sub></em>,<em>d<sub>j</sub></em>) derived from the training stage. All suggested keywords with the degree of similarity are shown in sorted order according to the edge weight. Additionally, we also discard such keywords whose directed edges with a relative small edge weight. For example, in Figure 7, the degree of similarity for the directed edge (<em>p2p</em>, <em>peer sharing</em>) is 75% (Cosine(<em>p2p</em>, <em>peer sharing</em>)=75%).</p>
+
+<div align="center" id="fig-7"><img src="p425fig7.gif" width="1046"  alt="Figure 7: The desirable result of our system in response to the user's query is p2p" /></div>
+<div align="center"><br /><strong>Figure 7: The desirable result of our system in response to the user's query is p2p</strong></div>
+
+<p><strong>Example 2</strong> (suggest keywords with the degree of similarity)<br />According to the results of example 1, the directed edges are (<em>q</em><sub>1</sub>,<em>q</em><sub>2</sub>), (<em>q</em><sub>1</sub>,<em>q</em><sub>3</sub>), (<em>q</em><sub>1</sub>,<em>q</em><sub>4</sub>) and (<em>q</em><sub>1</sub>,<em>q</em><sub>5</sub>) for the seed keyword <em>q</em><sub>1</sub>. Figure 8 shows an example of the result of the query-by-document matrix by the modules of latent semantic analysis and intelligent probabilistic latent semantic analysis.</p>
+
+<div align="center" id="fig-8"><img src="p425fig8.gif" alt="Figure 8: An example of the query-by-document matrix" /></div>
+<div align="center"><br /><strong>Figure 8: An example of the query-by-document matrix</strong></div>
+
+<p>In Table 2, we list the edge weight for each directed edge by adopting equation (22). Finally, the directed edge (<em>q</em><sub>1</sub>,<em>q</em><sub>3</sub>) should be discarded since it is a directed edge with a relatively small edge weight.</p>
+
+<table width="60%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br/><strong>Table 2: An example of different edge weights</strong></caption>
+<tr><td align="left"><strong>Directed edge</strong></td><td align="left"><strong>(<em>q</em><sub>1</sub>, <em>q</em><sub>2</sub>)</strong></td><td><strong>(<em>q</em><sub>1</sub>, <em>q</em><sub>3</sub>)</strong></td><td><strong>(<em>q</em><sub>1</sub>, <em>q</em><sub>4</sub>)</strong></td><td><strong>(<em>q</em><sub>1</sub>, <em>q</em><sub>5</sub>)</strong></td></tr>
+<tr><td align="left"><strong>Edge weight</strong></td><td align="left">93.40%</td><td>59.87%</td><td>89.39%</td><td>88.38%</td></tr>
+<tr><td align="left"><strong>Discard</strong></td><td align="left"></td><td>X</td><td></td><td></td></tr>
+</table>
+
+<h2>Preliminary experimental results</h2>
+
+<p>In this section, we present three experiments to illustrate the performance comparison between different systems and the relevant parameters considered in our system. First, we present the performance comparisons between our system and other systems. Second, we verify that the performance of the latent semantic analysis probability model is better than the random probability model. Third, we also verify that the termination criteria of intelligent probabilistic latent semantic analysis can yield a cost effective solution within a controlled period of time.</p>
+
+<h3>Experiment results on different systems</h3>
+
+<p>In this experiment, we pay attention to how to rate the performance of different systems compared with <em>CatS</em>, <em>Highlight</em>, <em>Credo</em>, <em>Carrot2</em>,<em>Google Proximity Search</em>, <em>Google AdWords</em>, <em>Yahoo Search Marketing</em>, <em>Clusty</em>, <em> WordTracker</em>, and LIK. All the systems except LIK are described in section 2.1. On the one hand, we evaluate the performance of these systems by a simulation and a user evaluation studies. On the other hand, we also simulate the performance of the training parameter generated from different models to verify that which step in the training stage has a major impact on the quality of our system.</p>
+
+<p>In this experiment, we randomly selected 1,000 query terms from Dogpile (<a href="#inf08">InfoSpace 2008</a>), which people were using to search the Internet. The 1,000 random query terms were listed in (<a href="#dog08">Dogpile 2008</a>).</p>
+
+<p>To compare the performance of different systems for our simulation program, we need to define a new performance metric, DIST, to fairly measure the average distance between the seed keyword <em>q<sub>i</sub></em> and any one of suggested keywords <em>q<sub>ks</sub></em> when the number of <em>q<sub>i</sub></em> is 1, as shown in the following equation:</p>
+
+<div align="center"><img height="75" alt="equation" src="p425eq23.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) (<em>WP</em>(<sub><em>qi</em>&cup;<em>qks</em></sub>)) is the intersection (union) of the top ten Web pages returned from <em>q<sub>i</sub></em> and <em>q<sub>ks</sub></em> when the search engine <em>s</em> is used to measure; <em>R</em>(<em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) in <em>q<sub>x</sub></em>), <em>x</em>&isin;{<em>i</em>,<em>ks</em>}, is the ranking of <em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) in response to <em>q<sub>x</sub></em> if <em>R</em>(<em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) in <em>q<sub>x</sub></em>)>0, and 1/<em>R</em>(<em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) in <em>q<sub>x</sub></em>)=0 if <em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) cannot be found in <em>q<sub>x</sub></em>.</p>
+
+<p>The motivation of this study is to minimize the average distance between <em>q<sub>i</sub></em> and <em>q<sub>ks</sub></em>. Equation (23) implies the following three important properties. First, the number of <em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) is comparatively large, which implies that the Web pages returned from <em>q<sub>i</sub></em> and <em>q<sub>ks</sub></em> are close to each other. Second, the value of |1/<em>R</em>(<em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) in <em>q<sub>i</sub></em>) - 1/<em>R</em>(<em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) in <em>q<sub>ks</sub></em>)| is much less, which implies that the rankings of <em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) appearing in <em>q<sub>i</sub></em> and <em>q<sub>ks</sub></em> are similar. Third, the front rankings of <em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>) have greater impact on DIST than the rear rankings, which implies that the dominant factor of DIST is the ranking of <em>WP</em>(<sub><em>qi</em>&cap;<em>qks</em></sub>).</p>
+
+<p>We then use MDIST to measure the average distance between <em>q<sub>i</sub></em> and all suggested keywords when the number of <em>q<sub>i</sub></em> is 1, as shown in the following equation:</p>
+
+<div align="center"><img height="75" alt="equation" src="p425eq24.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>C<sub>qi</sub></em> is all suggested keywords returned from <em>q<sub>i</sub></em>. We set the number of <em>C<sub>qi</sub></em> (#<em>C<sub>qi</sub></em>) equal to 10 to save the simulation time. That is, we calculate the average distance between <em>q<sub>i</sub></em> and the top 10 suggested keywords. Figure 9 shows the distribution of <em>MDIST<sub>SVV,qi</sub></em></p>
+
+<div align="center" id="fig-9"><img src="p425fig9.gif" alt="Figure 9: The distribution of MDIST for SVV" /></div>
+<div align="center"><br /><strong>Figure 9: The distribution of MDIST for SVV</strong></div>
+
+<p>For comparison purpose, we average all <em>MDIST<sub>SVV,qi</sub></em> when the number of <em>q<sub>i</sub></em> is 1000, as shown in Table 3. We found that the average score of <em>MDIST<sub>SVV,qi</sub></em> obtained from LIK is 4.214660, which implies that it generates the suggested keywords with the minimal average distance score. Table 3 also shows the average score of <em>MDIST<sub>s,qi</sub></em> when Google and Yahoo are used to measure. No matter which search engines are used to measure, the average score of <em>MDIST<sub>s,qi</sub></em> for LIK is lowest that implies that the performance of our system is best.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br/><strong>Table 3: The average score of <em>MDIST<sub>s,qi</sub></em> when different search engines are used to measure</strong></caption>
+<tr><td align="left"><strong>System</strong></td><td align="left"><strong>Average <em>MDIST<sub>SVV,qi</sub></em></strong></td><td><strong>Average <em>MDIST<sub>Google,qi</sub></em></strong></td><td><strong>Average <em>MDIST<sub>Yahoo,qi</sub></em></strong></td></tr>
+<tr><td align="left"><em>CatS</em></td><td align="left">9.452357</td><td>9.466205</td><td>9.439944</td></tr>
+<tr><td align="left"><em>Highlight</em></td><td align="left">6.013398</td><td>6.015043</td><td>6.016055</td></tr>
+<tr><td align="left"><em>Credo</em></td><td align="left">8.365567</td><td>8.362261</td><td>8.359115</td></tr>
+<tr><td align="left"><em>Carrot2</em></td><td align="left">5.412458</td><td>5.420196</td><td>5.414073</td></tr>
+<tr><td align="left">Google Proximity Search</td><td align="left">7.242496</td><td>7.250456</td><td>7.235417</td></tr>
+<tr><td align="left"><em>Google AdWords</em></td><td align="left">5.252066</td><td>5.275507</td><td>5.281719</td></tr>
+<tr><td align="left"><em>Yahoo Search Marketing</em></td><td align="left">5.245478</td><td>5.256330</td><td>5.282105</td></tr>
+<tr><td align="left"><em>Clusty</em></td><td align="left">4.893964</td><td>4.886279</td><td>4.844971</td></tr>
+<tr><td align="left">WordTracker</td><td align="left">6.103158</td><td>6.115633</td><td>6.138991</td></tr>
+<tr><td align="left">LIK</td><td align="left">4.214660</td><td>4.143232</td><td>4.164376</td></tr>
+</table>
+
+<p>Next, we also simulate the training parameter generated from which step in the training stage that has a major impact on the performance of our system. In this simulation, we mainly compare the performance of the models of <em>non-latent semantic analysis</em>, <em>latent semantic analysis</em>, <em>latent semantic analysis-prob</em>, and <em>probabilistic latent semantic analysis</em>, that is, we use the results of the vector-space-model matrix (<em>non-latent semantic analysis</em>), singular value decomposition (<em>latent semantic analysis</em>), dual-probability (<em>latent semantic analysis-prob</em>), and expectation maximization (<em>probabilistic latent semantic analysis</em>), respectively, as the element of the query-by-document matrix. Table 4 shows the average score of <em>MDIST<sub>s,qi</sub></em> when SVV, Google, and Yahoo are used to measure.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br/><strong>Table 4: The average score of <em>MDIST<sub>s,qi</sub></em> when the training parameter generated from different models</strong></caption>
+<tr><td align="left"><strong>Model</strong></td><td align="left"><strong>Average <em>MDIST<sub>SVV,qi</sub></em></strong></td><td><strong>Average <em>MDIST<sub>Google,qi</sub></em></strong></td><td><strong>Average <em>MDIST<sub>Yahoo,qi</sub></em></strong></td></tr>
+<tr><td align="left">Non-Latent Semantic Analysis</td><td align="left">5.512683</td><td>5.562672</td><td>5.501257</td></tr>
+<tr><td align="left">Latent Semantic Analysis</td><td align="left">4.912361</td><td>4.812367</td><td>4.851436</td></tr>
+<tr><td align="left">Latent Semantic Analysis-Prob</td><td align="left">5.134633</td><td>5.150166</td><td>5.114612</td></tr>
+<tr><td align="left">Probabilistic Latent Semantic Analysis"</td><td align="left">4.635162</td><td>4.602481</td><td>4.612465</td></tr>
+</table>
+
+<p>According to Table 4, we found that the training parameter generated from probabilistic latent semantic analysis has the lowest average MDIST score, which means that probabilistic latent semantic analysis has a major impact on the performance of our system. The average score of probabilistic latent semantic analysis is superior to latent semantic analysis since it can provide a better polysemy capability against latent semantic analysis. That is, the keywords suggested from probabilistic latent semantic analysis have more polysemous means than latent semantic analysis, and thus, we use the result of probabilistic latent semantic analysis as the core step of our system.</p>
+
+<p>Although <em>latent semantic analysis-prob</em> takes more computer time than latent semantic analysis, because it is derived from the result of latent semantic analysis, the performance of <em>latent semantic analysis-prob</em>" is worse than <em>latent semantic analysis</em> because it uses a probability form to estimate the result of latent semantic analysis and it certainly results in a small amount of noise from this estimation process. In our system, the <em>latent semantic analysis-prob</em> model is a bridge connecting latent semantic analysis to probabilistic latent semantic analysis. We cannot directly use the result of latent semantic analysis as the initial parameters since singular value decomposition may introduce negative values in the result of latent semantic analysis and such values cannot be treated as a probability distribution. Therefore, we use the result of <em>latent semantic analysis-prob</em> as the initial parameters.</p>
+
+<p>Finally, we selected thirty-nine of the most searched query terms in 2007 from Google (<a href="#goo07">2007</a>), Yahoo (<a href="#sar07">Saremi 2007</a>) and Lycos (<a href="#lyc07">2007</a>) that belonging to many different topics (<em>anna nicole smith</em>, <em>badoo</em>, <em>beyonce</em>, <em>britney spears</em>, <em>club penguin</em>, <em>dailymotion</em>, <em>disney</em>, <em>ebuddy</em>, <em>facebook</em>, <em>fantasy football</em>, <em>fergie</em>, <em>fifa</em>, <em>golf</em>, <em>heroes</em>, <em>hi5</em>, <em>iphone</em>, <em>jessica alba</em>, <em>kazaa</em>, <em>lindsay lohan</em>, <em>Mozart</em>, <em>mp3</em>, <em>myspace</em>, <em>naruto</em>, <em>paris hilton</em>, <em>pokemon</em>, <em>poker</em>, <em>rebelled</em>, <em>rune scape</em>, <em>second life</em>, <em>shakira</em>, <em>sudoku</em>, <em>tmz</em>, <em>transformers</em>, <em>webdetente</em>, <em>webkinz</em>, <em>world cup</em>, <em>wwe</em>, <em>xanga</em>, <em>youtube</em>), and asked to thirty undergraduate and six graduate students from National Dong Hwa University to compare the results of different systems.</p>
+
+<p>For each of the thirty-nine query terms, the thirty-sex users computed the precision at the first <em>N</em> suggested keywords associated with the query terms generated by each system. Precision at top <em>N</em> is defined as</p>
+
+<div align="center"><img height="50" alt="equation" src="p425eq25.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>M</em>@<em>N</em> is the number of suggested keywords that have been manually tagged as relevant among the first <em>N</em> suggested keywords computed by each system.</p>
+
+<p>The results of the experiment for <em>P</em>@3 are shown in Table 5. The number in each percentage cell (except the last row) is the average <em>P</em>@3 score of each system on a given evaluated query for thirty-six users. For example, <em>CatS</em> has an average <em>P</em>@3 score of 49.3% when the query is <em>anna nicole smith</em>. The number in the last row is the average <em>P</em>@3 score of each system on all evaluated query terms for thirty-six users.</p>
+
+<table width="90%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br/><strong>Table 5: <em>P</em>@3 over thirty-nine most searched query terms</strong></caption>
+<tr><td align="left"><strong>Query terms</strong></td><td align="left"><strong><em>CatS</em></strong></td><td><strong><em>Highlight</em></strong></td><td><strong><em>Credo</em></strong></td><td><strong><em>Carrot2</em></strong></td><td><strong>Google Proximity Search</strong></td><td><strong><em>Google AdWords</em></strong></td><td><strong><em>Yahoo Search Marketing</em></strong></td><td><strong><em>Clusty</em></strong></td><td><strong>WordTracker</strong></td><td><strong>LIK</strong></td></tr>
+<tr><td align="left">anna nicole smith</td><td align="left">49.3%</td><td>76.9%</td><td>63.5%</td><td>72.3% </td><td>67.7%</td><td>75.2%</td><td>82.3%</td><td>82.3%</td><td>76.1%</td><td>82.7%</td></tr>
+<tr><td align="left">badoo</td><td align="left">42.7%</td><td>75.2%</td><td>58.1%</td><td>76.0%</td><td>68.6%</td><td>84.0%</td><td>78.3%</td><td>76.6%</td><td>76.5%</td><td>91.2%</td></tr>
+<tr><td align="left">beyonce</td><td align="left">44.3%</td><td>73.9%</td><td>60.7%</td><td>80.4%</td><td>61.9%</td><td>80.4%</td><td>81.6%</td><td>82.3%</td><td>66.3%</td><td>83.3%</td></tr>
+<tr><td align="left">britney spears</td><td align="left">45.6%</td><td>68.3%</td><td>64.6%</td><td>71.7%</td><td>62.2%</td><td>83.3%</td><td>73.3%</td><td>81.8%</td><td>69.7%</td><td>84.7%</td></tr>
+<tr><td align="left">club penguin</td><td align="left">56.4%</td><td>67.6%</td><td>64.7%</td><td>82.3%</td><td>64.3%</td><td>74.5%</td><td>77.3%</td><td>81.8%</td><td>66.8%</td><td>82.7%</td></tr>
+<tr><td align="left">dailymotion</td><td align="left">56.6%</td><td>70.1%</td><td>61.9%</td><td>75.1%</td><td>66.4%</td><td>83.8%</td><td>79.2%</td><td>77.1%</td><td>68.4%</td><td>86.6%</td></tr>
+<tr><td align="left">disney</td><td align="left">55.3%</td><td>71.1%</td><td>56.0%</td><td>83.2%</td><td>62.2%</td><td>85.1%</td><td>80.5%</td><td>79.5%</td><td>68.5%</td><td>93.6%</td></tr>
+<tr><td align="left">ebuddy</td><td align="left">56.0%</td><td>74.1%</td><td>62.9%</td><td>73.1%</td><td>64.3%</td><td>82.4%</td><td>80.0%</td><td>79.9%</td><td>74.1%</td><td>93.3%</td></tr>
+<tr><td align="left">facebook</td><td align="left">46.3%</td><td>69.8%</td><td>55.9%</td><td>80.5%</td><td>66.8%</td><td>83.4%</td><td>78.1%</td><td>77.4%</td><td>74.6%</td><td>87.5%</td></tr>
+<tr><td align="left">fantasy football</td><td align="left">53.7%</td><td>76.2%</td><td>56.4%</td><td>77.3%</td><td>69.1%</td><td>79.8%</td><td>77.3%</td><td>81.3%</td><td>69.7%</td><td>94.0%</td></tr>
+<tr><td align="left">fergie</td><td align="left">46.1%</td><td>72.5%</td><td>59.0%</td><td>79.4%</td><td>65.6%</td><td>76.2%</td><td>75.8%</td><td>84.9%</td><td>65.6%</td><td>84.3%</td></tr>
+<tr><td align="left">fifa</td><td align="left">43.6%</td><td>74.5%</td><td>65.4%</td><td>80.2%</td><td>61.9%</td><td>85.0%</td><td>84.9%</td><td>82.0%</td><td>75.8%</td><td>87.6%</td></tr>
+<tr><td align="left">golf</td><td align="left">57.6%</td><td>76.0%</td><td>62.3%</td><td>71.9%</td><td>65.5%</td><td>73.2%</td><td>81.6%</td><td>77.6%</td><td>75.5%</td><td>85.0%</td></tr>
+<tr><td align="left">heroes</td><td align="left">52.5%</td><td>72.8%</td><td>60.5%</td><td>76.2%</td><td>62.8%</td><td>81.6%</td><td>74.5%</td><td>80.8%</td><td>66.9%</td><td>91.2%</td></tr>
+<tr><td align="left">hi5</td><td align="left">50.8%</td><td>70.5%</td><td>56.6%</td><td>71.9%</td><td>69.0%</td><td>76.4%</td><td>75.2%</td><td>79.5%</td><td>69.9%</td><td>88.5%</td></tr>
+<tr><td align="left">iphone</td><td align="left">48.4%</td><td>75.1%</td><td>55.9%</td><td>71.5%</td><td>63.6%</td><td>75.3%</td><td>83.6%</td><td>81.2%</td><td>66.8%</td><td>84.1%</td></tr>
+<tr><td align="left">jessica alba</td><td align="left">55.1%</td><td>73.2%</td><td>56.0%</td><td>83.2%</td><td>69.1%</td><td>81.7%</td><td>76.7%</td><td>79.6%</td><td>68.4%</td><td>91.4%</td></tr>
+<tr><td align="left">kazaa</td><td align="left">48.0%</td><td>73.3%</td><td>62.7%</td><td>81.3%</td><td>66.8%</td><td>75.8%</td><td>81.3%</td><td>82.8%</td><td>73.8%</td><td>85.7%</td></tr>
+<tr><td align="left">lindsay lohan</td><td align="left">56.3%</td><td>70.4%</td><td>55.9%</td><td>75.6%</td><td>62.0%</td><td>75.6%</td><td>82.8%</td><td>78.4%</td><td>73.9%</td><td>94.0%</td></tr>
+<tr><td align="left">mozart</td><td align="left">49.9%</td><td>67.7%</td><td>58.2%</td><td>80.3%</td><td>67.0%</td><td>77.6%</td><td>75.2%</td><td>80.7%</td><td>65.5%</td><td>85.7%</td></tr>
+<tr><td align="left">mp3</td><td align="left">56.0%</td><td>76.1%</td><td>58.6%</td><td>78.1%</td><td>61.4%</td><td>84.3%</td><td>77.5%</td><td>77.9%</td><td>74.3%</td><td>82.1%</td></tr>
+<tr><td align="left">myspace</td><td align="left">47.9%</td><td>75.1%</td><td>60.4%</td><td>78.4%</td><td>67.8%</td><td>74.7%</td><td>74.6%</td><td>83.6%</td><td>71.9%</td><td>93.2%</td></tr>
+<tr><td align="left">naruto</td><td align="left">48.6%</td><td>71.9%</td><td>58.2%</td><td>80.1%</td><td>61.5%</td><td>74.6%</td><td>78.1%</td><td>81.9%</td><td>71.2%</td><td>83.2%</td></tr>
+<tr><td align="left">paris hilton</td><td align="left">43.7%</td><td>74.1%</td><td>60.0%</td><td>82.9%</td><td>65.3%</td><td>83.1%</td><td>79.0%</td><td>82.0%</td><td>71.8%</td><td>93.4%</td></tr>
+<tr><td align="left">pokemon</td><td align="left">55.9%</td><td>68.8%</td><td>60.9%</td><td>81.2%</td><td>67.1%</td><td>83.9%</td><td>83.1%</td><td>81.4%</td><td>65.9%</td><td>86.7%</td></tr>
+<tr><td align="left">poker</td><td align="left">43.8%</td><td>75.3%</td><td>59.9%</td><td>74.7%</td><td>63.9%</td><td>82.2%</td><td>82.2%</td><td>84.7%</td><td>72.7%</td><td>85.7%</td></tr>
+<tr><td align="left">rebelde</td><td align="left">43.0%</td><td>71.2%</td><td>65.5%</td><td>71.9%</td><td>65.8%</td><td>79.6%</td><td>78.1%</td><td>78.9%</td><td>71.0%</td><td>93.0%</td></tr>
+<tr><td align="left">rune scape</td><td align="left">47.7%</td><td>68.4%</td><td>64.5%</td><td>81.5%</td><td>64.6%</td><td>78.4%</td><td>84.6%</td><td>84.4%</td><td>75.9%</td><td>88.4%</td></tr>
+<tr><td align="left">second life</td><td align="left">56.0%</td><td>76.2%</td><td>63.1%</td><td>83.1%</td><td>68.3%</td><td>77.7%</td><td>77.3%</td><td>79.9%</td><td>74.9%</td><td>85.8%</td></tr>
+<tr><td align="left">shakira</td><td align="left">55.7%</td><td>70.7%</td><td>62.9%</td><td>72.4%</td><td>67.5%</td><td>82.7%</td><td>82.9%</td><td>86.8%</td><td>68.0%</td><td>83.2%</td></tr>
+<tr><td align="left">sudoku</td><td align="left">57.6%</td><td>72.7%</td><td>61.0%</td><td>73.2%</td><td>63.8%</td><td>75.8%</td><td>80.6%</td><td>80.9%</td><td>70.1%</td><td>92.5%</td></tr>
+<tr><td align="left">tmz</td><td align="left">42.8%</td><td>75.4%</td><td>57.5%</td><td>76.0%</td><td>69.0%</td><td>84.5%</td><td>85.0%</td><td>83.0%</td><td>72.3%</td><td>82.3%</td></tr>
+<tr><td align="left">transformers</td><td align="left">50.5%</td><td>75.8%</td><td>63.2%</td><td>79.0%</td><td>64.2%</td><td>81.6%</td><td>75.2%</td><td>78.8%</td><td>69.4%</td><td>93.8%</td></tr>
+<tr><td align="left">webdetente</td><td align="left">55.0%</td><td>74.8%</td><td>59.2%</td><td>74.3%</td><td>64.9%</td><td>84.8%</td><td>77.1%</td><td>85.3%</td><td>76.3%</td><td>84.3%</td></tr>
+<tr><td align="left">webkinz</td><td align="left">55.7%</td><td>73.6%</td><td>60.0%</td><td>82.3%</td><td>68.3%</td><td>78.5%</td><td>81.7%</td><td>78.4%</td><td>66.1%</td><td>90.2%</td></tr>
+<tr><td align="left">world cup</td><td align="left">55.6%</td><td>69.3%</td><td>56.6%</td><td>80.6%</td><td>62.4%</td><td>76.5%</td><td>84.2%</td><td>78.7%</td><td>66.4%</td><td>85.6%</td></tr>
+<tr><td align="left">wwe</td><td align="left">43.8%</td><td>73.8%</td><td>57.5%</td><td>76.6%</td><td>63.7%</td><td>83.0%</td><td>80.6%</td><td>84.4%</td><td>76.2%</td><td>89.3%</td></tr>
+<tr><td align="left">xanga</td><td align="left">49.4%</td><td>73.0%</td><td>56.9%</td><td>76.1%</td><td>66.8%</td><td>79.4%</td><td>75.4%</td><td>78.2%</td><td>73.3%</td><td>91.3%</td></tr>
+<tr><td align="left">youtube</td><td align="left">53.7%</td><td>73.1%</td><td>55.9%</td><td>74.6%</td><td>68.2%</td><td>77.0%</td><td>79.0%</td><td>78.8%</td><td>66.0%</td><td>82.6%</td></tr>
+<tr><td align="left">Average</td><td align="left">50.7%</td><td>72.8%</td><td>60.0%</td><td>77.4%</td><td>65.4%</td><td>79.8%</td><td>79.4%</td><td>80.9%</td><td>70.9%</td><td>87.8%</td></tr>
+</table>
+
+<p>The average scores of <em>CatS</em>, <em>Highlight</em>, <em>Credo</em>, <em>Carrot2</em>,<em>Google Proximity Search</em>, <em>Google AdWords</em>, <em>Yahoo Search Marketing</em>, <em>Clusty</em>, <em> WordTracker</em> and LIK for <em>P</em>@3 are 50.7%, 72.8%, 60.0%, 77.4%, 65.4%, 79.8%, 79.4%, 80.9%, 70.9%, and 87.8%, respectively. Moreover, we have extended this analysis to the analyses of <em>P</em>@5, <em>P</em>@7, and <em>P</em>@10, as shown in Table 6.</p>
+
+<table width="90%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br/><strong>Table 6: Average <em>P</em>@3, <em>P</em>@5, <em>P</em>@7, <em>P</em>@10 scores for different systems</strong></caption>
+<tr><td align="left"><strong>Average <em>P@N</em></strong></td><td align="left"><strong><em>CatS</em></strong></td><td><strong><em>Highlight</em></strong></td><td><strong><em>Credo</em></strong></td><td><strong><em>Carrot2</em></strong></td><td><strong>Google Proximity Search</strong></td><td><strong><em>Google AdWords</em></strong></td><td><strong><em>Yahoo Search Marketing</em></strong></td><td><strong><em>Clusty</em></strong></td><td><strong>WordTracker</strong></td><td><strong>LIK</strong></td></tr>
+<tr><td align="left">Average <em>P</em>@3</td><td align="left">50.7%</td><td>72.8%</td><td>60.0%</td><td>77.4%</td><td>65.4%</td><td>79.8%</td><td>79.4%</td><td>80.9%</td><td>70.9%</td><td>87.8%</td></tr>
+<tr><td align="left">Average <em>P</em>@5</td><td align="left">47.0%</td><td>69.1%</td><td>57.2%</td><td>72.2%</td><td>60.9%</td><td>75.2%</td><td>75.4%</td><td>77.9%</td><td>67.0%</td><td>85.5%</td></tr>
+<tr><td align="left">Average <em>P</em>@7</td><td align="left">42.2%</td><td>62.9%</td><td>51.3%</td><td>68.9%</td><td>56.5%</td><td>70.1%</td><td>69.9%</td><td>73.1%</td><td>62.5%</td><td>79.6%</td></tr>
+<tr><td align="left">Average <em>P</em>@10</td><td align="left">35.7%</td><td>58.0%</td><td>45.2%</td><td>61.8%</td><td>50.6%</td><td>64.6%</td><td>64.6%</td><td>66.0%</td><td>55.9%</td><td>74.6%</td></tr>
+</table>
+
+<p>We then used SPSS 11.0 for Windows to analyse the results of above experiment. Considering the performance of <em>CatS</em>, <em>Highlight</em>, <em>Credo</em>, <em>Carrot2</em>,<em>Google Proximity Search</em>, <em>Google AdWords</em>, <em>Yahoo Search Marketing</em>, <em>Clusty</em>, <em> WordTracker</em>, and LIK. We used the statistical methodology, ANOVA analysis, to show that <em>F</em><sub>(<em>PR</em>@3)</sub>=386.443, <em>F</em><sub>(<em>PR</em>@5)</sub>=470.596, <em>F</em><sub>(<em>PR</em>@7)</sub>=463.473, and <em>F</em><sub>(<em>PR</em>@10)</sub>=496.528 (Table 7) are all greater than <em>F</em><sub>0.001</sub>(9,380)=2.454 (F-distribution). This provides extremely strong evidence against the null hypothesis, indicating that there is a significant difference in the performance of different systems on the user's evaluation.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br/><strong>Table 7: The results of the ANOVA analysis</strong></caption>
+<tr><td colspan="2"></td><td><strong>Sum of Squares</strong></td><td><strong>Degree of Freedom</strong></td><td><strong>Mean Square</strong></td><td><strong>F</strong></td><td><strong>Sig.</strong></td></tr>
+<tr><td rowspan="3"><strong><em>PR</em>@3</strong></td><td><strong>Between Groups</strong></td><td>4.348</td><td>9</td><td>0.483</td><td>386.443</td><td>0</td></tr>
+<tr><td><strong>Within Groups</strong></td><td>0.475</td><td>380</td><td>0.001</td><td></td><td></td></tr>
+<tr><td><strong>Total</strong></td><td>4.823</td><td>389</td><td></td><td></td><td></td></tr>
+<tr><td rowspan="3"><strong><em>PR</em>@5</strong></td><td><strong>Between Groups</strong></td><td>4.417</td><td>9</td><td>0.491</td><td>470.596</td><td>0</td></tr>
+<tr><td><strong>Within Groups</strong></td><td>0.396</td><td>380</td><td>0.001</td><td></td><td></td></tr>
+<tr><td><strong>Total</strong></td><td>4.814</td><td>389</td><td></td><td></td><td></td></tr>
+<tr><td rowspan="3"><strong><em>PR</em>@7</strong></td><td><strong>Between Groups</strong></td><td>4.367</td><td>9</td><td>0.485</td><td>463.473</td><td>0</td></tr>
+<tr><td><strong>Within Groups</strong></td><td>0.398</td><td>380</td><td>0.001</td><td></td><td></td></tr>
+<tr><td><strong>Total</strong></td><td>4.765</td><td>389</td><td></td><td></td><td></td></tr>
+<tr><td rowspan="3"><strong><em>PR</em>@10</strong></td><td><strong>Between Groups</strong></td><td>4.520</td><td>9</td><td>0.502</td><td>496.528</td><td>0</td></tr>
+<tr><td><strong>Within Groups</strong></td><td>0.384</td><td>380</td><td>0.001</td><td></td><td></td></tr>
+<tr><td><strong>Total</strong></td><td>4.905</td><td>389</td><td></td><td></td><td></td></tr>
+</table>
+
+<p>We conducted a <em>post hoc</em> Fisher's least significant difference for pair-wise comparison at the 1% significance level. Because the results of least significant difference are tedious, we refer readers to the full report (<a href="#lik09">LIK 2009</a>). As illustrated in the results of least significant difference, our system was found to overwhelmingly better than other systems.</p>
+
+<p>For a large part of the query terms, the users did not like <em>CatS</em> since it suggests keywords that only show the category names that derived from the dmoz taxonomy. <em><em>Credo</em></em> only suggests keywords with a single term. <em><em>Highlight</em></em> obtains the top-level suggested keywords by using a classification technology, so that they are few and of little use.<em>Google Proximity Search</em>, <em>WordTracker</em>, <em>Google AdWords</em>, and <em>Yahoo Search Marketing</em> are failing to suggest any keywords that do not contain the seed keyword. Although <em>Carrot2</em> and <em>Clusty</em> can create the suggested keywords with a semantic feature, however, they only use a pattern matching technique to analysis the Web snippet returned from different search engines. That is, they will fail to suggest the keywords if it do not appear in the Web snippet. Our system uses the methods of latent semantic analysis and probabilistic latent semantic analysis to construct the latent topics from the vector-space-model matrix and the suggested keywords are all based on these results. Thus, our system can guarantee any suggested keywords that have a synonymy or polysemy feature with the seed keyword. Moreover, our system can suggest the keywords with an association relationship since it uses a graph search method to derive the candidate keywords from a semantic graph. For example, in Figure 7, our system can suggest the keyword <em>isohunt.com</em> (the most comprehensive bit torrent search engine) when the seed keyword is <em>p2p</em>.</p>
+
+<h3>Experiment results on the initial parameters</h3>
+
+<p>In this experiment, we use the random and latent semantic analysis probability models to compare the performance of the log-likelihood function as described in equation (12) in order to decide the initial parameters.</p>
+
+<p>The random probability model, RAND, uses a random probability as the initial parameters. The latent semantic analysis probability model first uses singular value decomposition to transform the vector-space-model matrix into the relevant latent semantic analysis parameters, then it uses a dual probability model to transform the relevant latent semantic analysis parameters into the initial parameters. According to the definition of the function <em>f</em>(<em>&sigma;<sub>k</sub></em>) in equation (9), the latent semantic analysis probability model can be divided into three submodels: (1) <em>f</em>(<em>&sigma;<sub>k</sub></em>)=<em>exp</em>(<em>&sigma;<sub>k</sub></em>) (<em>latent semantic analysis-prob_1</em>), (2) <em>f</em>(<em>&sigma;<sub>k</sub></em>)=<em>sinh</em><sup>-1</sup>(<em>&sigma;<sub>k</sub></em>) (<em>latent semantic analysis-prob_2</em>), and (3) <em>f</em>(<em>&sigma;<sub>k</sub></em>)=<em>&sigma;<sub>k</sub></em> (<em>latent semantic analysis-prob_3</em>).</p>
+
+<p>Hofmann (<a href="#hof04">2004</a>) concluded that three parameters, <em>M</em> (the total number of query terms), <em>N</em> (the total number of Web pages), and <em>L</em> (the total number of topics), have a major impact on the performance of the log-likelihood function, thus, we experiment with three different cases. Let us now define <em>IRatio</em> for <em>Model<sub>x</sub></em> based on the RAND model where <em>Model<sub>x</sub></em>&isin;{RAND, <em>latent semantic analysis-prob_1</em>, <em>latent semantic analysis-prob_2</em>, <em>latent semantic analysis-prob_3</em>}, as shown in the following equation:</p>
+
+<div align="center"><img height="70" alt="equation" src="p425eq26.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>L<sub>n</sub></em>(<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>) in <em>Model<sub>x</sub></em> is the local optimal solution derived from <em>Model<sub>x</sub></em>. The interested readers can simulate this experiment at <a href="http://cayley.sytes.net/simulation/init_lik.php">http://cayley.sytes.net/simulation/init_lik.php</a>.</p>
+
+<p>In the first case, we focus on how to improve <em>IRatio</em> for different <em>L</em>. In this case, we set <em>M</em>=1000, <em>N</em>=1000, and the range of <em>L</em> from 10 to 200. The simulation results for this case are shown in Figure 10 (a). We then average over all <em>IRatio</em>s, and the average values for each <em>Model<sub>x</sub></em> are 0% (RAND), 7.38% (<em>latent semantic analysis-prob_1</em>), 7.16% (<em>latent semantic analysis-prob_2</em>), and 7.12% (<em>latent semantic analysis-prob_3</em>), respectively.</p>
+
+<div align="center" id="fig-10"><img src="p425fig10.gif" alt="Figure 10: The simulation results for the initial parameters" /></div>
+<div align="center"><br /><strong>Figure 10: The simulation results for the initial parameters</strong></div>
+
+<p>Similarly, in the second and third cases, we focus on how to improve <em>IRatio</em> for different <em>N</em> and <em>M</em>. The simulation results are listed in Figures 10 (b) and (c). We also average over all <em>IRatios</em> for the second case, and the average values for each <em>Model<sub>x</sub></em> are 0% (RAND), 8.69% (<em>latent semantic analysis-prob_1</em>), 8.56% (<em>latent semantic analysis-prob_2</em>), and 8.58% (<em>latent semantic analysis-prob_3</em>), respectively. For the third case, the average values for each <em>Model<sub>x</sub></em> are 0% (RAND), 6.19% (<em>latent semantic analysis-prob_1</em>), 7.23% (<em>latent semantic analysis-prob_2</em>), and 5.24% (<em>latent semantic analysis-prob_3</em>), respectively.</p>
+
+<p>According to above experimental results, we concluded that the performance of the latent semantic analysis probability model is better than the random probability model. Moreover, no matter what experiments are performed, the performances of <em>latent semantic analysis-prob_1</em>, <em>latent semantic analysis-prob_2</em>, and <em>latent semantic analysis-prob_3</em> are similar, which means that different <em>f</em>(<em>&sigma;<sub>k</sub></em>) functions will result in a near identical result for the latent semantic analysis probability model.</p>
+
+<h3>Experiment results on the termination criteria</h3>
+
+<p>In this experiment, we pay attention to verify that intelligent probabilistic latent semantic analysis can yield a cost effective solution. The termination criteria have the following two cases: (1) it converges to the local optimal solution or (2) the consecutive number of iterations without improvement exceeds its maximum allowable number of iterations without significant improvement. In this experiment, we randomly chose the following parameters: <em>M</em> (the total number of query terms), <em>N</em> (the total number of Web pages), <em>L</em> (the total number of topics), and <em>w</em>(<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>) (the weight of term <em>i</em> in document <em>j</em>). The interested readers can simulate this experiment at <a href="http://cayley.sytes.net/simulation/term_lik.php">http://cayley.sytes.net/simulation/term_lik.php</a>.</p>
+
+<p>The simulation results of two cases are shown in Figure 11, where <em>n</em> is the number of iterations; #<em>IteNonImp<sub>n</sub></em> is the consecutive number of iterations without improvement. All other parameters, including <em>L<sub>n</sub></em>(<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>), <em>Diff<sub>n</sub></em>, <em>avg</em>(<em>Diff</em><sub><em>n</em>-1</sub>), <em>&sigma;</em>(<em>Diff<sub>n</sub></em>), <em>avg</em>(<em>&sigma;</em>(<em>Diff</em><sub><em>n</em>-1</sub>)), and <em>MI<sub>n</sub></em> are as previously defined.</p>
+
+<div align="center" id="fig-11"><img src="p425fig11.gif" alt="Figure 11: The simulation results of the termination criteria, where M = 370, N = 895, and L = 104" /></div>
+<div align="center"><br /><strong>Figure 11: The simulation results of the termination criteria, where <em>M</em> = 370, <em>N</em> = 895, and <em>L</em> = 104</strong></div>
+
+<p>In the first case, we set <em>&epsilon;</em> equal to 0.01, which means that the improvement value of the log-likelihood function at the <em>n<sup>th</sup></em> iteration (<em>Diff<sub>n</sub></em>) is less than or equal to 0.01. In this simulation, the local optimal solution has already been reached at iteration 61. At this time, we found that the value of the log-likelihood function is 8547.283874.</p>
+
+<p>In the second case, the maximum required number of iterations has already been reached at iteration 43, where the consecutive number of iterations without improvement (#<em>IteNonImp<sub>n</sub></em>=11) is larger than the maximum allowable number of iterations without significant improvement (<em>MI<sub>n</sub></em>=4). At this time, we found that the value of the log-likelihood function is 8544.663281.</p>
+
+<p>In this simulation, the termination criteria were reached at iteration 43 rather than iteration 61 since it takes additional 18 iterations to increase the value of the log-likelihood function only 2.620593. It means that we perform additional computing resources than the second case, which result in little improvement.</p>
+
+<p>For the second case, we further verify whether our method is a cost effective solution. In this verification, we also simulated 10,000 runs on overall performance improvement, to compare the number of iteration derived from the second case, SYSTEM, with some predefined number of iterations. At each run of this simulation, we also randomly chose the parameters of <em>M</em>, <em>N</em>, <em>L</em>, and <em>w</em>(<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>). The predefined number of iterations is based on the local optimal solution that can classify the number of iterations required to run into the following situations: <em>OPTIMAL</em> (local optimal solution), <em>OPTIMAL-20</em> (OPTIMAL minus 20) and <em>OPTIMAL-40</em> (OPTIMAL minus 40). Let us now define achievement rate between the real value of the log-likelihood function and the local optimal solution as shown in the following:</p>
+
+<div align="center"><img height="70" alt="equation" src="p425eq27.gif" width="800" align="top" border="0" /></div>
+
+<p>where <em>L<sub>&tau;</sub></em>(<em>q<sub>i</sub></em>,<em>d<sub>j</sub></em>) denotes the value of the log-likelihood function derived from different <em>&tau;</em>s, where <em>&tau;</em>&isin;{<em>SYSTEM</em>, <em>OPTIMAL</em>, <em>OPTIMAL-20</em>, <em>OPTIMAL-40</em>}.</p>
+
+<p>Table 8 shows all achievement rates over 10,000 simulation runs. For paper length limit, the number in each digit cell (except the first column and the last row) is the average value over 2,000 simulation runs. The average achievement rates for different <em>&tau;</em>s are 1 (<em>OPTIMAL</em>), 0.998425 (<em>OPTIMAL-20</em>), 0.998162 (<em>SYSTEM</em>), and 0.638627 (<em>OPTIMAL-40</em>), respectively.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br/><strong>Table 8: Achievement rate for 10,000 simulation runs</strong></caption>
+<tr><td align="left"><strong>Number of Runs</strong></td><td><strong>OPTIMAL</strong></td><td><strong>OPTIMAL-20</strong></td><td><strong>SYSTEM</strong></td><td><strong>OPTIMAL-40</strong></td></tr>
+<tr><td align="left">2000</td><td>1</td><td>0.998327</td><td>0.998132</td><td>0.642190</td></tr>
+<tr><td align="left">4000</td><td>1</td><td>0.998604</td><td>0.998397</td><td>0.636356</td></tr>
+<tr><td align="left">6000</td><td>1</td><td>0.998499</td><td>0.998174</td><td>0.636982</td></tr>
+<tr><td align="left">8000</td><td>1</td><td>0.998423</td><td>0.998086</td><td>0.639718</td></tr>
+<tr><td align="left">10000</td><td>1</td><td>0.998274</td><td>0.998023</td><td>0.637890</td></tr>
+<tr><td align="left">Average</td><td>1</td><td>0.998425</td><td>0.998162</td><td>0.638627</td></tr>
+</table>
+
+<p>Table 9 shows the number of iterations required to run for different <em>&tau;</em>s. The average number of iterations for different <em>&tau;</em>s are 58.41875 (<em>OPTIMAL</em>), 38.41875 (<em>OPTIMAL-20</em>), 31.36200 (<em>SYSTEM</em>), and 18.41875 (<em>OPTIMAL-40</em>), respectively. The average number of iterations for <em>OPTIMAL-20</em> and <em>OPTIMAL-40</em> can be derived from <em>OPTIMAL</em>. In the case of <em>SYSTEM</em>, the number of iterations fluctuates since each run was dynamically terminated.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br/><strong>Table 9: Number of iterations for 10,000 simulation runs</strong></caption>
+<tr><td align="left"><strong>Number of Runs</strong></td><td><strong>OPTIMAL</strong></td><td><strong>OPTIMAL-20</strong></td><td><strong>SYSTEM</strong></td><td><strong>OPTIMAL-40</strong></td></tr>
+<tr><td align="left">2000</td><td>58.28225</td><td>38.28225</td><td>31.19150</td><td>18.28225</td></tr>
+<tr><td align="left">4000</td><td>58.13029</td><td>38.13029</td><td>31.17996</td><td>18.13029</td></tr>
+<tr><td align="left">6000</td><td>58.28259</td><td>38.28259</td><td>31.27647</td><td>18.28259</td></tr>
+<tr><td align="left">8000</td><td>58.70122</td><td>38.70122</td><td>31.58823</td><td>18.70122</td></tr>
+<tr><td align="left">10000</td><td>58.69741</td><td>38.69741</td><td>31.57382</td><td>18.69741</td></tr>
+<tr><td align="left">Average</td><td>58.41875</td><td>38.41875</td><td>31.36200</td><td>18.41875</td></tr>
+</table>
+
+<p>For any two cases, we define cost effective ratio between <em>&tau;</em>1 and <em>&tau;</em>2 by dividing the increased achievement rate by the increased percentage of the number of iterations as follows:</p>
+
+<div align="center"><img height="195" alt="equation" src="p425eq28.gif" width="800" align="top" border="0" /></div>
+
+<p>Using <em>&tau;</em>2=<em>OPTIMAL-40</em> as a benchmark, the cost effective ratio values for different <em>&tau;</em>s, <em>SYSTEM</em>, <em>OPTIMAL-20</em>, and <em>OPTIMAL</em> are shown in Table 10. We found that <em>&tau;</em>1=<em>SYSTEM</em> significantly outperforms other <em>&tau;</em>s, and the cost effective ratio values drop rapidly beyond <em>&tau;</em>1=<em>SYSTEM</em>.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br/><strong>Table 10: Cost effective ratios for different <em>&tau;</em>s based on <em>&tau;</em>2="OPTIMAL-40"</strong></caption>
+<tr><td align="left"></td><td><strong>OPTIMAL-40</strong></td><td><strong>SYSTEM</strong></td><td><strong>OPTIMAL-20</strong></td><td><strong>OPTIMAL</strong></td></tr>
+<tr><td align="left"><em>Average Achievement Rate</em></td><td>0.638627</td><td>0.998162</td><td>0.998425</td><td>1</td></tr>
+<tr><td align="left"><em>Average Number of Iterations</em></td><td>18.41875</td><td>31.36200</td><td>38.41875</td><td>58.41875</td></tr>
+<tr><td align="left"><em>Improved Average Achievement Rate</em></td><td></td><td>0.562981208</td><td>0.563393</td><td>0.565859</td></tr>
+<tr><td align="left"><em>Improved Average Number of Iteration Ratio</em></td><td></td><td>0.702721412</td><td>1.085850</td><td>2.171700</td></tr>
+<tr><td align="left"><em>Cost Effective Ration</em></td><td></td><td>0.801144236</td><td>0.518850</td><td>0.260561</td></tr>
+</table>
+
+<p>In summary, we conclude that our method can yield a cost effective solution in a comparatively short amount of time.</p>
+
+<h2>Conclusions and future work</h2>
+
+<p>In this paper, we presented an integrated keyword suggestion system that consists of two stages: training and suggestion. The training stage applies the latent semantic analysis and probabilistic latent semantic analysis methods to form the training parameter. Then, the suggestion stage applies a semantic graph to generate a list of suggested keywords. The suggested keywords generated from our system have a strong semantic relationship between the user's query and each suggested keyword.</p>
+
+<p>This paper has three main contributions: first, we have presented a high-performance keyword suggestion system. According to the results of the simulation and user evaluation studies, our system was found to be better than other online systems. Secondly, we have shown that the value of the log-likelihood function obtained from our system is a cost effective solution in a comparatively short amount of time. Thirdly, we also have shown that the initial parameters obtained from the latent semantic analysis probability model are superior to the random probability model.</p>
+
+<p>Currently, we used the latent semantic analysis probability model as the initial parameters since singular value decomposition may introduce negative values in the result of latent semantic analysis and such values cannot be treated as a probability distribution. In the future, we plan to use the non-negative matrix factorization model to deal with the problem of negative values in the process of singular value decomposition. On the other hand, the suggested keywords may be out-of-date since the training stage uses a batch processing to update the relevant parameters. We also plan to integrate the Web snippet analysis into our training stage to suggest up-to-date keywords.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>This work was supported in part by National Science Council, Taiwan under grant NSC 97-2221-E-259-026.</p>
+
+<h2><a id="author" name="author" />About the author</h2>
+
+<p>Lin-Chih Chen is an assistant professor in the Department of Information Management at National Dong Hwa University, Taiwan. His research interests include Web intelligent and Web technology. He develops many Web intelligent systems include the Cayley search engine, the LIK keyword suggestion system, the Cayley digital content system, the iClubs community, language agents, and a Web snippet clustering system. He is also a leader of the Cayley group. He can be contacted at <a href="mailto:lcchen@mail.ndhu.edu.tw">lcchen@mail.ndhu.edu.tw</a></p>
+
+<form action="#">
+<fieldset>
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+<ul>
+
+<li><a id="aol06" name="aol06"></a>AOL.  (2006). <a href="http://www.webcitation.org/5nnpHYBQe">AOL search data</a>. Retrieved 7 November, 2009 from http://www.gregsadetsky.com/aol-data/ (Archived by WebCite&reg; at http://www.webcitation.org/5nnpHYBQe)</li>
+
+<li><a id="bel08" name="bel08"></a>Bellegarda, J.R. (2008). <em>Latent semantic mapping: principles and applications.</em> San Rafael, CA: Morgan &amp; Claypool Publishers.</li>
+
+<li><a id="bra05" name="bra05"></a>Brants, T. (2005). Test data likelihood for PLSA models. <em>Information Retrieval</em>, <strong>8</strong>(2), 181-196.</li>
+
+<li><a id="bra02" name="bra02"></a>Brants, T. &amp; Stolle, R. (2002). Finding similar documents in document collections. In <em>Proceedings of Third International Conference on Language Resources and Evaluation, Las Palmas, Spain</em>. Paris: ELRA.</li>
+
+<li><a id="car04" name="car04"></a>Carpineto, C. &amp; Romano, G. (2004). Exploiting the potential of concept lattices for information retrieval with Credo. <em>Journal of Universal Computer Science</em>, <strong>10</strong>(8), 985-1013.</li>
+
+<li><a id="che05" name="che05"></a>Chen, L.C. &amp; Luh, C.J. (2005). Web page prediction from MetaSearch results. <em>Internet Research: Electronic Networking Applications and Policy</em>, <strong>15</strong>(4), 421-446.</li>
+
+<li><a id="dee90" name="dee90"></a>Deerwester, S., Dumais, S.T., Furnas, G.W., Landauer, T.K. &amp; Harshman, R. (1990). Indexing by latent semantic analysis. <em>Journal of the American Society for Information Science and Technology</em>, <strong>41</strong>(6), 391-407.</li>
+
+<li><a id="dem77" name="dem77"></a>Dempster, A.P., Laird, N.M. &amp; Rubin, D.B. (1977). Maximum likelihood from incomplete data using the EM algorithm. <em>Journal of the Royal Statistical Society</em>, Series B <strong>39</strong>(1), 1-38.</li>
+
+<li><a id="din05" name="din05"></a>Ding, C.H.Q. (2005). A probabilistic model for latent semantic indexing. <em>Journal of the American Society for Information Science and Technology</em>, <strong>56</strong>(6), 597-608.</li>
+
+<li><a id="dog08" name="dog08"></a>Dogpile. (2008). <a href="http://www.webcitation.org/5nnp2lF7I">The project of keyword suggestion: listing of testing keywords</a>. Retrieved 7 November, 2009 from http://cayley.sytes.net/lik_english/listing_all_testing_keywords.php (Archived by WebCite&reg; at http://www.webcitation.org/5nnp2lF7I)</li>
+
+<li><a id="ell06" name="ell06"></a>Elliott, S. (2006). <a href="http://www.webcitation.org/5nnpRUwl9">More agencies investing in marketing with a click</a>. Retrieved November 7, 2009 from http://www.nytimes.com/2006/03/14/business/media/14adco.html?ex=1299992400&amp;en=6fcd30b948dd1312&amp;ei=5088 (Archived by WebCite&reg; at http://www.webcitation.org/5nnpRUwl9)</li>
+
+<li><a id="gib05" name="gib05"></a>Gibson, S., Wills, A. &amp; Ninness, B. (2005). Maximum-likelihood parameter estimation of bilinear systems. <em>IEEE Transactions on Automatic Control</em>, <strong>50</strong>(10), 1581-1596.</li>
+
+<li><a id="goo06" name="goo06"></a>Google. (2006). <a href="http://www.webcitation.org/5nnpigkeq"><em>Google AdWords: keyword tool</em></a>. Retrieved 7 November, 2009 from https://adwords.google.com/select/KeywordToolExternal (Archived by WebCite&reg; at http://www.webcitation.org/5nnpigkeq)</li>
+
+<li><a id="goo07" name="goo07"></a>Google. (2007). <a href="http://www.webcitation.org/5nnpu3kuc">2007 year-end zeitgeist</a>. Retrieved 7 November, 2009 from http://www.google.com/intl/en/press/zeitgeist2007/index.html (Archived by WebCite&reg; at http://www.webcitation.org/5nnpu3kuc)</li>
+
+<li><a id="goo08" name="goo08"></a>Google. (2008). <a href="http://www.webcitation.org/5nnq2hc1N">Google investor relations</a>. Retrieved 7 November, 2009 from http://investor.google.com/fin_data.html (Archived by WebCite&reg; at http://www.webcitation.org/5nnq2hc1N)</li>
+
+<li><a id="hof99" name="hof99"></a>Hofmann, T. (1999). <a href="http://www.webcitation.org/5nnq9rduJ">Probabilistic latent semantic indexing</a>. In <em>Proceedings of the 22th Annual International SIGIR Conference on Research and Development in Information Retrieval</em> Berkeley, California, United States. (pp. 50-57). New York, NY: ACM Press. Retrieved November 7, 2009, from http://www.cs.brown.edu/~th/papers/Hofmann-SIGIR99.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5nnq9rduJ).</li>
+
+<li><a id="hof01" name="hof01"></a>Hofmann, T. (2001). Unsupervised learning by probabilistic latent semantic analysis. <em>Machine Learning</em>, <strong>42</strong>(1-2), 177-196.</li>
+
+<li><a id="hof04" name="hof04"></a>Hofmann, T. (2004). Latent semantic models for collaborative filtering. <em>ACM Transactions on Information Systems</em>, <strong>22</strong>(1), 89-115.</li>
+
+<li><a id="inf08" name="inf08"></a>InfoSpace. (2008). <a href="http://www.webcitation.org/5nnqNINPT">Dogpile SearchSpy</a>. Retrieved 7 November, 2009 from  http://www.dogpile.com/dogpile/ws/searchspy/rfcid=4101/rfcp=InternalNavigation/_iceUrlFlag=11?_IceUrl=true (Archived by WebCite&reg; at http://www.webcitation.org/5nnqNINPT)</li>
+
+<li><a id="ino05" name="ino05"></a>Inoue, M. (2005). The remarkable search topic-finding task to share success stories of cross-language information retrieval. In <em>Proceedings of the Fifth Workshop on Important Unresolved Matters</em> (pp. 61-64), Seattle, United States. New York, NY: ACM Press.</li>
+
+<li><a id="ish02" name="ish02"></a>Ishida, K., &amp; Ohta, T. (2002). An approach for organizing knowledge according to terminology and representing it visually. <em>IEEE Transactions on Systems, Man, and Cybernetics - Part C: Applications and Reviews</em>, <strong>32</strong>(4), 366-373.</li>
+
+<li><a id="jan08" name="jan08"></a>Jansen, B.J. &amp; Mullen, T. (2008). Sponsored search: an overview of the concept, history, and technology. <em>International Journal of Electronic Business</em>, <strong>6</strong>(2), 114-131.</li>
+
+<li><a id="kun08" name="kun08"></a>Kunder, M.D. (2008). <a href="http://www.webcitation.org/5nnqVVisf">The size of the World Wide Web</a>. Retrieved 7 November, 2009 from http://worldwidewebsize.com/ (Archived by WebCite&reg; at http://www.webcitation.org/5nnqVVisf)</li>
+
+<li><a id="lem00" name="lem00"></a>Lempel, R. &amp; Moran, S. (2000). The stochastic approach for link-structure analysis (SALSA) and the TKC effect. <em>Computer Networks</em>, <strong>33</strong>(1-6), 387-401.</li>
+
+<li><a id="lik09" name="lik09"></a>LIK. (2009). <a href="http://www.webcitation.org/5nnqau3jr">LIK's evaluation results</a>. Retrieved 7 November, 2009 from http://cayley.sytes.net/questionnaire/spss_output.htm (Archived by WebCite&reg; at http://www.webcitation.org/5nnqau3jr)</li>
+
+<li><a id="lve05" name="lve05"></a>Lves, G. (2005). <a href="http://www.webcitation.org/5nnqhNCjd">Cost-per-click (CPC) - what's your focus?</a> Retrieved 7 November, 2009 from http://www.searchengineguide.com/senews/004895.html (Archived by WebCite&reg; at http://www.webcitation.org/5nnqhNCjd)</li>
+
+<li><a id="lyc07" name="lyc07"></a>Lycos. (2007). <a href="http://www.webcitation.org/5nnqnaRaV">Top search terms for 2007</a>. Retrieved November 7, 2009 from http://www.lycos.com/ (Archived by WebCite&reg; at http://www.webcitation.org/5nnqnaRaV)</li>
+
+<li><a id="mar00" name="mar00"></a>Markatou, M. (2000). Mixture models, robustness, and the weighted likelihood methodology. <em>Biometrics</em>, <strong>56</strong>(2), 483-486.</li>
+
+<li><a id="met07" name="met07"></a>Metaxoglou, K. &amp; Smith, A. (2007). Maximum likelihood estimation of VARMA models using a stage-space EM algorithm. <em>Journal of Time Series Analysis</em>, <strong>28</strong>(5), 666-685.</li>
+
+<li><a id="mic06" name="mic06"></a>Microsoft. (2006). <a href="http://www.webcitation.org/5nnqx1C9z">Microsoft adCenter</a>. Retrieved November 7, 2009 from http://adcenter.microsoft.com/ (Archived by WebCite&reg; at http://www.webcitation.org/5nnqx1C9z)</li>
+
+<li><a id="mor07" name="mor07"></a>Mordkovich, B. &amp; Mordkovich, E. (2007). <em>Pay-per-click search engine marketing handbook: low cost strategies for attracting new customers using Google, MSN, Yahoo &amp; other search engines</em>.  New York, NY: MordComm, Inc.</li>
+
+<li><a id="mor01" name="mor01"></a>Morris, C.G. &amp; Maisto, A.A. (2001). <em>Psychology: an introduction.</em> Englewood Cliffs, NJ: Prentice Hall.</li>
+
+<li><a id="ngu07" name="ngu07"></a>Nguyen, V., Gachter, S., Martinelli, A., Tomatis, N. &amp; Siegwart, R. (2007). A comparison of line extraction algorithms using 2D range data for indoor mobile robotics. <em>Autonomous Robots</em>, <strong>23</strong>(2), 97-111.</li>
+
+<li><a id="nis05" name="nis05"></a>National Information Standards Organization. (2005). <em>ANSI/NISO Z39.19-2005 guidelines for the construction, format, and management of monolingual controlled vocabularies.</em> Baltimore, MD: NISO Press.</li>
+
+<li><a id="osi05" name="osi05"></a>Osinski, S., &amp; Weiss, D. (2005). A concept-driven algorithm for clustering search results. <em>IEEE Intelligent Systems</em>, <strong>20</strong>(3), 48-54.</li>
+
+<li><a id="pae00" name="pae00"></a>Paepcke, A., Garcia-Molina, H., Rodriguez-Mula, G. &amp; Cho, J. (2000). Beyond document similarity: understanding value-based search and browsing technologies. <em>SIGMOD Record</em>, <strong>29</strong>(1), 80-92.</li>
+
+<li><a id="pet05" name="pet05"></a>Petersen, K.B. &amp; Winther, O. (2005). The EM algorithm in independent component analysis. In <em>Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing 2005</em> (pp. 169-172), Philadelphia, United States. New York, NY: IEEE Press.</li>
+
+<li><a id="rad06" name="rad06"></a>Radovanovic M. &amp; Ivanovic M. (2006). <em>CatS</em>: a classification-powered meta-search engine. <em>Advances in Web Intelligence and Data Mining</em>, <strong>23</strong>(1), 191-200.</li>
+
+<li><a id="ran08" name="ran08"></a>Ranks, N.L. (2008). <a href="http://www.webcitation.org/5nnr3Zihz">Keyword proximity analyser</a>. Retrieved 7 November, 2009 from http://www.ranks.nl/tools/proximity.html (Archived by WebCite&reg; at http://www.webcitation.org/5nnr3Zihz)</li>
+
+<li><a id="ris98" name="ris98"></a>Ristad, E.S. &amp; Yianilos, P.N. (1998). Learning string-edit distance. <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, <strong>20</strong>(5), 522-532.</li>
+
+<li><a id="sal89" name="sal89"></a>Salton, G. (1989). <em>Automatic text processing: the transformation, analysis, and retrieval of information by computer.</em> Reading, MA: Addison Wesley.</li>
+
+<li><a id="sar07" name="sar07"></a>Saremi, S. (2007). <a href="http://www.webcitation.org/5nnrBR9DC">Top search terms for 2007</a>. Retrieved 7 November, 2009 from http://www.searchviews.com/index.php/archives/2007/12/top-search-terms-for-2007.php (Archived by WebCite&reg; at http://www.webcitation.org/5nnrBR9DC)</li>
+
+<li><a id="seg07" name="seg07"></a>Segev, A., Leshno, M. &amp; Zviran, M. (2007). Context recognition using Internet as a knowledge base. <em>Journal of Intelligent Information Systems</em>, <strong>29</strong>(3), 305-327.</li>
+
+<li><a id="she08" name="she08"></a>Sherman, C. (2008). <a href="http://www.webcitation.org/5nnrGvRFh">The state of search engine marketing 2007</a>. Retrieved November 7, 2009 from http://searchengineland.com/the-state-of-search-engine-marketing-2007-13580.php (Archived by WebCite&reg; at http://www.webcitation.org/5nnrGvRFh)</li>
+
+<li><a id="spi01" name="spi01"></a>Spink, A., Wolfram, D., Jansen, M.B.J. &amp; Saracevic, T. (2001). Searching the Web: the public and their queries. <em>Journal of the American Society for Information Science and Technology</em>, <strong>52</strong>(3), 226-234.</li>
+
+<li><a id="tso01" name="tso01"></a>Tsoi, A.C. (2001). Structure of the Internet? In <em>Proceedings of 2001 International Symposium on Intelligent Multimedia, Video and Speech Processing, Hong Kong</em>. (pp. 449-452)  New York, NY: IEEE Press.</li>
+
+<li><a id="wor08" name="wor08"></a>Wordtracker. (2008). <a href="http://www.webcitation.org/5nnrMytoJ"><em>Free keyword suggestion tool from WordTracker</em></a>.  Retrieved 7 November, 2009 from http://freekeywords.wordtracker.com/ (Archived by WebCite&reg; at http://www.webcitation.org/5nnrMytoJ)</li>
+
+<li><a id="wu03" name="wu03"></a>Wu, Y.-F., &amp; Chen, X. (2003). Extracting features from Web search returned hits for hierarchical classification. In <em>Proceedings of the International Conference on Information and Knowledge Engineering</em>, Las Vegas, Nevada, United States.  (pp. 103-108) New York, NY: CSREA Press.</li>
+
+<li><a id="yah06" name="yah06"></a>Yahoo. (2006). <a href="http://www.webcitation.org/5nnrWYJFo">Start advertising with Yahoo! Search Marketing</a>. Retrieved 7 November, 2009 from https://signup13.marketingsolutions.yahoo.com/ (Archived by WebCite&reg; at http://www.webcitation.org/5nnrWYJFo)</li>
+
+<li><a id="zha01" name="zha01"></a>Zhang, Q. &amp; Goldman, S.A. (2001). EM-DD: an improved multiple-instance learning technique. <em>Neural Information Processing Systems</em>, <strong>14</strong>(1), 1073-1080.</li>
+
+<li><a id="zha08" name="zha08"></a>Zhang, Z. &amp; Nasraoui, O. (2008). Mining search engine query logs for social filtering-based query recommendation. <em>Applied Soft Computing</em>, <strong>8</strong>(4), 1326-1334.</li>
+</ul>
+</fieldset>
+</form>
+
+
+<form action="#">
+<fieldset>
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">How to cite this paper</legend>
+<div><br/>
+Chen, L-C. (2010). &quot;Using a two-stage technique to design a keyword suggestion system&quot;
+ <em>Information Research</em>, <strong>15</strong>(1) paper 425. [Available at http://InformationR.net/ir/15-1/paper425.html]</div>
+</fieldset>
+</form>
+
+<table cellspacing="10" align="center">
+	<tr>
+		<td colspan="3" align="center" style="background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>
+	<tr>
+		<td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;search engine marketing&quot; keywords"></input> <br/>
+<input type="submit" name="sa" value="Scholar Search" style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+
+</form>
+		</td>
+		<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;search engine marketing&quot; keywords"></input><br/>
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+</td>
+<td align="center" valign="top">
+<form method="get" action="http://www.bing.com/" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;search engine marketing&quot; keywords"></input> <br/>
+<input type="submit" name="sa" value="Bing" style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+
+		</td>
+	</tr>
+</table>
+
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+<div align="center">
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo"/> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a>
+</div>
+<hr size="1" style="color: #5E96FD;"/>
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>  <a href="http://www.digits.com/" target="_blank">
+    <img src="http://counter.digits.com/?counter={7c993078-e9a9-8c64-d12f-39e876e45a81}&amp;template=simple" 
+     alt="Hit Counter by Digits" border="0"  />
+  </a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the author, 2010. <br />Last updated: 28 February, 2010
+</div></td>
+
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44"/><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border="0" cellpadding="0" cellspacing="0"><tr><td align="center">
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper425.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics"/></a>
+</noscript>
+</td></tr><tr><td align="center"><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br/></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+</table>
+<hr size="3" style="color: #5E96FD;"/>
+
+<table align="center"><tr><td><div class="button">
+
+<ul>
+	<li><a href="infres151.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+
+</div></td></tr></table>
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/15-1/paper425.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:33:43 GMT -->
+</html>

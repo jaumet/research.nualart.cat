@@ -1,0 +1,740 @@
+<!DOCTYPE <span>HTML</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>PUBLIC "-//W3C//DTD <span>HTML</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+
+<!-- Mirrored from informationr.net/ir/7-4/paper137.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:20:40 GMT -->
+<head>
+<title>The Necessity for Information Space Mapping for Information Retrieval on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web</title>
+<link rel="stylesheet" href="../IRstyle.css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="Generator" CONTENT="<span>Microsoft</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Word 97">
+<title>The Necessity for Information Space Mapping for Information Retrieval on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web</title>
+<link REV=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta NAME="keywords" CONTENT="<span>semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, information retrieval, fuzzy matching, information seeking, <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines, schema, metadata standards, metadata, <span>mapping</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>">
+<meta NAME="<span>description</span>" <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> CONTENT="The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>exciting possibilities for information retrieval (IR). In IR, we would like <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that go beyond simply matching words in <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and queries, and <span>instead</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>match based on <span>topic</span>, <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> data type, relations among data, and many other <span>qualities</span>. <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, through fuzzy matching of information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>from different sources, will provide for much more specific information seeking than current Web-based <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines or other IR <span>systems</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> In order to succeed, however, it is necessary to <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between the differing schema, metadata standards, namespaces and so forth used by <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web. This information space <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>may be accomplished by a simple match or <span>table</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>lookup when document sets come from similar or otherwise well-defined domains. When the match is less precise, sets of rules or <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>may be employed to <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> When schema or metadata are inconsistent, though, we are left with a similar data <span>environment</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>as the <span>modern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, and must rely on the context of the <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>themselves to determine the <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>">
+<meta NAME="rating" CONTENT="Mature">
+<meta NAME="VW96.objecttype" CONTENT="Document">
+<meta NAME="ROBOTS" CONTENT="ALL">
+<meta NAME="DC.Title" CONTENT="The Necessity for Information Space Mapping for Information Retrieval on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web">
+
+<meta NAME="DC.Creator" CONTENT="Gregory B. Newby">
+<meta NAME="DC.Subject" CONTENT="<span>semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, information retrieval, fuzzy matching, information seeking, <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines, schema, metadata standards, metadata, <span>mapping</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> information <span>spaces</span>" <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>>
+<meta NAME="DC.Description" CONTENT="The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>exciting possibilities for information retrieval (IR). In IR, we would like <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that go beyond simply matching words in <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and queries, and <span>instead</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>match based on <span>topic</span>, <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> data type, relations among data, and many other <span>qualities</span>. <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, through fuzzy matching of information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>from different sources, will provide for much more specific information seeking than current Web-based <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines or other IR <span>systems</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> In order to succeed, however, it is necessary to <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between the differing schema, metadata standards, namespaces and so forth used by <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web. This information space <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>may be accomplished by a simple match or <span>table</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>lookup when document sets come from similar or otherwise well-defined domains. When the match is less precise, sets of rules or <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>may be employed to <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> When schema or metadata are inconsistent, though, we are left with a similar data <span>environment</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>as the <span>modern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, and must rely on the context of the <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>themselves to determine the <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>">
+<meta NAME="DC.Publisher" CONTENT="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>T.D. Wilson">
+<meta NAME="DC.Coverage.PlaceName" CONTENT="Global">
+
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center" colspan="5"><h4>Information Research, Vol. 7 No. 4, July 2002,</h4></td></tr>
+  <tr> 
+    <td><a href="infres74.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3>
+
+<h1>The necessity for information space <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for information retrieval on the <span>semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>web</h1>
+
+<h4><a href="mailto:gbnewby@ils.unc.edu">Gregory B. Newby</a><br>University of North Carolina at <span>Chapel</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+Hill<br>Chapel Hill, North Carolina<br>USA</h4>
+
+<br><br>
+	<div align="center"><b>Abstract</b></div>
+	
+<blockquote>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>exciting possibilities for information retrieval 
+(IR). In IR, we would like <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that go beyond simply matching words in 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and queries, and <span>instead</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>match based on <span>topic</span>, <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> data type, relations 
+among data, and many other <span>qualities</span>. <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, through fuzzy matching 
+of information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>from different sources, will provide for much more 
+specific information seeking than current Web-based <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines or other IR 
+<span>systems</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> In order to succeed, however, it is necessary to <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between the 
+differing schema, metadata standards, namespaces and so forth used by <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web. This information space <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>may be accomplished by a 
+simple match or <span>table</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>lookup when document sets come from similar or otherwise 
+well-defined domains. When the match is less precise, sets of rules or 
+<span>algorithms</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>may be employed to <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> When schema or 
+metadata are inconsistent, though, we are left with a similar data <span>environment</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+as the <span>modern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, and must rely on the context of the <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>themselves to 
+determine the <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></blockquote>
+
+<br><br>
+
+<h2>Introduction</h2>
+
+<p>Information retrieval (IR) is about matching human information needs to data 
+objects. Rich structural markup of <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>will enable a next generation of IR 
+<span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to better meet the information needs of people because the markup will 
+help to disambiguate the language used for the <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>(<a href="#new00">Newby, 2000</a>). Metadata 
+will further enhance the capabilities of IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by providing high <span>quality</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+descriptions of content.</p>
+
+<p>This work suggests that the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, by supporting metadata and enhanced 
+relations among data from disparate sources, will facilitate information 
+retrieval. There are several ways the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web will improve IR, and at least 
+one will <span>require</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>advanced</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>techniques for the envisioned benefits to be realized. 
+Below, these potential improvements the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>IR will be examined, 
+and proposals for addressing the difficult components will be <span>introduced</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p>
+
+<p>The <span>framework</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for this analysis is the concept of information space. 
+Information space is defined as the set of concepts and relations among <span>held</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by 
+an information system. This is as compared to <span>cognitive</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>space, which is the set 
+of concepts and relations among them <span>held</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by a human (see <a href="#new01">Newby, 2001</a> for 
+further detail). For IR, it has been argued that a long-term goal is for IR 
+<span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to act as extensions to human memory (also known as, exosomatic memory systems; 
+<span>introduced</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in <a href="#bro80">Brookes, 1980</a>). Were such <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to exist, <span>finding</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>information 
+would be the same as remembering information already known. For this long-term 
+goal to be realized, information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>would need to be tightly 
+coupled to the <span>cognitive</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>spaces of their individual users. </p>
+
+<p>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web will help us take steps towards the goal of IR <span>systems</span>' <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> 
+information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>matching their human users' <span>cognitive</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>spaces. These steps 
+will be accomplished by adding further specificity to the <span>description</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of data 
+items on the Web, and providing a deeper context for their understanding, as 
+discussed below. The particular influence of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web on IR that will be 
+explored here is the merging of or translating between information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p>
+
+<p>Before con0ering the merging of information <span>spaces</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> let us <span>con0er</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>human 
+communication. From a simplified point of view, we can <span>con0er</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the act of human 
+communication as getting a message, which has a particular <span>cognitive</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+understanding for the sending human, to a receiver. If communication is 
+successful, not just the utterances of the message will be sent, but also the 
+meaning. That is, for human communication to be successful, there must be a 
+<span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between the sender's and receiver's <span>cognitive</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>spaces in which the shared 
+message exists. This approach to human communication mirrors everyday 
+experience, in which people must lay a context and achieve <span>mutual</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>understanding 
+(that is, sharing or <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between <span>cognitive</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>spaces) in order to exchange 
+messages. In a classroom <span>environment</span>, <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> for example, the instructor might spend 
+hours or even weeks to lay out the necessary background required to understand a 
+particular message. Without that background, which created the shared <span>cognitive</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+space for the <span>students</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and instructor, the message would have little or no 
+meaning or, worse, be misinterpreted.</p>
+
+<p>The pertinence to IR <span>systems</span>' <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>is that, as for human 
+communication, an utterance or document cannot be effectively <span>understood</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>or 
+exchanged without some shared information space. This challenge is exacerbated 
+by the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, in which markup and metadata will allow for shorter and 
+more precise <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>or document fragments, perhaps without the <span>larger</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>context 
+of full text.</p>
+
+<p>Con0er these document fragments:</p>
+
+<ul>
+  <li>The annual cost is $470 per participant. 
+  <li>Subject = farm <span>animals</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> 
+  <li>We <span>hold</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>these truths to be self-evident, that all men are created equal. 
+  </li></ul>
+  
+<p>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web will allow such fragments to greatly increase the <span>utility</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of 
+IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by adding specificity to <span>statements</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of information need (that is, 
+human queries). Queries might include:</p>
+
+<ul>
+  <li>What were last year's expenditures for our staff retreat? 
+  <li>How shall we base our pricing strategy for membership in our trade group 
+  this year? 
+  <li>Find <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>about genetically engineered <span>organisms</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  <li>What are some <span>concerns</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of animal rights groups? 
+  <li>Early examples of misogyny in the US 
+  <li>The use of an adjective when an adverb is indicated </li></ul>
+  
+<p>In these examples, queries are envisioned as matching <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>or document 
+fragments based on the <span>topic</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>or concept of the query and document, in addition 
+to the words themselves. This is a critical distinction between the popular Web 
+<span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines of today and <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web-enabled IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of the <span>future</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> In 
+the <span>future</span>, <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> we would like to gain a match between the information need and the 
+<span>actual</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>content of a document, rather than simply the words of a query and the 
+words of a document.</p>
+
+<p>While word matching is not to be discarded — after all, it has been 
+demonstrably functional for many years, in many IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>— we would like to 
+<span>move</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>towards exosomatic memory. Exosomatic memory clearly <span>requires</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>concept 
+matching and the merger of human <span>cognitive</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>space with IR <span>systems</span>' <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> information 
+<span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> In the following <span>sections</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> the steps that the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web will enable 
+towards enhancements in IR are explored.</p>
+
+<p>In the next section, the role of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web for providing specificity 
+for IR is addressed. The following three <span>sections</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>address IR techniques enabled 
+by the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web: <span>direct</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>techniques, rule-based techniques, and 
+context-derived techniques. <span>A+</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>concluding section lays out the research programme 
+for improving IR via the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, and identifies remaining challenges to be 
+addressed.</p>
+
+<p>Throughout, the <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>will be on the matching of human information needs 
+with <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>or document fragments in text environments. The text con0ered 
+is semi-structured, such as that found in human-generated <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of all 
+types: journal articles, news, literature, etc. In such semi-structured 
+<span>documents</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> we can identify components (such as headings, tabular data, 
+references, etc.), but there is <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>latitude in the <span>actual</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>wording and 
+formatting used in them. Information filtering, sub-document identification and 
+similar <span>approaches</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to information retrieval are possible beneficiaries of the 
+<span>approaches</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>described here. There will be little <span>attention</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>paid to highly 
+structured data (databases), numeric data and non-text, although we anticipate 
+the conceptual <span>framework</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>used here will apply to other data types as well.</p>
+
+<h2>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web: specificity for information retrieval</h2>
+
+<p>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web provides specific <span>interpretations</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for data items <span>contained</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+within <span>documents</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> This will help greatly with resolving some of the ambiguity in 
+human language. Whereas in <span>typical</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>IR, <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>use <span>statistical</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>information about 
+patterns of <span>term</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>occurrence in <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to determine the best matches for a 
+query, the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web will help to narrow the <span>sphere</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of candidate document 
+matches con0erably.</p>
+
+<p>Con0er, as an example, a human using a modern-day Web <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engine to seek 
+information about pet care. She might type a few words as a query: &quot;dog care and 
+feeding.&quot;</p>
+
+<p>Typical information retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>(which include contemporary Web <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+engines) proceed to find the best matching <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by looking at the <span>term</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+frequency of each of the query terms (likely dropping &quot;and&quot; as being 
+irrelevant). From all the <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the IR system knows about, the possible 
+candidate set would be the <span>Boolean</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>intersection (or union, if an &quot;OR&quot; query is 
+specified) of <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>containing the query terms. In practice, there are 
+various short cuts so that not every possible document needs to be examined, but 
+conceptually the set of possible <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to present to the user is <span>limited</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by 
+the query from ALL <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to only those that contain all of the query 
+terms.</p>
+
+<p>For a large and diverse data set as the Web, the candidate set for most 
+queries of a few words will be very large. To rank the &quot;best&quot; <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>matching 
+the query, numeric <span>term</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>weights are assigned to the query terms, and to their 
+<span>roles</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in each of the candidate <span>documents</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Other factors, including the <span>length</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of 
+each document and global statistics (such as the average <span>length</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of a document in 
+the collection) are con0ered. Many further factors may be included: the 
+authority of a Web page, the number of incoming and outgoing <span>links</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to the page, 
+the presence of query terms in headings or meta tags, and so forth. Each of 
+these weights must be combined somehow to yield a numeric score for each 
+candidate document. The top-ranked candidates are then presented to the 
+information seeker.</p>
+
+<p>The <span>main</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>thing missing from this IR scenario, which is played out millions of 
+times each <span>day</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>on Web <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines, commercial IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and elsewhere, is 
+understanding of the query. Based on the query above, different Web <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+engines yield a variety of matches in the <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of highly-ranked &quot;hits:&quot;</p>
+
+<ul>
+  <li>Information for mushers on the Iditarod trail 
+  <li>Pet store supplies 
+  <li>Taking care of your new puppy 
+  <li>Care for particular breeds (Pyrenees, pug and others) 
+  <li>Holistic pet care 
+  <li>Dog walking services </li></ul>
+
+<p>There are also <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that are clearly not good matches, but were 
+retrieved nevertheless:</p>
+<ul>
+  <li>Care and feeding of the press 
+  <li>What to do if you find a wild <span>dog</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  <li>Orphaned baby bunnies 
+  <li>Dog <span>interaction</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>with iguanas </li></ul>
+  
+<p>(Query tested in May 2002 against Google, Lycos, Altavista, Yahoo! and Excite 
+<span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines, all of the above were from the top-10 hits). The point here is 
+not to illustrate imperfections in Web <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines. Rather, it is to <span>con0er</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+what the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web could do to improve results.</p>
+
+<p>If our information seeker was interested particularly in seeking a document 
+<span>containing</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>vet's advice on what brand of food to purchase, the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web 
+would help. <span>A+</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>modified query might have content such as this:</p>
+
+<blockquote><i>Topic: <span>dog</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>food<br>Document type: advice<br>Document 
+  author-type: veterinarian</i> </blockquote>
+
+  
+<p>Although an experienced searcher might be able to add some of this additional 
+specificity to a query for <span>modern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>search engines, this would not change 
+fundamental type of matching. Contemporary <span>search</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>engines offer no facility for 
+metadata concepts enabled by RDF in the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web. Let us <span>con0er</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>a simple 
+case that would yield far superior results, and then turn to the challenges of 
+the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web for IR.</p>
+
+<p>In the simplest case, the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web will let IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>generate a 
+candidate set of <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>from all those known based on <span>exact</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and unambiguous 
+criteria. The <span>exact</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>mechanisms for describing <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>semantically for the Web 
+are still under development, but the intention is clear: to develop &quot;languages 
+for expressing information in a machine processable form&quot; (<a href="#ber98">Berners-Lee, 1998</a>). 
+The <span>languages</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>are based on schema, document type <span>definitions</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>(DTDs) and the 
+like, and the resource <span>description</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>framework</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>(RDF, see <a 
+href="http://www.w3.org/RDF/">http://www.w3.org/RDF/</a>), provides the <span>ontology</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+used for metadata communication.</p>
+
+<p>The modified query, above, would eliminate all <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>from the candidate 
+set that were not authored by vets, or did not contain advice, or were not about 
+<span>dog</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>food. The resulting set of candidate <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>would be ranked using 
+standard techniques above. Alternatively, the information seeker might be 
+presented with other available sorting <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>such as last update, location 
+of the author, and so forth. </p>
+
+<p>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web will also provide for segmenting of the document <span>collection</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> 
+as well as for inheritance of attributes. Thus, one algebra for the query might 
+be to <span>con0er</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>each possible document in an IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>collection</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> as described 
+above. Another might first generate a sub-set of all pages that are part of a 
+document tree authored by a veterinarian or veterinary agency, and then seek for 
+the desired <span>topic</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>within that set.</p>
+
+<p>This example demonstrates the potential power of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web for IR. By 
+providing for further specification of an information need, using the <span>ontology</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+and data <span>description</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>language(s) the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web provides, a much narrower and 
+more appropriate set of candidate <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>may be generated. </p>
+
+<p>So, what's the problem? Will the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web be a panacea for IR? Not 
+<span>necessarily</span>. <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> There are at least two critical challenges to be con0ered:</p>
+
+<ol type=1>
+  <li>Human language is highly varied. Thus, we will be left with the need for 
+  sophisticated IR techniques to determine the <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that are the best match 
+  for an information need; 
+  <li>There will be a large number of different implementations of schema/DTDs, 
+  ontologies, and vocabularies used on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web to described <span>documents</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> 
+  Thus, determining how to generate the <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of candidates from a specific 
+  query, such as that given above, is itself an IR problem requiring <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+  between information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> </li>
+  </ol>
+
+  
+<p>The <span>rest</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of this work focuses on the second point. In order to reap the 
+benefit the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>IR, it is necessary to <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between the 
+information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of different sets of <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>(held by different information 
+<span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>— Web <span>servers</span>, <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> database <span>servers</span>, <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> etc.) in order to identify which 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>actually</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>meet a set of information need criteria.</p>
+
+<p>If one document author utilizes &quot;Document author-type&quot; while another utilizes 
+&quot;Personal author,&quot; can our IR system identify that they each refer to a 
+criterion we are interested in for our query (and, in fact, do they)? If one 
+author inserts &quot;dog food&quot; in the &quot;Topic&quot; meta tag, and another author inserts 
+
+&quot;canine nutrition,&quot; how will an IR system determine whether to include these 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in the candidate set?</p>
+
+<p>In the <span>sections</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>below, three <span>approaches</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to addressing the issue of ambiguity 
+in the implementation of <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web metadata <span>description</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and structure for IR 
+are discussed. With <span>direct</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>mapping</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> we use a <span>dictionary</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>or look-up <span>table</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to 
+determine which elements match <span>exactly</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>some other elements. With rule-based 
+<span>mapping</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> we follow a set of procedures, possibly <span>involving</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>data transformation, 
+to identify comparable data. Finally, when we have no such dictionaries or 
+rules, we must rely on the context of the document itself to determine matching 
+or transformation processes.</p>
+
+<h2>Direct <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of information spaces</h2>
+
+<p>The full benefit of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web for IR will be available when the data 
+organization and metadata standards enable <span>direct</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between information 
+<span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for different data sources. For example, if datasets <span>containing</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+bibliographic records employ an &quot;author&quot; field to refer to the author's name for 
+US-based data, but &quot;contributor&quot; for UK-based data, it is a simple matter to 
+perform a query that matches both.</p>
+
+<p>Such a query might be expressed or interpreted as:</p>
+
+<blockquote><i>If (source.location = '.uk') query(contributor="joyce, 
+  james")<br>else query(author="joyce, james")</i> </blockquote>
+  
+<p>On the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, it is <span>reasonable</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to anticipate <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>efforts will 
+be made to enable such <span>mapping</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Indeed, this scenario provides the closest 
+match, in an IR scenario, to the goals expressed by the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web working 
+groups and publications. (We note that, for this example, the Dublin Core 
+elements, <a 
+href="http://purl.org/metadata/dublin_core_elements">http://purl.org/metadata/dublin_core_elements</a>, 
+nicely <span>solve</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the problem by specifying a common label, &quot;Creator.&quot; Yet we 
+envision many situations when similar data will not use the same metadata 
+elements.)</p>
+
+<p>Metadata schema registries will enable people to <span>publish</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>their data using 
+their own schema (or one derived from another) and to specify how it relates to 
+the data organization of other schema. This is important, and will be quite 
+beneficial for IR. See Heery &amp; Wagner (<a href="#hee02">2002</a>) for a discussion of metadata 
+schema registries. For any <span>pair</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of schema, a lookup <span>table</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>can provide the 
+equivalent data type, tag, <span>entity</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>class, etc. to <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between the two schema. 
+Within a registry, then, any possible <span>pair</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>onto each other (even if the 
+match applies to only part of the schema) may be quickly looked up by the IR 
+system.</p>
+
+<p>The problem remains, though, for schema that are not specified in registries 
+or, worse, that use comparable tags but for different data types or items. The 
+following <span>sections</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>offer alternative <span>approaches</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for when a simple <span>direct</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+between information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>is unavailable.</p>
+
+<h2>Rule-based <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of information spaces</h2>
+
+<p>On the <span>modern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, and anticipated for the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, are many <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+which are comparable to other <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in structure and content yet have 
+important differences. For this section, <span>con0er</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the example of a directory of 
+addresses, membership, or customers. One Web site might <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>personnel in an 
+academic department along with telephone numbers and research areas. Another Web 
+site might <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>some of its premier customers along with the products they 
+purchased and their area of <span>business</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Yet another might <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>accounts 
+receivable.</p>
+
+<p>In each of these three datasets, a record might exist of the form:</p>
+
+<table align=center>
+  <tbody>
+  <tr>
+    <td><tt>John Young</tt></td>
+    <td><tt>||</tt></td>
+    <td><tt>222-3456</tt></td>
+    <td><tt>||</tt></td>
+
+    <td><tt>information retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and 
+services</tt></td></tr></tbody></table>
+
+<p>On the <span>modern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, each data entry might <span>occur</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in an <span>HTML</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>table</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and for IR 
+<span>purposes</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>we would be hard-pressed to determine whether &quot;John Young&quot; were a 
+<span>person</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> a <span>business</span>, <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> an employee or even a product. Similarly, 222-3456 could be 
+anything from a telephone number to an invoice number.</p>
+
+<p>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web (as implemented through RDF, <span>XML</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and other markup schemes 
+more sophisticated than HTML) <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the ability to be specific. For the first 
+column of <span>entries</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> a label &quot;Name&quot; or &quot;Personal Name&quot; or &quot;Faculty Name&quot; could 
+make the data unambiguous and enable the <span>sort</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of IR process envisioned in the 
+previous section. Labels such as &quot;Telephone&quot; for the second and &quot;Research 
+interests&quot; for the <span>third</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>would help greatly.</p>
+
+<p>For our IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, inheritance will play a critical 
+role. Imagine the first column is labeled (or each datum is labeled), &quot;Name,&quot; 
+e.g., &quot;Name=John Young.&quot; Alone, this is nearly as bad as having no descriptive 
+label at all! Is it the name of a company, or a customer, or departmental 
+personnel, or something else? If inheritance is available, however, other clues 
+in the schema might help. Inheritance would be helpful for <span>direct</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+(above) and context-derived <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>(below), although those <span>sections</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>describe 
+techniques that would work in the absence of inheritance.</p>
+
+<p>Abbreviated RDF syntax for a document <span>containing</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the <span>sample</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>data above might 
+follow this general form:</p>
+
+<p><pre>&lt;rdf:RDF
+      xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;
+      xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
+
+      xmlns:ex=&quot;http://yoyodynecorp.com/elements/people&quot;&gt;
+   &lt;rdf:Description rdf:about=&quot;http://yoyodynecorp.com/&quot;&gt;
+   &lt;dc:Creator rdf:resource=&quot;http://yoyodynecorp.com/Personnel&quot;/&gt;
+   &lt;ex:employee rdf:parseType=&quot;Resource&quot;&gt;
+
+   &lt;ex:fullName&gt;John Young&lt;/ex:fullName&gt;
+   &lt;ex:phone&gt;222-3456&lt;/ex:phone&gt;
+   &lt;ex:interestArea&gt;
+     &lt;rdf:Bag&gt;
+      &lt;rdf:li rdf:resource=&quot;http://yoyodynecorp/areas/ir&quot; /&gt;
+
+      &lt;rdf:li rdf:resource=&quot;http://yoyodynecorp.com/areas/irserv&quot;/&gt;
+     &lt;/rdf:Bag&gt;
+   &lt;/ex:interestArea&gt;
+ &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</pre>
+
+<p>Does this help? In itself, it helps: we now see that 222-3456 is a phone 
+number, and might glean other revelations. But combined with the data referenced 
+by the document (in this case, the &quot;ex&quot; <span>XML</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>namespace linking to the company Web 
+site), we envision that significantly more data about the document contents will 
+be available through inheritance.</p>
+
+<p>For IR, we would <span>require</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>a <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of rules — not a simple <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between 
+elements — to determine which <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>should be candidates for an information 
+need. To harvest a competitor's customer <span>list</span>, <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> for example, a query would 
+specify <span>names</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of individuals or organizations that <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>the competitor as a 
+supplier. To build the <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of candidate documents:</p>
+
+<blockquote><i>Select a document for candidacy if<br>&nbsp;&nbsp;It contains a 
+  <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of products<br>&nbsp;&nbsp;AND The <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>includes our company 
+</i></blockquote>
+
+<p>From our example in the previous section, we could use a similar strategy to 
+identify that a document contains <span>names</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>(of some sort), then use keyword 
+matching on the &quot;interestArea&quot; tags' content to identify faculty with interests 
+in a particular area such as the <span>semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web:</p>
+
+<blockquote><i>Select a document for candidacy if<br>&nbsp;&nbsp;It contains a 
+  <span>list</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of interest areas<br>&nbsp;&nbsp;AND terms &quot;semantic&quot; and &quot;web&quot; <span>occur</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in 
+  the interest area<br>&nbsp;&nbsp;AND interest areas are associated with a 
+  name</i> </blockquote>
+  
+<p>For each document under con0eration, our IR system would need to examine 
+the document plus <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>from which its properties are <span>drawn</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to determine 
+whether it should be a candidate. For a well-known <span>domain</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> with an available set 
+of metadata standards and schema, pattern matching rules will allow this to 
+happen. For less well-known domains, the information seeker might need to author 
+his own rules. In both cases, the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web enables this type of rule-based 
+approach, while the <span>modern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web does not.</p>
+
+<h2>Context-derived <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of information spaces</h2>
+
+<p>As stated above, the challenge of IR is largely due to the ambiguity of human 
+language. On the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, the ability of document authors to choose or 
+create a data organization scheme they believe appropriate creates the same <span>sort</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+of ambiguity. One author might use &quot;Name&quot; while another employs &quot;PersonalName&quot; 
+and a <span>third</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>utilizes &quot;fullName.&quot; If the author draws from existing schema, or 
+registers her schema centrally, we may be able to <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to other schema or form 
+rules for understanding how her data are related to other data.</p>
+
+<p>In this section, we <span>con0er</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>IR <span>approaches</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that might function in the absence 
+of such additional sources for understanding the content in a document or 
+document set. These <span>approaches</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>should be particular useful during the coming 
+years as the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web's many standards continue to emerge.</p>
+
+<p>Our general goal, in this <span>situation</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> is to learn about the structure and 
+content types of <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>from the <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>themselves. This is not unlike the 
+need in IR to use statistics about <span>term</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>frequency within and across <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to 
+understand relations among terms and <span>documents</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> In fact, this is the basis of 
+the <span>approaches</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>we suggest: to <span>derive</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>understanding of the information space and 
+its relation to other information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>through the context of the <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+themselves.</p>
+
+<p>Given our personnel directory <span>sample</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>above, the single record was ambiguous. 
+Add a few more records, however, and things become clearer:</p>
+
+<table align=center>
+  <tbody>
+  <tr>
+    <td><tt>John Young</tt></td>
+    <td><tt>||</tt></td>
+
+    <td><tt>222-3456</tt></td>
+    <td><tt>||</tt></td>
+    <td><tt>information retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and services</tt></td></tr>
+  <tr>
+    <td><tt>Harold Ramus</tt></td>
+    <td><tt>||</tt></td>
+
+    <td><tt>222-9077</tt></td>
+    <td><tt>||</tt></td>
+    <td><tt>HCI</tt></td></tr>
+  <tr>
+    <td><tt>Sue Zimmer</tt></td>
+    <td><tt>||</tt></td>
+
+    <td><tt>232-1002</tt></td>
+    <td><tt>||</tt></td>
+    <td><tt>management of information agencies</tt></td></tr></tbody></table>
+	
+<p>While the numbers remain ambiguous, the first column is starting to look very 
+much like human <span>names</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> rather than companies or accounts. This human impression 
+would be <span>supported</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by a system with wider contextual data — for example, a phone 
+book that lists the same personal <span>names</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> The <span>third</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>column might closely match 
+faculty interests in another academic department for which we have more complete 
+metadata (and perhaps with clear labeling of phone numbers). While the structure 
+of such a document might be helpful in eliminating possible <span>interpretations</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of 
+the content (i.e., this doesn't appear to be a recipe dataset), structure alone 
+doesn't tell us whether the first column deals with individuals, organizations, 
+or some other <span>entity</span>. <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p>
+
+<p>Rather, the context — especially with the benefit of other <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>from 
+other sources — provides a sound notion of what the data are about. This is the 
+&quot;fuzzy matching&quot; that Tim Berners-Lee suggested will be necessary for traversing 
+the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web.</p>
+
+<p>IR techniques for fuzzy matching typically involve less reliance on 
+individual query terms, <span>instead</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>they expand the query to incorporate synonyms 
+and, for XML-formatted data, they could look at the general document structure 
+(i.e., <span>tables</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>versus lists; headings versus paragraphs). To illustrate, we will 
+take the information space (IS) retrieval method used by the author (<a href="#new98">Newby, 1998</a>). </p>
+
+<p>The IS retrieval <span>technique</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>is closely related to latent <span>semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>indexing 
+(LSI, see <a href="#dee90">Deerwester, <em>et al.</em>, 1990</a>). The premise is that terms that tend to 
+co-occur similarly with other terms are related; terms with less similar 
+co-occurrence patterns are less <span>strongly</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>related. For example, the terms pig, 
+swine, boar and hog might be anticipated to co-occur with similar patterns 
+across a dataset dealing with barnyard <span>animals</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> </p>
+
+<p>As described extensively in Newby (<a href="#new01">2001</a>), a term-by-term co-occurrence matrix 
+is built for an entire dataset. This matrix is sparse, because the majority of 
+terms do not <span>occur</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>together in any document. From the co-occurrence matrix, 
+which contains raw co-occurrence scores, we build a correlation matrix. In the 
+correlation matrix, the pattern of co-occurrence scores for each <span>pair</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of terms 
+
+is identified and normalized (the matrix is therefore dense, although many 
+<span>values</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>are close to zero). The eigensystem for the correlation matrix is 
+determined, which <span>produces</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>approximate (fuzzy) relations among terms when we 
+only keep a relatively small number of the resulting eigenvectors. <span>A+</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>further 
+step for IS, not found in LSI, is to re-insert the terms based on their original 
+co-occurrence scores scaled by the eigenvalues. The steps described here are 
+also known as Principal Components Analysis (PCA).</p>
+
+<p>The benefit of LSI and IS over other many <span>approaches</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to IR is that all terms 
+(and by <span>extension</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> all <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>containing those terms) have a <span>measured</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+relation to all other terms in the dataset. This is in contrast to most other 
+<span>approaches</span>, <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> which <span>instead</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>treat terms are unrelated to all other terms. For 
+general purpose Web retrieval, LSI and IS can be too costly in <span>computational</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+resources and <span>storage</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for the resulting large coordinate <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>— and, 
+furthermore, might give the casual information seeker a surprise if top-ranked 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>do not contain all query terms. </p>
+
+<p>For the purpose described here, though, LSI and IS offer <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+promise. For a given document of unclear structure and with an <span>unknown</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>schema, 
+this fuzzy matching <span>technique</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>could find similar <span>documents</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Similarity, in this 
+case, would be based on the set of <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that went into the IS <span>computation</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> 
+optimized and trained to make <span>distinctions</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>useful to a particular information 
+seeker or in a particular information <span>domain</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p>
+
+<p>The author of this work is investigating application of the IS <span>technique</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to 
+general-purpose document filtering and retrieval on the Web. The prospect is to 
+have several <span>prototype</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>documents</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> and then retrieve <span>newly</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>found <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that 
+are similar in <span>topic</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to the <span>prototype</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> With the IS <span>technique</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> the formation of 
+<span>Boolean</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>candidate sets is bypassed in favor of a more exhaustive fuzzy match. </p>
+
+<p>On the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, context-derived information space matching will be a 
+necessity for success until the <span>day</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>when all schema are well-known and all 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>are standards-compliant. Even when that <span>day</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>arrives (if it ever does), 
+there will be ambiguity in the data <span>contained</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in these <span>documents</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> As Berners-Lee 
+(<a href="#ber98">1998</a>) stated, &quot;toleration of inconsistency can only be done by fuzzy 
+<span>systems</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>&quot;</p>
+
+<p>In searching literature related to this required fuzzy matching for the 
+<span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, scarce few <span>solutions</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to this challenge were found, and none which 
+seemed to be a good solution for IR. LSI, IS and related techniques offer 
+<span>reasonable</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>promise for <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>based on the context 
+of those <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span></p>
+
+<h2>Conclusion</h2>
+
+<p>We desire IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that go beyond plain word matches. We want to match on 
+the structure, data type and organization of <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>as well. The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web 
+<span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>these possibilities, and more. When fully realized, the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web will 
+make many IR tasks similar to database tasks: the equivalent of <span>table</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>lookups 
+for well-defined and clearly typed data. </p>
+
+<p>While the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web is under development, however, IR will <span>require</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+additional techniques in order to match information needs to <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>or 
+sub-documents. Rule-based techniques will enable <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between the information 
+<span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of different <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>or document sets based on knowledge about those 
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>or inherited from other <span>documents</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Such rules may be codified by IR 
+system designers for common information needs, or they might be generated 
+algorithmically. In some cases, rules may be specified by the information seeker 
+himself.</p>
+
+<p>Context-derived techniques for <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>are a 
+likely need for the Web of today and the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web of the near <span>future</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> When 
+the data themselves are ambiguous, or the schema or metadata are ambiguous or 
+poorly typed, or when a query is expansive (such as a set of <span>sample</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>to 
+be matched against) rather than narrow (a few terms), context-derived techniques 
+will help.</p>
+
+<p>As rephrased here, the whole point of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web is to facilitate human 
+communication as augmented by networked machines. In order for the contents of 
+information <span>spaces</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>held</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>by these machines (Web <span>servers</span>, <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> database <span>servers</span>, <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> etc.) 
+to be usefully matched to human information needs, IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>are needed to 
+<span>easily</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>map between the information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> This <span>mapping</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web, 
+will consist of identifying elements, data types, topics and so forth from one 
+set of <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>that have desired <span>features</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in common with another set.</p>
+
+<p>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web <span>offers</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>unprecedented power for information retrieval, yet at 
+a cost. In order to realize the promise of <span>added</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>structure and understanding of 
+document content, IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>will be required to <span>map</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between disparate 
+information <span>spaces</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> In the <span>modern</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web retrieval <span>environment</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of simple queries 
+and billions of <span>documents</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> casual information seekers are seldom aware of their 
+inability to <span>express</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>complex queries specifying, for example, particular types 
+of data, particular relations among data elements, and particular relations to 
+other <span>documents</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web will enable this complexity, and more. </p>
+
+<p>Without techniques for <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>between information <span>spaces</span>, <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> we are left with 
+poor alternatives. Either our IR <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>will only <span>con0er</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>those <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for 
+which our understanding is complete (thus eliminating many possibly useful 
+documents), or our <span>systems</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>will forego the benefits of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web and rely 
+<span>instead</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>on simple word matching. Neither is attractive, so information space 
+<span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>techniques would appear to be a necessary area for inquiry in order to 
+facilitate IR on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web.</p>
+
+<h2>References</h2>
+
+<ul>
+<li><a name="ber98"></a>Berners-Lee, T. (1998). &quot;What the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web can <span>represent</span>. <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>&quot; Cambridge, MA: W3C. Available at: <a 
+href="http://www.w3.org/DesignIssues/RDFnot.html">http://www.w3.org/DesignIssues/RDFnot.html</a>. [Site visited 9th July 2002]</li>
+
+<li><a name="ber99"></a>Berners-Lee, T. (1999). &quot;Semantic Web road <span>map</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>&quot; Cambridge, MA: W3C.  Available at: <a 
+href="http://www.w3.org/DesignIssues/Semantic.html">http://www.w3.org/DesignIssues/Semantic.html</a>. [Site visited 9th July 2002]
+</li>
+
+<li><a name="bro80"></a>Brookes, B.C. (1980). "The foundations of information science. Part III. <span>Quantitative</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>aspects: objective <span>maps</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and subjective landscapes." <i>Journal of Information Science</i> <strong>2</strong>, 269-275.</li>
+
+<li><a name="dee90"></a>Deerwester, S., Dumais, S.T., Furnas, G.W., Landauer, T.K., &amp; Harshman, <span>R++</span>. <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>  (1990). &quot;Indexing by latent <span>semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>analysis.&quot; <i>Journal of the American Society for Information Science</i>. <strong>41</strong>(6): 391-407</li>
+
+<li><a name="hee02"></a>Heery, <span>R++</span>. <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> &amp; Wagner, H.. (2002). &quot;<a 
+href="http://www.dlib.org/dlib/may02/wagner/05wagner.html">A metadata registry for the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>Web.</a>&quot; <i>DLIB Magazine</i> <strong>8</strong>(5). Available at: http://www.dlib.org/dlib/may02/wagner/05wagner.html [Site visited 9th July 2002]</li>
+
+<li><a name="new98"></a>Newby, G.B. (1998). <a href="http://ils.unc.edu/gbnewby/papers/newby-t6.htm">Context-based <span>statistical</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+sub-spaces</a>. <i>Text REtrieval Conference (TREC-6) Proceedings</i>, (pp. 735-746.) Gaithersburg, MD: National Institute of Science and Technology. November 19-21, 1997.</li>
+
+<li><a name="new00"></a>Newby, G.B. (2000). &quot;<a href="http://ils.unc.edu/gbnewby/papers/xml/newby_gregory.xml">Will <span>XML</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and information retrieval make society transparent?</a>. <span>XML</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>2000 Conference Proceedings (on CD-ROM). Alexandria, Virginia: Graphic Communications Association. Washington, DC: December 5-8.</li>
+
+<li><a name="new01"></a>Newby, G.B. (2001). &quot;<a href="http://ils.unc.edu/gbnewby/papers/cogstats-withimages.pdf">Cognitive space and information space</a>.&quot; <i>Journal of the American Society for Information Science 
+and Technology</u> <strong>52</strong>(12), 1026-1048.</li>
+</ul>
+
+<hr color=#ff00ff SIZE=3>
+<div align="center" style="width: 668px; height: 79px;">
+<h4>How to cite this paper:</h4>
+Newby, Gregory B. (2002) &quot;The necessity for information space <span>mapping</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for information retrieval on the <span>semantic</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>web.&quot;  <em><strong>Information Research</strong></em>, <strong>7</strong> (4)&nbsp;&nbsp;&nbsp;Available at:  http://InformationR.net/ir/7-4/paper137.html<br>
+&copy; the author, 2002. Updated: 9th July 2002 </div>
+<hr color=#ff00ff SIZE=3>
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres74.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><IMG SRC="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper137" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color="#ff00ff" SIZE=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/7-4/paper137.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:20:40 GMT -->
+</html>

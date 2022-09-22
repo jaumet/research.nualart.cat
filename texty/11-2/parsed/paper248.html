@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/11-2/paper248.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:27 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../IRstyle.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+<title>Constructing Web subject gateways using Dublin Core, the Resource Description Framework and Topic Maps</title>
+<meta name="dc.title" content="Constructing web subject gateways using Dublin Core, RDF and Topic Maps" />
+<meta name="dc.creator" content="Jesús Tramullas, Piedad Garrido" />
+<meta name="dc.subject" content="Topic <span>maps</span>, <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> XTM, Potnia, Subject gateways" />
+<meta name="dc.<span>description</span>" <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> content="Introduction. Specialised subject gateways have become an <span>essential</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>tool for locating and accessing digital information resources, with the <span>added</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>value of organisation and previous evaluation catering for the needs of the varying communities using these. Within the <span>framework</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of a research project on the subject, a <span>software</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>tool has been developed that enables subject gateways to be developed and managed. <span>Method</span>. <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> General guidelines for the work were <span>established</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>which set out the <span>main</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>principles for the technical aspects of the application, on one hand, and on aspects of the treatment and management of information, on the other. All this has been integrated into a <span>prototype</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>model for developing <span>software</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>tools</span>. <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> Analysis. The needs analysis <span>established</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>the conditions to be fulfilled by the application. <span>A+</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>detailed</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>study of the available options for the treatment of information on metadata <span>proved</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>that the best option was to use the Dublin Core, and that the metadata set should be included, in turn, in RDF tags, or in tags based on <span>XML</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> Results. The project has resulted in the development of two versions of an application called Potnia (versions 1 and 2), which fulfil the requirements set out in the <span>main</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>principles, and which have been tested by users in real application environments.  Conclusion. The tagging layout found to be the best, and the one used by the writers, is based on integrating the Dublin Core metadata set within the Topic Maps paradigm, formatted in XTM." />
+<meta name="dc.subject.keywords" content="Topic <span>maps</span>, <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> XTM, Potnia, Subject gateways" />
+<meta name="dc.subject" content="Constructing Web subject gateways" />
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="paper248.html" />
+<meta name="dc.relation.IsPartOf" content="infres112.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2006-01-15" />
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+
+<style>
+#button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+#button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+#button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+#button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+</style>
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+</style>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body  bgcolor="#ffffff">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"> <img src="../mini_logo2.gif" width="336" height="45" alt="header" /><br />
+Vol. 11  No. 2, January 2006<br /><br /><div id="button">
+<ul>
+	<li><a href="infres112.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+
+
+</ul>
+</div></td></tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<hr size="1" style="color: maroon;" />
+
+<h1>Constructing Web subject gateways using Dublin Core, the Resource Description Framework and Topic Maps</h1>
+
+<h4 align="center"><a href="mailto:tramullas@unizar.es">Jes&uacute;s Tramullas</a>, Department of Librarianship and Information Sciences  and <br />
+<a href="mailto:piedad@unizar.es">Piedad Garrido</a>, Department of <span>Computer</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>Science and Systems Engineering<br />
+Zaragoza University, Zaragoza, Spain</h4>
+<br />
+<div align="center">
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: Blue;" onclick="doChangeFont()" /></div>
+<hr style="color: rgb(0, 0, 128);" size="1" />
+
+<div align="center"><b>Abstract</b></div>
+
+<blockquote> <strong>Introduction</strong>. Specialised subject gateways have become an <span>essential</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>tool for locating and accessing digital information resources, with the <span>added</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>value of organisation and previous evaluation catering for the needs of the varying communities using these. Within the <span>framework</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of a research project on the subject, a <span>software</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>tool has been developed that enables subject gateways to be developed and managed. <br />
+  <strong>Method</strong>. General guidelines for the work were <span>established</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>which set out the <span>main</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>principles for the technical aspects of the application, on one hand, and on aspects of the treatment and management of information, on the other. All this has been integrated into a <span>prototype</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>model for developing <span>software</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>tools</span>. <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><br />
+  <strong>Analysis.</strong> The needs analysis <span>established</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>the conditions to be fulfilled by the application. <span>A+</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>detailed</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>study of the available options for the treatment of information on metadata <span>proved</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>that the best option was to use the Dublin Core, and that the metadata set should be included, in turn, in RDF tags, or in tags based on <span>XML</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><br />
+  <strong>Results.</strong> The project has resulted in the development of two versions of an application called Potnia (versions 1 and 2), which fulfil the requirements set out in the <span>main</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>principles, and which have been tested by users in real application environments. <br />
+<strong>Conclusion.</strong> The tagging layout found to be the best, and the one used by the writers, is based on integrating the Dublin Core metadata set within the Topic Maps paradigm, formatted in XTM.</blockquote>
+<hr style="color: rgb(0, 0, 128);" size="1" />
+ <br />
+
+<h2>Introduction</h2>
+
+
+<p>The <span>tools</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>for retrieving and accessing information available on the Internet to answer users&rsquo; needs take three <span>main</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>forms, <span>namely</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>search engines, subject gateways and vertical portals. Among these, the subject gateways are gaining in popularity and importance as a <span>source</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of digital information that has been chosen and assessed, and which is being provided with <span>added</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>value services, as described by Navarro &amp; Tramullas (<a id="nav05" name="nav05">2005</a>). This type of information service, by which is <span>understood</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>the structures proposed by Colomb (<a id="col02" name="col02">2002</a>), is based on sets of <span>documents</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>which are browsed by the user with the aid of auxiliary information structures. Koch proposed the following definition, which is widely accepted:</p> 
+
+<blockquote>Subject gateways are Internet services which support systematic resource discovery. They provide <span>links</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>to resources (documents, objects, sites or services), predominantly accessible via the Internet. The service is based on resource <span>description</span>. <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> Browsing access to the resources via a subject structure is an important <span>feature</span>. <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> (<a id="koc00" name="koc00">Koch 2000</a>: 24-25)</blockquote>
+
+<p>Therefore, they are areas of information <span>designed</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>for a user to discover relevant information for a given need (<a id="pit01" name="pit01">Pitschmann 2001</a>). Although the engines and portals have received a great <span>deal</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of <span>attention</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>in the bibliography, this is not the case with specialised gateways, in spite of their importance as a tool for searching for and retrieving information (<a id="rob99" name="rob99">Robinson &amp; Bawden 1999</a>; <a id="baw02" name="baw02">Bawden &amp; Robinson 2002</a>). Only in Britain, thanks to the excellent development of the <a href="http://www.rdn.ac.uk/" target="_blank">Resource Description Network</a> (RDN), can one talk of high <span>quality</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>subject gateways.</p>
+
+<p>The undertaking of a research project on subject gateways in the libraries of Spanish <span>universities</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>by a research group, to which the writers of this article <span>belong</span>, <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> had among its objectives the creation of a <span>software</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>tool which, with minimum technical requirements and applying the basic principles of digital information management, would enable the rapid start-up of a specialised subject gateway <span>A+</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>set of guidelines was <span>established</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>for the purpose, which would have to be adhered to both during development and for the final tool: </p>
+
+<ol>
+  <li>It must be based on <span>free</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>software, and therefore, would also be <span>free</span>. <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span></li>
+  <li>It must use standard data base technology to save and retrieve information. </li>
+  <li>It must comply with <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>standards.</li>
+  <li>It must use standard resource <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>for information. </li>
+</ol>
+
+<p>Bearing in mind the above, and the need for the tool to be able to evolve in <span>line</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>with <span>future</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>developments of information treatment in <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>environments, in addition to new techniques for displaying large <span>amounts</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of information, a <span>free</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>software tool was <span>designed</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>and implemented, called <em>Potnia</em> (<a id="gar05" name="gar05">Garrido &amp; Tramullas 2005</a>), distributed under a Mozilla Public <span>License</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span></p>
+
+
+<h2>Description and treatment of data on digital information resources</h2>
+
+<p>In <span>line</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>with the basic concepts mentioned above, the structure of the resource <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of information conforms to standard ISO 15836 <a href="http://www.dublincore.org/" target="_blank">Dublin Core</a>. However, this structure for <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>based on metadata reaches its full potential when it is integrated into <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>coding schemes. For the digital information resource <span>description</span>, <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> <a href="http://www.dublincore.org/" target="_blank">Dublin Core</a> was embedded within the <a href="http://www.w3.org/RDF/" target="_blank">Resource Description Framework</a> (RDF), with the aim of boosting its <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>capacity and its (future) use in the <span>semantic</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>web <span>framework</span>. <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> Projects following this structure can be found in the literature , for example <a href="#ber99">Berry &amp; Browne
+</a> (1999), <a href="#cha02">Chakrabarti</a> (2002), <a href="#fir03">Firestone</a> (2003) and <a href="#mic05">Michalak</a> (2005).</p>
+
+<p> However, one of the objectives set for the <em>Potnia</em> tool is to develop interfaces based on <span>visual</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>metaphors, which will complement the usual <span>presentation</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of a <span>list</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of replies. The most <span>suitable</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>paradigm for this is to combine DC/RDF with Topic Maps (Lacher &amp; Decker 2001), a paradigm which is <span>contained</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>within standard <a href="http://www.y12.doe.gov/sgml/sc34/document/0322_files/iso13250-2nd-ed-v2.pdf">ISO 13250</a> (<a id="iso02" name="iso02">2002</a>; <a id="par03" name="par03">Park 2003</a>). Topic Maps have been formatted as <a href="http://www.topicmaps.org/xtm/index.html">XTM</a> (2001) through the use of <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>notation</span>. <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> Once the connection point has been <span>introduced</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>and studied in depth, it would be advisable to integrate the Dublin Core and Topic Maps. As demonstrated by Bowers (<a id="bow00" name="bow00">
+2000</a>) in a study of superimposed information based on models, there are many similarities between the structural layers found in <span>XML</span>, <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> RDF and Topic Maps. Therefore, it is perfectly possible, and right, to <span>represent</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>the majority of RDF structures through the use of syntax for <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps, and vice-versa (<a id="fre03" name="fre03">Freese 2003</a>). However, in the latter <span>direction</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>(representing <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps with RDF structures) part of the <span>semantics</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>is <span>lost</span>. <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> Since the <span>main</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>objective of the application is provide a greater <span>degree</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of precision in the results of searches, such a loss of <span>semantics</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>is detrimental, and therefore it was decided to use the structure and syntax of <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps, since these are a more <span>modern</span>, <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> flexible and <span>abstract</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>paradigm.</p>
+
+<p>In addition, <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps have been repeatedly put forward for other projects as an extremely <span>suitable</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>tool for <span>classifying</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>and organising information. Classification <span>tools</span>, <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> such as taxonomies, thesauri, <span>ontology</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>or faceted metadata can be integrated into <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps, as demonstrated by Garshol (<a id="gars04" name="gars04">2004</a>). In the same way, they are also more complex and allow for the development of richer, more complex information structures than the widely-used conceptual <span>maps</span>, <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> which can also be integrated into XTM (<a id="gar04a" name="gar04a">Garrido &amp; Tramullas 2004</a>). The many examples of proprietary <span>software</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>tools</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>for displaying information through <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps, and the fact that there are open <span>source</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>development packages, make it possible to say that the paradigm of <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps is the information tagging <span>environment</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>that <span>offers</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>the highest number of opportunities for developing metadata-rich digital information products, presented through graphic interfaces. </p>
+
+<h2>First version: Potnia 1.0</h2>
+
+<p>The needs analysis before the development of <em>Potnia</em> showed that it would be of most use on a personal or departmental level, answering the needs of special interest groups or communities. The <span>prototype</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>for development had very specific <span>characteristics</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>and was much more manageable than if a structure of specialised subject gateways had been used, such as those used by general gateways like <a href="http://www.yahoo.com/">Yahoo</a>! or <a href="http://dmoz.org/">dmoz</a>. The first objective of the <span>design</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>was to have the simplest possible <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>system, which would reduce the problem of over-complicated interfaces for novice users, and would reply faster with information in greater detail, and be more agile. The second <span>design</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>objective was for the users themselves from a specific <span>discipline</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>to gradually fill the data base supporting the information resource. The initial architecture for the application planned for this project is shown in the <span>figure</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>below: </p>
+
+<div align="center"><img src="p248fig1.jpg" width="491" height="437" alt="fig1" /></div>
+
+<div align="center"><br /><strong>Figure 1: Architecture for the application</strong></div>
+
+<p>The following guidelines were set for working on the development of the first version:</p>
+
+<ol>
+  <li>Non-declarative <span>programming</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>must be used.</li>
+  <li>It must be <span>supported</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>by a Relational Database Management System.</li>
+  <li>Advanced information display techniques must not be used.</li>
+  <li>The information resource <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>structure must comply with the ISO 15836 (DCMI 2003) standard.</li>
+</ol>
+
+<p>The technology chosen to implement this was:</p>
+
+<ol>
+  <li><a href="http://www.php.net/" target="_blank">PHP Script Language</a> (4.3.3RC1) and XHTML 1.0 for Graphical User Interface</li>
+  <li><a href="http://www.mysql.com/" target="_blank">MySQL Database Server</a>Versi&oacute;n 4.0.13</li>
+  <li>SQL/92 (Structured Query <span>Language</span>, <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> for the <span>design</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of the <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>engine).</li>
+</ol>
+
+<p>Eventually, the final product was given the name <em>Potnia</em>. <span>A+</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>test</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>application can be found at <a href="http://imhotep.unizar.es/potnia" target="_blank">http://imhotep.unizar.es/potnia</a>. The application is distributed as open <span>source</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>on the following servers:</p>
+
+<ul>
+<li>
+<a href="http://potnia.sourceforge.net/" target="_blank">http://potnia.sourceforge.net/</a>
+</li>
+<li>
+<a href="http://freshmeat.net/projects/potnia" target="_blank">http://freshmeat.net/projects/potnia</a>
+</li>
+</ul>
+
+<h3>Database design</h3>
+
+<p>The resulting <span>relational</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>scheme consists of six tables: data, types, users, data-keyword relations (dk), keywords and pma_relation (Figure 1 above). This last relation proves <span>essential</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>when working with this version of MySQL in order to enable the database management system to <span>interpret</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>the relations with many-to-many cardinality. The users <span>table</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>remains apart from the scheme and not related to the other <span>tables</span>, <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> as its only task is to centre on administering the various types of users who access the application. Tables for managing the information from the resources are the types, dk, keywords and data <span>tables</span>, <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> which bear the <span>weight</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of the application. When these <span>tables</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>are implemented, the Dubl&iacute;n Core Metadata <span>Set</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>(simple) can be used in a database <span>relational</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>structure.</p>
+
+<div align="center"><img src="p248fig2.jpg" width="537" height="300" alt="fig2" /></div>
+<div align="center"><br /><strong>Figure 2: Relations among tables</strong></div>
+
+<h3>Search code</h3>
+
+<p>The <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>process differentiates between a simple <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>and an <span>advanced</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>search, following the most common <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>layout interface found at present in the technology for web-based information resource gateways. As a <span>relational</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>database management system with textual information is being used, the recovery model needed is boolean, whose <span>main</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>feature</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>is the con0eration of relevance that is <span>purely</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>binary. This was <span>achieved</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>by embedding SQL code within <span>PHP</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>programming, which, in turn, included Javascripts and <span>HTML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>code. The following <span>figures</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>show examples of SQL embedded code needed to execute searches: </p>
+
+<div align="center"><img src="p248fig3.jpg" width="802" height="356" alt="fig3" /></div>
+
+<div align="center"><br /><strong>Figure 3. Treatment of character strings</strong></div>
+
+<h2>Second version: Potnia 2.0 </h2>
+
+<p>As shown below, some decisions taken in implementation, the technology used and suggestions from persons or groups who have used <em>Potnia</em>, have motivated a series of decisions to be taken that have gradually affected the architecture of the application, and caused the appearance of several versions of the tool <span>throughout</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>its lifespan. The advantage of this idea lay in the wish to re-design <em>Potnia</em>. Once the first version was in operation, <span>checked</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>for any faults and <span>accepted</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>by the various groups using it, it was suggested that a second version should be developed. The first version of <em>Potnia</em> had been evaluated partly from suggestions and comments sent in by e-mail from various groups and individuals who had downloaded the application from Sourceforge or Freshmeat; and partly because the team working on the development were well aware that some aspects had not been included in the first version. Important among these lacks was the need to incorporate sessions, to improve the <span>perception</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>and running of searches by the end user, and the <span>extension</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of the Dublin Core metadata set, in order to be able to use the qualified set. </p>
+
+<p>Once the usefulness of the project had been evaluated, re-designing was approached by incorporating a set of improvements to different <span>design</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>aspects centred on the user, such as information retrieval and security. In order to fulfil these objectives, several markup <span>languages</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>were con0ered for prior <span>representation</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of the information. Among these were <a href="http://www.w3.org/2004/OWL/" target="_blank">OWL (Ontology Web Language)</a>, <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>(eXtensible Markup Language) and XTM (XML Topic Maps), all highly <span>suitable</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>markup <span>languages</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>for the treatment of metadata, and which <span>offered</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>powerful new options to combat the deficiencies and limitations in the usual text access to digital information resources. Integration of OWL into XTM has been proven (<a id="vat04" name="vat04">Vatant 2004</a>). These <span>languages</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>can be stored in some of the different types of information repository found on the market, such as: SGBDR, BDOO, BD natives in <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>or <span>hybrid</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>systems</span>. <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> This approach can provide higher <span>performance</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>treatment to meta-information saved in the database and formatted to ISO 15386 standard requirements, and, obviously, to improve the display interface for the information in the not too distant <span>future</span>. <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> This <span>main</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>objective will centre on replacing the simple interface of a text <span>list</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of static replies and thus be able to use a language which is capable of representing the <span>semantics</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>inherent</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>in the inter-relations targeted among the objectives (<a id="hof99" name="hof99">Hofmann 1999</a>). Lastly, from the point of view of security, the application was to be improved by including sessions, a modification that will <span>directly</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>affect the <span>design</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>and <span>programming</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of the user's graphic interface. </p>
+
+<p>This was <span>achieved</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>by <span>taking</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>a new look at the initial <span>design</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of the whole project (see work hypothesis), and incorporating XTM Topic Maps (ISO 13250) and a Hybrid Database (SGBR working with an <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>manager) into its design: </p>
+
+<p>Relating to the first point, integrating XTM to the resource <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>for digital information studied should mean that a DTD had had to be used in the first place to enable the <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>map <span>paradigms</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>to be read by a <span>computer</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>(see <span>figure</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>5), <span>followed</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>by the process of describing the information already stored in the MySQL database with the corresponding metadata, in compliance with the ISO 13250 standard. Thus, due to the flexibility of XTM and to the fact that the descriptive information of the resources has been treated previously according to ISO 15386, a simple process is used to enable an information exchange with other <span>tools</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>using mark-up <span>languages</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>such as RDF, making later development possible in the <span>framework</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of <span>semantic</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>web technology (<a id="bec02" name="bec02">Beckett 2002</a>). </p>
+
+<div align="center"><img src="p248fig4.jpg" width="587" height="171" alt="fig4" /></div>
+<div align="center"><br /><strong>Figure 4: Inclusion of the DTD in the application</strong></div>
+<br /><br />
+<div align="center"><img src="p248fig5.jpg" width="913" height="293" alt="fig5" /></div>
+<div align="center"><br /><strong>Figure 5: Example of a code with integrated XTM</strong></div>
+
+<p>As for the second point, which involves the changeover of a <span>purely</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>relational</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>database manager to a <span>hybrid</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>database manager (<a id="thu02" name="thu02">Thuraisingham 2002</a>), it must be emphasised that the process of introducing a digital information resource within the application remains the same as in the first version, as far as the end user is concerned. However, in the internal architecture, the user opens with a validation session as the authorised user of the system, and proceeds to include the <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of a resource, and, after having passed through an <span>error</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>control filter, passes on the process of instantiation. In this process, part of the information is instantiated in the tablespaces data and keywords, created in MySQL for the purpose, and a <span>parallel</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>instantiation process appears, which stores the metadata in a structure called a <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>file. This <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>file saves the data in <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>in a <span>secondary</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>memory, thus comprising the <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>manager which works with the <span>relational</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>database at all times. As a complement, part of the <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>file is stored in a hash <span>table</span>, <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> in the <span>main</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>memory, in order to make more rapid and efficient searches. This change in the architecture has, in turn, forced a change in the architecture of the <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>system, with the <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>process being structured as shown in <span>Figure</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>6. </p>
+
+<div align="center"><img src="p248fig6.jpg" width="462" height="316" alt="fig6" /></div>
+<div align="center"><br /><strong>Figure 6: Search process on the <span>hybrid</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>manager</strong></div>
+
+<h2>Conclusion and <span>future</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>developments</h2>
+
+<p>The development of <span>tools</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>for information management needs to have an inter-disciplinary approach that will ensure the <span>quality</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of the resulting products. The project described here was aimed at the needs for information management of the end users, and has determined the <span>main</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span><span>features</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>on the <em>Potnia</em> application. Technical problems were <span>solved</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>by using the <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps paradigm to provide the information with <span>semantics</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>(<a id="rat01" name="rat01">Rath 2001</a>). This enables the <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>processes to be refined and adjusted, as they <span>establish</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>points of contact between the keywords which were ignored by the traditional process of treatment and retrieval of information used initially. In addition, the greater advantages obtained by incorporating a <span>hybrid</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>manager into the application has improved the speed of reply on the <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>engine</p>
+
+<p>However, one of the drawbacks that may <span>arise</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>from this new version is the use of an <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>manager, since this does not allow for the most <span>suitable</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>treatment for textual information in the case of more complex searches. For this reason, the use of soft-computing techniques is being analysed to <span>solve</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>problems arising from this type of retrieval. </p>
+
+<p>The <span>future</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>development of <em>Potnia</em> will take the following aspects into account:</p>
+
+<ul>
+  <li>Display: using <span>paradigms</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>such as self-organizing <span>maps</span>, <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> conceptual <span>maps</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>or <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps, the display and clustering of the results obtained will provide <span>added</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>value <span>visual</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>information on the <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>results (<a id="ger03" name="ger03">Geroimenko &amp; Chen 2003</a>).</li>
+  <li>Development of a possible support system to make generic searches in traditional <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>engines, or other sources of digital information, to feed the Potnia gateway.</li>
+  <li> Soft-computing techniques for information retrieval, since the particular <span>features</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of textual information conform to an imprecise, uncertain information profile that is difficult to categorise; this makes soft-computing techniques into a very useful paradigm to <span>solve</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>the problem (<a id="cre01" name="cre01">
+Crestani &amp; Passi 2001</a>). </li>
+</ul>
+
+<h2>References</h2>
+
+<ul>
+  <li><a name="baw02" id="baw02">Bawden, D. &amp; Robinson, L. (2002). Internet subject gateways revisited. <em>International Journal of Information Management</em>, <strong>22</strong>(2), 157-162.</li>
+
+  <li><a name="bec02" id="bec02">Beckett, D (2002). <a href="http://www.idealliance.org/papers/xmle02/dx_xmle02/papers/03-05-07/03-05-07.html"><em>Connecting <span>XML</span>, <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> RDF and Web technologies for representing knowledge on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>Web</em></a>. Paper presented at <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>Europe Conference 2002, Barcelona, May 2002.  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>2 May, 2004 from http://www.idealliance.org/papers/xmle02/dx_xmle02/papers/03-05-07/03-05-07.html</li>
+
+<li><a name="ber99" id="ber99">Berry, M.E. &amp; Browne, M. (1999). Understanding <span>search</span>  <span class="exper" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>engines: mathematical modeling and text retrieval. Software, environments, <span>tools</span>. <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> Philadelphia, PA: Society for Industrial &amp; Applied <span>Mathematics</span>. <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span></li>
+
+
+  <li><a name="bow02" id="bow02">Bowers, S. (2000). <em><a href="http://www.cse.ogi.edu/tech-reports/2000/00-008.pdf&amp;ei=MlWkQ4rAJKKQiALG56ydBw&amp;sig2=qycTahRJnfO2HwaZ5mGX3g">A generic approach for representing model-based superimposed information.</a></em> Beaverton, OR: Oregon Health and Science University. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>17 December, 2005 from http://www.cse.ogi.edu/tech-reports/2000/00-008.pdf&amp;ei=MlWkQ4rAJKKQiALG56ydBw&amp;sig2=qycTahRJnfO2HwaZ5mGX3g</li>
+
+  <li><a name="cau02" id="cau02">Caussanel <span>J++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>, Cahier J-P., Zacklad M. &amp; Charlet, <span>J++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> (2002). <a href="http://tech-web-n2.utt.fr/ssw/cahier/docs/IC2002.pdf"><em>Les Topic Maps sont-ils un bon candidat pour l&rsquo;ing&eacute;nierie du Web S&eacute;mantique?</em></a> Paper presented at Actes de la conf&eacute;rence Ing&eacute;nierie des Connaissances, Rouen, 2002. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>1 April, 2005 from http://tech-web-n2.utt.fr/ssw/cahier/docs/IC2002.pdf</li>
+
+<li><a name="cha02" id="cha02">Chakrabarti, S. (2002). <em>Mining the Web: analysis of hypertext and semi-structured data.</em> Boston, MA: Morgan Kaufmann.</li>
+
+  <li><a name="col02" id="col02">Colomb, <span>R++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>M. (2002). <em>Information spaces: the architecture of cyberspace</em>. London: Springer.</li>
+
+  <li><a name="cre00" id="cre00">Crestani, F. &amp; Passi, G. (Eds.) (2000). <em>Soft computing in information retrieval: techniques and applications</em>. Heidelberg: Physica-Verlag</li>
+
+<li><a name="fir02" id="fir02">Firestone, <span>J++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>M. (2003). <em>Enterprise information portals and knowledge
+management.</em>   Oxford: Butterworth-Heinemann.</li>
+
+  <li><a name="fre03" id="fre03">Freese, E. (2003). Topic <span>maps</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>and RDF. In Park, <span>J++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>, (Ed.)  <em>XML <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps. Creating and using <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps for the web.</em> (pp. 283-325) Boston, MA: Addison-Wesley.</li>
+
+  <li><a name="gar04a" id="gar04a">Garrido, P. &amp; Tramullas, <span>J++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> (2004). Convergence of <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps and concept maps: <span>prototype</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>foundations. In <em>Proceedings of the IADIS International Conference. WWW/Internet 2004, Madrid</em>, vol. 2, (pp. 1105-1108). Lisbon: International Association for the <span>Development</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of the Information Society.</li>
+
+  <li><a name="gar04b" id="gar04b">Garrido, P. &amp; Tramullas, <span>J++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> (2004). Topic maps: an alternative or a complement to concept maps? <em>Concept Maps: Theory, Methodology, Technology. First International Conference on <span>Concept</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>Mapping</em>, Pamplona, vol. 2, (pp. 185-188). Pamplona, Spain: Univer0ad P&uacute;blica de Navarra.</li>
+
+  <li><a name="gar05" id="gar05">Garrido, P. &amp; Tramullas, <span>J++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> (2005). <em>Potnia: una herramienta para directorios tem&aacute;ticos basada en Dublin Core y Topic Maps.</em> Paper presented at the 7th. Congreso ISKO Espa&ntilde;a, Barcelona, July 2005.</li>
+
+  <li><a name="gars04" id="gars04">Garshol, L.M. (2004). Metadata? Thesauri? Taxonomies? Topic Maps! <em>Journal of Information Science</em>, <strong>30</strong>(4), 378-391.</li>
+
+  <li><a name="ger03" id="ger03">Geroimenko, V. &amp; Chen, C. (Eds.) (2003). <em>Visualizing the <span>semantic</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>web: xml based internet and information visualization</em>. London: Springer.</li>
+
+  <li><a name="hof99" id="hof99">Hofmann, T. (1999). Probabilistic Topic Maps: navigating through large text collections. In David <span>J++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> Hand, Joost N. Kok, <span>Michael</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>R. Berthold (Eds.) <em>Advances in intelligent data analysis: <span>third</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>international symposium, IDA-99, Amsterdam, The Netherlands, August 1999. </em> (pp. 161-172). Berlin: Springer.</li>
+
+  <li><a name="iso02" id="iso02">International Organization for Standardization and International Electrotechnical Commission. Joint Technical Committee 1. (2002) <a href="http://www.y12.doe.gov/sgml/sc34/document/0322_files/iso13250-2nd-ed-v2.pdf">ISO/IEC 13250. Topic Maps. Information technology. Document <span>description</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>and processing <span>languages</span>. <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span></a>  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>22 September, 2004 from http://www.y12.doe.gov/sgml/sc34/document/0322_files/iso13250-2nd-ed-v2.pdf</li>
+
+  <li><a name="koc00" id="koc00">Koch, T. (2000). Quality-controlled subject gateways: <span>definitions</span>, <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> typologies, <span>empirical</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>overview. <em>Online Information Review</em>, 24(1), 24-34.</li>
+
+  <li><a name="lac01" id="lac01">Lacher, M.S. &amp; Decker, S (2001). <a href="http://www.mulberrytech.com/Extreme/Proceedings/html/2001/Lacher01/EML2001Lacher01.html">
+On the <span>integration</span>  <span class="quanti" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>of Topic Maps and RDF data</a>. In <em>Aggregated Proceedings for the Extreme Markup Languages&reg; Conferences (2001-2005)</em>. Rockville, MD: Mulberry Technologies Inc. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>17 December, 2005 from http://www.mulberrytech.com/Extreme/Proceedings/html/2001/Lacher01/EML2001Lacher01.html</li>
+
+<li><a name="mic05" id="mic05">Michalak, S.C. (Ed.). (2005). <em>Portals and libraries</em>.  Binghamton, NY: Haworth Press.</li>
+
+  <li><a name="nav05" id="nav05">Navarro, D. &amp; Tramullas, <span>J++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> (2005). Directorios tem&aacute;ticos especializados: definici&oacute;n, caracter&iacute;sticas y perspectivas de desarrollo. <em>Revista Espa&ntilde;ola de Documentaci&oacute;n Cient&iacute;fica</em>, <strong>28</strong>(1), 49-61.</li>
+
+  <li><a name="par03" id="par03">Park, <span>J++</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>, (Ed.) (2003). <em>XML <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps. Creating and using <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps for the web</em>. Boston: Addison-Wesley.</li>
+
+  <li><a name="pit01" id="pit01">Pitschmann, L. <span>A+</span>. <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> (2001). <em>Building sustainable collections of <span>free</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>Web third-party resources</em>. Washington, DC: Digital Library Federation.</li>
+
+  <li><a name="rat01" id="rat01">Rath, H.H. (2001). <span>Semantic</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>resource exploitation with Topic Maps. In Henning Lobin, (Ed.) <em>Sprach- und Texttechnologie in digitalen Medien. Fr&uuml;hjahrstagung der Gesellschaft f&uuml;r linguistische Datenverarbeitung (GLDV), Justus-Liebig-Universit&auml;t Giessen, 28.-30.03.2001</em>, (pp. 3 -15). Norderstedt, Germany: Books on Demand.</li>
+
+  <li><a name="rob99" id="rob99">Robinson, L. &amp; Bawden, D. (1999). Internet subject gateways. <em>International Journal of Information Management,</em> <strong>19</strong>(6), 511-522.</li>
+
+  <li><a name="thu02" id="thu02">Thuraisingham, B. (2002). <em>XML databases and the <span>semantic</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>web</em>. Boca Raton, FL: CRC Press.</li>
+  
+  <li><a name="vat04" id="vat04">Vatant, B. (2004). <a href="http://www.idealliance.org/papers/dx_xmle04/papers/03-03-03/03-03-03.pdf"><em>Ontology-driven <span>topic</span>  <span class="quali" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>maps</em></a>.  Paper presented at <span>XML</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>Europe 2004, Amsterdam, May 2004.  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>2 May, 2005 http://www.idealliance.org/papers/dx_xmle04/papers/03-03-03/03-03-03.pdf</li>
+
+  <li><a name="xtm01" id="xtm01">XTM TopicMaps.Org (2001). (<a href="http://www.topicmaps.org/xtm/index.html">XML Topic Maps Specification (XTM) 1.0</a>. XTM TopicMaps.Org. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>2 March, 2003 from http://www.topicmaps.org/xtm/index.html</li>
+</ul>
+
+<hr style="COLOR: #000080" size="1" />
+
+<table cellspacing="10" align="center">
+<tr><td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="&quot;subject gateways&quot; &quot;portals&quot; meta-tags RDF &quot;topic maps&quot;"></input> <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+</td></tr></table></form>
+<td colspan="2" align="center" style="font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject.<br /></td>
+<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="&quot;subject gateways&quot; &quot;portals&quot; meta-tags RDF &quot;topic maps&quot;"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+</td></tr></table>
+</form>
+
+<!-- Search Google -->
+</td></tr>
+</table>
+
+<hr style="COLOR: #000080" size="1" />
+
+<div align="center">
+<h4>How to cite this paper:</h4>
+Tramullas, <span>J++</span>  <span class="compus" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span> &amp; Garrido, P. (2005). 
+&quot;Constructing Web subject gateways using Dublin Core, RDF and Topic Maps&quot; &nbsp; <em>Information Research</em>, <strong>11</strong>(2) paper248 [Available at http://InformationR.net/ir/11-2/paper248.html]</div>
+
+<br />
+<hr size="1" style="color:#000080 ;" />
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper248" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+
+<td align="center" valign="top"><div>
+&copy; the authors, 2006. <br />Last updated: 17 December, 2005
+</div></td>
+
+<td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><br /><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var 0="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper248.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&0="+0;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?0='+0+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own <span>free</span>  <span class="conce" style="width:1px;border-width:75px 25px 75px 25px;position:relative;">.</span>site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;0=281971&amp;js=No&amp;" ALT="online web site analytics"></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+
+
+</td></tr>
+</table>
+
+<hr size="1" style="color:#000080 ;" />
+
+<table align="center"><tr><td><div id="button">
+<ul>
+	<li><a href="infres112.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+
+</ul>
+</div></td></tr></table>
+
+<hr size="3" style="color:#000080 ;" />
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/11-2/paper248.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:27 GMT -->
+</html>

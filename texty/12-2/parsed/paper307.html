@@ -1,0 +1,821 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/12-2/paper307.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:19 GMT -->
+<head>
+<title>A model of scientific communication as a global distributed information system</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+
+<!--Enter appropriate data in the content fields-->
+<meta name="dc.title" content="<span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>model of scientific communication as a global distributed information system" />
+<meta name="dc.creator" content="Bo-Christer Bjork" />
+<meta name="dc.subject" content="Scientific communication" />
+<meta name="dc.<span>description</span>" <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> content="Introduction. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>formal graphical model of the scientific communication process is presented in this paper. Purpose. The purpose of the model is to act as a road <span>map</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for policy <span>discussions</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and research concerning the process. In <span>comparison</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to earlier models found in the literature this model is more <span>detailed</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> hierarchical and includes more modelling constructs (activities, inputs, outputs, controls, mechanisms).  Methodology. The modelling methodology used is IDEF0, a process modelling method, which previously has mainly been used for <span>business</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>process reengineering in the manufacturing industry. The current version of the model consists of thirty-three diagrams, with 113 different activities and over 200 different inputs, outputs, controls and <span>mechanisms</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>  Scope. The scope of the model is the whole communication value <span>chain</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> from initial research to the assimilation of research results to improve every-day life. The model treats both informal and formal communication, as well as the publishing of data, but the <span>major</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>focus</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is on modelling the publishing and indexing of traditional peer reviewed journal articles, as well as the activities of readers to find out about them and access them. The new <span>business</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>models and <span>parallel</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>functions enabled by the Internet, such as open access journals and e-print repositories, are also in <span>focus</span>. <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>" />
+<meta name="dc.subject.keywords" content="scientific communication, scholarly publication, open access" />
+
+<!--leave the following to be completed by the Editor-->
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="paper307.html" />
+<meta name="dc.relation.IsPartOf" content="infres122.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2007-01-15" />
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			}
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}
+		}
+
+	</script>
+
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted maroon;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: maroon;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy;
+    border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy;
+    font-weight: bold;
+}
+
+
+</style>
+
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif"
+      width="336" /><br />Vol. 12  No. 2, January 2007<br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres122.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+<hr style="COLOR: maroon" size="1" />
+
+<h1>A model of scientific communication as a global distributed information system</h1>
+
+<h4 align="center"><a href="mailto:bo-christer.bjork@hanken.fi">Bo-Christer Bj&ouml;rk</a><br />
+Department of Management and Organisation, Swedish School of Economics and Business Administration, Helsinki, Finland </h4>
+<br />
+<form>
+<fieldset>
+<legend>Abstract </legend>
+<blockquote>
+<strong>Introduction.</strong> <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>formal graphical model of the scientific communication process is presented in this paper.<br />
+<strong>Purpose.</strong> The purpose of the model is to act as a road <span>map</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for policy <span>discussions</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and research concerning the process. In <span>comparison</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to earlier models found in the literature this model is more <span>detailed</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> hierarchical and includes more modelling constructs (activities, inputs, outputs, controls, mechanisms).<br />
+<strong>Methodology.</strong> The modelling methodology used is IDEF0, a process modelling method, which previously has mainly been used for <span>business</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>process reengineering in the manufacturing industry. The current version of the model consists of thirty-three diagrams, with 113 different activities and over 200 different inputs, outputs, controls and <span>mechanisms</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><br />
+<strong>Scope.</strong> The scope of the model is the whole communication value <span>chain</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> from initial research to the assimilation of research results to improve every-day life. The model treats both informal and formal communication, as well as the publishing of data, but the <span>major</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>focus</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is on modelling the publishing and indexing of traditional peer reviewed journal articles, as well as the activities of readers to find out about them and access them. The new <span>business</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>models and <span>parallel</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>functions enabled by the Internet, such as open access journals and e-print repositories, are also in <span>focus</span>. <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> </blockquote>
+</fieldset>
+</form>
+
+<br />
+<div align="center">
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: maroon;" onclick="doChangeFont()" /></div>
+<br />
+<br />
+<div style="text-align: center; color: navy; background-color: yellow; border-left: thin <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Blue; margin-left: 250px; margin-right: 250px; border-bottom-width: thin; border-bottom: thin <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Blue; border-right: thin <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Blue; border-top: thin <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>Blue;">
+The author has provided <a href="p307.pdf">a pdf file</a> for ease of printing</div>
+
+<br />
+
+<h2>Introduction</h2>
+
+<h3>Technology developments as a trigger for changes in scientific communication</h3>
+
+  <p>The speed of progress in science has always been <span>strongly</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>dependent on how efficiently scientists can communicate their results to their peers and to lay persons willing to implement these  results in new technology and <span>practices</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> For <span>centuries</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the communication <span>chain</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>was very slow, relying on tedious copying of scientific texts by hand. Communication was to a large extent local, <span>taking</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>place orally in the few <span>universities</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>then existing. The <span>invention</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the printing press was a <span>major</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>step forward and enabled the cost-effective reproduction of monographs, as well as the establishment of more systematic forms of communication, in the form of regularly appearing scholarly journals. Around the same time scientists started organizing learned societies, the <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>aim of which was to facilitate the spread of knowledge.</p>
+
+  <p>During the 20th century science became recognized as a <span>major</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>driver for economic development and the number of scientists increased dramatically. In addition to journals and monographs conferences became an important form for communication, due to the increased possibilities for travel. During the latter half of the century information technology  had a profound impact on the scientific publishing process. First it enabled the <span>setting</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>up of databases of bibliographic data, which greatly facilitated the <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for relevant publications. Secondly word processing increased  the efficiency of both the <span>writing</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of manuscripts and in the handling of them during the printing process.</p>
+
+  <p>But the most dramatic effects on the overall process have occurred during the last fifteen years in information <span>distribution</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and retrieval. It is perhaps no coincidence that <span>scientist</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>have been among the pioneers in using both e-mail and the Web. Science is by its nature both global and collaborative and the <span>sorts</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of networking capabilities now <span>offered</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>are perfectly aligned with the open knowledge sharing goals of the academic <span>community</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+
+  <p>A large part of this communication process takes place as a distributed peer production process. Scientists usually <span>require</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>no monetary rewards for sharing their results, in contrast to producers of music or popular literature. What they are interested in, in addition to advancing science itself, is building up relationship with other scientists, or building a reputation which enables them to advance in their careers, get better grants etc. The more others read their publications and cite them the better. Unfortunately the legal, economic and behavioural infrastructure that underpins part of this communication process was shaped by the developments of the many decades preceding the Internet and has now become something of a straightjacket that hinders progress.</p>
+
+  <p>Traditionally scholarly journals are sold or licensed to libraries on a subscription basis by journal title or bundles of titles from the same publisher. Users affiliated with the subscribing libraries get access to the journals either in print, electronic, or both formats. As electronic publishing of journals has become common, new <span>business</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>models have been proposed, notably open access publishing (a model for publishing scholarly papers, where the full text is retrievable on the Web for <span>free</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by anybody and the revenue for financing the journal is secured from authors or <span>third</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>parties). In conjunction with publishing in a traditional subscription based journal, publishers may give permission to authors to place an author copy of their final paper in an institutional repository, subject repository, or on the author's own Web site. Open access economic models that replace traditional 
+licensing models rely on either author payment to cover  publication costs or publication costs being met by other means, such as advertising or sub0ies.</p>
+
+  <p>The potential benefits and negative effects of an increased use of the open access models for scientific publishing of peer reviewed journal articles is currently the subject of quite heated debates (<a href="#goo04">Goodman and Foster 2004</a>). Strong and sometimes emotionally loaded arguments are put forward by proponents of Open Access; equally vociferous are defenders of the subscription or licensing model, the current dominant publishing economic model. The debate has also <span>reached</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>into the general media, in particular in connection with certain government initiatives to intervene in favour of open access <span>parallel</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>publishing of articles published in subscription based journals (The National Istitutes of Health (<a href="#nih05">2005</a>) proposals in the USA, the United Kingdom parliamentary enquiry (<a href="#gb04">Great Britain 2004</a>) and the UK research councils' plans (<a href="#res06">Research Councils... 2006</a>).</p>
+
+  <p>Many rather superficial arguments for and against open access have been proposed. Some open access proponents state that it is morally <span>wrong</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for a number of big publishers to use their quasi-monopoly <span>situation</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to make excessive profits from content they get for <span>free</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>from academics and then selling the same content back to the academic sector. On the other hand, open access opponents are worried about the decreased <span>possibility</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for scientific societies to use revenue from journals to support other activities and about their loss of membership if journals become <span>free</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>rather than bundled with membership. Some large <span>universities</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>whose faculty are prolific authors are concerned that their overall costs will <span>actually</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>increase if they <span>move</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>from a subscription model to an author-pays open access model.</p>
+
+  <p>Although a number of <span>empirical</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>studies of the economic effects of going electronic and/or open access have been made, it is difficult to compare the results of such studies since they are often measuring different aspects of the overall process. Thus there is a clear need for models that structure the overall scientific communication process, and can be used as a basis for comparing and integrating the results of different studies.</p>
+
+<h3>Earlier models of the scientific communication process</h3>
+
+  <p>There are earlier models or studies of the scientific communication process, which have been presented in the scientific literature. Garvey and his colleagues at the John Hopkins University published a model in the early 1970s, based to some part on <span>empirical</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>observation of scientists in the <span>domain</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of <span>psychology</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(<a href="#ten00">Tenopir and King 2000</a>: 88-89). The Garvey-Griffith model (<a href="#gar65">Garvey and Griffith 1965</a>)was a good <span>description</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of how the communication process functioned at a time when information technology-support was still lacking. The modelling was done using verbal descriptions supplemented by a few diagrams. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>central</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>aspect was to depict both formal and informal communication of research results and also the inclusion of the research into the body of scientific knowledge in its <span>domain</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>through citations in other publications, mention in review articles etc.</p>
+
+  <p>In the mid 1990s Hurd re-examined the <span>status</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the scientific communication process and took explicit account of the emerging effects of the Internet (i.e., e-mail and listservers and electronic publications) (<a href="#hur96">Hurd 1996</a>). She later revisited the subject (<a href="#hur04">Hurd 2004</a>) <span>taking</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>into account developments such as self-publishing on the Web and institutional repositories. <span>Figure</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>1 illustrates the <span>central</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>aspects of the Garvey/Griffith and Hurd models.</p>
+
+  <p>S&oslash;ndergaard <em>et al.</em> (<a href="#son03">2003</a>) proposes a revised version of an earlier model of scholarly communication developed in the 1970s (the UNISIST model). The revised model takes into account the effects of the Internet and the authors also stress the need to start analysing the differences between scientific domains.</p>
+<br />
+<div align="center"><img src="p307fig1.jpg" width="540" height="720" alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>1" /></div>
+<div align="center"><br /><strong>Figure 1: An illustration of the scientific communication process including facets of both the Garvey/Griffith model and Hurd's additions to it (<a href="#swi05">Swisher 2005</a>)</strong></div>
+
+  <p>The book by Tenopir and King (<a href="#ten00">2000</a>) contains a comprehensive discussion of the scientific publication process from a life-cycle <span>perspective</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and, in particular, synthesizes a large body of <span>empirical</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>evidence concerning the cost of different phases.</p>
+
+  <p>An interesting slightly different viewpoint is <span>offered</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by Lewison (<a href="#ten00">2006</a>), who <span>discusses</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>what happens to a research publication after it has been read, in terms of how it is quoted in the popular press, influences clinical guidelines etc.</p>
+
+<h3>Scientific communication viewed as an information system</h3>
+
+  <p>One interesting aspect of the scientific communication process is that it is a global, interconnected information system. The academic <span>discipline</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> which studies the development and use of   information <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in companies and organizations, is usually called Information Systems Science. Another related but <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>discipline is Information Studies or Sciences. Most researchers who have published studies of the scientific communication process and its aspects have come from the latter <span>discipline</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> This study tries to combine perspectives from both these fields.</p>
+
+  <p>Information Systems Science typically studies information technology-systems that organizations build to support their activities. The <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>can also span different organizations or be interfaced to customers (i.e., e-commerce systems). Typical for these <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is that they usually are purposefully planned and built in a top-down fashion. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>good example is provided by <span>so-called</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>enterprise resource planning <span>systems</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> which large companies build for themselves. In this respect the scientific communication system, and the information technology-support it uses, is different, because it has grown in an organic way over decades, through the <span>integration</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of <span>tools</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>produced by a large number of different players in a non-hierarchical and uncoordinated fashion. Nobody owns or has control of the scientific communication system, just like the Internet.</p>
+
+  <p>Large integrated information technology-systems in corporations fulfill multiple functions. First, they support transactions, such as registering and controlling sales in an e-commerce <span>setting</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Secondly, they provide management with a basis for decision support by providing aggregate information based on often huge <span>amounts</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of low-level transactions (<a href="#tur98">Turban and Aronson 1998</a>). The quarterly accounts of large companies is a good example.</p>
+
+  <p>Also, the scientific communication process fulfills two functions. The <span>primary</span>, <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> of course, is to help in communicating interesting research results to interested recipients. The <span>secondary</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is to provide decision support to research administrations to help in deciding about research grants, professorial appointments, etc. In the case of scientific publishing the fulfillment of the second function has, as a by-effect, led to a <span>situation</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> which <span>strongly</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>favors the existing system, making this area less amenable to innovations and new <span>business</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>models than other areas of  e-commerce.</p>
+
+  <p>There are several stages in the development of information <span>systems</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> including requirements analysis, <span>design</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> <span>programming</span>, <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> and implementation. In the early stages, formal modelling methods, usually <span>supported</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by graphical <span>tools</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>are typically used. <span>Methods</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>typically used include data flow models, <span>semantic</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>data models, object models (<a href="#som95">Sommerville 1995</a>). In his book on scientific publishing and knowledge sharing Hars (<a href="#har03">2003</a>) includes example diagrams using both flowcharts and object models. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>significant benefit of using some of these techniques is that they are <span>supported</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by  information technology-based modelling <span>tools</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> and that they can be used as basis for more <span>detailed</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>design</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and <span>programming</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in an integrated fashion.</p>
+
+  <p>Despite the fact that the scientific communication process has not been <span>designed</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>but has evolved, it might be useful to model it using some <span>suitable</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>formal process-modelling <span>technique</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> The <span>technique</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> which was chosen in this work, is called IDEF0. The traditional uses of IDEF0 models has been in illuminating current and alternative processes in <span>business</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>process re-engineering projects, typically focusing on the <span>design</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and manufacture of <span>industrial</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>products like submarines or buildings. The <span>choice</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of IDEF0 was partly a matter of convenience, the fact that the author was <span>familiar</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>with the method from previous <span>business</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>process re-engineering research (<a href="#som95">Karstila <em>et al.</em> 2000</a>).</p>
+
+<h2>Modelling methodology and scope of the model</h2>
+
+<h3>The IDEF0 Modelling methodology</h3>
+
+  <p>The <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>concepts of the IDEF0 method are the activity and the flow (<a href="#nat93">National Institute... 1993</a>). Activities are shown as <span>rectangles</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and their <span>names</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>start with verbs. Flows are <span>represented</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by <span>arrows</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and the <span>names</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>are nouns. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>flow can be either an input, output, control or <span>mechanism</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Often the <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>ICOMs (inputs, controls, outputs, mechanisms) is used to designate flows. An input represents something, which is consumed in an activity to produce an output. Typical inputs could be raw materials, <span>energy</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> human labour, but also information, when the purpose of the activity is to transform the   information. Outputs can be reused as inputs to further activities, and feedback loops are possible. The carrying out of activities is guided by controls. Outputs that take the form of information can also be used as controls. Mechanisms, which point at activities from below, 
+are persons, organizations, machines, <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>etc., which carry out the activities. The <span>presentation</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the IDEF0 diagrams is hierarchical in a way that individual activities <span>contained</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in diagrams are broken down into further sub-activities in diagrams lower in the hierarchy.</p>
+
+  <p>As an example of using the IDEF0 method <span>con0er</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the preparation of a spaghetti meal (Figure 2). The top-level context diagram contains only one activity, describing the overall activity. On the next level this activity is subdivided into three sub-activities: prepare the sauce, cook the pasta and serve the dish. These can inherit some of the flows of the mother diagram, but alternatively new flows can appear at this level. Thus, the aggregated input ingredients from the context diagram are disaggregated on the next sub-level into several different ingredients (minced meat, etc.).</p>
+<br />
+  <div align="center"><img src="p307fig4.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>2" /></div>
+  <div align="center"><br /><strong>Figure 2. An illustration of the organisation of IDEF0 models. All models start with a context diagram, <span>containing</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>only one activity, which then is split into sub-activities, which in turn can be split into sub-activities etc.</strong></div>
+
+  <p>IDEF0 and similar modelling techniques are <span>frequently</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>used in process re-engineering efforts to clarify the process and propose changes in it. Using a formalized tool helps in communicating about the process. For this modelling exercise a particular tool called BPwin has been used for making and editing the IDEF0 model. Compared to a simple drafting tool BPwin enhances the speed and consistency of the modelling work, especially for <span>larger</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>models and when changes are needed.</p>
+
+  <p>In the modelling itself some rules of IDEF0 modelling have not been strictly enforced. Tunnelling of <span>arrows</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(marking <span>arrows</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>that will not be inherited to more <span>detailed</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>diagrams) has not been done. Also, several possible ICOMs that exist in reality have not been indicated. The overall <span>design</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>con0eration has been simplicity and showing the essentials, in particular concerning the break into activities. This author has seen many IDEF0 models where the task of communicating the ideas to others is defeated by too-complicated models.</p>
+
+<h3>Scope of the modelling work</h3>
+
+<p>The overall aim of the modelling work undertaken here was to understand the scientific communication process and how it has been affected by the Internet, in order to provide a basis for a cost and <span>performance</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>analysis of various alternative ways of organizing it. The model can also work as a road <span>map</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for positioning various new initiatives, such as e-print repositories and harvesting <span>tools</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> within the overall system. Although the current model also includes communication more generally, the <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is on publishing as traditional peer-reviewed journal articles.</p>
+
+  <p>The model explicitly includes the activities of all the participants in the overall process, including the activities of the:</p>
+
+<ul>
+  <li><strong>Researchers</strong> who perform the research, write the publications and act as reviewers;</li>
+  <li><strong>Research funders</strong> who <span>strongly</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>influence the process;</li>
+  <li><strong>Publishers</strong> who manage and carry out the <span>actual</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>publication process;</li>
+  <li><strong>Libraries</strong>, which help in archiving and in providing access to the publications;</li>
+  <li><strong>Bibliographic services</strong>, which facilitate the identification and retrieval of publications;</li>
+  <li><strong>Readers</strong> who <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for, retrieve and read publications; and</li>
+  <li><strong>Practitioners</strong> who implement the research results <span>directly</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>or indirectly.</li>
+  </ul>
+
+<p>The current version of the model has some limitations, which should be kept in mind. Its <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>emphasis</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is on the publication and dissemination of research results in the form of publications that, in the end, can be printed out and studied on paper (irrespective of whether the publications are distributed on paper or electronically). Thus, forms of communication such as oral communication, unstructured use of e-mail and multimedia, which are all <span>essential</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>parts of the scientific knowledge management process, as well as publishing of data and models, are only shown on a high level of <span>abstraction</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in the model. Details could be <span>added</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>at a later stage, but would also add to the complexity of the model.</p>
+
+  <p>One important aspect of the process, is the funding of the different activities. Although parts of the overall process are carried out by commercially operating parties, almost all stages are predominantly funded by public finance through university budgets, research grant organizations, etc. The model depicts publishing and value-added services using both paper and electronic formats in an integrated way. Pure electronic or <span>pure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>paper-based publishing could be described by subsets of the model. The same applies to <span>free</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>publishing on the Web (<em>open access</em>), which resembles traditional publishing, but where certain activities such as negotiating, keeping track of and invoicing subscriptions can be almost entirely left out.</p>
+
+  <p>The model includes some activities, which would be <span>typical</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for a scientific publisher publishing several journals, allowing for economies of scale. The activities of single-journal publishers could be described by a subset. The reason for including activities such as the general activities of a publisher is that these significantly influence the cost of individual journals in the form of the general overhead costs that publishers add to the subscription prices.</p>
+
+  <p>The <span>central</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>unit of observation in the model is the single publication (in particular the journal article), how it is written, edited, printed, distributed, archived, retrieved and read, and how <span>eventually</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>it may affect practice. The scope is thus the full life cycle of the publication and the activities of <span>reading</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>it, which also is reflected in the name chosen for the model. This means in practice that most of the activities take place during five to ten years after the initial <span>writing</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the manuscript, but in some cases there will be a demand to access the results after decades.  Note also that compared to some of the earlier models the downstream life of manuscripts and electronic copies of publications is also modelled quite extensively.</p>
+
+  <p>Analysing the whole process in this way should help in highlighting how different actors provide <span>added</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>value to the end customers at each stage. It is close in spirit, therefore, to the concept of value-chain or value system analysis as defined by Porter (<a href="#por85">1985</a>). In the long run the customers (authors and readers) will decide on which <span>business</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>models prevail based on how much <span>added</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>value different intermediaries, such as open access journals provide them.</p>
+
+<h3>Overall organization of the model</h3>
+
+  <p>The current version of the model, which in short form can be called the <em>SCLC-model</em>, includes thirty-three <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>diagrams, arranged in a hierarchy up to <span>seven</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>levels deep. There are typically three to four activity boxes on each diagram, although there are a couple of diagrams with more activities and some with only two. Official IDEFO guidelines recommend using up to six activities in a diagram, but it was felt that models with fewer activities to a diagram are easier to read and understand. There are altogether 113 activity boxes and approximately 250 labelled <span>arrows</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> The overall hierarchical breakdown of the model is shown below in Table 1 (detailed activity breakdowns have been omitted in some parts).</p>
+<br />
+<div align="center"><img src="p307tab1.gif"  alt="<span>table</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>1" /></div>
+<div align="center"><br /><strong>Table 1: Major hierarchical breakdown of the SCLC model</strong><br />(Not all diagrams are broken down in the paper)</div>
+
+  <p>Only the <span>major</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>diagrams are shown in the <span>table</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Some diagrams are further broken down into <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>activities. In the following model walk-through each diagram is explained separately. The diagrams are numbered using the standard IDEF0 numbering scheme, which helps to keep track of the hierarchical position of each diagram.</p>
+
+  <p>One aspect of IDEF0 modelling, which readers might notice, is the ambiguity concerning the use of information flows as either controls or inputs. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>good case is the review of manuscripts. The earlier version of the manuscript is used as an input being revised to produce a better version as output, and this is <span>controlled</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by the reviews. There is no general <span>rule</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for this and often either <span>choice</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>could be <span>justified</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+
+  <p>Note that this version of the model is the fourth and that the model has continuously evolved based on the feedback received. The model has been renamed Scientific Communication Life Cycle Model (SCLC-model), because of its enlarged scope. The earliest published version was called the Scientific Publishing Life-Cycle model (<a href="#bjo03b">
+Bj&ouml;rk and Hedlund 2003</a>). In addition, a conference paper (<a href="#bjo03a">Bj&ouml;rk and Hedlund 2003</a>) and a journal article (<a href="#bjo04">Bj&ouml;rk and Hedlund 2004</a>) discussing parts of the model have been published. Version 3.0 of the model has been posted on the Web pages of the Open Access Communication for Science project (<a href="#bjo05">Bj&ouml;rk 2005</a>).</p>
+
+
+<h2>Model walk-through</h2>
+
+<h3>A-0 Do research, communicate and apply the results - context diagram</h3>
+
+  <p>This is the <span>so-called</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>context diagram for depicting the overall model. The context diagram is traditionally the starting node of all IDEF0 models, and contains only one activity describing the overall process. The philosophy of this diagram is to show how science as a global knowledge creating and sharing system can help improve everyday life as well as create new scientific knowledge, which is fed back into the existing body of scientific knowledge. The <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>participants in the process are collectively shown as a <span>mechanism</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>arrow coming into the activity box from below, and the <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>drivers controlling the behaviour of the participants are shown coming in from above (scientific curiosity, economic incentives). Also, scientific problems to be addressed by the research and the whole accessible body of existing scientific knowledge are seen as controls. From an academic viewpoint the 
+<span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>output is new scientific knowledge. From the viewpoint of society that funds research the most important outcome is better <span>quality</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of life.</p>
+<br />
+  <div align="center"><img src="p307fig6.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>3" /></div>
+
+<h4>A0&nbsp; Do research, communicate and implement the results - breakdown</h4>
+
+  <p>This diagram is <span>crucial</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for understanding the life-cycle view adopted in this modelling effort. The whole life-cycle is seen as consisting of four <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>stages. Fund R&amp;D is included in the model as a <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>activity. One reason for this is the importance research funders (understood in the widest sense including basic university funding) have in the shaping of the scientific communication <span>chain</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> since they, through research contracts and university guidelines, have a strong indirect influence on where researchers choose to <span>publish</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>their work. This can for instance be seen in the recent mandates and recommendations of the NIH, Wellcome Trust, Research Councils UK or Finland's Department of Education. Perform the research is the most resource demanding part of the system. Communicate the results is the most <span>extensive</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>part of the model. The end result of this activity is 
+called disseminated scientific knowledge, reflecting the viewpoint that scientific results which have been published, but which are not read by the <span>intended</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>readers are rather useless. The downstream activity apply the <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is important in order to achieve the improved <span>quality</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of life which research funders mainly are looking for.</p>
+<br />
+<div align="center"><img src="p307fig8.gif" alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>4" /></div>
+
+<h3>A1&nbsp; Fund R&amp;D</h3>
+
+  <p>The global scientific communication system fulfils two functions; one is to communicate the knowledge as efficiently as possible. The other is to act as a decision support system for university administrations, granting agencies etc. This part of the model depicts the decision support functions of the overall system. It is important to include in the overall model, since certain aspects of this part, for instance the use of journal impact factors as a proxy for <span>quality</span>, <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> constitute strong barriers for innovations in the communication parts of the overall system.</p>
+
+  <p>Funding decisions are here <span>understood</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to include both decisions about basic university funding (e.g., the UK research assessment exercise), decisions about individual research grants and  academic appointments. The process can be seen as consisting of three <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>parts, of which the evaluation of research proposals only applies to the decision-making about individual project <span>applications</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+<br />
+<div align="center"><img src="p307fig10.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>5" /></div>
+
+<h3>A11 Evaluate prior research of applicants</h3>
+
+  <p>This diagram shows more in detail the part of the global information system that acts as a decision support system for university administrations and research funding organizations. At best, the   publications themselves are assessed by peers, but very often due to time and resource constraints the <span>status</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the journal where a researcher has published is used as a proxy for <span>quality</span>. <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>  Citation counts, using a system such as the ISI Web of Science, provide a reasonably objective measure of the impact of a particular publication, but only after a <span>con0erable</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>time lag. The uploading of the metadata of a publication to a CRIS (Current Research Information System) is interesting from the information system development viewpoint, since the author is usually asked to do this, and since it would be very useful to integrate the CRIS system with the institutional repository of the same 
+university (<a href="#ass06">Asserson and Simons 2006</a>). CRIS <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>are used in Finland, for instance, to produce the statistics that the Department of Education <span>requires</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>from all <span>universities</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+<br />
+<div align="center"><img src="p307fig12.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>6" /></div>
+
+<h3>A2&nbsp; Perform the research</h3>
+
+  <p>This diagram shows a highly simplified view of a <span>typical</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>research project. Note that one important <span>feature</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of IDEF0 diagrams is that the consecutive activity boxes do not <span>necessarily</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>imply a strict order in time as in scheduling methods. Thus, the activity study existing scientific knowledge can go on after the other two activities have started. The important thing is that it provides  input to these. Clearly this is only one possible way of looking at the research process. The reason for choosing this view is that it clearly distinguishes the knowledge <span>acquisition</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>activity, which also is the <span>topic</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the later stages of the whole model. Here it is seen as providing input to the research that <span>produces</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>new scientific knowledge, whereas the later stages of the model show how other researchers utilize the results of this research for their own <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>research projects.</p>
+
+  <p>Note that, according to studies of their <span>reading</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>habits, academics spend around two to three months a year retrieving and <span>reading</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>scientific literature, in particular journal articles (<a href="#kin06">King <em>et al.</em> 2006</a>). The efficiency of this activity, in terms of minimising the time and efforts spent on <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and retrieval and in terms of being able to identify and getting access to the most relevant literature is the <span>central</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>issue of this modelling effort.</p>
+<br />
+<div align="center"><img src="p307fig14.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>7" /></div>
+
+<h3>A3&nbsp;&nbsp; Communicate the results</h3>
+
+  <p>The scientific communication process is <span>divided</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>into an informal and a formal part. Informal communication is carried out in the form of oral presentations of all <span>sorts</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(person-to-person meetings, conference presentations) as well as e-mail messages, whereas formal communication (publishing) relies on written texts and on <span>quality</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>control by peers. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>central</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>difference is that in informal communication the producer of the information usually has full control or awareness of who the recipients are (e-mails to selected colleagues, presentations at seminars, etc.). In science, formal publishing usually has a highly specific meaning. It is often carried out in peer-reviewed outlets (working papers of <span>universities</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> for instance, are usually not included) and, in particular, it is assumed to <span>establish</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>priority of new discoveries. In the model a more functional view is taken, where the 
+pre-stages of formal publishing (working papers, posting manuscripts to preprint <span>servers</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>etc.) are lumped together with traditional formal publishing. This diagram takes into account the fact the scientists not only <span>publish</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>traditional-looking textual accounts (<em>papers</em>) but also data and models. Examples of the latter could include <span>astronomical</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>observation data, virtual reality models of historical artefacts, genome charts, and <span>computer</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>code. Until now the Open Access movement has mainly concentrated on facilitating access to the textual account of research results, in particular the peer reviewed journal literature, but unrestricted access to research data and models is currently receiving increasing <span>attention</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(<a href="#org04">Organization... 2004</a>).</p>
+<br />
+<div align="center"><img src="p307fig16.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>8" /></div>
+
+
+<h3>A32 Communicate the results through publication</h3>
+
+  <p>This part of the model is split into four different parts. The first part, <span>publish</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the results, consists of the activities which contribute to the communication and initial publishing of the results, typically <span>involving</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the researcher himself and a publisher. The facilitate dissemination activity describes activities carried out by a large number of organizations such as information intermediaries, libraries, as well as information technology infrastructure such as Web <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>engines that facilitate for readers to find out about and retrieve publications of interest. This is in contrast to the informal   communication where the author usually is <span>directly</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>communicating with the recipients of the information.</p>
+
+  <p>The <span>third</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>part of the communication <span>chain</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is carried out by the recipients of the information in searching for, retrieving and studying publications. In any life-cycle studies this part is extremely important, and it has also been profoundly affected by the Internet. The last part consists of the activities of readers in communicating further particularly valuable research results, through citing them, incorporating them in university <span>textbooks</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>etc.</p>
+<br />
+<div align="center"><img src="p307fig18.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>9" /></div>
+
+
+<h3>A321 Publish the results</h3>
+
+  <p>Publishing consists of two <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>activities, the <span>writing</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the manuscript, which the researcher carries out alone or in a small group, usually <span>taking</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>into account feedback from colleagues, and the more formal publishing process, in which <span>out0e</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>persons, such as conference organizers, journal editors and staff etc. participate. Note that a manuscript <span>intended</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for later publication can have a later life of its own, since it can be uploaded to open access repositories on the Web.</p>
+
+  <p>The <span>writing</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the manuscript is guided by a control called scientific <span>writing</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>style, which is a label used of a <span>collection</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of formal guidelines and informal tradition taught to <span>students</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by supervision of their work by more experienced academics. The production of a proper publication in turn is partly guided by the norms of the scientific <span>community</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(which journals to <span>publish</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in, etc.), partly by commercial con0erations (what journals have been <span>established</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> decision to <span>publish</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>a particular book).</p>
+
+  <p>In order to highlight the importance of the <span>choice</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of where to submit a journal paper, a <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>activity for choosing where to submit or negotiate publishing has been inserted in the middle of the <span>chain</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+  <br />
+  <div align="center"><img src="p307fig20.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>10" /></div>
+
+<h3>A3213&nbsp; Produce publication</h3>
+
+  <p>At this stage the model is split into three <span>parallel</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>tracks which all take the generic manuscript as input. The <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>monograph is used to denote scientific publications which usually are published by the university of the researcher and which are not part of a scientific periodical journal or conference proceedings. Typical examples include working papers, research reports and Ph.D. theses. In some cases monographs might also be published by commercial book publishers, if there is a market demand. Monographs constitute a more important channel for communication in the arts and humanities than in science, technology and medicine.</p>
+
+  <p>Conference papers are subjected to some <span>sort</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of external review either for the <span>abstract</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>or the full paper, and are usually presented orally in addition to the printed version. Conference proceedings are published as one-off books, CD-ROMs or as annual series. Conference papers are also increasingly posted openly on the Web by the organizers.</p>
+
+  <p>Articles in scientific periodicals are subjected to peer review. It is important to note that periodicals articles have a higher likelihood of being referenced in bibliographical services than the other types of publications. Also journals are usually available by subscription whereas the access to monographs and conference proceedings is predominantly <span>acquired</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>on a case-by-case basis.</p>
+<br />
+  <div align="center"><img src="p307fig22.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>11" /></div>
+
+<h3>A32131&nbsp; Publish as monograph</h3>
+
+  <p>In the model three types of monographs are <span>distinguished</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Reports are typically produced by government or private research laboratories and sometimes by university departments. In the past such reports have mostly been sold individually but nowadays they are increasingly put freely available online, since they offer a good marketing <span>mechanism</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for the responsible research organization.  Doctoral theses are a rather special case since they usually undergo a <span>rigorous</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>quality</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>control and are rather lengthy compared to reports, not to mention articles. Increasingly <span>universities</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>are
+  putting them into their institutional repositories. Books printed by commercial or society publishers are a <span>third</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>important category. These can benefit from the marketing and indexing channels of the publisher, but the decision to <span>publish</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is also <span>strongly</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>based on commercial con0erations, in contrast to the two earlier <span>modes</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+
+  <p>This diagram uses an <span>abstraction</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>mechanism <span>frequently</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>used in the model. The outputs Report, Thesis and <span>Book</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>are <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>outputs but merge on the higher level diagram to form the super-type Monograph (A3213).</p>
+<br />
+  <div align="center"><img src="p307fig24.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>12" /></div>
+
+<h3>A32133 Publish as scholarly journal article</h3>
+
+  <p>The purpose of this diagram may at first sight be difficult to understand. The idea is to show all the activities, which are carried out by the publishing organization, and thus have a cost  associated with them. This is the reason for separating out activities such as Do general publisher activities, do general journal activities. Both of these demand resources, which <span>cause</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>overhead costs, which then are <span>added</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>on top of the basic variable costs caused by the processing of each individual article (as defined in the activity process article). For instance, <span>setting</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>up and maintaining the information technology infrastructure for a portfolio of journals could be such an overhead-causing item. In addition to the technical output the different revenue streams that journal publishing is generating are also shown.</p>
+
+  <p>The <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>pipeline in the model is, however, the input arrow article manuscript, which <span>directly</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>enters the activity process article. This provides the root for a rather straightforward work-flow-like model of what happens to a manuscript on its way to publishing.</p>
+<br />
+  <div align="center"><img src="p307fig26.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>13" /></div>
+
+
+<h3>A321332&nbsp; Do journal specific activities</h3>
+
+  <p>The activities modelled on the level of the individual journal title, but not the individual submissions or articles, include general marketing both to subscribers and authors, negotiations for subscriptions and the management of them, as well as the planning of the journal (for instance special issues, editorial board). Interesting <span>parameters</span>, <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> which are set on this level, are the pricing of subscriptions, which have a strong influence on the number of subscribers a journal reaches. Subscription sponsors can for instance be drug companies, which sub0ize the personal subscriptions of practicing physicians.</p>
+
+  <p>Many of the activities on this level are typically (but not always) handled by the employed staff of the publisher. Part of the activities are also handled by the academics involved in a journal, in particular by the editors.</p>
+<br />
+  <div align="center"><img src="p307fig28.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>14" /></div>
+
+<h3>A321333&nbsp; Process article</h3>
+
+  <p>This diagram starts by the review activities carried out as a co-operation between the editor, the researcher and anonymous peer academics. This activity demands resources but is usually not a cost item of <span>significance</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for the publishers since reviewers usually work for <span>free</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(from society's viewpoint, however, it is a significant cost item). The input consists of submitted manuscripts and output of <span>accepted</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>or rejected manuscripts. Note, in particular, that a significant proportion of manuscripts rejected by one journal are resubmitted as such or with minor revisions to other  journals and thus continue adding cost to the overall total.</p>
+
+  <p>The last activity in the diagram includes the technical activities needed to <span>publish</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the article. These are usually well described in the cost accounts of publishers. In between these two minor activities of particular interest from an open access <span>perspective</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>have been inserted, the signing of a copyright agreement and the payment of possible article <span>charges</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+
+  <p>In relating cost to the activities in this <span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>it should be noted that the costs of the technical phases are highly correlated to the number of <span>accepted</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>papers, whereas the cost of the peer review stage is more related to the number of submissions. Thus, journals that have a high rejection rate of say 90% have a much higher overall cost per published article than, say, journals with a  rejection rate of 50%.</p>
+<br />
+  <div align="center"><img src="p307fig30.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>15" /></div>
+
+<h3>A3213331 Do peer review</h3>
+
+  <p>This part of the model depicts the activities carried out during the traditional peer-review process. Note the use of a feedback <span>mechanism</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> where the reviewers' comments become a control of the <span>subsequent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>revise manuscript activity, and where the revised manuscript is fed back into the review process. There have been interesting experiments with new forms of <span>quality</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>control using the Web, where for instance manuscripts are made openly available on a journal site and readers 'vote' on which should be promoted to <span>accepted</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>papers (<a href="#ele06">Electronic Transactions... 2006</a>). <span>Nevertheless</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>it seems that in the near <span>future</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the current model will prevail.</p>
+
+  <p>The peer review part of the overall process is interesting because of the way it operates and is financed. It is a good example of the generic type of peer production (<a href="#ben06">Benkler 2006</a>) that, due to the Web, is now <span>beginning</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to have more and more impact in certain niche domains of information and cultural production (e.g.,, Open Source <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and Wikipedia).</p>
+<br />
+  <div align="center"><img src="p307fig32.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>16" /></div>
+
+
+<h3>A3213334&nbsp; Do technical phases of publishing</h3>
+
+  <p>After a manuscript has been <span>accepted</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>a number of activities take place. One is the final proof-reading and copy-editing of the manuscript to improve the language and <span>detect</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>minor technical errors. Note in particular the value-decreasing activity of queue for publishing, where fully processed articles have to wait for several months due to the issue scheduling of the journal. Waiting does not  imply a <span>direct</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>cost, but there may be an important opportunity cost involved from the viewpoint of the researcher and society, since the results are poorly spread before the <span>actual</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>publishing. This opportunity cost is different for different domains of science. It might be low for the humanities but is usually higher in the science, technology and medicine domains. This has been a strong motivator for the founding of both e-print archives and electronic open access journals.</p>
+
+  <p>Open access journals that are not issue based cut down this waiting time to a minimum by publishing an article when it is ready. Subscription based journals, which appear both in print and electronically, nowadays also sometimes post <span>accepted</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>papers even before formal publication on their publishing platform, thus offering a <span>partial</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>remedy to the queuing problem.</p>
+<br />
+  <div align="center"><img src="p307fig34.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>17" /></div>
+
+<h3>A32133344 Duplicate and distribute article</h3>
+
+  <p>This diagram models the two <span>parallel</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>activities of publishing a print and an electronic version of an article. Paper publishing involves the traditional printing and <span>distribution</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>activities, which have a much higher marginal cost per copy produced than electronic publishing. Pure paper or <span>pure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>electronic publishing can be obtained as subsets of this part of the model. Many of the bigger publishers nowadays <span>publish</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>both paper and electronic versions in <span>parallel</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></p>
+
+  <p>The <span>central</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>difference between paper and electronic publication is that paper (in this context) necessitates a revenue model of subscriptions or pay-per-view, whereas electronic publication, because of the almost <span>zero</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>marginal cost of additional readers, can be used in conjunction with a <span>larger</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>variety of revenue models.</p>
+<br />
+  <div align="center"><img src="p307fig36.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>18" /></div>
+
+
+<h3>A322 Facilitate dissemination and retrieval</h3>
+
+  <p>This is the part of the overall process, which traditionally to a large part has been handled by intermediaries and research libraries. In this diagram the process has been split into two sub-activities in which the first models activities carried out by different infomediaries, typically only once for the whole world market, and the second the activities carried out in the local organizations of the readers, thus typically hundreds or even thousands of times for each article or journal issue.</p>
+
+  <p>The preserve publication activity is currently receiving increasing <span>attention</span>, <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> since the archiving of electronic versions of journals for decades implies a number of problems. National libraries in many countries are getting involved in this. The long-term preservation issue is both technical and organizational, since the subscribing libraries no longer get to <span>possess</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>physical copies of the material they subscribe to. Often, it is unclear in the licensing agreement what happens if they cancel an electronic subscription for access to older material. Also, the responsibility of publishers in case of mergers or cancellation of titles is accentuated for electronic material.</p>
+<br />
+  <div align="center"><img src="p307fig38.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>19" /></div>
+
+<h3>A3221&nbsp; Facilitate retrieval globally</h3>
+
+  <p>This diagram includes a spilt between open access material, which can be either in the form of manuscripts or copies of <span>formally</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>published papers posted in e-print archives, and in <em>toll-gated</em> material. For purchasable material a further spilt is made into <span>secondary</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>publishers who bundle full-text material from several different sources (an example is EBSCO) and sell it to libraries, or indexing services, which help in the retrieval function. Note the importance of the copyright agreement for an individual publication, which acts as a control of the posting of a copy to an e-print   archive.</p>
+
+  <p>The <span>third</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>sub-activity of this diagram shows the <span>integration</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the metadata about a publication (including a possible Web address) into different <span>sorts</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>services, whether <span>free</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>or   subject to subscriptions. This is where tremendous developments have taken place in the last few years. The control activity of such services are different <span>sorts</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of standards for the <span>semantics</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and syntax of metadata.</p>
+<br />
+  <div align="center"><img src="p307fig40.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20" /></div>
+
+<h3>A32212&nbsp; Make manuscript or copy of publication available openly on the Web</h3>
+
+  <p>This diagram depicts the different options available to an author for posting a manuscript or a copy of the <span>actual</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>publication in an open access archive. Three <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>options have been modelled, posting on <span>one's</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>own home pages, in the institutional repository of <span>one's</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>organization or in a subject-specific repository (e.g., <a href="http://arxiv.org/" target="_blank">arXiv</a>). In practice, the flow of manuscripts or ready publications <span>differs</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for these three alternatives. Theses are regularly posted in institutional repositories and subject specific repositories, in the early days in particular, have been populated by copies of manuscripts submitted to journals or conferences (hence the name preprint repository).</p>
+
+  <p>The controls of these activities are quite interesting. They can consist of reward <span>mechanisms</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> behavioural norms and, in the case of repositories, also <span>direct</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>mandates by research funders and <span>universities</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>that <span>require</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>posting copies of publications in such repositories. Finding the proper mix of <em>controls</em> will be a key success factor for repositories.</p>
+<br />
+  <div align="center"><img src="p307fig42.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>21" /></div>
+
+<h3>A32213 Integrate meta data into <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>service</h3>
+
+  <p>Traditionally subscription-based indexing services have dominated this function. Over the past years researchers have increasingly started to use general Web <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>engines for identifying and retrieving interesting publications. An effort to overcome the <span>quality</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>problems related to using general <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>engines, is the definition of the Open Archives Initiative (2006) standard for tagging scientific content material on the Web, which will enable dedicated harvesting <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>engines to <span>maintain</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>a much more focused database of <span>links</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to relevant publications.</p>
+
+  <p>A by-product of the heavy use of information technology for these <span>purposes</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is the <span>possibility</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for readers to subscribe to services, which (based on the interest profiles they define) can send them alerting e-mail messages when something they might be interested in is published.</p>
+<br />
+  <div align="center"><img src="p307fig44.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>22" /></div>
+
+<h3>A3222&nbsp; Facilitate retrieval locally</h3>
+
+  <p>This diagram shows the activities carried out by the organization in which the reader works to facilitate access; for instance, the university library of the reader. Note the inclusion of a <span>separate</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>activity for the negotiations that the library carries out in order to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the necessary licenses (the activities by library consortia could be included here as well as a <span>sort</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of overhead cost). The negotiations sub-activity also includes <span>collection</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>planning, making decisions about which journals to subscribe to, etc.</p>
+
+  <p>One of the biggest changes that electronic publishing has brought is the dramatic <span>reduction</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in the activities to make paper publications available in0e the organizations. On the other hand libraries now have to use substantial resources to build intranets, which seamlessly organize all the heterogeneous electronic material they have bought licenses to (also to <span>solve</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the problems of distant access for faculty members or <span>students</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>working from home).</p>
+<br />
+  <div align="center"><img src="p307fig46.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>23" /></div>
+
+<h3>A323&nbsp; <span>Study</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the publication</h3>
+
+  <p>This diagram structures the activities of the readers of scientific publications. Note that, from a cost per publication viewpoint, the activities of individual readers all over the world and over the whole life cycle of a publication's readings should be summed up. The find out about the publication activity results in the output metadata of the publication (including the location from which the paper or electronic version can be retrieved). This output is used as the control of the retrieve publication activity. If the publication is not already available through a subscription or as open access a decision has to be made weather it is <span>worth</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the monetary cost and effort to purchase a copy. Often this can be done at a cost of say twenty to thirty US dollars for articles. One important factor, which nowadays might negatively affect a decision to separately buy an article, is the 
+delay in getting it. Also the researcher may have to pay such acquisitions <span>directly</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>from his own budget which usually means that the barrier for obtaining it are higher than if it was already a part of <span>central</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>library licenses.</p>
+
+  <p>Finally the publication is read and the scientific information in question has been disseminated. Researchers often self-archive interesting publications they have read either as paper copies or today increasingly as bookmarks or in a database. They may also use citation-tracking <span>applications</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>such as Endnote to keep track of literature they are likely to <span>reference</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>later on.</p>
+<br />
+  <div align="center"><img src="p307fig48.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>24" /></div>
+
+<h3>A3231&nbsp; Find out about the publication</h3>
+
+  <p>This activity is rather difficult to split up into alternative <span>parallel</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>options. On this first level there is, nevertheless, a split into two generic categories; active <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(pull) where the reader is pulling for information and passive push, where the reader receives a notification through some <span>mechanism</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>that something interesting has been published (<a href="#bjo00">Bj&ouml;rk and Turk 2000</a>).</p>
+
+  <p>The pull activities are guided by the information <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>habits of the researcher in question and the <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>vehicle today is the world wide Web, and the various <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>engines and dedicated <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>facilities on offer, including the intranet of the local university library, which <span>offers</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>a <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>facility of the locally subscribed publications.</p>
+
+  <p>The push variety has been greatly enhanced because of e-mail. Most researchers regularly follow a handful of journals and screen everything published in them, at least on the title or <span>abstract</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>level. In the print world this was <span>achieved</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by getting physical copies of the journals, either as personal subscriptions or as a node in the internal circulation in a university department, but today the same functionality can be <span>achieved</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>faster by e-mailed <span>tables</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of content.</p>
+<br />
+  <div align="center"><img src="p307fig50.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>25" /></div>
+
+
+<h3>A32311 Search for interesting publication</h3>
+
+  <p>The first modelled option of the pull variety is a traditional bibliographic database <span>search</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> for instance using keywords. Other possibilities include more unstructured Web searches using a general <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>engine or just browsing from one hyperlink to another. The traditional method of physically browsing the bookshelves in a library is used less and less.</p>
+
+  <p>The pull variety is much used by <span>students</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>when they are working on a thesis and in the pre-study stages of a research project, to find out what has been written about a subject. It is less used by senior academics and practicing physicians, who more tend to read for current awareness.</p>
+<br />
+  <div align="center"><img src="p307fig52.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>26" /></div>
+
+<h3>A32312 Be alerted to a specific publication</h3>
+
+  <p>The important distinction between pull and push is, that the bibliographic <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>(pull) is triggered by the researcher himself, whereas in push the hint is coming from the <span>out0e</span>. <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Tracking a <span>reference</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in another publication and retrieving the full text is very common. In practice a lot of references are not <span>followed</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>up, if the potential reader finds that access is blocked due to a lacking subscription. From society's viewpoint this means an opportunity cost, since the <span>reading</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>not done could potentially have been an important input to further research or other activities.</p>
+
+  <p>Browsing a journal issue which is physically circulated in an organization is less and less common as libraries convert to electronic site licenses, but almost the same functionality is <span>achieved</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by e-mailed <span>tables</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of content, which offer the additional advantage of no delays. The number of personal paper subscriptions have decreased in recent years, expect for certain fields such as medicine. The option remember existence of previously read publication is modelled because this is sometimes used as the basis for retrieval.</p>
+<br />
+  <div align="center"><img src="p307fig54.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>27" /></div>
+
+<h3>A3233 Retrieve publication</h3>
+
+  <p>The basic split has here been made between the retrieval of a copy of a paper publication and one in digital form. Although the two activities modelled here may look straightforward, they might become rather complex in reality. Underneath retrieving a paper copy is a complex infrastructure of library organization and <span>storage</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of material, and electronic retrieval can on the <span>software</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>0e become quite complex, especially for material not openly available on the Web.</p>
+
+  <p>From the viewpoint of the individual researcher this is an activity where the developments with the Internet have had huge impact. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>large part of the research literature is now virtually within easy reach, in fact just a few clicks and keystrokes away.</p>
+<br />
+  <div align="center"><img src="p307fig56.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>28" /></div>
+
+<h3>A3234&nbsp;&nbsp; Read and process publication</h3>
+
+  <p>This diagram, which also could be called assimilate the knowledge, shows the activities a reader typically does. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>typical</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>pre-processing activity is making a printout of an electronic publication (usually an article) for easier <span>reading</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and annotation. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>typical</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>post-processing activity is storing a copy of an article found to be particularly interesting, as the recipient integrates the knowledge into his or her personal "store of knowledge". The <span>storage</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>could be physical, by putting photocopies in folders in <span>one's</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>file cabinet, or electronic, by storing full text files or just Web bookmarks on <span>one's</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>computer.</p>
+
+  <p>The <span>reading</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>itself can be on many different levels, from superficial browsing to determine whether an article is <span>worth</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>attention</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>to very <span>detailed</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span><span>reading</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and annotation. This aspect has not been further <span>detailed</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in the model.</p>
+<br />
+  <div align="center"><img src="p307fig58.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>29" /></div>
+
+<h3>A32342&nbsp; Read the publication</h3>
+
+  <p>Since readership and dissemination patterns differ a lot for different categories of readers of scientific publications, the model has here been split up into different activities for the perceived <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>categories.</p>
+
+  <p>Academic readers tend to read for research <span>purposes</span>. <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> They are usually well <span>supported</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in terms of large collections of journals that their university provide paid access to. An important subcategory are <span>students</span>, <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> who do not do research themselves, but who, in certain fields, read a lot, as part of assignments etc. <span>Company</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>experts read in order to carry out <span>industrial</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>R&amp;D and develop better products or enhance the operations of their companies. The usage levels vary a lot between industries.</p>
+
+  <p>Practicing physicians <span>represent</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>a very large <span>volume</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of readership of scientific journal articles, because they need to constantly keep in touch with the latest developments. Also the journals they read tend to have very large subscription bases and they often get personal paper copies at very <span>reasonable</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>prices. The general public also is some cases follows the progress in science. Here is one area in which open access could have a significant effect, since general libraries, as yet, have been able to provide very <span>limited</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>access to the research literature. One important subcategory of readers consists of government officials and politicians.</p>
+<br />
+  <div align="center"><img src="p307fig60.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>30" /></div>
+
+
+<h3>A324&nbsp; Publish <span>secondary</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>account of the results</h3>
+
+  <p>A small part of all new scientific publications has a lasting influence on the development of science. From a communication <span>perspective</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>this is <span>achieved</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>by other scientists referring to the results in their own publications through citations. These enable other interested scientists to find out about the results and retrieve the quoted publications. Also, the results may become incorporated in the standard <span>textbooks</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of a field and they may be reported on in articles and news items in the mass media.</p>
+<br />
+  <div align="center"><img src="p307fig62.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>31" /></div>
+
+<h3>A4&nbsp; Apply the knowledge</h3>
+
+  <p>In the same way as the breakdown of the research itself, this diagram is more of a contextual nature. It tries to show how disseminated scientific knowledge can be transferred by several <span>parallel</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>mechanisms into better <span>industrial</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>performance, new products and services and <span>eventually</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>a better <span>quality</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of life. This is an aspect of scholarly communication, which for instance is discussed in a recent Australian report (<a href="#hou06">Houghton <em>et al.</em> 2006</a>), where the <span>estimation</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the impact of the increased readership caused by open access on use of the results in industry and society in general is <span>attempted</span>. <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> One of these <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is <span>education</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and training, which results in better-trained professionals who go out into working life (i.e., medical doctors and engineers). There is a rather straightforward link between research and especially university <span>education</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>second 
+<span>mechanism</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is through commercial development work, which translates research results into new products, services and working methods. An important 0eline of this is the patenting of inventions, which exerts a very <span>direct</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>control on the application of the results of science in practice, as well as standardisation. Another <span>mechanism</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>is where individual citizens read research publications and are <span>directly</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>affected by them in their behaviour or <span>quality</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of life. Yet another is where research results as reported <span>directly</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>or indirectly, influence <span>laws</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and government actions (for instance taxation, public spending).</p>
+<br />
+  <div align="center"><img src="p307fig64.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>32" /></div>
+
+  <h3>A41 Educate professionals</h3>
+
+  <p>One aspect of the use of scientific research literature is its use as part of the <span>teaching</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>material used in university level <span>education</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> Traditionally, there have been certain rules as to photocopying research articles, to which the university has subscriptions (<em>fair use</em>). The availability of articles as open access clearly facilitates their use in courses and <span>parallels</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the development called open course-ware (a <span>term</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>originally coined by MIT), which is concerned with the <span>teaching</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>material (course texts, <span>presentation</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>slide, etc) developed by teachers.</p>
+<br />
+  <div align="center"><img src="p307fig66.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>33" /></div>
+
+<h3>A42&nbsp; Regulate industry and society</h3>
+
+  <p>Disseminated scientific knowledge has a big <span>direct</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and indirect influence on a number of measures, which influence <span>industrial</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>development and daily life. To quote some examples:</p>
+
+<ul>
+<li>Research on the <span>stability</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of <span>steel</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and <span>concrete</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>structures in civil engineering has <span>influenced</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>building regulations and standards.</li>
+<li>Research on global warming and its possible causes has <span>influenced</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>public policy (Kyoto agreement, emission trade between power <span>utility</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>companies).</li>
+<li>Economics research, for instance the work on Keynes, has hade a huge influence on fiscal and monetary policy</li>
+<li>Patenting is a very important and highly debated <span>mechanism</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for protecting the rights of companies making discoveries. Thus the access to both patent information and the possible <span>underlying</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>research publications is very important. In particular in areas such as genome research and the development of medicines this is a <span>central</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>issue.</li>
+</ul>
+<br />
+  <div align="center"><img src="p307fig68.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>34" /></div>
+
+<h3>A44&nbsp; Apply in practice</h3>
+
+  <p>This diagram should be read in <span>parallel</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>with diagram A32342 (Read the publication), which splits up the readership of scientific publications into a number of generic categories. The diagram shows the beneficial after affects of the disseminated research knowledge (excluding the feedback effects of science itself). Thus better awareness of the latest research helps doctors in the diagnosis and <span>choice</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of <span>treatments</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and medicines for patients. Better awareness of say the latest management theories may help the senior management in companies to the development of company practice. And better knowledge of scientific results may either help the general public in doing better informed decisions in for instance <span>energy</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>saving matter, or may be a value in itself (self-improvement as an end in itself).</p>
+<br />
+  <div align="center"><img src="p307fig70.gif"  alt="<span>figure</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>35" /></div>
+
+<h2> Conclusions</h2>
+
+<h3>Discussion</h3>
+
+  <p>The model in its current shape has not been validated in its <span>details</span>, <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> but has been discussed with several colleagues with encouraging feedback. It would in fact be very difficult to <span>design</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>a method for the validation of the model. Flaws in <span>details</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the model could be pointed out but it would be difficult to <em>test</em> the model as a whole. Every participant in the overall process has a different <span>perspective</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>on the process. The only realistic <span>test</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of the model is to show it to people and ask if they find it useful in creating a better understanding of the overall process.</p>
+
+  <p>Compared to the earlier models discussed earlier in this paper the <span>main</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>differences are:</p>
+
+<ul><li>Hierarchical structure of the model</li>
+  <li>More modelling constructs, i.e., controls and mechanisms</li>
+  <li>Much more <span>detailed</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>modelling of many of the functions</li>
+  <li>Disaggregation of inputs and outputs on more <span>detailed</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>levels</li>
+  <li>Modelling of many of the new system functions that have emerged as a result of the Internet</li></ul>
+
+  <p>It is hoped that the model could <span>prove</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>useful in providing a roadmap showing the place of a number of different initiatives for increasing access to scientific publications, within the overall system of scholarly communication.</p>
+
+<h3>Further research</h3>
+
+  <p>When discussing the economics of scientific publishing we need to look at the economic effects of changes in some parts of the system on the whole system. It should be clear from <span>reading</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>the model that changes in one part can have profound repercussions in other parts. Currently much of the <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in the debate seems to be only on the publishing phase costs and pricing , but the effects on indexing, library access, readers' retrieval costs and even on the <span>quality</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of downstream research and product development should be con0ered. It is like con0ering the effects of pricing of underground tickets in a metropolitan area. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>sharp decrease in prices (or making it <span>free</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>altogether) will have big impacts on the use of cars for commuting, traffic congestion (and non-productive time spent waiting in queues) and even air pollution.</p>
+
+  <p>In an envisioned follow-up study, which would concentrate on journal publishing, there are four <span>major</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>scenarios to compare between. The scenarios are fictitious extreme cases and at any time reality will be a mixture of these four models.</p>
+
+  <p><strong>Paper.</strong>&nbsp; All journals are published and circulated in paper only. Libraries around the world need to circulate and store them internally. Researchers can <span>search</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for articles using electronic indexing services. This was the <span>situation</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>until around 2000. This scenario is included to show what changes have been induced by the changeover from paper to electronic publishing</p>
+
+  <p><strong>Electronic, subscription-based.</strong> All scientific journal publishing goes over to an electronic only <span>mode</span>. <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> The subscription model continues to be the overwhelmingly dominating model and pay-per-view is a marginal <span>phenomenon</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> For the sake of argument it is assumed that there is no open access <span>primary</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and <span>secondary</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>publishing.</p>
+
+  <p><strong>Electronic, open access.</strong> All journals convert to open access <span>primary</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>publishing, using the article <span>charge</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>method. This is by open access advocates often called Gold route to open access (AMSCI 2006)</p>
+
+  <p><strong>Electronic, subscription-based supplemented by <span>parallel</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>posting of copies in open access repositories.</strong> The electronic-subscription model continues to dominate but due to liberal copyright policies all authors are able to upload personal version copies of their articles (perhaps after delays) to institutional open access repositories. Open access advocates often call this the Green route to open access.  It is assumed that this does not affect subscriptions negatively and that only those readers who do not have subscribed access use the 'green' road.  (<a href="#harn03">Harnad 2003</a>).</p>
+
+  <p>The SCLC-model can then be used to construct a spreadsheet <span>containing</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>all the activities involved in the process as rows and the above four scenarios as columns. Differences between the scenarios <span>occur</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>in the form of some activities not being needed in all, and also in the unit costs for different sub-activities. The unit costs need to be normalised to some standard measure and that measure should be the costs per single published article. By multiplying over the number of articles published annually, number of average readings over the lifetime etc, global costs over the lifetime can be calculated.</p>
+
+  <p>The type of costs can be both <span>directly</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>monetary (subscription fees), time based (readers time retrieving and <span>reading</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>an article, a reviewer's time for <span>reading</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and commenting a manuscript) and opportunity costs. This latter type is very important and represents the value <span>lost</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>because at the margin a number of potential readers did not read a paper because of lacking subscriptions, laziness in retrieving a paper not instantly available etc.</p>
+
+  <p>A hypothesis to be tested in such a study could be as follows;</p>
+
+  <p><i>A massive <span>move</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>from subscription based electronic journal publishing to open access publishing financed by article <span>charges</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>would:</p>
+
+  <p>Very significantly reduce the global costs of the system, given the same spread and <span>volume</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of readership as in the subscription based model.</p>
+
+  <p>At the same time increase readership very significantly thus adding value in the form of spin-off effects on <span>future</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>research as well as in the form of better application of research results in
+  practice.</p></i>
+
+  <p>Doing this type of research is extremely challenging and would among other <span>difficulties</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>entail the gathering and synthesizing of <span>empirical</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>evidence from many different studies. One hopes that the model presented here could be of use in integrating such evidence.</p>
+
+<h2>Acknowledgements</h2>
+
+  <p>This model has been developed in several stages, including <a href="http://www.scix.net/">the SciX project</a>, funded by the European Commission, and <a href="http://www.oacs.shh.fi/">the OACS project</a>, funded by the Academy of Finland. Several colleagues have provided input and feedback to the model as it has evolved. Carol Tenopir, Turid Hedlund, Jonas Holmstr&ouml;m and Thomas Krichel have in particular also commented the draft of this paper.</p>
+
+<h2>Notes</h2>
+
+  <p>Readers who want to find out more about the model are advised to check the website <a href="http://www.sciencemodel.net/">http://www.sciencemodel.net/</a> for the latest information and
+possible additional resources.</p>
+
+<form>
+<fieldset>
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy; border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy; font-weight: bold;">References</legend>
+<ul>
+      <li><a id="ass06" name="ass06"></a>Asserson, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>G.S. &amp; Simons, E.<span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (2006). <em>Enabling <span>interaction</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and quality: beyond the Hanseatic league, Proceedings of the 8th International Conference on Current Research Information Systems: (CRIS2006)</em>. Leuwen, Belgium: Leuven University Press,</li>
+
+  <li><a id="ben06" name="ben06"></a>Benkler, Y. (2006). <em>The wealth of networks - how social production transforms markets and freedom.</em> New Haven, CT: Yale University Press.</li>
+
+  <li><a id="bjo05" name="bjo05"></a>Bj&ouml;rk, B-C. (2005). <a href="http://www.oacs.shh.fi/publications/Model35explanation2.pdf"><em>Scientific communication life-cycle model, version 3.0.</em></a> Helsinki: Swedish School of Economics and Business Administration. (Report, 2005-02-10).  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November, 2006 from http://www.oacs.shh.fi/publications/Model35explanation2.pdf.</li>
+
+  <li><a id="bjo03a" name="bjo03a"></a>Bj&ouml;rk, B-C. &amp; Hedlund, T. (2003). <a href="http://www.webcitation.org/5Ln1Lbw3O">Scientific publication life cycle model (SPLC)</a> In Sely Maria de Souza Costa, Jo&atilde;o &Aacute;lovaro Carvalho, Ana Alice Baptista and Ana Cristina Santos Moreira (Eds.). <em>ELPUB2003. From information to knowledge: Proceedings of the 7th ICCC/IFIP International Conference on Electronic Publishing <span>held</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>at the Univer0ade do Minho, Portugal 25-28 June 2003</em>. Braga, Portugal: Univer0ade do Minho.  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November 2006 from http://elpub.scix.net/cgi-bin/works/Show?0317.</li>
+
+  <li><a id="bjo04" name="bjo04"></a>Bj&ouml;rk, B-C. &amp; Hedlund, T. (2004). <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>formalised model of the scientific publication process. <em>Online Information Review</em>, <strong>28</strong>(1), 8-21.</li>
+
+  <li><a id="bjo00" name="bjo00"></a>Bj&ouml;rk, B-C. &amp; Turk, &#381;. (2000). <a href="http://www.itcon.org/2000/5/">How do researchers find and retrieve scientific publications - a case study of the impact of the Internet on the construction IT and construction management research communities</a>. <em>Electronic Journal of Information Technology in Construction</em>, <strong>5</strong>, 73-88. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November 2006 from http://www.itcon.org/2000/5/.</li>
+
+  <li><a id="bjo03b" name="bjo03b"></a>Bj&ouml;rk, B-C., Hedlund, T., Holmstr&ouml;m, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Cox, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (2003). <a href="http://www.scix.net/d/02/d2.pdf"><em>D2: Scientific Publishing: To-Be Business and Information Model. Report, SciX project, EC fifth <span>framework</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>programme, Information Society Technologies (IST).</em></a>  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November 2006 from http://www.scix.net/d/02/d2.pdf.</li>
+
+  <li><a id="ele06" name="ele06"></a>Electronic Transactions on Artificial Intelligence. (2006). <em><a href="http://www.etaij.org/entry/gen/intro/ident.html">How the ETAI works</a></em>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November, 2006 from http://www.etaij.org/entry/gen/intro/ident.html.</li>
+
+  <li><a id="eur06" name="eur06"></a>European Commission. Directorate General for Research. (2006). <a href="http://ec.europa.eu/research/science-society/pdf/scientific-publication-study_en.pdf"><em>Study on the economic and technical evolution of the scientific publication markets in Europe.</em></a> Brussels: European Commission.   <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November, 2006 from  http://ec.europa.eu/research/science-society/pdf/scientific-publication-study_en.pdf.</li>
+
+<li><a id="gar65" name="gar65"></a>Garvey, W.D. &amp; Griffith, B.C. (1965). Scientific communication: the dissemination system in <span>psychology</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and a theoretical <span>framework</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for planning innovations. <em>American Psychologist</em>, <strong>20</strong>(2), 157–164.</li>
+
+  <li><a id="goo04" name="goo04"></a>Goodman, D. &amp; Foster, C. (2004). Editorial: special <span>focus</span>  <span class="quali" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>on open access: issues, ideas, and impact. <em>Serials Review</em>, <strong>30</strong>(4), 257-381.</li>
+
+<li><a id="gb04" name="gb04"></a>Great Britain. <em>Parliament.</em> <em>House of Commons.</em> <em>Science and Technology Committee</em>. (2004). <em><a href="http://www.webcitation.org/5Llcrw6c0">Scientific publications: <span>free</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for all?</a></em>  London: The Stationery Office Ltd. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>9 January, 2005 from http://www.publications.parliament.uk/pa/cm200304/cmselect/cmsctech/399/399.pdf</li>
+
+<li><a id="harn03" name="harn03"></a>Harnad, S. (2003, November 4). <a href="http://www.webcitation.org/5LnCLnVxi">The green and gold roads to open access.</a> Message posted to /www.ecs.soton.ac.uk/~harnad/Hypermail/Amsci/3148.html. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>10 January, 2007</li>
+
+  <li><a id="har03" name="har03"></a>Hars, <span>A+</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (2003). <em>From publishing to knowledge networks - reinventing online knowledge networks</em>. Berlin:  Springer</li>
+
+  <li><a id="hou06" name="hou06"></a>Houghton, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>, Steel, C. &amp; Sheehan, P. (2006). <a href="http://www.webcitation.org/5LmqJb3Rp">Research communication costs in Australia: emerging opportunities and benefits. <span>A+</span>  <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>report to the Department of Education, Science and Training.</a> Melbourne: Victoria University, Centre for Strategic Economic Studies. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November 2006 from http://tinyurl.com/yn9d2x</a>.</li>
+
+  <li><a id="hur96" name="hur96"></a>Hurd, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> M. (1996). Models of scientific communications <span>systems</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> In: S. Crawford,  et al. (Eds) <em>From print to electronic: the transformation of scientific communication</em>. (pp. 9-33) Medford, NJ: Information Today Inc.</li>
+
+  <li><a id="hur04" name="hur04"></a>Hurd, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>M. (2004). Scientific communication: new <span>roles</span>  <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and new players.  <em>Science &amp; Technology Libraries</em>, <strong>25</strong>(1-2), 5-22.</li>
+
+  <li><a id="kar00" name="kar00"></a>Karstila, K. Karhu, V. &amp; Bj&ouml;rk, B-C. (2000). <span>Development</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>of process modelling <span>tools</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>for the construction industry. In: Goncalves <span>R++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> et al. (eds) : Proceedings Product and Process modelling in Building and Construction ECPPM 2000, Rotterdam: Balkema.</li>
+
+  <li><a id="kin06" name="kin06"></a>King, D. W., Tenopir, C. &amp; Clarke M. (2006). <a href="http://www.dlib.org/dlib/october06/king/10king.html">Measuring Total Readings of Journal Articles</a>. <em>D-Lib Magazine</em>, <strong>12</strong>(10). <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November 2006 from http://www.dlib.org/dlib/october06/king/10king.html.</li>
+
+  <li><a id="lew06" name="lew06"></a>Lewison, G. (2006). <a href="http://www.ias.ac.in/currsci/nov102005/1524.pdf">Beyond SCI citations: new ways to evaluate research</a>. <em>Current Science</em>, <strong>89</strong>(9), 1524-1530. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November 2006 from http://www.ias.ac.in/currsci/nov102005/1524.pdf</li>
+
+<li><a id="nih05" name="nih05"></a>National Institutes of Health. (2005). <em><a href="http://www.webcitation.org/5LlcH89kh">Policy on enhancing public access to archived publications resulting from NIH-funded research.</a></em> Bethesda, MD: National Institutes of Health. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>9 January, 2005 from http://grants.nih.gov/grants/guide/notice-files/NOT-OD-05-022.html </li>
+
+  <li><a id="nat93" name="nat93"></a>National Institute for Standards and Technology. (1993). <a href="http://www.webcitation.org/5LlV5p19K">Integration definition for function modelling (IDEF0).</a>  Gaithersburg, MD: National Institute for Standards and Technology. (Draft federal information processing standards publication 183)  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November 2006 from http://www.itl.nist.gov/fipspubs/by-num.htm.</li>
+
+  <li><a id="ope06" name="ope06"></a>Open Archives Initative (2006). <a href="http://www.openarchives.org/">OAI Webpages</a>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November 2006 from http://www.openarchives.org/.</li>
+
+  <li><a id="org04" name="org04"></a>Organization for Economic Cooperation and <span>Development</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (2004). <a href="http://www.webcitation.org/5LlUxDbM1"><em>Declaration on access to research data from public funding</em></a>. Paris: OECD.  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November 2006 from http://tinyurl.com/y3uu5f.</li>
+
+  <li><a id="por85" name="por85"></a>Porter, M. (1985). <em>Competitive advantage - creating and sustaining superior <span>performance</span>. <span class="exper" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></em> New York, NY: The Free Press.</li>
+
+<li><a id="res06" name="res06"></a>Research Councils UK. (2006). <em><a href="http://www.webcitation.org/5LldMGGtT">Updated position statement on access to research outputs</a></em>. London: Research Councils UK.  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>9 January, 2007 from http://www.rcuk.ac.uk/cmsweb/downloads/rcuk/documents/2006statement.pdf</li>
+
+  <li><a id="som95" name="som95"></a>Sommerville, I. (1995). <em>Software engineering</em>. 5th ed. Harlow, UK: Addison-Wesley.</li>
+
+<li><a id="son03" name="son03"></a>S&oslash;ndergaard, T.F., Andersen, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> &amp; Hj&oslash;rland, B. (2003). Documents and the communication of scientific and scholarly information. Revising and updating the UNISIST model. <em>Journal of Documentation</em>, <strong>59</strong>(3), 278-320.</li>
+
+  <li><a id="swi05" name="swi05"></a>Swisher, B. (2005). <a href="http://www.webcitation.org/5LlV9Fol3">Electronic access to social science research, Course LIS 5703, Lecture notes.</a>  Norman, OK: University of Oklahoma, School of Library and information studies <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November 2006 from http://www.ou.edu/ap/lis5703/sessions/s06.htm#Notes</a>.</li>
+
+  <li><a id="sub06" name="sub06"></a>Suber, P. (2006). <a href="http://www.webcitation.org/5LlVJXbL0">Open access overview</a>. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>20 November, 2006 from http://www.earlham.edu/~peters/fos/overview.htm.</li>
+
+  <li><a id="ten00" name="ten00"></a>Tenopir, C. &amp; King, D. (2000). <em>Towards electronic journals: realities for scientists, librarians and publishers</em>. Washington DC: Special Libraries Association.</li>
+
+  <li><a id="tur98" name="tur98"></a>Turban, E. &amp; Aronson, <span>J++</span>. <span class="compus" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span> (1998). <em>Decision support <span>systems</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>and intelligent <span>systems</span>. <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span></em>&nbsp; 5th ed.   Upper Saddle River, NJ: Prentice-Hall.<br></li>
+</ul>
+   </fieldset>
+  </form>
+
+<form>
+<fieldset>
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy; border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>navy; font-weight: bold;">How to cite this paper</legend>
+<div><br />
+Bj&ouml;rk, B-C. (2007). &quot;A model of scientific communication as a global distributed information system&quot; <em>Information Research</em>, <strong>12</strong>(2) paper 307. [Available at http://InformationR.net/ir/12-2/paper307.html]</div>
+</fieldset>
+</form>
+
+<table cellspacing="10" align="center">
+	<tr>
+		<td colspan="3" align="center" style="background-color: maroon; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>
+	<tr>
+		<td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(&quot;scientific communication&quot; OR &quot;scholarly communication&quot;)"></input> <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+		</td>
+		<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(&quot;scientific communication&quot; OR &quot;scholarly communication&quot;)"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="safe" value="active"></input>
+<input type="hidden" name="flav" value="0000"></input>
+<input type="hidden" name="sig" value="1VdDFkBo0f4i6gd7"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FFFFCC;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;LH:45;LW:336;L:http://informationr.net/ir/mini_logo2.gif;S:http://;FORID:1"></input>
+<input type="hidden" name="hl" value="en">
+</input>
+					</td>
+				</tr>
+			</table>
+</form>
+</td>
+<td align="center" valign="top">
+<form method="get" action="http://www.live.com/" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(&quot;scientific communication&quot; OR &quot;scholarly communication&quot;)"></input> <br />
+<input type="submit" name="sa" value="Windows Academic"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+
+		</td>
+	</tr>
+</table>
+
+<hr color="maroon" size="1px" />
+
+
+
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper307" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the author, 2007. <br />Last updated: 9 January, 2007
+</div></td>
+
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var 0="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper307.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&0="+0;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?0='+0+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own <span>free</span>  <span class="conce" style="width:1px;border-width:120px 40px 120px 40px;position:relative;">.</span>site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;0=281971&amp;js=No&amp;" alt="online web site analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+</table>
+
+<hr size="3" style="color: maroon ;" />
+<table align="center"><tr><td><div class="button">
+<ul>
+	<li><a href="infres122.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+</div></td></tr></table>
+
+<hr size="3" style="color: maroon ;" />
+
+</body>
+
+<!-- Mirrored from informationr.net/ir/12-2/paper307.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:19 GMT -->
+</html>
+

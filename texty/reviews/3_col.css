@@ -1,0 +1,309 @@
+/* NAME: Charles Wyke-Smith */
+/* EMAIL: charles@stylinwithcss.com */
+
+/* THREE COLUMN LAYOUT */
+
+body {
+	text-align:center;
+	/* IE6 needs this to center the layout in the browser window */
+}
+#main_wrapper {
+	width:840px; /* widths of columns will scale proportionately as this width is changed */
+	margin-left:auto;  /* centers max\'d layout in browser */
+	margin-right:auto; /* centers max\'d layout in browser */
+	text-align:left; /* prevents page inheriting IE6 centering hack on body */
+	}
+#header {
+	}
+#nav {
+	width:18%;
+	float:left;
+	}
+#content {
+	width:60%;
+	float:left;
+	}
+#promo {
+	width:22%;
+	float:left;
+	text-align:center;
+	}
+#footer {
+	width:100%;
+	clear:both;
+	}
+#header_inner, #nav_inner, #content_inner, #promo_inner {
+	overflow:hidden; /* prevents oversize elements from breaking the layout */
+	}
+#header_inner {
+	padding:1em 2em;
+	text-align:center;
+	}
+#nav_inner {
+	margin:1em .5em;
+	}
+#content_inner {
+	margin:0em 1em 1em 1.5em;
+	}
+#promo_inner {
+	margin:1em 1.2em;
+	}
+#footer_inner {
+	padding:.5em 10em;
+	text-align:center;
+	}
+
+/* a fix for IE6 only - see Star Hack in Stylin' with CSS to see how the comments and * html hide this hack from other browsers \*/
+* html * {
+	zoom:100%; 
+/* triggers IE6 "haslayout" - google 'IE6 haslayout' for details*/
+	}
+/* without the above hack, IE6 does not draw the header until the page is resized */
+/* the problem is triggered by the universal * selector below that resets the margins, but I need to do that, hence the hack */
+* {
+	margin:0;
+	padding:0;
+	}
+body {
+	font: 1em Lucida, Arial, sans-serif; /* 1em = 16pts */
+}
+.float_left {float:left; margin: 0 .3em .3em 0;}      /* apply this class to any image or element with width - text will wrap it to the right */
+.float_right {float:right;  margin: 0 0 .3em .3em;} /* apply this class to any image or element with width  - text will wrap it to the left */
+
+/* DEFAULT TAG STYLES - font sizes, margins, padding, etc. */
+/* NOTE: text colors follow below */
+body {background-color:#FFF;}
+#main_wrapper {background-color:#FFF;}
+#header {background-color:#808073;}
+#nav {background-color:#BFBFAC;}
+#content {background-color:#FFFFE6;}
+#promo {background-color:transparent;}
+#footer {background-color:#D9D9C3;}
+
+h1, h2, h3, h4, h5, h6, ul, ol, dl {
+	font-family: 'Trebuchet MS', Verdana,  serif;
+	} 
+/* TEXT COLORS */
+h1 {
+	color:#FFF;
+	}
+h2, h3, h4, h5 {
+	color:#808073;
+	}
+h6 {
+	color:#000000;
+	}
+p {
+	color:#000;
+	}
+ul, ol, dl, blockquote, cite {
+	color: #D17360;
+}
+
+#nav ul, #nav a {
+	color:#FFF;
+	}
+table, form {
+	color: #BFBFAC;
+	}
+a {
+	color:#808073;
+	}
+a:hover, #nav a:hover {
+	color:#000;
+	}	
+#footer p {
+	margin:0;
+	}
+	
+/* CLASS:MOCHA TAG STYLES - font sizes, margins, padding, etc. */
+/* NOTE: text colors follow below */
+body.mocha {background-color:#FFF;}
+.mocha #main_wrapper {background-color:#E6DCCF;}
+.mocha #header {background-color:#727EA3;}
+.mocha #nav {background-color:#BF9960;}
+.mocha #content {background-color:#FFF;}
+.mocha #promo {background-color:#807059;}
+.mocha #footer {background-color:#CFD4E6;}
+
+
+h1, h2, h3, h4, h5, h6, ul, ol, dl {
+	font-family: 'Trebuchet MS', Verdana,  serif;
+	} 
+/* CLASS:MOCHA TEXT COLORS */
+.mocha h1 {
+	color:#FFF;
+	}
+.mocha h2 {
+	color:#BF9960;
+	}
+.mocha h3, .mocha h4, .mocha h5 {
+	color:#727EA3;
+	}
+.mocha h6 {
+	color:#000000;
+	}
+.mocha p {
+	color:#000;
+	}
+.mocha ul, .mocha ol, .mocha dl, .mocha blockquote, .mocha cite {
+	color: #DB8529;
+	font-size:80%;
+}
+
+.mocha cite {
+	color:#FFF;
+	}
+.mocha promo {
+	color:#FFF;
+	}
+.mocha #nav ul, .mocha #nav a {
+	color:#FFF;
+	}
+.mocha table, .mocha form {
+	color: #6430BF;
+	}
+.mocha a {
+	color:#BF9960;
+	}
+.mocha a:hover {
+	color:#727EA3;
+	}
+.mocha #nav a:hover {
+	color:#000;
+	}
+	
+.mocha #footer h3 {
+	color:white;
+	}
+
+.mocha #footer p {
+	color:black;
+	text-align:left;
+	}
+	
+
+/* FONT SIZES */
+h1 {font-size:1.5em; /* 24pt */
+	}
+h2 {font-size:1.375em; /* 22pt */
+	line-height:1.25;
+	padding:.5em 0 0 0;	
+	}
+h3 {font-size:1.125em; /* 18pt */
+	line-height:1.25;
+	}
+h4 {font-size:1.125em; /* 18pt */
+	}
+h5 {font-size:1em; /* 16pt */
+	}
+h6 {font-size:.875em; /* 14pt */
+	}
+p  {
+	font-size:.8em; /* 12pt */
+	line-height:1.25; /* on 15pt */
+	margin-bottom:.75em; /* 12pts of space */
+ 	}
+a {
+	
+	}
+a:hover {
+	text-decoration:none;
+	}
+/* basic list styling - more-styled lists in list.css */
+ul, dl, ol {
+		margin:0 1em .75em 1em; /* lists without specific classes */
+		font-size:.8em;
+		line-height:1.5;}
+li, dd {
+		padding:0em 0; /* lists without specific classes */
+		margin-left:2em;
+		}
+#nav ul, #nav dl, #nav ol {
+		margin:.5em 1em .75em 1em; /* lists without specific classes */
+		}
+#nav li {
+	list-style-type:none;
+	margin-left:0
+	}
+#promo ul, #promo dl, #promo ol {
+		margin:.5em 1em .75em 1em; /* lists without specific classes */
+		}
+#promo li {
+	list-style-type:none;
+	margin-left:0
+	}		
+dt {font-weight:bold;}
+
+code {font-size:1.25em;}
+* html code {font-size:1.1em;} /* default size is smaller in IE */
+	
+cite {
+	font-size:.85em;
+	font-style:italic;
+	}
+blockquote {
+	border-top:2px solid;
+	border-bottom:2px solid;
+	width:50%;
+	margin:1em 0 1em 20%;
+	padding:.3em 1em;
+	}
+blockquote p {
+	margin-bottom:.1em;
+	}
+blockquote p:before { /* IDWIMIE 6 and 7 */
+	content: open-quote;
+	color: #cccc8f;
+}
+blockquote p:after {  /* IDWIMIE 6 and 7 */
+	content: close-quote;
+	color:#366;
+}
+blockquote cite {
+	font-size:.85em;
+	}
+abbr, acronym {
+	border-bottom:1px dashed #000;
+	cursor:default;
+	}
+address {
+	margin:0 1em .75em 1em;
+	}
+img {
+	border:0;
+	}
+
+/* basic table styling  - more-styled tables in tables.css */
+table caption {
+	font-weight:bold;
+	font-size:1em;
+	margin-top:.6em;
+	}
+table {
+	margin: .3em 1em 1em 1em;
+	border-top:1px solid #069;
+	border-collapse:collapse;
+	font-size:.8em;
+	}
+table th	{
+	padding: .3em .5em .3em .5em;
+	border-bottom:2px solid #069;
+	}
+table td	{
+	padding: .3em .5em .3em .5em;
+	border-bottom:1px solid #069;
+	}
+/* THE ALSETT CLEARING METHOD */
+	.clearfix:after {
+ content: “.”;
+ display: block; 
+ height: 0;
+ clear: both;
+ visibility: hidden;
+}
+.clearfix {display: inline-table;}
+/* backslash hack hides from IE mac \*/ LEAVE THIS COMMENT RIGHT HERE! 
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* end backslash hack */ 

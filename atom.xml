@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Jaume Nualart Vilaplana</title>
+ <link href="https://research.nualart.cat/atom.xml" rel="self"/>
+ <link href="https://research.nualart.cat/"/>
+ <updated>2021-08-04T22:51:31+02:00</updated>
+ <id>https://research.nualart.cat</id>
+ <author>
+   <name>Jaume Nualart Vilaplana</name>
+   <email>jaume@nualart.cat</email>
+ </author>
+
+ 
+ <entry>
+   <title>Hello World</title>
+   <link href="https://research.nualart.cat/2016/07/helloworld.html"/>
+   <updated>2016-07-08T00:00:00+02:00</updated>
+   <id>https://research.nualart.cat/2016/07/helloworld</id>
+   <content type="html">&lt;ul&gt;
+  &lt;li&gt;Hello World!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;World!&lt;/h1&gt;
+</content>
+ </entry>
+ 
+
+</feed>

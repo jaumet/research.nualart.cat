@@ -1,0 +1,50 @@
+[
+	{
+		"number": "1",
+		"id":"abernethy13",
+		"title": "Large-Scale Bandit Problems and KWIK Learning",
+		"author": "Abernethy, Jacob; Amin, Kareem; Kearns, Michael & Draief, Moez",
+		"url": "http://www.jmlr.org/papers/volume14//abernethy13/abernethy13.pdf",
+		"type": "INPROCEEDINGS",
+		"section": "cycle-3",
+		"volume": "28",
+		"month": "May",
+		"year": "2013"
+	},
+	{
+		"number": "2",
+		"id":"afkanpour13",
+		"title": "A Randomized Mirror Descent Algorithm for Large Scale Multiple Kernel Learning",
+		"author": "Afkanpour, Arash; Gy\"{o}rgy, Andr\"{a}s; Szepesvari, Csaba & Bowling, Michael",
+		"url": "http://www.jmlrorg/papers/volume14//afkanpour13/afkanpour13.pdf",
+		"type": "INPROCEEDINGS",
+		"section": "cycle-3",
+		"volume": "28",
+		"month": "May",
+		"year": "2013"
+	},
+	{
+		"number": "3",
+		"id":"agarwal13",
+		"title": "Selective sampling algorithms for cost-sensitive multiclass prediction",
+		"author": "Agarwal, Alekh",
+		"url": "http://www.jmlr.org/papers/volume14//agarwal13/agarwal13.pdf",
+		"type": "INPROCEEDINGS",
+		"section": "cycle-3",
+		"volume": "28",
+		"month": "May",
+		"year": "2013"
+	},
+	{
+		"number": "4",
+		"id":"agrawal13",
+		"title": "Thompson Sampling for Contextual Bandits with Linear Payoffs",
+		"author": "Agrawal, Shipra & Goyal, Navin",
+		"url": "http://www.jmlr.org/papers/volume14//agrawal13/agrawal13.pdf",
+		"type": "INPROCEEDINGS",
+		"section": "cycle-3",
+		"volume": "28",
+		"month": "May",
+		"year": "2013"
+	}
+]

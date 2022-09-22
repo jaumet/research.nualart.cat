@@ -1,0 +1,890 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/7-1/paper118.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:25 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css" type="text/css">
+<title>Using information technology to support knowledge conversion processes</title>
+<!--Insert the title of your paper-->
+
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="knowledge management, KM tools, competitive intelligence, intranet, groupware, business intelligence, portal, innovation, knowledge conversion">
+<!--Inserted your own keywords-->
+
+<meta name="description" content="One of the main roles of Information Technology in Knowledge Management programs is to accelerate the speed of knowledge transfer and creation. The Knowledge Management tools intend to help the processes of collecting and organizing the knowledge of groups of individuals in order to make this knowledge available in a shared base.  Due to the largeness of the concept of knowledge, the software market for Knowledge Management seems to be quite confusing. Technology vendors are developing different implementations of the Knowledge Management concepts in their software products. Because of the variety and quantity of Knowledge Management tools available on the market, a typology may be a valuable aid to organizations that are looking for answers to specific needs. The objective of this article is to present guidelines that help to design such a typology. Knowledge Management solutions such as intranet systems, Electronic Document Management (EDM), groupware, workflow, artificial intelligence-based systems, Business Intelligence (BI), knowledge map systems, innovation support, competitive intelligence tools and knowledge portals are discussed in terms of their potential contributions to the processes of creating, registering and sharing knowledge. A number of Knowledge Management tools (Lotus Notes, Microsoft Exchange, Business Objects, Aris Toolset, File Net, Gingo, Vigipro, Sopheon) have been checked. The potential of each category of solutions to support the transfer of tacit and/or explicit knowledge and to facilitate the knowledge conversion spiral in the sense of  Nonaka and Takeuchi (1995) is discussed. ">
+<!--Copy your abstract between the inverted commas in the field above-->
+
+
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Using Information Technology to Support Knowledge Conversion Processes
+">
+<!--Insert the title-->
+
+<meta name="DC.Creator" content="One of the main roles of Information Technology in Knowledge Management programs is to accelerate the speed of knowledge transfer and creation. The Knowledge Management tools intend to help the processes of collecting and organizing the knowledge of groups of individuals in order to make this knowledge available in a shared base.  Due to the largeness of the concept of knowledge, the software market for Knowledge Management seems to be quite confusing. Technology vendors are developing different implementations of the Knowledge Management concepts in their software products. Because of the variety and quantity of Knowledge Management tools available on the market, a typology may be a valuable aid to organizations that are looking for answers to specific needs. The objective of this article is to present guidelines that help to design such a typology. Knowledge Management solutions such as intranet systems, Electronic Document Management (EDM), groupware, workflow, artificial intelligence-based systems, Business Intelligence (BI), knowledge map systems, innovation support, competitive intelligence tools and knowledge portals are discussed in terms of their potential contributions to the processes of creating, registering and sharing knowledge. A number of Knowledge Management tools (Lotus Notes, Microsoft Exchange, Business Objects, Aris Toolset, File Net, Gingo, Vigipro, Sopheon) have been checked. The potential of each category of solutions to support the transfer of tacit and/or explicit knowledge and to facilitate the knowledge conversion spiral in the sense of  Nonaka and Takeuchi (1995) is discussed. 
+">
+<!--Insert the abstract again-->
+
+<meta name="DC.Subject" content="Using Information Technology to Support Knowledge Conversion Processes">
+<!--Insert the title-->
+
+<meta name="DC.Description" content="knowledge management, KM tools, competitive intelligence, intranet, groupware, business intelligence, portal, innovation, knowledge conversion">
+<!--Insert the keywords-->
+
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+
+
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center" colspan="5"><h4>Information Research, Vol. 7 No. 1, October 2001,</h4></td></tr>
+  <tr> 
+    <td><a href="infres71.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<h1>Using information technology to support knowledge conversion processes</h1>
+<!--Insert your title in the field above-->
+
+
+<h4 align="center"><a href="mailto:baroni@bdmg.mg.gov.br">Rodrigo Baroni de Carvalho</a><br>
+Banco de Desenvolvimento de Minas Gerais (BDMG)<br>
+Belo Horizonte, Brazil<br>
+
+<a href="mailto:maraujo@ufmg.br">Marta Ara&uacute;jo Tavares Ferreira</a><br>
+Universidade Federal de Minas Gerais (UFMG)<br>
+Belo Horizonte, Brazil</h4>
+
+<br><br>
+
+
+<div align="center"><b>Abstract</b></div>
+
+<blockquote>One of the main roles of information technology in knowledge management programs is to accelerate the speed of knowledge transfer and creation. The knowledge management tools intend to help the processes of collecting and organizing the knowledge of groups of individuals in order to make this knowledge available in a shared base.  Due to the largeness of the concept of knowledge, the software market for knowledge management seems to be quite confusing. Technology vendors are developing different implementations of the knowledge management concepts in their software products. Because of the variety and quantity of knowledge management tools available on the market, a typology may be a valuable aid to organizations that are looking for answers to specific needs. The objective of this article is to present guidelines that help to design such a typology. Knowledge management solutions such as intranet systems, Electronic Document Management (EDM), groupware, workflow, artificial intelligence-based systems, Business Intelligence (BI), knowledge map systems, innovation support, competitive intelligence tools and knowledge portals are discussed in terms of their potential contributions to the processes of creating, registering and sharing knowledge. A number of knowledge management tools (Lotus Notes, Microsoft Exchange, Business Objects, Aris Toolset, File Net, Gingo, Vigipro, Sopheon) have been checked. The potential of each category of solutions to support the transfer of tacit and/or explicit knowledge and to facilitate the knowledge conversion spiral in the sense of  <a href="#nan95">Nonaka and Takeuchi</a> (1995) is discussed.</blockquote>
+<br><br>
+
+
+<h2>Introduction</h2>
+
+<p>Concern about the role of knowledge in organizational survival is contributing to the development of new approaches to its systematic management. For <a href="#dav98">Davenport and Prusak</a> (1998) knowledge is the only source of a sustainable competitive advantage. <a href="#sen98">Senge</a> (1998) states that an enterprise market value is increasingly dictated by its intellectual capital.</p>
+
+<p>The intelligence of knowledge workers is said to have become the fuel of organizational growth. In the knowledge society, workers are supposed to be students, teachers and researchers at a time: we need to have student skills to learn fast in a continuously changing world; we need to have the skills necessary to organize and share our knowledge, as teachers; and we are expected to create new knowledge as researchers are supposed to do.</p>
+
+<p>Knowledge management (KM) intends to be an area of research and practice that deepens the understanding of knowledge processes in organizations and develops procedures and instruments to support the transformation of knowledge into economical and social progress. In fact, different aspects of these issues have been studied for decades, in many different disciplines, through many different filters, as R&amp;D and innovation management, information systems management, information science, computer science, library studies, innovation economics, science and technology social studies, epistemology and many others. Maybe one of the most important contributions of the knowledge management concept is to have created a space (in academy, in the business world as in cyberspace) where these many groups and points of view may discuss and work together. </p>
+
+<p>KM objects of study comprehend people, organizations, processes and technology. Although technology is not the main component of KM, it would be a naive attitude to implement KM without considering any technological support. </p>
+
+<p>The main objective of this paper is to help in this particular task. So, it proposes a typology of KM solutions present on the market that comprehends ten categories, each of which emphasizing specific KM aspects. It also intends to identify which of the knowledge conversion processes (<a href="#non95">Nonaka and Takeuchi, 1995</a>) is dominantly  supported by each software category. This paper concludes by presenting some trends in KM software development and suggesting some guidelines for the launching of KM programs supported by information technology.</p>
+
+
+<h2>Competitive intelligence, knowledge management and information technology: concepts and models</h2>
+
+
+<p>We can define competitive intelligence as the set of inter-related measures that aim at systematically feeding  the organizational decision process with information about the organizational environment in order to make possible to learn about it, to anticipate its evolution and to take better decisions in consequence. </p>
+
+<p>Although we almost immediately think about external information sources when talking about competitive intelligence, the literature is full of enterprise case studies that point out that the information that missed in order to learn about, anticipate, adapt to or react to an environmental important change was already there, in the organization, but had not been shared or registered.</p>
+
+<p>Besides, as the presence of the verb learn in our definition points out, when we talk about competitive intelligence, we mean not only that the information, the message about the environment evolution is available, but also that it is systematically used in the individual and collective learning processes about the organizational environment.</p>
+
+<p>So, we consider competitive intelligence as an important component of knowledge management (KM). <a href="#dav98">Davenport and Prusak</a> (1998) describe KM as a set of managerial activities related to the generation, codification and sharing of knowledge. And knowledge about the technological, commercial, competitive environment is part of organizational knowledge.</p>
+
+<p>For <a href="#dav98">Davenport and Prusak</a> (1998), the main role of information technology (IT) in KM is to accelerate the speed of knowledge transfer. KM software support knowledge flows through networks and communities. </p>
+
+<p>But are these flows made of information or knowledge? What is shared and exchanged, is it knowledge or information? This article does not to intend to explore thoroughly this question. But its discussion is based on the distinction between data, information and knowledge. </p>
+
+<p>Strictly speaking, information and knowledge concepts only make sense in relation to cognition. What physically is transported by informatics systems or natural communication is data, in digital or analogical format. What distinguishes data from information is the sense, that only exists as the result of the cognition capacity of the receiver working on the data received. The result is that a message is received when the data received make sense for the receiver, as the result of the action of his (her) cognition faculty.</p>
+
+<p>Knowledge, as information, only makes sense in relation to a cognitive capacity. Knowledge is the reunion of rules, principles, mental models, memories in which human action is embedded. The messages received (information) may add to existing knowledge in a cognitive system. Or they may not, if they are not at the origin of memories, rules, models that influence action. A sample of data sent by a cognitive system in the intention of sending a message may  immediately generate new knowledge in a receiver, just temporary information in another one and noise (lack of any sense) in a third one.</p>
+
+<p>Information and knowledge differ in density and deepness. It seems like that in the cognitive space information is at the surface of cognition. As in physical systems, as long as it stays at the surface, it is volatile, temporary. As it is integrated to knowledge, it gains thickness as concepts, models, memories, sensations are continuously added to it. </p>
+
+<p>We call explicit knowledge that part of knowledge that is clearly stated in language format in our minds and so can be easily registered and originate data to be sent with the intention of message. We call tacit knowledge (<a href="#pol66">Polanyi, 1966</a>) that part of knowledge that is most unstructured, composed mainly of complex sensations, images and mental models that haven’t originated clear statements in our minds, and so that are difficult to register and communicate. </p>
+
+<p>Of course information, explicit knowledge and tacit knowledge are only conceptual landmarks in a continuum space. Pieces of cognition are continuously traveling among these categories and even volatizing away (when they lose sense, are forgotten).</p>
+
+<p>Only software solutions that aim at systematically influencing the process of organizational learning, that is, solutions that aim at adding to the knowledge structures of members, are objects of study in this research. </p>
+
+<p>As <a href="#sen98">Senge</a> (1998) emphasizes, a person can receive more information due to technological facilities, but it will not make any difference if the person does not have the appropriate skills to apply this specific information in a useful manner. </p>
+
+<p>According to <a href="#ste98">Stewart</a> (1998), the intellectual capital of an organization presents three dimensions: human capital, structural capital and client capital. Structural capital is defined as the organizational systems and structures to store and transfer knowledge and it includes the quality and extent of information systems, data bases, patents, written procedures and business documents. So, our object of study, KM software, is an important component of the structural capital of organizations.</p>
+
+<p>If it is true that many KM tools address mainly the problem of knowledge transfer in order to promote its sharing, it is also true that we can already find software solutions that intend to support (at least facilitate) knowledge codification and even creation, which is the most unstructured and complex of knowledge processes. </p>
+
+<p>As <a href="#cho98">Choo</a> (1998) reminds us, the energy for innovation – the creative spark – can only be lit by individuals. But organizations may supply the fuel and the environment for the spark to catch and nourish the flame into something the organization can use. </p>
+
+<p><a href="#non95">Nonaka and Takeuchi’s</a> (1995) knowledge conversion model has helped us to understand how intimately connected the processes of transferring and creating knowledge are. For them, the ideal creation of knowledge in organizations is a process that amplifies the creation of knowledge by individuals and adds its results to the knowledge network of the organization. In the model, the basis of knowledge creation in organizations is continuous interaction (transfer) among individuals, and continuous conversion from tacit into explicit knowledge (and vice-versa) by individuals, supported by the group. The model distinguishes four modes of knowledge conversion:</p>
+
+<ul>
+<li><b>Socialization</b>: exchange of tacit knowledge among members that create common mental models and abilities. Socialization transfers tacit knowledge most frequently through the medium of shared experience. Apprentices learn by observation and imitation of the expert’s behavior, as well as children, in ancient societies and, less frequently, nowadays.</li>
+
+<li>
+<b>Externalization</b>: the process of articulating tacit knowledge and transforming it into models, concepts, analogies, stories and metaphors that can be communicated by language. Externalization is considered to be a key phase in the creation of new knowledge and is induced by dialog, collective reflection, writing. Writing about knowledge is a good example of the effort normally required by externalization projects, as all humans have a whole life long knowledge experience.  </li></ul>
+
+<ul>
+<li><b>Combination</b>: is the process of combining or reconfiguring bodies of existing explicit knowledge in order to generate new explicit knowledge, by addition. It is the most common process in formal education. In organizations, it is obtained by the exchange of explicit knowledge among members, as in formal reunions.</li>
+
+<li>
+<b>Internalization </b>: is the process of adding to explicit knowledge (principles, procedures, methodologies) tacit new knowledge (in the form of sensations, memories, images) through experimenting in various ways, as through real life experience, simulation of limit situations or simulation through the usage of software. </li></ul>
+
+<p>The knowledge conversion process is represented by <a href="#non95">Nonaka and Takeuchi</a> (1995) as a spiral, the conversion modes succeeding indefinitely, creating new knowledge in the organizational environment. </p>
+
+<p>This paper assumes that IT has a supporting role, not the main role, in a KM program. According to <a href="#ter00">Terra</a> (2000), KM has seven dimensions: strategy, culture and organizational values, organizational structure, human resource skills, information systems, measuring and environmental learning. Therefore, IT is only one of the dimensions of KM and technology alone does not transform information into knowledge. The KM ultimate challenge is to increase the chances of innovation through knowledge creation. The role of IT in this context is to extend human capacity of knowledge creation through the speed, memory extension and communication facilities of technology.</p>
+
+<h2>Research Methodology </h2>
+
+<p>Due to the largeness of the concept of knowledge, the software market for KM seems to be quite complex. Technology vendors are developing different implementations of the KM concept in their software products. Throughout this paper, KM software is considered to be a kind of software that supports any of the three  basic KM processes (<a href="#dav98">Davenport &amp; Prusak, 1998</a>): generation, codification and transfer. This research aims at designing a typology of these KM tools.</p>
+
+<p>As said before, only software solutions that aim at systematically influencing the process of organizational learning, that is, solutions that aim at facilitating knowledge transfer, registering  and/or creation by members, are object of study in this research. </p>
+
+<p>To accomplish our objective, it was necessary to explore the software market in order to classify KM tools. The major difficulty in accomplishing this task was the establishment of limits on a growing market. So, the limit that imposed itself was time, and the market monitoring phase of this project was carried out through March to September  2000.</p>
+
+<p>A sample of KM software was constructed through information collected on KM related sites selected in <a href="#nas99">Nascimento and Neves</a> (1999), on advertisements in KM magazines (KM World, KM Magazine and DM Review) and in digital libraries (brint.com). The exploratory research resulted in a list of 26 software vendors that were contacted, from which 21 sent folders, technical briefings and demo versions of their software. The <a href="#app">appendix</a> contains a detailed list of the evaluated software.</p>
+
+<p>After the analysis of these tools, it was possible to identify some common features among them, which originated the typology proposed.</p>
+
+<h2>KM Tools Typology</h2>
+
+
+<p>As a result of this research, a ten KM software categories typology is proposed, as follows:</p>
+
+<ul>
+<li>Intranet-based systems;</li>
+<li>Electronic document management (EDM);</li>
+<li>Groupware;</li>
+<li>Workflow;</li>
+<li>Artificial intelligence-based systems;</li>
+<li>Business intelligence (BI);</li>
+<li>Knowledge map systems;</li>
+<li>Innovation support tools;</li>
+<li>Competitive intelligence tools;</li>
+<li>Knowledge portals.</li></ul>
+
+
+The software are discussed in terms of their contribution to the four knowledge conversion modes proposed by <a href="#non95">Nonaka and Takeuchi</a> (1995).</p>
+
+<h3>A - Intranet-Based Systems</h3>
+
+
+<p>Intranets are private networks. Intranet-based systems benefit from the increasing development of Web-based technologies. Besides, the low cost of Web technologies is an appealing factor to many organizations.</p>
+
+<p>Intranet is an environment that may facilitate the sharing of dynamical and linked information. The hypertext structure of intranets eases the navigation between information chunks. The communication in it is usually passive because the user has to pull the information. This &quot;pull style&quot; is an alternative to the information overload generated by e-mails. Intranets, in their actual configuration, emphasize internal information, and are constructing important links among organizations and their employees.</p>
+
+ <p>Nevertheless, the efficient usage of intranets is closely related to a wider comprehension of information management contribution to organizational performance. Intranets, like other software described in this article, should be understood as a part of organizational information context and its usefulness is influenced by culture, values and principles concerning strategic information management. </p>
+
+<p>This explains why, despite the wide and varied set of features made possible by intranets, they have been used in most organizations primarily for basic information access, that is, the retrieval of corporate documents (<a href="#cho00">Choo <em>et al</em>., 2000</a>).</p>
+
+<p><a href="#non95">Nonaka and Takeuchi</a> (1995) define combination as the process of connecting different areas of explicit knowledge. Intranet is an appropriate tool to systematize and add the explicit knowledge that is dispersed through departments. Intranet hypertext structure helps this process because the navigation through links can create a new organization of concepts. More than that, intranet hypertext structure facilitates new organization of concepts. Intranets become organizational assets, part of the structural dimension of the intellectual capital of organizations as described by <a href="#ste98">Stewart</a> (1998).</p>
+
+<p>Microsoft Internet Information Server is an example of software that can be used for intranet applications. </p>
+
+<h3>B - Electronic Document Management (EDM)</h3>
+
+<p>Electronic Document Management (EDM) systems are repositories of important corporate documents. In <a href="#dav98">Davenport and Prusak</a> (1998), EDM systems are presented as explicit knowledge stores. In some organizations, document management can be the initial step to further KM. </p>
+
+<p>EDM systems contribute to the organization of the vast amount of documents generated by office activities. Paperwork is still a reality and each document is a source of non-structured information that could be lost if not well organized. According to <a href="#ben97">Bennet</a> (1997), EDM systems provide a more efficient retrieval, better security and version control of documents. EDM systems have many features, like cataloging  and indexing, that were inherited from the traditional information retrieval systems, which are studied in the field of Library Science.</p>
+
+<p>EDM systems deal only with the explicit dimension of knowledge. Documents are an efficient way to exchange explicit knowledge that, organized and combined, can lead to new knowledge. According to <a href="#cho98">Choo</a> (1998), in organizations, members combine their explicit knowledge by exchanging reports, memos and a variety of other documents. </p>
+
+<p>Content Management tools is another name for EDM systems. Content Management tools manage contents, no matter the media documents are available in: fax, e-mails, HTML forms, computer reports, paper, video, audio or spreadsheets. </p>
+
+<p>Excalibur RetrievalWare and File Net are examples of EDM systems.</p>
+
+<h3>C - Groupware</h3>
+
+
+<p>The hierarchical organizational structure is not well suited to the speed of decision-making demanded by a competitive market. Organizations are searching flexible structures that can easily adapt to a changing environment, as workgroups. The need of cooperation between geographically dispersed workgroups is a critical issue to global organizations: the best specialists to solve a problem do not usually work on the same floor. </p>
+
+<p>In <a href="#boc95">Bock and Marca</a> (1995), groupware is described as the type of software that is designed to help teams that are geographically dispersed and need to work together. CSCW (Computer Supported Cooperative Work) is the new branch of Computer Science dedicated to the study of groupware technologies. CSCW involves not only technical aspects, but also social and organizational issues. </p>
+
+<p>Groupware systems have a push style where information is sent to the user. Groupware is a blend of synchronous (like chat), asynchronous (like e-mail) and community-focused tools (like e-groups). Informal communication predominates in a groupware environment. People feel free to exchange opinions and collaborate. Groupware systems are well suited to support communities of practice, where specialists of a given domain of knowledge, that may be dispersed all over the world,  exchange their expertise in order to find solutions to specific problems.</p>
+
+<p>According to <a href="#non95">Nonaka and Takeuchi</a> (1995), externalization of tacit knowledge is induced by dialog and collective reflection. Groupware helps this process by permitting collaboration and exchange of non-structured messages. Discussion groups and chats are common groupware applications that make possible the gradual articulation of tacit knowledge. In some cases, we can even expect that socialization occurs, as people work together on the same projects.</p>
+
+<p>With technology evolution, as groupware systems offer support to visual and sound interaction, the interaction and externalization of the tacit dimension of knowledge will be increasingly present. The groupware utopia is to offer an interaction with a quality near to face-to-face conversation. However, writing is still the predominant way of communication in groupware. </p>
+
+<p>Microsoft Exchange and Lotus Notes belong to this KM software category. </p>
+
+<h3>D - Workflow</h3>
+
+
+<p>Workflow systems support standardized business processes. These systems regulate the information flow from person to person, place to place, task to task, in processes that require ordered and structured information. </p>
+
+<p>The objective of workflow systems is to establish and accelerate the process flow, following its steps and tracking each activity that composes the process. They make explicit the knowledge that is embedded in standard processes, mainly supporting the formal codification of existing knowledge. </p>
+
+<p><a href="#cru98">Cruz</a> (1998) defines the three basic elements of workflow, also called 3 R’s model:</p>
+
+<ul>
+<li>Roles: set of skills to execute a specific task;</li>
+<li>Rules: features that define how the data should be processed;</li>
+<li>Routes: logical paths for the knowledge flow through the process.</li>
+</ul>
+
+
+<p>Workflow systems usually automate parts of handiwork processes. For instance, in banks, managers traditionally do the loan evaluation process in a tacit manner. With the adoption of workflow systems, the best way to perform this process is widely discussed by managers and  significant parts of it can be formatted. Therefore, workflow contributes to the externalization as well as to the combination processes described in <a href="#non95">Nonaka and Takeuchi</a> (1995). </p>
+
+<p>Aris Toolset from IDS Scheer is an example of a workflow system.</p>
+
+
+<h3>E - Artificial intelligence-based systems</h3>
+
+
+<p>Artificial Intelligence (AI) is the Computer Science field that has produced the first studies relating information to knowledge. Although most AI works failed  to produce what was expected, some secondary results have contributed to the development of Computer Science. Nowadays, it is wise to realize that the initial proposal of AI during the 80’s was quite ambitious. </p>
+
+<p>Expert systems, CBR (Case Based Reasoning) systems and neural networks are some types of systems that use AI techniques. According to <a href="#gal98">Galliers and Baets</a> (1998), an expert system contains a limited domain knowledge base, an inference mechanism to manipulate this base and an interface to permit the input of new data and user dialog. An expert system is built on the observation of a specialist at work and on the mapping of part of his knowledge into derivation rules. This is clearly a tacit to explicit conversion process. </p>
+
+<p>As <a href="#dav98">Davenport and Prusak</a> (1998) explain, CBR systems support learning from a set of narratives or cases related to a problem. When a user has a problem, he can check in the case base in order to find if it is related to a problem that has already been solved. CBR systems have been successfully used in help-desk and call-center applications. They help contributors to externalize what has been learned from experience trough narrative of cases. Therefore, externalization is the dominating process supported by artificial intelligence-based systems. From the user’s point of view, CBR systems help to acquire explicit knowledge through the case narrative,  combining it to what was already known. </p>
+
+<p>Neural networks are more sophisticated systems that use statistical instruments to process cause-effect examples and learn the relationships involved in the solution of problems. Neural networks are very flexible and &quot;intelligent&quot; systems because each new input results in an automatic reprogramming and consequent addition of new relationships. </p>
+
+<p>Computer Associates Neugents (neural agents) is an example of a neural network system.</p>
+
+
+<h3>F - Business Intelligence (BI)</h3>
+
+
+<p>Business Intelligence (BI) is a set of tools used to manipulate a mass of operational data and to extract essential business information from them. BI systems comprehend:</p>
+
+<ul>
+<li>Front-end systems: DSS (Decision Support Systems), EIS (Executive Information Systems) and OLAP (On-Line Analytical Processing) tools;</li>
+<li>Back-end systems: data warehouse, data mart and data mining.</li></ul>
+
+
+<p>Data Base Management Systems (DBMS) are the basis of a BI solution. First, the operational data generated by business transactions is extracted from the DBMS, filtered by some criteria and then migrated to the data warehouse. The frequency and schedule of updating the BI environment with data extracted from the DBMS must be defined and  <a href="#ibm00">IBM</a> (2000) suggests that  these two environments need to be separated for performance and security reasons. </p>
+
+<p>After this BI back-end loading step, the front-end tools are able to identify hidden patterns inside the data and the user is free to build his own queries and strategic reports. As <a href="#cho98">Choo</a> (1998) explains, organizations are using computer based data management and analysis tools to reveal trends and patterns that would otherwise remain buried in their huge operational databases; software for OLAP – a front-end BI tool – allows users to create multidimensional views of large amounts of data as they &quot;slice and dice&quot; the data in various ways to discover patterns and trends. </p>
+
+<p>The focus of BI is decision-making. Some BI systems are specializing on information related to clients, making an interface with CRM (Customer Relationship Management) systems and enhancing database marketing policies. </p>
+
+<p>BI systems excel in the job of sorting, categorizing and structuring information, facilitating the reconfiguration of existing information, as well as the creation of new one. BI supports the combination process, as it may result in new explicit knowledge shared by the organization. </p>
+
+<p>Business Objects is an example of a BI solution. </p>
+
+<h3>G - Knowledge Map Systems</h3>
+
+
+<p>The software in this category were specifically designed for Knowledge Management. Knowledge maps work like yellow-pages that contain a &quot;who knows what&quot; list. A knowledge map does not store knowledge. The map just points to people who own it, creating opportunities for knowledge exchange. </p>
+
+<p>A standard knowledge map is fed with the profile of competencies of the members of an organization. The knowledge map provides an expert locator feature that helps users to find the experts best suited to work on a specific problem or project. A knowledge map categorizes an organization’s expertise into searchable catalogs. Using a knowledge  map, it is easier to identify people in terms of who they know, what they know and how proficient they are at a given task. </p>
+
+<p>Lotus Discovery Server and Trivium Gingo are examples of such systems.</p>
+
+<p>According to <a href="#tri00">Trivium</a> (2000), Gingo allows the construction of knowledge trees that represent the organization’s human resources potential and give a dynamic vision of available competences. A knowledge tree is a visual representation of a knowledge map and can be a quite useful tool to measure the human capital, as described in <a href="#ste98">Stewart</a> (1998).  Human resources specialists use knowledge trees to match existing competences with strategic targets and to identify what kinds of know-how, essential for growth, are currently available. <a href="#tri00">Trivium</a>  (2000) advises the use of knowledge trees to constitute project groups and manage individual mobility within the company. Knowledge trees also collaborate to training programs by detecting the competency zones where training forces are over deployed and poorly targeted zones where training initiatives are insufficient. </p>
+
+<p>In <a href="#non95">Nonaka and Takeuchi</a> (1995), socialization is described as a process where experiences are shared and common mental models and abilities created. A knowledge map is a way of using technology to approximate people with common interests. It offers opportunities to put complementary expertises in touch, more experienced people in contact with beginners. According to <a href="#ter00">Terra</a> (2000), knowledge maps facilitate tacit knowledge exchange because they provide a faster expert search and increase the chance of personal meetings. This approximation can probably result in face-to-face contacts that promote shared experiences and learning by observation, imitation and praxis (socialization), as well as by the combination of explicit knowledge. </p>
+
+
+<h3>H - Innovation support tools</h3>
+
+
+<p><a href="#ami00">Amidon</a> (2000) defines innovation as the application of new ideas to products or services. The result of innovation can be observed by the number of new patents, design modifications of existing products and development of new products. </p>
+
+<p>Innovation support tools are software that contribute to knowledge generation along the product design process. These tools intend to create a virtual environment that stimulates the multiplication of insights and are especially used in industrial R&amp;D (Research and Development). </p>
+
+<p>An innovation support tool may include different features:</p>
+
+<p>- technical database where patents, articles and  research projects are recorded. Providing information suited to feed the explicit knowledge combination is frequently the starting point of innovation. By using this kind of tool, an R&amp;D professional tries to acquire existing knowledge in order to apply it to a new context (combination). For example, a new type of plastic used in the aircraft industry can be adapted or adopted for medical use. This category may include digital specialized libraries;</p>
+
+<p>- graphic simulation features, which can facilitate internalization. Internalization (Nonaka and Takeuchi, 1995) is the process that enriches explicit knowledge, adding to it tacit knowledge, most frequently through usage and experience, but also through simulation; </p>
+
+<p>- combinatory tools, which help to consider unusual possibilities in the design of innovations, supporting the creativity process.</p>
+
+<p>Tech Optimizer, a package made by Invention Machine, is an example of an innovation support tool.</p>
+
+<h3>I - Competitive intelligence tools </h3>
+
+
+<p>As discussed in section 2, competitive intelligence (CI) aims at systematically feeding the organizational decision process with information about the organizational environment in order to make possible to learn about it and to take better decisions in consequence. In contrast to Business Intelligence (BI), CI depends heavily on the collection and analysis of qualitative information. </p>
+
+<p><a href="#ful00">Fuld</a> (2000) describes the CI cycle in five steps:</p>
+
+<ul>
+<li>Planning and direction: this step is related to the identification of questions and decisions that will drive the information gathering phase. </li>
+<li>Published information collection: search of a wide range of sources, from government fillings to journal articles, vendor brochures and advertisements. </li>
+<li>Primary source collection: this step is related to the importance of gathering information from people rather than from published sources. </li>
+<li>Analysis and production: transformation of the collected data into meaningful assessment.</li>
+<li>Report and inform: delivery of critical intelligence in a coherent and convincing manner to corporate decision makers.</li>
+</ul>
+
+
+<p><a href="#ful00">Fuld</a> (2000) has evaluated the CI software offered on the market and has concluded that they offer better support to the second and fifth steps of the CI cycle. The other steps are very human-based and are only slightly benefited by technology.</p>
+
+<p>On the second step, software agents perform the automatic collection of timely information from news feeds and search the Internet and corporate intranets for information from Web sites and internal documents. These agents are also called crawlers because they constantly scan the Internet and intranet for any new information about competitors, alerting the user when new data is found. On the fifth step, CI tools accelerates the dissemination of reports by sending e-mails reports according to users’ preferences.  </p>
+
+<p>CI tools concentrate on the combination process of the knowledge conversion spiral. They act like a probe on information sources: the information that is obtained is filtered and classified before dissemination, so it is disseminated in an adequate format to facilitate combination.  </p>
+
+<p>VigiPro, a software developed by CRIQ (Centre de Recherche Industrielle du Qu&eacute;bec) and commercialized by CGI, and Knowledge Works, from Cipher Systems, are examples of this class of software.</p>
+
+<h3>J - Knowledge Portals</h3>
+
+
+<p>In an attempt to consolidate the various departmental intranets, organizations are constructing corporate intranets or portals which function as home pages to departmental intranet sites and external internet resources (Detlor in <a href="#cho00">Choo, Detlor and Turnbull, 2000</a>). A great contribution of portals is to integrate heterogeneous information sources, providing a standard interface to the users.</p>
+
+<p>According to the authors, a portal’s primary function is to provide a transparent directory of information already available elsewhere, not act as a separate source of information itself.  Common elements contained in corporate portals design include an enterprise taxonomy or classification of information categories that help easy retrieval, a search engine and links to internal and external web sites and information sources. </p>
+
+<p>But portals are evolving into more complex and interactive gateways, so that they may integrate in a single solution many knowledge management tools features presented before. They are becoming single points of entry through which end-users and communities can perform their business tasks and evolving into virtual places where people can get in touch with other people who share common interests. So, they may support the transfer of tacit knowledge, while standard intranets are more suited for the exchange of explicit knowledge. Besides, traditional intranet systems emphasize organization’s own knowledge while portals go beyond organizational boundaries.</p>
+
+<p>Personalization is a critical issue for knowledge portals. The knowledge workers may select their intranet, extranet and Internet favorite information sources, creating a customizable and personal workspace. This solution enables end-users to organize their work by community, interest, task or job focus. According to <a href="#lot01">Lotus and IBM</a> (2001), Lotus k-station presents a multi-page interface known as personal place, which is unique to each user. Besides providing personal access to knowledge, portals help users in the job of building community places. On-line awareness and real-chat capabilities are available throughout the portal. Therefore, the user can see who is online, connect with them instantly and get immediate answers. </p>
+
+<p>Microsoft Digital Dashboard, Lotus k-station and Sopheon are  examples of portals.</p>
+
+
+<h3>Summary Table</h3>
+
+
+
+<p>Table 1 presents the categories of KM software, plotting them on the schema proposed by Nonaka and Takeuchi (1995) to represent the four knowledge conversion modes, accordingly to the characteristics observed in this research.</p>
+
+
+<table align="center" bgcolor="#FDFFBB" border cellspacing=1 cellpadding=4 width=590>
+<caption align="bottom"><br><strong>Table 1: KM-tools and knowledge conversion processes: summary table</strong> (adapted from Nonaka and Takeuchi, 1995)<br></caption>
+<tr><td width="20%" valign="TOP">&nbsp;</td>
+<th align="CENTER"  width="37%" valign="TOP">To Tacit</th>
+<th align="CENTER" width="43%" valign="TOP">To Explicit</th>
+</tr>
+<tr><th align="CENTER" width="20%" valign="TOP">&nbsp;</th>
+<th align="CENTER" width="37%" valign="TOP">Socialization</th>
+<th align="CENTER" width="43%" valign="TOP">Externalization</th>
+</tr>
+<tr> <th width="20%" valign="TOP">From Tacit</th>
+<td width="37%" valign="TOP">
+
+<ul><li>Knowledge Maps</ul></td>
+<td width="43%" valign="TOP"><ul><li>Groupware</ul></td>
+</tr>
+<tr><td width="20%" valign="TOP">&nbsp;</td>
+<td width="37%" valign="TOP"><ul><li>Knowledge Portals</ul></td>
+<td width="43%" valign="TOP"><ul><li>Workflow</ul></td>
+</tr>
+<tr><td width="20%" valign="TOP">&nbsp;</td>
+<td width="37%" valign="TOP">&nbsp;</td>
+<td width="43%" valign="TOP"><ul><li>Knowledge-Based Systems</ul></td>
+</tr>
+<tr><td width="20%" valign="TOP">&nbsp;</td>
+<td width="37%" valign="TOP">&nbsp;</td>
+<td width="43%" valign="TOP"><ul><li>Knowledge Portals</ul></td>
+</tr>
+<tr><th width="20%" valign="TOP">&nbsp;</th>
+<th width="37%" valign="TOP">Internalization</th>
+<th width="43%" valign="TOP">Combination</th>
+</tr>
+<tr><th width="20%" valign="TOP">
+From Explicit</th>
+<td width="37%" valign="TOP"><ul><li>Innovation Support Tools</ul>
+</td>
+<td width="43%" valign="TOP"><ul><li>Intranet</ul></td>
+</tr>
+<tr><td width="20%" valign="TOP">&nbsp;</td>
+<td width="37%" valign="TOP">&nbsp;</td>
+<td width="43%" valign="TOP"><ul><li>Electronic Document Management</ul></td>
+</tr>
+<tr><td width="20%" valign="TOP">&nbsp;</td>
+<td width="37%" valign="TOP">&nbsp;</td>
+<td width="43%" valign="TOP"><ul>LI>Business Intelligence </ul></td>
+</tr>
+<tr><td width="20%" valign="TOP">&nbsp;</td>
+<td width="37%" valign="TOP">&nbsp;</td>
+<td width="43%" valign="TOP"><ul><li>Competitive Intelligence</ul></td>
+</tr>
+<tr><td width="20%" valign="TOP">&nbsp;</td>
+<td width="37%" valign="TOP">&nbsp;</td>
+<td width="43%" valign="TOP"><ul><li>Knowledge Portals</ul></td>
+</tr>
+</table>
+
+
+It is interesting to notice how KM software covers a large spectrum of features, information resources and users. For instance, EDM systems are made to retrieve documents while knowledge map systems exist to find people. Like EDM systems, BI supports the combination process. However, EDM systems deal basically with documents that are usually non-structured and appear in a great variety of formats, while the basic BI structure is a database record with specific attributes and standardized format. Finally, the users of innovation support tools are usually technicians, engineers or scientists who are involved in some creative design process inside an R&amp;D department, while managers are Business Intelligence typical users.    </p>
+
+</u>According to the classification presented in this research, knowledge portals may integrate features of not only intranet-based systems (category A), but also of  EDM systems (category B), groupware (category C), knowledge maps (category G) and CI tools (category I). This synergy of features makes portals apt to support socialization, externalization and combination processes, and portal evolution is still advancing.</p>
+
+
+<h2>Discussion </h2>
+
+
+
+<p>KM software can be considered &quot;interdisciplinary business&quot; because their development requires not only technical skills, but also a deep understanding of social and managerial aspects. For instance, KM software must be extremely user friendly in order to provide an appealing environment for knowledge sharing. Therefore, the conception of a KM software requires a project team with professionals from hard sciences and social sciences. </p>
+
+<p>In this sense, <a href="#cho00">Choo <em>et al</em>.</a> (2000) suggest that intranet designers look for the lessons learned from the field of CSCW to become aware of organizational barriers to groupware systems, that many authors describe, such as the fact that they may lead to activity which may disrupt social processes, threaten existing political structures or violate social taboos. Recommendations include the need to ensure that everyone benefits from groupware, the need to understand the current work practice and the involvement of users in design. That is, the recognition of the social nature of information  and its technology (<a href="#bro00">Brown and Duguid, 2000</a>).</p>
+
+<p><a href="#sch00">Schultze</a> (2000) highlights the importance of evaluating a KM technology with respect to the role it plays in the knowledge worker’s effort to balance subjectivity and objectivity. The author suggests that a KM system needs to help individuals objectify their subjective knowledge. In other words, one of the main roles of a KM support is to support externalization, that is a key conversion process. </p>
+
+<p>For <a href="#cho00">Choo <em>et al</em></a>. (2000), the intranet technology is a turning point in the history of computing in organizations, comparable to the PC revolution in the 1980’s. For the authors, intranet functions as an IT infrastructure that facilitate knowledge creation and use, and they base their argument on <a href="#non95">Nonaka and Takeuchi’s</a> (1995) hypertext organizational model, that describes the need for both, knowledge bases and communication spaces, in order to support the knowledge creation process.</p>
+
+<p>To elaborate this position, they present a new, information-based model for representing intranet ability to help cultivate organizational knowledge and intelligence, that is composed by three spaces: a content space to facilitate information access and retrieval; a communication space to negotiate collective interpretations and shared meanings; and a collaborative space to support cooperative work.</p>
+
+<p>This model supports the idea that organizations need to create a shared space for individual and collective knowledge creation, both a physical and mental space. This space presents four dimensions, that correspond to the four stages of <a href="#non95">Nonaka and Takeuchi’s</a> (1995) knowledge creation cycle: socialization, externalization, combination and internalization. <a href="#cho00">Choo, <em>et al.</em></a> (2000) support that intranets and, more generally,  IT can be an important infra-structure for the development of the four dimensions of the knowledge creation space, as it can be utilized not only as a publishing medium for explicit knowledge but can support organizational communication and collaboration as well, facilitating information access and retrieval, the negotiation of collective interpretations, the development of shared meanings and the accomplishment of cooperative work.</p>
+
+<p>We thoroughly agree with these authors, as, as a result of the research presented in this paper, we conclude that KM software is evolving in order to offer an integrated platform for organizational knowledge conversion processes. Studying the ten software categories detected in our research in the light of the state of the art in the fields of information, knowledge and innovation management, we relate each one of the categories to <a href="#non95">Nonaka and Takeuchi’s</a> (1995) knowledge conversion model, concluding that all have been contemplated, even if some of them, like combination, are more frequently present in KM tools.   </p>
+
+<p>But this doesn’t mean that the resources of KM software are already well exploited by the organizations that have adopted it. As reported in literature and as we have ourselves learned from the study of two Brazilian organizations systems (<a href="#car00">Carvalho, 2000</a>),  their potential is most frequently under-evaluated and explored. In fact, their actual utilization stresses mainly their support to information access and retrieval, while their communication and collaboration dimensions are yet to discover.</p>
+
+<p>The implementation of a KM software is complex process. The KM software needs not only to be integrated to the existing IT (Information Technology) infrastructure, but to the organizational culture, procedures and HR (Human Resources) policy as well. The correct balance between managerial and technical aspects constitutes one of KM tools adoption greatest challenges. </p>
+
+<p>Table 2 presents the ten classes of KM software discussed in this paper, their main contribution  to knowledge conversion processes, in the sense of <a href="#non95">Nonaka and Takeuchi</a> (1995), the disciplinary origin of their main concepts and some examples.</p>
+
+<table bgcolor="#FDFFBB"  align="center" border cellspacing=1 cellpadding=4 width=628>
+<caption align="bottom"><br><strong>Table 2: Categories of knowledge management software: summary table</strong><br></caption>
+<tr><td width="22%" valign="TOP">
+<b><p align="CENTER">Category</b></td>
+<td width="26%" valign="TOP">
+<b><p align="CENTER">Dominating Knowledge Conversion Process</b></td>
+<td width="23%" valign="TOP">
+<b><p align="CENTER">Origin of concepts</b></td>
+<td width="30%" valign="TOP">
+<b><p align="CENTER">Example</b></td>
+</tr>
+<tr><td width="22%" valign="TOP">
+Intranet-Based Systems</td>
+<td width="26%" valign="TOP">
+Combination</td>
+<td width="23%" valign="TOP">
+Computer Networks (Web technology)</td>
+<td width="30%" valign="TOP">
+Microsoft Internet Information Server</td>
+</tr>
+<tr><td width="22%" valign="TOP">
+Electronic Document Management</td>
+<td width="26%" valign="TOP">
+Combination</td>
+<td width="23%" valign="TOP">
+Information Science</td>
+<td width="30%" valign="TOP">
+Excalibur RetrievalWare and File Net</td>
+</tr>
+<tr><td width="22%" valign="TOP">
+Groupware</td>
+<td width="26%" valign="TOP">
+Externalization</td>
+<td width="23%" valign="TOP">
+CSCW (Computer Supported Cooperative Work)</td>
+<td width="30%" valign="TOP">
+Notes (Lotus) and  Exchange (Microsoft)</td>
+</tr>
+<tr><td width="22%" valign="TOP">
+Workflow</td>
+<td width="26%" valign="TOP">
+Externalization </td>
+<td width="23%" valign="TOP">
+Organization &amp; Methods</td>
+<td width="30%" valign="TOP">
+ARIS Toolset (IDS Scheer)</td>
+</tr>
+<tr><td width="22%" valign="TOP">
+Knowledge Base Systems</td>
+<td width="26%" valign="TOP">
+Externalization</td>
+<td width="23%" valign="TOP">
+Artificial Intelligence</td>
+<td width="30%" valign="TOP">
+Neugents (Computer Associates)</td>
+</tr>
+<tr><td width="22%" valign="TOP">
+Business Intelligence</td>
+<td width="26%" valign="TOP">
+Combination</td>
+<td width="23%" valign="TOP">
+Data Base Management</td>
+<td width="30%" valign="TOP">
+Business Objects </td>
+</tr>
+<tr><td width="22%" valign="TOP">
+Knowledge Map</td>
+<td width="26%" valign="TOP">
+Socialization</td>
+<td width="23%" valign="TOP">
+Information Science and Human Resources Management </td>
+<td width="30%" valign="TOP">
+Gingo (Trivium) and Lotus Discovery Server </td>
+</tr>
+<tr><td width="22%" valign="TOP">
+Innovation Support Tools</td>
+<td width="26%" valign="TOP">
+Internalization</td>
+<td width="23%" valign="TOP">
+Innovation and Technology Management</td>
+<td width="30%" valign="TOP">
+Invention Machine</td>
+</tr>
+<tr><td width="22%" valign="TOP">
+Competitive Intelligence Tools</td>
+<td width="26%" valign="TOP">
+Combination</td>
+<td width="23%" valign="TOP">
+Strategic Management and Information Science</td>
+<td width="30%" valign="TOP">
+Knowledge. Works (Cipher Systems) and Vigipro (CRIQ/CGI)</td>
+</tr>
+<tr><td width="22%" valign="TOP">
+Knowledge Portals</td>
+<td width="26%" valign="TOP">
+Socialization, Externalization and Combination</td>
+<td width="23%" valign="TOP">
+Computer Networks and Information Science</td>
+<td width="30%" valign="TOP">
+Digital Dashboard (Microsoft),  Lotus k-station and Sopheon</td>
+</tr>
+</table>
+
+
+<h2>Conclusion</h2>
+
+<p>It seems to be a trend of functional convergence in KM systems. Preserving initial features, vendors are incorporating extra features from others categories described in the typology presented in this article, transforming their products into KM integrated suites. For instance, a Business Intelligence software may start to offer a knowledge map feature in a new version. So, it seems that increasingly KM software will be classified in more than one of the proposed categories, which can be alternatively considered as an array of KM features that can be integrated in a software. </p>
+
+<p>The wise selection of a KM software requires a previous analysis of an organization’s knowledge needs. Among the considerations to be dressed, in some organizations, for instance, a low level of socialization may be the critical point; in other ones, externalization may need to be improved. </p>
+
+<p>As to KM software market, it can be concluded that Lotus and IBM have a qualitative leading position, which may be due to the investments in KM studies made by Lotus Institute and the pioneer<b> </b>feature of Lotus Notes. Microsoft seems to react with the launch of Digital Dashboard, following the concept of Digital Nervous System proposed by Bill Gates, and it is difficult to forecast if Microsoft will be able to change the positions on KM market in the same way it did on Web browser market. But KM software market still offers niches<b> </b>to other vendors of segmented products like Excalibur, File Net, Fulcrum, Verity and others.</p>
+
+<p>As to the adoption process, it is interesting to notice the differences between KM software and ERP (Enterprise Resource Planning) systems like SAP, Baan or Peoplesoft. ERPs are usually implemented in a top-down style, and the organization generally has to adjust its processes to the system in a short period of time. It is impossible to do the same with a KM system. Commitment and motivation of members is crucial to any KM program, much more than better KM software. KM requires a long-term strategy to involve people and break paradigms. And policies referring to participation, flexibility, autonomy and career evolution must surely be adapted. </p>
+
+<p>Many organizations that are implementing KM programs focus exclusively on the conversion of human capital into structural capital. They think of KM as an opportunity to extract part of the knowledge of their employees and store it in knowledge bases. This approach misunderstands the dynamic and complex characteristics of knowledge, its tacit prevailing nature and the fact that, more than the existing knowledge, the incessant creation of knowledge is the distinctive feature. Creative people will certainly be the most useful resource to organizations in the knowledge era. Even more if supported by good software.</p>
+
+<p>As to the question about the nature of what is treated in KM systems (that is discussed in section 2 of this article), if it is data, information or knowledge, we think that it would better to consider that, data, it surely is; information, only when it encounters a cognitive capacity able to perceive sense out of it; and that this information, in a KM system, intends to be &quot;knowledge-friendly&quot;, in the sense that it is designed, organized, transferred in an adequate manner to &quot;provoke&quot; knowledge in a mind willing or needing to learn.</p>
+
+<p>KM concept has recently been severely criticized (for instance, <a href="#ber01">Berkman, 2001</a>), and one of the reasons for the eventual decline is pointed out to be the excessive emphasis on software and methodologies <em>per se</em>. This argument emphasizes the importance of considering technology in its context, that is, of relating it to the complexity of knowledge processes, in order not to over (or under)-estimate technology or to miss the opportunity of bringing knowledge to where it belongs, the center of organizational attention.   </p>
+
+<p>That is what we tried to do in this article.</p>
+
+
+<h2>References </h2> 
+
+
+<ul>
+<a name="agu67"></a><li>Aguilar, F.J. (1967) <i>Scanning the Business Environment</i>. New York: The Macmillan Company.</li><br>
+
+<a name="ami00"></a><li>Amidon, D. (2000) <i>Knowledge Innovation.</i> Web site <a  href="http://www.entovation.com/">http://www.entovation.com</a></li> <br>
+
+<a name="ben97"></a><li>Bennet, G. (1997) <i>Intranets: Como Implantar com Sucesso na sua Empresa</i>. Rio de Janeiro: Campus.</li><br>
+
+<a name="ber01"></a><li>Berkman, E. (2001) When bad things happen to good ideas. <i>Darwin Magazine – April Edition</i>. Web site </u><a href="http://www.darwinmag.com/">http://www.darwinmag.com</a></li><br>
+
+<a name="boc95"></a><li>Bock, G. and Marca, D. (1995)  <i>Designing Groupware</i>. New York: McGraw-Hill.</li><br>
+
+<a name="bro00"></a><li>Brown, J. S. and Duguid, P. (2000). <i>The Social Life of Information</i>. Boston: Harvard Business School Press.</li><br>
+
+<a name="car00"></a><li>Carvalho, R.B. (2000). <i>Aplica&ccedil;&otilde;es de software de Gest&atilde;o do Conhecimento: Tipologia e Usos</i> (MSc dissertation). Belo Horizonte: Programa de P&oacute;s-Gradua&ccedil;&atilde;o em Ci&ecirc;ncia da Informa&ccedil;&atilde;o da UFMG. </li><br>
+
+<a name="cho95"></a><li>Choo, C.W. (1995) <i>Information Management for Intelligent Organization.</i> Medford: Information Today.</li><br>
+
+<a name="cho98"></a><li>Choo, C.W. (1998) <i>The Knowing Organization</i>. Oxford: Oxford University Press.</li><br>
+
+<a name="cho00"></a><li>Choo, C.W., Detlor, B. and Turnbull, D. (2000). <i>Web Work: Information Seeking and Knowledge Work on the World Wide Web.</i> Dordrecht: Kluwer Academic Publishers.</li><br>
+ 
+<a name="cru98"></a><li>Cruz, T. (1998). <i>Workflow: A Tecnologia que vai Revolucionar Processos</i>. S&atilde;o Paulo: Atlas.</li><br>
+
+<a name="dav98"></a><li>Davenport, T. and Prusak, L. (1998) <i>Working Knowledge: how organizations manage what they know</i>. Boston: HBS Press. </li><br>
+
+<a name="ful00"></a><li>Fuld &amp; Company Inc. (2000) <i>Intelligence software report</i>.  Web site <a href="http://www.fuld.com/">http://www.fuld.com</a></li> <br>
+
+<a name="gal98"></a><li>Galliers, R.D. and Baets, W.R.J.(1998) <i>Information Technology and Organizational Transformation. </i>London: John Wiley &amp; Sons Ltd.</li><br>
+
+<a name="ibm00"></a><li>IBM (2000). <i>The road to business intelligence</i>. Web site <a href="http://www.brint.com/km/whatis.htm">http://www-4.ibm.com/software/data/busn-intel/road2bi/step1.html</a></li><br>
+
+<a name="lot01"></a><li>Lotus and IBM (2001). <i>Lotus and IBM knowledge management strategy. </i>Web site <a href="http://www.lotus.com/">http://www.lotus.com</a> </li><br>
+
+<a name="nan95"></a><li>Nonaka, I. and Takeuchi, H.(1995) <i>The Knowledge-Creating Company.</i> New York: Oxford Press.</li>
+<br>
+<a name="nas99"></a><li>Nascimento, N. and Neves, J.T.R. (1999) A gest&atilde;o do donhecimento na World Wide Web: reflex&otilde;es sobre a pesquisa de informa&ccedil;&otilde;es na rede. <i>Perspectivas em Ci&ecirc;ncia da Informa&ccedil;&atilde;o</i>, 4, 29-48.</li>
+<br>
+<a name="pol66"></a><li>Polanyi, M. (1966)  <i>The Tacit Dimension</i>. Gloucester, Mass.: Peter Smith.</li><br>
+
+<a name="sch00"></a><li>Schultze, U. (2000). A confessional account of an ethnography about knowledge work . <i>MIS Quartely, </i>24(1), 3-41.</li><br>
+
+<a name="sen98"></a><li>Senge, P. (1998) The fifth discipline. <i>HSM Management</i>, 9, 35-47.</li><br>
+
+<a name="ste98"></a><li>Stewart, T. (1998) <i>Capital Intelectual</i>. Rio de Janeiro: Campus.</li><br>
+
+<a name="ter00"></a><li>Terra, J.C.C (2000). <i>Gest&atilde;o do Conhecimento: o grande desafio empresarial.</i> S&atilde;o Paulo: Neg&oacute;cio Editora.</li><br>
+
+<a name="tri00"></a><li>Trivium (2000). <i>Gingo: software for management solutions.</i> Web site <a href="http://www.trivium.fr/new/gingo/managem.htm">http://www.trivium.fr/new/gingo/managem.htm</a> </li></ul>
+
+
+<h2><a name="app"></a>Appendix</h2>
+
+
+</b>Table 3 presents the list of software vendors contacted during the research. According to the table, 26 software vendors  were contacted, from which 21 sent folders, technical briefings and demo versions of their software. </p>
+
+<table align="center" bgcolor="#FDFFBB" border cellspacing=1 cellpadding=4 width=543>
+<caption align="bottom"><br><strong>Table 3: List of contacted vendors and evaluated knowledge management software</strong><br>(Note: Web links added by the Editor)</caption>
+<tr><td width="23%" valign="TOP">
+<b><p align="CENTER">Software Vendor</b></td>
+<td width="61%" valign="TOP">
+<b><p align="CENTER">Tool(s)</b></td>
+<td width="16%" valign="TOP">
+<b><p align="CENTER">Software Evaluated</b></td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.autonomy.com/autonomy_v3/">Autonomy</a></td>
+<td width="61%" valign="TOP">
+Knowledge Server, Knowledge Update, Knowledge Builder, Portal in a Box, Active Knowledge </td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+Business Solutions</td>
+<td width="61%" valign="TOP">
+Business Solutions</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.businessobjects.com/">Business Objects</a></td>
+<td width="61%" valign="TOP">
+Business Objects, Web Intelligence, Broadcast Agent, Set Analyser, Business Query, Business Miner</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.brio.com/">Brio Technology</a> </td>
+<td width="61%" valign="TOP">
+Brio, Report Mart</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">No</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.vigipro.com/">CGI</a></td>
+<td width="61%" valign="TOP">
+VigiPro</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.cipher-sys.com/">Cipher Systems</a></td>
+<td width="61%" valign="TOP">
+Knowledge Works</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.cognos.com/">Cognos</a></td>
+<td width="61%" valign="TOP">
+Power Play, Impromptu</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.cai.com/">Computer Associates</a></td>
+<td width="61%" valign="TOP">
+Neugents</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://209.151.250.200/">Eastman Software</a></td>
+<td width="61%" valign="TOP">
+Work Manager Suite</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">No</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.ey.com/global/gcr.nsf/International/International_Home">Ernst &amp; Young</a></td>
+<td width="61%" valign="TOP">
+EY/Knowledge Web</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.excalib.com/">Excalibur</a></td>
+<td width="61%" valign="TOP">
+Retrieval Ware, Excalibur Internet Spider</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.filenet.com/">File Net</a></td>
+<td width="61%" valign="TOP">
+File Net</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.fulcrum.com/">Fulcrum</a></td>
+<td width="61%" valign="TOP">
+Fulcrum Knowledge Network, PC Docs</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.hyperion.com/">Hyperion</a></td>
+<td width="61%" valign="TOP">
+Hyperion</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">No</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.hummingbird.com/">Hummingbird</a> </td>
+<td width="61%" valign="TOP">
+Hummingbird Enterprise Knowledge Portal</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">No</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.ibm.com/">IBM</a></td>
+<td width="61%" valign="TOP">
+IBM KnowledgeX, Intelligent Miner, IBM Enterprise Information Portal, IBM Decision Edge, IBM Content Manager, IBM Visual Warehouse</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.ids-scheer.de/">IDS Scheer</a></td>
+<td width="61%" valign="TOP">
+Aris Toolset, Aris KM, Aris Easy Design, Aris ABC, Aris Yesulation, Aris Web Link</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.intraspect.com/">Intraspect</a></td>
+<td width="61%" valign="TOP">
+Intraspect</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">No</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.invention-machine.com/">Invention Machine</a></td>
+<td width="61%" valign="TOP">
+Tech Optimizer, CoBrain, KnowledgeList,</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.lotus.com/">Lotus</a></td>
+<td width="61%" valign="TOP">
+Lotus Notes, Lotus Donino Doc, Raven, k-portal, Discovery Server</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.microsoft.com/ms.htm">Microsoft</a></td>
+<td width="61%" valign="TOP">
+Digital Dashboard, Internet Information Server, Exchange</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.plumtree.com/">Plumtree</a></td>
+<td width="61%" valign="TOP">
+Plumtree Corporate Portal</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.tacit.com/">Tacit Knowledge Systems</a></td>
+<td width="61%" valign="TOP">
+Knowledge Mail</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.teltech.com/">Teltech</a></td>
+<td width="61%" valign="TOP">
+Sopheon</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.trivium.fr/us/index.htm">Trivium</a></td>
+<td width="61%" valign="TOP">
+Gingo, Umap, Kartograph</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+<tr><td width="23%" valign="TOP">
+<a href="http://www.verity.com/">Verity</a> </td>
+<td width="61%" valign="TOP">
+<p>Verity Search, CD Web Publisher, Keyview</td>
+<td width="16%" valign="TOP">
+<p align="CENTER">Yes</td>
+</tr>
+</table>
+
+
+
+<hr color=#ff00ff size=3>
+<div align=center><h4>How to cite this paper:</h4>
+		Carvalho, Rodrigo Baroni de &amp;  Ferreira, Marta Ara&uacute;jo Tavares&nbsp; (2001)  &quot;Using information technology to support knowledge conversion processes&quot; &nbsp; <em> Information Research</em>, <strong>7</strong>(1)  [Available at http://InformationR.net/ir/7-1/paper118.html] <br><br>&copy; the authors, 2001.  Updated: 25th September 2001
+</div>
+
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:nNHIAhAKVcoJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+			<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres71.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper118" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+
+            <hr color=#ff00ff size=3>
+			
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/7-1/paper118.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:25 GMT -->
+</html>
+
+

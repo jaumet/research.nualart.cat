@@ -1,0 +1,569 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/5-1/paper67.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:29 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 97">
+<title>'Information Seeking in Context' and the development of information systems</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="">
+<meta name="description" content="This paper reports on some findings of the explorations represented at the conference "information seeking in context" (ISIC’98). These findings are investigated with the aim to evaluate their practical usefulness for the design of information computer systems. The paper       discusses some common problems connected with the conceptual approaches to  the information system development.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<link rel=schema.vw96 href="http://vancouver-webpages.com/META/VW96-schema.html">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="&quot;Information Seeking in Context&quot; and the development of information systems">
+<meta name="DC.Creator" content="Irina Gaslikova">
+<meta name="DC.Subject" content="&quot;Information Seeking in Context&quot; and the development of information systems">
+<meta name="DC.Description" content="This paper reports on some findings of the explorations represented at the conference "information seeking in context" (ISIC’98). These findings are investigated with the aim to evaluate their practical usefulness for the design of information computer systems. The paper       discusses some common problems connected with the conceptual approaches to  the information system development.">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 5  No. 1, October 1999</h4></td></tr>
+  <tr> 
+    <td><a href="infres51.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+
+
+<h1>&quot;Information Seeking in Context&quot; and the development of information systems</h1>
+<br>
+<h4 align="center">
+<a href="mailto:gasl@minstp.ru">Irina Gaslikova</a><br>
+Centre for Science Research and Statistics<br>
+Ministry of Science and Technology<br>
+Russian Academy of Sciences<br>
+Moscow, Russia</h4>
+<br><br>
+<div>Abstract</div>
+
+<blockquote>This paper reports on some findings of the explorations 
+      represented at the conference "Information Seeking in Context" (ISIC’98). 
+      These findings are investigated with the aim to evaluate their practical 
+      usefulness for the design of information computer systems. The paper 
+      discusses some common problems connected with the conceptual approaches to 
+      the information system development.</blockquote>
+	  <br><br>
+	  
+<h2>Introduction</h2>
+
+<p>Every day each of us is forced to solve many different vital problems 
+connected with working and training, recreation and education of children, the 
+family budget and hobby. For decision making in every concrete situation, it is 
+necessary to have as complete and recent information about these things and 
+circumstances as possible. The choice of information sources and seeking 
+strategies, methods of verification of its reliability and correspondence with 
+earlier data, the ways of evaluation of relevance and utility of the findings 
+for problem resolution are the factors characterizing human information 
+behaviour. The problems of information seeking in context were considered at the 
+overpast conference where scientists from many countries of Europe, America, and 
+Australia presented around forty reports and a variety of other works at the 
+stands. This paper argues some from the numerous ideas and opinions of the 
+participants of the conference, which were discussed during their speeches and 
+considerations. I have tried to investigate some proposed ideas, models and 
+methods with the aim to evaluate their practical usefulness for the design of 
+information computer systems.</p>
+<h2>Conception of context</h2>
+<p>There are many investigations of different information and 
+information-seeking problems but the conference was devoted to the problem of 
+information seeking in context, i.e., in a concrete situation when the 
+information lack problem appears and the process of its acquisition is realized. 
+As one can see, the notion of context in itself is not defined exactly now, 
+there is a great variety of conceptions and approaches to its description. There 
+are also many discussions whether it is necessary to introduce an exact 
+definition of context or it is enough to limit ourselves by approximate 
+reasoning about its content, whether context develops during some time, and 
+whether it is discrete or continuous, what way may be used for defining an edge 
+between the notion of context and other concepts such as situation or event, and 
+so on.</p>
+<p>Context of information seeking may be described by means of many different 
+parameters such as the time and place of appearance of information need, the 
+time for information seeking, types of participants of the seeking process, for 
+example, their demographic, social, professional, educational and behavioural 
+characteristics, the purpose of information seeking, the concrete task for which 
+this information is looked for, the processes and situations of information 
+seeking, and many others. There is a great deal of different context versions 
+presented in explorations of the reporters. For example, <a 
+href="#book2">Brezillon and Saker (1998)</a> study 
+the notion of context in the application for behaviour of the subway operator 
+when an incident occurs, <a href="#book3">Gorman 
+(1998)</a> researches information seeking of primary care physicians, <a 
+href="#book12">van de Wijngaert (1998)</a> considers 
+the information behaviour of students when they decide which movies they can go 
+to.</p>
+<p>So, there are many points of view regarding what context is, but, not going 
+into details, it should be necessary to emphasize that the introduction of a 
+notion of context allows to pass from study of some ideal process of information 
+seeking, which is executed by someone under undetermined conditions, to the 
+research of realistic information-seeking behaviour taking into account both 
+specific cases and their influence on the information seeking process itself, to 
+the choice of search strategies, information sources, methods of evaluation of 
+information quality, reliability, and relevance. Using such an approach, it 
+becomes possible to organize addressed information support to particular users 
+with their concrete needs under their specific conditions.</p>
+<h2>Some theoretical concepts and their practical use</h2>
+<p>The papers represented at the conference submit both theoretical and applied 
+findings of the participants. It is impossible to consider in detail all these 
+explorations, so this review is limited to findings which may be used for 
+practical design and realization of information computer system.</p>
+<p>There are many theoretical problems which are discussed in the papers by <a 
+href="#book13">Wilson (1998)</a>, <a 
+href="#book4">Kuhlthau (1998)</a>, <a 
+href="#book10">Spink (1998)</a>, <a 
+href="#book7">Olsson (1998)</a>, <a 
+href="#book11">Vakkari (1998)</a>, <a 
+href="#book9">Solomon (1998)</a>, <a 
+href="#book1">Audunson (1998)</a>, and others. The 
+fellows develop general concepts, propose different models of processes 
+connected with information seeking and information use, study various approaches 
+to information computer system construction.</p>
+
+<p>It seems that the idea of utility of concept, instead of an exact definition 
+of notion, is very constructive because concept unlike exact definition suggests 
+not only description but the way of exploration and interpretation of a 
+phenomenon. Moreover, there is a possibility to choose a concept just conformed 
+to the aims of a present task. It may become a comfortable research 
+instrumentation for getting interesting results.</p>
+
+<h3>Concept of information</h3>
+
+<p>The notion of information is one of the basic concepts. Researchers study 
+several ideas of it and everyone seems to refer to one of the two polar types 
+with more or less admissions. The first approach proposes to consider 
+information as objective and user as something like an input-output device for 
+this information without any impact on its sense, at that the nature of 
+information using does not stand on circumstances of this process. Events and 
+processes of outness are in the high light. Another approach views information 
+as something created by a man on the basis of some received data and his own 
+knowledge. In this case, the sense of created information depends on conditions 
+of its formation and its author, i.e., on context.</p>
+
+<h3>Approaches to computer system organization</h3>
+
+<p>Of course, the above-described concepts of information are simplified to the 
+limit but in fact, taking his choice, an information system designer chooses the 
+main principle of his future product construction; this product may be oriented 
+either to a system or to a user.</p>
+
+<p>The first approach is described by a neatly defined purpose of construction 
+of a computer system, formalized process descriptions, setting tough 
+cause-and-effect connections. A user of this future system and his information 
+needs are known exactly; a user is not considered as a component of this system. 
+The main system function is information processing; at that, generally such a 
+system contains specialized information which may be rarely received from other 
+sources. If a system was constructed in accordance with these principles, it 
+does not depend on the context of its use; in fact, it is initially connected 
+with one or a few certain contexts. These contexts are hardwired into such a 
+system. So, this system may be used only under certain circumstances which were 
+covered previously as far back as at the stage of system design.</
+>
+<p>This approach is not acceptable for decision of low-structured problems when 
+a user has to interpret received data using his own knowledge and experience in 
+accordance with a concrete context.</p>
+
+<p>The second approach assumes that the purpose of system creation is formulated 
+in general, a future user himself and his information needs are only partly 
+known. So, a user is considered as an active component of information system. 
+The main system function is information seeking according to user needs; at 
+that, information has a common nature and generally speaking may be received 
+from other sources. The ways and results of using such a system depend on the 
+context of its employment, furthermore, conditions, situations, types of users, 
+and their purposes may be very different and can transform during the system 
+life-cycle.</p>
+
+<p>Thereby, the mainframe principle of system designing is defined by sorts of 
+problems for which a future system is meant. But, doing this choice, a designer 
+precisely circumscribes the system usability and therefore the nature of 
+information which will be located in the system, and the rules of its 
+organization, as well as the algorithms of information retrieval and processing, 
+and the forms of result representation.</p>
+
+<p>Speaking about methodologies of information system designing, the 
+participants of the conference offered the opinion that existent procedures and 
+instrumentation are applicable mostly in the elaboration of system-oriented 
+products. They have noted that it is necessary to further the development of 
+conceptual approaches and practical methods of construction for user-oriented 
+information systems.</p>
+
+<h3>Problem-solving processes</h3>
+
+<p>Among the theoretical explorations delivered at the conference, the research 
+of problem-solving processes occupies important place (e.g., <a 
+href="#book13">Wilson (1998)</a>, <a 
+href="#book4">Kuhlthau (1998),</a> <a 
+href="#book11">Vakkari (1998),</a> and others). The 
+researchers consider these processes, from problem authentication to decision 
+making and its quality estimation. They produce diverse models of these 
+processes and also procedures connected with information seeking and using at 
+every stage of problem decision.</p>
+
+<p>Generalizing the ideas of the participants of the conference and many 
+references to earlier explorations, it seems possible to detail three basic 
+stages of problem-solving processes, which essentially differ by the ways of 
+working with information.</p>
+
+<p>At the first stage, knowledge about the problem is rather common and 
+fragmentary. The solver cannot precisely formulate the problem as yet and, 
+respectively, is unable to define what specific information is necessary for 
+solving his problem. At this stage, his purpose is to review and to learn as 
+much as possible various information for problem perception. For this purpose, 
+he uses all sorts of data from many diverse sources, discusses his problem with 
+other people; at the same time, he has no plan of his actions and exact criteria 
+for the selection of necessary lights as yet. As a result of this activity, at 
+the first stage he has to get wise to the content of his problem and to 
+construct the methods of its decision.</p>
+
+<p>At the second stage, the solver has a more precise and structured notion of 
+his problem. He visualizes the content and possible sources of necessary 
+information and executes direct and task-oriented seeking. He is able to define 
+relevance of retrieved information by explicit criteria. As a result of this 
+stage, he has to propose a solution of his problem.</p>
+
+<p>At the third, final stage of problem-solving process, the solver examines the 
+received decision. To that end, he looks for additional information related to 
+the theme of study, tries to confirm the regularity of decision. Information 
+seeking is pretty much associative.</p>
+
+<p>Of course, the produced scheme of problem solving is described in a general, 
+very simplified form. To consider it in more detail, one can find particular 
+legs at every stage; these legs may have some nuances concerning working with 
+information. A problem may fall into several subproblems and the process of 
+solving them may be at different stages simultaneously; it is possible to return 
+to previous stages for perception of new data or detail elaboration and 
+respectively for seeking additional information to that end. But even this 
+simplified scheme may be useful for defining the main strategy of information 
+seeking at every stage of problem-solving process.</p>
+
+<p>So, at the first stage it is impossible to formulate precise requirements and 
+accordingly queries for necessary information as yet. Thus, the main strategy at 
+this stage is review of as many as possible different data, seeking ideas, 
+approaches, some common information about this theme in order to form the task 
+structure.</p>
+
+<p>At the second stage, when the problem is structured and the purposes are 
+formulated, the strategy of information seeking by means of exact retrieval 
+requests seems to respond to the best advantage. Now the basic purpose of search 
+is the selection of useful lights and the definition of the necessary degree of 
+data specification.</p>
+
+<p>And at last, at the third stage of problem-solving process, it is necessary 
+to find additional information sustaining conclusions earlier done. To that end, 
+one can use the strategy of retrieval requests as well, but the nature of 
+queries will be diverse - less precise, implicit. The queries will cover various 
+fields of studies connected with the basic theme associatively, by default.</p>
+<p>So, an information computer system has to provide suitable software tools for 
+the realization of such different retrieval strategies according to the stage of 
+problem-solving process. Another way is elemental restriction of system 
+adaptability by such stages of problem solving. In fact, one can consider the 
+stage of problem solving and appropriate human information behaviour at this 
+stage as the characteristics of context in which this information system can or 
+cannot be practicable.</p>
+
+<h2>Some applied findings and their practical use</h2>
+
+<p>The participants of the conference submitted many papers of applied sort. 
+Substantially, those are results of surveys of human information behaviour of 
+different groups in different contexts.</p>
+
+<p>There are many different purposes of these surveys, for instance, the 
+evaluation of existence and accessibility of needful information for solving 
+some concrete problems in a certain context or identification of preferential 
+information sources and the reasons of these preferences, or appreciation of the 
+most frequent and the most successful strategies of information seeking in a 
+concrete context. Some of these surveys deal with concrete information sources, 
+for example, the Internet or electronic versions of library catalogues, various 
+aspects of using these sources within the framework of certain user groups.</p>
+
+<p>The spectrum of surveying samples is also very large. Among them there are 
+scholars and seniors, students of different universities and colleges, readers 
+of public libraries, physicians, journalists, executives, politicians and common 
+citizens, households, and many others. In each case, human information behaviour 
+is investigated in a concrete context, i.e., there is a detailed description of 
+conditions when the information need appears.</p>
+
+<p>The factors which form the foundations of human information behaviour may be 
+various; they are defined by demographic, social, professional, and many other 
+characteristics of a person as an object of survey. There are some 
+considerations of psychological aspects of the problem, such as behavioural 
+characteristics of people of different types in the making of any activity 
+including in working with information or impact of emotional conditions on human 
+information behaviour, and others.</p>
+
+<p>It seems that results of such surveys may be greatly useful for design and 
+improvement of information computer systems intended for certain user groups and 
+for the use in certain contexts. For example, interesting findings are reported 
+in the papers regarding the studies of the Internet utility. <a 
+href="#book6">Nicholas and Williams (1998)</a> 
+explore the impact of the Internet on information seeking behaviour of 
+journalists. According to the authors, journalists should be the most active 
+users of this global network as professionals which are interested to come at 
+the most actual varied information. However, instead of enthusiasm for such a 
+powerful popular full-scale tool, the survey elicited the deep conservatism of 
+journalists in the choice of information sources and the ways of information 
+reception. Less than twenty percent of metropolitan press journalists use the 
+Internet and this percentage is even less for the regional press. The purposes 
+and methods of using the Internet are extremely limited; in the main, they use 
+e-mail and electronic versions of periodicals. The researchers analyse in detail 
+the attitude of different groups of journalists to using the Internet and elicit 
+the reasons of such behaviour.</p>
+
+<p>One of the reasons is the lack of time for experiments on the Internet; all 
+the more so, these experiments often do not lead to necessary results. As a 
+rule, journalists are not free to choose the subject of their articles; they 
+cannot write about anything that was stumbled across on Web-pages and seemed to 
+be interesting. Those of them who are independent in the choice of themes use 
+the Internet as an information source vastly more often.</p>
+
+<p>Another reason is that about a third of journalists do not have an access to 
+the Internet at all. There are many problems of education of potential users to 
+employ contemporary information retrieval tools. As a result, they are out of 
+practice of using the Internet and this fact still more redoubles the 
+disinclination of journalists to use this information source.</p>
+
+<p>The results of this survey seem to be surprising from the viewpoint of 
+authors, but directly or by implication they are confirmed by other explorations 
+devoted to using the Internet. For instance, <a 
+href="#book8">Savolainen (1998)</a> reports the 
+findings of a survey about non-work use of the Internet in the everyday life of 
+the Finns. According to his results, the main purpose of using the Internet is 
+communication with other users, by means of e-mail mostly. Another purpose is 
+seeking of orienting information over WWW-services "from the electronic 
+newspapers but sometimes merely by surfing from one link to another and hoping 
+that something relevant could be found by chance" (<a 
+href="#book8">Savolainen (1998)</a>). Task-oriented 
+seeking of practical information is in progress very rarely.</p>
+
+<p>Among the basic reasons of such situation, more than one third of the 
+Internet users pointed out the random nature of information along with the 
+deficient query facilities which gave a headache to their users with 
+insufficient search skills. Also about one third of the users mentioned a slow 
+response time and connection failure. For these reasons, seeking needful 
+information by means of the Internet often is too long and without effect. Some 
+other papers report about similar findings.</p>
+
+<p>As a matter of fact, these results do not seem unexpected because the 
+strategy of information seeking on the Internet corresponds to the first and 
+partly the third stage of the problem-solving process described earlier. This 
+strategy is not intended for the second stage of this process when concrete 
+information is necessary. It is quite the thing which should be considered when 
+one chooses the Internet as an information source or decides if it is rationally 
+to allocate either information on the Web-sites.</p>
+
+<h2>Conclusions</h2>
+
+<p>At the end of this review, I would like once more on the morrow of <a 
+href="#book5">Mutch (1998)</a> to accent the 
+paradoxical role of information in the modern age. On the one hand, we speak 
+about the information revolution and development of information society 
+emphasizing "an almost magical role in transforming societies, organizations and 
+workplaces" (<a href="#book5">Mutch (1998)</a>). On 
+the other hand, every day individuals and whole organizations try to dispatch 
+with the great information stream continuously incoming. People talk about 
+information overload and wonder that there are no essential growth of 
+productivity in organizations which invest in information technologies very 
+much. Decision makers call for many reports but they have no time to read them; 
+an expensive analysis of a problem is undertaken but its findings are not used; 
+one compiles necessary information not before but after decision making, and so 
+on. Information may simplify problem solving and work towards achieving an 
+effective decision but for that it has to be exact, reliable, relevant, actual, 
+and accessible for the appropriate individual in fit time and in a suitable 
+form. Only then these lights could correct the existent process.</p>
+
+<p>So, the question comes on: how should we develop information technologies and 
+the methods of designing information computer systems in order to ensure really 
+effectual information support for the problems of future users?</p>
+
+<p>It seems that one of the possible ways is the concise orientation of future 
+systems in certain contexts. Apparently, there is no point in designing some 
+information computer system in general, a system which carries any information 
+fitting for any user.</p>
+
+<p>Before properly designing an information system, it is necessary to define 
+the basic principles of its construction according to the nature of problems to 
+be solved and the adopted concept of information. Then one has to describe all 
+manners of contexts in which solving of either problem may take place, to define 
+the stages of this solving with adequate strategies of user’s information 
+behaviour, and to assign those stages when the application of the future system 
+or some its parts will be efficient.</p>
+
+<p>When the system is being elaborated, the designer will be in a position to 
+organize a more effective operation of the system with "its" problems, to use 
+more profound information; in this instance the system will be useful not only 
+for beginners but also for experts in the given department. Besides, the 
+designer will be able to construct a user-friendly interface taking into account 
+technicalities and outstanding characteristics of future users.</p>
+
+<p>Thus, there is a necessity of close interrelation between the designers of 
+systems and their potential users. The designers exploring the needs of future 
+users and the specialties of their information behaviour could allow this in 
+making their systems. However, now such researches seem to be rather rare, they 
+are fragmentary and as a rule are not carried to the practice.</p>
+
+<p>Now even the existent Russian market of information and communication 
+technologies is an outfield, there are no regular particularized statistical 
+observations or sample surveys. Even if someone tries shots to study this 
+market, these attempts are mainly connected with a contemplation of supply in 
+this sector of the economy, but demand is not analysed practically. We have no 
+authentic data about the ways and purposes of using the available computing 
+machinery. We are roughly aware of the most popular soft products but we do not 
+know to what degree they meet the needs of users in reality.</p>
+
+<p>Designers submit new software or improved versions of used products realizing 
+their own notions about the most effective and convenient methods of working, 
+but very often they do not agree with notions and habits of potential users. As 
+a result, there is a conflict between user expectations and the capabilities of 
+an offered system. Explorations of human information behaviour in the process of 
+problem solving in context and utilization of their findings in designing 
+information computer systems could iron out this conflict and assist to create 
+systems suited to user needs to the best advantage.</p>
+
+<h2>References</h2>
+
+
+<ul><li><a name=book1></a>Audunson, R. (1998) "Can institutional theory contribute to 
+our understanding of information seeking behaviour? Towards a general model of 
+information seeking behaviour with institutionalised, information-relevant norms 
+as an intermediate category of variables." Paper delivered at the <i>Information 
+Seeking in Context Conference (ISIC’98), Sheffield, UK</i>.</li>
+
+<li><a name=book2></a>Brezillon, P. and Saker, I. (1998) "Modeling context in 
+information seeking." Paper delivered at the <i>Information Seeking in Context 
+Conference (ISIC’98), Sheffield, UK.</i></li>
+
+<li><a name=book3></a>Gorman, P. (1998) "Information seeking of primary care 
+physicians: conceptual models and empirical studies." Paper delivered at the 
+<i>Information Seeking in Context Conference (ISIC’98), Sheffield, UK</i>.</li>
+
+<li><a name=book4></a>Kuhlthau, C.C. (1998) "Investigating patterns in 
+information seeking: concepts in context." Paper delivered at the <i>Information 
+Seeking in Context Conference (ISIC’98), Sheffield, UK</i>.</li>
+
+<li><a name=book5></a>Mutch, A. (1998) "Information: a critical realist 
+approach." Paper delivered at the <i>Information Seeking in Context Conference 
+(ISIC’98), Sheffield, UK.</i></li>
+
+<li><a name=book6></a>Nicholas, D. and Williams, P. (1998) "The changing 
+information environment: the impact of the Internet on information seeking 
+behaviour in the media." Paper delivered at the <i>Information Seeking in 
+Context Conference (ISIC’98), Sheffield, UK</i>.</li>
+
+<li><a name=book7></a>Olsson, M. (1998) "Discourse: a new theoretical framework 
+for examining information behavior in its social context." Paper delivered at 
+the <i>Information Seeking in Context Conference (ISIC’98), Sheffield, 
+UK</i>.</li>
+
+<li><a name=book8></a>Savolainen, R. (1998) "Seeking and using information from 
+the Internet. The context of non-work use." Paper delivered at the 
+<i>Information Seeking in Context Conference (ISIC’98), Sheffield, UK.</i></li>
+
+<li><a name=book9></a>Solomon, P. (1998) "Information mosaics: patterns of action 
+that structure." Paper delivered at the <i>Information Seeking in Context 
+Conference (ISIC’98), Sheffield, UK.</i></li>
+
+<li><a name=book10></a>Spink, A. (1998) "Towards a theoretical framework for 
+information retrieval in an information seeking context." Paper delivered at the 
+<i>Information Seeking in Context Conference (ISIC’98), Sheffield, UK</i>.</li>
+
+<li><a name=book11></a>Vakkari, P. (1998) "Task complexity, information types, 
+search strategies and relevance integrating studies on information seeking and 
+retrieval." Paper delivered at the <i>Information Seeking in Context Conference 
+(ISIC’98), Sheffield, UK.</i></li>
+
+<li><a name=book12></a>Van de Wijngaert, L. (1998) "A policy capturing study of 
+media choice: the effect information needs and user characteristics on media 
+choice." Paper delivered at the <i>Information Seeking in Context Conference 
+(ISIC’98), Sheffield, UK.</i></li>
+
+<li><a name=book13></a>Wilson, T.D. (1998) "Exploring models of information 
+behaviour: the "Uncertainty" Project." Paper delivered at the <i>Information 
+Seeking in Context Conference (ISIC’98), Sheffield, UK.</i></li>
+</ul>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Gaslikova, Irina  (1999)&nbsp; &quot;Information Seeking in Context&quot; and the development of information systems.&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>5</strong>(1) &nbsp;Available at: http://informationr.net/ir/5-1/paper67.html</p>
+<p style="text-align : center">&copy; the author, 1999. Last updated: 11th October 1999</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:I9uqiCoLZVkJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres51.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper67" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>		
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/5-1/paper67.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:29 GMT -->
+</html>

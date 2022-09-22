@@ -1,0 +1,815 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from informationr.net/ir/13-3/paper347.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:22:23 GMT -->
+<head><title>Extracting
+variant forms of chemical names for information retrieval.</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+<meta name="dc.title" content="Extracting variant forms of chemical names for information retrieval" />
+<meta name="dc.creator" content="Ari Pirkola" />
+<meta name="dc.subject" content="Methods to address chemical name variation in information retrieval" />
+<meta name="dc.description" content="Introduction. Chemical substance names are typically long and complex and thereby prone to variation. In this study, we investigate the retrieval effects of the variation. Method. The test collection of the study was a subset of the Medline collection. A large set of acronyms and associated text parts was extracted from the test collection and used to construct a full name - acronym index. A longest common subsequence and statistics based technique (named FNV-Finder) was devised to identify MeSH term variants from the full name - acronym index for use as query terms in chemical name searching. The average number of variants per a MeSH term, the performance of the FNV-Finder technique and retrieval performance were evaluated. Results. The results showed that the average number of unique variants per a MeSH term denoting a chemical substance is 2.82. The FNV-Finder technique achieved 95.0% recall and 97.1% precision. The retrieval experiments showed that the collection contains a substantial number of documents that contain only variant forms of the MeSH terms (and do not contain the MeSH terms or CAS registry numbers). Conclusions. The results suggest that the selection of variant forms for queries from a collection would be very useful or even necessary in chemical name searching. Variant forms can be selected readily from the full name - acronym index either manually or automatically using the FNV-Finder technique." /> 
+<meta name="dc.subject.keywords" content="acronyms, chemical name searching, chemical name variants, information retrieval" /><!--leave the following to be completed by the Editor-->
+
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="Professor T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="paper247.html" />
+<meta name="dc.relation.IsPartOf" content="infres133.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2008-09-15" />
+
+  <script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+  <style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: #5E96FD;;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+
+</style></head>
+
+<body bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 13  no. 3, September, 2008</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres133.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+<hr style="color: #5E96FD;" size="1" />
+
+
+<h1> Extracting variant forms of chemical names for information retrieval</h1>
+<br />
+<div style="margin-left: 10%; margin-right: 10%;">
+<h4 align="center"><a href="mailto:pirkola@cc.jyu.fi">Ari Pirkola</a><br />
+Department of Information Studies, University of Tampere, 33014 Tampere, Finland</h4>
+</div>
+<br />
+<form action="http://informationr.net/ir/13-3/none">
+  <fieldset><legend>Abstract</legend>
+  <blockquote><strong>Introduction.</strong> Chemical substance names are long, complex and prone to variation. This study  investigates the retrieval effects of the variation.  <br />
+    <strong>Method.</strong> A large set of acronyms and associated text parts was extracted from a subset of the Medline collection and used to construct a full name - acronym index. A longest common subsequence and statistics based technique (named FNV-Finder) was devised to identify MeSH term variants from the full name - acronym index for use as query terms in searching. The average number of variants for each MeSH term, the performance of the FNV-Finder technique and retrieval performance were evaluated.<br />
+    <strong>Results.</strong> The average number of unique variants for each MeSH term denoting a chemical substance is 2.82. The FNV-Finder technique achieved 95.0% recall and 97.1% precision. The retrieval experiments showed that the collection contains a substantial number of documents that contain only variant forms of the MeSH terms (and do not contain the MeSH terms or CAS registry numbers).  <br />
+    <strong>Conclusions.</strong> The selection of variant forms for queries from a collection would be very useful or even necessary in chemical name searching. Variant forms can be selected readily from the full name - acronym index either manually or automatically using the FNV-Finder technique. </blockquote>
+  </fieldset>
+</form>
+
+<br />
+<div align="center">
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: #5E96FD;" onclick="doChangeFont()" /></div>
+<br />
+
+<h2>Introduction</h2>
+
+<p>We investigate the variation of <em>chemical substance names</em> and the retrieval effects of the variation. Chemical names pose a special challenge in information retrieval since they typically are long and complex expressions, being thus prone to variation, which in turn may cause a decrease in retrieval performance due to a mismatch between query terms and index terms.</p>
+
+<p>A new technique named <em>FNV-Finder</em> (where FNV stands for Full Name Variant) was developed to automatically identify the variant forms. Articles discussing a given chemical substance often use a canonical pattern where a full name is followed by an acronym in parentheses, e.g., <em>N-methyl pyrrolidone (NMP)</em>. The FNV-Finder technique is based on the fact that different variant forms of the same full name share the same acronym. The acronym is used as a pivot to find the variants of the same name. We extracted all the canonical patterns from a subset of the Medline collection, i.e., TREC 2003 Genomics Track collection containing some 525, 000 documents (<a href="#hersh">Hersh and Bhupatiraju 2004</a>). We constructed a full name-acronym index which contains the extracted acronyms and associated text parts and where the acronyms are arranged in an alphabetical order. The index allows an efficient means of identifying the full names of acronyms both manually and automatically. The FNV-Finder technique uses a similarity measure (longest common subsequence, LCS) between an acronym and string sequences associated with it in the full name-acronym  index and statistical data contained in the full name-acronym index to identify the full names of acronyms and the variant forms of the same full name.</p>
+
+<p>As test data we used a set of chemical acronyms and their MeSH (Medical Subject Headings) terms, for which variant forms were identified from the full name-acronym  index manually and automatically using the FNV-Finder technique. Using these data we investigate the following research problems:</p>
+
+<ol>
+  <li>What is the average number of variants for a MeSH term denoting a chemical substance? </li>
+  <li>How to effectively identify automatically different variant forms of a MeSH term? For this research problem we devised the LCS and statistics based FNV-Finder technique, which identifies the variants from the   full name-acronym  index for use as query terms in chemical name searching.</li> 
+  <li>What are the recall and precision of the proposed FNV-Finder technique?</li> 
+  <li>Does chemical name searching benefit from using variant forms in queries?</li>
+</ol>
+
+<p>The main contributions of this paper are: to present a novel technique (FNV-Finder) to identify chemical name variants from a collection, and to present evaluation results for the approach;  to demonstrate how to effectively organize the  full name-acronym  patterns contained in the collection (the construction of the full name-acronym  index); and to report the effects of chemical name variation in information retrieval.</p>
+
+<h2>Methods and data</h2>
+
+<h3>Test collection and test words</h3>
+
+<p>The test collection used in the study was the TREC 2003 Genomics Track collection, which is a subset of the Medline collection. The test collection contains some 525,000 article abstracts, which were indexed between January 2002 and January 2003. Medline's documents are indexed with the National Library of Medicine's <a href="http://www.nlm.nih.gov/mesh/">Medical Subject Headings (MeSH)</a>. Chemical names are also indexed with <a href="http://www.cas.org/expertise/cascontent/registry/regsys.html">Chemical Abstract Service registry numbers</a>.</p>
+
+<p>A Medline record consists of several fields of which the fields TI (title), AB (abstract), MH (MeSH terms), and RN (Chemical Abstract Service Registry Number) were indexed for the retrieval experiments conducted in this study.</p>
+
+<p>The full names of chemical acronyms in the <a href="#fna">full name-acronym index</a> are often terms that are contained in the Medical Subject Headings vocabulary: they are either MeSH terms or so-called substance names, or the full names in the full name-acronym  index are their variants. In this study, variation is considered from the viewpoint of the MeSH terms and the substance names. A MeSH term or substance name is regarded as a standard full name of an acronym while the full names that denote the same chemical substance as the MeSH term or substance name and that are similar to it but written differently are regarded as variant forms. For example, <em>hydroxyethyl methacrylate</em> is a substance name and <em>hydroxyethylmethacrylate</em> and <em>2-hydroxyethyl methacrylate</em> are its variant forms. As can be seen, the latter two names are similar, but not identical, to <em>hydroxyethyl methacrylate</em>. Below are more examples of  variant forms. (For simplicity, in this paper <em>MeSH term</em> refers both to the actual MeSH terms and the substance names contained in the MeSH.)</p>
+
+<p>From the viewpoint of the research problems examined in this study we differentiate between three types of names that denote a chemical substance: a MeSH term, its variant forms, and an acronym that refers to the MeSH term and the variant forms. We do not study orthographic variation (see below) but <em>lexical variation</em>. Here lexical variation means that the MeSH term and a variant form denote the same chemical substance and are similar, but there are differences in components, letters, or numbers. We can distinguish several types of variant cases: the MeSH term and its variant form have one or more common components but differ from each other in the number or the order of the components (e.g.,  MeSH term <em>inosine monophosphate</em> and a variant form <em>inosine 5 monophosphate</em>); the components are written together (i.e., as a compound word) vs. the components are written separately (i.e., as a phrase) (e.g.,  MeSH term <em>carboxymethylcellulose</em> and a variant form <em>carboxymethyl cellulose</em>); the corresponding components in the MeSH term and a variant form differ (typically) in one or two characters (e.g.,  MeSH term <em>1 methyl 2 pyrrolidinone</em> and a variant form <em>1 methyl 2 pyrrolidone</em>); a component that appears in a variant may be an abbreviation of a component that appears in the MeSH term, or the other way around (e.g.,  MeSH term <em>methyl tert butyl ether</em> and a variant form <em>methyl t butyl ether</em>). All these cases affect information retrieval. For example, it is obvious that query terms <em>carboxymethylcellulose</em> (compound) and <em>carboxymethyl cellulose</em> (phrase) give different retrieval results.</p>
+
+<p>Since we examine lexical variation rather than orthographic variation we performed orthographic normalisation in documents, queries, and in the full name-acronym index: other characters than letters and numbers were replaced with spaces; case was normalised into lower case. As an example of orthographic normalisation, the substance name <em>N-Formylmethionine Leucyl-Phenylalanine</em> was converted into a normalised form of <em>n formylmethionine leucyl phenylalanine</em>. In a retrieval phase, phrasal names were searched for using the ordered window proximity operator of the InQuery retrieval system (<a href="#allan">Allan <em>et al</em>. 2000</a>) which was used as a test system in the retrieval experiments. The benefits of orthographic normalisation in information retrieval are obvious and it is commonly used in retrieval systems even though it may create ambiguity. However, in this study orthographic normalisation did not affect performance (the issue of wrong identifications by FNV-Finder is discussed in the Findings section).</p>
+
+<p>We used a training set of fifty acronyms (see <a href="#app">
+Appendix 1</a>) to devise the FNV-Finder technique and to set the thresholds to get the best possible results. The test acronyms were taken randomly from the full name-acronym  index; every Nth acronym was selected iteratively until fifty substance name acronyms for which there were both MeSH terms and Registry Numbers were obtained. From the original set of 55 acronyms five were removed since there were no MeSH terms or Registry Numbers for them. In the case of ambiguous chemical acronyms having more than one MeSH term, the first term was selected for the tests.</p>
+
+<p>The number of the test acronyms is relatively small because of the time-consuming manual identification of variants and <a  href="#relevance">document relevance assessments</a> , which are necessary for reliable results. It should be noted, however, that using this test data we are able to report statistically significant results in retrieval experiments.</p>
+
+<p>As an aid in manual name identification we used printed reference books in chemistry and the National Library of Medicine's  <a href="http://chem2.sis.nlm.nih.gov/chemidplus/chemidlite.jsp">ChemIDplus Lite</a> Web service. In some (rare) cases it was not possible determine which string sequence in the full name-acronym  index was acronym's full name. In these cases we looked at the document from where the text part was extracted and used document's text to determine the correct full name.</p>
+
+<h3>Identification of full name variants</h3>
+
+<a name="fna"></a><h4>Constructing the full name-acronym  index</h4>
+
+<p>	The full name-acronym  index was constructed by extracting from the Medline test collection all strings that consisted of letters, numbers or both letters and numbers and that were located in parentheses. For each such string a text part of the length of up to nine strings prior to it was also extracted. Strings inside parentheses containing other characters than letters or numbers were not included in the full name-acronym  index. The first version of the index was cleaned: strings within parentheses that only contained numbers and associated text parts were removed. </p>
+
+<p>To take an example of the extraction phase, consider a Medline record containing the following phrases: <em>end-stage renal disease (ESRD) were glomerulonephritis (26%)</em>, and, <em>with antithymocyte globulin (ATG) or orthoclone thymocyte 3 (OKT3)</em>. The strings <em>ESRD</em>, <em>ATG</em>, and <em>OKT3</em> were included in the full name-acronym  index while the string &quot;26%&quot;, which does not contain letters and which contains a percentage sign was not included.</p>
+
+<p>The index was arranged in an alphabetical order. The final index contains 479,882 lines. Most of the strings inside parentheses are not acronyms but noise in the context of this study. However, such strings do not play any role in variant identification and thus do not have any effects on the FNV-Finder effectiveness or retrieval results.</p>
+
+<p>An <em>index entry</em> contains all the extracted instances of an acronym <em>Ai</em> (with <em>Ai</em> denoting any acronym in the index) and the associated text parts. Let us take an example of an index entry. For the acronym MTBE part of the entry is as follows (here we only present seven lines, the full entry includes fifty-one lines):</p>
+
+<blockquote>
+<strong>entry: mtbe<br /></strong>
+etbe t butyl alcohol tba methyl t butyl ether mtbe<br />
+mtbe from soil samples ab methyl tert butyl ether mtbe<br />
+9 isopropyl alcohol ipa in methyl tert butyl ether mtbe<br />
+a procedure for determination of methyl tert butyl ether mtbe<br />
+an increase in levels of methyl tertiary butyl ether mtbe<br />
+and in bus exposures to methyl tertiary butyl ether mtbe<br />
+butyl ether in water ab methyl tert butyl ether mtbe</blockquote>
+
+<p>The string positions in a line <em>l</em> are numbered from 
+<em>s<sub>1</sub>(A<sub>i</sub>(l))</em> (the first position) to
+<em>s<sub>n</sub>(A<sub>i</sub>(l))</em> (the last position immediately left
+to the acronym).</p>
+
+<p>For the fifty test acronyms, the number of lines in entries ranged from 1 to 214. Overall, the fifty entries contained 1,595 lines. Manual identification of variants was done using all 1,595 lines (the first step of FNV-Finder also used all 1,595 lines).</p>
+
+<h4>FNV-Finder algorithm</h4>
+
+<p>FNV-Finder-based identification of acronyms' full name variants has six steps. Next we describe the FNV-Finder algorithm which is presented in <a href="#appendix">Appendix 2</a>. It is important to note that in steps one to five no difference is made between MeSH terms and variant forms. Only in the last step variant forms are separated from the MeSH terms.</p>
+
+<p>In the <em>first step</em>, all lines in an entry that do not contain any of the components of a phrasal MeSH term, either as a separate string or as a string embedded in a compound word, are filtered out. Single word and compound word MeSH terms (e.g., <em>resiniferatoxin</em>) are divided into non-overlapping 6-grams (with the exception of the last n-gram which may contain more than 6 characters), which are used as a filter as in the case of phrasal MeSH terms. The experiments showed that this step removed most of the lines that did not contain a MeSH term or a variant form.</p>
+
+<p>The <em>second step</em> is based on the observation that chemical substance names only very rarely contain function words and other so-called stop words. Therefore, the rightmost stop word in each line and all strings to the left of the rightmost stop word are removed from an index entry. Also the acronyms are removed at this stage. The stop word list used was that of the retrieval system. As single letters are found in chemical names, they were removed from the list. The list was supplemented with the collection specific abbreviations <em>ti</em> and <em>ab</em> (<em>ti</em> refers to title and <em>ab</em> to abstract).</p>
+
+<p>In the <em>third step</em>, the <em>longest common subsequence (LCS)</em> technique (see for example <a href="#pirkola">Pirkola <em>et al</em>. 2002</a>) is used to identify probable full names which we call <em>full name candidates</em>. The algorithm scans strings from right to left in each line to find a string that starts with the same letter as the acronym. If such string is found, it is marked as a <em>temporary first component (TFC)</em> of a full name. Next LCS is computed for the acronym and the string sequence starting with the TFC and ending with <em>s<sub>n</sub>(A<sub>i</sub>(l))</em>. If LCS = |the number of characters in the acronym| the string sequence is marked as a full name candidate and is passed to the fifth step. The lines where full name candidates are not found are passed to the fourth step.</p>
+
+<p>Numbers 0-100 as well as the strings <em>alpha, beta, gamma, tert, nalpha, d, l, n, p, r, s</em>, are often found as left components in chemical substance names (e.g., <em>1 6 diphenyl 1 3 5 hexatriene</em>), and if such string or a combination of such strings appears immediately left to the TFC it is included in the full name candidate.</p>
+
+<p>In the experiments, the third step correctly identified most of the full names (note, at this stage they are still candidates). Below is an example of the second and third steps. The sample entry shown above is presented. The hyphen shows the location from which the left part of the entry was removed in the second step. The remaining part (called as a post-second-step entry in the following text) was processed in the third step. The asterisk indicates the TFC. As the example shows the LCS method identifies the full names <em>methyl tert butyl ether</em> (MeSH term), <em>methyl t butyl ether</em> and <em>methyl tertiary butyl ether</em> (variant forms).</p>
+
+<blockquote> 
+<strong>entry: mtbe<br /></strong>
+etbe t butyl alcohol tba *methyl t butyl ether [LCS=4]<br />
+mtbe from soil samples ab- *methyl tert butyl ether [LCS=4]<br />
+9 isopropyl alcohol ipa in- *methyl tert butyl ether [LCS=4]<br />
+a procedure for determination of- *methyl tert butyl ether [LCS=4]<br />
+an increase in levels of- *methyl tertiary butyl ether [LCS=4]<br />
+and in bus exposures to- *methyl tertiary butyl ether [LCS=4]<br />
+butyl ether in water ab- *methyl tert butyl ether [LCS=4]</blockquote>
+
+<p>The <em>fourth step</em> handles the lines which the third step could not solve. A frequency-based <em>FNV indicator</em> value is computed for each string in a post-second-step entry using a <em>FNV-Finder computation scheme</em>. The idea is that the string that appears frequently in an entry and that is the leftmost string among the frequent strings in a line is likely to be a start component of a full name.</p>
+
+<p>The FNV-Finder computation scheme computes a FNV indicator value for
+the string <em>s<sub>k</sub>(A<sub>i</sub></em>) as follows:</p>
+
+			<div align="center">
+Fr(s<sub>k</sub>(A<sub>i</sub>)) / ln(N(A<sub>i</sub>))
+</div>
+
+<p>Fr(s<sub>k</sub>(A<sub>i</sub>)) = frequency of the string s<sub>k</sub> in the entry of an acronym A<sub>i</sub>.<br /> N(A<sub>i</sub>) = total number of strings in the entry of an acronym A<sub>i</sub>.</p>
+
+<p>The frequency of <em>s<sub>k</sub></em> is divided by the total number of strings N in an entry to get figures that are in proper proportion between different entries. Similarly the natural logarithm (ln) in a denominator equalizes figures between different entries.</p>
+
+<p>FNV indicator values are computed for each string in a post-second-step entry. The leftmost string whose value is above a set threshold (the value of 0.50 was used based on the training tests) is marked as a TFC. As in the third step, the whole string sequence from the TFC to the <em>s<sub>n</sub>(A<sub>i</sub>(l))</em> is marked as a full name candidate. Similarly to the third step, numbers 0-100 and the strings <em>alpha, beta, gamma, tert, nalpha, d, l, n, p, r, s</em>, and combinations of them are included in the full name candidates (also in cases where the indicator value of such string is =&lt; 0.50). The lines which the fourth step does not solve are rejected.</p>
+
+<p>To take an example of full name identification based on the FNV-Finder computation scheme, consider the post-second-step entry of the acronym NMP:</p>
+
+<blockquote>              
+<strong>entry: nmp<br /></strong>
+n methyl 2 pyrrolidone [LCS=3]<br />
+1 methyl 2 pyrrolidinone<br />
+n methyl pyrrolidone [LCS=3]<br />
+1 methyl 2 pyrrolidone<br /></blockquote>
+
+<p>The LCS method of the third step found the names <em>n methyl 2 pyrrolidone</em> and <em>n methyl pyrrolidone</em> (which are variant forms) in lines 1 and 3. But it did not find the names <em>1 methyl 2 pyrrolidinone</em> (MeSH term) in the second line nor <em>1 methyl 2 pyrrolidone</em> (a variant form) in the fourth line, whereas the FNV-Finder computation scheme did so based on the indicator value of 0.74 (&gt; 0.50) of the string <em>1</em>.</p>
+
+<p>The <em>fifth step</em> checks if there is a contradiction between the endings of the full name candidate and the MeSH term. In other words, this step checks whether they designate different types of chemical substances. The substance types are identified by means of a suffix list built in the study on the basis of a set of substance names extracted from the full name-acronym  index. The list contains core word endings (n=21) typical of different types of substance names. The end parts of the MeSH term and the candidate are matched against the suffix list. If the end parts match different suffixes in the list (e.g., one is <em>amide</em> and matches <em>-ide</em>, and the other is <em>amine</em> and matches <em>-ine</em>), the candidate is rejected. Otherwise, the candidate is passed to the sixth step.</p>
+
+<p>In the <em>sixth step</em>, the candidates are mapped to the MeSH terms to see if they are MeSH terms or variants. A full match indicates a MeSH term while a mismatch indicates a variant form.</p>
+
+<h2>Evaluation</h2>
+
+<p>FNV-Finder effectiveness (research problem three) was evaluated using the measures of <em>recall</em> and <em>precision</em>. In both cases we consider <em>unique</em> variants (as opposed to variant occurrences). Recall is defined as the proportion of variants FNV-Finder identified correctly from the full name-acronym index to intellectually identified variants from the full name-acronym  index. Recall:</p>
+
+<blockquote> 
+|Correct variants identified by FNV-Finder| / |Intellectually identified (correct) variants|</blockquote>
+
+<p>The intellectually identified variants thus constitute a recall base for variants identified by FNV-Finder. A full match between a FNV-Finder variant and an intellectually identified variant is considered a correct identification. A partial match and a mismatch are considered wrong identifications.</p>
+
+<p>Precision is defined as the proportion of correctly identified variants by FNV-Finder among all entities FNV-Finder identified as variants. Precision:</p>
+
+<blockquote> 
+|Correct variants identified by FNV-Finder| / |All entities identified by FNV-Finder|</blockquote>
+
+<p>In this study, a <em>relevant document</em> is defined as a document that contains at least one of the following items that denote the chemical substance in question: the MeSH term, the Chemical Abstracts Service registry number, a variant form. In retrieval experiments (research problem four) we ran the following three queries:</p>
+
+<blockquote>
+<em>MeSH+Registry Number (hereafter, RN)</em>. Baseline. These queries (n=50) contained the MeSH terms and registry numbers, and they serve as baseline for the following test queries. For each acronym, they retrieved documents that contained the MeSH term or the registry number (or both of these). By definition, all the documents retrieved by MeSH+RN queries are relevant documents.<br /><br />
+
+<em>MeSH+RN+manual-variant</em>. These queries (n=50) contained the MeSH terms, registry numbers, and the manually identified variants. For each acronym, they retrieved documents that contained at least one of the following items: the MeSH term, the registry number, at least one of the manually identified variants of the MeSH term. The substance names selected manually from the full name-acronym  index were all correct names and these queries were expected to retrieve only relevant documents (see below for relevance assessments).<br /><br />
+
+<em>MeSH+RN+automatic-variant</em>. These queries (n=50) contained the MeSH terms, registry numbers, and the variant forms identified by the FNV-Finder technique. For each acronym, they retrieved documents that contained at least one of the following items: the MeSH term, the registry number, at least one of the automatically identified variants of the MeSH term. Due to the automatically identified variant forms these queries retrieved also irrelevant documents.</blockquote>
+
+<p>We computed recall for MeSH+RN, MeSH+RN+manual-variant and MeSH+RN+automatic-variant queries, and precision for MeSH+RN+automatic-variant queries. These measures provide an answer to the research question whether, and to what extent, substance name searching benefits from using variant forms.</p>
+
+<p><a name="relevance">The relevance</a> of the documents containing only variant forms was assessed, firstly, to ensure that the manually identified variants retrieved only relevant documents, so that reliable recall values are obtained for MeSH+RN+manual-variant queries, and secondly, to compute recall and precision for MeSH+RN+automatic-variant queries.</p>
+
+<p>The documents retrieved by the MeSH+RN+manual-variant queries constitute a recall base for the 50 queries. We are aware that the recall base is not complete, in particular due to the synonyms of MeSH terms. Therefore, we measure <em>relative recall</em>, in other words, recall relative to the set of known relevant documents, i.e., documents retrieved by MeSH+RN+manual-variant queries. (By the term <em>synonym</em> we mean a term that designates the same chemical substance as the MeSH term but is dissimilar to it.)</p>
+
+<p>A chemical name may be embedded in another, longer name. Therefore prior to the runs we checked the MeSH and ChemIDplus Lite databases to see which MeSH terms and variants in our data appeared in longer names. For such terms and variants we constructed a Boolean negation-based (InQuery's #bandnot-operator) query which excluded wrong names from the results. It should be noted that this type of query modification is not a feature of FNV-Finder based retrieval, but to obtain good results, modification is necessary in many cases. A drawback of this approach that some relevant documents may be lost. However, we analysed a sample set of such documents, and the analysis results suggest that only a fraction of relevant documents are lost.</p>
+
+<h2>Findings</h2>
+
+<p>Table 1 presents the results of the first research problem, i.e., the frequency of variant forms. It can be seen that the average number of unique variants per a MeSH term is 2.82.</p>
+
+<p>Table 2 shows the distribution of the variants between the 50 MeSH terms. The MeSH terms were divided into groups on the basis of the number of variants for each term. The left column shows the cardinality of a MeSH term group, and the right column the number of variants in a group. Table 2 shows that out of the 50 MeSH terms 39 have variants. 32 terms have 1-4 variants. One term has 10, one has 13, and one (<em>n formylmethionine leucyl phenylalanine</em>) has even 18 variants. These three terms with many variants were long terms. Of the 11 terms that did not have variants 10 were single words, compound words, or phrases with only two components. Thus, the results suggest a general trend: the longer a MeSH term is the more variant forms it has.</p>
+
+<p>Table 3 reports the results of the FNV-Finder effectiveness experiments. It can be seen that FNV-Finder performed very well - it achieved 95.0% recall and 97.1% precision. These figures indicate that there were only a few variant forms that FNV-Finder could not identify, and only a few wrong identifications.</p>
+
+<p>Table 4 reports the results of the retrieval experiments. As shown, MeSH+RN queries retrieved 4,110 documents. MeSH+RN+manual-variant queries retrieved 4,468 documents, and MeSH+RN+automatic-variant queries retrieved 4,456 <em>relevant</em> documents. For MeSH+RN+manual-variant queries the difference (third column) is 358 documents. This means that - for the 50 queries - the collection contains 358 documents that contain only variant forms (and do not contain the MeSH terms or RNs). For MeSH+RN+automatic-variant queries the difference is 346 documents. For MeSH+RN+manual-variant queries we selected only correct variants, and all the retrieved documents were relevant.</p>
+
+<p>Both for MeSH+RN+manual-variant and MeSH+RN+automatic-variant queries recall was improved (with respect to MeSH+RN queries) for 29 queries out of the 50 queries. The statistical significance was analysed by one-tailed non-parametric Wilcoxon signed rank test. For both query types the results were statistically significant at the level of p &lt; 0.0001.</p>
+
+<p>MeSH+RN+automatic-variant queries yield a high precision, i.e., 99.8%. They retrieved 4,467 documents, of which 11 were irrelevant documents. In the case of an ambiguous acronym GDP (<em>guanosine diphosphate</em> in our data) FNV-Finder gave a wrong name <em>geranyl diphosphate</em>, and all the irrelevant documents dealt with this substance. Other wrong identifications by FNV-Finder were too short and too long sequences, but they did not affect retrieval results. In particular short sequences may be useful query terms though sometimes their use may decrease precision.</p>
+<br />
+
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" align="center" border="1" cellpadding="5" cellspacing="0" width="60%">
+<caption align="bottom"><br /><strong>Table 1. The frequency of variants.</strong></caption>
+<tbody>
+<tr>      <th>Condition</th>
+	  <th>Number/Average Number</th></tr>
+    <tr>
+      <td align="left">Number of MeSH terms</td>
+      <td align="center">50</td>
+    </tr>
+    <tr>
+      <td align="left">Number of unique variants</td>
+      <td align="center">141</td>
+    </tr>
+    <tr>
+      <td align="left">Number of unique variants per a MeSH term</td>
+	  <td align="center">2.82</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<br />
+
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" align="center" border="1" cellpadding="5" cellspacing="0" width="60%">
+<caption align="bottom"><br /><strong>Table 2. Distribution of variants between MeSH terms.</strong></caption>
+<tbody>
+<tr>      <th>Number of MeSH terms in a group</th>
+      <th>Number of variants</th></tr>
+    <tr>
+      <td align="center">11</td>
+      <td align="center">0</td>
+    </tr>
+    <tr>
+      <td align="center">11</td>
+      <td align="center">1</td>
+    </tr>
+    <tr>
+      <td align="center">8</td>
+      <td align="center">2</td>
+    </tr>
+    <tr>
+      <td align="center">6</td>
+      <td align="center">3</td>
+    </tr>
+    <tr>
+      <td align="center">7</td>
+      <td align="center">4</td>
+    </tr>
+    <tr>
+      <td align="center">2</td>
+      <td align="center">5</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">8</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">9</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">10</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">13</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">18</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<br />
+
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" align="center" border="1" cellpadding="10" cellspacing="0" width="60%">
+<caption align="bottom"><br /><strong>Table 3. FNV-Finder effectiveness.</strong></caption>
+<tbody>
+    <tr>
+      <th>Recall/Number of instances</th>
+      <th>Recall%</th>
+    </tr>
+    <tr>
+      <td align="center">134/141</td>
+      <td align="center">95.0</td>
+    </tr>
+    <tr>
+      <th>Precision/Number of instances</th>
+      <th>Precision%</th>
+    </tr>	
+    <tr>
+      <td align="center">134/138 </td>
+      <td align="center">97.1</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<br />
+
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" align="center" border="1" cellpadding="10" cellspacing="0" width="80%">
+<caption align="bottom"><br /><strong>Table 4.  Retrieval performance of test queries.</strong></caption>
+<tbody>
+<tr>      <th>Query type n=50</th>
+      <th>Relevant Retrieved</th>
+      <th>2-1 / 3-1</th>
+      <th>Recall%</th>
+      <th>All Docs. Retrieved</th>
+      <th>Precision%</th></tr>
+    <tr>
+      <td align="left">1.MeSH+RN, baseline</td>
+      <td align="center">4110</td>
+      <td align="center">-</td>
+      <td align="center">92.0</td>
+      <td align="center">4110</td>
+      <td align="center">(100)</td>
+  </tr>
+
+    <tr>
+      <td align="left">2.MeSH+RN+manual-variant</td>
+      <td align="center">4468</td>
+      <td align="center">358</td>
+      <td align="center">100.0</td>
+      <td align="center">4468</td>
+      <td align="center">(100)</td>
+  </tr>
+
+    <tr>
+      <td align="left">3.MeSH+RN+automatic-variant</td>
+      <td align="center">4456</td>
+      <td align="center">	346</td>
+      <td align="center">99.7</td>
+      <td align="center">4467</td>
+      <td align="center">99.8</td>
+  </tr>
+  </tbody>
+</table>
+<br />
+
+<h2>Related work</h2>
+
+<p>Larkey <em>et al</em>. (<a href="#larkey">2000</a>) extracted from the Web a large collection of acronyms and their expansions (full names, definitions). They developed and evaluated several methods to extract acronyms' expansions. The corpus of the acronyms and expansions built on the basis of the best method was comparable to a high-quality hand-crafted Web site providing acronyms and expansions. Other pattern matching methods for extracting the full names of acronyms are presented in (<a href="#schwartz">Schwartz and Hearst 2003</a>; <a href="#terada">Terada <em>et al</em>. 2004</a>; and <a href="#yu">Yu <em>et al</em>. 2002</a>).</p>
+
+<p>Liu and Friedman (<a href="#liu">2003</a>) developed a statistics-based method that associates abbreviations with their expansions. For example, the acronym ER is linked to the expansion <em>estrogen receptor</em> in a text containing a parenthetical expression <em>estrogen receptor (ER)</em>. Text parts containing parenthetical expressions were first extracted from documents. Potential collocations were then generated and their frequencies were computed. The method uses the number of elements in a potential collocation and the ratios of the frequencies of potential collocations to eliminate words co-occurring by chance. For example, for <em>include pneumonia</em> versus <em>pneumonia</em> the frequency ratio is low, and <em>include pneumonia</em> is eliminated. The method achieved 96.3% precision and 88.5% recall.</p>
+
+<p>The FNV-Finder technique proposed in this paper differs from the above studies in that it identifies variant forms of the same name. The above studies focused on the question of the demarcation of the full name (expansion) boundaries in text.</p>
+
+<p>It seems that chemical structure and substructure searching (e.g., <a href="#willett">Willett 2000</a>) has been studied more than chemical name searching which seems to be a relatively unexplored area. Research on chemical name processing started several decades ago (see for example,  <a href="#vander">Vander Stouw <em>et al.</em> 1976)</a>. However, there are few studies that have looked at how different techniques and factors affect retrieval performance. <a href="#wren">Wren (2006)</a> used a first-order Markov Model to evaluate its ability to recognize chemical terms and reject non-chemical terms. The method achieved 93% recall and 99% precision. Based on the results of a small scale information retrieval experiment the researcher concluded that chemical name variation affects information retrieval. This is in agreement with the results of this study.</p>
+
+<p>Luque Ruiz <em>et al</em>. (<a href="#luque">1996</a> )developed an approximate string matching algorithm for repairing lexical errors in inorganic chemical names. The National Library of Medicine has several powerful tools to process biological texts (<a href="#aronson">Aronson 1994</a>; <a href="#wilbur">Wilbur <em>et al.</em> 1999</a>). Lexical Variant Generator and MetaMap generate lexical variants for words appearing in texts. Wilbur <em>et al</em>. (<a href="#wilbur">1999</a>) explored the problem of recognizing chemical terms and tested three methods: a lexical method where chemical terms were analysed into their constituent chemical morphemes, and two statistical methods based on the Bayesian classifier. The evaluation results showed that one of the statistical methods achieved the best results, an overall classification accuracy of 97%.</p>
+
+<h2>Discussion and conclusions</h2>
+
+<p>We found in this study that the average number of unique variants for a chemical MeSH term is 2.82. The retrieval experiments showed that the collection contains a substantial number of documents that contain only MeSH term variants (and do not contain the MeSH terms or RNs). The FNV-Finder technique effectively identified variant forms, and it achieved a high recall and precision. The findings of the retrieval experiments are in agreement with the FNV-Finder effectiveness experiments. The use of the variant forms identified by the FNV-Finder technique improved the recall of queries with respect to the recall of queries that only contained MeSH terms and RNs, and only slightly decreased precision.</p>
+
+<p>MeSH and the Chemical Abstracts Service registry number system are the main terminological resources in chemical name searching. However, in exhaustive retrieval where the aim is to retrieve a large set of documents discussing a given chemical substance, as well as some other retrieval situations, the selection of additional names (variant forms) for queries either manually from a full name-acronym  index constructed from a collection or automatically using the FNV-Finder technique would be very useful or even necessary.</p>
+
+<p>	It seems that the proposed FNV-Finder technique could be used effectively for name variant identification in any domain where names are expressed using the full name - acronym pattern. Naturally, the domain-specific components of the technique (e.g.,  suffix lists) need to be constructed according to the selected domain. The proposed technique could also be used in other areas than information retrieval (e.g.,  in information extraction), and for other languages than English. The next step in the FNV-Finder research will be the application of the technique in the Web environment. We have crawled large amount of data from the Web which will be used to construct Web based full name-acronym  indexes. In addition to English, we plan to construct Web based full name-acronym  indexes for French, German, and Spanish. These will be used to identify the full names of chemical acronyms in Web pages, and also other domains will be investigated. We would also like to investigate whether the technique could be applied in the area of converting chemical names into structures.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>This research was funded by the Academy of Finland (project names <em>NLP-based information retrieval systems for the biological literature</em> and <em> Focused retrieval of Web documents </em>).</p>
+
+<p>The InQuery search engine was provided by the Center for Intelligent
+Information Retrieval at the University of Massachusetts.</p>
+
+<form action="#">
+<fieldset>
+<legend style="border-right: 1px solid navy; border-bottom: 1px solid navy; padding: 0.1ex 0.5ex; color: white; background-color: #5E96FD;; font-size: medium; font-weight: bold;">References</legend>
+
+<ul>
+<li><a id="allan" name="allan"></a>Allan, J., Connell, M.E., Croft, W.B., Feng, F.-F, Fisher, D. &amp; Li, X. (2000). <a href="http://www.webcitation.org/5a2pwybjy">InQuery and TREC-9</a>. In <em>Proceedings of the Ninth Text REtrieval Conference (TREC-9)</em>. (pp. 551-600). Gaithersburg, MD: National Institute of Standards and Technology. (NIST Special Publication 500-249) Retrieved 13 August, 2008 from http://trec.nist.gov/pubs/trec9/papers/umass-trec9.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5a2pwybjy)</li> 
+ 
+<li><a id="aronson" name="aronson"></a>Aronson, A.R. (1994). <a href="http://www.webcitation.org/5a2qR12a7"><em>Comparison of LVG and MetaMap functionality</em></a>.  Bethesda, MD: Lister Hill National Center for Biomedical Communications. Retrieved 13 August, 2008 from http://skr.nlm.nih.gov/papers/references/LVG-MetaMap.comparison.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5a2qR12a7)</li>
+
+<li><a id="hersh" name="hersh"></a>Hersh, W. &amp; Bhupatiraju, R.T. (2004). <a href="http://www.webcitation.org/5a2qzVCvD">TREC genomics track overview</a>. In <em>Proceedings of the Twelfth Text Retrieval Conference (TREC-2003)</em>, (pp. 14-23). Gaithersburg, MD: National Institute of Standards and Technology. (NIST Special Publication 500-255) Retrieved 13 August, 2008 from http://trec.nist.gov/pubs/trec12/papers/GENOMICS.OVERVIEW3.pdf   (Archived by WebCite&reg; at http://www.webcitation.org/5a2qzVCvD)</li> 
+  
+<li><a id="larkey" name="larkey"></a>Larkey, L., Ogilvie, P., Price, A. &amp; Tamilio, B. (2000). Acrophile: an automated acronym extractor and server. In <em>Proceedings of the ACM Fifth International Conference on Digital Libraries, DL ’00, Dallas TX.</em> (pp. 205-214). New York, NY: ACM Press.</li>
+
+<li><a id="liu" name="liu"></a>Liu, H. &amp; Friedman, C. (2003). Mining terminological knowledge in large biomedical corpora. In Russ B Altman, A Keith Dunker, Lawrence Hunter, Tiffany A Jung &amp; Teri E Klein (Eds.). <em>Proceedings of the 8th Pacific Symposium on Biocomputing (PSB 2003), Lihue, Hawaii.</em>  (pp. 415-426). Singapore: World Scientific Publishing Co.</li>
+
+<li><a id="luque" name="luque"></a>Luque Ruiz, I., Cruz Soto, J. L. &amp; Gómez-Nieto, M. A. (1996). Error detection, recovery, and repair in the translation of inorganic nomenclatures. 2: a proposed strategy. <em>Journal of Chemical Information and Computer Sciences</em>, <strong>36</strong>(1), 16-24.</li>  
+  
+<li><a id="pirkola" name="pirkola"></a>Pirkola, A., Keskustalo, H., Leppänen, E. , K&auml;ns&auml;l&auml;, A.-P. &amp; J&auml;rvelin, K. (2002). <a href="../7-2/paper126.html">Targeted s-gram matching: a novel n-gram matching technique for cross- and monolingual word form variants</a>. <em>Information Research</em>, <strong>7</strong>(2), paper 126. Retrieved 13 August, 2008 from http://informationr.net/ir/7-2/paper126.html  (Archived by WebCite&reg; at http://www.webcitation.org/5a2sJHoaw)</li>
+
+<li><a id="schwartz" name="schwartz"></a>Schwartz, A. &amp; Hearst, M. (2003). <a href="http://www.webcitation.org/5a2slmvxP">A simple algorithm for identifying abbrevation definitions in biomedical texts</a>. In Russ B Altman, A Keith Dunker, Lawrence Hunter, Tiffany A Jung &amp; Teri E Klein (Eds.). <em>Proceedings of the 8th Pacific Symposium on Biocomputing (PSB 2003), Lihue, Hawaii.</em>  Singapore: World Scientific Publishing Co. Retrieved 13 August, 2008 from http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2481&amp;rep=rep1&amp;type=pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5a2slmvxP)</li>
+
+<li><a id="terada" name="terada"></a>Terada, A., Tokunaga, T. &amp; Tanaka, H. (2004). Automatic expansion of abbrevations by using context and character information. <em>Information Processing and Management</em>, <strong>40</strong>(1), 31-45.</li> 
+
+<li><a id="vander" name="vander"></a>Vander Stouw, G.G., Gustafson, C., Rule, J.D. &amp; Watson, C.E. (1976). The Chemical Abstracts Service chemical registry system. IV: use of the registry system to support the preparation of index nomenclature. <em>Journal of Chemical Information and Computer Sciences</em>, <strong>16</strong>(4), 213-218.</li>  
+
+<li><a id="wilbur" name="wilbur"></a>Wilbur, W.J., Hazard, G.F., Divita, G., Mork, J.G., Aronson, A.R. &amp; Browne, A.C. (1999). <a href="http://www.webcitation.org/5a2t0w0BE">Analysis of biomedical text for chemical names: a comparison of three methods</a>. <em>Proceedings of the AMIA Annual Symposium</em>, (pp. 176-180). Bethesda, MD: American Medical Informatics Association. Retrieved 13 August, 2008 from http://skr.nlm.nih.gov/papers/references/chemicals.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5a2t0w0BE)</li>
+  
+<li><a id="willett" name="willett"></a>Willett, P. (2000). <a href="../5-2/paper69.html">Textual and chemical information processing: different domains but similar algorithms</a>. <em>Information Research</em>, <strong>5</strong>(2), paper 69.  Retrieved 25 July, 2007 from http://informationr.net/ir/5-2/paper69.html  (Archived by WebCite&reg; at http://www.webcitation.org/5a2tL872j)</li>
+
+<li><a id="wren" name="wren"></a>Wren, J.D. (2006). A scalable machine-learning approach to recognize chemical names within large text databases.<em> BMC Bioinformatics</em>, <strong>7</strong>(Suppl 2): S3.</li>  
+
+<li><a id="yu" name="yu"></a>Yu, H., Hatzivassiloglou, V., Rzhetsky, A. &amp; Wilbur, W.J. (2002). Automatically identifying gene/protein terms in MEDLINE abstracts. <em>Journal of Biomedical Informatics</em>, <strong>35</strong>, 322-330. </li>
+</ul>
+</fieldset>
+</form>
+
+<form action="#">
+<fieldset>
+<legend style="border-right: 1px solid navy; border-bottom: 1px solid navy; padding: 0.1ex 0.5ex; color: white; background-color: #5E96FD;; font-size: medium; font-weight: bold;">How to cite this paper</legend>
+<div><br />
+Pirkola, A. (2008). &quot;Extracting variant forms of chemical names for information retrieval.&quot; <em>Information Research</em>, <strong>13</strong>(3) paper 347. [Available at http://InformationR.net/ir/13-3/paper347.html from 13 August, 2008]</div>
+</fieldset>
+</form>
+
+<table align="center" cellspacing="10">
+	<tbody><tr>
+		<td colspan="3" style="background-color: #5E96FD;; color: white; font-family: verdana; font-size: small; font-weight: bold;" align="center">Find other papers on this subject</td></tr>
+	<tr>
+		<td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+			<table bgcolor="#ffffff">
+
+				<tbody><tr>
+					<td align="center" height="32" nowrap="nowrap" valign="top"><input name="q" size="31" maxlength="255" value="&quot;chemical names&quot; &quot;information retrieval&quot; extraction" type="hidden"></input> <br />
+<input name="sa" value="Scholar Search" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit"></input>
+<input name="num" value="100" type="hidden"></input>
+					</td>
+				</tr>
+			</tbody></table>
+
+</form>
+		</td>
+
+		<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+			<table bgcolor="#ffffff">
+				<tbody><tr>
+					<td align="center" height="32" nowrap="nowrap" valign="top"><input name="q" size="31" maxlength="255" value="&quot;chemical names&quot; &quot;information retrieval&quot; extraction" type="hidden"></input><br />
+<input name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" type="submit"></input>
+<input name="client" value="pub-5081678983212084" type="hidden"></input>
+<input name="forid" value="1" type="hidden"></input>
+
+<input name="ie" value="ISO-8859-1" type="hidden"></input>
+<input name="oe" value="ISO-8859-1" type="hidden"></input>
+
+<input name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" type="hidden"></input>
+<input name="hl" value="en" type="hidden"></input>
+					</td>
+				</tr>
+			</tbody></table>
+</form>
+</td>
+<td align="center" valign="top">
+<form method="get" action="http://www.live.com/" target="_blank">
+			<table bgcolor="#ffffff">
+				<tbody><tr>
+
+					<td align="center" height="32" nowrap="nowrap" valign="top"><input name="q" size="31" maxlength="255" value="&quot;chemical names&quot; &quot;information retrieval&quot; extraction" type="hidden"></input> <br />
+<input name="sa" value="Windows Academic" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit"></input>
+<input name="num" value="100" type="hidden"></input>
+					</td>
+				</tr>
+			</tbody></table>
+</form>
+
+		</td>
+	</tr>
+</tbody></table>
+
+<hr style="color: #5E96FD;" size="1" />
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+<div align="center">
+<img alt="logo" src="http://static.delicious.com/img/delicious.small.gif" /> <a href="http://del.icio.us/post" onclick="window.open('http://delicious.com/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a>
+</div>
+<hr style="color: #5E96FD;" size="1" />
+<br />
+<h2><a id="app" name="app"></a>Appendix 1 - Training data for FNV-Finder</h2>
+<br />
+<table width="90%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<tr><th>Acronym</th><th>MeSH term/<br />Substance name</th><th>Variant forms<br /> in the FN-A index</th></tr>
+<tr><td valign="top">adomet</td><td valign="top">s adenosylmethionine</td><td valign="top">adenosyl methionine;<br />s adenosyl l methionine</td></tr>
+<tr><td valign="top">adpr</td><td valign="top">adenosine diphosphate ribose</td><td valign="top">adenosine 5 diphosphoribose;<br />  
+adp ribose </td></tr>
+<tr><td valign="top">aibn</td><td valign="top">azobis isobutyronitrile</td><td valign="top">2 2 azobis isobutyronitrile;<br />
+2 2 azobisisobutyronitrile</td></tr>
+<tr><td valign="top">alum</td><td valign="top">aluminum hydroxide</td><td valign="top">aluminium hydroxide </td></tr>
+<tr><td valign="top">ampt</td><td valign="top">alpha methyltyrosine </td><td valign="top">alpha methyl p tyrosine;<br /> 
+alpha methyl para tyrosine;<br />  
+alpha methylpara tyrosine </td></tr>
+<tr><td valign="top">ap4a</td><td valign="top">diadenosine tetraphosphate</td><td valign="top">p 1 p 4 di adenosine 5 tetraphosphate</td></tr>
+<tr><td valign="top">azttp</td><td valign="top">3 azido 3 deoxythymidine 5 triphosphate </td><td valign="top">azt triphosphate</td></tr>
+<tr><td valign="top">bbp</td><td valign="top">butylbenzyl phthalate </td><td valign="top">benzyl butyl phthalate; <br />
+benzylbutyl phthalate; <br />
+butyl benzyl phthalate; <br />
+butylbenzylphthalate </td></tr>
+<tr><td valign="top">bche</td><td valign="top">butyrylcholinesterase </td><td valign="top">butyrylcholine esterase</td></tr>
+<tr><td valign="top">cccp</td><td valign="top">carbonyl cyanide m chlorophenyl hydrazone</td><td valign="top">carbonyl cyanide 3 chlorophenylhydrazone; <br />
+carbonyl cyanide m chlorophenylhydrazone; <br />
+carbonyl cyanide m cholorophenyl hydrazone; <br />
+carbonylcyanide m chlorophenyl hydrazone; <br />
+carbonylcyanide m chlorophenylhydrazone </td></tr>
+<tr><td valign="top">dcc</td><td valign="top">dicyclohexylcarbodiimide</td><td valign="top">dicyclohexyl carbodiimide;<br />
+n n dicyclohexylcarbodiimide </td></tr>
+<tr><td valign="top">dep</td><td valign="top">diethyl phthalate</td><td valign="top">diethylphthalate</td></tr>
+<tr><td valign="top">dmn</td><td valign="top">dimethylnitrosamine</td><td valign="top">n nitrosodimethylamine</td></tr>
+<tr><td valign="top">dmpo</td><td valign="top">5 5 dimethyl 1 pyrroline 1 oxide</td><td valign="top">5 5 dimethyl 1 pyrroline n oxide; <br />
+5 5 dimethyl pyrroline n oxide; <br />
+5 5 dimethylpryrroline n oxide; <br />
+dimethyl pyrroline n oxide </td></tr>
+<tr><td valign="top">emate</td><td valign="top">estrone 3 o sulfamate</td><td valign="top">oestrone 3 sulphamate</td></tr>
+<tr><td valign="top">galn</td><td valign="top">galactosamine </td><td valign="top">d galactosamine</td></tr>
+<tr><td valign="top">gsno</td><td valign="top">s nitrosoglutathione </td><td valign="top">nitrosoglutathione; <br />
+s nitroso glutathione; <br />
+s nitroso l glutathione </td></tr>
+<tr><td valign="top">hba</td><td valign="top">4 hydroxybenzoic acid</td><td valign="top">p hydroxybenzoate; <br />
+p hydroxybenzoic acid </td></tr>
+<tr><td valign="top">hdi</td><td valign="top">1 6 hexamethylene diisocyanate</td><td valign="top">hexamethylene diisocyanate; <br />
+hexane diisocyanate </td></tr>
+<tr><td valign="top">iptg</td><td valign="top">isopropyl thiogalactoside</td><td valign="top">isopropyl beta d thiogalactopyranoside; <br />
+isopropyl beta d thiogalactoside; <br />
+isopropylthiogalactoside </td></tr>
+<tr><td valign="top">kic</td><td valign="top">alpha ketoisocaproic acid </td><td valign="top">2 ketoisocaproic acid; <br />
+alpha ketoisocaproate </td></tr>
+<tr><td valign="top">kyna</td><td valign="top">kynurenic acid</td><td valign="top">kynurenate </td></tr>
+<tr><td valign="top">m6g</td><td valign="top">morphine 6 glucuronide</td><td valign="top">morphine 6 beta glucuronide</td></tr>
+<tr><td valign="top">mat</td><td valign="top">methionine adenosyltransferase</td><td valign="top">methionine adenosyl transferase</td></tr>
+<tr><td valign="top">mcpa</td><td valign="top">2 methyl 4 chlorophenoxyacetic acid</td><td valign="top">4 chloro 2 methyl phenoxyacetic acid; <br />
+4 chloro 2 methylphenoxy acetic acid; <br />
+4 chloro 2 methylphenoxyacetic acid </td></tr>
+<tr><td valign="top">mdp</td><td valign="top">acetylmuramyl alanyl isoglutamine</td><td valign="top">muramyl dipeptide: <br />
+muramyldipeptide </td></tr>
+<tr><td valign="top">mlsb</td><td valign="top">streptogramin b</td><td valign="top">streptograminb</td></tr>
+<tr><td valign="top">mstfa</td><td valign="top">n methyl n trimethylsilyl trifluoroacetamide </td><td valign="top">n methyl n trimethylsilyltrifluoroacetamide </td></tr>
+<tr><td valign="top">naag</td><td valign="top">n acetyl 1 aspartylglutamic acid</td><td valign="top">n acetylaspartylglutamate</td></tr>
+<tr><td valign="top">nata</td><td valign="top">n acetyltryptophanamide </td><td valign="top">n acetyl tryptophan amide;<br /> 
+n acetyl l tryptophanamide </td></tr>
+<tr><td valign="top">neuac</td><td valign="top">n acetylneuraminic acid</td><td valign="top">n acetyl neuraminic acid</td></tr>
+<tr><td valign="top">nmm</td><td valign="top">omega n methylarginine</td><td valign="top">n g monomethyl l arginine;<br /> 
+ng monomethyl l arginine </td></tr>
+<tr><td valign="top">npa</td><td valign="top">alpha naphthylphthalamic acid</td><td valign="top">1 n naphthylphthalamic acid;<br /> 
+n 1 naphthylphthalamic acid; <br />
+naphtylphtalamic acid </td></tr>
+<tr><td valign="top">npe6</td><td valign="top">monoaspartyl chlorin e 6</td><td valign="top">mono l aspartyl chlorin e 6;<br /> 
+n aspartyl chlorin e 6</td></tr>
+<tr><td valign="top">nppb</td><td valign="top">5 nitro 2 3 phenylpropylamino benzoic acid </td><td valign="top">5 nitro 2 3 phenylpropyl amino benzoate;<br /> 
+5 nitro 2 3 phenylpropylamino benzoate </td></tr>
+<tr><td valign="top">oag</td><td valign="top">1 oleoyl 2 acetylglycerol</td><td valign="top">1 oleoyl 2 acetyl sn glycerol;<br /> 
+1 oleoyl acetyl sn glycerol;<br /> 
+oleoyl acetyl glycerol </td></tr>
+<tr><td valign="top">ocdd</td><td valign="top">octachlorodibenzo 4 dioxin </td><td valign="top">octachlorinated dibenzo p dioxin;<br /> 
+octachlorinated dibenzodioxin; <br /> 
+octachlorodibenzo p dioxin; <br /> 
+octachlorodibenzodioxin </td></tr>
+<tr><td valign="top">otz</td><td valign="top">2 oxothiazolidine 4 carboxylic acid </td><td valign="top">2 oxothiazolidine 4 carboxylate</td></tr>
+<tr><td valign="top">pam</td><td valign="top">peptidylglycine monooxygenase</td><td valign="top">peptidyl glycine alpha amidating monooxygenase; <br />  
+peptidyl glycine alpha amidating mono oxygenase;  <br /> 
+peptidylglycine alpha amidating monooxygenase </td></tr>
+<tr><td valign="top">pcmb</td><td valign="top">p chloromercuribenzoic acid </td><td valign="top">para chloromercuribenzoate </td></tr>
+<tr><td valign="top">pcmbs</td><td valign="top">4 chloromercuribenzenesulfonate</td><td valign="top">4 chloromercuri benzene sulfonic acid;<br /> 
+p chloromercuribenzene sulfonate;<br /> 
+p chloromercuribenzenesulphonic acid;<br /> 
+p chloromercurybenzenesulfonate </td></tr>
+<tr><td valign="top">prpp</td><td valign="top">phosphoribosyl pyrophosphate</td><td valign="top">phosphoribosylpyrophosphate</td></tr>
+<tr><td valign="top">rubp</td><td valign="top">ribulose 1 5 diphosphate</td><td valign="top">ribulose 1 5 bisphosphate</td></tr>
+<tr><td valign="top">sdma</td><td valign="top">n n dimethylarginine</td><td valign="top">symmetric dimethylarginine;<br /> 
+symmetric n g n g dimethyl l arginine;<br /> 
+symmetric ng ng dimethyl l arginine </td></tr>
+<tr><td valign="top">so2</td><td valign="top">sulfur dioxide</td><td valign="top">sulphur dioxide</td></tr>
+<tr><td valign="top">tbh</td><td valign="top">tert butylhydroperoxide</td><td valign="top">t butylhydroperoxide;<br /> 
+tert butyl hydroperoxide;<br />  
+tertiary butyl hydroperoxide</td></tr>
+<tr><td valign="top">tcne</td><td valign="top">tetracyanoethylene</td><td valign="top">tetracyano ethylene</td></tr>
+<tr><td valign="top">tpmt</td><td valign="top">thiopurine methyltransferase</td><td valign="top">thio purine methyl transferase;<br /> 
+thiopurine methyl transferase;<br /> 
+thiopurine s methyltransferase</td></tr>
+<tr><td valign="top">utp</td><td valign="top">uridine triphosphate </td><td valign="top">uridine 5 triphosphate</td></tr>
+<tr><td valign="top">vpa</td><td valign="top">valproic acid</td><td valign="top">valproate</td></tr>
+</table>
+<br />
+<hr style="color: #5E96FD;" size="1" />
+<br />
+<h2><a name="appendix" id="appendix">Appendix 2</a> - FNV-Finder algorithm</h2>
+<p><strong>Step 1</strong>. Input: an index entry; components extracted from a phrasal MeSH term, or 6-grams extracted from a single word or compound word MeSH term.</p>
+<p>Remove from an index entry all lines that do not contain a MeSH term component or a 6-gram. #Such lines do not contain acronym's MeSH term or its variant.</p>
+<p><strong>Step 2</strong>. Input: output file from step 1; a stop word list.</p>
+<p>For each line in an entry, match strings in a line against a stop word list. If there is a match then print the end of the line located between the rightmost stop word and the acronym. Else print the whole line, excluding the acronym.</p>
+<p><strong>Step 3</strong>. Input: post-second-step-entry; a prefix string list containing strings 0-100, alpha, beta, gamma, tert, nalpha, d, l, n, p, r, s; acronym.</p>
+<p>For each line, start from the right to find a string whose first letter is identical to the first letter of the acronym. If such string is found then mark it as a temporary first component (TFC). Else go to step 4.</p>
+<p>Compute LCS for the acronym and the string sequence right to and including the TFC. If LCS = |the number of characters in the acronym| mark the string sequence as a full name candidate. Else go to step 4.</p>
+<p>Match the line containing the full name candidate against a prefix string list. If there is a prefix string that appears immediately left to the full name candidate, include it and all consecutive prefix strings to the left of it in the full name candidate, and go to step 5. Else print the full name candidate and go to step 5.</p>
+<p><strong>Step 4</strong>. Input: lines that were not resolved in step 3; post-second-step-entry; a prefix string list containing strings 0-100, alpha, beta, gamma, tert, nalpha, d, l, n, p, r, s.</p>
+<p>Compute a FNV indicator value for each string in the post-second-step-entry. If a line contains one string with FNV indicator > 0.50, mark it as a TFC. If a line contains more than one string with FNV indicator > 0.50, mark the leftmost string as a TFC. Mark the string sequence right to and including the TFC as a full name candidate. Else, if a line does not contain a string with FNV indicator > 0.50, reject the line.</p>
+<p>Match the line containing the full name candidate against a prefix string list. If there is a prefix string that appears immediately left to the full name candidate, include it and all consecutive prefix strings to the left of it in the full name candidate, and go to step 5. Else print the full name candidate and go to step 5.</p>
+<p><strong>Step 5</strong>. Input: output files from steps 3 and 4; a suffix list; MeSH term.</p>
+<p>Match the end of the full name candidate against a suffix list. Match the end of the MeSH term against a suffix list. If the full name candidate and the MeSH term match different suffixes, reject the candidate. Else go to step 6.</p>
+<p><strong>Step 6</strong>. Input: output file from step  5; MeSH term.</p>
+<p>Match the full name candidate against the MeSH term. If there is a match, mark the full name candidate as a MeSH term.  Else mark the full name candidate as a variant form. Print the variant form.</p>
+
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+<hr style="color: #5E96FD;;" size="1" />
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div><!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=3946032; 
+var sc_invisible=0; 
+var sc_partition=46; 
+var sc_click_stat=1; 
+var sc_security="80455ec9"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div class="statcounter"><a class="statcounter" href="http://www.statcounter.com/free_web_stats.html"><img class="statcounter" src="http://c.statcounter.com/3946032/0/80455ec9/0/" alt="website stat" /></a></div></noscript>
+<!-- End of StatCounter Code --><br /><a href="http://my.statcounter.com/project/standard/stats.php?project_id=3946032&amp;guest=1">View My Stats</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the authors, 2008. <br />Last updated: 12 August, 2008</div></td>
+
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper347.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+</table>
+<hr size="3" style="color: #5E96FD;" />
+
+<table align="center"><tr><td><div class="button">
+
+
+<ul>
+	<li><a href="infres133.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul> 
+
+</div></td></tr></table>
+<br />
+<hr size="3" style="color: #5E96FD;" />
+<br />
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/13-3/paper347.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:22:23 GMT -->
+</html>
+

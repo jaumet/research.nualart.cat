@@ -1,0 +1,815 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/6-2/paper94.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:21:36 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 97">
+<title>Converting a controlled vocabulary into an ontology: the case of GEM</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="digital information, retrieval, ontologies, ontology, semantics, relationships, classification, thesauri, thesaurus, controlled vocabulary,  Gateway to Educational Materials, GEM, semantic model">
+<meta name="description" content="The prevelance of digital information raised issues regarding the suitability of conventional library tools for organizing information. The multi-dimensionality of digital resources requires a more versatile and flexible representation to accommodate intelligent information representation and retrieval. Ontologies are used as a solution to such issues in many application domains, mainly due to their ability to explicitly specify the semantics and relations and to express them in a computer understandable language. Conventional knowledge organization tools such as classifications and thesauri resemble ontologies in a way that they define concepts and relationships in a systematic manner, but they are less expressive than ontologies when it comes to machine language. This paper used the controlled vocabulary at the Gateway to Educational Materials (GEM) as an example to address the issues in representing digital resouces. The theoretical and methodological framework in this paper serves as the rationale and guideline for converting the GEM controlled vocabulary into an ontology. Compared to the original semantic model of GEM controlled vocabulary, the major difference between the two models lies in the values added through deeper semantics in describing digital objects, both conceptually and relationally.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Converting a controlled vocabulary into an ontology: the case of GEM">
+<meta name="DC.Creator" content="Jian Qin, Stephen Paling">
+<meta name="DC.Subject" content="digital information, retrieval, ontologies, ontology, semantics, relationships, classification, thesauri, thesaurus, controlled vocabulary,  Gateway to Educational Materials, GEM, semantic model">
+<meta name="DC.Description" content="The prevelance of digital information raised issues regarding the suitability of conventional library tools for organizing information. The multi-dimensionality of digital resources requires a more versatile and flexible representation to accommodate intelligent information representation and retrieval. Ontologies are used as a solution to such issues in many application domains, mainly due to their ability to explicitly specify the semantics and relations and to express them in a computer understandable language. Conventional knowledge organization tools such as classifications and thesauri resemble ontologies in a way that they define concepts and relationships in a systematic manner, but they are less expressive than ontologies when it comes to machine language. This paper used the controlled vocabulary at the Gateway to Educational Materials (GEM) as an example to address the issues in representing digital resouces. The theoretical and methodological framework in this paper serves as the rationale and guideline for converting the GEM controlled vocabulary into an ontology. Compared to the original semantic model of GEM controlled vocabulary, the major difference between the two models lies in the values added through deeper semantics in describing digital objects, both conceptually and relationally.">
+<meta name="DC.Publisher" content="T.D. Wilson, Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 6 No. 2, January 2001</h4></td></tr>
+  <tr> 
+    <td><a href="infres62.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+	
+
+<h1>Converting a controlled vocabulary into an ontology: the case of GEM</h1>
+
+<h4 align="center"><a href="mailto:jqin@syr.edu">Jian Qin</a> &amp; <a href="mailto:swpaling@syr.edu">Stephen Paling</a><br>
+School of Information Studies<br>
+Syracuse University<br>
+Syracuse, New York, USA</h4>
+
+<div align="center">Abstract</div>
+
+<blockquote>The prevalance of digital information raised issues regarding the suitability of conventional library tools for organizing information. The multi-dimensionality of digital resources requires a more versatile and flexible representation to accommodate intelligent information representation and retrieval. Ontologies are used as a solution to such issues in many application domains, mainly due to their ability explicitly to specify the semantics and relations and to express them in a computer understandable language. Conventional knowledge organization tools such as classifications and thesauri resemble ontologies in a way that they define concepts and relationships in a systematic manner, but they are less expressive than ontologies when it comes to machine language. This paper used the controlled vocabulary at the Gateway to Educational Materials (GEM) as an example to address the issues in representing digital resources. The theoretical and methodological framework in this paper serves as the rationale and guideline for converting the GEM controlled vocabulary into an ontology. Compared to the original semantic model of GEM controlled vocabulary, the major difference between the two models lies in the values added through deeper semantics in describing digital objects, both conceptually and relationally.</blockquote>
+<br>
+
+<h2>Introduction</h2>
+
+<p>Ontologies, as a form of knowledge representation, are defined as a systematic
+account of existence, a specification of a conceptualization (<a href="#Gruber93a">Gruber</a>,
+1993a). They represent a domain of discourse, and allow for relationships
+such as the definition of classes, relations, and functions. Despite their
+high level of specification of these classes and relationships, ontologies
+also allow a great deal of flexibility. Among the more flexible possibilities
+are the sharing and reuse of ontologies, and the ability to accommodate
+varying descriptive terms. In the context of metadata for digital library
+objects, ontologies are specified in the form of definitions of representational
+vocabulary. Conventional representational vocabularies used in libraries
+include cataloguing codes as embodied in MAchine Readable Cataloguing (MARC),
+thesauri or subject heading lists, and classification schemes. There is
+a clear functional distinction between such vocabularies. Thesauri and
+classifications, on the one hand, are used to represent the subject content
+of a book, journal article, a film, or any form of recorded knowledge,
+though they also contain a limited number of terms for document formats
+and genre. Semantic relationships among different concepts are reflected
+through broader terms, narrower terms, and related terms in thesauri, and
+a hierarchical structure in classification schemes. On the other hand,
+because a thesaurus is a subject content rich vocabulary, it does not handle
+descriptive data (title, author, publisher, etc.) object well. Libraries
+use separate representational vocabularies for the descriptive data such
+as Anglo-American Cataloging Rules 2nd ed. (AACR2) to meet the need for
+descriptive representation.</p>
+
+<p>The prevalance of digital information resources raised several issues
+for conventional representational vocabularies. Firstly, digital objects,
+as those in the Gateway to Educational Materials (GEM, <a href="http://www.thegateway.org/">http://www.thegateway.org/</a>)
+collections, encompass multiple dimensions of characteristics and such
+characteristics often play important roles for users in search for precise
+information in an efficient manner. For example, a lesson plan of arithmetic
+for fifth graders may contain information on pedagogy, class activities,
+math games, test samples, educational standards for fifth grade mathematics
+curriculum; as a digital object, it may include text, images, audio/video
+clips; and it may be a parent object of a collection of child objects or
+a child object of a parent object. A conventional cataloguing code will
+be inadequate to describe these details in a lesson plan, for many of these
+elements do not even exist in the vocabulary. Secondly, different metadata
+schemes are used to represent digital objects in different domains. When
+an information repository has heterogeneous digital objects, interoperability
+becomes the first obstacle to provide access to these resources. A library
+catalogue system may not be able to translate a record from a museum or a
+library MARC record can not be recognized by an Internet-based information
+gateway system. Finally, more and more systems today use agents and other
+intelligent applications to improve information search performance. While
+such capabilities are hard to implement directly within the metadata records,
+it seems to make more sense if we create agents that bear the concept models
+with deeper semantics. Such effort does not have to start from scratch,
+but rather, can make use of the knowledge structure and vocabularies in
+classifications and thesauri and add values to these representations.
+<p>Ontologies are in a right position to address these issues. The fundamental
+difference between an ontology and a conventional representational vocabulary
+is the level of abstraction and relationships among concept. In this paper,
+we report the conversion of the GEM controlled vocabulary into an ontology,
+which is the first step in a larger project towards an ontology-driven
+information gateway for educational materials. The current study discusses
+the preliminary planning and steps involved in converting the existing
+GEM vocabulary to an ontology. The purpose of the conversion is not only
+to reduce the duplication of effort involved in building an ontology from
+scratch by using the existing vocabulary, but also to establish a mechanism
+for allowing differing vocabularies to be mapped onto the ontology. <a href="#Soergel99">Soergel</a> (1999) drew connections between ontologies and other methods of classification, pointing out that ontological and lexical structures underpin much scientific and scholarly work. He criticises scholars in scientific communities for not communicating more effectively with each other about their classifications, and laments the fact that the intellectual capital of classification schemes and thesauri is often ignored. This project also attempts to avoid this
+problem. It uses the existing capital represented by the GEM scheme, and
+makes it available not just for automated processing at GEM, but also to
+other communities who choose to take up the structure of the ontology. The
+following sections include an introduction to GEM's background, a literature
+review of formal ontologies and applications, conversion considerations,
+and the constructs of GEM ontology.</p>
+
+<h2>Background of GEM</h2>
+
+<p>GEM is an initiative of the US Department of Education's National
+Library of Education (NLE) to expand educators' capability to access Internet-based
+lesson plans, curriculum units and other educational materials (<a href="#Sutton1999">Sutton</a>, 1999). There are over 14,500 metadata records in the GEM database as of this writing. Its resources come from more than 100 collections, including AskERIC Virtual Library, Math Forum, Microsoft Encarta, North Carolina
+Department of Public Instruction, and U.S. Department of Education. GEM
+acquires indexing records through distributed cataloguing that uses a proprietary
+cataloguing system. The software contains an interface that allows GEM cataloguers
+to enter metadata under the 15 Dublin Core Metadata Elements (short for
+Dublin Core or DC) from the Online Computer Library Center (OCLC) and 8
+local elements that are designed specifically for the resources covered
+by GEM (Table 1). Elements with an asterisk in Table 1 describe the subject
+content of a resource, among which the <i>Subject </i>element allows two
+types of vocabulary: the GEM controlled vocabulary and the keywords selected
+by metadata creators. Box 1 shows a typical GEM cataloguing record. Note
+that the <i>Description, Subject,</i> and <i>Title</i> elements contain
+information on what the resource is about. In the <i>Subject </i>element,
+GEM requires metadata creators to include a level one subject from the
+GEM Subject Vocabulary (<a href="#Morgan1999">Morgan</a>, 1999). Other
+elements such as <i>Audience, Grade,</i> and <i>Pedagogy</i> include information
+on what and whom the resource is for, which can play important roles in
+narrowing down a search when querying the database. Box 1 shows an example
+of a GEM metadata record, where the two-levelled subject terms were selected
+from the GEM Controlled Vocabulary, and the keywords extracted by metadata
+creators from the resource.</p>
+
+<center>
+<p><b></b></center>
+
+<table align="center" border cellspacing=0 cellpadding=0 width="60%" bgcolor="#FFFFFF" style="border-collapse:collapse; border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt" >
+<caption align="bottom">Table 1: Data elements for GEM indexing records</caption>
+<tr>
+<td valign=top colspan="2" style="border:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+<center><b>Elements from Dublin Core</b></center>
+</td>
+
+<td valign=top width="40%" style="border:solid windowtext .5pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+<center><b>Elements from GEM</b></center>
+</td>
+</tr>
+
+<tr valign=top>
+<td style="border-top:none;border-left:solid windowtext .5pt;border-bottom:
+  solid windowtext .5pt;border-right:none;mso-border-top-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+<div style="text-indent:0in;line-height:normal">DC.Contributor</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Coverage</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Creator</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Date</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Description*</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Format</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Identifier</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Language</div>
+</td>
+
+<td valign=top style="border-top:none;border-left:none;border-bottom:solid windowtext .5pt;
+  border-right:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+<div style="text-indent:0in;line-height:normal">DC.Publisher</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Relation</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Rights</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Source</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Subject*</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Title*</div>
+
+<div style="text-indent:0in;line-height:normal">DC.Type</div>
+</td>
+
+<td valign=top style="border-top:none;border-left:none;border-bottom:solid windowtext .5pt;
+  border-right:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+<div style="text-indent:0in;line-height:normal">GEM.Audience</div>
+
+<div style="text-indent:0in;line-height:normal">GEM.Cataloging</div>
+
+<div style="text-indent:0in;line-height:normal">GEM.Duration</div>
+
+<div style="text-indent:0in;line-height:normal">GEM.EssentialResources</div>
+
+<div style="text-indent:0in;line-height:normal">GEM.Grade</div>
+
+<div style="text-indent:0in;line-height:normal">GEM.Pedagogy</div>
+
+<div style="text-indent:0in;line-height:normal">GEM.Quality</div>
+
+<div style="text-indent:0in;line-height:normal">GEM.Standards</div>
+</td>
+</tr>
+</table>
+
+<div align="center">* Indicates elements that are used to tell what a resource is about.</div>
+
+<p><br>
+<table align="center" border cellspacing=0 cellpadding=0 width="75%" >
+<caption align="bottom">Box 1. A sample GEM metadata record</caption>
+<tr>
+<td valign=top width="50%" bgcolor="#FFFFFF" style="border:.75pt solid black;vertical-align:top;background:white"><b>Title:
+</b>Eyes
+on the Sky, Feet on the Ground: Hands On Astronomy Activities for Kids&nbsp;
+<div style="margin-left:1.0in;text-indent:-1.0in;line-height:
+    normal"><b>Description:
+</b>This
+resource contains hundreds of fun explorations into astronomy as a classroom
+tool for learning how to theorise, experiment, and analyze data. The activities
+are fully illustrated and contain detailed, step-by-step instructions as
+well as suggested discussion topics.&nbsp;</div>
+
+<div style="margin-left:1.0in;text-indent:-1.0in;line-height:
+    normal"><b>Grade
+Levels: </b>2 3 4 5 6</div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*&nbsp;</div>
+
+<div style="text-indent:0in;line-height:normal"><b>GEM Subjects: </b>Science--Astronomy</div>
+
+<div style="line-height:normal">Science--Physics</div>
+
+<div style="line-height:normal">Science--Space Sciences</div>
+
+<div style="line-height:normal">Science--Technology</div>
+
+<div style="text-indent:0in;line-height:normal"><b>Keywords:</b>Orbit,
+Time, Calendar, Maps, Solar system, Moon, Rotation&nbsp;</div>
+
+<div style="text-indent:0in;line-height:normal"><b>GEM Audience:&nbsp;</b></div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp; Tool For: Teachers&nbsp;</div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp; Beneficiary: Students&nbsp;</div>
+
+<div style="text-indent:0in;line-height:normal">&nbsp;</div>
+</td>
+
+<td valign=top>
+<div style="text-indent:0in;line-height:normal">
+<div style="text-indent:0in;line-height:normal"><b>Pedagogy:</b></div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp; Teaching Method: Hands-on
+learning</div>
+
+<div style="text-indent:0in;line-height:normal">&nbsp;&nbsp;&nbsp; Multiple
+activities
+<br><b>Resource Type: </b>Collection&nbsp;</div>
+</div>
+
+<div style="text-indent:0in;line-height:normal"><b>Format:
+</b>text/HTML&nbsp;</div>
+
+<div style="text-indent:0in;line-height:normal"><b>Relation:</b></div>
+
+<div style="text-indent:0in;line-height:normal"><b>Rights Management:</b></div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp; Cost: free&nbsp;</div>
+
+<div style="text-indent:0in;line-height:normal"><b>Date:
+</b>Record Created:
+2000-04-13T01:45:39-5:00&nbsp;</div>
+
+<div style="text-indent:0in;line-height:normal"><b>Publisher:</b></div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp; Name: Harvard-Smithsonian
+Center for Astrophysics, High Energy Astrophysics Division&nbsp;</div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp; Role: onlineProvider&nbsp;</div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp; Homepage: http://hea-www.harvard.edu/&nbsp;</div>
+
+<div style="text-indent:0in;line-height:normal"><b>cataloguing Agency:</b></div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp; Name: GEM&nbsp;</div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp; Version: 3.2</div>
+
+<div style="line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp; Homepage: http://www.geminfo.org</div>
+</td>
+</tr>
+</table>
+
+
+<p>The GEM controlled vocabulary is resource-oriented (Figure 1), i.e.,
+it defines the categories (classes) and subcategories (subclasses) of information
+that are included in educational resources. Among other classes that describe
+the many physical/medium attributes for a resource, the subject class encompasses
+a typical curriculum in the US elementary and secondary schools, which
+has a two level subdivisions--subclass and concept names. Currently, the
+GEM controlled vocabulary is used as a metadata scheme for representing
+the multiple dimensions for digital educational objects. The GEM system
+provides access to these multi-dimensions by using Boolean operators through
+the search interface. Though this controlled vocabulary integrates the
+descriptive data elements with subject categories, it is difficult to achieve
+a higher level of representation of these digital objects (such as games,
+test samples, and classroom activities in a math lesson plan) and the relationships
+among and in the digital objects. This difficulty manifests a need for
+a more systematic abstraction that will explicitly specify the concepts
+as well as the relationship between these concepts.</p>
+
+
+<div align="center"><img src="p94fig1.gif" height=326 width=578></div>
+<div align="center">Figure 1. The hierarchy of GEM controlled vocabulary</div>
+
+
+<h2>Formal Ontologies and Ontological Applications</h2>
+
+<p>Researchers in the areas of knowledge representation have debated the nature of ontologies in the last few decades. In general, "[a]n ontology is an explicit specification of a conceptualization" (<a href="#Gruber1993">Gruber</a>,
+1993). While Gruber's definition is widely cited, there have been questions
+about the meaning of conceptualization. <a href="#Guarino1997">Guarino</a>
+(1997) argues that an ontology is "not a specification of a conceptualization,
+but a (possibly incomplete) agreement about a conceptualization." He further
+states that:</p>
+
+<blockquote>An ontology is a logical theory accounting for the intended meaning of a formal vocabulary, i.e. its ontological commitment to a particular conceptualization of the world. The intended models of a logical language using such a vocabulary are constrained by its ontological commitment. An ontology indirectly reflects this commitment (and the underlying conceptualization) by approximating these intended models. (<a href="#Guarino1998">Guarino</a>,1998)</blockquote>
+
+<p>When ontologies are used at system development time, they get transformed and translated into an information system component, thus reduce the costs of conceptual analysis in system development; when used at run time, ontologies enables communication between software agents (ontology-driven communication). Guarino also demonstrates in his paper how ontologies affect the architecture of information systems. Thus, to be more accurate, an ontology is a partial specification of a shared conceptualization, to be used for formulating knowledge-level theories about a domain (<a href="#Domingue99">Domingue and Motta</a>, 1999).</p>
+
+<p>Various formal analysis methods provide a wide range
+of choices for modelling the "world." One of the main purposes of formal
+analysis is to investigate the logical properties of concepts and their
+relations. <a href="#Goasdoué99">Goasdoue and Reynaud</a> (1999) used semantic
+concept skeletons to identify and model relevant concepts. The process
+involves the use of the Entity-Relationship model to generate semantic
+concepts, which, in turn, is used to group entities and relationships.
+Conceptual structures can also be modelled as a hierarchical network in
+the form of a mathematical lattice (<a href="#Priss1998">Priss</a>, 1998).
+The main purpose of formal concept analysis is to define a formal model
+in which there exists a set of formal objects <i>G</i>, a set of formal
+attributes <i>M</i>, and a relation<i> I</i> between <i>G</i> and <i>M.</i>
+For example, in the context of a lesson plan, {arithmetic, test}={accelerated}
+is a formal concept. A formal concept does not necessarily define a topic
+(i.e., subject); it may well be used to specify a process. The University
+Michigan Digital Library (UMDL) ontology (<a href="#Weistein98">Weinstein</a>,
+1998) delineates the process of publications from the birth of an idea
+to the final product as 6 formal concepts: conception; expression; manifestation;
+materialization, digitization; and instance. For each of these concepts,
+the UMDL ontology maps elements in the descriptive schema, MAchine Readable
+cataloguing (MARC), with either &quot;has&quot; or &quot;of&quot; or &quot;kind-of&quot; or &quot;extends&quot; relationship.</p>
+
+<p>Different kinds of ontologies are developed to serve different levels of generality. <a href="#Guarino1998">Guarino</a> (1998) proposes that "&quot;top-level&quot; ontologies describe all general concepts such as space, time, matter, object, event, action, and so forth; domain ontologies and task ontologies describe, respectively, the vocabulary related to a generic domain (like medicine, or automobiles) or a generic task or activity (like diagnosing or selling), by specializing the terms introduced in the top-level ontology; and application ontologies describe concepts depending both on a particular domain and task, which are often specializations of both the related ontologies. The ontology library at Stanford University Knowledge Systems Laboratory (<a href="http://www-ksl.stanford.edu/">http://www-ksl.stanford.edu/</a>) contains many examples of these kinds.</p>
+
+<p>The ultimate goal of developing ontologies is to enhance information representation and information retrieval systems. The Web provides a perfect test-bed for ontology-driven applications ranging from information extraction to information retrieval. <a href="#Embley98">Embley, <i>et al.</i></a> (1998) built an ontology-based system for extracting information from data-rich, unstructured documents. They define &quot;data-rich&quot; documents as those having a number of identifiable constants such as dates, names, account numbers, ID numbers, part numbers, times, and currency values. With such a narrow ontology breadth, an application ontology can be modelled by object-oriented analysis. The application ontology was mainly used to generate SQL tables. In this sense, their application ontology functions as a database schema. Another system dealing with the similar type of documents is OntoSeek developed by<a href="#Guarino99"> Guarino</a>, <i>et al.</i> (1999), which targets content-based information retrieval from online yellow pages
+and product catalogues. Unlike Embley <i>et al.</i>'s information extraction system,
+they used linguistic tools such as WordNet (<a href="http://www.cogsci.princeton.edu/~wn/">http://www.cogsci.princeton.edu/~wn/</a>)
+and Penman to avoid building the ontology from scratch. OntoSeek utilizes
+ontology not only at the encoding level but also the end-user level. Ontology
+has also been used to build Web agents (<a href="#Luke97">Luke</a>, et
+al., 1997) to add semantics to HTML in order to define attributes and relationships
+in machine-readable form, and to map Web sites for information exploration
+(<a href="#Zhu99">Zhu</a>, et al., 1999).</p>
+
+<p>The above discussion of formal ontologies and ontological
+applications reveals an intrinsic relationship of ontological commitments
+with thesauri and classifications that have long tradition in the library
+and information science communities. While classifications play an increasingly
+important role in knowledge representation and discovery (<a href="#Kwasnik99">Kwasnik</a>, 1999), a practical question for converting a controlled vocabulary into an ontology is: What is the added value of an ontology compared to the knowledge representation vocabularies used in libraries and information industries? The answer is given in the next section.</p>
+
+
+<h2>Design Considerations</h2>
+
+<p><a href="#Gruber93b">Gruber</a> (1993b) discusses ontologies as design
+artefacts, and outlines a set of design criteria to guide ontology development.
+These criteria are:</p>
+
+<ul>
+<li><b>Clarity</b>: Definitions should be objective, free of social or computational
+context, and documented with natural language.</li>
+
+<li><b>Coherence</b>: The defining axioms should be logically consistent and
+sanction inferences consistent with the definitions.</li>
+
+<li><b>Extendibility</b>: The ontology should anticipate new used of the shared
+vocabulary.</li>
+
+<li><b>Minimal encoding bias</b>: Encoding bias occurs when a choice of representation is made simply for the convenience of notation. The conceptualization should be specified at he knowledge level without depending on a particular symbol-level encoding.</li>
+
+<li><b>Minimal ontological commitment</b>: An agent is said to commit to an
+ontology when its actions are consistent with the ontology’s definitions.
+An ontology should make a minimal number of claims about the world being
+modelled. (<a href="#Gruber93b">Gruber,</a> 1993b).</li>
+</ul>
+
+This study maintains that while these criteria serve as useful guides,
+they do not apply uniformly to all ontology projects. The conversion of
+an existing vocabulary brings with it certain assumptions that vary from
+the criteria. For example, we diverge from the views of clarity being expressed.
+Because we are converting terms already defined in a social context, we
+do not believe that they can be defined independently of that context.
+The terms define different facets of Internet resources used for education,
+and the definitions are constructed in service of the people who use the
+resources. Because the facets are relatively independent, they will not
+be connected by a large number of axioms. Taking the above criteria into
+account, the ontology must have the following added values compared to the existing vocabulary:</p>
+
+<ol>
+<li>Higher levels of conception of descriptive vocabulary;</li>
+
+<li>Deeper semantics for class/subclass and cross-class relationships;</li>
+
+<li>Ability to express such concepts and relationships in a description language; and</li>
+
+<li>Reusability and &quot;share-ability&quot; of the ontological constructs in heterogeneous systems.</li>
+</ol>
+
+<p><b><i>Higher levels of conception.</i></b> Current GEM
+controlled vocabulary represents digital objects in the sense of its &quot;whole&quot;,&quot; i.e., similar to a library cataloguing record that describes the object by its overall characteristics. But from a GEM user survey, we found that
+blocks within a digital object whole are frequently the ones that users
+are looking for. When we represent the information contained in a lesson
+plan, simply labelling it as &quot;lesson plan&quot; would not give users much valuable information on its test samples, interactive games, in-class activities,
+or the state standard it relates to. An ontology would enrich the representation
+vocabulary for such information blocks.</p>
+
+<p><b><i>Deeper semantics for class/subclass and cross-class relationships.</i></b> Converting an existing vocabulary into an ontology does not simply mean adding more classes or subclasses to it. The relationships have to be explicitly specified between these classes. When we define a math lesson plan, it is important to indicate that it has game(s) or relates to standard(s), and how these contents are related.</p>
+
+<p><b><i>Description language for concepts and their relationships.</i></b>
+A formal description language is based on Description Logic (DL) that is
+used to describe situations using various kinds of <i>individuals </i>(as<i>
+instance </i>in a collection of objects), related by <i>roles </i>(as <i>relation)</i>, and grouped into <i>concepts </i>(a<i> primitive </i>specified elsewhere) (<a href="#Brachman99">Brachman et al.</a>, 1999<i>)</i>. The real significance of a formal description language is for the representation to have the
+ability to reason about descriptions.</p>
+
+<p><b><i>Reusability and &quot;share-ability&quot; of the ontology.</i></b> If teachers, administrators, and researchers are to share educational knowledge, they
+must share more than a common vocabulary of previously identified terms;
+they must delineate the relationships among the objects in the world to
+which the terms refer. Ontologies describe formal descriptions of objects
+in the world, the properties of those objects, and the relationships among
+them. Hence, the value that they add to existing vocabularies such as thesauri
+or classification schemes is additional information that defines how objects
+can be classified and related to one another.</p>
+
+<p>In addition to these value-added considerations, there are considerations
+relating to methodology for the conversion. Two aspects of any knowledge
+representation process have direct implications to this study: structuring
+and linguistic (<a href="#Bièbow99">Bi&egrave;bow and Szulman</a>, 1999).
+The structuring aspect refers to the way a concept has been introduced
+into a model, e.g., bottom-up or top-down, and the linguistic aspect pertains
+to the linguistic accuracy of a concept. In GEM's situation where a structure
+is already in place, it makes it a natural choice to use the top-down approach
+to building the GEM concept model. For the linguistic accuracy, GEM controlled
+vocabulary is adopted whenever possible. If a new term or concept needs
+to be added, the educational thesaurus would be consulted.</p>
+
+
+
+<h2>The GEM Ontology</h2>
+
+<p>We used the Ontolingua system (http://www-ksl-svc.stanford.edu:5915/)
+at Stanford's Knowledge Systems Laboratory (http://www-ksl.stanford.edu/)
+to create the ontology. Ontolingua provides a development environment for
+ontology construction. In addition to editing tools, it allows the creation
+of modular, combinable ontologies.</p>
+
+<p>Because the GEM controlled vocabulary was already
+in existence, our task was simplified. The following schematic shows the
+proposed GEM ontology:</p>
+
+
+<table align="center" border cellspacing=0 width="85%" >
+<caption align="bottom"><b>Table 2: The GEM ontology first order relationships</b></caption>
+
+<tr><td><div class="MsoNormal"><b>Top-Level Class</b></div></td>
+<td><div class="MsoNormal"><b>Slot</b></div></td>
+<td><b>Relation</b></td>
+<td><div class="MsoNormal"><b>Example</b></div></td>
+</tr>
+
+<tr>
+<td valign=top>Resource</td>
+<td>Audience</td>
+<td><i>resource</i> For-Audience <i>slot</i><br><i>slot</i> Audience-Of <i>resource</i></td>
+<td valign=top><i>LessonPlan</i> For-Audience <i>Teachers</i><br><i>Teachers</i> Audience-Of <i>LessonPlan</i></td>
+</tr>
+
+<tr><td>&nbsp;</td>
+<td><div class="MsoNormal">Educational Level</div><div class="MsoNormal">&nbsp;</div>
+</td>
+<td><i>resource</i> For-EducationalLevel<i>slot</i><br><i>slot</i> EducationalLevel-Of<i>resource</i></td>
+<td valign=top><i>LessonPlan</i> For-EducationalLevel <i>elementary</i>
+<br><i>elementary</i> EducationalLevel-Of <i>LessonPlan</i></td>
+</tr>
+
+<tr><td>&nbsp;</td>
+<td><div class="MsoNormal">Format</div><i>&nbsp;</i></td>
+<td><i>resource</i> In-Format <i>slot</i><br><i>slot</i> Format-Of <i>resource</i></td>
+<td valign=top><i>LessonPlan</i> In-Format <i>html</i><br><i>html</i> Format-Of <i>LessonPlan</i></td>
+</tr>
+
+<tr><td>&nbsp;</td>
+<td><div class="MsoNormal">Grade</div><div class="MsoNormal">&nbsp;</div>
+</td>
+<td><i>resource</i> For-Grade<i>slot</i>
+<br><i>slot</i> Grade-Of<i>resource</i></td>
+<td valign=top><i>LessonPlan</i> For-Grade <i>03</i><br><i>03</i> Grade-Of <i>LessonPlan</i></td>
+</tr>
+
+<tr><td>&nbsp;</td>
+<td><div class="MsoNormal">Language</div>&nbsp;</td>
+<td><i>resource</i> In-Language <i>slot</i><br><i>slot</i> Language-Of <i>resource</i></td>
+<td valign=top><i>LessonPlan</i> In-Language <i>english</i><br><i>english</i> Language-Of <i>LessonPlan</i></td>
+</tr>
+
+<tr><td>&nbsp;</td>
+<td><div class="MsoNormal">Pedagogy&nbsp;</div><div class="MsoNormal">&nbsp;</div></td>
+<td><div class="MsoNormal"><i>resource</i> Used-For<i>slot</i></div>
+<div class="MsoNormal"><i>slot</i> Use-Of <i>resource</i></div></td>
+<td valign=top><i>Exam</i> Used-For <i>assessment</i><br><i>assessment</i> Use-Of <i>Exam</i></td>
+</tr>
+
+<tr><td valign=top>&nbsp;</td>
+
+<td valign=top>
+<div class="MsoNormal">Relation Type</div>
+</td>
+
+<td valign=top>
+<div class="MsoNormal"><i>resource</i> Has-RelationType
+<i>slot1</i> [<i>slot2</i>]</div>
+
+<div class="MsoNormal"><i>slot2</i> Related-To
+<i>resource</i> by <i>slot1</i></div>
+</td>
+
+<td valign=top><i>LessonPlan</i> Has-Relation <i>IsOverviewOf</i> 
+<i>multiplication
+tables</i>
+<br><i>multiplication tables</i> Related-To <i>LessonPlan</i> by <i>IsOverviewOf</i></td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+
+<td>
+<div class="MsoNormal">Subject&nbsp;</div>
+
+<div class="MsoNormal">&nbsp;</div>
+</td>
+
+<td>
+<div class="MsoNormal"><i>resource</i> Is-About
+<i>slot</i></div>
+
+<div class="MsoNormal"><i>slot</i> Subject-Of
+<i>resource</i></div>
+</td>
+
+<td valign=top><i>LessonPlan</i> Is-About <i>multiplication</i>
+<br><i>multiplication</i> Subject-Of <i>LessonPlan</i></td>
+</tr>
+</table>
+
+<p></p>
+<p>A slot represents an attribute of a class in an ontology. For example, a lesson plan class might have title, author, subject, audience, grade level, format, and language as slots. A slot has value and value type. Teacher is one of the values for slot Audience, Mathematics-Geometry is a value for slot Subject, and so forth. These values are typically <i>string</i> type. Theoretically, the value for slots may be a class (such as Audience that may be modelled as a class), a Boolean operator, a number, or a symbol. Apart from the taxonomic relationships between classes, a full-fledged ontology attaches properties or slots&nbsp; to classes, where a subclass
+inherits the slots from all of its (direct or indirect) super-classes. In
+a class hierarchy, inheritance proceeds simultaneously along multiple paths.
+Using a math lesson plan for high school students as an example, the diagram
+below demonstrates the semantic model of the ontology:</p>
+
+<div align="center"><img src="p94fig2.gif" height=345 width=553></div>
+<div align="center">Figure 2. A semantic model for lesson plans</div>
+
+<p>In this example, the lesson plan, Measuring the Earth, inherits all
+the slots from its super-classes. That is, as a resource, it bears properties
+of the Resource class, and as a lesson plan, it contains a special set
+of slots pertaining to lesson plans only. The <i>Subject</i> slot is linked
+to an external knowledge structure because of the complexity and amount
+of vocabulary involved.</p>
+
+<p>Most of the descriptions involve simple first-order relationships. Each descriptive element is relatively independent, so the individual subclasses have no necessary relationships expressed in the ontology. Most of the relationships are simple statements about a particular descriptive element, such as <i>Language</i> and <i>Pedagogy</i>. The most complicated is <i>Relation Type</i>. In the GEM controlled vocabulary, the following relation types are available:</p>
+
+<table align="center" cols=2 width="60%" >
+<tr>
+<td>
+<ul>
+<li>hasBibliographicInforIn</li>
+<li>isAgencyReview</li>
+<li>isChildOf</li>
+<li>isContentRatingFor</li>
+<li>isCriticalReviewOf</li>
+<li>isDataFor</li>
+<li>isDerivedFrom</li>
+<li>isOveriewOf</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>isParentOf</li>
+<li>isPeerReviewisQualityScore</li>
+<li>isRevisionHistoryFor</li>
+<li>isSiblingOf</li>
+<li>isSiteCriteria</li>
+<li>isSourceOf</li>
+<li>isSponsoredBy</li>
+<li>isStandardsMappingOf</li>
+</ul>
+</td>
+</tr>
+</table>
+
+<p>These terms present a mix of first- and second-order relationships. Expressing this requires three elements: the subclass for the resource itself, a slot for the relation type, and a second, optional, slot for the entity constituting the second half of the relationship. The slots must also have their <i>cardinality</i> defined. Cardinality governs the number of possible values a slot can have, and the cardinality is defined as the minimum and maximum number of values. The first slot has a minimum and maximum cardinality of one, i.e., it cannot be empty, and it can only hold one value. The second slot has a minimum cardinality of zero and a maximum cardinality of one. It can be empty in the case of first-order relationships, and can take a single value if necessary to express a second-order relationship. For example:</p>
+
+<table align="center" border cellspacing=0 width="70%" >
+<caption align="bottom"><b>Table 3. Examples of first order and second order relationships</b></caption>
+<tr>
+<td align="center"><b>Example</b></td>
+<td align="center" valign=top><b>Relationship</b></td>
+</tr>
+
+<tr>
+<td>Developing Geometry Concepts Using Computer Programming Environments
+<i><font color="#990000">Is-an-instance-of</font></i>Activity
+<p>Activity <i><font color="#990000">Is-a-subclass-of </font></i>Resource
+<p>Activity <i><font color="#990000">Has-RelationType </font></i><font color="#000000">IsSponsoredBy</font><font color="#006600">National
+Council of Teachers of Mathematics</font>
+<p>Project <i><font color="#990000">Has-RelationType</font></i><font color="#000000">
+IsSiteCriteria</font>
+<p>Course <i><font color="#990000">Has-RelationType </font></i><font color="#000000">IsDerivedFrom</font><font color="#006600">Exemplary
+and Promising Mathematics Programs</font></td>
+<td valign=top>First-order
+<p>First-order
+<p>Second-order
+<p>First-order
+<p>Second-order</td>
+</tr>
+</table>
+
+
+<p>This structure accomplishes a number of goals. It leaves the essential flexibility of the GEM vocabulary intact. The resource serves as the parent class, and subclasses can be repeated to enrich a description. Ontolingua allows an ontology to be exported in LISP code, and this adds an important dimension by formalizing relationships in ways that will make the records more easily manipulable by retrieval agents. The relatively simple structure of the ontology reflects the underlying simplicity of the controlled vocabulary.</p>
+
+
+<h2>Conclusions and Future Research</h2>
+
+<p>The theoretical and methodological framework described in this paper serves as the rationale and guideline for converting the GEM controlled vocabulary into an ontology.&nbsp; Compared to the original semantic model of GEM controlled vocabulary, the major difference between the two models lies in the values added through deeper semantics in describing digital objects, both conceptually and relationally. Unlike most of ontological effort that made no reference to controlled vocabularies created by the librarians and information scientists, this study recognized the importance
+of connecting existing knowledge structures as well as the difficulty in implementing such structures in ontologies. Since the purpose of this ontology is to describe digital objects in the GEM repository, their characteristics become central to the ontology. From an information architecture point of view, the ontology promotes standardization and reusability of information representation through identifying characteristics common to all digital objects for the top class and subsets of characteristics common only to one particular subclass of objects.</p>
+
+<p>As a continuing effort, GEM ontology components will continue to be built under the current framework. The future research will look into problems such as cross-class relationships (which class is to be used as a slot of which class under what condition), develop templates for representing differing digital object classes, and eventually, implement the ontology into the GEM system for the purposes of enriched representation of digital objects and intelligent information retrieval.</p>
+
+
+<h2>References</h2>
+
+<ul>
+<li><a name="Bièbow99"></a>Bi&egrave;bow, B. and Szulman, S. (1999) &quot;TERMINAE: a linguistic-based tool for the building of domain ontology&quot;, in: <i>Knowledge Acquisition, Modeling, and Management: 11th European Workshop, EKAW '99 Proceedings</i>, edited by D. Fensel and R. Studer. Berlin: Springer.&nbsp; pp. 49-66.</li>
+
+<li><a name="Brachman99"></a>Brachman, R.J., McGuinness, D.L., Patel-Schneider,
+P.F., and Borgida, A. (1999) &quot;'Reducing' CLASSIC to practice: knowledge
+representation theory meets reality&quot;. <i>Artificial Intelligence,</i> <b>114</b>, 203-237.</li>
+
+<li><a name="Domingue99"></a>Domingue, J. and Motta, E. (1999) "A knowledge-based news server supporting ontology-driven story enrichment and knowledge retrieval," in: <i>Knowledge Acquisition, Modeling and Management: 11th European Workshop, EKAW '99 Proceedings</i>, edited by D. Fensel and R. Studer. Berlin: Springer, pp. 103-120.</li>
+
+<li><a name="Embley98"></a>Embley, D.W., Campbell, D.M., Smith, R.D., and
+Liddle, S.W. (1998) &quot;Ontology-based extraction and structuring of information
+from data-rich unstructured documents,&quot; in: <i>Proceedings of CIKM '98
+- 7th International Conference on Information and Knowledge Management</i>,
+edited by G. Gardarin, J. French, N. Pissinou, K. Makki, and L. Bouganim,
+L. New York: ACM Press, pp. 52-59.</li>
+
+<li><a name="Gruber93a"></a>Gruber, T. (1993a) &quot;A translation approach to
+portable ontology specifications.&quot; <i>Knowledge acquisition</i>, <b>5</b>(2),
+199-220. Also available online at <a href="http://ksl-web.stanford.edu/knowledge-sharing/papers/README.html#ontolingua-intro">http://ksl-web.stanford.edu/knowledge-sharing/papers/README.html#ontolingua-intro</a>.</li>
+
+<li><a name="Gruber93b"></a>Gruber, T.R. (1993b)&nbsp; &quot;Toward principles for the design of ontologies used for knowledge sharing.&quot; <a href="http://ksl-web.stanford.edu/KSL_Abstracts/KSL-93-04.html">http://ksl-web.stanford.edu/KSL_Abstracts/KSL-93-04.html</a></li>
+
+<li><a name="Goasdoué99"></a>Goasdou&eacute;, F. and Reynaud, C. (1999)
+&quot;Modeling information sources for information integration,&quot; in: <i>Knowledge Acquisition, Modeling and Management: 11th European Workshop, EKAW '99
+Proceedings</i>, edited by D. Fensel and R. Studer. Berlin: Springer, pp.
+121-138.</li>
+
+<li><a name="Guarino1997"></a>Guarino, N. (1997) &quot;Understanding,
+building, and using ontologies.&quot; <i>International Journal of Human-Computer
+Studies</i>, <b>46</b>: 293-310.</li>
+
+<li><a name="Guarino1998"></a>Guarino, N. (1998) &quot;Formal ontology and information systems,&quot; in: <i>Formal Ontology in Information Systems</i>, edited by N. Gurino. Amsterdam, IOS Press. pp. 3-15.</li>
+
+<li><a name="Guarino99"></a>Guarino, N., Masolo, C., and Vetere, G. (1999) &quot;OntoSeek: content-based access to the Web.&quot; <i>IEEE Intelligent Systems</i>, <b>14</b>(3), 70-80.</li>
+
+<li><a name="Kwasnik99"></a>Kwasnik, B. (1999) &quot;The Role of Classification in Knowledge Representation and Discovery.&quot; <i>Library Trends</i>, <b>48</b>(1), 22-47.</li>
+
+<li><a name="Luke97"></a>Luke, S., Spector, L., Rager, D., and Hendler, J. (1997) &quot;Ontology-based Web agents,&quot; in: <i>Proceedings of the First International Conference on Autonomous Agents</i>, edited by W.L. Johnson, and B. Hayes-Roth. New York: ACM Press, pp. 59-66.</li>
+
+<li><a name="Morgan1999"></a>Morgan, N. (1999) <i>GEMCat Training Manual: Index.</i> <a href="http://geminfo.org/Workbench/training/index.htm">http://geminfo.org/Workbench/training/index.htm</a></li>
+
+<li><a name="Priss1998"></a>Priss, U. E. (1998) &quot;The formalization of WordNet
+by methods of relational concept analysis,&quot; in: <i>WordNet: An Electronic
+Lexical Database</i>, edited by C. Fellbaum. Cambridge, MA: The MIT
+Press. pp. 179-196.</li>
+
+<li><a name="Soergel99"></a>Soergel, D. (1999) &quot;The rise of ontologies or
+the reinvention of classification.&quot; <i>Journal of the American Society
+for Information Science</i>, <b>50,</b> 1119-1120.</li>
+
+<li><a name="Sutton1999"></a>Sutton, S. (1999) &quot;Conceptual
+design and deployment of a metadata framework for educational resources
+on the Internet.&quot; <i>Journal of the American Society for Information Science</i>, <b>50</b>,1182-1192.</li>
+
+<li><a name="Uschold1996"></a>Uschold, M. &amp; Gruninger, M. (1996) &quot;Ontologies: principles, methods and applications.&quot; <i>The Knowledge Engineering Review</i>, <b>11</b>(2), 93-136.</li>
+
+<li><a name="Weistein98"></a>Weinstein, P. (1998) &quot;Ontology-based
+metadata: transforms the MARC legacy,&quot; in: <i>Digital Libraries 98, Third
+ACM Conference on Digital Libraries</i>, edited by I. Witten, R. Akscyn,
+and F.M. Shipman. New York: ACM Press, 254-63.</li>
+
+<li><a name="Zhu99"></a>Zhu, X., Gauch, S., Gerhard, L., Kral, N., and Pretschner, A. (1999) &quot;Ontology-based Web site mapping for information exploration,&quot; in: Proceedings of the Eighth International Conference on Information Knowledge Management, edited by S. Gauch. New York: ACM Press, pp. 188-194.</li>
+</ul>
+
+<hr color="#ff00ff" size="3">
+
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+
+<p style="text-align : left; color : black;">Qin, Jian &amp; Paling, Stephen (2001)  &quot;Converting a controlled vocabulary into an ontology: the case of GEM&quot; &nbsp;<em>Information Research</em>, <strong>6</strong>(2)  Available at: http://InformationR.net/ir/6-2/paper94.html</p>
+
+<p style="text-align : center">&copy; the authors, 2001.  Updated: 3rd January 2001</div>
+
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:kdbjmB9YHtsJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+			
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres62.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper94" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>		
+	            <hr color=#ff00ff size=3>
+			
+          </td></tr></tbody></table>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/6-2/paper94.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:21:36 GMT -->
+</html>

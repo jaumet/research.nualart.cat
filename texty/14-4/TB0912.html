@@ -1,0 +1,3015 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<!-- Mirrored from informationr.net/ir/14-4/TB0912.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:33:55 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>Watch this: Probe the Semantic Web with SPARQL</title>
+
+
+<link href="../TBstyle.css" type="text/css" rel="stylesheet" />
+
+<meta name="keywords" content="SPARQL query language semantic web" />
+<meta name="description" content="Describes the development of SPARQL and the semantic web" />
+<meta name="rating" content="mature" />
+<meta name="VW96.objecttype" content="Document" />
+<meta name="ROBOTS" content="ALL" />
+
+<meta name="DC.Title" content="Watch this: Probe the Semantic Web with SPARQL" />
+<meta name="DC.Creator" content="Brooks, Terrence A." />
+<meta name="DC.Subject" content="SPARQL query semantic web" />
+<meta name="DC.Type" content="article" />
+<meta name="DC.Identifier" scheme="ISSN" content="1368-1613" />
+<meta name="DC.Identifier" content="TB0912.html" />
+<meta name="DC.Relation.IsPartOf" content="infres144.html" />
+<meta name="DC.Format" content="text/html" />
+<meta name="DC.Language" content="en" />
+<meta name="DC.Publisher" content="Professor T.D. Wilson" />
+<meta name="DC.Date.Available" content="2009-12-15" />
+<meta name="DC.Rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="DC.Coverage.PlaceName" content="Global" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+
+	
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: #5E96FD;;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+
+
+.style1 {color: #000000}
+</style>
+</head>
+<body>
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 14  no. 4, December, 2009</span><br /><br />
+      <div class="button">
+      <ul>
+
+        <li><a href="infres144.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+
+        <li><a href="../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+
+<hr style="color: rgb(94, 150, 253);" size="3" />
+
+<div align="center">
+<h1>Watch this:  Probe the Semantic Web with SPARQL</h1>
+
+</div>
+
+<h4><a href="mailto:tabrooks@u.washington.edu">Terrence A. Brooks</a> <br /><br /> 
+ Information School, University of Washington, Seattle, WA 98195, USA</h4>
+
+ <hr style="color: rgb(94, 150, 253);" size="1" />
+ 
+
+<div align="left">
+
+<!-- Top of my content -->
+
+<h2>The Semantic Web and linked open data</h2>
+
+<p>Berners-Lee's <a href="#vision">vision</a> of the semantic Web describes  Web content laden with semantic metadata.  Web agents are envisioned interrogating the metadata and making decisions that, for example, might include linking the content from multiple records together to produce serendipitous benefits.  The fulfillment of such a vision assumes, at a minimum, a commonly employed data architecture and a large amount of marked-up data in public Web space.</p>
+
+<p>The impulse to <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FOpen_Data&amp;date=2009-11-02">share</a> scientific data has been long standing.  
+Since 2007 the sharing of data on the Web has been promoted by the Semantic Web Education and Outreach Interest Group, which organizes its activities at the <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fesw.w3.org%2Ftopic%2FSweoIG%2FTaskForces%2FCommunityProjects%2FLinkingOpenData&amp;date=2009-11-02">Linking Open Data</a> wiki.
+
+Rubrics such as <em>linking open data</em>, <em>linked open data</em>, <em>LOD</em> and the <em>Web of data</em> all describe structured data in open Web space that feature links from one data set to another.   Metaphorically, one could find oneself in a local neighbourhood in one dataset and then ride a link to another dataset and, in this fashion, meander through the semantic Web.
+
+A listing of currently available  <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fesw.w3.org%2Ftopic%2FTaskForces%2FCommunityProjects%2FLinkingOpenData%2FDataSets&amp;date=2009-11-02">datasets</a>  indicates there are more than seven billion records available (as of September 2009) for harvesting, linking and manipulation.
+
+Berners-Lee has declared the linked open data movement as the '<a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.w3.org%2F2008%2FTalks%2F0617-lod-tbl%2F%23%25283%2529&amp;date=2009-11-02"><em>semantic Web done right</em></a>', which suggests, at least rhetorically, that the semantic Web manifests itself as the linked open data.</p>
+
+<p><a href="http://www.webcitation.org/query?url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSPARQL&amp;date=2009-11-02">SPARQL</a> (pronounced <em>sparkle</em>) is the query language designed for interrogating the semantic Web.</p>
+
+
+<p>Datasets typically provide a dedicated SPARQL endpoint for the handling of HTTP requests and, as well, an interactive Web page that permits one to test-fire SPARQL queries against the dataset.  The following small selection of SPARQL <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fesw.w3.org%2Ftopic%2FSparqlEndpoints&amp;date=2009-11-02">endpoints</a> indicates the wide variety of material available:</p>
+
+<ul>
+<li>Forty two SPARQL endpoints to <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.freebase.com%2Fview%2Fuser%2Fbio2rdf%2Fpublic%2Fsparql&amp;date=2009-11-02">datasets</a> such as  GO: Gene Ontology, OMIM: Online Mendelian Inheritance in Man, PubMed, the National Center for Biotechnology Information bibliographic database, etc.</li>
+<li><a href="http://www.informatik.uni-trier.de/~ley/db/">The DBLP (Digital Bibliography &amp; Library Project) computer science bibliography</a></li>
+<li><a href="http://dbpedia.org/About">DBpedia</a>,  structured information available from Wikipedia</li>
+<li><a href="http://dbtune.org/jamendo/">Jamendo</a>, a music database</li>
+<li><a href="http://www.linkedmdb.org/">Linked Movie Data Base</a> provides information about films, actors, etc.</li>
+<li><a href="http://www.gutenberg.org/wiki/Main_Page">Project Gutenberg Metadata</a> provides information about the Project Gutenberg book library</li>
+</ul>
+
+
+<h2>The triple structure of linked open data</h2>
+
+<p>Linked open data are structured as <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.w3.org%2FTR%2FREC-rdf-syntax%2F&amp;date=2009-11-02">RDF</a> (Resource Description Framework) records.  An insightful entr&eacute;e to RDF is given by <a href="#AH">Allemang and Hendler</a> who point to the similarities between a RDF structure and relational database structure.  This sketch illustrates the structural similaries between a relational database structure and a RDF structure.</p>
+
+<div align="center">
+<img src="TB0912fig1.gif" style="border: solid medium black; padding: 5px" alt="Relational and RDF compared" />
+</div>
+
+<p>RDF is constructed as a tree structure or graph.  Travelling along the branching structure of this graph, one comes upon a <span style="font-style: italic">subject</span> (the product with an id of "1"), then some branch <span style="font-style: italic">predicates</span> (both "model" and "quantity" are predicates), and finally <span style="font-style: italic">objects</span> ("ZX-6" and "62" are objects) embedded within the predicates.</p>
+
+<p>Unsurprisingly, the basic pattern of a  SPARQL query is a triple composed of a subject, predicate and object.   Suppose we arm ourselves with the variable <span style="font-style: italic">?stuff</span> that can assume values.  Then the fragment of RDF  graph above can answer the following queries structured in the triple pattern of Subject, Predicate, Object:</p>
+
+<ul>
+<li><span style="color:red; margin-right: 20px"> productID'1', model, ?stuff </span> the variable ?stuff would take the value "ZX-6"</li>
+<li><span style="color:red; margin-right: 20px"> ?stuff, model, "ZX-6"</span> the variable ?stuff would take the value "productID'1'"</li>
+</ul>
+
+<h2>Probing linked open data</h2>
+
+<p>One thing that is immediately obvious from the triple pattern of SPARQL queries  is that harvesting information from the semantic Web is more complex than firing query terms at a database.  SPARQL queries are addresses to specific locations in the RDF graph structure, and furthermore,  the elements of a SPARQL query are themselves addresses - URIs such as 'http://dbpedia.org/ontology/Place'.  The only exception occurs at the end of a branch where string literals such as <em>Montreal, Quebec</em> reside.</p>
+
+<p>To be successful firing queries at an RDF store requires one to  know the URI addresses beforehand.  The value of knowing the URI addresses beforehand is magnified by the challenge of setting links into other, unknown datasets or using a source built by the Web community such as DBpedia (the structured data from Wikipedia). </p>
+
+<p>One might encounter all sort of inconsistencies and <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fprojects.ischool.washington.edu%2Ftabrooks%2Fdbpedia%2FharvestingStateFlowers.htm&amp;date=2009-11-02">surprises</a>.  </p>
+
+<p>Probing a linked dataset from the top down, or root to branch, as it were, is helpful to discover the graph structure and pave the way for subsequent queries.</p>
+
+<p>  Allemang's <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fdallemang.typepad.com%2Fmy_Weblog%2F2008%2F08%2Frdf-as-self-describing-data.html&amp;date=2009-11-02">blog</a> suggests the following strategy for probing linked datasets.  The first query produces the top-level classes (i.e., <span style="font-style: italic">subjects</span>) used in a dataset.</p>
+
+<pre>SELECT DISTINCT ?Objects WHERE { []  a  ?Objects}  </pre>
+
+<p>The triple pattern <span style = "color:red">[]  a  ?Objects</span> can be read as 'For all subjects ([] indicates an empty node), where the predicate is a type or class in the dataset (the keyword 'a' is a shortcut for the predicate rdf:type ), give me all the objects'.  The objects produced would be the URIs of the highest level types or classes employed in structuring the dataset.  In effect, these would be the one or more roots of the graph structure to follow for further discovery in the dataset.</p>
+
+<blockquote style="padding: 10px">
+<p>As an example of the application of this high-level probe, the following query was submitted to the <a href="http://dbpedia.org/sparql">DBpedia SPARQL Web portal</a> . (A limit of three results was used for brevity of the example.)</p>
+
+<pre>
+select distinct ?Concept where {[] a ?Concept} limit 3
+</pre>
+
+<p>The result is a table containing three URIs.</p>
+<br />
+<table class="sparql" border="1" cellpadding="10px" style="width: 300px">
+  <tr>
+    <th>Concept</th>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/ontology/Place</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/ontology/Area</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/City</td>
+
+  </tr>
+</table>
+<br/>
+<br/>
+<p>We learn from this probe that DBpedia contains information about places, areas and cities. </p>
+</blockquote>
+
+<p>The next step would be to use these URIs as subjects and probe their predicates and objects.  This can be accomplished by the following query</p>
+
+
+
+<pre>SELECT DISTINCT ?allPredicates ?allObjects WHERE {  <span style="color: red">&lt;http://dbpedia.org/ontology/Place></span> ?allPredicates ?allObjects }</pre>
+
+<p>This query would return all the predicates and objects that have been branched under the subject "place."</p>
+
+<div style="margin-left: 50px; border: solid 1px black; padding: 10px; width: 700px">
+I used a <a href="TBgmScript.htm">Greasemonkey script</a> to perform the following queries.  This means that my queries were aimed at the HTTP SPARQL address and not the Web portal for a given linked data resource.  The 'rawQuery' in the following examples is the query variable used in the script.</div>
+
+<br/>
+<h2>Probing DBpedia</h2>
+<p><a href="http://dbpedia.org/About">DBpedia</a> collects the structure information from Wikipedia.  <a href="http://dbpedia.org/sparql">SPARQL endpoint</a>. The following SPARQL query asks for ten things that DBpedia has information about.</p>
+
+<pre>
+rawQuery = "select distinct ?concept where { [] a ?concept} limit 10";
+</pre>
+<script type="text/javascript">
+   function showDBpedia1()
+   {
+     var i = document.getElementById("dbpedia1");
+     i.style.display = "block";
+   }
+   function closeDBpedia1()
+   {
+     var i = document.getElementById("dbpedia1");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showDBpedia1()" />
+
+<div id="dbpedia1" style="display: none; width: 400px; padding: 10px; border: solid medium black">
+<br/>
+<table class="sparql" border="1">
+  <tr>
+    <th>concept</th>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/Place</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/Area</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/ontology/City</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/River</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/Road</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/Lake</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/LunarCrater</td>
+  </tr>
+  <tr>
+
+    <td><span style="color:red">http://dbpedia.org/ontology/ShoppingMall</span></td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/Park</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/SiteOfSpecialScientificInterest</td>
+
+  </tr>
+</table>
+<br />
+<input type="button" value="Close" onclick="closeDBpedia1()" />
+</div>
+
+
+<p>We learn from this display that DBpedia has information about shopping malls.  We can reveal the individual shopping malls by the following query.  This query has a triple structure that can be read as "give me everything that has been classified as the type "http://dbpedia.org/ontology/ShoppingMall".</p>
+
+<pre>
+rawQuery = "select ?stuff where { ?stuff a &lt;http://dbpedia.org/ontology/ShoppingMall>}";
+</pre>
+
+
+<script type="text/javascript">
+   function showDBpedia2()
+   {
+     var i = document.getElementById("dbpedia2");
+     i.style.display = "block";
+   }
+   function closeDBpedia2()
+   {
+     var i = document.getElementById("dbpedia2");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showDBpedia2()" />
+<br/><br/>
+<div id="dbpedia2" style="display: none; width: 600px; padding: 10px; border: solid medium black">
+<table class="sparql" border="1">
+  <tr>
+    <th>stuff</th>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Westfield_West_Covina</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/The_Forum_Shops_at_Caesars</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Dubai_Mall</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/West_Edmonton_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Westfield_MainPlace</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Westfield_Fox_Hills</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Westfield_Santa_Anita</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Berjaya_Times_Square</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Agana_Shopping_Center</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Alamance_Crossing</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Alexandria_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Miracle_Mile_Shops</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Amarin_Plaza</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Ambi_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Americana_at_Brand</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Westfield_Solano</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Antara_Polanco</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Antioch_Center</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Arborland_Center</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Armadale_Shopping_City</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Westfield_Eastridge</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Westfield_Southcenter</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Westfield_Citrus_Park</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Westfield_Fox_Valley</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Ashley_Plaza_Mall</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Ashton_Arcades</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Augusta_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Australia_Fair_Shopping_Centre</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bal_Harbour_Shops</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Kamppi_Center</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/King_of_Prussia_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Forum_%28shopping_centre%29</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Iso_Omena</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Myyrmanni</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Batu_Pahat_Mall</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Bay_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bay_Park_Square</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bay_Street_Emeryville</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bayshore_Shopping_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bayview_Village_Shopping_Centre</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Meadowhall_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Birchwood_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bluewater</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bole_Dembel_Shopping_Center</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bonnie_Doon_Shopping_Centre</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Boynton_Beach_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bull_Ring%2C_Birmingham</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Brea_Mall</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bridgeport_Village_%28Oregon%29</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Brighton_Mall</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Brunswick_shopping_centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Buchanan_Galleries</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Bucure%C5%9Fti_Mall</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Burlington_Mall_%28Massachusetts%29</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Roosevelt_Field_Mall</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/SM_Megamall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/South_Coast_Plaza</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Suria_KLCC</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Cambridge_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Capalaba_Central_Shopping_Centre</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Toronto_Eaton_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Delta_City</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Cary_Towne_Center</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Causeway_Point</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Centerpointe_Mall</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Central_City_Shopping_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Central_Plaza_Pinklao</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Centre_Commercial_Bab_Ezzouar</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Centre_Mall_%28Hamilton%29</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Centro_Sunshine_Marketplace</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Hanes_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Cinderella_City</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/CityPlace</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/City_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Cityplaza</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Cobb_Center</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/College_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Columbia_Center_Mall</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Columbia_Mall_%28Grand_Forks%29</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Columbia_Place_Mall</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Concord_Mall_%28Delaware%29</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Cordova_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Cotroceni_Park</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Les_Promenades_de_l%27Outaouais</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/MBK_Center</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Craigmore_Village_Shopping_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Midway_Mall_%28Brazil%29</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Cwmbran_Shopping_Centre</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Dadeland_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Danbury_Fair_Mall</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Deerbrook_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Ontario_Mills</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Promenades_Saint-Bruno</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Deptford_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Dixie_Square_Mall</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Dover_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Downtown_at_the_Gardens</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Dream_Mall</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Dutchess_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Stonebriar_Centre</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Eastern_Plaza</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Eastgate_Quarters</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Eastland_Mall_%28Charlotte%2C_North_Carolina%29</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Eastview_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Eden%2C_High_Wycombe</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Edmonton_City_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Trafford_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Elizabeth_Shopping_Centre</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Era_Square</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Erina_Fair</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Euclid_Square_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Farmers_Plaza</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Flinders_Plaza_Shopping_Centre%2C_Townsville</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Florence_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Foothills_Mall_%28Tennessee%29</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Forest_Lake_Village_Shopping_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Forrestal_Village</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Forte_Shopping_Centre</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Forum_303_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Four_Seasons_Town_Centre</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Frenchgate_Centre</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Frenchtown_Square_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Palisades_Center</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Sapporo_Factory</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Siam_Center</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Galleria_at_Crystal_Run</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Gateway_Mall_%28Araneta_Center%29</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Gateway_Mall_%28Springfield%2C_Oregon%29</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/The_Emporium_%28Bangkok%29</td>
+  </tr>
+  <tr>
+    <td><span style="color:red">http://dbpedia.org/resource/The_Esplanade_%28Bangkok%29</span></td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Glenbrook_Square</td>
+   </tr>
+   </table>
+<br/>
+<input type="button" value="Close" onclick="closeDBpedia2()" />
+</div>
+
+<p>We learn from this display that DBpedia has information about a vast number of shopping malls including, for example,  'The Esplanade' in Bangkok.  It is possible to keep branching down towards this particular shopping centre by using the following query, which uses the URI for 'The Esplanade' as the subject.  This query returns all the predicates and corresponding objects branched under this shopping centre.</p>
+
+<pre>
+rawQuery = "select ?p ?o where { &lt;http://dbpedia.org/resource/The_Esplanade_%28Bangkok%29> ?p ?o } ";
+</pre>
+
+
+<script type="text/javascript">
+   function showDBpedia3()
+   {
+     var i = document.getElementById("dbpedia3");
+     i.style.display = "block";
+   }
+   function closeDBpedia3()
+   {
+     var i = document.getElementById("dbpedia3");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showDBpedia3()" />
+<br/><br/>
+<div id="dbpedia3" style="display: none; padding: 10px; border: solid medium black">
+
+
+   <table class="sparql" border="1">
+  <tr>
+    <th >p</th>
+
+    <th >o</th>
+  </tr>
+  <tr>
+    <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</td>
+    <td >http://dbpedia.org/ontology/Place</td>
+  </tr>
+  <tr>
+
+    <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</td>
+    <td>http://dbpedia.org/ontology/ShoppingMall</td>
+  </tr>
+  <tr>
+    <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</td>
+    <td>http://dbpedia.org/ontology/Building</td>
+  </tr>
+
+  <tr>
+    <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</td>
+    <td>http://dbpedia.org/ontology/Resource</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikiPageUsesTemplate</td>
+    <td>http://dbpedia.org/resource/Template:infobox_shopping_mall</td>
+
+  </tr>
+  <tr>
+  
+    <td><span style="color: red">http://www.w3.org/2002/07/owl#sameAs</span></td>
+    <td><span style="color: red">http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000479074a</span></td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/location</td>
+
+    <td>http://dbpedia.org/resource/Din_Daeng</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/location</td>
+    <td>http://dbpedia.org/resource/Nonthaburi</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/ontology/location</td>
+    <td>http://dbpedia.org/resource/Bangkok</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/location</td>
+    <td>http://dbpedia.org/resource/Thailand</td>
+  </tr>
+
+  <tr>
+    <td>http://dbpedia.org/property/reference</td>
+    <td>http://www.majorcineplex.com/esplanade/</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/reference</td>
+    <td>http://www.siamfuture.com/OurProperties/rachada/default.asp</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/openingDate</td>
+    <td>December 2006 and
+December 2009</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/owner</td>
+
+    <td>Siam Future Development Plc.</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/coordinates</td>
+    <td>http://dbpedia.org/resource/The_Esplanade_%2528Bangkok%2529/coordinates/coord</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/property/floorArea</td>
+    <td>105,000 square meters</td>
+  </tr>
+  <tr>
+    <td>http://www.w3.org/2000/01/rdf-schema#label</td>
+    <td>The Esplanade (Bangkok)</td>
+  </tr>
+
+  <tr>
+    <td>http://www.w3.org/2000/01/rdf-schema#label</td>
+    <td>??????? (????)</td>
+  </tr>
+  <tr>
+    <td>http://www.w3.org/2000/01/rdf-schema#label</td>
+    <td>????????</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/coordinates</td>
+    <td>{{coord|13|46|0|N|100|34|11|E |region:TH-10_type:landmark |display=inline,title}}</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/ontology/floorArea</td>
+
+    <td>105000</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/numberOfStores</td>
+    <td>120</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/property/floors</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/location</td>
+    <td>Ratchadapisek Road, Din Daeng, Bangkok and&lt;Br&gt;Rattanathibet Road, Nonthaburi, Thailand</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/abstract</td>
+    <td>The Esplanade is a shopping and entertainment complex on Ratchadapisek Road in Din Daeng district, Bangkok and the second branch is Rattanathibet Road in Nonthaburi.</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/abstract</td>
+
+    <td>???????(The Esplanade)????????????????????????·?????? (Ratchadapisek Road)???????? ????????????????100,000 m2????????????12????????????3000?????????????????????????????????????????????????????????????????????????</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/abstract</td>
+    <td>????????(??:??????????????????????????;??????:Esplanade Cineplex)????????????????????99????????????????</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/property/hasPhotoCollection</td>
+    <td>http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Esplanade_%28Bangkok%29</td>
+  </tr>
+  <tr>
+    <td>http://www.w3.org/2004/02/skos/core#subject</td>
+    <td>http://dbpedia.org/resource/Category:Retailing_in_Bangkok</td>
+  </tr>
+
+  <tr>
+    <td>http://www.w3.org/2004/02/skos/core#subject</td>
+    <td>http://dbpedia.org/resource/Category:Shopping_malls_in_Thailand</td>
+  </tr>
+  <tr>
+    <td>http://www.w3.org/2004/02/skos/core#subject</td>
+    <td>http://dbpedia.org/resource/Category:Buildings_and_structures_in_Bangkok</td>
+
+  </tr>
+  <tr>
+    <td>http://www.w3.org/2004/02/skos/core#subject</td>
+    <td>http://dbpedia.org/resource/Category:Cinemas_in_Thailand</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/shoppingMallName</td>
+
+    <td>The Esplanade</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/manager</td>
+    <td>Siam Future Development Plc.</td>
+  </tr>
+  <tr>
+
+    <td>http://www.w3.org/2000/01/rdf-schema#comment</td>
+    <td>The Esplanade is a shopping and entertainment complex on Ratchadapisek Road in Din Daeng district, Bangkok and the second branch is Rattanathibet Road in Nonthaburi.</td>
+  </tr>
+  <tr>
+    <td>http://www.w3.org/2000/01/rdf-schema#comment</td>
+    <td>???????(The Esplanade)????????????????????????·?????? (Ratchadapisek Road)???????? ????????????????100,000 m2?????? ???????12??? ?????????3000????????? ????????????? ????????????????????????????????????????????????????</td>
+  </tr>
+
+  <tr>
+    <td>http://www.w3.org/2000/01/rdf-schema#comment</td>
+    <td>?? ???????(??:??????????????????????????;??????:Esplanade Cineplex)????????????????????99??????????????? ??</td>
+  </tr>
+  <tr>
+    <td>http://xmlns.com/foaf/0.1/page</td>
+    <td>http://en.wikipedia.org/wiki/The_Esplanade_%28Bangkok%29</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/Carrefour</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+
+    <td>http://dbpedia.org/resource/Bangkok_Metro</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/Din_Daeng</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/Nonthaburi</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/List_of_cinemas_in_Thailand</td>
+  </tr>
+
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/Central_Group</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/JUSCO</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/Tesco_Lotus</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+
+    <td>http://dbpedia.org/resource/Major_Cineplex</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/Thailand_Cultural_Centre</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/World_Film_Festival_of_Bangkok</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/Bangkok</td>
+  </tr>
+
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/Thailand</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/California_Fitness</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/B2S</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+
+    <td>http://dbpedia.org/resource/List_of_shopping_malls_in_Thailand</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/Tops_Supermarkets_%28Thailand%29</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td>http://dbpedia.org/resource/skateboarding</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>http://dbpedia.org/property/wikilink</td>
+    <td></td>
+  </tr>
+</table>
+   <br/>
+<input type="button" value="Close" onclick="closeDBpedia3()" />
+</div> 
+
+<p> We learn a number of things about this shopping centre, including the fact that it is linked to an entry in <a href="http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000479074a">Freebase</a>.  Note that a number of objects are string literals, while others give us new URIs to pursue. A string literal represents the end of a branch, there is no further branching to be done.  Note, as well, that some string literals are mysterious arrays of question marks and some feature escaped characters and some objects are missing.  The prudent semantic Web <span style="font-style: italic">promeneur</span> might conclude that probing DBpedia before blindly firing queries might be a good thing to do.</p>
+
+<p>This probe of  DBpedia about 'The Esplanade' has armed me with sufficient URI information  that I can now construct a query to force DBpedia to reveal its knowledge about the names of  the shopping centers in Thailand.</p>
+
+
+<pre>
+    rawQuery = "select ?shoppingCenter where {  
+         ?shoppingCenter  a &lt;http://dbpedia.org/ontology/<span style="color: red">ShoppingMall</span>> .   
+                  # Find me everything that has been typed as a shopping mall
+         ?shoppingCenter  &lt;http://dbpedia.org/ontology/<span style="color: red">location</span>> &lt;http://dbpedia.org/resource/<span style="color:red">Thailand</span>>  .} ";
+                  # Confine the shopping malls to the location of Thailand
+</pre>
+
+
+<script type="text/javascript">
+   function showDBpedia4()
+   {
+     var i = document.getElementById("dbpedia4");
+     i.style.display = "block";
+   }
+   function closeDBpedia4()
+   {
+     var i = document.getElementById("dbpedia4");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showDBpedia4()" />
+<br/><br/>
+<div id="dbpedia4" style="display: none; width: 500px; padding: 10px; border: solid medium black">
+
+   <table class="sparql" border="1">
+  <tr>
+    <th>shoppingCenter</th>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/MBK_Center</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Siam_Center</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/The_Emporium_%28Bangkok%29</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/The_Esplanade_%28Bangkok%29</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Pantip_Plaza</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Platinum_Fashion_Mall</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/River_City_Shopping_Complex</td>
+  </tr>
+  <tr>
+
+    <td>http://dbpedia.org/resource/Siam_Paragon</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/CentralWorld</td>
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/Interchange21</td>
+
+  </tr>
+  <tr>
+    <td>http://dbpedia.org/resource/L%26H_Sukhumvit</td>
+  </tr>
+</table>
+  <br/>
+<input type="button" value="Close" onclick="closeDBpedia4()" />
+</div> 
+
+<h2>Probing the Linked Movie Database</h2>
+<p>The ambition of the  <a href="http://www.linkedmdb.org/">LinkedMDB</a> is to be the first open semantic Web database for movies.  <a href="http://data.linkedmdb.org/sparql">LinkedMDB SPARQL endpoint</a> 
+
+<br/><br/>  The following probe finds ten major classes of the Linked Movie Database.</p>
+<pre>
+rawQuery = "select distinct ?concept where { [] a ?concept } limit 10";
+</pre>
+
+<script type="text/javascript">
+   function showLMD1()
+   {
+     var i = document.getElementById("LMD1");
+     i.style.display = "block";
+   }
+   function closeLMD1()
+   {
+     var i = document.getElementById("LMD1");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showLMD1()" />
+<br/><br/>
+<div id="LMD1" style="display: none; width: 750px; padding: 10px; border: solid medium black">
+<pre>
+&lt;?xml version="1.0"?>
+&lt;sparql
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.w3.org/2005/sparql-results#" >
+  &lt;head>
+    &lt;variable name="concept"/>
+  &lt;/head>
+  &lt;results>
+    &lt;result>
+      &lt;binding name="concept">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/dubbing_performance&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="concept">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film_collection&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="concept">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/special_film_performance_type&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="concept">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/production_company&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="concept">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film_story_contributor&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="concept">
+        &lt;uri>http://data.linkedmdb.org/resource/oddlinker/linkage_run&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="concept">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film_crew_gig&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="concept">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film_location&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="concept">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film_cut&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="concept">
+        &lt;uri><span style="color:red">http://data.linkedmdb.org/resource/movie/film_genre</span>&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+  &lt;/results>
+
+&lt;/sparql>
+</pre>
+  <br/>
+<input type="button" value="Close" onclick="closeLMD1()" />
+</div> 
+
+<p>We learn from this probe that <em>film genre</em> is a major branch in LMD.  The following probe will reveal the various film genres.</p>
+<pre>
+rawQuery = "select ?stuff where {  ?stuff a &lt;http://data.linkedmdb.org/resource/movie/film_genre> }";
+</pre>
+
+<script type="text/javascript">
+   function showLMD2()
+   {
+     var i = document.getElementById("LMD2");
+     i.style.display = "block";
+   }
+   function closeLMD2()
+   {
+     var i = document.getElementById("LMD2");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+
+<input type="button" value="Show results" onclick="showLMD2()" />
+<br/><br/>
+<div id="LMD2" style="display: none; width: 750px; padding: 10px; border: solid medium black">
+
+<pre>
+&lt;?xml version="1.0"?>
+&lt;sparql
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.w3.org/2005/sparql-results#" >
+  &lt;head>
+    &lt;variable name="stuff"/>
+  &lt;/head>
+  &lt;results>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/1&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/2&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/3&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/4&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/5&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/6&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/7&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/8&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/9&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/10&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/11&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/12&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/13&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/14&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/15&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/16&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/17&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/18&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/19&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/20&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/21&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/22&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/23&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/24&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/25&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/26&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/27&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/28&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/29&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/30&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/31&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/32&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/33&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/34&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/35&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/36&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/37&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/38&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/39&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/40&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/41&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/42&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/43&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/44&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/45&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/46&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/47&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/48&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/49&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/50&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/51&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/52&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/53&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/54&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/55&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/56&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/57&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/58&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/59&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/60&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/61&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/62&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/63&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/64&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/65&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/66&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/67&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/68&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="stuff">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/69&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding 
+
+
+</pre>
+
+ <br/>
+<input type="button" value="Close" onclick="closeLMD2()" />
+</div> 
+
+<p>This probe reveals that the Linked Movie Database has a vast number of genres and each is numbered.  An arbitrary choice is film genre '1'.  The following query will reveal the profile of this film genre.</p>
+
+<pre>
+rawQuery = " select ?p ?o where {  &lt;http://data.linkedmdb.org/resource/film_genre/1> ?p ?o }  ";
+</pre>
+
+<script type="text/javascript">
+   function showLMD3()
+   {
+     var i = document.getElementById("LMD3");
+     i.style.display = "block";
+   }
+   function closeLMD3()
+   {
+     var i = document.getElementById("LMD3");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showLMD3()" />
+<br/><br/>
+<div id="LMD3" style="display: none; width: 750px; padding: 10px; border: solid medium black">
+
+<pre>
+&lt;?xml version="1.0"?>
+&lt;sparql
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.w3.org/2005/sparql-results#" >
+  &lt;head>
+    &lt;variable name="p"/>
+    &lt;variable name="o"/>
+  &lt;/head>
+  &lt;results>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://xmlns.com/foaf/0.1/page&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://www.freebase.com/view/guid/9202a8c04000641f800000000000d4ed&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film_genre_film_genreid&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;literal datatype="http://www.w3.org/2001/XMLSchema#int">1&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film_genre_name&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;literal><span style="color:red">Conspiracy theory</span>&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://www.w3.org/2000/01/rdf-schema#label&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;literal>Conspiracy theory (Film Genre)&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film_genre&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+  &lt;/results>
+
+&lt;/sparql>
+
+
+</pre>
+
+<br/>
+<input type="button" value="Close" onclick="closeLMD3()" />
+</div> 
+ <p><em>Conspiracy theory</em> appears to be film genre '1'.</p>
+<p>My ambition  was to find information about at least one film, but it would appear that further branching down the genre branch will  not lead me to any.  Going back to my original query, I enlarged it to a limit of 50 main classes and stumbled upon the URI for films:</p>
+
+<pre>
+http://data.linkedmdb.org/resource/movie/film
+</pre>
+
+<p>As with genres, this produced a long list of numbered film branches.  Arbitrarily I chose the second branch and found myself in Batman territory.</p>
+
+<pre>
+rawQuery = " select ?p ?o where {  &lt;http://data.linkedmdb.org/resource/film/2> ?p ?o }  ";
+</pre>
+
+<script type="text/javascript">
+   function showLMD4()
+   {
+     var i = document.getElementById("LMD4");
+     i.style.display = "block";
+   }
+   function closeLMD4()
+   {
+     var i = document.getElementById("LMD4");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showLMD4()" />
+<br/><br/>
+<div id="LMD4" style="display: none; width: 750px; padding: 10px; border: solid medium black">
+
+
+<pre>
+&lt;?xml version="1.0"?>
+
+&lt;sparql
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.w3.org/2005/sparql-results#" >
+  &lt;head>
+    &lt;variable name="p"/>
+    &lt;variable name="o"/>
+  &lt;/head>
+  &lt;results>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/music_contributor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/music_contributor/1764&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/music_contributor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/music_contributor/2331&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://purl.org/dc/terms/date&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;literal>1989-06-23&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/initial_release_date&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;literal>1989-06-23&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://xmlns.com/foaf/0.1/page&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://www.rottentomatoes.com/alias?type=imdbid&amp;s=0096895&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/sequel&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/film/26399&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/language&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://www.lingvoj.org/lingvo/en&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film_collection&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/film_collection/7&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/director&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/director/7998&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/country&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/country/US&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/writer&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/writer/6418&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/writer&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/writer/7591&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/writer&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/writer/12013&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/runtime&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;literal>126&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film_cut&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/film_cut/734&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/producer&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/producer/7979&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/producer&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/producer/8730&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://xmlns.com/foaf/0.1/page&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://www.freebase.com/view/guid/9202a8c04000641f800000000000bea5&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://xmlns.com/foaf/0.1/page&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://www.imdb.com/title/tt0096895&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/actor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/actor/8856&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/actor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/actor/13864&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/actor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/actor/18866&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/actor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/actor/18872&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/actor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/actor/21277&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/actor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/actor/23430&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/actor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/actor/23455&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/actor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/actor/24773&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/actor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/actor/26094&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/actor&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/actor/28398&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://www.w3.org/2000/01/rdf-schema#label&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;literal>Batman&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://purl.org/dc/terms/title&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;literal><span style="color: red">Batman</span>&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/genre&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/film_genre/111&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/filmid&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;literal datatype="http://www.w3.org/2001/XMLSchema#int">2&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://xmlns.com/foaf/0.1/based_near&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://sws.geonames.org/6252001/&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="p">
+        &lt;uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type&lt;/uri>
+      &lt;/binding>
+      &lt;binding name="o">
+        &lt;uri>http://data.linkedmdb.org/resource/movie/film&lt;/uri>
+      &lt;/binding>
+    &lt;/result>
+  &lt;/results>
+
+&lt;/sparql>
+
+
+</pre>
+
+<br/>
+<input type="button" value="Close" onclick="closeLMD4()" />
+</div> 
+
+<p>These results help us with the URIs for film titles and movie actors.  It appears to be a characteristic of the Linked Movie Database to number genres, films, actors and so on.  An additional probe into one of the actors revealed the URI for an actor's name  to be </p>
+<pre>
+"http://data.linkedmdb.org/resource/movie/actor_name"
+</pre>
+
+<p>  I now have enough information to begin treating the Linked Movie Database like a database and create a query to find all the actors in this Batman movie:</p>
+
+<pre>
+
+rawQuery = " select ?name where {  
+                ?movie  &lt;http://purl.org/dc/terms/title>   'Batman'  .   
+                      # My target movie is Batman
+                ?movie  &lt;http://data.linkedmdb.org/resource/movie/actor>  ?actor  .  
+                      # My target individuals are typed as actors in the movie Batman 
+                ?actor &lt;http://data.linkedmdb.org/resource/movie/actor_name> ?name  . }    ";
+                      # I would like the actors' names
+</pre>
+
+
+
+<script type="text/javascript">
+   function showLMD5()
+   {
+     var i = document.getElementById("LMD5");
+     i.style.display = "block";
+   }
+   function closeLMD5()
+   {
+     var i = document.getElementById("LMD5");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showLMD5()" />
+<br/><br/>
+<div id="LMD5" style="display: none; width: 750px; padding: 10px; border: solid medium black">
+
+
+<pre>
+&lt;?xml version="1.0"?>
+&lt;sparql
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.w3.org/2005/sparql-results#" >
+  &lt;head>
+    &lt;variable name="name"/>
+  &lt;/head>
+  &lt;results>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>J. Carrol Naish&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Lee Wallace&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Adam West&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Billy Dee Williams&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Burgess Meredith&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Burt Ward&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Cesar Romero&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Douglas Croft&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Frank Gorshin&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Jack Nicholson&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Jack Palance&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Kim Basinger&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Lee Meriwether&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Lewis Wilson&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Michael Gough&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Michael Keaton&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Pat Hingle&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Robert Wuhl&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+    &lt;result>
+      &lt;binding name="name">
+        &lt;literal>Tracey Walter&lt;/literal>
+      &lt;/binding>
+    &lt;/result>
+  &lt;/results>
+
+&lt;/sparql>
+
+</pre>
+<br/>
+<input type="button" value="Close" onclick="closeLMD5()" />
+</div> 
+
+<h2>Probing MeSH: Medical Subject Headings</h2>
+<p>MeSH is the National Library of Medicine's controlled vocabulary thesaurus.  I imagine that the manipulation of MeSH headings will become a basic technique of the semantic Web since its network of broader and narrower terms provides a conceptual laddering that could guide moving around the local neighbourhoods of topical resources. 
+<a href="http://mesh.bio2rdf.org/sparql">MeSH SPARQL endpoint</a> 
+</p>
+<p>Fifty fundamental classes of MeSH are revealed by this query:</p>
+<pre>
+rawQuery = "select distinct ?concept where { [] a ?concept } limit 50";
+</pre>
+
+<script type="text/javascript">
+   function showMesh1()
+   {
+     var i = document.getElementById("Mesh1");
+     i.style.display = "block";
+   }
+   function closeMesh1()
+   {
+     var i = document.getElementById("Mesh1");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showMesh1()" />
+<br/><br/>
+<div id="Mesh1" style="display: none; width: 750px; padding: 10px; border: solid medium black">
+
+<pre>
+&lt;table class="sparql" border="1">
+  &lt;tr>
+    &lt;th>concept&lt;/th>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMap&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMapValue&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMapATable&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMapFText&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#array-of-string&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadStorage&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#InverseFunctionalProperty&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#Ontology&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#Class&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#Restriction&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#FunctionalProperty&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#DatatypeProperty&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#ObjectProperty&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/xbrl/IFRS_GP_LabelLink&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/xbrl/IFRS_GP_PresentationLink&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/xbrl/IFRS_GP_CalculationLink&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#DataRange&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/mesh:CompoundConcept&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/mesh:Qualifier&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td><span style="color:red">http://bio2rdf.org/ns/mesh#Concept</span>&lt;/td>
+  &lt;/tr>
+
+&lt;/table>
+</pre>
+<br/>
+<input type="button" value="Close" onclick="closeMesh1()" />
+</div> 
+
+<p>It is very likely that the information describing concepts is located down the branch &lt;http://bio2rdf.org/ns/mesh#Concept>.  The following query returns the concepts of MeSH.</p>
+
+<pre>
+rawQuery = "select ?stuff where {  ?stuff a &lt;http://bio2rdf.org/ns/mesh#Concept> }";
+</pre>
+
+<p>The results of this query indicated that MeSH has a vast number of concepts that are all structured in this fashion:</p>
+
+<pre>
+
+&lt;table class="sparql" border="1">
+  &lt;tr>
+    &lt;th>stuff&lt;/th>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/mesh:D000001&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+&lt;/table>
+</pre>
+
+<p>The following query delivered the structure of the concept mesh:D000001.</p>
+
+<pre>
+ rawQuery = " select ?p ?o where {  &lt;http://bio2rdf.org/mesh:D000001> ?p ?o }  ";
+</pre>
+
+
+<script type="text/javascript">
+   function showMesh2()
+   {
+     var i = document.getElementById("Mesh2");
+     i.style.display = "block";
+   }
+   function closeMesh2()
+   {
+     var i = document.getElementById("Mesh2");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showMesh2()" />
+<br/><br/>
+<div id="Mesh2" style="display: none; width: 750px; padding: 10px; border: solid medium black">
+
+
+<pre>
+  &lt;table class="sparql" border="1">
+  &lt;tr>
+    &lt;th>p&lt;/th>
+    &lt;th>o&lt;/th>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/1999/02/22-rdf-syntax-ns#type&lt;/td>
+    &lt;td>http://bio2rdf.org/ns/mesh#Concept&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#sameAs&lt;/td>
+    &lt;td>http://bio2rdf.org/mesh:Calcimycin&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2000/01/rdf-schema#label&lt;/td>
+    &lt;td>Calcimycin [mesh:D000001]&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://purl.org/dc/elements/1.1/title&lt;/td>
+    &lt;td>Calcimycin&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td><span style="color:red">http://www.w3.org/2004/02/skos/core#prefLabel</span>&lt;/td>
+    &lt;td>Calcimycin&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#dateCreated&lt;/td>
+    &lt;td>1974-11-19&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#dateEstablished&lt;/td>
+    &lt;td>1984-01-01&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#dateRevised&lt;/td>
+    &lt;td>2003-07-30&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#onlineNote&lt;/td>
+    &lt;td>use CALCIMYCIN to search A 23187 1975-90   &lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#publicMeSHNote&lt;/td>
+    &lt;td>91; was A 23187 1975-90 (see under ANTIBIOTICS 1975-83)   &lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#recordAuthorizer&lt;/td>
+    &lt;td>NLM&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#recordMaintainer&lt;/td>
+    &lt;td>SYSTEM&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#recordOriginator&lt;/td>
+    &lt;td>NLM&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://purl.org/dc/elements/1.1/identifier&lt;/td>
+    &lt;td>mesh:D000001&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/bio2rdf#html&lt;/td>
+    &lt;td>http://www.nlm.nih.gov/cgi/mesh/2009/MB_cgi?mode=&amp;term=Calcimycin&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#activeMeSHYear&lt;/td>
+    &lt;td>2004&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#activeMeSHYear&lt;/td>
+    &lt;td>2005&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#activeMeSHYear&lt;/td>
+    &lt;td>2006&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2004/02/skos/core#altLabel&lt;/td>
+    &lt;td>A23187&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2004/02/skos/core#altLabel&lt;/td>
+    &lt;td>Antibiotic A23187&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2004/02/skos/core#hiddenLabel&lt;/td>
+    &lt;td>A 23187&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2004/02/skos/core#hiddenLabel&lt;/td>
+    &lt;td>A23187, Antibiotic&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2004/02/skos/core#historyNote&lt;/td>
+    &lt;td>Antibiotics (1973-1974)&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2004/02/skos/core#historyNote&lt;/td>
+    &lt;td>Carboxylic Acids (1973-1974)&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/mesh#historyNote&lt;/td>
+    &lt;td>91(75); was A 23187 1975-90 (see under ANTIBIOTICS 1975-83)&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td><span style="color:red">http://www.w3.org/2004/02/skos/core#scopeNote</span>&lt;/td>
+    &lt;td>An ionophorous, polyether antibiotic from Streptomyces chartreusensis. It binds and transports cations across membranes and uncouples oxidative phosphorylation while inhibiting ATPase of rat liver mitochondria. The substance is used mostly as a biochemical tool to study the role of divalent cations in various biological systems.&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td><span style="color:red">http://www.w3.org/2004/02/skos/core#broader</span>&lt;/td>
+    &lt;td>http://bio2rdf.org/mesh:D001583&lt;/td>
+  &lt;/tr>
+
+&lt;/table>
+</pre>
+<br/>
+<input type="button" value="Close" onclick="closeMesh2()" />
+</div> 
+
+<p>An examination of the structure of this concept gives me enough information to formulate my own query into MeSH that reveals the title of mesh:D000001, its scope note and the title of a broader term.  Note that producing the title of the broader term, I am metaphorically travelling to more than one branch in the MeSH RDF dataset.</p>
+
+<pre>
+
+rawQuery = " select ?title ?scopeNote ?broaderTitle where {  
+    ?meshConcept  &lt;http://purl.org/dc/elements/1.1/identifier>   'mesh:D000001'  .  
+         # Locate the concept mesh:D000001  
+    ?meshConcept  &lt;http://purl.org/dc/elements/1.1/title>  ?title  .  
+         # Give me the title of this concept  
+    ?meshConcept  &lt;http://www.w3.org/2004/02/skos/core#scopeNote>  ?scopeNote  .  
+         # Give me the scope note of this concept
+    ?meshConcept  &lt;http://www.w3.org/2004/02/skos/core#broader>  ?broaderConcept  .  
+         # Target a broader concept
+    ?broaderConcept   &lt;http://purl.org/dc/elements/1.1/title>  ?broaderTitle  .}    ";
+         # Travel down the branch of the broader concept to target its title
+</pre>
+
+<table class="sparql" border="1"  cellpadding = "10px" style="width: 500px">
+  <tr>
+    <th>title</th>
+    <th>scopeNote</th>
+    <th>broaderTitle</th>
+  </tr>
+  <tr>
+
+    <td>Calcimycin</td>
+    <td>An ionophorous, polyether antibiotic from Streptomyces chartreusensis. It binds and transports cations across membranes and uncouples oxidative phosphorylation while inhibiting ATPase of rat liver mitochondria. The substance is used mostly as a biochemical tool to study the role of divalent cations in various biological systems.</td>
+    <td>Benzoxazoles</td>
+  </tr>
+</table>
+<br/>
+<h2>Probing NEWT</h2>
+<p><a href="http://www.freebase.com/view/user/bio2rdf/public/bm/taxonomy/-/user/bio2rdf/public">NEWT</a> is the taxonomy database maintained by the UniProt group.  It integrates taxonomy data compiled in the National Center for Biotechnology Information and data specific to the UniProt Knowledgebase.  <a href="http://taxonomy.bio2rdf.org/sparql">NEWT SPARQL endpoint</a></p>
+
+<p>Fifty fundamental classes of NEWT are revealed by this query:</p>
+<pre>
+rawQuery = "select distinct ?concept where { [] a ?concept } limit 50";
+</pre>
+
+<script type="text/javascript">
+   function showNewt1()
+   {
+     var i = document.getElementById("Newt1");
+     i.style.display = "block";
+   }
+   function closeNewt1()
+   {
+     var i = document.getElementById("Newt1");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showNewt1()" />
+<br/><br/>
+<div id="Newt1" style="display: none; width: 750px; padding: 10px; border: solid medium black">
+
+
+
+<pre>
+&lt;table class="sparql" border="1">
+  &lt;tr>
+    &lt;th>concept&lt;/th>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMap&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMapValue&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMapATable&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadMapFText&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#array-of-string&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#QuadStorage&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#InverseFunctionalProperty&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#Ontology&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#Class&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#Restriction&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#FunctionalProperty&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#DatatypeProperty&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#ObjectProperty&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/xbrl/IFRS_GP_LabelLink&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/xbrl/IFRS_GP_PresentationLink&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.openlinksw.com/schemas/xbrl/IFRS_GP_CalculationLink&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2002/07/owl#DataRange&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td><span style="color:red">http://bio2rdf.org/ns/uniprot#Taxon</span>&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/uniprot#Strain&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/uniprot#Image&lt;/td>
+  &lt;/tr>
+
+&lt;/table>
+
+</pre>
+<br/>
+<input type="button" value="Close" onclick="closeNewt1()" />
+</div> 
+
+<p>An enquiry about <em>Taxon</em> produces a long list of taxonomy items structured as follows:</p>
+
+<table class="sparql" border="1" cellpadding="10px" style="width: 300px">
+  <tr>
+    <th>stuff</th>
+  </tr>
+  <tr>
+
+    <td>http://bio2rdf.org/taxonomy:10239</td>
+  </tr>
+  <tr>
+    <td>http://bio2rdf.org/taxonomy:12333</td>
+  </tr>
+  <tr>
+    <td>http://bio2rdf.org/taxonomy:12335</td>
+
+  </tr>
+</table>
+
+<p>Characteristics of a specific taxon can be revealed by this query:</p>
+<pre>
+rawQuery = " select ?p ?o where {  &lt;http://bio2rdf.org/taxonomy:12352> ?p ?o }  ";
+</pre>
+
+<script type="text/javascript">
+   function showNewt2()
+   {
+     var i = document.getElementById("Newt2");
+     i.style.display = "block";
+   }
+   function closeNewt2()
+   {
+     var i = document.getElementById("Newt2");
+     i.style.display = "none";
+   }
+</script>
+
+<br/>
+<input type="button" value="Show results" onclick="showNewt2()" />
+<br/><br/>
+
+<div id="Newt2" style="display: none; width: 750px; padding: 10px; border: solid medium black">
+
+
+<pre>
+&lt;table class="sparql" border="1">
+  &lt;tr>
+    &lt;th>p&lt;/th>
+    &lt;th>o&lt;/th>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/1999/02/22-rdf-syntax-ns#type&lt;/td>
+    &lt;td>http://bio2rdf.org/ns/uniprot#Taxon&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2000/01/rdf-schema#label&lt;/td>
+    &lt;td>Bacillus phage M2Y [taxonomy:12352]&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://www.w3.org/2000/01/rdf-schema#subClassOf&lt;/td>
+    &lt;td>http://bio2rdf.org/taxonomy:12333&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/taxonomy#scientificName&lt;/td>
+    &lt;td>Bacillus phage M2Y&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/taxonomy#otherName&lt;/td>
+    &lt;td>Bacteriophage M2Y&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/taxonomy#partOfLineage&lt;/td>
+    &lt;td>false&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>http://bio2rdf.org/ns/taxonomy#rank&lt;/td>
+    &lt;td>http://bio2rdf.org/ns/uniprotSpecies&lt;/td>
+  &lt;/tr>
+
+&lt;/table>
+</pre>
+
+<br/>
+<input type="button" value="Close" onclick="closeNewt2()" />
+</div> 
+
+<p>The results give me sufficient information that I can build my own query targeting the name and subclass of the Taxon 12352.  Note that by producing the name of the subclass I am metaphorically travelling around the NEWT RDF dataset.</p>
+
+<pre>
+rawQuery = " select ?name  ?subName where {  
+     &lt;http://bio2rdf.org/taxonomy:12352>  &lt;http://bio2rdf.org/ns/taxonomy#scientificName>  ?name .  
+         # Give me the name of the Taxon 12352 
+     &lt;http://bio2rdf.org/taxonomy:12352> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf>  ?subClass .  
+         # Determine the subclass
+     ?subClass &lt;http://bio2rdf.org/ns/taxonomy#scientificName>  ?subName . }    ";
+         # Go down the subclass branch to find its name
+</pre>
+
+<p>The result indicates that Bacillus phage M2Y is a subclass of <em>unclassified phages</em>.</p>
+
+<table class="sparql" border="1" cellpadding="10px" style="width: 300px">
+  <tr>
+    <th>name</th>
+    <th>subName</th>
+  </tr>
+  <tr>
+
+    <td>Bacillus phage M2Y</td>
+    <td>unclassified phages</td>
+  </tr>
+</table>
+
+<br/>
+<h2>Disembarking safely from our semantic Web travels</h2>
+
+<p>Like any traveller back home eager to share impressions of the trip, there is a struggle to find the right words.  On the tip of the tongue are <em>complex</em>, <em>difficult</em>, <em>lack of uniformity</em>, <em>probe before you fire queries</em> and so on.  There are extraordinary riches to be harvested, but the entry threshold is also fairly high.</p>
+
+<p>Soon to be released is <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.infoworld.com%2Fd%2Fdeveloper-world%2Fsemantic-Web-technology-get-update-684&amp;date=2009-11-02">SPARQL 1.1</a>.  It will feature <em>nested queries</em> that will permit the results of one query to cascade into a subsequent query.  This will facilitate the matching of data from one dataset against another dataset and, therefore, the metaphoric meandering through the semantic Web.  My experience so far prompts me to carefully probe each step of the way before launching.</p>
+
+
+<!-- Bottom of my content -->
+</div>
+<p><em>Date: 13 October, 2009</em></p>
+
+
+<form action="#">
+<fieldset>
+<legend style="border-right: 1px solid navy; border-bottom: 1px solid navy; padding: 0.1ex 0.5ex; color: white; background-color: rgb(94, 150, 253); font-size: medium; font-weight: bold;">For further reading</legend>
+
+<div align="left">
+<!-- Top of further reading -->
+	<ul>
+	<li><a name="AH" id="AH">Allemang, D. &amp; Hendler, J.</a> (2008). <em>Semantic Web for the working ontologist: effective modeling in RDFS and OWL</em>. (Chapter 3.)  Amsterdam: Morgan Kaufmann.</li>
+
+	<li><a name="vision" id="vision">Berners-Lee, T. &amp;  Fischetti, M.</a> (1999). <em>Weaving the Web: the original design and ultimate destiny of the World Wide Web, by its inventor.</em> (Chapter 12). SanFrancisco, CA: Harper.</li>
+
+	<li><a href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL Query Language for RDF</a></li>
+
+	<li><a href="http://thefigtrees.net/lee/sw/sparql-faq">SPARQL FAQ</a></li>
+
+	<li><a href="http://www.w3.org/TR/sparql-features/">SPARQL new features and rationale</a></li>
+
+	<li><a href="http://projects.ischool.washington.edu/tabrooks/dbpedia/presentationPage.htm">Wikipedia on a Web page</a></li>
+
+	<li><a href="http://projects.ischool.washington.edu/tabrooks/dbpedia/harvestingStateFlowers.htm">Gathering flowers from DBpedia</a></li>
+
+	<li><a href="http://jena.sourceforge.net/ARQ/Tutorial/">SPARQL Tutorial</a></li>
+
+	<li><a href="http://demo.openlinksw.com/sparql_demo/">OpenLink Virtuoso's SPARQL Implementation Demo</a></li>	
+
+	</ul>
+	
+<!-- Bottom of further reading -->
+<br />
+</div>
+</fieldset>
+
+</form>
+<br />
+ 
+ <form action="#">
+<fieldset>
+<legend style="border-right: 1px solid navy; border-bottom: 1px solid navy; padding: 0.1ex 0.5ex; color: white; background-color: rgb(94, 150, 253); font-size: medium; font-weight: bold;">How to cite this paper</legend>
+<div><br /> Brooks, T.A. (2009). &quot;Watch this: Probe the Semantic Web with SPARQL&quot; &nbsp; <em>Information Research</em>, <strong>14</strong>(4) paper TB0912.html [Available from 3 November, 2009 at http://InformationR.net/ir/14-4/TB0912.html]</div>
+
+</fieldset>
+</form>
+
+<table align="center" cellspacing="10">
+	<tbody><tr>
+		<td colspan="3" style="background-color: rgb(94, 150, 253); color: white; font-family: verdana; font-size: small; font-weight: bold;" align="center">Find other papers on this subject</td></tr>
+	<tr>
+		<td valign="top" align="center">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+			<table bgcolor="#ffffff">
+
+				<tbody><tr>
+					<td valign="top" align="center" height="32" nowrap="nowrap"><input name="q" size="31" maxlength="255" value="sparql &quot;linked open data&quot;" type="hidden" /> <br />
+<input name="sa" value="Scholar Search" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit" />
+<input name="num" value="100" type="hidden" />
+					</td>
+				</tr>
+			</tbody></table>
+
+</form>
+		</td>
+
+		<td valign="top" align="center">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+			<table bgcolor="#ffffff">
+				<tbody><tr>
+					<td valign="top" align="center" height="32" nowrap="nowrap"><input name="q" size="31" maxlength="255" value="sparql &quot;linked open data&quot;" type="hidden" /><br />
+<input name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" type="submit" />
+<input name="client" value="pub-5081678983212084" type="hidden" />
+<input name="forid" value="1" type="hidden" />
+
+<input name="ie" value="ISO-8859-1" type="hidden" />
+<input name="oe" value="ISO-8859-1" type="hidden" />
+
+<input name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" type="hidden" />
+<input name="hl" value="en" type="hidden" />
+					</td>
+				</tr>
+			</tbody></table>
+</form>
+</td>
+<td valign="top" align="center">
+<form method="get" action="http://www.live.com/" target="_blank">
+			<table bgcolor="#ffffff">
+				<tbody><tr>
+
+					<td valign="top" align="center" height="32" nowrap="nowrap"><input name="q" size="31" maxlength="255" value="sparql &quot;linked open data&quot;" type="hidden" /> <br />
+<input name="sa" value="Bing" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit" />
+<input name="num" value="100" type="hidden" />
+					</td>
+				</tr>
+			</tbody></table>
+</form>
+
+		</td>
+	</tr>
+
+</tbody></table>
+
+
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+<hr style="color: rgb(94, 150, 253);" size="1" />
+<table align="center" cellpadding="10">
+
+  <tbody>
+<tr><td valign="top" align="center"><div>    <a href="http://www.digits.com/" target="_blank">
+    <img src="http://counter.digits.com/?counter={3fbc6b6b-4f74-76b4-a128-7b5dfd22b41f}&amp;template=simple" 
+     alt="Hit Counter by Digits" border="0"  />
+  </a>
+</div></td>
+
+      <td valign="top" align="center">
+
+      <div>&copy; the author, 2009. <br /> Last updated: 13 October, 2009 </div>
+      </td>
+
+          <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START--> 
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+--> 
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'> 
+<script type="text/javascript"> 
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('TB0912.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+ 
+OneStat_Pageview();
+//--> 
+</script> 
+<noscript> 
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online Web site analytics" /></a> 
+</noscript> 
+
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online Web site analytics</a><br /></div></td></tr></table></div> 
+<!--ONESTAT SCRIPTCODE END--> 
+</td></tr> </tbody>
+</table> 
+
+<hr size="3" style="color: #5E96FD;" /> 
+ 
+<table align="center"><tr><td><div class="button"> 
+ 
+
+<ul>
+	<li><a href="infres144.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul> 
+
+</div></td></tr></table> 
+ 
+ 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
+</script> 
+
+<script type="text/javascript"> 
+_uacct = "UA-672528-1";
+urchinTracker();
+</script> 
+</body> 
+
+<!-- Mirrored from informationr.net/ir/14-4/TB0912.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:33:55 GMT -->
+</html> 

@@ -1,0 +1,683 @@
+<!DOCTYPE <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>PUBLIC "-//W3C//DTD <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/7-4/paper134.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:29 GMT -->
+<head>
+<title>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web: opportunities and challenges for next-generation Web applications</title>
+<link href="../IRstyle.css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk">
+<meta content="<span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web, web-services,  agent-based distributed computing, semantics-based web <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines, semantics-based digital libraries, <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines, digital libraries, ontologies, <span>semantics</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> trust models, <span>proof</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>models" name="keywords">
+
+<meta content="Recently there has been a   <span>growing</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interest in the <span>investigation</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and development of the next generation   web - the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. While most of the current forms of web content are   <span>designed</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to be presented to humans, but are barely understandable by computers, the content of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web is structured in a <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>way so   that it is meaningful to computers as well as to humans. In this paper,   we report a <span>survey</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of recent research on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. In particular, we   present the opportunities that this <span>revolution</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>will bring to us: web-services,    agent-based distributed computing, semantics-based web <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines, and   semantics-based digital libraries. We also <span>discuss</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the technical and   cultural challenges of realizing the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web: the development of   ontologies,  formal <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web <span>languages</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> and  trust   and <span>proof</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>models. We hope that this will shed some light on the   <span>direction</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>future</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>work on this field." name="<span>description</span>" <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>>
+
+<meta content="Mature" name="rating">
+<meta content="Document" name="VW96.objecttype">
+<meta content="ALL" name="ROBOTS">
+<meta content="The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web: opportunities and challenges for next-generation Web <span>applications</span>" <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> name="DC.Title">
+
+<meta content="Shiyong Lu, Ming Dong, and Farshad Fotouhi" name="DC.Creator">
+
+<meta content="<span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web, web-services,  agent-based distributed computing, semantics-based web <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines, semantics-based digital libraries, <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines, digital libraries, ontologies, <span>semantics</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> trust models, <span>proof</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>models" name="DC.Subject">
+<meta content="Recently there has been a   <span>growing</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interest in the <span>investigation</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and development of the next generation   web - the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. While most of the current forms of web content are   <span>designed</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to be presented to humans, but are barely understandable by computers, the content of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web is structured in a <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>way so   that it is meaningful to computers as well as to humans. In this paper,   we report a <span>survey</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of recent research on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. In particular, we   present the opportunities that this <span>revolution</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>will bring to us: web-services,    agent-based distributed computing, semantics-based web <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines, and   semantics-based digital libraries. We also <span>discuss</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the technical and   cultural challenges of realizing the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web: the development of   ontologies,  formal <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web <span>languages</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> and  trust   and <span>proof</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>models. We hope that this will shed some light on the   <span>direction</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>future</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>work on this field."
+><name="DC.Description">
+
+<meta content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>T.D. Wilson" name="DC.Publisher">
+<meta content="Global" name="DC.Coverage.PlaceName">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center" colspan="5"><h4>Information Research, Vol. 7 No. 4, July 2002</h4></td></tr>
+  <tr> 
+    <td><a href="infres74.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3>
+<h1>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web: opportunities and challenges for next-generation Web applications</h1>
+
+<h4 align="center"><a href="mailto:shiyong@cs.wayne.edu">Shiyong Lu</a>, <a href="mailto:mdong@cs.wayne.edu">Ming Dong</a> and <a href="mailto:fotouhi@cs.wayne.edu">Farshad Fotouhi</a><br>Department of
+<span>Computer</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Science<br>Wayne State University, Detroit, MI 48202</h4>
+
+<br>
+<br>
+<div align="center"><b>Abstract</b></div>
+<blockquote>Recently there has been a <span>growing</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interest in the <span>investigation</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and development of the next generation web - the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. While most of the current forms of web content are <span>designed</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to be presented to humans, but are barely understandable by computers, the content of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web is structured in a <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>way so that it is meaningful to computers as well as to humans. In this paper, we report a <span>survey</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of recent research on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. In particular, we present the opportunities that this <span>revolution</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>will bring to us: web-services, agent-based distributed computing, semantics-based web <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines, and semantics-based digital libraries. We also <span>discuss</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the technical and cultural challenges of realizing the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web: the development of ontologies, formal <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web <span>languages</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> and trust and <span>proof</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>models. We hope that this will shed some light on the <span>direction</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>future</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>work on this field.</blockquote>
+<p><br>
+</p>
+<h2>Introduction</h2>
+
+<p>The Internet and the World Wide Web have brought a <span>revolution</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to information technology and
+the daily lives of most people. However, most of the
+current forms of web content are <span>designed</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and structured for use by people but
+are barely understandable by computers. The goal of  the
+<span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web, with its vision by Berners-lee (<a href="#vision">1998</a>), is to develop expressive
+<span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to describe information in forms understandable by machines. </p>
+<p>XML (Extensible Markup <span>Language</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> <a href="#xml">1998</a>) has brought great <span>features</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and
+promising prospects to the development of  the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. Currently,
+there are numerous techniques and <span>tools</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>available for <span>XML</span>, <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> e.g., SAX (<a href="#sax">Simple API
+for XML</a>), DOM (<a href="#dom">Document Object Model, 1998</a>), XSL (<a href="#xsl">Extensible Stylesheet
+Language</a>), <span>XSLT</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(<a href="#xslt">XSL Transformation</a>), <a href="#xpath"> XPath</a>,
+
+<a href="#xlink"> XLink</a>, and <a href="#xpointer"> XPointer</a>, and <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>parsers are available
+in different <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and for different platforms.  Using <span>XML</span>, <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> one can
+describe document types for various domains and <span>purposes</span>. <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> For example, XML
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>may <span>represent</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>multi-media presentations (<a href="#smil">Hoschka,
+1998</a>), and <span>business</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>transactions (<a href="#xmledi">XML/EDI-Group</a>). Applications can access <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>via standard interfaces like
+<a href="#sax"> SAX</a> and <a href="#dom"> DOM</a>. <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>number of <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>query <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>have been proposed, including
+XML-QL (<a href="#xml-ql">Deutsch, et al., 1998</a>), X-QL (<a href="#xql">Robie, 1999</a>), Lorel (<a href="#lorel">Goldman, et
+al., 1999</a>), and XQuery
+(<a href="#xquery">Chamberlin, et al., 2001</a>). <span>Furthermore</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>  some
+researchers propose  that these query <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>should be <span>extended</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>with an
+update capability so that an <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>document repository becomes an <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>database (<a href="#updatexml">Tatarinov, et
+al., 2001</a>).</p>
+
+<p>XML will continue to play an important role in the development of the
+<span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. However,  it does not provide a full solution to the requirements of the
+<span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>can <span>represent</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>only some <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>properties through its
+<span>syntactic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>structure, i.e.,  by the nesting or sequentially ordering
+relationship among elements (XML tags). <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>queries need to be aware of
+this <span>syntactic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>structure via the document type that is defined by a DTD
+(Document Type Definition). Although one might <span>derive</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>some <span>sort</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>from the structure of the
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>within the context of the document type, the <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of each
+element (XML tag)  is not defined and its interpretation totally relies on the
+implicit knowledge hardcoded in application programs. To develop a Web with
+<span>semantics</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> resources on the Web need to be <span>represented</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in or annotated with
+structured machine-understandable descriptions of their contents and
+relationships, using vocabularies and constructs that have been explicitly and
+<span>formally</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>defined with a <span>domain</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><i>ontology</i>.   </p><p>The most
+acceptable definition of <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>seems to be the following one by Gruber
+(<a href="#ontologydef">1993</a>): an
+<span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is a "<i>formal specification of a conceptualization</i>", and
+is shared within a specific <span>domain</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> The world view that an <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>embodies is
+usually conceived as a hierarchical <span>description</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of a set of concepts (is-a
+hierarchy), a set of properties and their relationships, and a set of inference
+rules. Berners-lee (<a href="#vision">1998</a>) outlined the architecture of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web in the
+following three layers: </p>
+<ol>
+  <li><b>The metadata layer</b>. The data model at this layer contains just the
+    concepts of <i>resource</i> and <i>properties</i>. Currently, the RDF (Resource
+    Description Framework) (<a href="#rdf">Lassila &amp; Swick, 1999</a>)
+    is <span>believed</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to be the most popular data model
+    for the metadata layer. </li>
+
+  <li><b>The schema layer</b>. Web <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>languages are <span>introduced</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>at this
+    layer to define a hierarchical <span>description</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of concepts (is-a hierarchy) and
+    properties. Currently, RDFS (RDF Schema) (<a href="#rdfs">Brickley &amp;
+    Guha, 2002</a>) is con0ered as a candidate
+    schema layer language.</li>
+  <li><b>The logical layer</b>. More powerful web <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>languages are
+    <span>introduced</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>at this layer. These <span>languages</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>provide a richer set of modeling
+    primitives that can be mapped to the well-known expressive Description Logics
+    (<a href="#dl">1999</a>). Currently, OIL (<a href="#oil">Ontology Inference
+    Layer, 2000</a>) and DAML-OIL (<a href="#damloil">Darpa
+    Agent Markup Language-Ontology Inference Layer, 2001</a>) are two popular logical layer
+    <span>languages</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> </li>
+
+</ol>
+<p>With the creation and development of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web, various web
+resources will be able to be accessed by machines in a <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>fashion. The questions are,
+what opportunities will this new technology bring to us and what challenges and
+work are we facing now to get us from today's Web to the Web of tomorrow - the
+<span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web?  In this paper, we share our understanding of the answers to
+these questions and we hope this will shed some light on <span>future</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>research in this
+area.</p><!--Notice how quotations are dealt with - no punctuation marks and within <blockquote></blockquote> tags. Also note how references are dealt with, using the 'Harvard system' with internal <span>links</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to the <span>reference</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>list-->
+<h2>Opportunities</h2>
+<p>Like other technologies, the interest in creating and developing the Semantic
+Web is motivated by the opportunities
+it might bring: either it can <span>solve</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>new problems, or it can <span>solve</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>old problem in
+a better way. Here, <span>instead</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of enumerating all the opportunities enabled by the
+<span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web,  we <span>focus</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>our discussion on the following closely related
+aspects:
+web-services,  agent-based distributed computing, semantics-based web
+<span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines, and semantics-based digital libraries. </p>
+<h3> Web-services</h3>
+<p>Among the most important web resources on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web are those so
+called <i>web-services</i>. Here, web-services <span>refers</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to "web sites that do
+not merely provide static information but allow one to effect some <span>action</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>or
+change in the world". The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web will enable users to locate, select,
+employ, compose, and monitor web-services automatically (<a href="#daml-s">Ankolekar, et
+al., 2001</a>).</p>
+<ul>
+  <li><b>Automatic web-service discovery</b>. Since <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>descriptions of
+    web-services are registered with some public registries, intelligent mobile
+    agents might migrate from one service registry to another to find desirable
+    web-services as specified by a user.  There has been some work in
+    agent-assisted browsing of the web. For example, Letizia (<a href="#letizia">Lieberman</a>)
+is a user     interface agent that assists a user browsing the World Wide
+Web based on the     user's profile. Letizia can learn the profile of a user
+based on the user's browsing history. This idea can be applied to web-service
+discovery as well.     For example, a server might provide web-services at
+different levels or with     different <span>values</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>towards different users, and
+an agent might find a     web-service based on the user's profile.</li>
+
+  <li><b>Automatic web-service invocation.</b> Currently most web-services
+    <span>require</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>human's intervention during their execution. For example, to
+    buy a book at <a href="http://www.amazon.com/">http://www.amazon.com</a>,  the
+    website <span>requires</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>a user to fill out a form, and then click a button to
+    execute the service. Usually, multiple <span>interactions</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>between a user and a
+    web-service are needed to complete the execution of that web-service . The
+    capability of automatic web-service invocation implies that a <span>software</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>agent
+    will be able to perform these invocations on behalf of a user, who only
+    needs to tell the agent to "go to Amazon and buy a book titled <i>The
+    <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web </i>with no more than $50", and the agent will interact with the
+    web-service with appropriate input data via <span>computer</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interpretable
+    APIs. </li>
+  <li><b>Automatic web-service <span>composition</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and interoperation</b>. Given a
+    library of web-services and an objective, one might be able to automatically
+    select and compose a new web-service to achieve the new objective.  The
+    prerequisites and <span>consequences</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of individual web-services need to be
+    described in a formal way, and the technology for automatic workflow
+    generation (<a href="#vldb">Lu, et al., 2002</a>) might be used to generate web-services automatically.</li>
+  <li><b>Automatic web-service execution monitoring.</b> For long-running
+    complex web-services, it is desirable to be able to track and query the
+    <span>status</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of the execution of each service as well as its components.</li>
+
+</ul>
+<p>The industry has already seen the potential market enabled by
+web-services  and some efforts have been put to the development of
+standards for electronic commerce, in particular for the <span>description</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of
+web-services. For example, <span>Microsoft</span>, <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> <span>IBM</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and Ariba proposed UDDI (<a href="#uddi">Universal
+Description, <span>Discovery</span>, <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> and Integration, 2000</a>) to
+describe a standard for an online registry, and the publishing and dynamic
+discovery of web-services <span>offered</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>by  businesses; <span>Microsoft</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and IBM
+proposed WSDL (<a href="#wsdl">Web Service <span>Definition</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Language</a>)  as an <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>language to describe interfaces to web-services
+registered with a UDDI database; the DAML Services Coalition proposed DAML-S (<a href="#daml-s">Darpa
+Agent Markup <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>- Service, 2001</a>) as an <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to describe web-services; and OASIS and the United Nations
+developed ebXML (<a href="#ebxml">Electronic Business <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Initiative, 2000</a>) to describe  <span>business</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>interactions</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>from a workflow
+<span>perspective</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>number of communication protocols have been developed for the
+invocation of web-services: Remote Procedure Call (<a href="#rpc">Birrell &amp; Nelson, 1984</a>) is client/server
+infrastructure that allows a client component of an application to employ a
+function call to access a server on a remote system. The CGI (<a href="#cgi">Common
+Gateway Interface</a>) <span>mechanism</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> is a standard for external gateway programs
+to interface with information <span>servers</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>such as <span>HTTP</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>servers. CORBA (<a href="#omg">Common
+Object Request Broker Architecture</a>)  uses a registry to store interfaces of
+distributed objects so that a client can invoke a method of a remote server
+object without knowing its location, <span>programming</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>language, operating system and
+other system aspects that are not part of the object's interface. <span>SOAP</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(<a href="#soap">Simple Object Access
+Protocol</a>) is a protocol for the exchange of information in a distributed
+<span>environment</span>, <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> in particular, the Web. Using <span>SOAP</span>, <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> one can describe the
+content of a message and the way to process it, define application-dependent
+data types, and <span>represent</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>remote procedure calls and responses. <span>SOAP</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>can
+potentially be used together with a variety of other protocols. Currently, its
+binding with <span>HTTP</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is <span>supported</span>. <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>  <span>Java</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>RMI (<a href="#javarmi">Java Remote Method
+Invocation</a>)
+enables programmers to develop <span>Java</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>applications</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in which a client can invoke a
+method of a remote <span>Java</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Object. The ACL (Agent Communication Language)
+developed by SRI International  in the <span>framework</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of OAA (Open Agent
+Architecture) allows one to define and <span>publish</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the capabilities of agents so
+that a request can be matched with a server agent by the facilitators (brokers)
+(<a href="#oaa">Martin, et al., 1999</a>)</p>
+
+<h3>Agent-based distributed computing paradigm</h3>
+<p>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web will use ontologies to describe various web resources,
+hence,  knowledge on the Web will be <span>represented</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in a structured, logical, and
+<span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>way. This will change the way that agents navigate, harvest and utilize
+information on the Web (<a href="#browsingschedule">Payne, et al., 2002</a>). On one hand, the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web is a web of
+distributed knowledge bases,  and agents can <i>read</i> and <i>reason</i>
+about published knowledge with the guidance of ontologies. On the other hand,
+the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web is a <span>collection</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of web-services described by ontologies like
+DAML-S (Darpa Agent Markup <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>- Services) (<a href="#daml-s">Ankolekar
+et al., 2001</a>) and this will facilitate dynamic matchmaking among heterogeneous
+agents: service provider agents can advertise their capabilities to middle
+agents; middle agents store these advertisements; a service requester agent can
+ask a middle agent whether it knows of some provider agents with desired
+capabilities; and the middle agent matches the request against the stored
+advertisements and returns the result, a subset of the stored advertisements (<a href="#larks">Sycara, et
+al., 2002</a>).</p>
+<p>When agents are equipped with intelligence and mobility, the conventional
+client/server computing paradigm might be replaced by an agent-based distributed
+computing paradigm, in which agents can migrate from one site to another,
+carrying their <span>codes</span>, <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> data, running states (including internal beliefs), and
+intelligence (specified by the users), and fulfill their missions autonomously
+and intelligently. Many researchers have speculated that mobile agents are
+inevitable for an open and distributed <span>environment</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>like the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web and have
+seen the advantages of this new computing paradigm (<a href="#seven">Lange &amp;
+
+Oshima, 1999</a>; <a href="#goodidea">Harrison, 1995</a>) including: </p>
+<ul>
+  <li>It reduces the <span>network</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>load.</li>
+  <li>It overcomes the <span>network</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>latency. </li>
+  <li>It supports the encapsulation of  protocols.</li>
+  <li>Agents execute asynchronously and autonomously. </li>
+
+  <li>Agents adapt dynamically.</li>
+  <li>Agents are <span>naturally</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>heterogeneous.</li>
+  <li>Agents are robust and fault-tolerant.</li>
+</ul>
+<p> <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>number of
+mobile agent <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>have been developed (<a href="#perret">Mauldin, 1991</a>; <a href="#ontologyagent">Luke, et
+al., 1997</a>). </p>
+<h3>Semantics-based web <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines</h3>
+
+<p>Search engines are among the most useful resources on the Web and currently
+there are two types of <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines:</p>
+<ul>
+  <li><b>Large-scale robot-based <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines. </b>These <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>rely on
+    robots to retrieve Web pages and store them in a centralized database. The
+    advantage of this <span>mechanism</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is that it increases <i> recall</i> (the
+    proportion of relevant
+    <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>that are <span>actually</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>retrieved, <a href="#perret">Mauldin, 1991</a>) since robots can almost
+    retrieve all web pages on the Web, while the disadvantage is the <i> precision</i>
+    (the proportion of
+    retrieved <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>that are <span>actually</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>relevant) of the <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>result might be low.</li>
+
+  <li><b>Small-scale reviewer-based <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines.</b> <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>category hierarchy is
+    created and each category is described by a  set of keywords. Reviewers
+    will review each web page (submitted by web page authors) and associate it with
+    appropriate categories. The advantage is that precision is increased, but
+    the disadvantage is that recall might be low since it is <span>impossible</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to
+    review and include every single relevant web page on the Web.</li>
+</ul>
+<p>Both types of <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines are based on keywords,  and hence are
+subject to the two well-known linguistic phenomena that <span>strongly</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>degrade a query's precision
+and recall: <i>polysemy</i> (one word might have several meanings) and <i>synonymy</i>
+(several terms, i.e. words or phrases, might designate the same concept). A
+number of stemming <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(<a href="#stemming">Lennon, et al., 1981</a>) have been developed to address the synonymy issue
+including suffice removal, strict truncation of character strings, word
+segmentation, <span>letter</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>bigrams and linguistic morphology. The idea is that
+different derivations of a word are similar to each other in their forms (e.g. they have the
+same prefix) and can be <span>traced</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>back to the same root (stem) using these stemming
+methods. However, these methods are subject to the following stemming errors:
+words with different meaning might be reduced to the same root.  For
+example,  words <i>general, generous, generation, and generic</i> might be
+reduced to the same root. On the other hand, different words with the same
+meaning cannot be reduced to the same root. For example, <i>automobile</i> and <i>car</i>.
+The <span>situation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>becomes worse for  the large-scale robot-based search
+engines. Only limited
+<span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>can be derived from the <i>lexical</i> or <i>syntactic</i> content of
+the web pages.</p>
+
+<p>Several <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>have been built to overcome these problems based on the idea
+of annotating Web pages with special <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>tags to <span>represent</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>semantics,
+including  SHOE (Simple <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>Ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Extensions) system (<a href="#ontologyagent">Luke, et
+al., 1997</a>), GDA system (<a href="#alignmentontology">Ttiyama &amp; Ha0a, 1997</a>). However the limitation of these
+<span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is that they can only process web pages that are annotated with
+these <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>tags, and  so far there is no agreement upon a universally
+acceptable set of <span>HTML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>tags.</p>
+<p>XML is a promising <span>technique</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>since it keeps content, structure, and
+<span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>apart and is a much more adequate means for knowledge
+<span>representation</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>  However, <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>can <span>represent</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>only some <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>properties through its
+<span>syntactic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>structure. <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>queries need to be aware of
+this <span>syntactic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>structure. With the advent of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web,  resources on the Web
+will be <span>represented</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>semantically in ontologies. Semantics-based web search
+engines can be built in which each query is executed within the context of some
+<span>ontology</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> The guidance from ontologies will increase recall and precision of the
+<span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>result. For example, one might pose a query "<i>return all the
+reviewers for book 'The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web: an Introduction</i>'" to a
+semantics-based web <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engine, then the engine will return only reviewers
+for this book <span>instead</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of returning web pages that contain keyword
+"reviewer" and/or <span>term</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>"The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web: an Introduction".
+For another example, if one pose query "<i>return all the chairs</i>",
+with the guidance of a furniture <span>ontology</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> only those furniture chairs  are
+returned; and with the guidance of a <span>person</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>ontology, only people who are chairs
+of some organizations will be returned. In contrast, Keyword-based search
+engines will return web sites that contain keyword "chairs", including
+chairs that refer to furniture and chairs that refer to people. It is worth
+mentioning that some <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>that use ontologies to enhance web <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines
+have been developed (<a href="#ontologysearch">Barros, et al., 1998</a>; <a href="#howtoxml">Erdmann, et
+al., 2001</a>). Since ontologies are built on a <span>domain</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>basis, web
+<span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines might be also built on a <span>domain</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>basis, and hence metasearch
+engines, which interface with multiple remote <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines and select and rank
+remote <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines intelligently,  might be very useful (<a href="#metasearch">Dreilinger
+
+&amp; Howe, 1997</a>).</p>
+<h3>Semantics-based digital libraries</h3>
+<p>Digital multimedia data in various formats has increased tremendously
+in recent years on the Internet. With the development of digital photography,
+more and more people are able to store their personal <span>photographs</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>on their
+PCs. Sharing of picture albums and home videos on the Internet becomes more
+and more popular.  <span>Furthermore</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> many organizations have large image and video
+collections in digital format available for online access. Film producers
+want to advertise movies through interactive preview clips. Travel agencies
+are interested in digital achieves of holiday resorts <span>photographs</span>. <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Hospitals
+would like to build medical image databases. These emerging applications
+for multimedia digital libraries <span>require</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interdisciplinary research in the
+areas of image processing, <span>computer</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>vision, information retrieval and database
+management.<br>
+<br>Semantics-based retrieval of multimedia digital content is important
+for efficient use of the multimedia data repositories. Traditional content-based
+multimedia retrieval techniques describe images/videos based on low level
+<span>features</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(such as color, texture, and shape) and support retrieval based
+on these <span>features</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(<a href="#imager">Smeulders, et al., 2000</a>). However, human typically does not view images/videos in terms of low-level <span>features</span>. <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>
+<span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>semantics-based query capability is highly desirable. For example, one might
+want to formulate a query like "<i>return all the scenes in clip 1 in which a
+boy is riding a bicycles</i>".  Retrieving images/videos based on low-level <span>features</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>cannot provide satisfactory results
+(<a href="#imageclass">Vaiulaya, et al., 2001</a>). Effective and precise multimedia retrieval by <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>remains an open and challenging problem
+(<a href="#imageclass">Vaiulaya, et al., 2001</a>; <a href="#semanticvideo">Naphade, et
+al., 2001</a>].</p>
+
+<p>Recently, ontologies begin to be used in the context of digital libraries.
+For example, ScholOnto (<a href="#scholonto">Shum 2000</a>) is an ontology-based digital library that supports
+scholarly interpretation and discourse, and ARION (<a href="#ontodev">Corcho,
+2000</a>), another ontology-based
+digital library that supports <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and navigation of  geospatial data
+sets and environmental <span>applications</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span></p>
+<p>We believe that various digital libraries will become another <span>major</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>web
+resource of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. The challenges here are: (1) The development of
+efficient and effective <span>classification</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and indexing <span>mechanism</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for each type of
+digital library, and (2) The <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interoperability between digital libraries of
+similar types and between a digital library and the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web.</p>
+<h2>Challenges</h2>
+<p>New opportunities impose new challenges. In the following, we <span>focus</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>our
+discussion on the following challenges that we are facing now: the development of
+ontologies, and the
+development of the formal <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web <span>languages</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> and the
+development of trust and <span>proof</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>models.</p>
+<h3>The development of ontologies</h3>
+<p>It is well recognized within the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web <span>community</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>that ontologies
+will play an <span>essential</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>role in the development of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web.
+Various effort has been devoted to the research of different aspects of
+ontologies, including <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>languages (<a href="#ontodev">Corcho, 2000</a>),
+<span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>development (<a href="#ontodev2">Jones, et al, 1998</a>), <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>learning approaches
+(<a href="#ontologylearn">Maedche &amp; Staab, 2001</a>), and <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>library systems
+(<a href="#ontolibsurvey">Ding &amp;  Fensel, 2001</a>), which manage, adapt, and
+standardize ontologies.</p>
+
+<p><b>Management.  </b>The <span>main</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>purpose of ontologies is to enable
+knowledge sharing and re-use, hence a <span>typical</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>library system supports
+open <span>storage</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and organization, identification and versioning. Open <span>storage</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and
+organization address how ontologies are stored and organized in a library system
+to facilitate access and management of ontologies. Identification associates
+each <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>with a unique identifier. Versioning is an important <span>feature</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>since
+ontologies evolve over time and a versioning <span>mechanism</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>can ensure the
+consistency of different versions of ontologies.</p>
+<p><b>Adaption.</b>  Since ontologies evolve over time, how to extend and
+update existing ontologies is an important issue. This includes the searching,
+editing and reasoning of ontologies in an <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>library system.</p>
+<p><b>Standardization.</b> Integration and interoperability is always the
+<span>concern</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of any open system. This is especially the <span>concern</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web,
+an open system that has to be scalable at the Internet level.  Currently, a
+number of <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>languages have been proposed (<a href="#ontodev">Corcho, et
+al., 2000</a>) and various
+<span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>library <span>systems</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>have been built (<a href="#ontolibsurvey">Ding &amp;
+Fensel, 2001</a>). The question is what would be the
+standardized <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>language. Each of them seems to have its
+advantages and disadvantages, and has its proponents and opponents. This might be a
+<span>feature</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of our human being society: each of us has his/her preference. Since the
+<span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web is still at its early stage, it might be too early to enforce any
+standardization. Each <span>representation</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>language can grow on its own and the one or
+a few ones who win will become the de facto standards.  <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>might serve as
+the meta-languages of these <span>representations</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to facilitate <span>future</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>interoperation
+and <span>integration</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> </p>
+<h3>Formal <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web languages</h3>
+
+<p>The functional architecture of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web has three layers: the
+metadata layer, the schema layer and the logical layer.  Currently, the RDF
+(<a href="#rdf">Resource
+    Description Framework, 1999</a>) is <span>believed</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to be the most popular data model
+    for the metadata layer. Although it is <span>believed</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>that the RDF data model is
+enough for defining and using metadata, the <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of reification (statement
+about statement) is yet to be defined. RDFS (<a href="#rdfs">RDF Schema</a>) extends RDF and is
+currently a popular schema layer language. It has been recognized that RDFS
+lacks a formal <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and one proposal is to define a metamodeling
+architecture for RDFS similar to the one for UML (Universal Modeling Language), and hence defines a formal
+<span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(<a href="#metamodellingarchi">Pan &amp; Horrocks, 2001</a>). This approach, although formal, is
+<span>complicated</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and not <span>intuitive</span>. <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Although RDFS has been blamed for its semantic
+confusion and some apparent paradox, it has not been shown that a formal
+<span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is <span>impossible</span>. <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> To smooth the way of developing the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web, we
+believe that the <span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of RDFS need to be resolved: either a formal
+<span>semantics</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is defined for it, or the problem of RDFS is pinned down so that the
+<span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>issue can be resolved.</p>
+<h3>Proof and trust</h3>
+<p>As an open and distributed system, the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web bears the spirit that
+"anybody can say anything on anybody".  People all over the world
+might assert some <span>statements</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>which  can possibly <span>conflict</span>. <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Hence, one needs
+to make sure that the original <span>source</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>does make a particular statement (proof)
+and that <span>source</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is trustworthy (trust).</p>
+<ul>
+  <li><b>Proof.</b> Digital signatures will play an important role in <span>proof</span>. <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> The
+    <span>source</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>has to sign the statement he makes so that agents can check if
+    information really comes from the <span>source</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>it claims to be. In addition, other
+    security technologies like encryption and access control can be used to
+    ensure confidentiality of information.  </li>
+
+  <li><b>Trust.</b> Everybody should be able to define a trust model for
+    himself, i.e., one can define how much trust he would put on each <span>source</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>on
+    the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. Since it is unrealistic to define the extent of trust for
+    each <span>source</span>, <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> a <span>mechanism</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is necessary to <span>derive</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>the <span>degree</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of trust for each
+    new <span>source</span>. <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>  One solution is the notion of  "web of
+    trust": when one trusts a <span>source</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>A, he also trusts all other sources
+    that are trusted by <span>source</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>A, but to a lower extent, in this way, a huge and
+    hierarchical <span>network</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>is created which facilitates agents infer information
+    based on their trusted knowledge.</li>
+</ul>
+<p>Currently, the notion of <span>proof</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and trust have yet to be formalized, and a
+theory that integrates them into <span>inference</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web is yet to
+be developed. However,  these technologies are very important and are the
+foundation of building real commercial <span>applications</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(e.g., B2B and B2C systems).<br>
+</p>
+<h2>Conclusion</h2>
+<p>In this paper,
+  we reported a <span>survey</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of recent research on the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. In particular, we
+  presented the opportunities that this new <span>revolution</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>will bring to us, and the
+  challenges that we are facing during the development of the <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. We
+hope that this paper will shed some light on the <span>direction</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of <span>future</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>work.</p>
+<p>The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web is still a vision.  We believe that the Web will grow
+towards this vision in a way like the development of the real world: Semantic
+Web communities will appear and grow first, and then the <span>interaction</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and
+interoperation among different communities will finally interweave them into the
+<span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web. </p>
+
+<h2>Acknowledgements</h2>
+
+<p>We thank Dr. Terry Brooks and the two anonymous reviewers for their helpful suggestions and comments.</p>
+
+<h2>References</h2>
+<ul>
+
+<li><a name="xsl"></a>Adler, S. (2001).&nbsp;  <a href="http://www.w3.org/TR/xsl"><em>Extensible
+    Stylesheet <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(XSL) Version 1.0</a>. W3C Recommendation 15 October
+    2001.</em>   Cambridge, MA: W3C.   Available at http://www.w3.org/TR/xsl. [Site visited 10th July 2002]</li>
+
+<li><a name="daml-s"></a>Ankolekar, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, et al., (2001), &quot;DAML-S: <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> markup for web services.&quot;, in: <i>The First <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web Working Symposium</i>,  pp. 411-430,&nbsp; Heidelberg: Springer-Verlag Heidelberg.</li>
+
+  
+ 
+<li><a name="ontologysearch"></a> Barros, F., Goncalves, P. &amp; Santos, T. (1998). &quot;Providing context to web searches: the use of ontologies to  enhance <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engine's <span>accuracy</span>. <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>&quot; <i> In Journal of the Brazilian <span>Computer</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Society. </i>5(2), 45-55.</li>
+
+<li><a name="uddi"></a> Bellwood, T., Cl&eacute;ment, L.,  Ehnebuske, D. Hately, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, Hondo, M., Husband, Y.L.,  Januszewski, K., Lee, S., McKee, B., Munter, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; von Riegen, C. (2002)., <a href="http://uddi.org/pubs/UDDI-V3.00-Open-Draft-20020703.htm">UDDI Version 3.0 Specification Open Draft Dated 03 July 2002</a>.&nbsp; UDDI.Org   Available at http://uddi.org/pubs/UDDI-V3.00-Open-Draft-20020703.htm  [Site visited 10th July 2002]</li>
+
+<li><a name="vision"></a>Berners-lee, T. (1998), &quot;<a href="http://www.w3.org/DesignIssues/Semantic.html">Semantic web road <span>map</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span></a>&quot; <i> IW3C <span>Design</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Issues</i>. Cambridge, MA: W3C.  Cambridge, MA: W3C.  Available at:  http://www.w3.org/DesignIssues/Semantic.html. [Site visited 9th July 2002]</li>
+
+  <li><a name="rpc"></a> Birrell, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Nelson, B. (1984), &quot;Implementing remote procedure calls.&quot; <i> ACM Transactions on <span>Computer</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Systems</i>, 2(1), 39-59. </li>
+
+<li><em><a name="xquery"></a>Boag, S., et al.,&nbsp; <a href="http://www.w3.org/TR/xquery">XQuery
+  1.0: An <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Query <span>Language</span>, <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> W3C Working Draft 30 April 2002</a></em>.  Cambridge, MA: W3C. Available at  http://www.w3.org/TR/xquery. [Site visited 10th July 2002]</li>
+
+<li><a name="soap"></a>Box, D., Ehnebuske, D., Kakivaya, G., Layman, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, Mendelsohn, N., Nielsen, H.F., Thatte, S., and Winer, D. (2000)    <em><a href="http://www.w3.org/TR/SOAP/">Simple Object Access Protocol (SOAP) 1.1  W3C Note 08 May 2000</a></em>  Cambridge, MA: W3C  Available at: http://www.w3.org/TR/SOAP/. [Site visited 10th July 2002]</li>
+  
+  <li><a name="xml"></a>Bray, T., Paoli, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, &amp; Sperberg-McQueen, C.(eds)  (1998),  <em><a href="http://www.w3.org/TR/1998/REC-xml-19980210">Extensible markup language (XML) 1.0.  W3C Recommendation 10-February-1998</a></em>. Cambridge, MA: W3C.  Available at:  http://www.w3.org/TR/1998/REC-xml-19980210. [Site visited 10th July 2002] </li>
+
+<li><a name="rdfs"></a> Brickley, D. &amp; Guha, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> <em>eds.</em> (2002), <em><a href="http://www.w3.org/TR/rdf-schema">Resource <span>description</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>framework</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(RDF) schema specification. W3C Working Draft 30 April 2002<</a>/em> Cambridge, MA: W3C.  Available at: http://www.w3.org/TR/rdf-schema. [Site visited 10th July 2002]</li>
+
+<li><a name="xquery"></a> Chamberlin, D., Florescu, D., Robie, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>,  Simeon, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Stefanascu, M. (2001).
+    "XQuery: a query language for <span>XML</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>" Technical report, <i> World Wide  Web Consortium</i>. <a href="http://www.w3.org/TR/xquery">http://www.w3.org/TR/xquery</a>.</li>
+
+<li><a name="wsdl"></a> Christensen, E., Curbera, F., Meredith, G. &amp; Weerawarana, S.  <em><a href="http://www.w3.org/TR/wsdl">Web Services Description <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(WSDL) 1.1 W3C Note 15 March 2001</a></em> Cambridge, MA: W3C.  Available at: http://www.w3.org/TR/wsdl. [Site visited 10th July 2002]</li>
+  
+  <li><a name="xslt"></a> Clark, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1999). <em><a href="http://www.w3.org/TR/xslt">XSL transformation (XSLT) version 1.0. W3C Recommendation 16-November-1999</a></em>.  Cambridge, MA: W3C. Available at: http://www.w3.org/TR/xslt. [Site visited 10th July 2002]</li>
+  
+  <li><a name="xpath"></a> Clark, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; DeRose, S. (1999)  <em><a href="http://www.w3.org/TR/xpath">XML Path <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(XPath) Version 1.0 W3C Recommendation 16 November 1999</a></em>  Cambridge, MA: W3C.  Available at: http://www.w3.org/TR/xpath. [Site visited 10th July 2002]</li>
+
+  
+ <li><a name="ontodev"></a>Corcho, O. &amp; Gomez-Perez <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (2000). &quot;A road <span>map</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>to <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>specification languages&quot;. in: <em>Proceedings of the 12th International Conference on <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Acquisition, Modeling and Management, Juan-les-Pins, France</em>  pp. 80-96.  Heidelberg: Springer-Verlag Heidelberg..</li>
+
+   <li><a name="xml-ql"></a> Deutsch, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, Fernandez, M., Florescu, D., Levy, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Suciu, D. (1998).  <em><a href="http://www.w3.org/TR/NOTE-xml-ql/">XML-QL: <span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Query <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Submission to the World Wide Web Consortium 19-August-1998</a></em>   Cambridge, MA: W3C. Available at: http://www.w3.org/TR/NOTE-xml-ql/.  [Site visited 10th July 2002]</li>
+
+  
+  <li><a name="xpointer"></a>DeRose, S., Maler, E. &amp; Daniel, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>  (2001) <em><a href="http://www.w3.org/TR/xptr">XML Pointer <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(XPointer) Version 1.0.  W3C Candidate Recommendation 11 September 2001</a></em>. Cambridge, MA: W3C. Available at:  http://www.w3.org/TR/xptr. [Site visited 10th July 2002]</li>
+  
+ <li><a name="ontolibsurvey"></a>Ding, Y. &amp; Fensel, D. (2001).
+    &quot;Ontology library systems: the key for successful <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>reuse&quot;.
+    <i>The first <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>web working symposium</i>, pp. 93-112, Heidelberg: Springer-Verlag Heidelberg..</li>
+	  
+  <li><a name="metasearch"></a> Dreilinger, D. &amp; Howe, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1997), &quot;Experiences with selecting <span>search</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>engines using metasearch&quot;, <i>ACM Transactions on Information Systems</i>, <strong>15</strong>(3), 195-222.</li>
+
+  
+  <li><a name="ebxml"></a>ebXML (2000). <a href="http://www.ebxml.org/">ebXML Enabling a global electronic market.</a> Geneva: United Nations/CEFACT. Available at: http://www.ebXML.org/. [Site visited 10th July 2002]</li>
+  
+  <li><a name="howtoxml"></a> Erdmann, M., Studer, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (2001).  &quot;How to structure and access <span>XML</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>with ontologies.&quot; <i> Data and <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Engineering</i>, <strong>36</strong>(3), 317-335. </li>
+
+  
+ <li><a name="lorel"></a>Goldman, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, McHugh, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Widom, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1999),  &quot;From semistructured data to XML: migrating the lore data model and  query <span>languages</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>&quot; <em>in:</em> <i>Proceedings of the ACM International Workshop on the Web and Databases (WebDB'99), 25-30, Philadelphia, Pennsylvania, USA. pp. 25-30 New York, NY: ACM press.</i></li>
+  
+  <li><a name="ontologydef"></a> Gruber, T. (1993), &quot;A translation approach to portable <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>specifications.&quot; <i>Knowledge Acquisition</i>, <strong>6</strong>(2), 199-221. </li>
+
+  
+   <li><a name="goodidea"></a>Harrison, C., Chess, D. &amp; Kershenbaum (1995),  <em>Mobile agents: are they a good idea?</em> Yorktown Heights, NY: <span>IBM</span>, <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> T. <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> <span>Watson</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Research Center.    (Technical Report RC19887)</li> 
+  
+  <li><a name="dl"></a> Horrocks, I., Sattler, Y. &amp; Tobies, S. (1999), &quot;Practical reasoning for expressive descriptions logics.&quot; in: Ganzinger, H.; McAllester, D.; Voronkov, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>  <em>eds.</em>  <i>Logic Programming and Automated Reasoning. 6th International Conference, LPAR'99, Tbilisi, Georgia, September 6-10, 1999, Proceedings</i>, pp. 161-180  Heidelberg: Springer-Verlag Heidelberg. (Lecture Notes in Artificial Intelligence, Volume 1705)</li>
+
+    
+<li><a name="oil"></a>Horrocks, I., Fensel, D., Broekstra, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, Decker, S., Erdmann, M., Goble, C., van Harmelen, F., Klein, M., Staab, S., Studer, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, &amp: Motta, E. (2000). &quot;<a href="http://www.ontoknowledge.org/oil/TR/oil.long.html">The <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>inference</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Layer OIL</a>&quot;. [no place]: www.ontoknowledge.org.  Available at  http://www.ontoknowledge.org/oil/TR/oil.long.html [Site visited 10th July  2002]</li>
+  
+  <li><a name="smil"></a>Hoschka, P., <em>ed. </em>(1998),  <em><a href="http://www.w3.org/TR/1998/REC-smil-19980615">Synchronized Multimedia Integration <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(SMIL) 1.0 Specification. W3C Recommendation 15-June-1998</a></em>  Cambridge, MA: W3C. Available at:  http://www.w3.org/TR/1998/REC-smil-19980615. [Site visited 10th July 2002]</li>
+
+<li><a name="javarmi"></a>Java.Sun.Com (2002) <a href="http://java.sun.com/products/jdk/rmi/">Java Remote <span>Method</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Invocation.</a>  Santa Clara, CA: Sun Microsystems Inc.  Available at: http://java.sun.com/products/jdk/rmi/. [Site visited 10th July 2002]</li>
+
+<li><a name="ontodev2"></a>Jones, D.M.,  Bench-Capon, T.<span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>M. &amp; Visser, P.<span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>S. (1998) &quot;Methodologies for <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>development,&quot; in: <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> Cuena, editor, Proceedings. ITi and KNOWS Conference of the 15th IFIP World <span>Computer</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Congress, pp. 62-75, London: Chapman and Hall Ltd.</li>
+  
+<li><a name="<span>seven</span>" <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>></a>Lange, D. &amp; Oshima, M. (1999), &quot;Seven good
+    reasons for mobile agents&quot;, <i>Communications of ACM</i>, <strong>42</strong>(3),
+    88-89.</li>
+
+	
+<li><a name="rdf"></a> Lassila, O. &amp; Swick, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1999), <em><a href="http://www.w3.org/TR/REC-rdf-syntax">Resource Description Framework
+(RDF) Model and Syntax Specification. W3C Recommendation 22 February 1999<</a>/em> Cambridge, MA: W3C. Available at:  http://www.w3.org/TR/REC-rdf-syntax. [Site visited 10th July 2002]</li>
+
+<li><a name="stemming"></a> Lennon, M., Pierce, D., Tarry, B. &amp; Willett, P.  (1981). &amp;An evaluation of some conflation <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for information retrieval&amp;. <i>Journal of Information Science</i>.  <strong>3</strong>, 177-183.</li>
+
+<li><a name="letizia"></a>Lieberman, H. (1995) &quot;Letizia:  an agent that assists web browsing&quot;. <em>in</em> Proceedings of the 14th International Joint Conference on Artificial Intelligence, pMontreal, Quebec, Canada. pp.&nbsp; 924-929,  San Francisco, CA:  Morgan Kaufman.&nbsp;</li>
+
+ <li><a name="vldb"></a>Lu, S.  (2002). <em>Semantic <span>correctness</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of transactions and workflows.</em>
+    Ph.D. dissertation.  Stony Brook, NY: State University of New York at Stony Brook.</li>
+
+	
+<li><a name="ontologyagent"></a>Luke, S., Spector, L., Rager, D. &amp; Hendler,  <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (1997). &quot;Ontology-based web agents&quot;. <em>in</em> <i>Proceedings of the 1st International Conference on Autonomous Agents, Marina del Rey, California,  pp. 59-68</i>  New York, NY: ACM press.</li>
+
+<li><a name="ontologylearn"></a>Maedche, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Staab, S. (2001). &quot;Ontology learning for the <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>web.&quot; <i> IEEE Intelligent Systems</i>, <strong>16</strong>(2), 72-79</li>
+
+<li><a name="xlink"></a> Maler, E. &amp; DeRose, S. (1998)  <em><a href="http://www.w3.org/TR/1998/WD-xlink-19980303">XML Linking <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>(XLink). World Wide Web Consortium Working Draft 3-March-1998</a></em>  Cambridge, MA: W3C.  Available at: http://www.w3.org/TR/1998/WD-xlink-19980303. [Site visited 10th July 2002]</li>
+
+<li><a name="oaa"></a> Martin, D., Cheyer, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Moran, D. (1999). &quot;The open agent architecture: a <span>framework</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for building distributed <span>software</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span><span>systems</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>&quot; <i>Applied Artificial Intelligence</i>. <strong>13</strong>(1-2), 92-128.</li>
+
+<li><a name="perret"></a>Mauldin, M. (1991), "Retrieval <span>performance</span>  <span class="exper" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in FERRET: a conceptual information retrieval system,&quot; <em>in: 14th Conference on Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>in Information Retrieval (ACM-SIGIR)</em> pp. 347-355. New York, NY: ACM Press.</li>
+
+<li><a name="semanticvideo"></a> Naphade, M. &amp; Huang, T. (2001), "<span>A+</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>probabilistic <span>framework</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for wemantic video indexing, filtering and retrieval". <i> IEEE Transaction on Multimedia</i>, <strong>3</strong>(1), 141-151 </li>
+
+<li><a name="omg"></a>Object Management Group (OMG) (2002).  <em><a href="http://www.omg.org/corba/">CORBA</a></em>.  Needham, MA: Object Management Group. Available at: http://www.omg.org/corba/ [Site visited 10th July 2002] </li>
+
+<li><a name="metamodellingarchi"></a> Pan, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Horrocks, I. (2001). &quot;Metamodeling architecture of web <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>languages&quot;. <i> in:  Proceedings. of the First <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web Working Symposium (SWWS'01), Stanford University, California.</i>  pp. 131-149.  Heidelberg: Sprnger-Verlap Heidelberg.</li>
+
+<li><a name="browsingschedule"></a> Payne, T., Singh, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Sycara, K. (2002), &quot;Browsing schedules - an agent-based approach to  navigating the <span>semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>web&quot;,  <i>in: The First International <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web Conference (ISWC), Sardinia, Italy</i>. pp. 469-474 Heidelberg: Sprnger-Verlap Heidelberg.</li>
+
+<li><a name="xql"></a> Robie <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> <em>ed.</em> (1999), <em><a href="http://www.ibiblio.org/xql/xql-proposal.html">XQL (XML Query Language) August 1999</a></em>  <span>Chapel</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Hill, NC: iBiblio.  Available at: http://metalab.unc.edu/xql/xql-proposal.html [Site visited 10th July 2002]</li>
+
+  
+  <li><a name="scholonto"></a> Shum, S., Motta, E. &amp; Domingue, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (2000), "ScholOnto: an ontology-based digital library server for research <span>documents</span>  <span class="quanti" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>and discourse", <i>International  Journal on Digital Libraries</i>, <strong>3</strong>(3), 237-248.</li>
+  
+<li><a name="imager"></a> Smeulders, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, Worring, M., Santini, S., Gupta, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Jain, <span>R++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (2000), &quot;Content-based image retrieval at the end of the early years&quot;, <i> IEEE Transaction on Pattern Analysis and Machine Intelligence</i>, <strong>22</strong>(12), 1349-1380.</li>
+
+<li><a name="larks"></a> Sycara, K., Widoff, S., Klusch, M.,  Lu, <span>J++</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> (2002), &quot;LARKS: dynamic matchmaking among heterogeneous <span>software</span>  <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> agents in cyberspace&quot;, <i>Autonomous Agents and Multi-Agent Systems</i>, <strong>5</strong>, 173-203.</li>
+
+<li><a name="updatexml"></a>Tatarinov, I., Ives, Z., Halevy, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, Weld, D.  (2001), &quot;Updating XML&quot;. <em>in: Proceedings of ACM SIGMOD International  Conference on Management of Data</em>, Santa Barbara, CA.  pp. 413-424.  New York, NY: ACM Press.</li>
+
+<li><a name="cgi"></a>University of Illinois. National Center for Suprcomputing Applications. (n.d.)<a href="http://hoohoo.ncsa.uiuc.edu/cgi/">The Common Gateway Interface.</a>  Urbana-Champaign, IL: University of Illinois.  Available at: http://hoohoo.ncsa.uiuc.edu/cgi/ [Site visited 10th July 2002] </li>
+
+<li><a name="alignmentontology"></a>Utiyama, M. and Ha0a, K. (1997), &quot;Bottom-up alignment of ontologies&quot;, <i>IJCAI-97 Workshop EP24 - Ontologies and Multilingual NLP, Nagoya, Japan</i>. Las Cruces: New Mexico State University. Available at http://crl.nmsu.edu/Events/IJCAI/ [Site visited 10th July 2002]</li>
+
+<li><a name="imageclass"></a> Vaiulaya, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>, Figueiredo, M., Jain, <span>A+</span>. <span class="compus" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span> &amp; Zhang, H. (2001), "Image <span>classification</span>  <span class="quali" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>for content-based indexing", <i> IEEE Transaction on Image Processing</i>,  <strong>10</strong>(1), 117-130</li>
+
+<li><a name="damloil"></a> van Harmelen, F.,  &amp; Horrocks, I.  <em>eds.</em> (2001). <em><a href="http://www.daml.org/2000/12/reference.html">Reference <span>description</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>of the DAML+OIL <span>ontology</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>markup language. </a></em> Arlington, VA: DARPA Agent Markup <span>Language</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Site.  Available at:  http://www.daml.org/2000/12/reference.html. [Site visited 10th July 2002]</li>
+
+<li><a name="dom"></a>World Wide Web Consortium. <em>Document Object Model Working Group</em> (2002), &quot;<a href="http://www.w3.org/DOM/"><em>Document object model (DOM).</em></a>&nbsp; Cambridge, MA: W3C.  Available at: http://www.w3.org/DOM/. [Site  visited 10th July 2002]</li>
+
+<li><a name="sax"></a> WWW.Saxproject.org  (n.d.) <a href="http://www.saxproject.org/">About SAX</a> Available at: http://www.saxproject.org/. [Site visited 10th July 2002]</li>
+
+<li><a name="xmledi"></a>XML/EDI-Group  (n.d.)   <em><a href="http://www.geocities.com/WallStreet/Floor/5815/">XML/EDI, the E-business <span>framework</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span></a></em> [ No place give]: XML/EDI-Group.  Available at: http://www.geocities.com/WallStreet/Floor/5815/. [Site visited 10th July 2002]</li>
+</ul>
+
+<hr color="#ff00ff" size="3">
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</p>
+<p style="text-align : left; color : black;">Lu, Shiyong, Dong, Ming and Fotouhi, Farshad (2002)
+&quot;The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>Web: opportunities and challenges for next-generation Web <span>applications</span>. <span class="conce" style="width:1px;border-width:90px 30px 90px 30px;position:relative;">.</span>&quot; <em>Information Research</em> <strong>7</strong>(4),  Available at: http://InformationR.net/ir/7-4/paper134..html<br></p>
+
+<p style="text-align : center"> &copy; the authors, 2002.  Updated: 30th April, 2002</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:IQMwqFb01jIJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres74.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><IMG SRC="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper134" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color="#ff00ff" size="3">
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/7-4/paper134.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:29 GMT -->
+</html>

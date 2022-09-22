@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!-- Mirrored from informationr.net/ir/7-2/CLIR.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:37:38 GMT -->
+<HEAD>
+<TITLE>Targeted s-gram matching: a novel n-gram matching technique for cross- and monolingual word form variants</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=us-ascii">
+<META content="MSHTML 6.00.2479.6" name=GENERATOR>
+<META 
+content="We present a novel n-gram based string matching technique, which we call the targeted s-gram matching technique. In the technique, n-grams         are classified into categories on the basis of character contiguity in words. The categories are then utilized in matching. The technique was       compared with the conventional n-gram technique using adjacent characters as n-grams. Several types of words and word pairs were studied.       English, German, and Swedish query keys against their Finnish spelling variants and Finnish morphological variants were matched using a target         word list of 119 000 Finnish words. In all cross-lingual tests done, the targeted s-gram matching technique outperformed the conventional       n-gram matching technique. The technique was highly effective also for monolingual word form variants. The effects of query key length and the                   length of the longest common subsequence (LCS) of the variants on the performance of s-grams were analyzed." 
+name=description>
+<META content=Mature name=rating>
+<META content=Document name=VW96.objecttype>
+<META content=ALL name=ROBOTS>
+<META 
+content="Targeted s-gram matching: a novel n-gram matching technique for  cross- and monolingual word form variants" 
+name=DC.Title>
+<META 
+content="Ari Pirkola;Heikki Keskustalo;Erkka Leppänen;Antti-Pekka Känsälä;Kalervo Järvelin" 
+name=DC.Creator>
+<META 
+content="We present a novel n-gram based string matching technique, which we call the targeted s-gram matching technique. In the technique, n-grams         are classified into categories on the basis of character contiguity in words. The categories are then utilized in matching. The technique was       compared with the conventional n-gram technique using adjacent characters as n-grams. Several types of words and word pairs were studied.       English, German, and Swedish query keys against their Finnish spelling variants and Finnish morphological variants were matched using a target         word list of 119 000 Finnish words. In all cross-lingual tests done, the targeted s-gram matching technique outperformed the conventional       n-gram matching technique. The technique was highly effective also for monolingual word form variants. The effects of query key length and the                   length of the longest common subsequence (LCS) of the variants on the performance of s-grams were analyzed." 
+name=DC.Description>
+<META content="Professor T.D. Wilson" name=DC.Publisher>
+<META content=Global name=DC.Coverage.PlaceName>
+<META content="Mozilla/4.6 [en] (Win95; I) [Netscape]" name=GENERATOR>
+<LINK href="../IRstyle.css" rel=stylesheet>
+<LINK rev=made href="mailto:t.d.wilson@shef.ac.uk">
+</HEAD>
+<BODY bgColor=#ffffff>
+
+
+<H1>CLIR Research at the University of Tampere: issue Editorial</H1>
+
+<H4><A href="mailto: pirkola@cc.jyu.fi">Ari Pirkola</A>&nbsp;<BR>Department of Information Studies<BR>&nbsp; University of Tampere<BR>Finland</H4>
+<br><br>
+<P>Cross-language information retrieval </I>(CLIR) refers to an 
+information retrieval task where the language of queries is other than that of 
+the retrieved documents. A user may present a query in his/her native language 
+and in response the system retrieves documents in another language. Query 
+translation can be done using thesauri, corpora, dictionaries or machine 
+translation systems. An overview of different approaches to CLIR is in Oard and 
+Diekema (<A href="#oard98">1998</A>). </p>
+
+<P>This special issue of <I>Information Research</I> presents recent CLIR 
+research done at the <I>University of Tampere</I> (UTA). We have adopted the 
+dictionary-based approach. In <I>dictionary-based cross-language retrieval</I>, 
+queries are translated by means of electronic dictionaries by replacing source 
+language query keys with their target language equivalents. The main problems 
+associated with dictionary-based CLIR are (1) untranslatable query keys due to 
+the limitations of general dictionaries, (2) the processing of inflected words, 
+(3) phrase identification and translation, and (4) lexical ambiguity in source 
+and target languages. The category of untranslatable keys involves compound 
+words, special terms, and cross-lingual spelling variants, i.e., equivalent 
+words in different languages which differ slightly in spelling, particularly 
+proper names and technical terms. </p>
+
+<P>Earlier CLIR research done at UTA is summarized in Pirkola <I>et al.</I>. (<A 
+href="#pirkola01">2001</A>). We have devised a <I>query structuring</I> 
+technique. Many studies have shown that it is an effective disambiguation 
+method, in particular in the case of long queries. We have tested different 
+translation methods using <I>dictionary combinations</I> of general and domain 
+specific dictionaries. Earlier CLIR research at UTA also involves the 
+development of <I>morphological typology</I> of languages for IR. A set of 
+computable variables characterizing the morphological features of natural 
+languages were developed to be used in CLIR system development and evaluation. </p>
+
+<P>The articles presented in this special issue deal with n-gram based matching 
+of cross-lingual spelling variants and monolingual morphological variants, 
+compound word processing in CLIR, and target language query disambiguation based 
+on word frequency statistics of a document collection. </p>
+
+<h2>N-gram matching for untranslatable keys</h2>
+
+<P>General dictionaries only include the most commonly used proper names and 
+technical terms. Most of them are untranslatable. A common method to handle 
+untranslatable words in dictionary-based CLIR is to pass them as such to the 
+final target language query. In many languages proper names and technical terms 
+are spelling variants of each other. This allows the use of n-gram matching to 
+find the target language correspondents of the source language query keys. In 
+n-gram matching, query keys and index terms are split into the substrings of 
+length n. The n-gram sets of keys and index terms are compared, and the best 
+matching words are then used as query keys. </p>
+
+<P>In their paper, Pirkola, Keskustalo, Lepp&auml;nen, K&auml;ns&auml;l&auml;, and J&auml;rvelin examine 
+the effectiveness of digrams combined both of adjacent and <I>non-adjacent 
+</I>characters of words in cross- and monolingual word form matching. They 
+present a novel n-gram matching technique (called the <I>targeted s-gram 
+matching </I>technique), in which n-grams are classified into categories on the 
+basis of the number of skipped characters. The n-grams belonging to the same 
+category are compared with one another, but not to n-grams belonging to 
+different&nbsp; categories. The effectiveness of the technique is examined 
+empirically. The results show that for Finnish-English, German-English, and 
+Swedish-English cross-lingual spelling variants the technique outperforms the 
+conventional n-gram matching technique using adjacent characters as n-grams. </p>
+
+<h2>Compound words in CLIR</h2>
+
+<P>Natural languages are productive systems that unlimitedly generate new 
+compounds words. Some languages, such as Finnish, German, and Swedish are 
+characterized by high percentage of compounds. Typically translation 
+dictionaries of such languages include the lexicalised compounds. Most compounds 
+are untranslatable, however. It is thus obvious that effective dictionary 
+look-up and the searching of compound words in CLIR cannot solely be based on 
+full compounds but also on their component parts. For good retrieval 
+performance, compound splitting with a morphological analyzer and separate 
+translation of component words are necessary. To promote phrase recognization, 
+the component translations are recombined with a proximity operator in the 
+target language query. </p>
+
+<P>In her paper, Hedlund considers linguistic features of Finnish, German, and 
+Swedish compound words, as well as CLIR compound processing, i.e., the 
+decomposition of full compounds into their component parts, the normalization 
+and translation of the component parts, and the recombination of component 
+translations with proximity operators. In the paper, the effects of compound 
+processing on CLIR performance are tested. </p>
+
+<h2>The use of average term frequency in CLIR</h2>
+
+<P>In their paper, Pirkola, Lepp&auml;nen, and J&auml;rvelin examine the utilization of 
+average term frequency in CLIR. Dictionaries typically give many mistranslated 
+words for source language keys. Many of the mistranslated words are general 
+words whose average term frequency is low and document frequency high. The 
+opposite holds for more specific terms which often are important keys in 
+queries. These facts as a starting point, the researchers developed a query key 
+goodness scheme (called the <I>RATF formula</I>, where RATF stands for 
+<I>relative average term frequency</I>). The use of the RATF formula in CLIR is 
+tested empirically. Query keys are weighted based on their RATF values. The 
+assumption is that in this way good keys are given more weight than bad keys. 
+Also other key weighting methods associated with RATF which particularly are 
+suited for CLIR are tested. The results indicate that RATF-based CLIR queries 
+often perform better than undisambigauated CLIR queries, but the results also 
+indicate the limitations of the use of RATF in CLIR. <BR>&nbsp; </p>
+
+<H2>Acknowledgements</H2>
+
+<p>I would like to thank Editor-in-Chief, Prof. Tom Wilson, for his help in preparing this special issue. </p>
+<BR>&nbsp; 
+<H2>References</H2>
+<UL>
+  <LI><A name=oard98></A>Oard, D. and Diekema, A. (1998) Cross-Language 
+  Information Retrieval. <I>Annual Review of Information Science and Technology 
+  (ARIST)</I>, <strong>33</strong>, 223-256. </LI>
+  <LI><A name=pirkola01></A>Pirkola, A., Hedlund, T., Keskustalo, H., and 
+  J&auml;rvelin, K. (2001) Dictionary-based cross-language information retrieval: 
+  problems, methods, and research findings. <I>Information Retrieval</I>, 
+  <strong>4</strong>(3/4), 209-230. </LI>
+  </UL>
+  
+<HR color=#ff00ff SIZE=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</p>
+<p style="text-align : left; color : black;">Pirkola, A. (2002) &nbsp;"CLIR Research at the University of Tampere: issue Editorial"] <I>Information Research</I>, <B>7</B>(1) [Available at: http://InformationR.net/ir/7-2/CLIR.html]</p>
+<HR color=#ff00ff SIZE=3>
+
+<div align="center">&copy; the author, 2002. <BR>Last updated: 20 January 2002</div>
+
+<HR color=#ff00ff SIZE=3>
+
+<h5 align="center"><IMG SRC="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/CLIReditorial" ALIGN=middle
+      WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a></h5>
+
+<HR color=#ff00ff SIZE=3>
+</DIR></BODY>
+<!-- Mirrored from informationr.net/ir/7-2/CLIR.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:37:38 GMT -->
+</HTML>

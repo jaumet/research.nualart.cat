@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<!-- Mirrored from informationr.net/ir/15-3/colis7/colis712.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:24 GMT -->
+<head> 
+<title>From HTML to XML and more? A case study of language games within portal server technology implementation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<link href="../../IRstyle2.css" rel="stylesheet" media="screen" title="serif" /> 
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../../IRstylesans.css" /> 
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" /> 
+ 
+<!--Enter appropriate data in the content fields--> 
+<meta name="dc.title" content="From HTML to XML and more? A case study of language games within portal server technology implementation" /> 
+<meta name="dc.creator" content="Jan Nolin, Katrina Bystrom" /> 
+<meta name="dc.subject" content="A case study of the difficulties in communicating implementation of complex XML-based portal server technology. " /> 
+<meta name="dc.description" content="Purpose. We investigate one specific case in which the transformation from a HTML to an XML-based organizational Web environment was pursued through portal server technology. The aim is to understand the dynamics of negotiating functionality when there are so many more options available than merely shifting to XML.  Method. We report the early phases of a longitudinal study in which various members of the organization, as well as developers, are repeatedly interviewed in order to map changing insights and attitudes. The array of misunderstandings observed is discussed through Wittgenstein's concept of language games.  Results. Ordinary users are seen to have substantial difficulties in understanding and discussing the new technology. Their emphasis is on sophisticated applications that developers were unable to implement in time for the launching of the portal. Members of the project group and the steering group also evidenced difficulties in communicating on the key language games on motives, priority, features, implementation and timeline.  Originality. The use of language games, and a longitudinal qualitative study, supplies an in-depth view of complications connected to the implementation of information systems that involves existing information practices. " /> 
+<meta name="dc.subject.keywords" content="XML, portal server technology, language games, adaptive website,  portal technology" /> 
+ 
+<!--leave the following to be completed by the Editor--> 
+<meta name="robots" content="all" /> 
+
+<meta name="dc.publisher" content="Professor T.D. Wilson" /> 
+<meta name="dc.coverage.placename" content="global" /> 
+<meta name="dc.type" content="text" /> 
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" /> 
+<meta name="dc.identifier" scheme="URI" content="colis711.html" /> 
+<meta name="dc.relation.IsPartOf" content="colis7.html" /> 
+<meta name="dc.format" content="text/html" /> 
+<meta name="dc.language" content="en" /> 
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" /> 
+<meta name="dc.date.available" content="2010-09-15" /> 
+ 
+<script language="javascript" type="text/javascript"> 
+ 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script> 
+	
+<style type="text/css"> 
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+ 
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; --> 
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+ 
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+ 
+legend {
+    color: white;
+    background-color: #5E96FD;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+ 
+ 
+</style> 
+ 
+</head> 
+<body bgcolor="#ffffff"> 
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../../mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 15  no. 3, September, 2010</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="../infres153.html">Contents</a> |  </li>
+        <li><a href="../../iraindex.html">Author index</a> |  </li>
+        <li><a href="../../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../../search.html">Search</a> |  </li>
+        <li><a href="../../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+
+<hr style="COLOR: #5E96FD" size="1" /> 
+ <h2 style="text-align: center;">Proceedings of the Seventh International Conference on Conceptions<br /> of Library and Information Science&mdash;&quot;Unity in diversity&quot;</h2>	
+
+ 
+<h1>From HTML to XML and more? A case study of language games within portal server technology implementation</h1> 
+<br /> 
+<div style="margin-left: 10%; margin-right: 10%;"> 
+<h4><a href="authorshtml.html">Jan Nolin and Katriina Bystr&ouml;m</a><br /> 
+Swedish School of Library and Information Science, University of Bor&aring;s, Sweden</h4> 
+</div> 
+<br /> 
+ 
+<form action="#"> 
+<fieldset> 
+<legend>Abstract </legend> 
+<blockquote>
+<strong>Purpose</strong>. We investigate one specific case in which the transformation from a HTML to an XML-based organizational Web environment was pursued through portal server technology. The aim is to understand the dynamics of negotiating functionality when there are so many more options available than merely shifting to XML.<br />
+<strong>Method</strong>. We report the early phases of a longitudinal study in which various members of the organization, as well as developers, are repeatedly interviewed in order to map changing insights and attitudes. The array of misunderstandings observed is discussed through Wittgenstein's concept of language games. <br />
+<strong>Results</strong>. Ordinary users are seen to have substantial difficulties in understanding and discussing the new technology. Their emphasis is on sophisticated applications that developers were unable to implement in time for the launching of the portal. Members of the project group and the steering group also evidenced difficulties in communicating on the key language games on motives, priority, features, implementation and timeline. <br />
+<strong>Originality</strong>. The use of language games, and a longitudinal qualitative study, supplies an in-depth view of complications connected to the implementation of information systems that involves existing information practices. 
+</blockquote>
+</fieldset> 
+</form> 
+ 
+<br /> 
+<div align="center"> 
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: #5E96FD;" onclick="doChangeFont()" /></div> 
+
+<br /> 
+
+ <h2>Introduction </h2>
+
+<p>Most major organizations have performed or are in the process of performing a transformation from a Web environment built on HTML to that of XML. The most advanced way of proceeding is to implement <i>portal server technology</i> (hereafter: portal technology). This enables a platform for a series of sophisticated applications not possible with the old structure. It is reasonable to assume that the introduction of portal technology will initiate a series of organizational shifts (e.g., <a href="#gulg">Gulliksen <em>et al.</em>  2003</a>). It is therefore important for members of the organization to be fully briefed about the purpose of the new technology as well as expected complications following implementation (e.g., <a href="#rav"> Ravichandran 2005 </a>; <a href="#gulg">Gulliksen <em>et al.</em>  2003 </a>). However, the specific impact may be difficult to anticipate beforehand since this technology carries a wealth of possible applications and accompanying difficulties in implementing these. As previous research has shown, implementing complex information systems to an organization is cumbersome process, involving many actors and often failing in one way or another, causing large costs in money, time and effort for both an individual user and the organization as whole (e.g., <a href="#venb"> Venkatesh and Bala 2008</a>). </p> 
+
+<p>We identify multifunctionality as a crucial dimension of a portal technology. It is characterised by a high degree of flexibility and extensive potential. Ideally, it is implemented to a well structured Web environment based on XML. The outcome would then be more predictable than when it is to replace a poorly organized HTML-based structure. In the latter case, more relevant to most real life settings, the multifunctionality becomes not only an asset, but also a complication. It is easier to communicate, negotiate, allocate resources and implement a simple technological artefact. Even though, any reasonably complex technological implementation carries with it a number of "unknowns", we argue that some cases, such as the one we studied, adds an additional dimension: we lack knowledge on how complex it is. This statement is valid also for the specialists set to implement the technology. For portal technology to function, it must be transferred from an idealised research and development context into complex localised settings that already host a messy Web environment together with a number of individual and/or in-house developed information systems for specific purposes. As a result, not even the specialists of different features of portal technology can precisely predict the kind of challenges that will appear nor the extent of work required to deal with these.</p>
+
+<p>Great expectations can be invested in this kind of platform. For <em>ordinary</em> users expectations related to perceived ease of use and especially to perceived usefulness are most compelling and related to both individual and social aspects of understanding the new technology (e.g., <a href="#venb"> Venkatesh and Bala 2008</a>; <a href="#veng"> Venkatesh and Goyal forthcoming</a>). However, the existing Web environment and the organizational needs and resources will always constrain what is possible or prioritized to implement. Furthermore, the specific complications and constraints in implementing cannot, we argue, be known beforehand. Therefore, the issue of what functionality will become available to the organization is more difficult to be agreed on than in projects with more clear-cut functionality. Given enough technological and institutional complexity, the involved professionals might find fundamental difficulties in communicating about the matching of available resources and needs both before and during implementation.</p>
+
+<p>More specifically, based on our case study, we will argue that the traditional goal oriented model of technological implementation (i.e., goals, resources and incentives are initially stipulated by contract) is ill suited for the complexities of moving from HTML to XML with portal technology. By necessity, the process needs to be adaptive as the fundamental goals of implementation continuously need to be renegotiated. We will be analysing a particular case in which a very messy transmuting process was fitted into a goal oriented model with certain adaptive feedback loops. We actually see this as a rather sophisticated attempt at handling the complexity of the process. Still, the project failed regarding many objectives, some in technical level, and some in social. Our basic research question is: what were the main complications involved that caused a sophisticated and competent project organization to fail in implementation?</p>
+
+
+ <h2>The case study </h2>
+
+<p>This article is one in a series that, based on a longitudinal qualitative interview study, investigate the complexities of one particular implementation of portal technology. It is a case where the degree of deviation from expectations is beyond the <em>zone of tolerance</em> (<a href="#bro">Brown, <em>et al.</em>  forthcoming</a>). In this paper, we are concerned with the interaction between the project group that worked with implementation and the internal steering group that served to settle goals and working principles for the project. As it was recognised that implementation was complex, the steering group were to intervene when the project needed to be steered in a new direction. Furthermore, the steering group made decisions of an overreaching character and followed the economical situation.</p>
+
+<p>Multifunctional Web-based digital tools are complex and expert driven. It can be difficult to attain an overview on what happens when certain features and functionalities are connected to each other within the context of specific organizational needs. A number of features turn out to be unnecessary; others are in conflict with well established routines and professional standards. Some features will take too much time or are too expensive to maintain for the organization. During a lengthy implementation process, priorities and economical frameworks are likely to shift in varying degree.</p> 
+
+<p>An important dimension of such type of complexity is that the different actors find it problematic to engage in a generic way of talking about portal technology. The difficulty in communication between different actors in relation to system development is an old, known problem (e.g., <a href="#jur">Juristo, Moreno and Sanchez-Segura 2007</a>; <a href="#gull">Gulliksen and Lantz  2003</a>; <a href="#che">Chen <em>et al.</em>  1987</a>). Already in the middle of the 1960s, the importance of communication between developers and users was acknowledged (<a href="#att">Attewell 1992</a>). In the middle of the 1980s, researchers focused on the complexity of the dialogue between different organizational levels (as they needed to be addressed simultaneously) as well as flawed communication due to different perspectives of users and developers on key areas (<a href="#che">Chen <em>et al.</em>  1987</a>). Despite these efforts, the complexity of communication has remained as one of the main troubles in information technology development projects.</p>    
+
+<p>In this article, we are concerned with the way the people with the technical expertise and those with the organizational experience talk to each other about:</p> 
+
+<ul>
+	<li>motives for implementation,</li>
+	<li>features that are to be implemented,</li>
+	<li>which features should be prioritised,</li>
+	<li>what kind of implementation and resources the project should adapt to and</li>
+<li>what kind of timeline should be stipulated.</li>
+
+</ul>
+
+<p>The integration of a new and complex multifunctional technology with a messy, older technology within an organization with vaguely articulated needs, is a huge and difficult task. As pointed out by for example Gulliksen <em>et al.</em>  (<a href="#gulg">2003</a>), such projects tend to alter as they progress, causing changes in priorities and perspectives. Our case is one of these unusual projects where it  has been difficult to stipulate fixed resources, procedures and goals. Instead, at least in our case, more resources were repeatedly demanded and given, deadlines were constantly revised and goals concerning sophisticated applications were not met in time for the launching of the platform.</p>
+
+
+ <h2>Article outline </h2>
+
+<p>After a brief methodological reflection, we will present the basic components of portal server technology. Thereafter, we discuss how the well-known notion of "language games", first suggested by Wittgenstein (<a href="#wit">1953</a>) can be relevant for understanding the problems of talking about portal technology. In applying the ideas of Wittgenstein to this area of research, we identify several of the difficulties in talking about both the project and the technology. We will then discuss the specific concepts and challenges involved in talking about the implementation and functionality based on the empirical material. We will show that it is possible to view the discussions on the project as involved in interlinked language games. We maintain that it is the complexity of these language games that constitutes the major difficulty in obtaining successful implementation. We will focus on the perspectives of the project leader working with the implementation and that of the steering group, and provide as a wider context some examples of how the ”ordinary users” perceive the development. We will close this article by arguing for the necessity of linking introduction of portal technology with a well-designed collaboration strategy in order to minimize the triggering of various implementation effects. various various implementation effects.</p>
+
+
+ <h2>Methodological reflections </h2>
+
+<p>This article is based on a longitudinal case study in which the same informants are revisited at different times. Altogether fifteen persons were interviewed before implementation, six months after and are planned to be interviewed again eighteen months after. In the selection of respondents, we aimed for a mixture between three different groups: system developers and technical users, organizational leaders and <em>ordinary</em> users. In a few cases, a respondent had left the organization as we moved into the next round of interviews. In those cases, we introduced a new respondent as a new representative of the relevant group. We have anonymized the organization and therefore also some of the material that is closely related to the case. We have concerned ourselves with perspectives rather than individuals. As a consequence, our treatment of interview material is based on perspective, what group different statements belong to. In this article, we will focus on interviews with system developers/technical users (names starting with D) and members of the steering group (names starting with S) as well as used some expressions from ordinary, end users (names starting with E). All interviews have been treated confidentialy and we have strived to make all statements or quotations difficult to attach to the individual respondent.</p>
+
+ <h2>Portal technology </h2>
+
+<p>Because of the growing complexity of Web-based services, large organizations often need to integrate various types of contents, applications and services into a single platform. Portal technologies are therefore multifunctional technologies constructed to create an integrated environment for various types of data and resources in order to create customization, content aggregation, content syndication, multi-device support, single sign-on services, portal administration and portal user management (<a href="#weg">Wege 2002</a>). </p>
+
+<p>The portal is built for flexibility and is therefore an exceptionally neutral and bland product without the various portlets that supply functionality. Each portlet reside in a portlet container and serves as an interface between the portal and other internal and external Web resources. The portlet can, for instance, access an external as well as an internal financial service. Portals can also publish remote portlets as Web services that allow easy access and integration.</p>
+
+
+<p>The portal server technology that was implemented in the organization we studied was IBM WebSphere. IBM is together with Microsoft considered to be leaders in development of portal server technology. In the development of this kind of technology, big is beautiful. IBM freqently publishes remote portlets as generic services to the customer portals.</p>
+
+<p>There is a kind of paradox involved in the work of revising old systems that also applies for portal technology: it is blamed for doing good. The main idea may be to create a tool for structuring Web-based resources. The formals benefit would be to avoid future Web development becoming marred by various types of incompatibilities and a lack of basic structure. However, as it is implemented, it will be forced to confront and deal with all the incompatibilities and messiness of the old structure. Observers might therefore interpret it as <em>introducing problems</em>, while it is actually waking the sleeping dogs and troubleshooting. </p>
+
+<p>However, in another sense, portal technology actually does introduce problems into the receiving organization. New ideas of structuring and utilising information are introduced and these build on specialised knowledge traditions that will be difficult for the layman to grasp. Furthermore, portal technology is so rich in potential that members of a receiving organization will have a difficult time finding out what specific knowledge traditions are worth reading up on.</p>
+
+<p>Even the most basic of all ideas, the move from HTML to XML, can be interpreted in a wide variety of ways. We will presently develop this argument, but first we must introduce Wittgenstein's idea of <em>language games</em>.</p>
+
+ <h2>Language games and multifunctional information technology </h2>
+
+<p>A dominant theme in Wittgenstein's book <i>Philosophical Investigations</i>, is the idea that concepts are bound to particular practices (<a href="#wit">Wittgenstein 1953</a>). The concept of <em>language games</em> is an analytical device introduced in order to characterize concepts as meanings that blend into other concepts that have a family resemblance in a specific practice. In other words, individual concepts do not have a general meaning regardless of practice. Instead, they are bound to specific practices where they play distinct roles that are relative to other concepts with a family resemblance in that context.</p>
+
+<p>The contextual processing of concepts has been systematically refined in academic disciplines. Phillips (<a href="#phi">1977</a>) and Gergen (<a href="#ger">1982</a>) have both suggested that the paradigm concept of Kuhn (<a href="#kuh">1970</a>) builds on similar ideas as that of language games. Kuhn developed the concept of incommensurability, suggesting that there is no neutral point at which the language of different research disciplines can meet. Astley and Zammuto (<a href="#ast">1992</a>) explicitly sees the assignment of meaning in research as rooted in specialized forms of discourse (language games) in their analysis of the research field Organization Science. Similarly, Collins (<a href="#col">1981</a>) argues that researchers strive to achieve clarity through well sharpened concepts. Despite this, any attempt at exactly pinpointing the meaning of the concept is done through increased wordiness. This, in turn, leads to a kind of regress as complex concepts are defined by other terms that are in need of precision. Collins introduced the concept of " interpretative flexibility" in order to describe the openness and ambiguity of research based concepts. Only members of a strictly specialized research community are able to understand the language games of specialized science.</p>
+
+<p>It is easy to draw parallels between the practice of research and other domains of knowledge that build on a specialized tradition. In other words, we suggest that the production of multifunctional information technology, such as portal technology, is steeped in traditions that have developed over a long period of time. Concepts will not be readily understandable by outsiders, since they reflect complex ideas that receive their meaning in their relation to other concepts with a family resemblance within those specific traditions.</p>
+
+<p>As specialized technology is transferred from a context of research and development into practical implementation, a series of ideas and concepts are brought along. It is the argument of this article that successful implementation requires not only achieving the desired functionality of the technology, but also that the accompanying ideas and concepts are popularized systematically into the new organization. If only "the hardware" is transferred, there is an obvious risk that the members of the receiving organization that are supposed to guide the implementation, are not allowed the necessary tools to understand the turns in the course of action.</p>
+
+<p>The implementation of multifunctional portal technology adds an additional layer of complexity. There is a wide range of possible features and each of them is involved in a series of different language games. Furthermore, since it is not possible to predict ahead of time what features will become materialized, information strategies directed toward the members of the organization run the risk of emphasizing the <em>wrong</em> language games. </p>
+
+ <h2>The language games of XML </h2>
+
+<p>Our case study analyses the transformation of a traditional organizational Web environment, built with HTML, to portal technology. In order to understand the meaning of <em>a portal</em>, the user is required to take in a number of related, but equally complex, concepts, such as XML, platform, portlet, servlet, Java, JSP, etc. In addition, some of these concepts are still vague in their application. The number of concepts used, in combination with their complex relationship to neighboring terms, creates fundamental challenges in communication as the project proceeds.</p>
+
+<p>Let us examplify with the specific language games surrounding the markup language XML (Extensible Markup Language). This connects to the most fundamental task of the project, a move from HTML to XML. But what does that mean? Members of the receiving organization working closely or at distance from the process will receive this basic information. It is taken for granted that this is something that everyone understands. While many may have a working knowledge of what HTML stands for, understanding XML is more difficult.</p>
+
+<p>XML actually signifies a number of diverse meanings, all of them bound into complex and specialised language games. In addition, the portal technology can be the foundation for a series of different applications which, in turn, rely on specialised usages of XML. As the ranges of possible applications are unknown, it becomes difficult for members of the organization to understand what features of XML that are relevant to understand. We will below discuss some of the possible language games involved.</p>
+
+<p>On the one hand, it can be seen as a markup language, on the other, it can just as easily be taken to be a standard for developing markup languages (such as XHTML). Quite often, the concept "XML" is extended to include specifications that use XML as a standard. Therefore, when two specialists discuss "XML" they might actually refer to XML together with the whole family of related specifications such as XSLT, XPath, XML Base, XML Signature - to name but a few. However, it is also possible that they might refer to a broader range of XML related technologies that may or may not be based on XML such as WAP, RSS, SOAP, SVG etc. Finally, it may very well be the case that the specialists were referring to the discrete domain of XML work that they were devoted to, perhaps XML JavaScript or XML Basic.</p>
+
+<p>Already, we can see that the simple statement <em>move from HTML to XML</em> can be interpreted in several ways. Still, all these interpretations build on an object-oriented programming tradition. However, XML is also the product of humanistic tradition of discussing publication, books, texts, document layout, typographic structures, reading and language. This is an ancient tradition which has merged with the object-oriented programming tradition as printing became digitalised.</p>
+
+<p>In order to understand XML and its function, we need to be aware of how it was created as response to problems with the earlier standard of Standardized General Markup Language (SGML) and HTML. The latter was created as a simple markup language that treated information as documents. As it was so easy to learn, the practice of creating Web pages spread widely in the early 1990s. However, the simplicity increasingly became a problem as the need for a number of sophisticated functions increased. XML was created to treat information as separate data, allowing flexible use of merked up data that was not possible with the earlier standards.</p>
+
+<p>XML is built on the <i>flexible</i> content-based strategy (<a href="#ren97">Renear 1997</a>) of producing digital documents. This strategy leads to considerably <i>increased flexibility </i>compared to the earlier standards. Simultaneously, XML is structured according to a hierarchical principle often described as Ordered Hierarchy of Content Objects (OHCO) that serves to <i>constrict flexibility</i>. In addition, the hierarchical principle is quite often difficult to implement in practice as various concepts tend to appear in different documents with different meanings. This adds on the phenomenon of which has often been described as the problem of overlapping hierarchies (<a href="#bar">Barnard <em>et al.</em>  1988</a>). Thus now flexibility is not only a strength, but also a problem.</p>
+
+<p>There are more contradictions to be found in XML. Goldman <em>et al.</em>  (<a href="#gol">2000</a>) noted that the functionality of XML would require it to be defined as a data model, instead of traditional view of it as a textual language. So far we have focused on XML as a tool for organizing textual data. However, the creation of XML can also be seen in the context of the larger project of maintaining a coherent World Wide Web (<a href="#rob">Robie <em>et al.</em> 2001</a>). As such, it can be conceptualised as the glue that holds together a series of key technologies and make communication between them possible. As a result, XML is used as a foundation for a number of different applications, such as portal technology.</p> 
+
+<p>Sometimes the integration of XML with other technologies is actually a way to resolve some of the fundamental problems that have been discussed above. For instance, XML is more often than not integrated with Resource Description Framework (RDF). This can be seen as a strategy for bypassing the problem with overlapping hierarchies as RDF serves to supply global identities that are unique for each hierarchy. RDF can be perceived as a tool for Web-based XML applications. At the same time, RDF could be interpreted as a part of the XML family as it actually is an XML-based language. However, as it also is a data model, it constitutes at the same time a break with some of the ideas underpinning XML.</p>
+
+<p>A key feature of XML as an instrument for facilitating digital publication, is the idea of "one input many outputs", which signifies the possibility of utilizing the same information in different hierarchies (<a href="#hil">Hillesund 2002</a>). </p>
+
+<p>In this section, we have been unpacking some of the language games (specialized discussions and ambiguities) connected to one of the many technologies (XML) associated with the portal technology. Once again, this is just one example of many. The way that people in this project talk about XML is linked to the available features of the multifunctional portal technology. Many representatives of the organization will discuss features and priorities of features in a way that presupposes an understanding of a certain interpretation of XML. When such insights are lacking, discussions tend to be vague. We have earlier argued that in the case we studied, it turned difficult to predict when desired functions would be implemented. This is an issue we will address in the next section.</p>
+
+ <h2>The implementation of portal technology in our case study </h2>
+
+<p>As has been argued earlier, portal technology is complex multifunctional information technology. It can be seen as a platform on which a wide range of different functions can be developed and it can therefore be described and implemented for the members of the organization in many different ways.</p>
+
+<p>Based on the (anonymized) documentation produced in connection with the project as well as our interviews with organization and IT leadership, we found that the major motive behind the procurement of the portal technology was that the current Web environment was hopelessly fragmented. A series of functions had been built on each other at different times without any strategic idea for the whole system. Lines of responsibility were also vague and not distributed in any logical fashion. There were a number of different resources for which IT management could not identify usage and purpose. In some cases, they did not even know who were responsible and if it was possible to remove the resource. There were also practical problems in that different Web pages could supply similar information, but include variations concerning details such as opening hours. In addition, the traditional HTML structure was seen as too limited as content and layout elements were integrated. This made attempts at consistent layout restructuring the major obstacle. </p>
+
+<p>The major goal was to establish a platform that used XML to separate information from layout and was built more on a database principle (one input, many outputs). One concern was that the available Web resources should have flexible layouts so that a Web page could be read with various technologies, such as a mobile phone.</p>
+
+<p>A major organizational shift was anticipated in that the Web editors (i.e. technical users) within the organization would work more with structure and less with content. The new platform should enable sophisticated vehicles for user generated content. The vision for the new technology built on seeing everybody as <em>users</em> (no more <em>visitors</em>).</p>
+
+<p>In acquiring technology for a new Web environment, it was eventually decided to make a major acquisition of advanced portal technology. It was expected that this would create a sustainable platform that could handle the technological demands and changes several years forward.</p>
+
+<p>To the ordinary users of the organization, the fundamental flaws of the Web environment were not easily observable, or they were inherently used to them. In the information packages that were to follow, the users were only slightly briefed on the fundamental motive for system change. Instead, they were given idealized images of being able to work with the most advanced Web tools currently available. Only little information was given on any potential implementation problems. The bridging between the old and the new system was expected to require an effort, but be unproblematic. However, the actual launching of the portal technology was repeatedly delayed. The developers therefore came under increasing pressure to finalize the implementation. At the launching, none of the sophisticated new technologies, that the users expected, had been implemented. In fact, the users were presented a relatively large sample of new Web pages oriented mainly towards external users. However, a lot of information, earlier available, was completely missing due to delays in migration process.</p>
+
+<p>The sophisticated function of portal technology that was easiest to explain and to generate enthusiasm toward was the potential of creating a so-called "adaptive Website", even though this concept was not used in information packages. Perkowitz and Etzioni (<a href="#per">2000</a>) characterize adaptive Websites as sites that automatically improve on organization and presentation by learning from individual visitor Web usage. The standard example of a successful adaptive Website is Amazon.com.</p> 
+
+<p>A second selling point was the envisioned new publishing system in which Web editors would be less active in producing texts, but rather create spaces for user-generated content. A third highlighted feature was the possibility to create group-based working spaces build on the Lotus application Quickr. Thus,both technical and “ordinary” users were treated as customers of a complete product, instead of persons whose effort and knowledge was necessary to create a functional, new Web environment together with the developers.</p>
+
+<p>Although the users came to expect advanced functions both for the external Web service and for the intranet, these were released to the local context for the launching of the new Web environment (Quickr was eventually implemented about a year after the launching of the portal technology). The delay in the implementation created a fundamental gap between that which actually was implemented and actual user expectations. In this case, change was less dramatic than expectations created.</p>
+
+<p>Instead, the main Web page was structured according to a number of static openings where the user could choose to enter either based on role, unit, types of service sought or through the Website search engine. Ideally, it would be possible to find the same kind of information through different openings (according to the XML ideal of one input, many outputs), but this function turned out to be difficult to establish. As also the search engine lacked fundamental indexing capabilities, users found that they were forced to relearn the organizational structure of information access. As there were three hierarchies (role, unit and service) rather than one (different units), the search for information became more difficult both for internal and external users. The implementation of this new system created waves of organizational turmoil. Users wondered why access had become more difficult when they had expected greater ease. On the positive side, new patterns of interaction between units were established in order to resolve and standardize urgent problems.</p>
+
+<p>An organizational effect that was triggered by the new technology was that professionals working with Web related tasks became distanced from units which they otherwise were integrated into. Web managers and Web editors from various units had at an early stage been drawn into the final stages of implementation. These technical users served as troubleshooters, but were often also seen as partly responsible for the problems by the ordinary users causing distress and tension among these technical users.</p> 
+
+<p>A specific problem that created major irritation was that the process of migration of data had been underrated. Therefore, large amounts of information became impossible to access, including personal Websites of all employees. One consequence was that members of the organization were not searchable through external search engines such as Google. As the problem was not promptly resolved, individual members started to establish external instruments to regain visibility. Such, so called workaround actions were, however, counter to one of the basic ideas of the new technology (e.g., Attewell <a href="#att">1992</a>). </p>
+
+<p>A main organizational effect of the new technology was centralized control over the whole information structure. While earlier, individual units had, within certain limits, been able to fashion individual Web-based solutions according to local needs, this was no longer possible. All Web resources were expected to be produced inside the framework of the new system. As specific tailor-made Web resources now had to be redesigned or abandoned, this restricted the flexibility of individual units. </p>
+
+<p>Technical users, such as Web editors who handled the maintenance of the new Web environment also perceived, at least initially with little tacit knowledge of the new environment, that updating and producing documents was considerably more awkward process than earlier. Even the head of the information unit, with a responsibility for the whole structure, found updating a major obstacle.</p>
+
+<p>The basic problems with the unstructured Web environment were resolved more satisfactory as hierarchical ideas were implemented. In addition, modern requirements dealing with user authentication, identity management, protection of data and content aggregation were also dealt with. However, the ”ordinary users” had had little information about these problems and were scarcely aware of this being a successful part of the new system.</p> 
+
+ <h2>The language games of users </h2>
+
+<p>The <em>ordinary</em> users we interviewed before the implementation lacked the necessary language to talk about the new technology. We have already, in this article, discussed the difficulties in understanding the meaning of <em>a move from HTML to XML</em>. Most users lacked an understanding of XML and could therefore not even start to articulate the meaning of this new technology. Also, we found little insights into what a portal really was, or indeed, that the new Web environment was built on portal technology.</p>
+
+<p>We identified three strategies in talking about the new Web environment. First, a focus on vaguely articulated sophisticated technologies for making their work easier. These were envisioned as "intuitive" not necessarily requiring new skills in order to operate.</p>
+
+<blockquote>I hope that it will be accessible and it will be easy to look for information, reliable information (Eric1). He also hopes for more quality instead of quantity: “it is better if there are a smaller amount of functions that actually work; instead of a large number of functions that only give you trouble” (Eric1)</blockquote>
+
+<p>The second strategy for talking about the new environment was to create preparedness for a certain extent of learning. As long as there were obvious advantages in shifting work procedures, this was seen as acceptable. </p>
+
+<blockquote>Interviewer: What is your general view on the development concerning the digital milieu?
+Emma: As long as it is for the better, it’s good… I can think though that 'oh, damn, I had just learned how this works…' But most often the changes are actually for the better, and it becomes easier and easier [to work]. (Emma1)</blockquote>
+
+<p>A third strategy of talking about the new technology was steeped in hostility from the start.
+The critical views on the Web environment gravitated toward the fear that the environment would not be helpful in the daily work duties, and that the functionality would not be easy enough to adapt to the daily duties. There was also a sense of the new technology being used as a tool for control. As one user put it: </p>
+
+<blockquote>The problem lies in, I think, the routines that the system is build upon and that they are regulating - and then it doesn’t make any difference what system one has… You can change as many times as you want, but it will make no difference… It is a system to control us, even though its purpose is also to ease the work, naturally…” (Edith1).</blockquote>
+
+<p>Since the users that we interviewed lacked both the necessary knowledge and motivation for understanding the move from HTML and XML, their understanding were fundamentally removed from the basic goal of the project. This created a lack of intellectual and conceptual resources for talking about the new technology and its impact on the organization and individual work procedures.</p>
+
+<p>We can now begin to understand why this new technology was implemented in a way that created confusion. Members of the organization lacked both the necessary knowledge and guidance in order to understand what was going on. This created a disconnection between expectations and outcomes:</p>
+
+<ul>
+<li>	The transition was expected to be smooth, but it turned out to be frenzied.</li>
+<li>It was expected to become easier to find data, but it became more difficult.</li>
+<li>An adaptive solution was expected, but it turned out to be more static.</li>
+<li>A number of sophisticated applications were expected, but none were there when the portal was launched.</li>
+<li>The process became considerably more time-consuming and expensive than expected.</li>
+</ul>
+
+<p>We found that the ordinary users were given a positive image of a new technology that would yield a number of vaguely described advantages. We call these the <i>sophisticated applications</i>. However, the technology primarily served to solve problems relating to structuring of data which had been invisible for the ordinary users. We call this the <i>basic transformation</i>. The new and exciting tools, the sophisticated applications, were either slow in implementation or not forthcoming at all. Instead, the ordinary users found themselves confronting a series of new difficulties for which they were unprepared. These concerned the basic transformation, something which most members of the organization had not understood as the focus of the project. </p>
+
+<p>During the process, members of the organization became increasingly uncertain about the five key language games of the project:</p>
+
+<ul>
+<li><i>Motive</i>. It became difficult to talk about why this was being done. The real motive was the basic transformation and it was not recognised by "ordinary users".</li>
+<li><i>Priority. </i>Developers and users discussed two different kinds of priorities: basic transformation and sophisticated applications.</li>
+<li><i>Features. </i>The "ordinary users" understood this as the development of sophisticated applications with little understanding of the technological basis. The developers focused the transformation from HTML to XML, thereby creating a platform on which a wide range of sophisticated applications at a later stage could be implemented.</li>
+<li><i>Implementation. </i>Without an understanding of motives and priorities, "ordinary users" talked about the process of implementation and the problems involved in a completely different way than the developers. Therefore, the many problems that appeared at the launch of the portal, came as a total surprise to most members of the organization.</li>
+<li><i>Timeline. </i>The project was repeatedly delayed. For the project group working with the implementation, this was necessary in order to perform the basic transformation. For the "ordinary users", it was difficult to understand what took so long time and the delays mostly served to increase expectations for sophisticated applications.</li>
+</ul>
+
+<p>In the following two sections, we will focus on differences in understanding these language games between developers and members of the steering group.</p>
+
+
+ <h2>Implementing portal technology: the developer perspective </h2>
+
+<p>David was a developer employed by the receiving organization with an overall responsibility for the whole process. He worked closely with external consultants who in turn had a contractor relationship with IBM. In the interview, he clarified that the focus of the work entailed the necessary shift from a messy HTML environment into a well structured XML environment. While he had a clear vision on what needed to be done for this basic transformation, he was also irritated about uncertainties concerning what other functions should be included and at what cost. In our terminology, the language game on features was troubling. David was interviewed during a late stage of the implementation and he could therefore reflect on how the task had changed during a lengthy and troublesome process:</p>
+
+<blockquote>... the process becomes very complex, from a project leading perspective... If I go far back in time, it becomes possible to see the initial resources for implementing the whole project and then - and then, at the time people in administration expects you to estimate perhaps a year in advance everything, all the costs and everything that is supposed to happen for the whole implementation. It is extremely difficult to go into all the details...</blockquote>
+
+<p>The general frame of the project was traditional as the goals and resources were stipulated at the outset. David found that the requirement of estimating the actual tasks and their costs far ahead in time had become unreasonable since there were so many unknowns that appeared during the project. Officials administering the resources for the project had a way of articulating project timelines that did not fit those of David. The main problem for him was that he consistently had been unable to establish "normal" rules and procedures for the project. David described the implementation process as a series of movements in which the technical artefact was transported from one environment to another, at each stage slowly increasing functionality. Each step added new complexities and the extent of these were not possible to fully predict. This meant that at any time there could be an unexpected focus on the technical issues rather than those of organizational or user oriented that were initially emphasised.</p> 
+
+<blockquote>... this is how it is with complex IT projects. There's always... a technical environment that we are dependent on in some sense and then suddenly it becomes the aim of the whole purpose of the project, what it is really there for, so that it sometimes takes over. And then it becomes a balance how much they [the portal technologies] really should be adapted and what kind of service they should deliver to the project? … we are not those that should decide the purpose of the project, but it becomes impossible to avoid really and that depends on the organization.</blockquote>
+
+<p>When the technical difficulties increased, the trade-off between user oriented and technical oriented solutions became one of resources. David and his colleagues had regular meetings with the steering group that supplied guidance during the whole process.</p>
+
+<blockquote>We would really like to process this as a regular project… but what is then the role of the steering group? What does it mean to make a decision? You are not only sitting there and taking counsel. This is our forum and we must turn to it and present the situation. And if that is what they want, then they must take their responsibility. Otherwise, we can only guess and that becomes a bit difficult. At the same time, their responsibility is toward the organization and upwards. So there are many pieces.</blockquote>
+
+<p>Despite having supplied the steering group with a half day's education, David found fundamental difficulties in having the steering group understand what was really going on.</p>
+
+<blockquote>… there's probably a need for more education, I think, maybe. And I think that everyone working in the project should have more knowledge, what it means to work in a project as a coworker… what is your responsibility and how does the project work and what does it mean to have a steering group?</blockquote>
+
+<p>In practice, David found the organization lacking in knowledge on the technological issues involved. As key persons within the organization were unable to understand the range of basic and sophisticated functions of portal technology, they were unable to articulate suitable needs. This made it difficult to discuss features, priorities and motives. David felt that this shifted certain responsibilities to him that he could not handle since it was not his role to articulate the needs of the organization.</p>
+
+<blockquote>… what is it we are supposed to do? What are the goals? What is it that we are, so to speak, to <strong>deliver</strong>? These variables should be able to be checked in one sentence. You can't just say a bit vaguely that something is to be done, this is very important in this project… that you put up a certain amount of goals and they must be clear when you reach the end, to be able to say that this is done and this is done and this is not done… Otherwise it can be that the project never reaches its goal, then it is a project that has no clear goal and you do not know when it is finished. And then you don't know what to say when you need to extend the project since you haven't been able to deliver those two things… then it is also the case that many, for some of them they feel that a project, it's like "here comes Santa Claus, now we just have to wish what we are going to get."</blockquote>
+
+<p>What David sees as a lack of competence in the organization in establishing decisive goals, can also be understood as a fundamental problem of different professionals involved in different language games. They try to understand each other, but the representatives of the organization obviously have difficulties establishing clear goals as they grapple with all the various language games. David interprets this as leading members of the organization having a poor grasp of the conventions of project work and project leadership. However, the more likely explanation is the breakdown of the key language games going on between the steering group and the project group. These are like dominoes falling on each other.</p> 
+
+<p>As there is a problem in articulating <i>motives</i>, emphasis on <i>features</i> and making <i>priorities</i> become difficult. The parties then have difficulty negotiating what the <i>implementation</i> is about. As a consequence, the <i>timeline</i> becomes uncertain.</p> 
+
+<p>In the following, the developer perspective is contrasted with that of a member of the steering group.</p>
+
+ <h2>Implementing portal technology: the steering group perspective </h2>
+
+<p>Steve was a leading member of the steering group with clear visions of what he wanted the new technology to provide. He characterized himself as an advanced user with, however, limited technology-based competence.</p>
+
+<blockquote>You see, I have grand visions and expectations... this is a modern platform. This thing about how to fix the technology that is not really my thing.</blockquote>
+
+<p>We interviewed him the first time shortly before the launch of the portal and he was at the time very enthusiastic about the project. He saw the motive of the project as one of modernisation. While David, who was interviewed during this same stage in the process, had emphasized the basic transformation to an XML based environment, Steve talked, instead, about the sophisticated applications.</p>
+
+<blockquote>... it was not only about getting a Web platform, but we should also receive something that could rationalize the individual work... with the latest in digital support... and also to lead us into new ways of communicating with each other.</blockquote>
+
+<p>Steve envisaged features for facilitating handling of documents and contacts. He made reference to Web 2.0 and user-generated content and expected changes in the way that members of the organization expressed themselves.</p>
+
+<blockquote>... the current Web platform is so top-down oriented [the new platform] will create bottom-up possibilities in a totally different way. At the end of the day, this is an issue of power. Currently, it is actually the information unit that has all the power... But now the power is distributed in another way...</blockquote>
+
+<p>According to Steve, the project would also lead to changes in the organizational structure. He expected a transformation of the organization as tools for social networking were introduced with new technology.</p>
+
+<blockquote>... I myself do not use social networks excessively. And that is probably a generation issue. I have no one to be social with and I do not want to be social with people unknown to me. And the new platform supplies major possibilities for social networking and it will be interesting to see if it works better for me.</blockquote>
+
+<p>Steve saw the basic transformation as necessary and the most fundamental part of the project, but far from the most interesting.</p>
+
+<blockquote>... that this will work is something that I take for granted, so I don't care about that... Rather, what is important is the related services - they must be busy implementing them now. But I can feel that that is important because it teaches us some technology.</blockquote>
+
+<p>As we have seen, the related services, what we called sophisticated functions, turned out to be difficult to implement. When we next interviewed Steve, it had been six months since the inauguration and he was disappointed. He was frustrated over both the slow progress and unfolding direction of the project. He felt that the steering group had a common perspective and vision, but that it had become difficult to communicate this to the project group. As he saw it, not even the basic transformation had been successful.</p>
+
+<blockquote>I see no advantages at all now. I don't think I will be fully as negative as I may sound further on, but so far it has been an inferior Web without any advantages more than that we cleared away a lot of rubbish... We had both broadness and depth earlier and a lot of rubbish, now we have only broadness and no depth and not the least bit rubbish.</blockquote>
+
+<p>As stated earlier, one of the most important selling points had been a new publishing system. Steve had earlier been optimistic about implementing this function as part of the portal technology. However, when he now could get a firm grip of the technology available, he could see that this was not something that fit the needs of the organization.</p>
+
+<blockquote>... the publication tool that we received was far too complex, that is to say unnecessary complicated in order to solve even the most simple tasks. We have several publication tools within the old Web and we had developed our own publication tools, so this was not something new to us. But the way it is now, it is much too catastrophically complicated and then they have a solution that we should develop our own simplified publication system within the framework of the new and that tends to take far too long time which means that... people can't publish themselves and must go through others...</blockquote>
+
+<p>Looking back at the project, Steve felt that they should have collected more information before committing themselves to this solution. There was also a sense that he did not have the competence to understand the product that they were buying and could therefore not give the relevant feedback.</p>
+
+<blockquote>I don't think that the procurement was well done. The various systems’ advantages and disadvantages were not made clear, including the alternative to develop the old... I have no competence as a purchaser, I wanted to have, but I didn't know anything about the road to it and I didn't know anything of the various products. It was there somewhere where things went wrong. I think that we in our purchase were more intent on this going in the right direction. We wanted a portal with everything and we thought that drawbacks can be fixed...</blockquote>
+
+<p>In our analysis, the idea of pursuing <em>a portal with everything</em> resulted in considerable confusion about the limits of the project. Therefore, it also became difficult to focus on prioritized functions.</p>
+
+ <h2>Closing discussion </h2>
+
+<p>We have discussed a specific case of a basic transformation from HTML to XML through the introduction of portal technology. As the portal technology could do much more than simply revise existing document structures, great expectations were invested in a number of sophisticated applications, none of which were available at the time of the launch. Instead, various unforeseen problems connected to the basic transformation appeared.</p>
+
+<p>What were then the main complications that have troubled the competent project organization? The project turned out to be unpredictable as it was not possible to stipulate ahead of time, or even at a late stage of the project, what types of functionality would be possible to implement given the poor structure of the earlier Web environment and the available resources for the project. At the same time, it became difficult for the involved parties to talk about the implementation process. We have attempted to understand the problematic process with the help of the analytical instrument of <i>language games. </i>The move from HTML to XML, the basic transformation, turned out to be the main goal of the project. However, much was implied by this simple statement and both ”ordinary users” and members of the steering group had difficulties in articulating specific aspects of the basic transformation as well as withstanding priorities concerning the much anticipated sophisticated applications. The project leaders were pressured by an increasing attention to technical detail and problems with the basic transformation. They found it progressively more difficult to clearly define the boundaries of the project in their dialogue with the steering group. This caused a sense of disappointment and confusion for all involved actors. We have identified difficulties in creating stable, shared language games concerning motive of the project, priorities, features, what the implementation was about and how to interpret the timeline of the project.</p>
+
+<p>There are some similarities with the case study by Gulliksen <em>et al.</em>  (<a href="#gulg">2003</a>) in which differences in the short time goals of the developers and long-term goals of the users, were clearly evident. In both cases, the project becomes so pressured that extraordinary priorities need to be made. This may entail a shift away from user oriented ideals as the minimum goals of a basic transformation are to be finalized.</p> 
+
+<p>There is much to be won by the involved actors to identify projects that tend to transmute as they progress (<a href="#gulg">Gulliksen <em>et al.</em>  2003</a>). Such projects havebeen studied before, although rarely. An important contribution in this paper has been a discussion of the way different professionals become engrossed in a shifting context in which they become unable to successfully communicate problems, needs and resources.</p>
+
+<p>The second contribution of this paper lies in the explicit focus on the move from HTML to XML with the help of portal technology. In a sense, this is based on a vision of being in the technological forefront and taking several steps forward instead of only one. Our study shows that it is easy to underestimate the problems involved in implementation as it becomes difficult for users to articulate the needs and for developers to understand and give them what they want as well as the difficulties to in beforehand determine how users’ information practices are affected. </p>
+
+<h2>Acknowledgements</h2> 
+ 
+<p>This paper has been supported by the Faculty R&amp;D Board of the University of Bor&aring;s.</p>
+
+<h2><a id="authors" name="authors"></a>About the authors</h2>
+
+<p> Jan Nolin is a Professor at the Swedish School of Library and Information Science, University of Bor&aring;s, Sweden. He received his PhD in Theory of Science from the University of Gothenburg, Sweden. He can be contacted at <a href="mailto:Jan.Nolin@hb.se">Jan.Nolin@hb.se</a>. Katriina Byström is an Associate Professor at the Swedish School of Library and Information Science, University of Borås, Sweden. She received her PhD in Information Studies from the University of Tampere, Finland. She can be contacted at <a href="mailto:Katrina.Bystrom@hb.se@hb.se">Katrina.Bystrom@hb.se</a></p>
+
+<form action="#"> 
+<fieldset> 
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend> 
+<ul>
+<li id="ast">Astley, W.G. and Zammuto, R.F. (1992). Organization science, managers, and language games. <i>Organization Science</i>, <strong>3</strong>(4), 443-460.</li>
+
+<li id="att">Attewell, P. (1992). Technology diffusion and organizational learning: the case of business computing. <i>Organization Science, </i><strong>3</strong>(1), 1-19.</li> 
+
+<li id="bar">Barnard, D., Hayter, R., Karababa, M., Logan, G. &amp; McFadden, J. (1988). SGML-based markup for literary texts: two problems and some solutions. <i>Computers and the humanities</i>, <strong> 22</strong>(4), 265-276.</li>
+
+<li id="bro">Brown, S.A., Venkatesh, V., and Goyal, S. Expectation confirmation in technology use, <i>Information Systems Research</i>. (forthcoming).</li>
+
+<li id="cat">Caton, P.  (2001).  Markup's current imbalance. <i>Markup languages. Theory &amp; Practice</i>, <strong>3</strong>(1), 1-13.</li>
+
+<li id="che">Chen, M., Nunamaker, J.F. &amp; Konsynski, B.R. (1987) Plexact:  an architecture and design of a knowledge-based system for information system development. <i>Computer Personnel</i>, <strong>11</strong>(2), 2-10.</li>
+
+<li id="col">Collins, H.M. (1981). Stages in the empirical programme of relativism. <i>Social studies of science </i>, <strong> 11</strong>(1), 3-10.</li>
+
+<li id="ger">Gergen, K. J. (1982). <em>Toward transformation in social knowledge.</em> New York, NY: Springer-Verlag.</li>
+
+<li id="gol">Goldman, R., McHugh, J. and Widom, J. (2000). <a href="http://www.webcitation.org/5sibhDvS6">From semistructured data to XML. Migrating the Lore data mmodel and query language.</a> <i>Markup languages. Theory &amp; Practice, </i><strong>2</strong>(2), 153-163. Retrieved 13 September, 2010 from http://ilpubs.stanford.edu:8090/409/1/1999-53.pdf  (Archived by WebCite<sup>&reg;</sup> at http://www.webcitation.org/5sibhDvS6)</li>
+
+<li id="gull">Gulliksen, J. &amp; Lantz, A. (2003). Design versus design - from the shaping of products to the creation of user experiences. <i>International Journal of Human-Computer Interaction</i>, <strong>15</strong>(1), 5-20.</li>
+
+<li id="gulg">Gulliksen, J., G&ouml;ransson, B., Boivie, I., Blomkvist, S., Persson, J. &amp; Cajander, &Aring;. (2003). Key principles for user-centred system design. <i>Behaviour &amp; Information Technology</i>, <strong> 22</strong>(6), 397-409.</li>
+
+<li id="hil">Hillesund, T. (2002). <a href="http://www.webcitation.org/5siaoGw5B">Many outputs - many inputs: xml for publishers and e-book designers.</a> <i>Journal of Digital Information, </i><strong>3</strong>(1). Retrieved 13 September, 2010 from http://journals.tdl.org/jodi/article/viewArticle/76/75  (Archived by WebCite<sup>&reg;</sup> at http://www.webcitation.org/5siaoGw5B)</li>
+
+<li id="jur">Juristo, N., Moreno, A.M. &amp; Sanchez.-Segura, M.-I. (2007). Guidelines for eliciting usability functionalities. <i>IEEE Transactions on Software Engineering, </i><strong> 33</strong>(11), 744-758.</li>
+
+<li id="kuh">Kuhn, Thomas (1970). <i>The structure of scientific revolutions</i>, 2nd ed. Chicago, IL: University of Chicago Press.</li>
+
+<li id="per">Perkowitz, M. &amp; Etzioni, O. (2000). Adaptive Web sites: examining the potential use of automated adaption to improve web sites for visitors. <i> Communications of the ACM,</i> <strong> 43 </strong>(8), 152-158.</li>
+
+<li id="phi">Phillips, D.L. (1977). <i>Wittgenstein and scientific knowledge: a sociological perspective.</i> Totowa, NJ: Rowman and Littlefield.</li>
+
+<li id="rav">Ravichandran, T. (2005). Organisational assimilation of complex technologies: an empirical study of component-based software development. <i>IEEE Transactions on Engineering Management</i>, <strong>52</strong>(2), 249-268.</li>
+
+<li id="ren97">Renear, A. (1997). Out of praxis: three (meta) theories of textuality. In K. Sutherland (ed.) <i>Electronic text: investigations in method and theory. </i>Oxford: Clarendon press.</li>
+
+<li id="ren96">Renear, A., Mylonas, E. &amp; Durand, D. (1996). Refining our notion of what text really is: the problem of overlapping hierarchies. <i>Research in humanities computing</i>, <strong>4</strong>, 263-280.</li>
+
+<li id="rob">Robie, J., Garshol,  L.M., Newcomb, S., Biezinski, M., Fuchs, M., Miller, L., <em>et al.</em>   (2001).  The syntactic web: syntax and semantics on the web. <i> Markup Languages: theory &amp; practice</i>, ><strong>3</strong>(4), 411-440.</li>
+
+<li id="venb">Venkatesh, V. &amp; Bala, H. (2008), Technology acceptance model 3 and a research agenda on interventions. <i>Decision Sciences, </i><strong>39</strong>(2), 273-315.</li>
+
+<li id="veng">Venkatesh, V., &amp; Goyal, S. (forthcoming) Expectation disconfirmation and technology adoption: polynomial modeling and response surface analysis, <i>MIS Quarterly</i>, forthcoming.</li>
+
+<li id="weg">Wege, C. (2002). Portal server technology, <i>IEEE Internet Computing</i>, <strong>6</strong>(3), 73-77.</li>
+
+<li id="wit">Wittgenstein, L. (1953). <i>Philosophical investigations.</i> London: Blackwell Publishing.</li>
+
+</ul>
+</fieldset> 
+</form>
+ 
+
+<form action="#"> 
+<fieldset> 
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">How to cite this paper</legend> 
+<div><br /> 
+
+Nolin, J. and Bystr&ouml;m, K. (2010). &quot;From HTML to XML and more? A case study of language games within portal server technology implementation.&quot; <em>Information Research</em>, <strong>15</strong>(3) colis712. [Available at http://InformationR.net/ir/15-3/colis7/colis712.html]</div> 
+</fieldset> 
+</form> 
+ 
+<table cellspacing="10" align="center"> 
+	<tr> 
+		<td colspan="3" align="center" style="background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr> 
+	<tr> 
+		<td align="center" valign="top"> 
+ 
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(&quot;portal server technology&quot; OR &quot;portal technology&quot;) XML implementation"></input> <br /> 
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input> 
+<input type="hidden" name="num" value="100"></input> 
+					</td> 
+				</tr> 
+			</table> 
+ 
+</form> 
+		</td> 
+		<td align="center" valign="top"> 
+<!-- Search Google --> 
+ 
+<form method="get" action="http://www.google.com/custom" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(&quot;portal server technology&quot; OR &quot;portal technology&quot;) XML implementation"></input><br /> 
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input> 
+<input type="hidden" name="client" value="pub-5081678983212084"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+ 
+<input type="hidden" name="ie" value="ISO-8859-1"></input> 
+<input type="hidden" name="oe" value="ISO-8859-1"></input> 
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input> 
+<input type="hidden" name="hl" value="en"></input> 
+					</td> 
+				</tr> 
+			</table> 
+</form> 
+</td> 
+<td align="center" valign="top"> 
+<form method="get" action="http://www.bing.com/" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+ 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(&quot;portal server technology&quot; OR &quot;portal technology&quot;) XML implementation"></input> <br /> 
+<input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input> 
+<input type="hidden" name="num" value="100"></input> 
+					</td> 
+				</tr> 
+			</table> 
+</form> 
+ 
+		</td> 
+	</tr> 
+</table> 
+ 
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> --> 
+<div align="center"> 
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo" /> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a> 
+</div> 
+<hr size="1" style="color: #5E96FD;" /> 
+
+<table align="center" cellpadding="10"> 
+<tr><td align="center" valign="top"><div>  <a href="http://www.digits.com/" target="_blank"><img src="http://counter.digits.com/?counter={c6f74f9f-b4e8-50e4-b5f9-ba0063f3cb36}&amp;template=simple" alt="Hit Counter by Digits" border="0"  />
+  </a>
+
+</div></td> 
+ 
+<td align="center" valign="top"><div> 
+&copy; the authors, 2010. <br />Last updated: 9 September, 2010
+</div></td> 
+ 
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START--> 
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+--> 
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'> 
+<script type="text/javascript"> 
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('colis712.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+ 
+OneStat_Pageview();
+//--> 
+</script> 
+<noscript> 
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a> 
+</noscript> 
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div> 
+<!--ONESTAT SCRIPTCODE END--> 
+</td></tr> 
+</table> 
+<hr size="3" style="color: #5E96FD;" /> 
+ 
+<table align="center"><tr><td><div class="button"> 
+ 
+
+<ul>
+	<li><a href="../infres153.html">Contents</a> | </li>
+	<li><a href="../../iraindex.html">Author index</a> | </li>
+	<li><a href="../../irsindex.html">Subject index</a> | </li>
+	<li><a href="../../search.html">Search</a> | </li>
+	<li><a href="../../index-2.html">Home</a></li>
+</ul> 
+
+</div></td></tr></table> 
+ 
+ <hr size="3" style="color: #5E96FD;" /> 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
+</script> 
+<script type="text/javascript"> 
+_uacct = "UA-672528-1";
+urchinTracker();
+</script> 
+</body> 
+
+<!-- Mirrored from informationr.net/ir/15-3/colis7/colis712.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:24 GMT -->
+</html> 

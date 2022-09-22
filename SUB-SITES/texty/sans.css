@@ -1,0 +1,55 @@
+
+			body {
+				margin-left: 15%; margin-right: 10%
+			}
+			DIV {
+				text-align : center;
+				font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+				font-size : 10pt;
+				font-weight : bold;
+			}
+
+			h1 {
+				COLOR: maroon; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11pt; FONT-STYLE: normal; FONT-WEIGHT: bold; TEXT-ALIGN: center
+			}
+			blockquote {
+				BACKGROUND-COLOR: #FFFFCE;
+				COLOR: black;
+				FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+				FONT-SIZE: 10pt;
+				FONT-STYLE: italic;
+				FONT-WEIGHT: 500;
+				MARGIN-LEFT: 50px;
+				MARGIN-RIGHT: 50px;
+				TEXT-ALIGN: justify
+			}
+			h2 {
+				margin-left: -8%; COLOR: navy; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-STYLE: normal; FONT-WEIGHT: bold; TEXT-ALIGN: left
+			}
+			h3 {
+				margin-left: -5%; COLOR: teal; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-STYLE: normal; FONT-WEIGHT: bold; TEXT-ALIGN: left
+			}
+
+			h4 {
+				color: maroon; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-STYLE: italic; FONT-WEIGHT: bold; TEXT-ALIGN: center 
+			}
+
+			p {
+				COLOR: black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-ALIGN: justify
+			}
+			li {
+				COLOR: black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-STYLE: normal; FONT-WEIGHT: normal
+			}
+			ol {
+				COLOR: black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-STYLE: normal; FONT-WEIGHT: normal
+			}
+			ul {
+				COLOR: black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE:10pt; FONT-STYLE: normal; FONT-WEIGHT: normal
+			}
+
+			input.btn {
+   color:navy;
+   font-family: tahoma,helvetica,sans-serif;
+   font-size:84%;
+   font-weight:bold;
+                   }

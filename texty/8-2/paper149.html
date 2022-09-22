@@ -1,0 +1,488 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/8-2/paper149.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:13 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<meta http-equiv="Refresh" content=""> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 97">
+<title>A literature-based approach to annotation and browsing of Web resources</title>
+<meta name="keywords" content="semantic Web, ontology engineering, ontologies, RDF, ontology-based search">
+<meta name="description" content="The emerging <i>Semantic Web</i> technologies critically depend on the availability of shared knowledge representations called <i>ontologies</i>, which are intended to encode consensual knowledge about specific domains. Currently, the proposed processes for building and maintaining those ontologies entail the joint effort of groups of representative domain experts, which can be expensive in terms of co-ordination and in terms of time to reach consensus.In this paper, <i>literature-based ontologies</i>, which can be initially developed by a single expert and maintained continuously, are proposed as preliminary alternatives to group-generated domain ontologies, or as early versions for them. These ontologies encode domain knowledge in the form of terms and relations along with the (formal or informal) bibliographical resources that define or deal with them, which makes them specially useful for domains in which a common terminology or jargon is not soundly established. A general-purpose metamodelling framework for literature-based ontologies - which has been used in two concrete domains - is described, along with a proposed methodology and a specific resource annotation approach. In addition, the implementation of an RDF-based Web resource browser - that uses the ontologies to guide the user in the exploration of a corpus of digital resources- is presented as a proof of concept.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="A literature-based approach to annotation and browsing of Web resources">
+<meta name="DC.Creator" content="Miguel A. Sicilia, Elena Garc&iacute;a, Ignacio Aedo, Paloma D&iacute;az">
+<meta name="DC.Subject" content="semantic Web, ontology engineering, ontologies, RDF, ontology-based search">
+<meta name="DC.Description" content="The emerging Semantic Web technologies critically depend on the availability of shared knowledge representations called ontologies, which are intended to encode consensual knowledge about specific domains. Currently, the proposed processes for building and maintaining those ontologies entail the joint effort of groups of representative domain experts, which can be expensive in terms of co-ordination and in terms of time to reach consensus. In this paper, literature-based ontologies, which can be initially developed by a single expert and maintained continuously, are proposed as preliminary alternatives to group-generated domain ontologies, or as early versions for them. These ontologies encode domain knowledge in the form of terms and relations along with the (formal or informal) bibliographical resources that define or deal with them, which makes them specially useful for domains in which a common terminology or jargon is not soundly established. A general-purpose metamodelling framework for literature-based ontologies - which has been used in two concrete domains - is described, along with a proposed methodology and a specific resource annotation approach. In addition, the implementation of an RDF-based Web resource browser - that uses the ontologies to guide the user in the exploration of a corpus of digital resources - is presented as a proof of concept.">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 8  No. 2, January 2003</h4></td></tr>
+  <tr> 
+    <td><a href="infres82.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<h1>A literature-based approach to annotation and browsing of Web resources</h1>
+
+<h4><a href="mailto:msicilia@inf.uc3m.es">Miguel A. Sicilia</a>,<strong>*</strong> <a href="mailto:elena.garciab@uah.es">Elena Garc&iacute;a</a>,<sup>&oslash;</sup> <a href="mailto:aedo@ia.uc3m.es">Ignacio Aedo</a>,<strong>*</strong> <a href="mailto:pdp@inf.uc3m.es">Paloma D&iacute;az</a><strong>*</strong><br>
+	*Department of Computer Science, Carlos III University, Madrid, Spain<br>
+	<sup>&oslash;</sup>Department of Computer Science, University of Alcal&aacute; Madrid, Spain</h4>
+	
+  <br>
+
+<div align="center"><b>Abstract</b></div>
+
+<blockquote>The emerging <i>Semantic Web</i> technologies critically depend on the availability of shared knowledge representations called <i>ontologies</i>, which are intended to encode consensual knowledge about specific domains. Currently, the proposed processes for building and maintaining those ontologies entail the joint effort of groups of representative domain experts, which can be expensive in terms of co-ordination and in terms of time to reach consensus. In this paper, <i>literature-based ontologies</i>, which can be initially developed by a single expert and maintained continuously, are proposed as preliminary alternatives to group-generated domain ontologies, or as early versions of them. These ontologies encode domain knowledge in the form of terms and relations along with the (formal or informal) bibliographical resources that define or deal with them, which makes them specially useful for domains in which a common terminology or jargon is not soundly established.
+A general-purpose metamodelling framework for literature-based ontologies - which has been used in two concrete domains - is described, along with a proposed methodology and a specific resource annotation approach. In addition, the implementation of a <tt>RDF</tt>-based Web resource browser - that uses the ontologies to guide the user in the exploration of a corpus of digital resources- is presented as a proof of concept.</blockquote>
+<br>
+
+
+<h2>Introduction</h2> 
+
+<p>The exponential growth of the Web has drastically changed the availability of electronic information, but, somewhat paradoxically, this success has also made it increasingly difficult to find and organize information. It is a well-known fact that users often become overwhelmed by the number of items retrieved by a simple query in a search engine, and that the precision of those results is in many cases fairly inadequate, resulting in low effectiveness, as reported, for example, in <a href="#gordon:1999">(Gordon and Pathak, 1999)</a>. The so-called <i>Semantic Web</i> is a relatively new research direction <a href="#ding:2002">(Ding et al, 2002)</a> aimed at overcoming this and other problems by providing machine-readable semantic descriptions to Web resources. These descriptions are based on <i>ontologies</i>, a form of knowledge representation developed within the Artificial Intelligence community. An ontology can be defined (according to Gruber <a href="#gruber:1993">(1993)</a>) as a formal (i.e., machine-understandable), explicit specification of a shared (i.e., consensual, accepted by a group) conceptualization. Each ontology is focused on a specific domain, which can be of a very diverse nature. For illustration purposes, in the <a href="http://www.daml.org/ontologies/">DAML Ontology Library</a> we can find - among a large variety of them - ontologies about &quot;beers and brewery&quot; (including classes like <tt>lager</tt> or <tt>malt</tt>), &quot;bioinformatics&quot; (including <tt>chromosome</tt> and <tt>substrate</tt>),
+and &quot;XML&quot; (which includes highly technical terms like <tt>namespace</tt> or <tt>absolute-URI</tt>).</p>
+
+<p>The process of attaching these semantic descriptions to existing or newly created Web resources
+is called <i>annotation</i>, and it essentially involves linking in some way a Web page (or an element
+inside it) to a number of <i>terms</i> or classes in one or several ontologies, which are defined in a Web-enabled ontology definition language such as <tt>DAML+OIL</tt> <a href="#fensel:2002">(Fensel, 2002)</a>. Early annotation approaches involved the inclusion of mark-up elements inside <tt>HTML</tt> pages (<i>embedded</i> or internal annotation) -  see, for example <a href="#benjamins:1998">(Benjamins &amp; Fensel, 1998)</a>. However, a more convenient approach we call <i>external</i> annotation can be used instead. External annotation uses a separate physical storage for annotated resources, enabling the annotation of those which their source is not accessible, and not placing the burden of downloading additional mark-up in applications that are not ready to process it.  
+Once the annotations are available, search engines, browsers, recommenders and similar Web services or applications can be built to take advantage of the semantic descriptions <a href="#lu:2002">(Lu et al, 2002)</a>, in combination with other well-known hypermedia technologies <a href="#ossenbruggen:2001">(Ossenbruggen et al, 2001)</a>. </p>
+
+<p>In any case, annotation must always be based on <i>consensual</i> knowledge in an open system like the <i>Semantic Web</i> is supposed to be. The just described applications assume that <i>shared</i> and <i>commonly agreed</i> ontologies (made by <i>&quot;ontogroups&quot;</i>) are available for the information domains of the resources being annotated, thus making the role of <i>Ontology Library Systems</i> 
+<a href="#ding:2001">(Ding & Fensel, 2001)</a> a critical success factor. However, the vast majority of concrete domains are simply not covered by currently available ontologies (or they are not covered to an appropriate level of detail for specialized uses). While we wait for those ontologies to appear, alternative approaches are needed to take advantage of the emerging <i>Semantic Web</i> infrastructure, and to explore new (semantic description-based) methods for tasks like resource browsing and query formulation. </p>
+
+<p>One form of consensus about terminology that is widespread in scientific writing is the
+use of references to identifiable and available bibliographic sources (i.e. the <i>literature</i>
+about the subject) in order to put into context a new writing by referring to previous ones. The term <i>literature</i> - defined as "the body of writings on a particular subject" in the <a href="http://www.m-w.com/">Merriam-Webster Collegiate Dictionary</a> - refers to the whole set of writings on a concrete domain, although, due to practical reasons, usually only a subset of them is used in the process of developing a domain ontology about the subject. The identification of this subset is a matter of expert judgement, based on his or her knowledge of the domain, and the reputation of the sources. Obviously, some form of subjectivity can't be completely removed (although it could be reduced, for example, by taking into account bibliometric and related source reputation analysis) from the identification process. Referencing also allows human readers - and, eventually, also to software entities - to be able to discriminate the semantic interpretation of the referenced term between the possible ones, by going to the source/s in which it was defined, possibly traversing several references until reaching the original definition. In this way, a domain ontology can be built on top of a <i>corpus</i> of articles, books and other sources, allowing for the explicit inclusion of several senses for the same term.</p>
+
+<p>Building ontologies that include explicit references to the literature in the domain may constitute an alternative to approaches like socio-cultural <i>Consensus Analysis</i> <a href="#behrens:2002">(Behrens &amp; Kashyap, 2002)</a> that requires the intervention of a group of representative experts, which can be difficult to set up for building or maintaining a domain ontology. In our view, explicit group processes for developing ontologies may entail a large amount of duplication of effort if they are not preceded by a literature review and synthesis phase, so that first developing a literature-based ontology, which can be done by a single expert, can always be considered a good point of departure. </p>
+
+<p>In this paper, we describe a <i>literature-based</i> approach for the <i>external</i> annotation and browsing of Web resources that are related to a specific domain. The same design philosophy has been used in the so-called <i>review-level</i> database <a href="http://ecocyc.org/ecocyc/metacyc.html"><tt>MetaCyc</tt></a> about metabolic pathways, although its ontology only provides a string <tt>citations</tt> attribute for the specification of literature references <a href="#karp:2000">(Karp 2000)</a>, and, thus, it does not represent literature resources as independent entities. Consequently, it does not support general-purpose encoding of literature annotation utterances such as different word senses or relationships between ontology terms. </p>
+
+<p>The most salient feature of our approach is the explicit inclusion of the articles and books about the 
+domain as &quot;first-class citizens&quot; in the ontology, which are used to annotate and to guide the browsing and searching of the selected resources. In addition, this approach provides a disciplined strategy for annotation and ontology structuring.  The approach has already been applied in building two resource browsers. The first was intended as a supplement for teacher education <a href="#garcia:2001">(García &amp; Sicilia, 2001)</a>, and the second was built as a repository of information and reports about usability evaluation <a href="#garcia:2002">(García et al, 2002)</a>. </p>
+
+<p>We assume that Web resources are <i>persistent</i>, identifiable by an <a href="http://www.ietf.org/rfc/rfc2396.txt"><tt>URI</tt></a>, and they could also be used with systems that map identifiers to <tt>URI</tt>s, like the <a href="http://www.doi.org/">DOI</a> (<i>Digital Object Identifier</i>) System. This assumption allows for the annotation of any form of Web content (not only <tt>HTML</tt> pages), provided that its contents do not change over time.  Consequently, a change in an annotated Web resource entails that its annotations are no longer
+valid, and thus they are required to be revised (this can be accomplished by storing the previous revision date for each annotation and comparing it with the <tt>Last modified</tt> 
+<a href="ftp://ftp.isi.edu/in-notes/rfc2616.txt"><tt>HTTP</tt></a> header). </p>
+
+<p>In addition, the nature of the annotation process excludes personalized pages that provide different contents to different uses (but not dynamically generated pages that are not personalized and possess semantics that do not change over time).  Nonetheless, the content <i>fragments</i> that are used to develop <i>adaptive content</i> techniques - as described in <a href="#brusilovsky:2001">(Brusilovsky, 2001)</a> - could be annotated separately and used as an independent resource. </p>
+
+<p>As a result of the application of the literature-based annotation approach, we have developed a methodological blueprint that can be applied to any specific subject in which a commonly agreed body of literature is available, which includes any scientific discipline. The <tt>RDF</tt>-based<sup><strong><a href="#note1">1</a></strong></sup> software used to browse the annotated resources can be used with no modifications, provided that the same ontology editor is used (minor changes would be needed with other ontology editors, due to slight differences in the <tt>RDF</tt> mark-up they generate).</p>
+
+<p>The rest of this paper is structured as follows. In the next section, the approach taken to build literature-based ontologies is described, and the following section provides an outline of the method, synthesized from our experience, for their development. As a proof of concept, the browsing interface built on a specific literature-based ontology is presented, and, in the final section conclusions are drawn. </p>
+
+<h2>Building literature-based-domain ontologies</h2>
+
+<p>The approach we propose to use to build the ontologies includes three different conceptual types of elements, depending on the role the concept plays in the ontology:</p> 
+
+<ul>
+<li>Terms and relations that represent the ontology's domain. Examples of these kinds of terms are <tt>usability</tt>, <tt>user centred design</tt> or <tt>intelligent interfaces</tt>, if we are representing the <i>Human Computer Interaction</i> domain, or <tt>Educational Programming Language</tt> and <tt>Computer-based training programs</tt>, if the <i>Learning Technology</i> domain is described.</li>
+
+<li>Representations of bibliographical resources, that provide information about where and how domain terms and relations between them are defined. These resources must be representative and commonly-accepted by the represented domain community, so that anybody who uses the ontology can identify and consult them. </li>
+
+<li>The concrete online resources that are annotated. Here we introduce articles or different kinds of resources about the specific domain represented by the ontology, e.g. a paper presented in the <tt>ACM CHI</tt> or <tt>EuroLogo</tt> conference.</li>
+</ul>
+
+<p>All these kinds of elements lead to an ontology structure organized in three different levels: <i>Domain</i>, <i>Documentary Sources</i> and <i>OnLine Resources</i>. Besides the type of the terms, this structure has to take into account some meta-information about the defined elements, so that three different layers arise: <i>Metaclass</i>, <i>Class</i> and <i>Instance</i>. Layers are 'transversal', and each one covers several levels (see <a href="#Figure1">Figure 1</a>), therefore, they hold different types of information depending on the different level they intersect with. A layer contains the definition of the structure of the elements in the immediately lower layer, and therefore, the set of elements defined in layer <tt>i</tt> and level <tt>j</tt>, denoted as <tt>M(i,j)</tt>, are instances of elements included in the set <tt>M(i+1,j)</tt>, for any <tt>i</tt> between 0 and 2 and any <tt>j</tt> between 1 and 3.</p>
+
+<div align="center"><a name="Figure1"></a><img src=p149fig1.gif alt= "Ontology Structure in three levels and three layers")></div>
+
+<div align="center"><br><strong>Figure 1: Ontology Structure: layers and levels</strong></div>  
+
+<p>The <i>Metaclass</i> layer intersects with the <i>Documentary Sources</i> level and with the <i>Domain</i> level (note that <tt>M(2,1)</tt> is not filled in Figure 1). In <tt>M(2,3)</tt>, the different kinds of bibliographical sources have been defined. These definitions will be used in the next layer to specify the bibliographical sources that document each concrete domain term or relation. The term <tt>Bibliographic-Source</tt> can be specialized in <tt>Book</tt> and <tt>Article</tt>. An <tt>Article</tt> can be a <tt>Technical-Report</tt>, a <tt>Journal-Article</tt>, an <tt>Article-in-a-Book</tt>, a <tt>Conference-Paper</tt> or a <tt>Workshop-Paper</tt>. The classes at <tt>M(2,3)</tt> have been adapted from the (KA)<sup>2</sup> ontology <a href="#benjamins:1998">(Benjamins &amp; Fensel, 1998)</a>. Specifically, we have included all the terms related to <tt>Publication</tt>, with the exception of not-peer-reviewed Web pages, which we consider to be not commonly-accepted and not recognized by the entire community.</p> 
+
+<p>At the <i>Domain</i> level in <i>Metaclass</i> layer, we have defined the kind of ontology elements that can be specified in a knowledge domain. These terms are <tt>Domain-Terms</tt> and <tt>Domain-Relations</tt>. Both maintain a relation (<tt>Defined-In</tt>) with <tt>Bibliographic-Source</tt> term. All definitions at the <i>Metaclass</i> layer enable the specification of concrete domain classes and concrete documentary sources in the immediately lower one.</p>
+
+<p>The <i>Class</i> layer contains terms of <i>Domain</i> level, <i>Documentary Sources</i> level and <i>Online Resources</i> level. Classes in the <i>Domain</i> level conform a conceptualization of a specific knowledge domain. All terms and relations are instances of the classes <tt>Domain-Terms</tt> and <tt>Domain-Relations</tt> defined in <i>Metaclass</i> layer at <i>Domain</i> level, and both are associated to a concrete book or article, which, in turn, will be an instance of a class defined in <i>Metaclass</i> layer at <i>Documentary Sources</i> level (an example of terms and relations in a &quot;Usability Evaluation&quot; domain that are defined in several books and articles is shown in Figure 3). In the <i>Class</i> layer is also necessary to define the kind of online resources that can be annotated with domain terms. We have again used a part of the (KA)<sup>2</sup> ontology to specify these resources. In <a href="#Figure2">Figure 2</a> some of the terms extracted and adapted from this ontology are shown as a UML class diagram, according to the knowledge representation described in <a href="#cranefield:2001">(Cranefield, 2001)</a>. Terms in the <i>Online Resources</i> level are related with the terms in <i>Domain</i> level through different semantic slots, like <tt>TopicOf</tt>, <tt>About</tt>, etc.</p>
+
+<div align="center"><a name="Figure2"></a><img src=p149fig2.gif alt= "UML class diagram that represent on-line resources extracted and adapted from KA2")></div>
+<div align="center"><br><strong>Figure 2: On-line resources that can be annotated with domain terms.</strong></div>
+
+<p>Terms in <tt>M(2,3)</tt> (<i>Online Resources</i> level and <i>Class</i> layer) and in <tt>M(1,1)</tt> (<i>Documentary Sources</i> level and <i>Metaclass</i> layer) could be viewed as the same conceptual items, but we have decided to maintain them as different entities, for two reasons. First, they describe the same <i>kind</i> of element, but neither their intent nor the information requirements put on them are the same. And second, ontology editors that provide metamodelling capabilities such as <a href="http://protege.stanford.edu/index.html">Prot&eacute;g&eacute;</a> require <i>strict</i> metamodelling semantics, that is, the elements at layer <i>i</i> can only be instances of layer <i>i+1</i>.</p>
+    
+<p>Our approach to resource annotation requires the creation of a new instance of the appropriate kind of resource, which contains the concrete <tt>URL</tt> of the external resource (an attribute in all classes at <tt>M(1,1)</tt>). When using this approach, it becomes necessary to select  interesting resources and annotate them, creating a browsable resource collection, as we'll describe later. 
+The <i>Instance</i> layer contains the ontology concrete objects, and as shown in <a href="#Figure1">Figure 1</a>, it holds instances of terms at the <i>Online Resources</i> and <i>Domain</i> levels. Instances at the former represent annotated resources, and their type is that of the class (in <i>Class</i> layer) from which they are derived. Instances at the latter can be of one of the following kinds: </p>
+
+<ol>
+<li>Domain-term specific instances. For example, in a <i>Learning Technologies</i> ontology, &quot;Logo&quot; is an instance of the <tt>Programming Language</tt> domain term, and if we want to annotate &quot;EuroLogo&quot; as a Conference on &quot;Logo&quot; programming language, we have to create an instance of <tt>Conference</tt> at <tt>M(0,1)</tt>, called &quot;EuroLogo&quot;, and associate it with the &quot;Logo&quot; term using the relation named <tt>About</tt>.
+</li>
+
+<li>Instances that represent <i>reified classes</i>, which are needed in some cases to keep the abstraction level in the annotated terms definition, since instances at the <i>Online Resources</i> level maintain associations with one or more instances at the <i>Domain</i> level. For example, if we want to annotate an article about &quot;Computer-Based Training Programmes&quot; in our <i>Learning Technologies</i> ontology, we need to create, besides the specific <tt>Article In Journal</tt> instance, a reified instance of the class <tt>Computer Based Training Programmes</tt> to associate both elements, although this one does not represent a specific programme, but the general category also represented in the layer above.</li>
+</ol>
+       
+<p>In <a href="#Figure3">Figure 3</a> a partial fragment of a literature-based ontology on Usability Evaluation (a Human-Computer Interaction field) is shown. Terms and relations are separated in the levels and layers described above. Let us describe some facts about this fragment. Usability evaluation can be carried out using by different methods and techniques, as defined in the book &quot;Usability Engineering&quot; by Jakob Nielsen. One of these methods is called Usability Inspection, which is described in &quot;Designing the User Interfaces&quot;, by B. Shneiderman. One of the techniques used to inspect usability is the Cognitive Walkthrough, defined in &quot;Testing a walkthrough methodology for theory-based design of walk-up-and-use interfaces&quot;, by Clayton Lewis at the &quot;ACM International Conference on Human Factors and Computing Systems'90 (CHI90)&quot;. Therefore, in the <i>Class</i> layer there are terms such as <tt>Usability Evaluation Method</tt>, <tt>Inspection Method</tt> or <tt>Cognitive Walkthrough</tt> at <i>Domain</i> level, and some instances of <tt>Book</tt> (<tt>Usability Engineering</tt> and <tt>Usability Inspection Methods</tt>), and <tt>Conference Paper</tt> (for example, that by Clayton Lewis) at the <i>Documentary Sources</i> level.</p> 
+
+<p>If we want to annotate a specific online resource, such as Jorgensen's conference paper, &quot;Towards an epistemology of usability evaluation methods&quot;, presented at &quot;CybErg 1999&quot;, we need to create several instances at the <i>Instance</i> layer. Concretely, at the <i>Online Resources</i> level, <tt>CybErg99</tt> must be a <tt>Conference</tt> instance and <tt>Towards an epistemology of usability evaluation methods</tt> must be an <tt>Article in Conference</tt> one. At the <i>Domain</i> level, we need to create a reified instance of <tt>Usability Evaluation Methods</tt> to associate the article with its topic. Another example of an annotated online resource is the conference paper &quot;Do Web usability questionnaires measure Web site usability?&quot;, presented at the &quot;Conference of the Rocky Mountain Psychological Association 2002&quot;. This article examines the psychometric properties of the WAMI questionnaire (a specific questionnaire to measure a Web site's usability), so that, besides the corresponding instances at the <i>Online Resources</i> level, a &quot;normal&quot; instance <tt>WAMI</tt> of <tt>Questionnaire</tt> must be created at the <i>Domain</i> level, and both are associated through a relation labelled <tt>Study</tt> (defined in the <i>Class</i> layer).</p>         
+
+<div align="center"><a name="Figure3"></a><img src=p149fig3.gif alt= "Fragment of a literature-based ontology")></div>
+<div align="center"><br><strong>Figure 3. Fragment of a literature-based ontology.(<a href="p149fig3a.gif">full-sized image</a>)</strong></div>
+
+<p>In what follows, we shall give examples of how some of the elements in the ontology are 
+translated to <tt>XML</tt> mark-up.</p>
+
+<p>The following <tt>RDF</tt> code shows the description of the <tt>Inspection Method</tt> class, which is a domain term (see <tt>rdf:type</tt> in the first description) and a subclass of <tt>Usability Evaluation Method</tt> (see <tt>rdfs:subClassOff</tt> in the first description). The method is defined, between others, in <tt>Shneiderman_98</tt> (see <tt>ONTOCHI_01:DOMAIN_DEFINED_IN</tt> in the second description), which type is <tt>Book</tt> (see <tt>rdf:type</tt> in the second description), an specialization of <tt>Bibliographic_Source</tt> (see <tt>rdfs:subClassOf</tt> in the second description.</p>
+
+<pre>
+&lt;rdf:Description rdf:about="&ONTOCHI_01;Inspection_Method"
+	rdfs:label="Inspection_Method"&gt;
+	&lt;rdfs:comment&gt; Methods that use usability specialists, software developers, users and other 
+	professionals to examine usability-related aspects of a user interface &lt;rdfs:comment&gt;
+	&lt;rdf:type rdf:resource="&ONTOCHI_01;DOMAIN:TERM"/&gt;
+	&lt;rdfs:subClassOf rdf:resource="&ONTOCHI_01;Entry_Point"/&gt;
+	&lt;ONTOCHI_01:DOMAIN_DEFINED_IN rdf:resource="&ONTOCHI_01;Nielsen_94"/&gt;
+	&lt;ONTOCHI_01:DOMAIN_DEFINED_IN rdf:resource="&ONTOCHI_01;Shneiderman_98"/&gt;
+	&lt;rdfs:subClassOf rdf:resource="&ONTOCHI_01;Usability_Evaluation_Method"/&gt;
+&lt;/rdf:Description&gt;       
+
+&lt;rdf:Description rdf:about="&ONTOCHI_01;Shneiderman_98"
+	 ONTOCHI_01:SOURCE_AUTHOR_NAME="Shneiderman, B."
+	 ONTOCHI_01:SOURCE_DATE="1998"
+	 ONTOCHI_01:SOURCE_PUBLICATION_NAME="Designing the User Interfaces"
+	 ONTOCHI_01:SOURCE_PUBLISHING_COMPANY="Addison-Wesley"
+	 rdfs:label="Shneiderman_98"&gt;
+	 &lt;rdf:type rdf:resource="&ONTOCHI_01;SOURCE:BOOK"/&gt;
+	 &lt;rdfs:subClassOf rdf:resource="&rdfs;Bibliographic_Source"/&gt;
+&lt;/rdf:Description&gt;
+</pre>
+
+<p>To annotate the previously mentioned Jorgensen's conference paper, the following <tt>RDF</tt> code is required:</p>
+
+<pre><code>
+&lt;ONTOCHI_01:Conference_paper rdf:about="&ONTOCHI_01;ontochi_10_00149"
+	 ONTOCHI_01:Author="Jorgensen, A. H."
+	 ONTOCHI_01:Display_Name="Towards an epistemology of usability evaluation methods"
+	 ONTOCHI_01:Proceedings_title="Proc. of the 2nd Intl. Ciberspace Conference on ErgonomicCybErg99"
+	 ONTOCHI_01:Title="Towards an epistemology of usability evaluation methods"
+	 ONTOCHI_01:URI="http://cyberg.curtin.edu.au/members/papers/43.shtml"
+	 ONTOCHI_01:Year="1999"
+	 rdfs:label="Towards an epistemology of usability evaluation methods"&gt;
+	 &lt;ONTOCHI_01:Author>"Jacobsen, N.E.H."&lt;/ONTOCHI_01:Author&gt; 
+	 &lt;ONTOCHI_01:Presented_at_conference rdf:resource="&ONTOCHI_01;ontochi_10_00150"/&gt;
+&lt;/ONTOCHI_01:Conference_paper&gt;
+
+&lt;ONTOCHI_01:Conference rdf:about="&ONTOCHI_01;ontochi_10_00150"
+	 ONTOCHI_01:Date="August, 1999"
+	 ONTOCHI_01:Display_Name="CybErg99"
+	 ONTOCHI_01:Event_number="2"
+	 ONTOCHI_01:Event_title="2nd Intl. Cyberspace Conference on Ergonomic (CybErg99)"
+	 ONTOCHI_01:URI="http://cyberg.curtin.edu.au/members/main.shtml"
+	 ONTOCHI_01:Location="Australia"
+	 rdfs:label="CybErg99"/&gt;
+</code></pre>
+
+<p>The first element in the above fragment describes a conference paper instance. 
+The first author is A. H. Jorgensen, and the second, N. E. H. Jacobsen. Note that an <tt>URI</tt> must be specified in the paper instance to enable access to the on-line resource (see <tt>ONTOCHI_01:URI</tt>). The paper was presented at the CybErg conference (described in the second definition), which is internally denoted as <tt>ontochi_10_00150</tt>. The conference is in turn an online resource, so its <tt>URI</tt> must be specified.</p>  	
+
+<p>In order to create a relationship between the paper and one of its topics, we have to specify the following <tt>RDF</tt> code that reifies an instance of <tt>Usability Evaluation Methods</tt>. In the sentence <tt>ONTOCHI_01:Topic_of</tt> the relation and the related instance are specified:</p> 
+
+<pre><code>
+&lt;ONTOCHI_01:Usability_Evaluation_Method rdf:about="&ONTOCHI_01;ontochi_11_00157"
+	 ONTOCHI_01:Display_Name="IND_Usability_Evaluation_Method"
+	 ONTOCHI_01:Usability_Evaluation_Method_Name="IND_Usability_Evaluation_Method"
+	 rdfs:label="IND_Usability_Evaluation_Method"&gt;
+	 &lt;ONTOCHI_01:Topic_of rdf:resource="&ONTOCHI_01;ontochi_10_00149"/&gt;
+	 &lt;!-- more associations to other instances --&gt;
+&lt;/ONTOCHI_01:Questionnaire&gt;
+</pre></code>
+
+
+<h2>Towards a method for developing literature-based ontologies</h2>
+
+<p>As a result of the application of our literature-based annotation approach, we have developed a preliminary method for the development of resource bases with source annotation. Although we do not claim that it is the ideal method, it has been useful in practical situations, and can be used as a first blueprint for the study, test and further research on more comprehensive methodological frameworks. It essentially consist on four phases, each of them comprised of a number of iterative subtasks, that we have labelled as follows:</p>
+
+<ol>
+<li>Source analysis</li>
+   <ol type="a">
+       <li>Source identification</li>
+       <li>Development of the initial documentary base</li>
+	   <li>Documentary base validation</li>
+   </ol>
+<li>Domain ontology construction</li>
+  <ol type="a">
+       <li>Class hierarchy construction</li>
+       <li>Class relation elaboration</li>
+   </ol>
+<li>Annotation of a test online resource base</li>
+<li>Final validation</li>
+</ol>
+</p>
+
+<p>The <i>Source analysis</i> phase is aimed at producing the computer form of the literature of the domain we are dealing with, i.e. producing the sub-ontology in the <i>class layer</i> at the <i>Documentary Sources</i> level, according to the structure in <a href="#Figure1">Figure 1</a>. The first task is the identification of the sources that are considered to be key references in the field (to some extent this is always a matter of opinion,, but the same would occur with the decisions taken by an <i>ontogroup</i>). These sources commonly include books, journals and other forms of publications. Although the (relative) importance of the different sources is not explicitly represented in the ontology, it should be used as an input for the second phase. In some cases, citation indexes or other (formal or informal) impact measures (for example, indices in the <a href="http://www.researchindex.com/">Research Index search engine</a>) can be used for that purpose. For example, in the case of a <it>Usability Evaluation</it> ontology, the <a href="http://www.acm.org/sigchi">ACM SIGCHI</a> interest group (or other societies in the field) can be considered as an starting point, and the <a href="http://www.hcibib.org/">HCI Bibliography site</a> can be used as a source of resources to be encoded.</p>
+
+<p>Once the sources are identified, an initial subset of the bibliographic resources is represented in the
+ontology. Additional sources will be added in subsequent phases. </p>
+
+<p>Although is virtually impossible to determine whether the sources initially selected are the right set, informal heuristic measures can be used to provisionally validate it. We have used two of these heuristics: </p>
+
+<ul>
+  <li><i>Diachronic</i> analysis, which tries to situate the resources in their historical context. The technique consists simply in sorting the resources by publication date and trying to trace concepts from the most recent to the oldest resources. This enables the identification of terms or classifications that have evolved over time, and those that have become part of the jargon or &quot;tradition&quot; of the field. </li>
+
+  <li>Compatibility analysis, which consists of identifying <i>survey-type</i> articles, Web pages or books and matching their reference lists with the selected set of resources. Higher coincidence can be considered an indicator of appropriateness.  </li>
+</ul>  
+</p>
+
+<p>The domain ontology construction is aimed at building the <i>Domain</i> level at the <i>Class</i> layer. We have used an approach that focuses first on the classes (terms), and later on class relationships, 
+adopted from the practice of object-oriented analysis methods <a href="#booch:1993">(Booch, 1993)</a> and <a href="#rumbaugh:1990">(Rumbaugh <em>et al.</em>, 1990)</a>. In this phase, both the classes and their relationships must be annotated with the sources from which they are extracted (several sources can be used for each of them). Two special relationships must be accounted for in this activity: synonyms and similar or resembling terms and relations. Synonyms are represented at the <i>Domain</i> level by a special relationship of the same name. But in many cases, two classes are not perfectly equivalent, but, to some extent, are similar. In these cases, both terms should be represented independently, and a grade of similarity or proximity - expressed as a value in the [0..1] interval - must be assessed by the ontology creator. Similarity is a reflexive, symmetric and transitive, while transitivity is not required for proximity relations. The approach to dealing with those relationships, which is not covered in this paper,  is borrowed from the theory of those relations found in <i>Fuzzy Set Theory</i>-related research. See, for example <a href="#buckles:1982">Buckles &aamp; Petry, 1982</a> on similarity relations and <a href="#shenoi:1989">Shenoi &amp; Melton, 1989</a> on proximity relations. The case of a single term with more than one interpretation is modelled by including duplicated entries for the same class, varying their names slightly. This is not a problem in annotating resources, since the description of each class along with its sources and relationships will make clear the underlying concept.</p>
+
+<p>The third phase is intended to validate the domain ontology by actually annotating a representative resource base. Note that the frontier between the third and four phases can be blurred, since we
+have found that a good approach to ontology building is proceeding from the bottom up by considering a number of sample resources and trying to find the domain classes that best describe them. </p>
+
+<p>Finally, a validation phase must be carried out, in search for flaws, mistakes and deficiencies of the ontology and resource base just constructed. Common ontology evaluation methods like <tt>OntoClean</tt> <a href="#guarino:2002">(Guarino &amp; Welty, 2002)</a>  can be carried out in this phase, and well established design principles are supposed to be followed <a href="#gomez-perez:1999">(G&oacute;mez-P&eacute;rez, 1999)</a>.  </p>
+
+<p>The process just described  entails a guaranteed minimum quality in the  ontology obtained. This way, if the ontology is used as an input for a subsequent ontogroup process, the group of domain experts is provided with a validated &quot;discussion version&quot;, boosting the inception phase of its process, and forcing them to give support to criticisms and change proposals in terms of the literature in the field, which would result in updates to the existing  ontology. The approach can be considered as a hybrid of <i>inspirational</i>, <i>inductive</i> and <i>synthetic</i> approaches to ontology design according to Holsapple and Joshi <a href="#holsapple:2002">(2002)</a>, since a single developer may start the process from his own (inspirational) viewpoint, but he has to justify the decisions on existing documentation (in a sort of synthesis), including specific cases in the domain of interest (thus proceeding inductively).</p>    
+
+<h2>Browsing and search interfaces</h2>
+
+<p>Searching annotated resources requires novel ways to access information, and the <i>Semantic Web</i> offers the opportunity of defining them <a href= "#eberhart:2001)">(Eberhart, 2001)</a>. Annotating resources using ontology terms provides them with semantic information which makes available more precise results in searching, since semantic retrieval instead of complex term-matching is done. We have designed a search engine prototype, called <tt><b>metadataKB</b></tt>, to find resources annotated in the way described in Section 2 (we have not carried out any formal user testing study, but it has  already been used by students). Technically, the prototype has been built using <tt>Java</tt> and it can be used on any Web server that supports the <tt>Java Servlet 2.2</tt> specification. The application processes the ontology <tt>RDF(s)</tt> using <a href="http://www.hpl.hp.com/semweb/jena-top.html">JENA 1.1</a> libraries. At present, the parsed version of the ontology is maintained in memory, concretely, as a data structure attached to a <a href="http://java.sun.com/products/servlet/"><i>servlet</i></a> in the application state of the open source <a href="http://jakarta.apache.org/tomcat/">Tomcat</a> Web server.</p>
+
+<p>Users do not need to introduce strings to construct a query using the <tt><b>metadataKB</b></tt>. Search criteria are derived from the ontology, since they are built using ontology classes and subclasses, that are shown in the main interface of the application. This feature enables the use of the search engine independently of a specific ontology or its future updates.</p>
+
+<p>The retrieval process requires the definition of the ontology <i>entry points</i>. Entry points are the most generic meaningful terms in the ontology that enable to enclose the search the first time. On the basis of the entry point, users construct the criterion selecting the most suitable terms. Criterion refinements are also allowed, showing subclasses of the selected terms in the interface. This process can be carried on until no more subclasses can be extracted in the specific hierarchy. So the search criteria are finally composed by the set of classes selected by the user in the application interface.</p>
+
+<p>Search results are obtained in two different ways:</p> 
+        
+<ol>
+<li>Directly recovering those resources annotated with the terms chosen in the prototype interface. This option retrieves all instances of the selected classes. If more than one class is specified, only the instances that belong to all the classes will be retrieved (conjunctive multi-criteria searching).</li>
+
+<li> Recovering the semantic relations in which instances of the selected terms take part, in order to offer users the possibility of browsing them. We have denoted as semantic relations those established between two instances (named <i>subject</i> and <i>object</i>) in accordance with the ontology definition.</li> 
+</ol>
+
+<p>To obtain the results described, two tasks are carried out:</p>
+
+<ul>
+<li>First, the intersection of the <i>extensions</i> of the selected classes is computed. We define the <i>extension</i> of a class <tt>c<sub>i</sub></tt> as the set containing the instances of class <tt>c<sub>i</sub></tt> and instances of all the descendants (subclasses) of <tt>c<sub>i</sub></tt>. If more than a class is specified as a criterion, only instances that belong to all the classes are retrieved (this makes the set of instances retrieved empty in many cases).</li> 
+<li>After that, semantic relations are retrieved. To do that, the union <tt>U</tt> of the <i>extensions</i> of the selected classes is computed, and then the subset of relations that incorporate as subject and object instances of <tt>U</tt> is retrieved.
+</li>
+</ul>
+
+<div align="center"><a name="Figure4"></a><center><img src="p149fig4.gif"></div>
+<div align="center"><br><strong>Figure 4. Prototype main window used to search usability evaluation reports.</strong></div>
+
+<p>To illustrate how the retrieval process must be carried out, an example of a specific search is described. If we want to find conference papers which report usability evaluation surveys using questionnaires, we have to select the terms "Publication" and "Inquiry", shown in the main application interface (both are defined as entry points), as shown in <a href="#Figure4">Figure 4</a>. Search criteria can be refined (obviously, if refinement were not done, a huge amount of more generic online resources and semantic relations would be retrieved), so we click on the <i>Refine</i> button (&quot;Refinar&quot; in Spanish). Subclasses of &quot;Article&quot; and &quot;Inquiry&quot; are displayed in the window, and we select &quot;Questionnaire&quot; and &quot;Article&quot; terms. Refinement is done again, and &quot;Conference Paper&quot; and &quot;Questionnaire&quot; are checked (see <a href="#Figure5">Figure 5</a>). Once the criteria are adjusted, we click the <i>Search</i> button ("Buscar" in Spanish). </p>
+
+<div align="center"><a name="Figure5"></a><img src="p149fig5.gif"></div>
+<div align="center"><br><strong>Figure 5. Example of search criteria refinement.</strong></div>
+ 
+<p>Results are shown in <a href="#Figure6">Figure 6</a>. Here we can see that there are no instances of &quot;Conference Paper&quot; and &quot;Questionnaire&quot; at the same time, but different online conference papers related to questionnaires are retrieved. Users can select the most appropriate one on the basis of the semantic information of the relation established between both instances. In our example we are interested in papers that report usability studies carried out with questionnaires, so we can access any of the last three conference papers shown in the interface (using the link at the right side), which make use of <tt>PSSUQ</tt>, <tt>QUIS</tt> and an unspecified questionnaire, respectively.</p>
+
+<div align="center"><a name="Figure6"></a><img src="p149fig6.gif"></div>
+<div align="center"><br><strong>Figure 6. Example of search results.</strong></div>
+
+<p>In order to allow users to accurately define the criteria that retrieve the expected results, they are allowed to display at any time the concrete documentary sources that define a term by simply clicking on the link that is associated to its name (see the smaller pop-up window in <a href="#Figure4">Figure 4</a>).</p>        
+
+
+<h2>Conclusions and future work</h2>
+
+<p>A literature-based approach has been described that can be used to build ontologies in technical domains that are grounded on a corpus of bibliographical sources and, therefore, on the evolving consensus of that domain, as reflected in its literature. A three-level and three-layer organization provides a clear separation of concerns between modelling notions, and current <tt>RDF</tt>-based ontology description languages can be used to encode that structure.</p>
+
+<p>A preliminary sketch of a method for developing literature-based ontologies has been described, that complements existing methods with the specifics of referential term and relation definition. </p>
+
+<p>Finally, software to build resource browsers operating on these ontologies has been built as a proof of concept of its technical feasibility. </p>
+
+<p>Future work will include rewriting the described software libraries to the emerging <tt>OWL</tt> standard Web ontology description language, and the study of the ontology-based browsers in the broad context of <i>Interactive Information Retrieval</i> <a href="#robins:2000">(Robins, 2000)</a>,  taking into account the role of the human user's cognitive processes in term or relation-guided browsing of resources. In addition, the <a href="http://www.w3.org/TR/xpath"><tt>XPath</tt></a> W3C recommendation, which is intended to address parts of <tt>XML</tt> documents, and, in consequence, of well-formed <tt>HTML</tt> documents, could be used to annotate fragments inside a Web page. This technique has already been implemented in the <a href="http://www.w3.org/Amaya/"><tt>Amaya</tt></a> and <a href="http://www.mozilla.org/"><tt>Mozilla</tt></a> browsers as a result of the <a href="http://www.w3.org/2001/Annotea/"><tt>Annotea</tt></a> project <a href="#kahan:2002">(Kahan <i>et al.</i>, 2002)</a>.  </p>
+
+<h2>Note</h2>
+<p>1. &quot;RDF&quot;: Resource Definition Framework - a framework for the description and exchange of metadata. See, for example, the <a href="http://www.w3.org/RDF/">W3C specification</a>.</p>
+
+
+<h2>References</h2>
+
+<ul>
+<li><a name="behrens:2002"></a>Behrens, C. &amp;  Kashyap, V.  (2002).
+&quot;<a href="http://www.semanticweb.org/SWWS/program/full/paper29.pdf">The 'emergent' Semantic Web: a consensus approach for deriving semantic knowledge on the Web</a>&quot; In:  I.F. Cruz , S. Decker , J. Euzenat and D.L. McGuinness, (eds.) <em>The emerging Semantic Web: Selected papers from the first Semantic Web Working Symposium</em> pp. 55-74.  Amsterdam: IOS Press.  (Volume 75 Frontiers in artificial intelligence and applications) http://www.semanticweb.org/SWWS/program/full/paper29.pdf (23 December 2002)</li>
+
+<li><a name="benjamins:1998"></a>Benjamins, R. V. &amp; Fensel, D. (1998)
+&quot;<a href="http://www.aifb.uni-karlsruhe.de/WBS/dfe/ka2-kaw/">Community is knowledge! in (KA)<sup>2</sup></a>&quot;. In: B Gaines &amp; M Musen (eds.), <em>Proceedings of the 11th Banff Workshop on Knowledge Acquisition, Modelling and Management</em>. Calgary: SRDG Publications.
+http://www.aifb.uni-karlsruhe.de/WBS/dfe/ka2-kaw/ also http://ksi.cpsc.ucalgary.ca/KAW/KAW98/benjamins1/ (23 December 2002) </li>
+
+<li><a name="booch:1993">Booch, G. (1993) 
+<i>Object-oriented analysis and design with applications.</i> 2nd. edition. Redwood City, CA: Addison-Wesley.</li>
+
+<li><a name="brusilovsky:2001"></a>Brusilovsky, P. (2001)
+&quot;Adaptive hypermedia&quot;. <em>User Modelling and User-Adapted Interaction</em>, <strong>11</strong>(1/2), 87–110.</li>
+
+<li><a name="buckles:1982"></a>Buckles, B.P. &amp; Petry, F.E (1982) &quot;A fuzzy representation of data for relational databases&quot;. <em>Fuzzy Sets and Systems</em>, <strong>7</strong>, 213–226.</li>
+
+<li><a name="cranefield:2001"></a>Cranefield, S. (2001)
+&quot;<a href="http://www.semanticweb.org/SWWS/program/full/paper1.pdf">UML and the semantic Web</a>&quot;. Paper delivered to the <i>First Semantic Web Working Symposium, Palo Alto, California, USA, 2001.</i> http://www.semanticweb.org/SWWS/program/full/paper1.pdf (23 December 2002)</li>
+
+<li><a name="ding:2001"></a>Ding, Y. &amp; Fensel, D. (2001) 
+&quot;<a href="http://www.semanticweb.org/SWWS/program/full/paper58.pdf">Ontology library systems: the key for successful ontology reuse</a>&quot;. In:  I.F. Cruz , S. Decker , J. Euzenat and D.L. McGuinness, (eds.) <em>The emerging Semantic Web: Selected papers from the first Semantic Web Working Symposium</em> pp. 93-112. Amsterdam: IOS Press.  (Volume 75 Frontiers in artificial intelligence and applications) http://www.semanticweb.org/SWWS/program/full/paper58.pdf  (23 December 2002)</li>
+
+<li><a name="ding:2002"></a>Ding, Y., Fensel, D., Klein, M. &amp; Omelayenko, B. (2002) 
+&quot;The Semantic Web: yet another hip?&quot;. <em>Data and Knowledge Engineering</em>, <strong>41</strong>(3), 205-227. </li>
+
+<li><a name="Eberhart:01"></a>Eberhart, A. (2001) 
+&quot;<a href="http://www.semanticweb.org/SWWS/program/position/soi-eberhart.pdf">Applications of the Semantic Web for document retrieval</a>&quot;. Paper delivered to the <i>First Semantic Web Working Symposium, Palo Alto, California, USA, 2001.</i>  http://www.semanticweb.org/SWWS/program/position/soi-eberhart.pdf (23 December 2002)</li>
+
+<li><a name="fensel:2002"></a>Fensel, D. (2002) 
+&quot;<a href="http://www.cs.vu.nl/~dieter/ftp/paper/dwc.pdf">Language standardization for the Semantic Web: the long way from OIL to OWL</a>&quot;.
+In: J. Plaice, P.G. Kropf, P. Schulthess, &amp; J. Slonim (eds.) <em>Distributed Communities on the Web. 4th International Workshop, Distributed Communities on the Web 2002, Sydney, Australia, April 3-5, 2002. Revised Papers.</em> pp. 215-227.  Heidelberg: Springer-Verlag.  http://www.cs.vu.nl/~dieter/ftp/paper/dwc.pdf  (23 December 2002)</li>
+
+<li><a name="garcia:2002"></a>Garc&iacute;a, E., Sicilia, M.A., Aedo, I. &amp; D&iacute;az, P. (2002) 
+&quot;Una ontolog&iacute;a para la anotaci&oacute;n de recursos sobre evaluaci&oacute;n de la usabilidad: dise&ntilde;o y mecanismos de recuperaci&oacute;n&quot;. In: <i>Tercer Congreso Interacci&oacute;n Persona Ordenador, Universidad Carlos III de Madrid, 8 to 10 May, 2002</i>. pp. 19-26. Leganés, Madrid: AIPO.</li>
+
+<li><a name="garcia:2001"></a>Garc&iacute;a, E. &amp; Sicilia, M.A.(2001)
+&quot;Una propuesta para la b&uacute;squeda sem&aacute;ntica de recursos Web de nuevas tecnolog&iacute;as aplicadas a la educaci&oacute;n&quot;.In: <i>Congreso de Nuevas Tecnologías Aplicadas a la Educación en el Siglo XXI, Universidad de Sevilla, 2001</i>. Sevilla: FETE-UGT Sevilla.
+
+<li><a name="gomez-perez:1999"></a>G&oacute;mez-P&eacute;rez, A. (1999) 
+&quot;Ontological engineering: a state of the art&quot;. <em>Expert Update</em>, <strong>2</strong>(3), 33-43.</li>
+
+<li><a name="gordon:1999"></a>Gordon, M. &amp; Pathak, P. (1999) 
+&quot;Finding information on the World Wide Web: the retrieval efectiveness of search engines&quot;.
+<em>Information Processing and Management</em>, <strong>25</strong>(2), 141-180. [Note - original volume no. given as "35", is incorrect]</li>
+
+<li><a name="gruber:1993"></a>Gruber, T. R. (1993) 
+&quot;A translation approach to portable ontology specifications&quot;. <em>Knowledge Acquisition</em>, <strong>5</strong>(2), 199-220.</li>
+
+<li><a name="guarino:2002"></a>Guarino, N. &amp; Welty, W. (2002) 
+&quot;Evaluating ontological decisions with Ontoclean&quot;. <em>Communications of the ACM</em>, <strong>45</strong>(2), 61-65.</li>
+
+<li><a name="#holsapple:2002"></a>Holsapple, C.W. &amp; Joshi, K.D. (2002) 
+&quot;A collaborative approach to ontology design&quot;. <em>Communications of the ACM</em>, <strong>45</strong>(2), 42-47.</li>
+
+<li><a name="#kahan:2002"></a>Kahan, J., Koivunen, M.R., Prud'Hommeaux, E. &amp; Swick, R.R. (2002)
+&quot;<a href="http://www10.org/cdrom/papers/488/">Annotea: an open RDF infrastructure for shared Web annotations</a>&quot;.  <em>Computer Networks</em>, <strong>39</strong>(5), 589-608.  http://www10.org/cdrom/papers/488/  (23 December 2003)</li>
+
+<li><a name="#karp:2000"></a>Karp, P.D. (2000)
+&quot;An ontology for biological function based on molecular interactions&quot;.  <em>Bioinformatics</em>, <strong>16</strong>(3), 269-285.</li>
+
+<li><a name="#Lu:2002"></a>Lu, S., Dong, M. &amp; Fotouhi, F. (2002)
+&quot;<a href="../7-4/paper134.html">The Semantic Web: opportunities and challenges for next-generation Web applications</a>&quot;.
+<em>Information Research</em>, <strong>7</strong>(4).  http://informationr.net/ir/7-4/paper134.html  (23 December 2002)</li>
+
+<li><a name="ossengruggen:2001"></a>Van Ossenbruggen, J., Hardman, L. &amp; Rutledge, L. (2001) 
+&quot;<a href="http://jodi.ecs.soton.ac.uk/Articles/v03/i01/VanOssenbruggen/">Hypermedia and the Semantic Web: a research agenda</a>&quot;.  <em>Journal of Digital Information</em><strong>, 3</strong>(1). http://jodi.ecs.soton.ac.uk/Articles/v03/i01/VanOssenbruggen/ (23 December 2002)</li>
+
+<li><a name="robins:2000"></a>Robins, D. (2000) 
+&quot;<a href="http://informingscience.org/Articles/Vol3/v3n2p57-62.pdf">Interactive information retrieval: context and basic notions</a>&quot;. <em>Informing Science</em>, <strong>3</strong>(2). http://informingscience.org/Articles/Vol3/v3n2p57-62.pdf (23 December 2002)</li>
+
+<li><a name="rumbaugh:1990"></a>Rumbaugh, J., Blaha, M., Premerlani, W., Eddy, F. &amp; Lorensen, B. (1990)  <i>Object-oriented modelling and design.</i> Englewood Cliffs, NJ: Prentice Hall.</li>
+
+<li><a name="shenoi:1989"></a>Shenoi, S. &amp; Melton, A. (1989)
+&quot;Proximity relations in the fuzzy relational database model&quot;. <em>Fuzzy Sets and Systems</em>, <strong>31</strong>(3), 285–296. </li>
+</ul>
+
+<hr style="COLOR: #000080" size="1" />
+<table cellspacing="10" align="center">
+<tr><td colspan="2" align="center" style="font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject.<br /></td></tr>
+<tr><td align="center" valign="top">
+<center>
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="text" name="q" size="31" maxlength="255" value="&quot;semantic Web&quot; (ontologies OR &quot;classification schemes&quot;) RDF" style="background-color: Yellow;"></input> <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+</td></tr></table></form>
+</center>
+<td align="center" valign="top">
+<!-- Search Google -->
+<center>
+<form method="get" action="http://www.google.com/custom" target="_top">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="text" name="q" size="31" maxlength="255" value="&quot;semantic Web&quot; (ontologies OR &quot;classification schemes&quot;) RDF" style="background-color: Yellow;"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold;" /></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+</td></tr></table>
+</form>
+</center>
+<!-- Search Google -->
+</td></tr>
+</table>
+
+<hr style="COLOR: #000080" size="1" />
+<div align="center">
+<h4>How to cite this paper:</h4>
+Sicilia, Miguel &Aacute;ngel,  Garc&iacute;a, Elena,  Aedo, Ignacio and D&iacute;az, Paloma  (2003)&nbsp; &quot;A literature-based approach to annotation and browsing of Web resources&quot;<em>Information Research</em>, <strong>8</strong>(2), paper no. 149&nbsp;&nbsp; [Available at: http://informationr.net/ir/8-2/paper149.html]</div>
+<hr style="COLOR: #000080" size="1" />
+<div style="text-align : center">&copy; the authors, 2003. Updated 23 December 2002</div>
+<hr color="#000080" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;q=link:HoOPiVVBdvUJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres82.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper149" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/8-2/paper149.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:13 GMT -->
+</html>
+

@@ -1,0 +1,597 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/3-2/paper37.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:26 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<title>Towards Adaptive Information Systems: Individual Differences and Hypermedia</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="information <span>systems</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> hypertext, hypermedia, learning styles, individual differences, information use">
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> content="The use of hypermedia in <span>teaching</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and learning has a number of problems, such as getting <span>lost</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in &#034;cyberspace&#034;.
+This research is <span>designed</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to determine whether individual differences in learning styles have any impact
+on the effective use of hypermedia-based <span>systems</span>" <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>>
+<meta name="VW96.objecttype" content="Journal">
+<link rel=schema.vw96 href="http://vancouver-webpages.com/VWbot/VW96-schema.html">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.title" content="Towards Adaptive Information Systems: Individual Differences and Hypermedia">
+<meta name="DC.creator" content="Sherry Yu-Hua Chen and Nigel <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> Ford">
+<meta name="DC.subject" content="hypermedia and individual differences in learning">
+<meta name="DC.<span>description</span>" <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> content="The use of hypermedia in <span>teaching</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and learning has a number of problems, such as getting <span>lost</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in &#034;cyberspace&#034;.
+This research is <span>designed</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to determine whether individual differences in learning styles have any impact
+on the effective use of hypermedia-based <span>systems</span>" <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>>
+<meta name="DC.publisher" content="Department of Information Studies, University of Sheffield">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 3  No. 2, September 1997</h4></td></tr>
+  <tr> 
+    <td><a href="infres32.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color="#ff00ff" size="3">
+
+
+<h1>Towards adaptive information systems: individual differences and hypermedia</h1>
+
+<h4>Sherry Yu-Hua Chen and <a href="mailto:n.j.ford@shef.ac.uk">Nigel <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> Ford</a><br>Department of Information Studies<br>University of Sheffield</h4>
+
+<br><br>
+
+<h2>1. Introduction</h2>
+
+<p> Hypermedia, which is a <span>combination</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of multimedia and hypertext,
+is distinguishable from traditional <span>computer</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>assisted learning
+(CAL) by the node-and-link structure <span>inherent</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to the organisation
+of information and the fact that it is also based on integrated
+media (<a href="#hell">Heller, 1992</a>).  Compared with alternative <span>tools</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> hypermedia
+in the learning <span>environment</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> has been associated with a number
+of potential benefits.</p>
+
+<h2>2.  Potential Benefits For Learning</h2>
+
+<p> Hypermedia <span>systems</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span><span>possess</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>a number of <span>characteristics</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>which
+advocates have claimed are beneficial to the learning process:</p>
+<ul>
+<li>Hypermedia provides a highly interactive <span>environment</span>. <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span></li>
+<li>Hypermedia allows the <span>integration</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of different media, such
+as  text, video, audio and graphics.</li>
+<li>Hypermedia has a non-linear organisation in the form of a
+<span>network</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of nodes and <span>links</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span></li>
+</ul>
+
+<p> Each of these factors is con0ered below.</p>
+
+<h3>2.1  Hypermedia Provides <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Highly Interactive Environment</h3>
+
+<p> It is generally <span>accepted</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>that <span>interaction</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>is a 'Good Thing',
+assuming that learners can get prompt feedback from the system.
+ <a href="#bork">Bork</a> (1987) highlighted two <span>main</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>advantages of <span>interaction</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>-
+individualisation and increased motivation.  Hypermedia has the
+potential to provide more freedom of <span>choice</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of what information
+users see, and how they see it.  Many would argue that using a
+<span>computer</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>can be an <span>intrinsically</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>motivating activity.  Bork 
+has also  argued that <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>learn more when they spend more
+<span>quality</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>time on a task, and described observations of students
+indicating that they stopped using learning materials at those
+points at which the level of <span>interaction</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>was low.</p>
+
+
+<h3>2.2  Hypermedia Allows The Integration Of Different Media</h3>
+
+<p> <a href="#poph">Popham </a>(1961) demonstrated that <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>taught using primarily
+audio material performed equally as well as <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>taught  by
+conventional methods.  Similarly, <a href="#chu">Chu &amp; Schramm</a> (1974) reported
+no significant differences between the <span>performance</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of students
+using TV or video material and that of <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>taught by conventional
+methods.  </p>
+
+<p> Computer-Aided Learning (CAL), Computer-Based Training (CBT),
+and Computer-Aided Instruction (CAI) are all synonyms for the
+same basic strategy of using a <span>computer</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to give instruction. 
+Many reviews of this <span>medium</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>exist.  These cover a great number
+of studies using <span>systems</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>which incorporate a wide <span>range</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of subject
+matter, instructional strategy, and student ability.  However,
+as with the audio and video studies, the general <span>conclusion</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>reached
+by most has been  that <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>using CAI materials performed
+neither better nor worse than those taught conventionally. </p> 
+
+
+ <p>All of these studies <span>reached</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>the <span>conclusion</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>that it is not the
+<span>selection</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of a particular <span>medium</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>which matters, but <span>instead</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>the
+carefully con0ered use of a <span>combination</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of media which provides
+the best results.  <a href="#schr">Schraman</a> (1985) has made the following comprehensive
+statement on the effect of various media on the learning process:</p>
+
+
+<blockquote>&quot;Is one <span>medium</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>any more effective than others? For some <span>purposes</span>, <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+<span>probably</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>yes, but overall there is no superlative <span>medium</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of instruction,
+any more than there is one simple <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>for selecting one
+<span>medium</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>over others.  We have come to realise in recent decades
+that learning from the media is not an area that lends itself
+to simple answers. It is an extremely complex multivariate process
+that challenges us, if we are to understand it, not to ask the
+simple questions, but rather to <span>concern</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>ourselves with the conditions
+for selecting one <span>medium</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>over another, for combining and for using
+media.&quot; (<a href="#schr">Schraman, 1985: 45</a>)</blockquote>
+
+<h3>2.3  Hypermedia Has <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Non-Linear Organisation</h3>
+
+
+<p> Current theories of learning are based upon principles of cognitive
+<span>psychology</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> which emphasise the importance of con0ering learning
+as a reorganisation of the knowledge structures which constitute
+<span>semantic</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>memory (<a href="#eyse">Eysenck &amp; Keane, 1990</a>).  Hypermedia links
+may be con0ered  to be analogous in some ways to the  relationships
+of  knowledge, while nodes are analogous to the attributes of
+<span>semantic</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>memory (<a href="#jona2">Jonassen, 1989</a>).    This analogy is supported
+by <a href="#dona">Donald</a> (1989) who claims that meaning arises as a function
+of structure.</p> 
+
+
+<p> The relationship between hypermedia structures and knowledge
+structures is not universally <span>accepted</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>(e.g. <a href="#mckn">McKnight et al.,
+1990</a>),  but the associative linking of information nodes paralleling
+human knowledge structures is <span>probably</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>the argument most frequently
+used as <span>justification</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>by advocates of hypermedia as an educational
+strategy.  </p>
+
+
+<p> Many educators have <span>believed</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>that learning in higher education
+is linked to a change not only in the knowledge that is <span>acquired</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+but also in the way in which it is acquired: there is a movement
+towards pluralistic, or non-linear thinking.  Hypermedia is therefore
+seen as ideally suited to match this change, as information can
+be <span>represented</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in a non-linear manner.  <a href="#niel">Nielsen</a> (1990) has argued
+that hypermedia is well suited for open learning applications
+where the <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>are allowed freedom of <span>action</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and encouraged
+to take the initiative, and <a href="#ess">Ess</a> (1991) describes how  following
+of hypertext <span>links</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>resulted in greater use of cross-references
+and other textual equivalents in non-hypermedia materials.</p>
+
+<h2>3. Potential Problems  For Learning</h2>
+
+<p>However, hypertext has also been associated with a number of
+potential problems.  <a href="#hamm2">Hammond and Allinson</a> (1989), for example,
+have outlined four problems in using hypertext or hypermedia for
+learning:</p>
+
+<ul>
+<li>Disorientation</li>
+<li>Lack of comprehension</li>
+<li>Problems with access</li>
+<li>Inefficient learning strategies</li>
+</ul>
+
+<p> Each of these problems is discussed below.</p>
+
+<h3>3.1  Disorientation</h3>
+<p> One of the problems that research in hypermedia quickly encountered
+was how users are able to find information in a hypermedia information
+base, when the goal state is not specified as an option on the
+currently viewed screen.  Obviously a default top-level  access
+screen such as a <span>table</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of contents screen could be made easily
+accessible, but this can only <span>list</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>a <span>finite</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>number of topics which
+may have a potentially <span>infinite</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>number of descriptors.  Owing
+to the strong spatial metaphor that has become associated with
+hypermedia this problem became known as one of navigation.  With
+hypermedia it is often extremely difficult to acquire such maps
+due to the <span>lack</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of such cues and disorientation may <span>occur</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>(<a href="#fide">Fiderio,
+1988</a>).  As <a href="#elm">Elm and Woods</a> (1985) have claimed, navigation problems
+<span>occur</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>because of:</p>
+
+<blockquote>&quot;...the user not having a clear conception of the relationships
+within the system, or knowing  his present location in the system
+relative to the display structure, and thus <span>finding</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>it difficult
+to decide where to look in the system.&quot;  (<a href="#elm">Elm and Woods, 1985: 67</a>)</blockquote>
+
+<p>Disorientation manifests itself as confusion and frustration and
+leads to time being wasted wandering round the information base,
+reducing the  effectiveness of the system.</p>
+
+ <p>Thus the great strength of hypermedia, <i>flexibility</i>, leads
+to problems of disorientation.  (<a href="#conk">Conklin, 1987</a>).   Attempts to
+overcome the problem of disorientation have tended to either give
+users more cues, such as <span>maps</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  in order for them to orientate
+themselves; (<a href="#folz">Folz, 1991</a>; <a href="#hamm2">Hammond &amp; Allinson, 1989</a>), or other
+spatial cues (<a href="#fide">Fiderio, 1988</a>)  or  attempt to 'linearize the non-linear'
+by providing paths through the information relating to a specific
+goal.  This not only aids the access of  information, it may aid
+learners to develop some type of <span>mental</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>map (<a href="#edwa">Edward &amp; Hardman,1989</a>;
+ <a href="#zell"> Zellweger, 1989</a>), which can enable them to find their way around
+more <span>easily</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  </p>
+
+<p> Disorientation to  varying degrees is bound to have an effect
+on learning, and most generally this is taken to be a negative
+effect, disorientation prevents learners from getting  to where
+they want to go; it slows down the access of meaningful and relevant
+material; it confuses the learners reducing their patience and
+diminishing motivation to learn.  Additionally, the demands that
+the system makes on the learner to continually choose where to
+go next, may result in 'cognitive overheads' (<a href="#jona1">Jonassen and Grabinger,
+1990</a>).  In the other words,  learners spend so much time choosing
+and navigating that they have little time to devote to reading
+and thinking about the information.</p>
+
+<p><a href="#kibb"> Kibby,  et al.</a> (1990) have taken different <span>line</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>on disorientation.
+ They have suggested that the process whereby a learner actively
+seeks recovery from being <span>lost</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>can <span>actually</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>be a positive learning
+experience.  They have given the example that an efficient way
+to learn <span>one's</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>way around a strange city is to get <span>lost</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and then
+have to find <span>one's</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>way again.  Therefore, getting <span>lost</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in hypermedia
+may <span>force</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>learners to <span>con0er</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>the organisation of the hypermedia
+system more closely, which may give them more of an idea as to
+the way in which the <span>domain</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>information is organised.  Such a
+learning experience may only <span>arise</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>if the structure of the hypermedia
+system corresponds to the structure of the <span>domain</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>closely.  Without
+this <span>mapping</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>the learner may be misled into making <span>false</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>inferences
+about the relationships in the <span>domain</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>itself.  In addition, <a href="#kibb">Kibby</a> (1990)
+and <a href="#maye">Mayes</a> (1994)  draw a distinction between hyperspace
+and conceptual space, i.e. the general <span>framework</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of the hypermedia
+system and  the <span>actual</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>conceptual interrelations.  Only getting
+<span>lost</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in conceptual space would have any educational benefit, so
+it is suggested that hyperspace follows the structure of conceptual
+space as closely as possible.</p>
+
+<h3>3.2  Lack Of Comprehension</h3>
+
+<p> <span>Cognitive</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span><span>interpretations</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of learning and memory emphasise the
+interconnected nature of knowledge <span>represented</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>as a 'tangled hierarchy'
+(<a href="#ande">Anderson and Reiser, 1985</a>).  This has often led to the assumption
+that, because hypermedia explicitly represents information in
+a <span>network</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of conceptual relationships, it enables learners to
+more readily understand and integrate information.  Such assumptions
+may well be true, but there is some <span>doubt</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>as to whether novices
+can make sense of all the interconnections and therefore construct
+some form of coherent overview.  Text typically has a wide variety
+of structural patterns (i.e. path-based <span>links</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and content-based
+links) that provide information such as where the text is going,
+providing <span>integration</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>between what is currently being read and
+information that the reader has encountered before, or information
+that they will encounter later on.   It is suggested that when
+these structures are removed, comprehension will become problematic.
+ <a href="#gord">Gordon</a> (1990) has compared the effectiveness of hypertext presentations
+of technical and non-technical topics with conventional linear
+tutorials.  They found that when subjects were later asked a series
+of questions which required them to recall information from the
+texts, recall was significantly higher in the <span>linear</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>conditions
+both for basic factual information and for information requiring
+them to integrate the material.  Subjects also expressed a preference
+for the <span>linear</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>presentation.  Indeed in studies where text and
+hypertext have been <span>directly</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>compared no study shows that hypermedia
+has any advantage over text for comprehension or learning.</p>
+
+<p> Studies such as the ones above should not be seen as indicating
+that hypermedia can never be more effective for the delivery of
+instructional materials than standard text.  There may be an interaction
+between comprehension and the level of <span>domain</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>specific expertise.
+ For example Kintsch's Construction Integration text comprehension
+model predicts that non-linear <span>representations</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>may be useful when
+the learners have some understanding of the <span>domain</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> (<a href="#folz">Folz, 1991</a>).</p>
+
+
+<h3>3.3  Problems With Access</h3>
+
+<p> Folz's point mentioned above also has bearing on the ability
+of learners to access known material.  Generally hypermedia systems
+tend to be structured with respect to the conceptual interrelationships
+of a particular <span>domain</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  While access may appear logical to someone
+who understands the subject, it may afford little help to novices.
+ This <span>tends</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to contradict the stance taken by <a href="#jona1">Jonassen and Grabinger</a>
+(1990) who have <span>referred</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to hypermedia as the ultimate accretion
+<span>medium</span>. <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  They have argued that the structure of hypermedia is
+tailor-made for novices to build up a workable understanding of
+<span>topic</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>areas.  In contrast it appears that hypermedia may be more
+of a <span>medium</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>for tuning, whereby learners with well-developed domain
+schemata can use the non-linear structure effectively to access
+relevant information.</p>
+
+<h3>3.4   Inefficient Learning Strategies</h3>
+
+<p> The <span>connections</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in hypermedia mean that learners can access material
+with only minimal knowledge of what it is they are looking for.
+ This is <span>achieved</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>by browsing, following the various <span>links</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>that
+are present within the information itself.  Users can follow <span>links</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+perhaps <span>denoted</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>by keywords, that seem to <span>indicate</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>the <span>sort</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of
+information that they are interested in <span>finding</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>out about.  It
+is a heuristic strategy to locate relevant information by following
+the <span>links</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  On the other hand, it may be inefficient in terms
+of the time taken; many blind alleys may be <span>followed</span>, <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> and there
+is no guarantee of the goals being <span>reached</span>. <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  However,  it is useful
+in the sense that it will often result in success, when all other
+attempts have <span>failed</span>. <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span></p>
+
+<p><a href="#marc">Marchionini</a> (1988) has stated three reasons as to why hypermedia
+users browse:</p>
+
+
+<blockquote>&quot;Firstly, they browse because they cannot, or have not defined
+their <span>search</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>objective...Second, people browse because it takes
+less <span>cognitive</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>load to browse than it does to plan and conduct
+an analytical, optimised <span>search</span>. <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>..Third, people browse because
+the information system supports and encourages browsing.&quot;  (<a href="#marc">Marchionini, 1988: 234</a>)</blockquote>
+
+<p> Marchionini's <span>third</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>point illustrates that not only does hypermedia
+permit browsing, but the various on-screen facilities positively
+encourage the learner to browse, irrespective of whether or not
+it is the most sensible strategy to adopt (<a href="#gave">Gaver, 1991</a>).  Additionally,
+<a href="#hamm1">Hammond</a> (1993) points out that very often hypermedia can offer
+misdirection in that buttons and active text tend to remain on-screen
+irrespective of whether the learner has seen the information before;
+thus causing looping.  <a href="#mcal">McAleese</a> (1989) has stated that browsing
+should be purposeful, and that the <span>design</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of the system can, in
+some respect, support users in their task of <span>finding</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>information
+by providing meaningful structure to enable successful navigation.
+ However,  hypermedia often  consists of a mass of interconnections
+that have little contextual sensitivity.  <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>learner who  is uninformed
+with respect to the <span>domain</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>may find information seeking difficult.
+ Often such learners may find that browsing is the only realistic
+option open to them.  This may have severe effects on the quality
+of the learning experience, as it may 0e-track learners, resulting
+in their covering irrelevant material.</p>
+
+
+<h2>4. The Current Research</h2>
+
+<p>Research currently being undertaken by the present authors seeks to examine
+the effectiveness of hypermedia as a learning tool, <span>taking</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>into
+account the <span>competing</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>claims described above.  Central to the
+research is the notion of individual differences.  It may be that
+a number of the benefits and problems described above may affect
+different individuals differentially.  Such effects may indeed
+have masked significant <span>findings</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in previous studies.  Also central
+to the research are differences in navigational patterns, and
+different levels of learning outcome.  There is evidence to suggest
+that learners may often adopt differing, but equally <span>valid</span>, <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> effective,
+and  navigational <span>approaches</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to learning.  The effects and effectiveness
+of such <span>strategies</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>can only fully be examined if learning is analysed
+in terms of different types and levels.</p>
+
+<h3>4.1  Individual Differences</h3> 
+
+<h4>User characteristics</h4>
+
+<p> In an effort to increase the effectiveness of  the use of hypermedia
+<span>systems</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> the <span>focus</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of recent research has shifted from systems
+to users. Users <span>characteristics</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and <span>cognitive</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>models have played
+important <span>roles</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>when designing or evaluating hypermedia <span>systems</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+<a href="#alli">Allinson</a> (1991) has categorised and analysed the knowledge of
+<span>mental</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>models as world knowledge, system  knowledge, task knowledge,
+and <span>domain</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>knowledge.  These types of knowledge may influence
+the ways learners <span>search</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>for information, and the nature of the
+information they need.  Many previous studies fail to take account
+of these four <span>kinds</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of  knowledge, and neglect the interaction
+between users <span>characteristics</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and learning styles (e.g. <a href="#shas">Shasaani,
+1993</a>;  <a href="#fran">Francis, 1993</a>, <a href="#lina">Linard &amp; Zeillger, 1995</a>).<i>Learning styles</i></p>
+
+<p> <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>number of previous studies have explored the appropriateness
+of different learning styles  to hypermedia learning <span>systems</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>(e.g.
+ <a href="#tomp">Tompsett, 1990</a>) and <span>tools</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>(<a href="#shne">Shnell, 1992</a>; <a href="#scot">Scott, 1993</a>).  They
+used learning styles to predict learning <span>performance</span>. <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  However,
+not many studies have <span>directly</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>addressed the problem of developing
+<span>systems</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>which adapt to learners' individual differences.  <a href="#borg">Borgman</a>
+(1995) has claimed that individual differences research will &quot;allow
+us both to make the transition to new and innovative interfaces
+and to bring the <span>systems</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to the users rather than the other way
+around&quot;.</p>
+
+<h3>4.2   Navigation Patterns</h3>
+
+<p> Much research has examined the problem of  'getting <span>lost</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in hyperspace'  and the relationships between styles and navigation path data in hypermedia learning environments (e.g. <a href="#maye">Mayers, 1994</a>; <a href="#simp">Simpson, 1994</a>; <a href="#dill">Dillon, 1994</a>; <a href="#edwa">Edward &amp; Hardman, 1989</a>).  In hypermedia learning <span>environment</span>, <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  a <span>crucial</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> navigation con0eration is concept space (<a href="#kent">Kent, 1995</a>).  However, concept space is ignored in many current hypermedia learning environments (<a href="#hamm1">Hammond, 1993</a>). <span>Concept</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>space is more complex than hyperspace because it is based in implicit knowledge.  Hyperspace has to do with searching and locating information; concept space is about comprehension of
+information.  Clearly, <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>need to know where they are in the system, but they also need information about where they are in the <span>program</span>, <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> i.e. how their current understanding relates to
+the whole or parts of the subject.  The <span>phenomenon</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of becoming 'lost in concept space' may often happen in relatively passive learning activity in which learners are not required to make intellectual
+decisions about the choices of hyperlinks.</p>
+
+<h3>4.3  Learning Outcomes</h3>
+
+<p> Hypermedia <span>systems</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>have been generally <span>accepted</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>as an educational
+support tool (<a href="#jona2">Jonassen, 1992</a>).  Consequently, many researchers
+have <span>investigated</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>the effects of  hypermedia on learning outcomes.
+ However, many studies have <span>failed</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to employ any subtle or complex
+<span>definitions</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of learning outcomes (<a href="#egan">Egan et al., 1991</a>; <a href="#bail">Bailey &amp;
+Hall, 1995</a>; <a href="#wels">Welsh, 1995</a>; <a href="#aero">Aero &amp; Catenazzi, 1996</a>).  The present research seeks to <span>investigate</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>learning in terms of deep and surface
+level processing, and the scope of exploration from relatively
+broad to narrow in the subject hierarchy.  The study will explore
+both quantitative and <span>qualitative</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>aspects of learning.</p>
+
+<h2>5. Concluding Remarks</h2>
+
+<p> Hypermedia use is premised on learner control  (<a href="#jona1">Jonassen &amp;
+Grabinger, 1990</a>).  Traditional CAL <span>systems</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>have often been authored
+with a <span>distinct</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>pedagogical strategy <span>underlying</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>the <span>sequence</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of
+the learning material.  In hypermedia learning environments learners
+have relatively high levels of control over the <span>sequence</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of their
+learning activities, because of their flexibility. In many hypermedia
+learning environments, learners take the responsibility for the
+learning process and make decisions relating to <span>choice</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of routes
+through the learning material.  For these reasons, CAL systems
+based on hypermedia can be thought of as focusing more on 'learning'
+than 'teaching'.  Research on individual differences may help
+us create <span>systems</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>that can adapt to learner according to their
+needs.  It may help the development of hypermedia learning environments
+that are useful to a wide <span>range</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of users with differing <span>abilities</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+styles and preferences.</p>
+
+<p> The research is in its early stages.  However, it is hoped that
+by <span>taking</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>into account a number of individual differences, relationships
+between navigational patterns and both quantitative and qualitative
+aspects of learning will be identified.  The goal is to develop
+building blocks for a model of learning which will support the
+development of adaptive information accessing and presentation
+<span>systems</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to support learning.</p>
+
+<h2>References</h2>
+
+<ul>
+<li><a name="aero"></a>Aero, I.  and Catenazzi, N. (1996) The Evaluation of Hypermedia Learning Environemnt: The CESAR Experience. <i>Journal of Educational Multimedia and Hypermedia</i>. 5 (1), 3-22.</li>
+
+<li><a name="alli"></a>Allinson, B. (1991)  <span>Cognitive</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>research in information science.  <i>Annual Review of Information Science and Technology</i>. 26, 3-37.</li>
+
+<li><a name="ande"></a>Anderson, <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> <span>R++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> &amp; Reiser, B. L. (1985)  The LISP tutor. <i> Byte</i>. 10 (4), 159-175.</li>
+
+<li><a name="bail"></a>Bailey, <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> D.  and Hall, <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> L.  (1995) CBL in Engineering: <span>students</span>' <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> use of a learning resource on phase diagrams.<i> Computers &amp; Education</i>. 25 (1/2), 75-80.</li>
+
+<li><a name="borg"></a>Borgman, C. L. Hirsch, <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>G., et al.  (1995)  Children's Searching Behaviours on Browsing and Keyword Online Catalogs: The Science Library Catalog Project  <i>Journal of the American Society for Information Science</i>. 46 (9), 663-684.</li>
+
+<li><a name="bork"></a>Bork, E. (1987)  An <span>investigation</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of Hypermedia.  <i>Reading Research and Instruction </i>27 (4), 5-24.</li>
+
+<li><a name="chu"></a>Chu, G. &amp; Schramm, W. (1974)  Learning from television: what research says.  California: Institute for Communication Research, Stanford University.</li>
+
+<li><a name="cohe"></a>Cohen, K., Husaim,  L. et al., (1981)   Current Technology for Education.  <i>American Libraries</i>  20 (2), 158-162. </li>
+
+<li><a name="conk"></a>Conklin, <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> (1987)  Hypertext: An Introduction and Survey. <i>IEEE Computer</i> (Sept.), 17-41.</li>
+
+<li><a name="dill"></a>Dillon, <span>A+</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> C. (1994<i>. Interfaces for Information Retrieval and Online Systems</i>. Westport, CT: Greenwood.</li>
+
+<li><a name="dona"></a>Donald, K. (1989)   Matching learner preference to amount of instruction.  <i>Education Technology Reseach and Development</i> 23 (2), 5-14.</li>
+
+<li><a name="edwa"></a>Edward, D. &amp; Hardman, L. (1989) Lost in hyperspace: <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>faceted approach to hypertext.  In: <span>R++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> McAleese (Ed.). <i> Hypertext : Theory into Practice</i>. Norwood, NJ:Ablex.</li>
+
+<li><a name="egan"></a>Egan, D., Lesk, M. E.,  et al. (1991)  Turning ideas to hypertext. <i>Hypermedia. </i>7(4): 33-40.</li>
+
+<li><a name="elm"></a>Elm, W. C. &amp; Woods, D. D. (1985)  Getting lost: <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Case <span>Study</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in Interface <span>Design</span>. <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  <i>Proceeding of the <span>Human</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Factors Society</i>, 927-931.</li>
+
+<li><a name="ess"></a>Ess, H. (1991)  Hypermedia: functional <span>features</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and research issues.  <i>Educational Technology</i> 31 (8), 24-31.</li>
+
+<li><a name="eyse"></a>Eysenck, M. W. &amp; Keane, M. T (1990)  <i>Cognitive Psychology: a student's hadbook</i>.  Hillsdale, NJ: LEA.</li>
+
+<li><a name="fide"></a>Fiderio, <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> (1988)  <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Grand Vision. <i> Byte</i>. October. 237-247.</li>
+
+<li><a name="folz"></a>Folz, P. W. (1991)  <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>text comprehension model of hypertext. In: S. P. Robertson, G. Ohlson &amp; <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> S. Ohlson (Eds). <i> Reaching Through Technology.  Proceedings of CHI</i> <i>1991</i>, 489-490.  New York: ACM.</li>
+
+<li><a name="fran"></a>Francis, L. (1993). The affective <span>domain</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> <i>Computers in Education</i>. 20 (3), 251-255.</li>
+
+<li><a name="gave"></a>Gaver, W. W. (1991) Technology Affordances. In: S. P. Robertson, G. Ohlson &amp; <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> S. Ohlson (Eds).  <i>Reaching Through Technology.  Proceedings of CHI 1991</i>, 79-84.  New York: ACM.</li>
+
+<li><a name="gord"></a>Gordon, S.  (1990)  The effects of hypertext on reader knowledge <span>representation</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  In: Vicky <span>Lewis</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>(Ed.).   <i>Proceedings of the <span>Human</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Factors Society, 34th Annual Meeting</i>. Anahelm, CA. 112-134.</li>
+
+<li><a name="hamm1"></a>Hammond, N. (1993)  Learning with hypertext: problems, principles and prospects.  In: C. McKnight, Dillon, <span>A+</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> and Richardson, <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> (Eds). <i>Hypertext Psychological Perspective</i>. New York: Ellis
+Horwood.</li>
+
+<li><a name="hamm2"></a>Hammond, N. &amp; Allinson, L. (1989)<i> Extending hypertext for learning</i>. In: Alistair Suitcliffe &amp; Linda Macaulay (Eds.).  <i>People and Computers</i> V. Cambridge: Cambridge University
+Press. 114-125.</li>
+
+<li><a name="hell"></a>Heller, L.  (1992)  Hypermedia <i>Computer-based instruction: <span>Methods</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and Development</i>.  Englewood Cliffs, NJ: Prentice Hall.</li>
+
+<li><a name="jona1"></a>Jonassen, D. and Grabinger, <span>R++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> (1990)  Problems and issues in designing hypertext/hypermedia for learning.  In: Jonassen, D.  and H. Mandel (Eds.). <i>Designing hypermedia for learning</i>.  <span>Berlin</span>, <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> London: Springer-Verlag. 3-26.</li>
+
+<li><a name="jona2"></a>Jonassen, D. H.   (1989)  Designing Structured Hypertext, and Structuring Access to Hypertext.  <i>Educational Technology </i>  28 (11)13-19.</li>
+
+<li><a name="kibb"></a>Kibby, M., Mayes, T.,  &amp; Anderson, T. (1990)  Learning about learning from hypertext.  In: Jonassen, D. H. and Mandel, H. (Eds.).  <i>Designing hypermedia for learning</i>.  <span>Berlin</span>, <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> London: Springer-Verlag.
+227-250.</li>
+
+<li><a name="kint"></a>Kintsch, W. (1987)  The role of knowledge in discourse comprehension: a construction-integration model.  <i>Psychology Review</i>. 95 (2),163-182.</li>
+
+<li><a name="lina"></a>Linard, M. &amp; Zeillger, G,  (1995)  Designing navigational support for educational software<i>.  Proceedings of <span>Human</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Computer Interactions</i>. 63-78.</li>
+
+<li><a name="mcal"></a>McAleese, <span>R++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> C. (1989)  Navigation and Browsing in Hypertext. In: <span>R++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> C. McAleese (Ed.). <i>Hypertext: Theory into Practice</i>. Norwood, NJ: Ablex.</li>
+
+<li><a name="mckn"></a>McKnight, C., Dillon, <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  and Richardson, <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  (1990)  <i>Hypertext Psychological Perspective</i>. New York: <span>Ellis</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Horwood.</li>
+
+<li><a name="marc"></a>Marchionini, G.  (1988)  Hypermedia and Learning:  Freedom and Chaos.  <i>Educational Technology.</i>  28 (11), 8-12.</li>
+
+<li><a name="maye"></a>Mayes, M.  (1994)  <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>method for evaluating the efficiency of presenting information in a hypermedia <span>environment</span>. <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span><i> <span>Computer</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in Education</i>. 18 (1), 179-182.</li>
+
+<li><a name="niel"></a>Nielsen, <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  (1990) <i> Hypermedia and Hypertext</i>. London: Academic Press. </li>
+
+<li><a name="poph"></a>Popham, L.  (1961)  Using AV materials to provide instruction. <i> Journal of Educational Professional </i>3 (2), 155-172.</li>
+
+<li><a name="schr"></a>Schraman, G.  (1985)   New Training Tool for Teaching? <i> Education Technology </i>28 (8),  7-11.</li>
+
+<li><a name="scot"></a>Scott, P. (1993)   Generating a hypermedia tutorial from a concept <span>network</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>  <i>Presented at CAL 93.</i>  York: University of York. April, 1993.</li>
+
+<li><a name="shas"></a>Shasaani, L. (1993) Gender-based differeces in <span>attitudes</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in <span>attitudes</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>toward computers. <i>Computer Education. </i> 20 (2), 169-181.</li>
+
+<li><a name="shne"></a>Shnell, T. <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> (1992)  Designing instructional computing for meaningful learning. In: P. Winne &amp; M. Jones (Eds) <i>Foundations and Frontier in Instrctional <span>Computing</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Systems.</i>.  Berlin: Springer-Verlag. 95-113.</li>
+
+<li><a name="simp"></a>Simpson,  M.(1994) Navigation in the hypertext. <i>Hypermedia. </i> 16 (2), 113-134. </li>
+
+<li><a name="tomp"></a>Tompsett, C. P. (1990)  <i>Contextual browsing within a hypermedia environment</i> .  Kingston Upon Thames: Kingston Polytechnic.</li>
+
+<li><a name="wels"></a>Welsh, T. M. (1995). Simplifying Hypermedia Usage for Learners: The effect of Visual and Manual Filtering Capabilities on Efficiency, Perception of Usability, and Performance. <i>Journal of Educational Multimedia and Hypermedia. </i>4 (4), 275-304.</li>
+
+<li><a name="zell"></a>Zellweger, P. T. (1989) Scripted <span>documents</span>. <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> In: Rob Akyscyn (Ed.). <i>Hypertext '89</i>. New York: ACM Press. 1-14</li>
+</ul>
+<hr color="#ff00ff" size="1">
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Chen, Sherry Yu-Hua &amp; Ford, Nigel <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> (1997)&nbsp; &quot;Towards adaptive information systems: individual differences and hypermedia&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>3</strong>(2) Available at: http://informationr.net/ir/3-2/paper37.html</p>
+<p style="text-align : center">&copy; the authors, 1997. </p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:VZP6Wm2waQgJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres32.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper37" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 28 December 2002</h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color="#ff00ff" size="3">
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+
+<!-- Mirrored from informationr.net/ir/3-2/paper37.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:26 GMT -->
+</html>
+

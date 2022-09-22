@@ -1,0 +1,1135 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<!-- Mirrored from informationr.net/ir/7-2/paper126.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:15:40 GMT -->
+<head>
+<title>Targeted s-gram matching: a novel n-gram matching technique for  cross- and monolingual word form variants</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Generator" content="Microsoft Word 97">
+<meta name="description" content="We present a novel n-gram based string matching technique, which we call the targeted s-gram matching technique. In the technique, n-grams are classified into categories on the basis of character contiguity in words. The categories are then utilized in matching. The technique was compared with the conventional n-gram technique using adjacent characters as n-grams. Several types of words and word pairs were studied.  English, German, and Swedish query keys were matched against their Finnish spelling variants and Finnish morphological variants  using a target word list of 119 000 Finnish words. In all cross-lingual tests done, the targeted s-gram matching technique outperformed the conventional n-gram matching technique. The technique was highly effective also for monolingual word form variants. The effects of query key length and the length of the longest common subsequence (LCS) of the variants on the performance of s-grams were analyzed.">
+   <meta name="rating" content="Mature">
+   <meta name="VW96.objecttype" content="Document">
+   <meta name="ROBOTS" content="ALL">
+   <meta name="DC.Title" content="Targeted s-gram matching: a novel n-gram matching technique for  cross- and monolingual word form variants">
+   <meta name="DC.Creator" content="Ari Pirkola;Heikki Keskustalo;Erkka Leppänen;Antti-Pekka Känsälä;Kalervo Järvelin">
+
+   <meta name="DC.Description" content="We present a novel n-gram based string matching technique, which we call the targeted s-gram matching technique. In the technique, n-grams are classified into categories on the basis of character contiguity in words. The categories are then utilized in matching. The technique was compared with the conventional n-gram technique using adjacent characters as n-grams. Several types of words and word pairs were studied. English, German, and Swedish query keys against their Finnish spelling variants and Finnish morphological variants were matched using a target word list of 119 000 Finnish words. In all cross-lingual tests done, the targeted s-gram matching technique outperformed the conventional n-gram matching technique. The technique was highly effective also for monolingual word form variants. The effects of query key length and the length of the longest common subsequence (LCS) of the variants on the performance of s-grams were analyzed.">
+   <meta name="DC.Publisher" content="Professor T.D. Wilson">
+   <meta name="DC.Coverage.PlaceName" content="Global">
+   <meta name="GENERATOR" content="Mozilla/4.6 [en] (Win95; I) [Netscape]">
+   <title>Targeted s-gram matching: a novel n-gram matching technique for cross- and monolingual word form variants</title>
+<link rel="stylesheet" href="../IRstyle.css">
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center" colspan="5"><h4>Information Research, Vol. 7 No. 2, January 2002,</h4></td></tr>
+  <tr> 
+    <td><a href="infres72.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+
+<h1>Targeted s-gram matching: a novel n-gram matching technique for cross- and mono-lingual word form variants</h1> 
+
+<h4><a href="mailto: pirkola@cc.jyu.fi">Ari Pirkola</a>, Heikki Keskustalo, Erkka Lepp&auml;nen,<br> Antti-Pekka K&auml;ns&auml;l&auml; and Kalervo J&auml;rvelin<br>
+Department of Information Studies<br>
+&nbsp; University of Tampere<br>
+
+Finland </h4> 
+<br>
+<div align="center" style="font-family: sans-serif; font-size: medium; font-weight: bold;"><b>Abstract</b></div>
+<br>
+<blockquote> We present a novel n-gram based string matching technique, which we call the targeted s-gram matching technique. In the technique, n-grams are classified into categories on the basis of character contiguity in words. The categories are then utilized in matching. The technique was compared with the conventional n-gram technique using adjacent characters as n-grams. Several types of words and word pairs were studied. English, German, and Swedish query keys were matched against their Finnish spelling variants and Finnish morphological variants  using a target word list of 119 000 Finnish words. In all cross-lingual tests done, the targeted s-gram matching technique outperformed the conventional n-gram matching technique. The technique was highly effective also for monolingual word form variants. The effects of query key length and the length of the longest common subsequence (LCS) of the variants on the performance of s-grams were analyzed. </blockquote>
+
+<h2>Introduction </h2>
+
+<p>Word form variation, which involves cross-lingual spelling variation and monolingual morphological variation, is an important and challenging issue in mono- and cross-language information retrieval. Different forms of the same word represent the same concept, thus being equal from the standpoint of users' requests. However, in traditional retrieval systems based on exact string matching, a query key contributes to retrieval success only if it is identical to the corresponding index term. <i>Approximate string matching</i> techniques, however, are capable of finding word form variants. In this paper, we will explore one such technique - n-gram based string matching. We will explore cross-lingual <i>spelling variants</i>, i.e., equivalent words in different languages which differ slightly in spelling, as well as monolingual <i>morphological variants</i>.</p>
+
+<p>This study was motivated by our concern of untranslatable proper names and technical terms in <i>dictionary-based cross-language retrieval</i> (CLIR). For an overview of the approaches to cross-language retrieval, see (<a href="#Oard98">Oard and Diekema, 1998</a>). For an overview of the methods used in <i>dictionary-based CLIR</i>, see (<a href="#Pirkolaetal01">Pirkola <em>et al</em>., 2001</a>). Our experience on CLIR system development and evaluation at the University of Tampere, Information Retrieval Laboratory (<a href="#Hedlund01">Hedlund
+<em>et al</em>., 2001</a>; <a href="#Pirkola98">Pirkola, 1998</a>), and the analysis of request key properties (<a href="#PirkolaJarvelin01">Pirkola and J&auml;rvelin, 2001</a>) have shown that proper names and technical terms often are prime keys in requests, and if not translated by dictionaries, query performance may deteriorate. Proper names (technical terms) in different languages often have the same origin, being thus spelling variants of each other.
+General translation dictionaries may include some proper names, such as the names of countries and capital cities, as well as common technical terms, but generally these kinds of words are untranslatable. In dictionary-based cross-language retrieval untranslatable query keys are typically used in target language queries in their original source language forms. Unless they are identical to the corresponding database index terms, they do not contribute to retrieving relevant documents. However, the fact that proper names (technical terms) often are form variants of each other allows the use of approximate string matching techniques to find the target language correspondents of source language keys.</p>
+
+<p>A common method to handle morphological variation in retrieval systems is to conflate different morphological forms of the same word - or related words in the case of derived words - into the same form using stemming algorithms based on suffix lists and desuffixing rules (<a href="#Pirkola01">Pirkola, 2001</a>). In morphologically complex languages, retrieval effectiveness can be improved, and users can be freed from taking into account word morphology,
+by using dictionary-based morphological analyzers, which normalize inflected word forms into their base forms. As translation dictionaries, the dictionaries of morphological analyzers are incomplete, just in part covering the (theoretical) lexicons of languages. Therefore a given query key may be retained, say, in a genitive form in the morphological normalizing of a query, while the corresponding index term may be in several different forms. This problem concerns both mono- and cross-lingual retrieval systems in which morphological analyzers are employed, and could be addressed using approximate string matching techniques. In addition to spelling and morphological variation,
+there are other situations in which the use of approximate string matching techniques would be useful, particularly spelling errors (<a href="#Zobel95">Zobel and Dart, 1995</a>) and difficulty in knowing exact spellings of names.
+<p>Approximate matching techniques involve <i>Soundex</i> and <i>Phonix</i>, which compare words on the basis of their phonetic similarity (<a href="#Gadd88">Gadd, 1988</a>; <a href="#Gadd90">Gadd, 1990</a>). In the techniques, phonetic codes are computed for the strings that are compared, and the strings with similar codes are counted similar. <i>Damerau-Levenstein metric</i> (<a href="#Damerau64">Damerau, 1964</a>) was developed specifically for spelling errors. In <i>n-gram based matching</i> (<a href="#Angel83">Angell <em>et al</em>., 1983</a>; <a href="#Hall80">Hall and Dowling, 1980</a>; <a href="#Pfeifer96">Pfeifer <em>et al</em>., 1996</a>; <a href="#Robertson98">Robertson and Willett, 1998</a>; <a href="#Salton89">Salton, 1989</a>; <a href="#Zobel95">Zobel and Dart, 1995</a>), text strings are decomposed into n-grams, i.e., substrings of length <i>n</i>, which usually consist of the adjacent characters of the text strings. <i>Digrams</i> contain two and <i>trigrams</i> three characters. The degree of similarity between the strings is computed on the basis of the number of similar n-grams and the total number of unique n-grams in the strings.</p>
+
+<p>In this paper, we will investigate n-gram based word matching. The aim is to develop an effective n-gram matching technique particularly for cross-lingual spelling variants, as well as monolingual morphological variants. N-gram 
+matching is a language independent matching technique. It thus seems to be an ideal approximate matching technique for CLIR systems processing different languages. Moreover, n-gram matching has been reported to be an effective technique among various approximate matching techniques (<a href="#Pfeifer96">Pfeifer <em>et al</em>., 1996</a>; <a href="#Zobel95">Zobel and Dart, 1995</a>).</p>
+
+<p>We will investigate the effectiveness of <i>digrams</i> combined both of adjacent and<i> non-adjacent characters</i> of words. These kinds of n-grams we call <i>s-grams</i> (where <i>s</i> refers to the term<i> skip</i>).
+We assumed that for cross-lingual spelling variants s-grams may be more effective than n-grams combined of adjacent characters only, because variant forms may share just a few (1-2) digrams formed of adjacent characters, or no digrams at all if the words are very short. If also non-adjacent characters are used, however, even short words may have many similar digrams. </p>
+
+<p>Cross-lingual spelling variation involves substitution and addition/deletion of letters in words. For instance, in the Finnish word <i>kalsitoniini</i> (<i>calcitonin</i>) there are many transformations typical of Finnish spelling variants: <i>c</i> <font face="Wingdings">&agrave;</font> <i>k</i> and <i>c</i><font face="Wingdings">&agrave;</font><i>s</i>
+substitutions, the lengthening of a vowel (one type of addition) and addition of a single vowel. The second <i>i</i>-vowel in <i>calcitonin</i> is transformed into a double vowel (<i>ii</i>) in <i>kalsitoniini</i>. The <i>i-</i>vowel at the end of <i>kalsitoniini</i> represents the case of single vowel addition.</p>
+
+<p>We will test several types of character combinations regarding the number of skipped characters, as well as a novel technique to compare the s-grams of query keys with those of target words. We call the<i> </i>technique <i>the
+targeted s-gram matching technique</i>, or in more specific contexts, <i>the classified s-gram matching technique</i>.<i> </i>In the technique, s-grams are classified into categories on the basis of the number of skipped characters, and only the s-grams belonging to the same category are compared with one another. We will demonstrate that the technique is effective for many types of word form variants. In all cross-lingual tests done in this study, it
+outperformed the commonly used n-gram matching technique where n-grams are composed of adjacent characters. Also in the case of monolingual word form variants the technique was very effective.</p>
+
+<p>The rest of this paper is organized as follows. The next section introduces to the research problems investigated in this study and presents the problems. This is followed by  sections on methods and data, findings, discussion and conclusions.</p>
+
+<h2>Research problems</h2>
+
+<p>Generally, the effectiveness of n-gram matching depends on the number of similar n-grams and the total number of n-grams generated from the words that are compared, as well as the number of words in <i>a target word list</i>
+(TWL), i.e., a list of words against which a query key is matched, and the frequencies of different n-grams generated from the target words. For example, for a spelling variant pair which shares many high frequency n-grams, matching can be expected to be less effective than for a spelling variant pair only sharing low frequency n-grams.</p>
+
+<p>The relative effectiveness of different kinds of n-gram matching techniques can be evaluated empirically by selecting query keys, and defining for each key all the relevant word forms in the TWL (i.e., the recall bases of query keys). The n-grams of a key are then matched against the n-grams of TWL words. The effectiveness of an n-gram matching technique can be calculated using the measure of<i> precision</i>, i.e., the proportion of relevant words among all the words retrieved. Our test data consisted of English-Finnish, German-Finnish, and Swedish-Finnish cross-lingual spelling variants, and Finnish morphological variants (Section 3). The TWL contained 119 000 words. By using this test data we investigated empirically several research problems described below.</p>
+
+<p>When s-grams are formed from words, it is possible to operate on different character combinations with respect to the number of skipped characters (0, 1, 2, ..., m-2 skipped characters), where <i>m</i> refers to the number of characters in a word <i>w<sub>i</sub>.</i> For <i>digrams</i>, we use <i>a character combination index (CCI</i>) to indicate the number of skipped characters as s-digrams are formed. In the notation, each number refers to the number of characters between the constituent characters of s-digrams. For example, CCI=(1, 2) refers to s-digrams composed of characters separated by one character and two characters in the words. Conventional digrams composed of adjacent characters are marked as CCI=(0). CCI = (0, 1, ..., (m-2)) refers to a character combination operation where all possible digrams are formed. The s-digrams belonging to the same category in the case of classified s-grams are marked using the parentheses '[' and '] '.</p>
+
+<p>Table 1 shows the s-digrams with CCI=(0, 1, 2) for the spelling variant
+pair <i>pharmacology</i> and <i>farmakologian</i> (the Finnish correspondent
+for <i>pharmacology</i> in a genitive form).</p>
+
+<table align="center" border cellpadding=4 width="510" bgcolor="#FDFFBB" >
+<caption align="bottom"><br><strong>Table 1: Examples of s-digrams with CCI=(0,1,2).</strong></caption>
+<tr>
+
+<th valign=top width="22%" height="32">Word</th>
+<th valign=top width="22%" height="32"> CCI</th>
+<th valign=top width="56%" height="32">S-digram set</th>
+</tr>
+<tr><td valign=top width="22%"> pharmacology</td>
+<td align="center" valign=top width="22%"> (0)</td>
+<td align="center"  valign=top width="56%">{ph,ha,ar,rm,ma,ac,co,ol,lo,og,gy}</td>
+</tr>
+
+<tr><td valign=top width="22%">&nbsp; </td>
+<td align="center" valign=top width="22%">(1)</td>
+<td align="center" valign=top width="56%">{pa,hr,am,ra,mc,ao,cl,oo,lg,oy}</td>
+</tr>
+<tr><td valign=top width="22%">&nbsp;</td>
+<td align="center"  valign=top width="22%">(2)</td>
+<td align="center"  valign=top width="56%">{pr,hm,aa,rc,mo,al,co,og,ly}</td>
+</tr>
+<tr><td valign=top width="22%">farmakologian</td>
+<td align="center" valign=top width="22%">(0) </td>
+
+<td align="center" valign=top width="56%">{fa,ar,rm,ma,ak,ko,ol,lo,og,gi,ia,an}</td>
+</tr>
+<tr><td valign=top width="22%">&nbsp;</font></td>
+<td align="center" valign=top width="22%">(1)</td>
+<td align="center" valign=top width="56%">{fr,am,ra,mk,ao,kl,oo,lg,oi,ga,in}</td>
+</tr>
+<tr><td valign=top width="22%">&nbsp;</td>
+<td align="center" valign=top width="22%">(2)</td>
+<td align="center" valign=top width="56%">{fm,aa,rk,mo,al,ko,og,li,oa,gn}</td>
+</tr>
+</table>
+
+<p>We assumed that the effectiveness of s-gram matching depends on CCI. The use of extensive skipping, e.g., all possible digrams are formed, often gives many high frequency digrams, which occur in many words. This may depress the effectiveness. On the other hand, restricted skipping provides less similar digrams for related words than an extensive skipping. This also may depress the effectiveness. Therefore determining a balanced CCI seems crucial for s-gram matching to be effective.</p>
+
+<p>The use of non-adjacent characters as n-grams is not a new idea (<a href="#Robertson98">Robertson
+and Willett, 1998</a>; <a href="#Ullmann77">Ullmann, 1977</a>). However, the classification of s-grams on the basis of character contiguity, and matching based on the s-gram categories is a novel idea. Also the perspectives adopted in this study on the issue, and the research problems we will explore are novel. Ullmann (<a href="#Ullmann77">1977</a>) studied spelling errors in terms of efficiency (speed) and used n-grams combined of non-adjacent characters, such as quadgrams 1356 and 1245, where the numbers stand for letter positions in the words containing six letters (the test dictionary only contained six-letter words). The method was applied for finding from
+a dictionary all the words that differed from a given input word by 1-2 letters. Ullmann concluded that parallel processing of sets of n-grams probably is faster than scanning through the dictionary in the case of large dictionaries.</p>
+
+<p>The research problems investigated in this paper are as follows:</p>
+
+<ol><li><strong>The effects of CCI on the effectiveness of s-gram matching</strong>: Several character combination types were tested, i.e., CCIs were varied. The effects of different combination types were evaluated using English - Finnish spelling variants.</li>
+
+<li><strong>The effectiveness of the targeted s-gram matching</strong>: The targeted s-gram matching technique was compared with the conventional n-gram technique using adjacent characters as n-grams (digrams and trigrams). Also unclassified s-grams were tested. Regarding the use of a blank space as a consituent character of s-grams, three types of tests were done: (1) no space, (2) the start space, and (3) both start and end spaces allowed as consituents.</li>
+
+<li><strong>The effectiveness of s-gram matching for various types of words and word pairs</strong>: English, German, and Swedish query keys against the Finnish words in the TWL were matched. Query key lists contained medical and pharmacological
+terms (the first key list) and geographical names (the second list). Finnish query keys in base and genitive forms were matched against the Finnish words in the TWL. In the TWL, Finnish words were in many different forms owing to word inflection.</li>
+
+<li><strong>Factors affecting the effectiveness of the targeted s-gram matching technique</strong>: To explain the results we analyzed the effectiveness of classified s-gram matching with respect to that of conventional n-gram matching in terms of query key length and the number of characters in the longest common subsequence (LCS) of the variants that were compared. For two words, their LCS is the longest character sequence of the sequences that occur in both words. For example, for the words <strong><u>r e</u> t r<u> i</u> e <u>v a l</u></strong> and <strong><u>r e</u> v<u> i v a </u>l</strong>&nbsp; the LCS is &nbsp;<strong>r e i v a l</strong>.</li></ol>
+
+<h2>Methods and data</h2>
+
+<h3>The target word list</h3>
+
+<p>In the Information Retrieval Laboratory at the University of Tampere there are many full text research databases. Laboratory's Finnish database contains 55 000 documents (Finnish newspaper articles). A set of 35 test topics has been created on the basis of the articles. Around 17 000 human relevance assessments have been made to judge the relevance of the documents against the test topics. The database has been used in many IR studies (e.g., <a href="#Jarvelin00">J&auml;rvelin and Kek&auml;l&auml;inen, 2000</a>; <a href="#Sormunen00">Sormunen, 2000</a>). The words were normalized using the Twol morphological analyzer of Lingsoft Corp. Those words that the Twol did not recognize were indexed in a separate index. In this study we used that separate index as a target word list.</p>
+
+<p>Thus, we used as test words such words that actually are problematic in IR. This method of isolating the difficult cases in a separate file is reasonable from the n-gram matching perspective, otherwise the effectiveness of n-gram matching would be lower due to the higher number of TWL words. There is no need to apply n-gram matching for the words which can be handled using a morphological analyzer.</p>
+
+<p>The TWL contains some 119 000 words. It includes Finnish proper names (e.g., personal names, company names, and geographical names) and Finnish common nouns, Finnish words borrowed&nbsp; from other languages, i.e., spelling variants, English and other foreign language words, and Finnish spelling error forms. Finnish is a morphologically complex language, and many of the words in the list occur in several inflected forms. The most common word forms in Finnish are the base (nominative) and genitive forms (<a href="#Karlsson83">Karlsson, 1983</a>).</p>
+
+<h3>Gathering query keys</h3>
+
+<p>Altogether 8 query key lists were used in the experiments of this study. For different lists we used different query key gathering methods, as described in this section.</p>
+
+<p><i>Eng1, Ger, and Swe lists</i></p>
+
+<p>The target word list was browsed from the start to end. A list of pharmacological and medical terms was gathered. Each term was looked up in a medical dictionary to find its English equivalent. If the dictionary translated the term into English, the English word was selected as a query key. Sometimes the dictionary gave more than one translation equivalent. In these cases, the orthographically closest equivalent was chosen for the test (this also holds for the Eng2
+list below). The selected English keys were translated into German and Swedish by means of medical dictionaries. In some cases translations were searched in the Web.</p>
+
+<p><i>Eng2 list</i></p>
+<p>A list of English place names and their Finnish equivalents was collected from a place name dictionary, which contains world's place names in both languages. Each Finnish name was searched in the target word list. If the
+Finnish name was found in the list, the English name was selected as a query key.</p>
+
+<p><i>Fin lists</i></p>
+<p>A set of Finnish words in different morphological forms beginning with the letters <i>a</i> and <i>k</i> was gathered from the TWL. In both cases this was done systematically by selecting from the list the first 50 original
+Finnish words. A native Finnish speaker can readily recognize the original Finnish words. The <i>k</i>-words words represent long words while the average length of <i>a</i>-words is much lower (Table 2). Thus, the use of these two samples allows studying the effects of target word length on the effectiveness of n-gram matching. The base and genitive forms of these words were used as query keys, while the words that were gathered from the TWL formed the recall bases of the keys.</p>
+
+<h3>Query key lists and recall bases</h3>
+
+<p>The query key lists are described in Table 2.</p>
+
+<p>For each query key, the corresponding Finnish word in different forms in the TWL formed the recall base of the key (i.e., the set of relevant words (word forms)). The last column in Table 2 shows the average number of relevant words in the TWL for different lists. As can be seen in Table 2, on the average one key in the Eng2 list had 3.9 relevant target words. For the other lists, the number of relevant words varied between 1.6-2.0.</p>
+
+<p><i>Compound words </i>containing relevant words as their components were judged as relevant target words. <i>Adjective derivatives </i>of noun keys were judged relevant. Both compound and derivative correspondents
+were more common in the Eng2 list than in the other lists.</p>
+
+<p>Below is an example of a result list for the query key <i>calcitonin</i> (the top ranked words ordered by decreasing SIM value) The correct correspondent (<i>kalsitoniini</i>) is at the sixth position in the list.
+
+
+<ol><li>0.472222 calcitonin halcionin</li>
+<li>0.459459 calcitonin billitonin</li>
+<li>0.388889 calcitonin kalitinin</li>
+<li>0.388889 calcitonin calvinon</li>
+<li>0.384615 calcitonin halcioniin</li>
+<li><i>0.380952 calcitonin kalsitoniini</i></li>
+<li>0.371429 calcitonin lintonin</li>
+<li>0.365854 calcitonin calutronin</li>
+<li>0.361111 calcitonin calvinin</li>...</ol> 
+ 
+
+<p>An example of a compound word containing a relevant word is the compound <i>sambesijoki</i> (<i>zambezi</i> <i>river</i>) for the key <i>zambezi</i> (<i>sambesi</i>). An example of an adjective derivative is the word <i>katatoninen</i> (<i>catatonic</i>), which is derived from the noun <i>katatonia</i> (<i>catatonia</i>). (Both
+words,&nbsp; <i>katatoninen</i> and <i>katatonia</i>, occurred in the TWL.)</p>
+
+<table align="center" bgcolor="#FDFFBB" border cellpadding=4 width="616">
+<caption align="bottom"><br><strong>Table 2: Query key and TWL word statistics.</strong></caption>
+<tr>
+<th valign=top width="25%" height="37">List Name<br>Number of Query Keys</th>
+<th valign=top width="11%" height="37">Avg. Word Length</th>
+<th valign=top width="55%" height="37">Query Key Types</th>
+<th valign=top width="9%" height="37">Avg. No TWL Words</th>
+</tr>
+<tr>
+<td valign=top width="25%">ENG1, N=52</td>
+
+<td align="center" valign=top width="11%">9,4</td>
+<td valign=top width="55%">English medical and pharmacological spelling variants</td>
+<td align="center" valign="middle"  rowspan="3" width="9%">2,0</td>
+</tr>
+<tr>
+<td valign=top width="25%">GER, N=52</td>
+<td align="center" valign=top width="11%">9,3</td>
+<td valign=top width="55%">German medical and pharmacological spelling variants</td>
+</tr>
+<tr>
+<td valign=top width="25%">SWE, N=52</td>
+
+<td align="center" valign=top width="11%">8,8</td>
+<td valign=top width="55%">Swedish medical and pharmacological spelling variants</td>
+</tr>
+<tr>
+<td valign=top width="25%">ENG2, N=41</td>
+<td align="center" valign=top width="11%">7,4</td>
+<td valign=top width="55%">English geographical spelling variants</td>
+<td align="center" valign=top width="9%">3,9</td>
+</tr>
+<tr>
+<td valign=top width="25%">FIN-base/a-words, N=50</td>
+
+<td align="center" valign=top width="11%">7,6</td>
+<td valign=top width="55%">Finnish words beginning with the letter ’a’in a base form</td>
+<td align="center" valign="middle" rowspan="2" width="9%">2,0</td>
+</tr>
+<tr>
+<td valign=top width="25%">FIN-gen/a-words, N=50</td>
+<td align="center" valign=top width="11%">8,5</td>
+<td valign=top width="55%">Finnish words beginning with the letter ’a’ in a genitive form</td>
+</tr>
+<tr>
+<td valign=top width="25%">FIN-base/k-words, N=50</td>
+
+<td align="center" valign=top width="11%">11,9</td>
+<td valign=top width="55%">Finnish words beginning with the letter’k’ in a base form</td>
+<td align="center" valign="middle" rowspan="2" width="9%">1,6</td>
+</tr>
+<tr>
+<td valign=top width="25%">FIN-gen/k-words, N=50</td>
+<td align="center" valign=top width="11%">12,8</td>
+<td valign=top width="55%">Finnish words beginning with the letter’k’ in a genitive form</td>
+</tr>
+</table>
+
+<h3>S-digram types</h3>
+
+<p>Classified and unclassified s-digrams, and the following types of character
+combinations were tested in the study:</p>
+
+<ul>
+<li>Unclassified s-digrams: CCI=(0, 1), CCI=(0, 1, 2), CCI = (0, 1, ..., (m-2))</li>
+<li>Classified s-digrams: CCI=([0], [1]), CCI=([0], [1, 2]), CCI=([0], [1],
+..., [9])</li>
+</ul>
+
+<p>In the case of unclassified digrams no restrictions were set, but each digram of a query key was compared with each digram of TWL's words. In the case of classified digrams, the digrams of a query key and those generated from TWL's words belonging to the same category were compared to each other. For example, in the case of CCI=([0], [1]) the digrams with CCI=(0) of a key were compared with the digrams with CCI=(0) of TWL's words, and the digrams with CCI=(1) of a key were compared with the digrams with CCI=(1) of TWL's words. In the case of CCI=([0], [1, 2]), digrams with CCI= (1) and digrams with CCI=(2) were put into the same category. Digrams belonging to this category of 1-2 skipped characters were compared to each other but not to digrams with CCI=(0) (and vice versa).</p>
+
+<p>Table 3 presents examples of unclassified and classified s-grams with different CCIs. Note that in the case of CCI=([0], [1, 2]) the words <i>abcde</i> and <i>axxc</i> - perhaps surprisingly - have a similar digram (<i>ac</i>).</p>
+
+<table align="center" bgcolor="#FDFFBB" border cellpadding=4 width="491" >
+<caption align="bottom"><br><strong>Table 3: Examples of unclassified and classified s-grams.</strong></caption>
+<tr>
+<th valign=top width="19%" height="32">Word</th>
+<th valign=top width="23%" height="32">CCI</th>
+<th valign=top width="58%" height="32">Digram set(s)</th>
+</tr>
+<tr align="center">
+<td valign=top width="19%">abcde</td>
+<td valign=top width="23%">(0)</td>
+
+<td valign=top width="58%">{ab,bc,cd,de}</td>
+</tr>
+<tr align="center">
+<td valign=top width="19%">abcde</td>
+<td valign=top width="23%">(0, 1)</td>
+<td valign=top width="58%">{ab,ac,bc,bd,cd,ce,de}</td>
+</tr>
+<tr align="center">
+<td valign=top width="19%">abcde</td>
+<td valign=top width="23%">(0, 1, 2)</td>
+<td valign=top width="58%">{ab,ac,ad,bc,bd,be,cd,ce,de}</td>
+
+</tr>
+<tr align="center">
+<td valign=top width="19%">abcde</td>
+<td valign=top width="23%">([0], [1])</td>
+<td valign=top width="58%">{ab,bc,cd,de} and {ac,bd,ce}</td>
+</tr>
+<tr align="center">
+<td valign=top width="19%">abcde</td>
+<td valign=top width="23%">([0], [1, 2])</td>
+<td valign=top width="58%">{ab,bc,cd,de} and {ac,ad,bd,be,ce}</td>
+</tr>
+
+<tr align="center">
+<td valign=top width="19%">axxc</td>
+<td valign=top width="23%">([0], [1, 2])</td>
+<td valign=top width="58%">{ax,xx,xc} and {ax,ac,xc}</td>
+</tr>
+</table>
+
+<h3>Computing similarity values</h3>
+
+<p>Similarity values were computed using the following string similarity scheme
+(<a href="#Pfeifer96">Pfeifer <em>et al</em>., 1996</a>):</p>
+
+<p>SIM(N<sub>1</sub>, N<sub>2</sub>)&nbsp; = | N<sub>1</sub> <font face="Symbol">&Ccedil;</font>
+N<sub>2</sub>| / | N<sub>1</sub> <font face="Symbol">&Egrave;</font>&nbsp; N<sub>2</sub>|,</p>
+
+<p>where N<sub>1 </sub>and N<sub>2</sub> are digram sets of two words. | N<sub>1</sub> <font face="Symbol">&Ccedil;</font> N<sub>2</sub>| denotes the number of intersecting (similar) digrams, and | N<sub>1</sub> <font face="Symbol">&Egrave;</font>&nbsp; N<sub>2</sub>| the number of unique digrams in the union of N<sub>1</sub> and N<sub>2</sub>. For example, the degree of similarity for the words <i>rwanda</i></p>
+
+and <i>ruanda </i>is calculated as follows (for n-grams with CCI = (0)):</p>
+
+<p>SIM({rw,wa,an,nd,da},{ru,ua,an,nd,da}) = |{an,nd,da}| / |{rw,wa,an,nd,da,ru,ua}| = 3/7 (0.428).</p>
+<p>For the word form compared to itself the similarity value is 1.0.</p>
+
+<h2>Findings</h2>
+
+<h3>The performance of s-grams</h3>
+
+<p>The results were evaluated as average precision at 100% recall. In other words, we computed the proportion of relevant words to all words at the last relevant word in the result list. We did not use any other evaluation measure (such as precision at different recall levels), because the average number of relevant TWL words was low (Table 2).</p>
+
+<p>The results were analyzed manually. The result lists were cut at the SIM-value of 0.2. This means that for each query key the result list contained several hundreds words. In some cases the last relevant word did not occur in the list, in which case the default precision value of 0% was used.</p>
+
+<p>Statistical significance of the difference between the performance of s-grams and that of baseline n-grams was tested using <i>Wilcoxon signed ranks test. </i>The test uses both the direction and the relative magnitude of the difference of comparable samples. The statistical program that was used is based on Conover (<a href="#Conover80">1980</a>). The statistical significance levels of 0.01, and 0.001 are indicated in the tables.</p>
+
+
+<p>In all cases n-grams with CCI=(0), i.e. the conventional n-grams combined of adjacent characters were used as baseline. We used both digram and trigram baselines. Digrams were run for all 8 lists. Trigrams were run for the following lists: Eng1, Eng2, Finnish a-words/base forms and Finnish a-words/genitive forms. For cross-lingual spelling variants, the digram baseline always performed better than the trigram baseline (Tables 4-5). For Finnish morphological variants, the trigram baseline sometimes performed better than the digram baseline (Tables 8a and 8b). The effectiveness of test digrams was compared with that of the better baseline (digrams/trigrams).</p>
+
+<p>All the s-gram types were first tested on the Eng1 list. In the first experiment the effects of CCI were tested. The findings of the Eng1 tests are presented in Table 4. As can be seen, classified s-grams with CCI=([0], [1, 2]) perform markedly better (avg. precision 64.1%) than the baseline n-grams with CCI=(0) (avg. precision 55.2%). Also unclassified s-grams with CCI=(0, 1) and CCI=(0, 1, 2) perform well in relation to the baseline. The unrestricted s-gram technique, in which all the possible digrams are formed is the worst method, giving much lower precision (38.2%) than the baseline (55.2%).</p>
+
+<p>The best s-gram techniques of the Eng1 tests, i.e., classified s-grams with CCI=([0], [1, 2]) and unclassified s-grams with CCI=(0, 1) were tested using the other lists as test data. The results are presented in Tables 5-8. As shown, in all tests (i.e., in all lists and experiments regarding the use of a blank space as a digram character) classified s-grams  with CCI=([0], [1, 2]) perform better than the baseline n-grams with CCI=(0). Unclassified s-grams with CCI=(0, 1) perform better or as well as the baseline n-grams.</p>
+
+<p>As shown in Tables 4-7, in the Eng1, Eng2, Swe, and Ger tests the highest performance improvements are achieved in the case of start and end spaces. For classified s-grams with CCI=([0], [1, 2]), the relative improvement percentages with respect to baseline are 18.2% (Eng1, Table 4), 49.7% (Eng2, Table 5), 20.7% (Ger, Table 6), and 17.1% (Swe, Table 7). The results are statistically significant at the levels of 0.01-0.001.</p>
+
+<p>In the Fin tests performance improvements are smaller (Tables 8a-8d). In one case (Finnish a-words/genitive forms, with start + end spaces) the baseline n-grams perform better than the classified s-grams (Table 8b). In Finnish, the application of the classified s-gram technique seems to be useful particularly for words possessing the inflectional pattern of <i>wordstem inflection</i>. The term refers<i> </i>to words whose word stems are changed
+in inflection, e.g., <i>Asonen</i> (personal name in a base form) and <i>Asosen</i>(the genitive form of the name <i>Asonen</i>). For example, in Fin a-word/base form tests, the application of the classified s-gram technique gave performance improvements for 10 matching cases (on the average precision was improved from 79,3% to 82,7% for the 52 matching cases; Table 8a). Six of the ten (i.e., 60%) positive cases concerned the matching of inflectional stem
+words. For all the 52 matching cases in the a-word/base form test the frequency of such inflectional stem words that contributed to precision was much lower, that is, 19,2% (10/52).</p>
+
+<p>In the Eng1, Eng2, Swe, and Ger tests, the use of the start space yields lower relative improvements than the other two cases. However, in three of four tests, with the exception Eng2, classified s-grams with the start space is the best matching technique. In the Eng2 test classified s-grams with start and end spaces perform slightly better.</p>
+
+<p>For Finnish a-words/genitive forms (Table 8b) the case of classified s-grams with the start space yields substantial improvements with respect to the case of classified s-grams with no space. In the former case precision
+is 90.6% and in the latter case 74.2%. This is a remarkable in the sense that the comparison precision of 74.2% is high.</p>
+ 
+<h3>Analyzing the factors affecting the performance of classified s-grams</h3>
+
+<p>To explain the superior performance of classified s-grams, we analyzed the results as follows.</p>
+
+<p><b>(1)</b> The effects of key length on the performance of classified digrams with CCI=([0], [1, 2]) and digrams with CCI=(0) was evaluated using the Eng1 and Eng2 lists. As can be seen in Table 9, the same trends hold for Eng1 and Eng2 lists: the shorter the word, the higher the relative performance of s-grams. In the word group of >= 9 letters performance improvement is small. In fact, for Eng2 words, the precision of baseline n-grams is slightly better than that of s-grams. For the medium length words performance improvements are substantial for both lists. The low performance figures in the word group of =&lt; 6 letters suggest that in the case of short words it is often impossible to find the correspondents whatever n-gram method is used (see Discussion section). In a few cases, however, the use of s-grams yields substantial performance improvements. For instance, in the Eng2 list precision for the name <i>Ithaca</i> is improved from 2,2% to 25,0% owing to applying the classified s-gram technique.</p>
+
+<p><b>(2)</b> For query keys in the Eng1, Eng2, Ger, and Swe lists and the corresponding relevant words at the last positions in the results lists (at which point precision was computed) the number of characters in the LCS of a query key and the corresponding TWL word was calculated (the analysis was done if the last relevant word occurred in the result lists of both matching techniques tested; see Section 4.1). In other words, the length of LCS was determined. Each query key/TWL word pair was put into the category of short (=&lt; 8 characters) or long (> 8 characters) LCS. For each category, the performance of classified digrams with CCI=([0], [1, 2]) and digrams with CCI=(0) was computed.In the case of short LCSs the performance of both classified s-grams and baseline n-grams is much worse than in the case of long LCSs (Table 10). This holds for all the four lists. However, for baseline n-grams the performance drop is more striking. This is shown in the last column of Table 10, which presents the performance of baseline n-grams with respect to classified s-grams; for all lists, the relative performance of baseline n-grams is markedly worse for short than long LCSs.</p>
+
+<h2>Discussion</h2>
+
+<p>In CLIR, proper names often are untranslatable due to limited coverages of translation dictionaries. Similarly, some words cannot be normalized, because the dictonaries of morphological analyzers are incomplete. In such cases, approximate matching techniques can be applied in searching for cross-lingual spelling variants and morphological variants. N-gram matching is a language independent means to recognize word from variants. It has been reported to be an effective technique among different approximate matching techniques in indexed systems, such as text retrieval systems (<a href="#Pfeifer96">Pfeifer <em>et al</em>., 1996</a>; <a href="#Zobel95">Zobel and Dart, 1995</a>). Pfeifer et al. (<a href="#Pfeifer96">1996</a>) studied name searching and tested the following approximate matching techniques: Soundex, Phonix, Damerau-Levenstein metric, Skeleton-key, and Omission-key. The most effective single technique was n-gram matching. Digrams were more effective than trigrams. Digrams with a space as their constituent character performed better than digrams in which only alphabetic characters were used. N-gram matching also could be utilized in resolving spelling errors which may be common in some databases (<a href="#Zobel95">Zobel and Dart, 1995</a>), in searching for historical word variants (<a href="#Orourke97">O'Rourke <em>et al</em>., 1997</a>), as well as an alternative method for stemming algorithms (<a href="#Kosinov01">Kosinov, 2001</a>; <a href="#Xu98">Xu and Croft, 1998</a>).</p>
+
+<p>In this study, the effectiveness of various types of s-digram matching
+techniques with respect to that of the conventional n-gram matching technique
+where only adjacent characters are used as n-grams was tested empirically.
+In summary, our main findings are as follows:</p>
+
+<ol><li>The effects of different character combinations types (i.e., CCIs were varied) were evaluated using English - Finnish spelling variants. We found that s-grams perform well if a relatively low CCI is chosen for matching.</li>
+
+<li>We discovered an effective n-gram matching technique which we call <i>the classified (targeted) s-gram matching technique</i>. In all the cross-lingual experiments we did, the technique outperformed the conventional n-gram
+matching technique.</li>
+
+<li>Several types of words and word pairs were studied. The types were English - Finnish medical (pharmacological) and geographical spelling variants, German - Finnish and Swedish - Finnish medical spelling variants, and Finnish 
+morphological variants. Both unclassified s-grams, and particularly the classified s-grams, were effective for all these word types.</li>
+
+<li>The effectiveness of s-gram matching with respect to that of the conventional n-gram matching depends on query key length and the number of characters in the longest common subsequence (LCS) of the variants. The s-gram technique is more effective than the n-gram technique particularly for short words and short LCSs.</li>
+
+<li>The use of the end space (together with the start space) gave the worst matching performance both for conventional n-grams and classified s-grams. This reflects the complex suffix-based inflectional system of Finnish; many of the target words were in inflected forms. The use of the end space in n-gram matching is not suited for inflectionally complex suffix languages.</li></ol>
+
+<p>In all tests of this study the target language was Finnish. Whether the finding of the effectiveness of classified s-gram matching can be generalized for other (target) languages is a research problem of future research. However, it is likely that the technique is also suited for other languages, because spelling variation is the same type of phenomenon in most languages (deletion, addition, and substitution of letters in words). Nevertheless, the degree of spelling variation depends on the language pair. The analysis of the factors affecting the performance of classified s-grams showed that the effectiveness of the technique depends on query key and LCS lengths. Word length is a language and domain dependent property. LCS length is dependent on the specific language pair considered. If the degree of spelling variation is small for two languages and variant forms often have long LCSs, the effectiveness of conventional n-gram matching may be good, while in the case of more extensive variation the classified s-gram matching
+technique may be much more effective.</p>
+ 
+<p>Finnish is a highly complex suffix language (<a href="#Pirkola01">Pirkola, 2001</a>). It has been estimated that theoretically a Finnish noun may have over 2000 inflectional forms. In practice, most words occur in several inflectional forms in databases. The fact that the use of the start space as a s-gram character yields the best performance reflects the morphological features of Finnish. However, it may also be true that especially the end parts of English (German, Swedish) - Finnish spelling variants are different. For some language pairs, spelling variation concerns particularly the initial parts of words. For example, Spanish words often begin with the letter <i>e,</i> while
+the corresponding English words do start with other letters. Therefore it does not seem reasonable to use the start space for spelling variant matching for language pairs having that kind of variation.</p>
+
+<p>In this study, we classified s-grams on the basis of character contiguity. It may be possible to improve the technique by utilizing information on s-gram locations in words. The method could be further improved by taking into account s-gram frequencies. The capability of high frequency s-grams to discriminate between words is low. Therefore, the down-weighting of high frequency s-grams seems a method worth testing.</p>
+
+<p>In some cases the extent of cross-lingual spelling variation is so high that no n-gram technique is able to fing right target language correspondents. For example, the Finnish correspondent for the name <i>Chechnya</i> is <i>Tsetshenia</i>. It seems that the only means to find right correspondents in cases like this is to use transliteration rules. For transliteration in CLIR (Japanese-English word transliteration), see (<a href="#Fujii01">Fujii and Ishikawa, 2001</a>). At the University of Tampere our objective is to develop language independent methods for CLIR. In agreement with this objective we are developing a method which automatically generates transliteration rules for different language pairs based on the information included in translation dictionaries. Transliteration may be used in combination with s-gram matching for better matching performance.</p>
+
+<h2>Conclusions</h2>
+
+<p>In this study we discovered an effective n-gram technique which we call the targeted s-gram matching technique. We demonstrated that the technique is effective for many types of word form variants when a proper character combination operation is used. The results showed that with respect to conventional n-gram matching s-gram matching is effective particularly for short words and short LCSs.</p>
+
+<p>This study was the first in our n-gram research project at the University of Tampere Information Retrieval Laboratory. In the project we are studying n-gram based translation of proper names and other spelling variants. In the next phrase, we will set up a new research environment (fully automated analysis methods and English language as a target language). Our future plans involve exploring positional and frequency statictics of s-grams to improve the effectiveness of s-gram matching, and developing a method that automatically generates transliteration rules for various language pairs.</p>
+<br>
+<table align="center" bgcolor="#FDFFBB" border cellpadding=4 width="515">
+<caption align="bottom"><br><strong>Table 4: The performance of s-grams. ENG1 list.</strong></caption>
+<tr>
+<th valign=top width="55%" height="40">ENG medical and pharmacological words</th>
+<th valign=top width="15%" height="40">Average Precision</th>
+<th valign=top width="15%" height="40">% Change</th>
+<th valign=top width="15%" height="40">Stat. Sign. Level</th>
+</tr>
+<tr>
+
+<td colspan="4" valign=top width="55%"><b>No space</b></td>
+</tr>
+<tr>
+<td valign=top width="55%">Digram baseline, CCI=(0)</td>
+<td align="center" valign=top width="15%">55,2</td>
+<td align="center" valign=top width="15%">&mdash;</td>
+<td align="center"  valign=top width="15%">&mdash;</td>
+</tr>
+<tr>
+<td valign=top width="55%">Trigram baseline, CCI=(0)</td>
+<td align="center" valign=top width="15%">52,6</td>
+<td align="center" valign=top width="15%">&mdash;</td>
+
+<td align="center"  valign=top width="15%">&mdash;</td>
+</tr>
+<tr>
+<td valign=top width="55%">Unclassified, CCI=(0, 1, …, (m-2))</td>
+<td align="center" valign=top width="15%">38,2</td>
+<td align="center" valign=top width="15%">-30,8</td>
+<td align="center" valign=top width="15%">0,001</td>
+</tr>
+<tr>
+<td valign=top width="55%">Unclassified, CCI=(0, 1)&nbsp;</td>
+<td align="center" valign=top width="15%">61,2</td>
+
+<td align="center" valign=top width="15%">+10,9</td>
+<td align="center" valign=top width="15%">0,01</td>
+</tr>
+<tr>
+<td valign=top width="55%">Unclassified, CCI=(0, 1, 2)</td>
+<td align="center" valign=top width="15%">60,5</td>
+<td align="center" valign=top width="15%">+9,6</td>
+<td align="center" valign=top width="15%">&mdash;</td>
+</tr>
+<tr>
+<td valign=top width="55%">Classified, CCI=([0], [1], ..., [9])</td>
+
+<td align="center" valign=top width="15%">43,8</td>
+<td align="center" valign=top width="15%">-20,7</td>
+<td align="center" valign=top width="15%">0,001</td>
+</tr>
+<tr>
+<td valign=top width="55%">Classified, CCI= ([0], [1])</td>
+<td align="center" valign=top width="15%">56,9</td>
+<td align="center" valign=top width="15%">+3,1</td>
+<td align="center" valign=top width="15%">&mdash;</td>
+</tr>
+<tr>
+
+<td valign=top width="55%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="15%">64,1</td>
+<td align="center" valign=top width="15%">+16,1</td>
+<td align="center" valign=top width="15%">0,001</td>
+</tr>
+
+<tr><td colspan="4" valign=top width="55%"><b>Start + end spaces</b></td></tr>
+<tr><td valign=top width="55%">Digram baseline, CCI=(0)</td>
+<td align="center" valign=top width="15%">54,3</td>
+<td align="center" valign=top width="15%">&mdash;</td>
+
+<td align="center" valign=top width="15%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align=center>53,6</td>
+<td align=center>&mdash;</td>
+<td align=center>&mdash;</td></tr>
+<tr><td valign=top width="55%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="15%">64,2</td>
+<td align="center" valign=top width="15%">+18,2</td>
+<td align="center" valign=top width="15%">0,001</td></tr>
+<tr><td valign=top width="55%"><b>Start space</b></td>
+
+<td valign=top width="15%">&nbsp;</td>
+<td valign=top width="15%">&nbsp;</td>
+<td valign=top width="15%">&nbsp;</td></tr>
+<tr><td valign=top width="55%">Digram baseline, CCI=(0)</td>
+<td align="center" valign=top width="15%">62,7</td>
+<td align="center" valign=top width="15%">&mdash;</td>
+<td align="center" valign=top width="15%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align=center>55,6</td>
+<td align=center>&mdash;</td>
+<td align=center>&mdash;</td></tr>
+<tr><td valign=top width="55%">Classified, CCI= ([0], [1, 2])</td>
+
+<td align="center" valign=top width="15%">67,0</td>
+<td align="center" valign=top width="15%">+6,9</td>
+<td align="center" valign=top width="15%">&mdash;</td></tr>
+</table>
+
+
+<br><br>
+
+<table align="center" bgcolor="#FDFFBB" border cellpadding=4 width="457" >
+<caption align="bottom"><br><strong>Table 5: The performance of s-grams. ENG2 list.</strong></caption>
+<tr><th valign=top width="50%" height="40">ENG geographical names</th>
+<th valign=top width="17%" height="40">Average Precision</th>
+
+<th valign=top width="17%" height="40">% Change</th>
+<th valign=top width="17%" height="40">Stat. Sign. Level</th></tr>
+<tr><td colspan="4" valign=top width="50%"><b>No space</b></td></tr>
+<tr><td valign=top width="50%">Digram baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">18,4</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align="center" align=center>15,5</td>
+<td align="center" align=center>&mdash;</td>
+
+<td align="center" align=center>&mdash;</td></tr>
+<tr><td valign=top width="50%">Unclassified, CCI=(0, 1)</td>
+<td align="center" valign=top width="17%">22,2</td>
+<td align="center" valign=top width="17%">+20,7</td>
+<td align="center" valign=top width="17%">0,01</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">25,1</td>
+<td align="center" valign=top width="17%">+36,4</td>
+<td align="center" valign=top width="17%">0,001</td></tr>
+
+<tr><td colspan="4" valign=top width="50%"><b>Start + end spaces</b></td></tr>
+<tr><td valign=top width="50%">Digram baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">19,9</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align=center>19,5</td>
+<td align=center>&mdash;</td>
+<td align=center>&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">29,8</td>
+
+<td align="center" valign=top width="17%">+49,7</td>
+<td align="center" valign=top width="17%">0,01</td></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Start space</b></td></tr>
+<tr><td valign=top width="50%">Digram baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">21,6</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align=center>20,4</td>
+<td align=center>&mdash;</td>
+
+<td align=center>&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">29,0</td>
+<td align="center" valign=top width="17%">+34,3</td>
+<td align="center" valign=top width="17%">0,01</td></tr>
+</table>
+
+<br><br>
+
+<table align="center" bgcolor="#FDFFBB" border cellpadding=4 width="457">
+<caption align="bottom"><br><strong>Table 6: The performance of s-grams. GER list.</strong></caption>
+<tr><th valign=top width="50%" height="40">GER medical and pharmacological words</th>
+
+<th valign=top width="17%" height="40">Average Precision</th>
+<th valign=top width="17%" height="40">% Change</th>
+<th valign=top width="17%" height="40">Stat. Sign. Level</th></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Nospace</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">62,0</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Unclassified, CCI=(0, 1)</td>
+<td align="center" valign=top width="17%">69,6</td>
+
+<td align="center" valign=top width="17%">+12,3</td>
+<td align="center" valign=top width="17%">0,01</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">70,7</td>
+<td align="center" valign=top width="17%">+14,0</td>
+<td align="center" valign=top width="17%">0,01</td></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Start + end spaces</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">56,9</td>
+
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">68,7</td>
+<td align="center" valign=top width="17%">+20,7</td>
+<td align="center" valign=top width="17%">0,001</td></tr>
+<tr><td colspan="4"  valign=top width="50%"><b>Start space</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">69,2</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">73,3</td>
+<td align="center" valign=top width="17%">+4,1</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+</table>
+<br><br>
+<table align="center" bgcolor="#FDFFBB" border cellpadding=4 width="457">
+<caption align="bottom"><br><strong>Table 7: The performance of s-grams. SWE list.</strong></caption>
+<tr><th valign=top width="50%" height="40">SWE medical and pharmacological words</th>
+<th valign=top width="17%" height="40">Average Precision</th>
+
+<th valign=top width="17%" height="40">% Change</th>
+<th valign=top width="17%" height="40">Stat. Sign. Level</th></tr>
+<tr><td colspan="4" valign=top width="50%"><b>No space</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">68,9</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Unclassified, CCI=(0, 1)</td>
+<td align="center" valign=top width="17%">75,8</td>
+<td align="center" valign=top width="17%">+10,0</td>
+
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">75,6</td>
+<td align="center" valign=top width="17%">+9,7</td>
+<td align="center" valign=top width="17%">0,01</td></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Start + end spaces</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">63,0</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">73,8</td>
+<td align="center" valign=top width="17%">+17,1</td>
+<td align="center" valign=top width="17%">0,01</td></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Start space</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">74,5</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+
+<td align="center" valign=top width="17%">77,7</td>
+<td align="center" valign=top width="17%">+4,3</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+</table>
+<br>
+<br>
+<table align="center" bgcolor="#FDFFBB" border cellpadding=4 width="457">
+<caption align="bottom"><br><strong>Table 8a: The performance of s-grams. FIN list, a-words/base forms.</strong></caption>
+<tr>
+<th valign=top width="50%" height="40">FIN Words</th>
+<th valign=top width="17%" height="40">Average Precision</th>
+<th valign=top width="17%" height="40">% Change</th>
+
+<th valign=top width="17%" height="40">Stat. Sign. Level</th></tr>
+<tr><td colspan="4" valign=top width="50%"><b>No space</b></td></tr>
+<tr><td valign=top width="50%">Digram baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">79,3</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align=center>78,9</td>
+<td align=center>&mdash;</td>
+<td align=center>&mdash;</td></tr>
+<tr><td valign=top width="50%">Unclassified, CCI=(0, 1)</td>
+
+<td align="center" valign=top width="17%">79,3</td>
+<td align="center" valign=top width="17%">0,0</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">82,7</td>
+<td align="center" valign=top width="17%">+4,3</td>
+<td align="center" valign=top width="17%">0,01</td></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Start + end spaces</b></td></tr>
+<tr><td valign=top width="50%">Digram baseline, CCI=(0)</td>
+
+<td align="center" valign=top width="17%">79,7</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align=center>82,4</td>
+<td align=center>&mdash;</td>
+<td align=center>&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">84,8</td>
+<td align="center" valign=top width="17%">+6,4</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+
+<tr><td colspan="4" valign=top width="50%"><b>Start space</b></td></tr>
+<tr><td valign=top width="50%">Digram baseline, CCI=(0)</td>
+<td align="center" valign=top width="17%">85,6</td>
+<td align="center" valign=top width="17%">&mdash;</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align=center>86,6</td>
+<td align=center>&mdash;</td>
+<td align=center>&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">88,8</td>
+
+<td align="center" valign=top width="17%">+2,5</td>
+<td align="center" valign=top width="17%">&mdash;</td></tr>
+</table>
+<br>
+<br>
+<table align="center" bgcolor="#FDFFBB" border cellpadding=4 width="457" >
+<caption align="bottom"><br><strong>Table 8b: The performance of s-grams. FIN list, a-words/genitive forms</strong>.</caption>
+<tr><th valign=top width="50%" height="32"> FIN Words </th>
+<th valign=top width="17%" height="32"> Average Precision </th>
+<th valign=top width="17%" height="32"> % Change </th>
+
+<th valign=top width="17%" height="32"> Stat. Sign. Level </th></tr>
+<tr><td colspan="4" valign=top width="50%"><b>No space</b></td></tr>
+<tr><td valign=top width="50%">Digram baseline, CCI=(0)</td>
+<td align="center"  valign=top width="17%">68,1</td>
+<td align="center"  valign=top width="17%">&mdash;</td>
+<td align="center"  valign=top width="17%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align=center>65,9</td>
+<td align=center>&mdash;</td>
+<td align=center>&mdash;</td></tr>
+
+<tr><td valign=top width="50%">Unclassified, CCI=(0, 1)</td>
+<td align="center"  valign=top width="17%">71,6</td>
+<td align="center"  valign=top width="17%">+5,1</td>
+<td align="center"  valign=top width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center"  valign=top width="17%">74,2</td>
+<td align="center"  valign=top width="17%">+9,0</td>
+<td align="center"  valign=top width="17%">0,01</td></tr>
+<tr><td  colspan="4" valign=top width="50%"><b>Start + end spaces</b></td></tr>
+
+<tr><td valign=top width="50%">Digram baseline, CCI=(0)</td>
+<td align="center"  valign=top width="17%">65,6</td>
+<td align="center"  valign=top width="17%">&mdash;</td>
+<td align="center"  valign=top width="17%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align=center>77,4</td>
+<td align=center>&mdash;</td>
+<td align=center>&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center"  valign=top width="17%">71,4</td>
+<td align="center"  valign=top width="17%">-7,8</td>
+
+<td align="center"  valign=top width="17%">&mdash;</td></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Start space</b></td></tr>
+<tr><td valign=top width="50%">Digram baseline, CCI=(0)</td>
+<td align="center"  valign=top width="17%">89,9</td>
+<td align="center"  valign=top width="17%">&mdash;</td>
+<td align="center"  valign=top width="17%">&mdash;</td></tr>
+<tr><td>Trigram baseline, CCI=(0)</td>
+<td align=center>85,7</td>
+<td align=center>&mdash;</td>
+<td align=center>&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+
+<td align="center"  valign=top width="17%">90,6</td>
+<td align="center"  valign=top width="17%">+0,8</td>
+<td align="center"  valign=top width="17%">&mdash;</td></tr>
+</table>
+<br>
+<br>
+
+<table align="center" bgcolor="#FDFFBB" border cellpadding=4 width="457">
+<caption align="bottom"><br><strong>Table 8c: The performance of s-grams. FIN list, k-words/base forms</strong></caption>
+<tr><td valign=top width="50%" height="32"><b>FIN Words</b></td>
+<th valign=top width="17%" height="32"> Average Precision </th>
+
+<th valign=top width="17%" height="32"> % Change </th>
+<th valign=top width="17%" height="32"> Stat. Sign. Level </th></tr>
+<tr><td colspan="4" valign=top width="50%"><b>No space</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td valign=top  align="center"  width="17%">91,1</td>
+<td valign=top  align="center"  width="17%">&mdash;</td>
+<td valign=top  align="center"  width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Unclassified, CCI=(0, 1)</td>
+<td valign=top  align="center"  width="17%">91,1</td>
+
+<td valign=top  align="center"  width="17%">0,0</td>
+<td valign=top  align="center"  width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td valign=top  align="center"  width="17%">94,3</td>
+<td valign=top  align="center"  width="17%">+3,5</td>
+<td valign=top  align="center"  width="17%">&mdash;</td></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Start + end spaces</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td valign=top  align="center"  width="17%">93,0</td>
+<td valign=top  align="center"  width="17%">&mdash;</td>
+
+<td valign=top  align="center"  width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td valign=top  align="center"  width="17%">93,3</td>
+<td valign=top  align="center"  width="17%">+0,3</td>
+<td valign=top  align="center"  width="17%">&mdash;</td></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Start space</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td valign=top  align="center"  width="17%">96,2</td>
+<td valign=top  align="center"  width="17%">&mdash;</td>
+<td valign=top  align="center"  width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+
+<td valign=top  align="center"  width="17%">98,3</td>
+<td valign=top  align="center"  width="17%">+2,2</td>
+<td valign=top  align="center"  width="17%">&mdash;</td></tr>
+</table>
+
+<br>
+<br>
+
+
+<table align="center" bgcolor="#FDFFBB" border cellpadding=4 width="457">
+<caption align="bottom"><br><strong>Table 8d: The performance of s-grams. FIN list, k-words/genitive forms</strong></caption>
+<tr>
+<td valign=top width="50%" height="32"><b>FIN Words</b></td>
+
+<th valign=top align="center"  width="17%" height="32"> Average Precision </th>
+<th valign=top align="center"  width="17%" height="32"> % Change </th>
+<th valign=top align="center"  width="17%" height="32"> Stat. Sign. Level </th></tr>
+<tr><td colspan="4" valign=top width="50%"><b>No space</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td valign=top align="center"  width="17%">91,2</td>
+<td valign=top align="center"  width="17%">&mdash;</td>
+<td valign=top align="center"  width="17%">&mdash;</td></tr>
+
+<tr><td valign=top width="50%">Unclassified, CCI=(0, 1)</td>
+<td valign=top align="center"  width="17%">90,8</td>
+<td valign=top align="center"  width="17%">-0,4</td>
+<td valign=top align="center"  width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td valign=top align="center"  width="17%">96,7</td>
+<td valign=top align="center"  width="17%">+6,0</td>
+<td valign=top align="center"  width="17%">&mdash;</td></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Start + end spaces</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+
+<td valign=top align="center"  width="17%">89,4</td>
+<td valign=top align="center"  width="17%">&mdash;</td>
+<td valign=top align="center"  width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td valign=top align="center"  width="17%">95,0</td>
+<td valign=top align="center"  width="17%">+6,3</td>
+<td valign=top align="center"  width="17%">&mdash;</td></tr>
+<tr><td colspan="4" valign=top width="50%"><b>Start space</b></td></tr>
+<tr><td valign=top width="50%">Baseline, CCI=(0)</td>
+<td valign=top align="center"  width="17%">96,2</td>
+
+<td valign=top align="center"  width="17%">&mdash;</td>
+<td valign=top align="center"  width="17%">&mdash;</td></tr>
+<tr><td valign=top width="50%">Classified, CCI= ([0], [1, 2])</td>
+<td valign=top align="center"  width="17%">98,2</td>
+<td valign=top align="center"  width="17%">+2,0</td>
+<td valign=top align="center"  width="17%">&mdash;</td></tr>
+</table>
+
+<br>
+<br>
+
+
+<table  align="center" bgcolor="#FDFFBB" border cellpadding=4 width="523">
+<caption align="bottom"><br><strong>Table 9: The effects of query key length on the performance of classified s-grams</strong></caption>
+
+<tr>
+<th valign=top width="58%" height="32"><b>List Type, Key Length</b></th>
+<th valign=top align="center"  width="14%" height="32">Average Precision</th>
+<th valign=top align="center"  width="14%" height="32">% Change</th>
+<th valign=top align="center"  width="14%" height="32">Stat. Sign. Level</th></tr>
+<tr><td colspan="4" valign=top width="58%"><b>ENG1, N=52; <em>No of characters >= 9, N=34</em> </b></td></tr>
+<tr><td valign=top width="58%">Baseline, CCI=(0)&nbsp;</td>
+<td valign=top align="center"  width="14%">68,0</td>
+
+<td valign="middle" rowspan="2" align="center"  width="14%">+10,3%</td>
+<td valign="middle" rowspan="2" align="center"  width="14%">&mdash;</td></tr>
+<tr><td valign=top width="58%">Classified, CCI= ([0], [1, 2])&nbsp;</td>
+<td valign=top align="center"  width="14%">75,0</td></tr>
+<tr><td colspan="4" valign=top width="58%"><strong><em>No of characters 7-8, N=12</em></strong></td></tr>
+<tr><td valign=top width="58%">Baseline, CCI=(0)&nbsp;</td>
+<td valign=top align="center"  width="14%">36,9</td>
+<td valign="middle" rowspan="2" align="center"  width="14%">+43,0%</td>
+<td valign="middle" rowspan="2" align="center"  width="14%">&mdash;</td></tr>
+<tr><td valign=top width="58%">Classified, CCI= ([0], [1, 2])</td>
+
+<td valign=top align="center"  width="14%">52,9</td></tr>
+<tr><td colspan="4" valign=top width="58%"><strong><em>No of characters =&lt; 6, N=6</em></strong></td></tr>
+<tr><td valign=top width="58%">Baseline, CCI=(0)&nbsp;</td>
+<td valign=top align="center"  width="14%">19,3</td>
+<td valign="middle" rowspan="2" align="center"  width="14%">+26,9%</td>
+<td valign="middle" rowspan="2" align="center"  width="14%">&mdash;</td></tr>
+<tr><td valign=top width="58%">Classified, CCI= ([0], [1, 2])</td>
+<td valign=top align="center"  width="14%">24,5</td></tr>
+
+<tr><td colspan="4" valign=top width="58%"><b><em>ENG2,
+N=41; No of characters >= 9, N=9</em></b></td></tr>
+<tr><td valign=top width="58%">Baseline, CCI=(0)&nbsp;</td>
+<td valign=top align="center"  width="14%">47,3</td>
+<td valign="middle" rowspan="2" align="center"  width="14%">-8,2%</td>
+<td valign="middle" rowspan="2" align="center"  width="14%">&mdash;</td></tr>
+<tr><td valign=top width="58%">Classified, CCI= ([0], [1, 2])</td>
+<td valign=top align="center"  width="14%">43,4</td></tr>
+<tr><td colspan="4" valign=top width="58%"><b><em>No of characters 7-8, N=20</em></b></td></tr>
+<tr><td valign=top width="58%">Baseline, CCI=(0)&nbsp;</td>
+
+<td valign=top align="center"  width="14%">14,7</td>
+<td valign="middle" rowspan="2" align="center"  width="14%">+78,9%</td>
+<td valign="middle" rowspan="2" align="center"  width="14%">0,001</td></tr>
+<tr><td valign=top width="58%">Classified, CCI= ([0], [1, 2])</td>
+<td valign=top align="center"  width="14%">26,3</td></tr>
+<tr><td colspan="4" valign=top width="58%"><strong><em>No of characters =&lt; 6, N=12</em></strong></td></tr>
+<tr><td valign=top width="58%">Baseline, CCI=(0)&nbsp;</td>
+<td valign=top align="center"  width="14%">2,5</td>
+
+<td valign="middle" rowspan="2" align="center"  width="14%">+240,0%</td>
+<td valign="middle" rowspan="2" align="center"  width="14%">&mdash;</td></tr>
+<tr><td valign=top width="58%">Classified, CCI= ([0], [1, 2])</td>
+<td valign=top align="center"  width="14%">8,5</td></tr>
+</table>
+
+<br>
+<br>
+
+
+
+<table  align="center" bgcolor="#FDFFBB" border cellpadding=4 width="457">
+<caption align="bottom"><br><strong>Table 10: The effects of LCS length on the performance of classified s-grams.</strong></caption>
+
+<tr>
+<th valign=top width="66%" height="32">List Type, LCS Length</th>
+<th valign=top width="17%" height="32">Average Precision</th>
+<th valign=top width="17%" height="32">Baseline/Classified</th></tr>
+<tr><td colspan="3" valign=top width="66%"><b>ENG1, N=48 - No of shared characters =&lt; 8, N=26</b></td></tr>
+<tr><td valign=top width="66%">Baseline, CCI=(0)&nbsp;</td>
+<td align="center" valign=top width="17%">34,3</td>
+<td align="center" valign=top width="17%">70,7</td></tr>
+
+<tr><td valign=top width="66%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">48,5</td>
+<td valign=top width="17%">&nbsp;</td></tr>
+<tr><td colspan="3" valign=top width="66%">No of shared characters > 8, N=22</td></tr>
+<tr><td valign=top width="66%">Baseline, CCI=(0)&nbsp;</td>
+<td align="center" valign=top width="17%">84,6</td>
+<td align="center" valign=top width="17%">95,5</td></tr>
+<tr><td valign=top width="66%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">88,6</td>
+
+<td align="center" valign=top width="17%">&nbsp;</td></tr>
+<tr><td colspan="3" valign=top width="66%"><b>ENG2, N=27 - No of shared characters =&lt; 8, N=24</b></td></tr>
+<tr><td valign=top width="66%">Baseline, CCI=(0)&nbsp;</td>
+<td align="center" valign=top width="17%">18,9</td>
+<td align="center" valign=top width="17%">70,5</td></tr>
+<tr><td valign=top width="66%">Classified, CCI= ([0], [1, 2])&nbsp;</td>
+<td align="center" valign=top width="17%">26,8</td>
+<td valign=top width="17%">&nbsp;</td></tr>
+<tr><td colspan="3" valign=top width="66%">No of shared characters > 8, N=3</td></tr>
+
+<tr><td valign=top width="66%">Baseline, CCI=(0)&nbsp;</td>
+<td align="center" valign=top width="17%">70,8</td>
+<td align="center" valign=top width="17%">96,6</td></tr>
+<tr><td valign=top width="66%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">73,3</td>
+<td valign=top width="17%">&nbsp;</td></tr>
+<tr><td colspan="3" valign=top width="66%"><b>GER, N=48 - No of shared characters =&lt; 8, N=19</b></td></tr>
+<tr><td valign=top width="66%">Baseline, CCI=(0)&nbsp;</td>
+
+<td align="center" valign=top width="17%">38,7</td>
+<td align="center" valign=top width="17%">78,2</td></tr>
+<tr><td valign=top width="66%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">49,5</td>
+<td valign=top width="17%">&nbsp;</td></tr>
+<tr><td colspan="3" valign=top width="66%">No of shared characters > 8, N=29</td></tr>
+<tr><td valign=top width="66%">Baseline, CCI=(0)&nbsp;</td>
+<td align="center" valign=top width="17%">84,0</td>
+<td align="center" valign=top width="17%">92,8</td></tr>
+
+<tr><td valign=top width="66%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">90,5</td>
+<td valign=top width="17%">&nbsp;</td></tr>
+<tr><td colspan="3" valign=top width="66%"><b>SWE, N=48 - No of shared characters =&lt; 8, N=19</b></td></tr>
+<tr><td valign=top width="66%">Baseline, CCI=(0)&nbsp;</td>
+<td align="center" valign=top width="17%">53,6</td>
+<td align="center" valign=top width="17%">82,5</td></tr>
+<tr><td valign=top width="66%">Classified, CCI= ([0], [1, 2])&nbsp;</td>
+
+<td align="center" valign=top width="17%">65,0</td>
+<td valign=top width="17%">&nbsp;</td></tr>
+<tr><td colspan="3" valign=top width="66%">No of shared characters > 8, N=29</td></tr>
+<tr><td valign=top width="66%">Baseline, CCI=(0)&nbsp;</td>
+<td align="center" valign=top width="17%">86,0</td>
+<td align="center" valign=top width="17%">96,1</td></tr>
+<tr><td valign=top width="66%">Classified, CCI= ([0], [1, 2])</td>
+<td align="center" valign=top width="17%">89,5</td>
+<td valign=top width="17%">&nbsp;</td></tr>
+</table>
+
+<br>&nbsp;
+<h2>Acknowledgements</h2>
+<p>This research is part of the research project <i>Query structures and dictionaries
+as tools in concept-based and cross-lingual information retrieval</i> funded
+by the Academy of Finland (Research Projects 44703; 49157).</p>
+
+<h2>References</h2>
+
+<ul>
+<li><a name="Angel83"></a>Angell, R., Freund, G., and Willet, P. (1983)  &quot;Automatic spelling correction system using a trigram similarity measure &quot;. <i>Information Processing &amp; Management</i>, <strong>19</strong>(4), 255-261.</li><br>
+
+<li><a name="Conover80"></a>Conover, W.J. (1980) <i>Practical non-parametric statistics</i>. New York, NY: John Wiley &amp; Sons.</li><br>
+
+<li><a name="Damerau64"></a>Damerau, F. (1964)  &quot;A technique for computer detection and correction of spelling errors &quot;. <i>Communications of the ACM</i>, <strong>7</strong>, 171-176.</li><br>
+
+<li><a name="Fujii01"></a>Fujii, A. and Ishikawa, T. (2001)  &quot;Japanese/English cross-language information retrieval: exploration of query translation and transliteration &quot;. <i>Computers and the Humanities</i>, <strong>35</strong>(4), 389-420.</li><br>
+
+<li><a name="Gadd88"></a>Gadd, T. (1988)  &quot;Fisching for werds: phonetic retrieval of written text in information retrieval systems &quot;. <i>Program</i>, <strong>22</strong>(3), 222-237.</li><br>
+
+<li><a name="Gadd90"></a>Gadd, T. (1990)  &quot;Phonix: the algorithm &quot;. <i>Program</i>, <strong>24</strong>(4), 363-369.</li><br>
+
+<li><a name="Hall80"></a>Hall, P. and Dowling, G. (1980)  &quot;Approximate string matching. &quot; <i>Computing Surveys</i>, <strong>12</strong>(4), 381-402.</li><br>
+
+<li><a name="Hedlund01"></a>Hedlund, T., Keskustalo, H., Pirkola, A., Sepponen, M., J&auml;rvelin, K. (2001)  &quot;Bilingual tests with Swedish, Finnish and German queries: dealing with morphology, compound words and query structure. &quot; <em>In</em>: <em>Cross-language information retrieval and evaluation. Cross-language evaluation forum workshop, CLEF 2000, Lisbon, Portugal, September 22-23, 2000, Revised Papers</em>. pp. 211-225.   Heidelberg: Springer,  (Lecture Notes in Computer Science, Vol. 2069)</li><br>
+
+<li><a name="Jarvelin00"></a>J&auml;rvelin, K. and Kek&auml;l&auml;inen, J.  (2000) &quot;IR evaluation methods for retrieving highly relevant documents&quot;. <i>Proceedings of the 23th Annual International ACM SIGIR on Research and Development in Information Retrieval, Athens, July 24-28, 2000</i>, pp. 41-48. New York, NY: ACM Press.</li><br>
+
+<li><a name="Karlsson83"></a>Karlsson, F. (1983) <i>Suomen kielen &auml;&auml;nne-ja muotorakenne</i>. [Phonological and morphological structures in Finnish]. Porvoo - Hki - Juva: WSOY. [In Finnish]</li><br>
+
+<li><a name="Kosinov01"></a>Kosinov, S. (2001) Evaluation of n-grams conflation approach in text-based information retrieval. Paper delivered at <i>Infotech Oulu, International Workshop on Information Retrieval</i>, Oulu, Finland, 19.-21.9. 2001.</li><br>
+
+<li><a name="Orourke97"></a>O'Rourke, A.J., Robertson, A.M. and Willett, P. (1997) Word variant identification in old French. <i>Information Research</i>, <strong>2</strong>(4).</li><br>
+
+<li><a name="Oard98"></a>Oard, D. and Diekema, A. (1998)  &quot;Cross-Language Information Retrieval&quot;. <i>Annual Review of Information Science and Technology (ARIST)</i>, <strong>33</strong>, 223-256.</li><br>
+
+<li><a name="Pfeifer96"></a>Pfeifer, U., Poersch, T. and Fuhr, N. (1996) &quot;Retrieval
+effectiveness of proper name search methods&quot;. <i>Information Processing &amp; Management</i>, <strong>32</strong>(6), 667-679.</li><br>
+
+<li><a name="Pirkola98"></a>Pirkola, A. (1998) &quot;The effects of query structure and dictionary setups in dictionary-based cross-language information retrieval&quot;. <i>Proceedings of the 21st Annual International ACM SIGIR Conference on Research and Development in Information Retrieval, Melbourne, Australia, Aug. 24-28, 1998</i>, pp. 55-63.  New York, NY: ACM Press. </li><br>
+
+<li><a name="Pirkola01"></a>Pirkola, A. (2001) &quot;Morphological typology of languages for IR&quot;. <i>Journal of Documentation</i>, <strong>57</strong> (3), 330-348.</li><br>
+
+<li><a name="PirkolaJarvelin01"></a>Pirkola, A. and J&auml;rvelin, K. (2001) &quot;Employing the resolution power of search keys&quot;. <i>Journal of the American Society for Information Science and Technology</i>, <strong>52</strong>(7), 575 -583.</li><br>
+
+<li><a name="Pirkolaetal01"></a>Pirkola, A., Hedlund, T., Keskustalo, H., and J&auml;rvelin, K. (2001) &quot;Dictionary-based cross-language information retrieval: problems, methods, and research findings&quot;. <i>Information Retrieval,</i> <strong>4</strong>(3/4), 209-230.</li><br>
+
+<li><a name="Robertson98"></a>Robertson, A.M. and Willett, P. (1998) &quot;Applications
+of n-grams in textual information systems&quot;. <i>Journal of Documentation</i>, <strong>54</strong>(1), 48-69.</li><br>
+
+<li><a name="Salton89"></a>Salton, G. (1989) <i>Automatic text processing: the transformation, analysis, and retrieval of</i> <i>information by computer</i>. Reading, MA: Addison-Wesley.</li><br>
+
+<li><a name="Sormunen00"></a>Sormunen, E. (2000) &quot;A novel method for the evaluation of Boolean query effectiveness across a wide operational range&quot;. <i>Proceedings of the 23 rd Annual ACM SIGIR Conference on Research and Development in Information Retrieval, Athens, July 24-28, 2000</i>, pp. 25-32. New York, NY: ACM Press, </li><br>
+
+<li><a name="Ullmann77"></a>Ullmann, J.R. (1977) &quot;A binary n-gram technique for automatic correction of substitution, deletion, insertion, and reversal errors in words&quot;. <i>Computer journal</i>, <strong>20</strong>(2), 141-147.</li><br>
+
+<li><a name="Xu98"></a>Xu, J., and Croft W.B. (1998) &quot;Corpus-based stemming using cooccurrence of word variants&quot;. <i>ACM</i> <i>Transactions on Information Systems</i>, <strong>16</strong>(1), 61-81.</li><br>
+
+<li><a name="Zobel95"></a>Zobel, J. and Dart, P. (1995) &quot;Finding approximate
+matches in large lexicons&quot;. <i>Software - practice and experience</i>, <strong>25</strong>(3),
+331-345.</li><br>
+
+</ul>
+
+<hr color="#ff00ff" size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper</p>
+<p style="text-align : left; color : black;">Pirkola, A,  Keskustalo, Heikki,  Lepp&auml;nen, Erkka, 
+ K&auml;ns&auml;l&auml;, Antti-Pekka and  J&auml;rvelin, Kalervo</i> (2002) &quot;Targeted s-gram matching: a novel n-gram matching technique for cross- and monolingual word form variants.&quot; <i>Information Research</i>, <b>7</b>(2) [Available at http://InformationR.net/ir/7-2/paper126.html]
+<br>
+&copy; the authors, 2001.   Updated: 20th December, 2001
+</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:5JNgKlFzfM8J:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres72.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper126" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color="#ff00ff" size="3">
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+
+<!-- Mirrored from informationr.net/ir/7-2/paper126.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:15:41 GMT -->
+</html>

@@ -1,0 +1,847 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from informationr.net/ir/13-2/paper340.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:21:55 GMT -->
+<head><title>An activity-theory-based model to analyse Web application requirements</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+
+<!--Enter appropriate data in the content fields-->
+<meta name="dc.title" content="An activity-theory-based model to analyse Web application requirements" />
+<meta name="dc.creator" content="Lorna Uden, Pedro Valderas, Oscar Pastor" />
+<meta name="dc.subject" content="An Activity Theory for Analysing Web Application Requirements" />
+<meta name="dc.description" content="Introduction. Few proposals for modelling and developing Web applications, deal with how to properly elicit and represent Web application requirements. Web applications introduce unique characteristics such as Navigation that are not properly considered at the requirements level. In this work, we seek to improve on improve on existing methods through the use of cultural-historical activity theory. Elaboration. First the main notions of Activity Theory are analysed and an activity theory based model to analyse Web applications is defined. This is a task model, which we show can be used in requirements engineering by applying it in the analysis of an e-commerce application. Results. The main contribution of this work is the definition of a requirements engineering approach based on Activity Theory which is ideally suited to properly handle Web application requirements. This approach allows us to properly capture navigational and organizational requirements of Web applications.  Conclusions. Activity Theory constitutes a valuable tool for analysing software requirements. Furthermore, the use of a task-based Activity Theory model provides Web application developers with a model that allows them to properly specify navigational and organizational requirements. 
+" />
+<meta name="dc.subject.keywords" content="activity theory, Web applications, information requirements" />
+
+<!--leave the following to be completed by the Editor-->
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="Professor T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="paper340.html" />
+<meta name="dc.relation.IsPartOf" content="infres132.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2008-06-15" />
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			}
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}
+		}
+
+	</script>
+
+	<script language="javascript" type="text/javascript">
+ function bigfigure()
+ {
+ window.open ('p340fig8.gif','bigfigure','width=990,height=390');
+ }
+
+</script>
+	
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: #5E96FD;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+
+
+
+</style>
+
+</head>
+<body bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif"
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 13  no. 2, June 2008</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres132.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+<hr style="COLOR: #5E96FD;" size="1" />
+
+<h1>An activity-theory-based model to analyse Web application requirements</h1>
+<br/>
+<div style="margin-left: 10%; margin-right: 10%;">
+  <h4><a href="mailto:l.uden@staffs.ac.uk">Lorna Uden</a><br />
+    Faculty of Computing, Engineering and Technology, Staffordshire University, 
+    The Octagon, Beaconside, Stafford, ST18 OAD. UK
+  <br />
+ <a href="mailto:pvalderas@dsic.upv.es">Pedro Valderas</a> and <a
+href="mailto:opastor@dsic.upv.es">Oscar Pastor</a><br />
+    Department of Information Systems and Computation, Technical University of Valencia,  46022 Cami de Vera s/n, Valencia, Spain </h4>
+<br />
+</div>
+<form action="#">
+<fieldset><legend>Abstract</legend>
+<blockquote><strong>Introduction</strong>. Few proposals for modelling and developing Web applications, deal with how to properly elicit and represent Web application requirements. Web applications introduce unique characteristics such as navigation that are not properly considered at the requirements level. In this paper, we seek to improve on improve on existing methods through the use of cultural-historical activity theory. <br />
+<strong>Elaboration</strong>. First the main notions of activity theory are analysed and an activity theory based model to analyse Web applications is defined. This is a task model, which we show can be used in requirements engineering by applying it in the analysis of an e-commerce application. <br />
+<strong>Results</strong>. The main contribution of this work is the definition of a requirements engineering approach based on Activity Theory which is ideally suited to properly handle Web application requirements. This approach allows us to properly capture navigational and organizational requirements of Web applications. <br />
+<strong>Conclusions</strong>. Activity Theory constitutes a valuable tool for analysing software requirements. Furthermore, the use of a task-based Activity Theory model provides Web application developers with a model that allows them to properly specify navigational and organizational requirements. 
+</blockquote></fieldset>
+</form>
+<br />
+<div align="center">
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: #5E96FD;" onclick="doChangeFont()" /></div>
+
+<br />
+<h2>Introduction</h2>
+
+<p>It is well known that effective and efficient requirements engineering activities are absolutely essential if software systems are to meet the expectations   of their customers and users, and are to be delivered on time and within budget   (<a href="#Al-Rawas96">Al-Rawas and Easterbrook 1996</a>). Requirement engineering is typically not taken into account in Web application development. In a survey carried out by <a href="#McDonald01">McDonald and Welland (2001)</a>, Web application developers claim that most of their Web development projects are running over budget and time because of problems in capturing requirements and poor communication between themselves and their clients.</p>
+
+<p><em>Capturing requirements</em> was one of the most important problems to be solved when Web engineering	was introduced at the beginning of the current decade  (<a href="#Deshpande02">Deshpande <em>et al.</em> 2002</a>). However, although a significant number of proposals has been presented that provide methodological solutions for developing Web applications, they mainly focus on defining Web applications from conceptual models and do not pay much attention to the requirements engineering activity (<a href="#Escalona04">Escalona and Koch (2004)</a>).This lack of specific requirements engineering techniques for Web applications has been also detected in other works such as England and Finney (<a href="#England99">1999</a>), Burdman (<a href="#Burdman99">1999</a>), Overmyer (<a href="#Overmyer00">2000</a>) and Lowe (<a href="#Lowe03">2003</a>) which state that new requirements engineering methods are needed for Web applications because of requirements engineering methods for traditional software are not appropriate to support  the unique characteristics of Web application development.</p>
+
+<p>One of the unique characteristics of Web applications is that, mainly, they focus only on providing information. Since the World Wide Web is an information medium  (<a href="#Greenspun99">Greenspun 1999</a>), many Web applications are fully or partially developed as magazines or brochures and their development only involves capturing and organizing a complex information domain and making that domain accessible to users. The information is organized in a structure made up of nodes, links and anchors (according to the hypertext paradigm (<a href="#Conklin97">Conklin 1987</a>)), which allow users to <em>navigate</em> through the information in a nonlinear way. It is important, therefore, at the early stages of Web application development, to consider the best navigational structure that will allow users to navigate through the provided information. In this context, although requirements engineering methods for traditional software such as Constantine and Lockwood (<a href="#Constantine99">1999</a>), Jaaksi (<a href="#Jaaksi98">1998</a>), Leite <em>et al.</em> (<a href="#Leite98">1998</a>) or Rosenberg <em>et al.</em> (<a href="#Rosenberg99">1999</a>) have done  excellent work in capturing structural and behavioural requirements, they do not explicitly deal with the navigational aspect.</p>
+
+<p>On the other hand, <em>the communication between developers and clients</em> is a very important aspect in requirements engineering which makes requirements engineering sensitive to how people perceive and understand the world around them, how they interact with it, and how the sociology of the workplace affects their actions. This human factor in requirements engineering is not only concerned with disciplines that handle technical aspects, but also in disciplines that handle cultural, cognitive or social aspects (<a href="#Goguen94">Goguen and Jirotka 1994</a>). In this context, the requirements elicitation problem becomes unsolvable if we use methods that are based entirely upon individual cognition and ignore organizational requirements (<a href="#Goguen93">Goguen and Linde 1993</a>).</p>
+
+<p>Organizational requirements are those that are captured when a system is being viewed in a social context rather than from a purely technical, administrative or procedural view of the functions to be performed. Sources of such requirements could be power structures, roles, obligations, responsibilities, control and autonomy issues, values and ethics   (<a href="#Avison90">Avison &amp; Wood-Harper 1990</a>). These types of requirements are so deeply embedded in organizational structure and policies that often they cannot easily be directly observed or articulated. Most established requirements engineering techniques however, do not adequately address the critical organizational and &#8216;softer', people-related issues of software systems.</p>
+
+<p>From the above discussion, it would seem that current requirements engineering models could not provide a theoretical basis for understanding 'regularly patterned' human activity  (<a href="#Probert99">Probert 1999</a>). In order to overcome these mentioned problems, it is necessary to have a methodology and tools that can support the continuous evaluation of a statement of requirements as these evolve against a highly complex and dynamic problem situation. What is needed is to shift the focus from fixed and final requirements to those of a more dynamic nature. In particular, it is necessary to consider human information which, in social terms, does not have a physical reality and is not objective like physical information media. Instead, it is based on individual, group or organizational needs. Such information informs action in organizations and is thus closely related to organizational activity and organizational form.</p>
+
+<p>In this paper, we address the two problems presented above by introducing a requirements engineering method for Web applications that is defined from  cultural-historical activity theory (<a href="#Engestrom87">Engestr&ouml;m 1987)</a>. First, we believe that applying activity theory to requirements engineering provides us with a conceptual framework that allow us to address the important issue of organizational requirements. Activity theory focuses on the interaction of human activity and consciousness within its relevant environmental context  (<a href="#Vygotsky78">Vygotsky 1978</a>). The basic unit of analysis in activity theory is human activity. Activity theory incorporates notions of understanding, history, mediation, motivation, culture and community. In this context, activity theory enables us to shift the focus of requirements engineering from the interaction between isolated and stand-alone systems to a larger, more ecologically and valid interaction between human beings and their environments.  </p>
+
+<p>We present a task model to analyse Web applications based on the principles of activity theory in order to overcome the limitations of traditional task analysis methods.  This is properly to support the description of human activities and the related information to the environmental context (that is, activity theory notions). The proposed extensions have been introduced considering the navigational aspect of Web applications as a priority in requirements engineering activities. Thus, we provide mechanisms, such as temporal constraints between activities, that allow us to extract valuable semantics that can be used to derive the proper Web application navigational structure from requirements.</p>
+
+<p>To sum up, the main contributions of this paper are the following:</p>
+
+<ul>
+  <li>We apply the concepts of activity theory in the requirements engineering activities of Web applications. This allows us to consider organizational requirements which capture the cultural, cognitive and social aspects that are related to requirements engineering. </li>
+  <li>We complement the theoretical pillars provided by activity theory with a description technique which extends traditional task analysis techniques, which provides us with mechanisms to handle properly the navigational requirements of Web applications. </li>
+  <li>Additionally, we present a practical example of how activity theory is applied to perform requirements activities in the development of a case study. This case study is an e-commerce application similar to the <a href="http://www.amazon.com/" target="_blank">Amazon online bookshop</a></li>
+</ul>
+  
+<h2>Related work</h2>
+
+<p>In this section, we describe related work on requirements engineering for Web applications. In particular, we analyse how navigational and organizational requirements are handled in three different contexts: requirements engineering (<a href="#Hofman00">Hofman 2000</a>), human-computer interaction (<a href="#Grechenig93">Grechenig and Tscheligi 1993)</a> and Web engineering (<a href="#Deshpande02">Deshpande <em>et al.</em> 2002</a>).</p>
+
+<p>In the context of requirements engineering, we can find approaches such as Constantine and Lockwood (<a href="#Constantine99">1999</a>), Jaaksi(<a href="#Jaaksi98">1998</a>), Leite <em>et al.</em> (<a href="#Leite98">1998</a>) or Rosenberg et al. (<a href="#Rosenberg99">1999</a>) that are mainly focused on traditional requirements, such as functional or data requirements, and they do not explicitly handle navigational requirements. They use requirements engineering techniques such as use cases or scenarios.  Although these techniques are suitable for the Web Application development, they do not consider specific characteristics of Web applications such as navigation.  These approaches to software development also lack an effective theoretical basis to deal with the complexities involved in the identification of the requirements of the different stakeholders involved in Web   system development. </p>
+
+<p>Work such as that of Robert <em>et al.</em> (<a href="#Robert98">1998</a>), Nunes and Cunha (<a href="#Nunes00">2000</a>), Harmelen (<a href="#Harmelen01">2001</a>) and Vanderdonckt and Berquin (<a href="#Vanderdonckt99">1999</a>) for human-computer interaction are focused on user interface requirements. These approaches use graphical models such as use cases, task diagrams, or sequence diagrams in order to obtain user interface specifications.  The aim of these methods is the design of user interfaces with their visual components and the identification of the window (form) activation sequence (usually defined by means of state diagrams). Approaches of this kind are usually focused on traditional window applications (non-Web). The ultimate goal of these approaches is to obtain design models at the solution space level. What we want to achieve is to capture navigation in the requirements model.</p>
+
+<p>Furthermore, according to Kaptelinin (<a href="#Kaptelinin00">2000</a>), traditional approaches to human-computer interaction requirements analysis were dominated by the cognitive approach. This approach is characterized as transformation of human processing caused by new artefacts.  Although this perspective appears to be useful in certain respects, there are several shortcomings.  These include  (<a href="#Kaptelinin00">Kaptelinin
+2000</a>):</p>
+
+<ul>
+  <li>the cognitive approach separates cognition from action and is only interested
+    in the former, </li>
+  <li>mental processes other than cognitive ones, such as motivation and emotions
+    are considered to be outside the scope of analysis, and</li>
+  <li>social interaction is rarely the object of cognitive studies.</li>
+ </ul>
+
+<p>There is an emerging consensus among researchers that the cognitive approach to human-computer interaction may be limited. It does not provide an appropriate conceptual basis for studies of computer use in its social, organizational and authorial context, in relation to the goals, plans and values of the user or in the context of development (<a href="#Uden01">Uden and Willis2001</a>). Activity theory provides a broad theoretical framework for describing the structure, development and context of human activity.</p>
+
+<p>Finally, in the context of Web engineering, Web applications require a more extensive and detailed requirements engineering process because of the number of stakeholders involved and the diversity of the requirements including, among others, requirements on the navigation (<a href="#Escalona04">Escalona and Koch 2004</a>).  However, navigation is often ignored at the requirement stage of development.For instance, approaches such a Web services distributed management (<a href="#DeTroyer03">De Troyer 2003</a>) although proposed as task-based model, is used in the definition of business processes and requirements are textually described by means of scenarios. Other approaches such as UML-based Web engineering (UWE) (<a href="#Koch00">Koch 2000</a>) or object-oriented hypermedia (OOH) (<a href="#Gomez00">G&oacute;mez <em>et al. 2000</em></a>)introduce the definition of use case diagrams to specify Web application requirements and the different kinds of users. In addition, a process model (based on tasks or activities) is included to model the business process of Web applications. However, this model is used to complement a preliminary class diagram already defined from use cases. In this context, decisions about navigation must be taken from use cases. This is a traditional technique which does not properly consider specific characteristics of navigation. The object-oriented hypermedia design model (OOHDM) (<a href="#Schwabe96">Schwabe <em>et al.</em> 1996</a>) introduces techniques for early requirements handling.</p>
+
+<p>Text-based descriptions of use cases are complemented with <em>user interaction diagrams</em>, each of which graphically describes the information exchange between the application and the user in order to detect the navigational requirements. This approach mainly focuses on capturing the hypermedia design of Web applications. Interaction diagrams describe the information the user can access in every step of a <em>use case</em> as well as the operations the user can activate. However, they do not consider relations between different interaction diagrams. We solve this problem by capturing requirement by using activity theory notions that introduce concepts such as activity, action and operation which are related throughout precise relationships. These concepts together with their relationships can be used to support the definition of navigational requirements. </p>
+
+<p>Our work also differs from all these Web engineering approaches in that we provide well-defined theoretical principles upon which the requirements engineering method is based. This aspect allows us to improve the requirement engineering process by considering cultural, cognitive or social aspects related to the human activity that is performed during the requirements engineering stages. Furthermore, activity theory provides a precise interpretation of our abstractions avoiding possible ambiguities and allowing a better understanding.</p>
+
+
+<h2>Activity theory background </h2>
+
+<p>Activity theory has evolved through three generations of research (<a href="#Engestrom01">Engestr&ouml;m 2001</a>). The first generation drew heavily on Vygotsky's (<a href="#Vygotsky78">1978</a>) conception of mediation The idea was crystallised in Vygotsky's famous triangular model in which the conditioned direct connection between stimulus (S) and responses (R) was transcended by a complex mediated act. The limitation of the first generation was that the unit of analysis remained individually focused. This was overcome by the second generation, based on Leont'ev's work (<a href="#Leont78">1978</a>). In relation to Leont'ev, Engestr&ouml;m (<a href="#Engestrom99">1999</a>) advocates the study of tools or artefacts as integral and inseparable components of human functioning. He argues that the focus of the study of mediation should be on its relationship with the other components of an activity system. The third generation of activity theory takes joint activity or practice (rather than individual activity or practice) as the unit of analysis for activity theory.</p>
+
+<p>Engestr&ouml;m's analysis is concerned with the process of social transformation and incorporates the structure of the social world, with particular emphasis upon the conflictual nature of social practice. Instability and contradictions are the motive force of change and development and the transitions and reorganization within and between activity systems are parts of the evolution. The aim of the third generation of activity theory is to understand dialogues, multiple perspectives and networks of interacting activity systems. In activity theory, the human mind emerges, exists and can only be understood within the context of human interaction with the world and this interaction, i.e., activity, is socially and culturally determined (<a href="#Kaptelinin99">Kaptelinin <em>et al.</em> 1999</a>). </p>
+
+<p>Activity theory focuses on the interaction of human activity and consciousness within its relevant environmental context (<a href="#Vygotsky78">Vygotsky 1978</a>; <a href="#Leontev81">Leont'ev 1981</a>). The basic unit of analysis in activity theory is human activity. Human activities are driven by certain needs where people wish to achieve certain purposes. It is obvious that activity cannot exist as an isolated entity. The very concept of activity implies that there is an agent who acts (an individual or collective <em>subject</em>). An activity is undertaken by a subject (individual or subgroup) using tools to achieve an object (objective) thus transforming objects into outcomes. Relations between elements of an activity are not directed, but mediated. </p>
+
+<p>The relationship between subject and object of activity is mediated by a tool. A tool can be anything used in the transformation process, including both material tools and tools for thinking. Transforming the object into an outcome requires various tools (e.g., computers, software, methods, ideas, procedures, Internet, paper, pen etc.). The object is seen and manipulated not <em>as such</em>, but within the limitations set by the tools (<a href="#Kuutti96">Kuutti 1996</a>). Artefacts are created and transformed during the development of the activity itself and carry with them a particular culture; a historical remnant of that development.</p>
+
+<p>The relationship between subject and the community is mediated by rules. Rules cover both implicit and explicit norms, conventions and social relations within a community as related to the transformation process of the object into an outcome. Rules in our case consist of organizational practices and policies, working hours, working regulations, etc. The relationship between object and community is mediated by the division of labour: how the activity is distributed among the members of the community. That is, the role each individual in the community plays in the activity, the power each wields and the tasks each is held responsible for. Each of the mediating terms is historically formed and opens to further development (<a href="#Kuutti96">Kuutti 1996</a>). The basic structure of an activity can be illustrated as in Figure 1.</p>
+
+<br />
+<div align="center"><img height="255" src="p340fig1.gif"
+width="356" alt="Basic structure of an activity"/> </div>
+<div align="center"><br /><strong>Figure 1: Basic structure of an activity.</strong></div>
+<br />
+
+<p>Thus, activity has double nature, both an external and an internal side. The subject and object of an activity are in a reciprocal relationship. The subject transforms the object. Conversely, the properties of the object penetrate into the subject and transform him or her. This is called internalisation (<a href="#Kuutti96">Kuutti 1996</a>)</p>
+
+<p>Finally, although time is a crucial part of context, Figure 1 does not reflect this. It is important not only to include current time, but also past time (a history element of context) and future time  (to allow for prediction of a user's action from current context). To do this we adopted the context modelling of <a href="#Kaenampornpan04">Kaenampornpan and O'Neil (2004)</a> as shown in Figure 2.</p>
+
+<br />
+<div align="center"><img height="350" src="p340fig2.gif"
+width="509" alt="Representing the history of activity theory"/></div>
+<div align="center"><br /><strong>Figure 2: Representing the history of activity theory (adapted from <a href="#Kaenampornpan04">Kaenampornpan and O'Neil 2004</a>)</strong></div>
+<br />
+
+<h3>Activities, actions and operations</h3>
+
+<p>According to Kuutti (<a href="#Kuutti96">1996</a>) activities can be considered as having three hierarchical levels: activity, action and operation, which can be individual or cooperative. They can be considered as corresponding to motive, goal and conditions. An activity (global) may be achieved through a variety of actions. The same action may be used as contribution to different activities. Similarly, operations may contribute to a variety of actions (See Figure 3). Kuutti uses a simple example of these levels to describe the activity (motive) of <em>building a house</em> in which <em>fixing the roof</em> and <em>transporting bricks by truck</em> are at the action level and <em>hammering</em> and <em>changing gears</em> when driving are at the operation level. Every activity has an internal and external component with the subject and object existing as part of a dynamic and reciprocal relationship.</p>
+
+<br />
+<div align="center"><img height="184" src="p340fig3.gif"
+width="332" alt="The three levels of activity" /></div>
+<div align="center"><br /><strong>Figure 3:The three levels of activity.</strong></div>
+<br />
+
+<p>Activity theory provides us a means to analyse the dynamics of the application as it distinguishes between motives, goals and conditions. When conditions change, operations become perturbed and the system adapts to the new situation automatically. When goals are disturbed, new goals are constructed, providing that motives remain stable. The activity changes when the motive changes. The future is unpredictable (<a href="#Kaptelinin96">Kaptelinin 1996</a>). This distinction provides the means to define levels of collaborative activity: condition, goal and object-based (<a href="#Engestrom87">Engestr&ouml;m 1987</a>).</p>
+
+<p>In condition-based activities, users work towards a common objective. However, their individual actions are related to each other externally and they are unaware of the common objective. The goal-based form occurs when the common object is stable and shared by users, while the means might not be known or agreed upon. The object-based form occurs when the object of the work is blocked and needs to be constructed together (<a href="#Bardram98">Bardram 1998</a>).</p>
+
+<p>In activity theory, tasks are goal-driven when they are performed consciously, while actions are dependent upon operational conditions of the task and become automatic through routine use or practice. This distinction is important because it reveals the different task structure: a fundamental layer that does not depend on the target platform and an operational layer.</p>
+
+<p>The three levels of collaborative activity are not separate entities, but rather systematic relationships, relating to needs, intentions and conditions. A motive and a goal may remain constant; the ways of achieving the results may differ according to the circumstances. The motives, goals and operational constituents are not arbitrary, but flexible and dynamic.</p>
+
+<p>Activities may loose their motives and become included as parts of other activities, i.e., carried out as goal-directed actions realising other activities. Actions may be automated and frozen when carried out repeatedly under similar circumstances, making conscious control unnecessary, thus transforming the acts into operational constituents of an action. This transformation may also work the other way round, making a living, dynamic structure (<a href="#Baerentsen02">Baerentsen and Trettvik 2002</a>).</p>
+
+<p>However, activities are realised by actions that are defined by their conscious intentions (<a href="#Baerentsen02">Baerentsen and Trettvik 2002</a>). Actions are what are talked about when one is asked what one is doing. The intention and the conditions that are directly related to the achievement of goals are normally in focus for conscious awareness. Conditions are not related to goals and they are not conscious (<a href="#Leont’ev78">Leont'ev 1978</a>).</p>
+
+<p>Although concrete conditions, such as the physical layout of the environment, are not directly relevant to the achievement of goals it is necessary to adapt the form of the activity to them. These conditions are relevant to the form of the actions, i.e.,  the operations by which the actions are realised and must be taken into account by the sensory-motor control if the actions are to succeed.</p>
+
+<h2>Applying activity theory to the analysis of Web application requirements</h2>
+
+<p>In this section, we present a practical example of how activity theory is used in the analysis of a Web application. This Web application is an e-commerce application, which provides support for the online purchase of products.  In this example, the basic unit of analysis for our case study is the activities that users need to carry out with the application. It is based on contributions from  Engestr&ouml;m (<a href="#Engestrom87">1987</a>); Jonassen &amp; Rohrer-Murphy (<a href="#Jonassen99">1999</a>), Bødker (<a href="#Bodker96">1996</a>), Mwanza (<a href="#Mwanza01">2001</a>) and Uden (<a href="#Uden07">2007</a>). The methodology consists of the following steps:</p>
+
+<ol>
+  <li><strong><em>Clarify the purpose of the activity system.</em></strong> It is important to clarify the motives and goals of the activity system. The purpose of this step is twofold: (a) to understand the context within which activities occur and (b) to reach a thorough understanding of the motivations for the activity being modelled and any interpretations of perceived contradictions.<br />
+
+ <em>The purpose of the case study is to provide support for the online purchase of CDs, software and books. This online purchase must be performed throughout a Web application. Users must be able to purchase products from every computer with Internet connection and at every time.</em>
+<br />
+ What takes place in an activity system composed of object, actions and operations, is the constitution of context. Context is constituted through the enactment of an activity involving person (subject) and artefacts. Context is therefore the activity system and the activity system is connected to other activity systems. It is both internal to people involving specific objects and goals, as well as external to people, involving artefacts, other people and specific settings.  In activity theory, both external and internal are fused, unified.  Context cannot be reduced to an enumeration of people and artefacts.<br /><br />
+
+In activity theory, context is not persistent and fixed information. Continuous construction is going on between the components of an activity system.  Humans not only use tools, they also continuously renew and develop them either consciously or unconsciously.  They not only use rules, but also transform them.  In the design, it is important to  understand how things get done in a context and why. This is because different contexts impose different practices.<br /><br />
+
+To analyse context, we need to know the beliefs, assumptions, models and methods commonly held by the group members, how individuals refer to their experiences in other groups, what tools they found helpful in completing their problem etc. <br /><br />
+
+In addition, there are also external or community-driven contexts. These include issues such as:<br /><br />
+	<ul>
+      <li>What type of limitations placed on the activity by the outside agencies?</li>
+      <li>How are tasks organized working toward the object? </li>
+      <li>What is the structure of the social interaction surrounding this activity? </li>
+      <li>What activities are considered to be critical? </li>
+      <li>What are the activities, goals and sub goals to be supported by the application? </li>
+      <li>Who are users involved? </li>
+      <li>What is the purpose of the activity and actions for the users? </li>
+      <li>What is the user trying to achieve? </li>
+      <li>How do the user's activities fit into the objectives of purchasing?      </li>
+      <li>What are the expectations about the outcomes? (<a href="#Jonassen99">Jonassen &amp; Rohrer-Murphy 1999</a>)</li>
+    </ul>
+  </li>
+	  <li><strong><em>Analyse the activity system and produce the activity system.</em></strong>  This step involves defining, in depth, the components of the given activity, namely, the subject, object, community, rules and division of labour. This study began by interpreting the various components of the activity triangle     (Figure 4) in terms of the situation being examined. The activity system produced for our e-commerce application is shown in Figure 3. The subjects in the Web system consist of manager, stock controller, customer, Web developers, users etc. The object in this example is an undefined purchase order. The outcome is the purchased product. <br />
+    <br />
+    <div align="center"><img src="p340fig4.gif" alt="Activity system for e-commerce"/></div>
+  <div align="center"><br /><strong>Figure 4: Activity system for e-commerce</strong></div>
+    <br />
+  </li>
+  <li><strong><em>Analyse the activity structure</em></strong>. This step involves decomposing each activity into actions and operations. An important key process in     analysis is to analyse the activity structure (all of the activities that engage the subject) that defines the purpose of the activity system. The hierarchy of activity, actions and operations describe the activity structure.<br /><br />
+
+This step involves defining the activity using questions such as:<br /><br />
+  <ul>
+      <li>How is work being done in practice? </li>
+      <li>How has the work (actions and operations) transformed over time? </li>
+      <li>What historical phases have there been on the work activity? </li>
+      <li>What are the goal motives of the activity and how are they related to other concurrent goals? </li>
+      <li>For each activity, what actions can be performed and by whom? </li>
+      <li>For each action, observe and analyse the operations that the subjects perform. </li></ul>
+    <br />
+Understanding the use of technology should start with identification of the goals of target actions that are relatively explicit and then extend the scope of analysis both up (to higher level actions and activities) and down (to lower level actions and operations). We consider:<br /><br />
+  <ul>
+      <li>Who are the people who will use the application? </li>
+      <li>Goals of target actions. </li>
+      <li>People involved in the design process. </li>
+      <li>What are the basic limitations of the current technology? </li>
+      <li>Are there conflicts between different goals of the users? </li>
+      <li>Criteria for the success or failure of achieving goals. </li></ul>
+    <br />
+To capture the requirements of the e-commerce application we must analyse the three levels that activities have: activity, action and operation. To analyse an activity and the actions that compose it we use a hierarchical notation which is traditionally used in the field of task analysis (<a href="#Shepherd01">Shepherd 2001</a>). </li></ol>
+<br />
+
+<h3>Analysis of activity and actions</h3>
+
+<p>The hierarchical task analysis (<a href="#Shepherd01">Shepherd 2001</a>) technique is typically used to represent the actions that users perform during an  activity. In hierarchical task analysis, the tasks are gradually broken down into subtasks and eventually into actions that will define how the user actually performs the step (<a href="#Bolchini03">Bolchini and Mylopoulos 2003</a>). To do this, two main types of refinements are used: the structural and the temporal refinements. The structural refinement decomposes a complex task into a set of independent simpler subtasks. The temporal refinement, moreover, provides constraints for ordering subtasks according to the parent task logic. The main advantage of this mode of analysis is that it provides analysts with models for task execution, enabling them to envisage the goals, tasks, subtasks, operations and plans essential to users' activities. </p>
+
+<p>However, although hierarchical task analysis is useful for decomposing complex tasks, it has a narrow view of the task. The underlying theory views tasks in a more abstract sense, as a set of interlinked goals, resources and constraints. The focus is on the system and its properties (<a href="#Shepherd01">Shepherd 2001</a>). Although it is recognized that the system (or the task) exists in a wider context, which may influence its behavior, little attempt is made to model this context explicitly. Another criticism of task analysis is that although the responsibility of the operator (user) to plan the use of available resources to attain a given goal is recognized, it treats the operator's cognitive processes as a black box: &quot;how behavior is actually organized is a question for cognitive psychology&quot; (<a href="#Shepherd01">Shepherd 2001: 16</a>). It is crucial to understand the structure of human cognition in order to appropriately support cognitively intensive tasks. Cognition is intimately connected to socio-cultural processes (<a href="#Hollan00">Hollan <em>et al.</em> 2000</a>, but hierarchical task analysis provides no systematic way of dealing with the rich social and physical context in which activities are embedded. Hierarchical task analysis also fails to support the components needed to analyse system flows and dynamics. These limitations necessitate the use of additional theoretical structures to develop a more complete understanding of human activity.</p>
+
+<p>To overcome the limitation, we have developed a task model based on activity theory. The purpose of a task model is to create a hierarchical analysis of the task structure or model the mental states and operations of the principle actors. It also describes the interactions between the people and their tools and resources. To analyse how people externalise their work, the task model should describe:</p>
+
+<ul>
+  <li>the main actors and their activity systems; </li>
+  <li>how the actors employ tools and resources to mediate their interaction and to externalise cognition; </li>
+  <li>methods and techniques that the actors employ; </li>
+  <li>the contexts in which work occurs; and</li>
+  <li>the actors' conception of their work, including sources of difficulty and breakdown in activity and their attitudes towards the Web application.
+</li></ul>
+
+<p>In this context, although we use a graphical notation based on those used in hierarchical task analysis we re-orient this kind of technique to support the ideas proposed in activity theory. We use the hierarchical decomposition to create a taxonomy which describes the actions that must be performed to achieve an activity. The root of the task taxonomy is considered to be the activity under analysis and the lower levels of the taxonomy are considered to be the different actions that must be performed to achieve the activity. In this way, an activity is decomposed into actions and an action can be decomposed into simpler actions.
+</p>
+
+<p>The structural refinement (represented by solid lines in Figure 5) is used to decompose an action into a set of individual simpler actions. The temporal refinement (represented by dashed lines in Figure 5) is used to decompose an action into a set of simpler actions that must be performed in a cooperative way. The cooperation is represented by temporal constrains among actions. The temporal constraints used in task analysis techniques such as (<a href="#Paterno97">Patern&ograve; 1997</a>) are also valid for activity analysis. For reasons of brevity, we  present only the constraints used in the case study of this paper:</p>
+
+<ul>
+  <li>A1 &gt;&gt; A2, Enabling: the action A2 must be performed after the action A1 is performed. </li>
+  <li>A1 []&gt;&gt; A2, Enabling with information passing: the action A2 must be performed after the action A1 is performed. In addition, A1 provides a value for A2. </li>
+  <li>A1 |&gt; A2, Suspend-Resume: The action A1 can be interrupted by the action     A2. When A2 is performed, A1 can be resumed. </li>
+  <li>A1*, iteration: the action can be performed several times. </li></ul>
+  
+<p>To hierarchically represent an activity we make customers describe how this activity must be performed. Considering the activity of purchasing products, let us suppose that customers provide us with the following description:</p>
+
+<blockquote>To purchase products a user must be able to collect products by adding them to the shopping cart. During the process of adding products users must also be able to consult the state of their shopping cart at any time. Once users have finished adding products to the shopping cart, they must formalize the purchase by going through the checkout. To do this, users must first identify themselves as registered clients and then send a purchase order.</blockquote>
+
+<p>From this description we can identify which actions shoppers perform consciously. These actions constitute the hierarchical description. In a next step, we analyse this hierarchical description to identify those operations that users perform for each action without consciousness of them. (This analysis is presented in next section.)</p>
+
+<br />
+<div align="center"><img src="p340fig5.jpg" alt="Hierarchical decomposition of an activity into actions"/></div>
+<div align="center"><br /><strong>Figure 5: Hierarchical decomposition of an activity into actions</strong></div>
+<br />
+
+<p>We briefly describe the taxonomy in Figure 5:</p>
+
+<ul>
+  <li>The activity we are analysing is the purchase of products. To achieve this activity two actions must be performed Collect Products and Check-out. These actions are two cooperative actions. The temporal constraint defined between both is <em>enabling with information passing</em>. First the products should be collected into the shopping cart and then the check-out must be done.  The information that needs to be exchanged is the collected products. </li>
+
+  <li>Collect Products is decomposed into two simpler cooperative actions: Add Product to Shopping Cart (which can be repeated) and Inspect Shopping Cart. The temporal constraint defined between the two actions is suspend-resume, which indicates that Add Product to Shopping Cart can be interrupted at any point by Inspect Shopping Cart. It will be reactivated from the state reached before the interruption once the action Inspect Shopping Cart is performed. </li>
+
+  <li>The action Add Product to Shopping Cart is decomposed into three individual actions: Add CD, Add Software and Add Book. </li>
+
+  <li>The action Check-out is decomposed into two simpler cooperative actions: Login and Send Purchase Order. The temporal constraint defined between the two actions is enabling, which indicates order users must identify themselves before sending a purchase order. </li>
+</ul>
+
+<p>Note that temporal constraints are inherited. For instance, in Figure 5, the action Add Book can be suspended by the action Inspect Shopping Cart because the action Add Product to Shopping Cart (parent action of Add Book) has defined this constraint.</p>
+
+<p>Finally, we associate to each action a template that allows us to characterize it in the context of the whole activity. These templates are made up of the following fields (see Figure 6):</p>
+
+<ul>
+  <li><em>Goals</em>: objectives that must be reached after the action performance.</li>
+  <li><em>Users</em>: The list of kinds of users that can achieve the action. </li>
+  <li><em>Additional Information</em>: information that allow us to understand better the context in which each action must be performed. This information can be related to frequency, performance, security, availability,   etc. </li></ul>
+<br />
+
+<div align="center"><img src="p340fig6.gif" width="404" height="146" alt="Description of the action Add CD" /></div>
+<div align="center"><br /><strong>Figure 6: Description of the action Add CD</strong></div>
+<br />
+
+<p>Figure 6 shows the description of the action <em>Add CD,</em> detected in the running example. According to this description, the goal of the action is for the subjects to add a CD to the shopping cart; the action can be performed by visitors and customers. As an estimate, the action is going to be completed 100 times an hour. No additional constraint is defined.</p>
+
+<h3>Analysis of operations</h3>
+
+<p>Once the taxonomy is built, we must analyse the operations that define the actions. We need to analyse only the actions represented by the leave nodes of the taxonomy. Actions represented by intermediate nodes are defined throughout their children actions.</p>
+
+<p>In order to use this analysis for correctly capturing Web application requirements we must consider not only structural and behavioural aspects of a Web application but also navigational ones. To do this, we propose two kinds of operations:</p>
+
+<ul>
+  <li><strong>System operations</strong>: These operations are completely performed by the system. They can be: (1) <em>functional operations</em> which change the system state or (2) <em>search operations</em> which only query the system state. </li>
+  <li><strong>Interaction operations</strong>: These operations represent an interaction between the system and the user. There are two kinds:<br /><br />
+    <ul>
+      <li><em>Information exchange</em>: which represents an exchange of information between the system and the user. It is a bidirectional interaction operation, meaning that the user can introduce information to the system and the system can provide the user with information. </li>
+      <li><em>Message sending</em>: which is unidirectional, meaning that only the user can send messages to the system. These messages can be an activation of a system operation (the user indicates the system that performs a specific operation) or an information selection (the user select an specific information in order to obtain a more detailed description about it). </li></ul></li></ul>
+
+<p>In order to analyse the operations that must be performed to carry out an action we propose the use of Unified Modelling Language activity diagrams (<a href="#UML07">Object Management Group 2007</a>). This technique also allows us to indicate the sequence in which the operations must be performed.The operations are described by means of activity diagrams in the following way (see Figure 7):</p>
+
+<ul>
+  <li>System operations are represented by nodes depicted with dashed lines. To represent the type of the system operation these nodes are stereotyped with the keyword <em>Function</em> or <em>Search </em>. </li>
+
+  <li>Interaction operations are represented as follows:
+    <ul>
+      <li>If it is an information exchange, the operation is represented by nodes depicted with solid lines. These nodes are stereotyped with the keyword <em>Output</em> (if the system provides the user with information) or the keyword <em>Input</em> (if the user introduces information into the system). Furthermore, we indicate in both cases the entity (i.e., any object of the real world that belongs to the system domain (e.g., client, product, invoice, etc) to which the information is related. In the <em>Output</em> case, we also indicate cardinality, i.e., the number of entity instances the system provides. (An instance is the set of data related to each element of this entity (e.g., Name: Joseph, Surname: Elmer, Telephone Number: 9658789). This cardinality can be a specific number of entities or a list defined by an undefined number of entities (indicated by an asterisk) </li>
+
+      <li>If it is a message sending, the operation is implicitly represented by the arcs whose source is an interaction operation. In these cases, the user activates a system operation (if the arc target is a system operation) or the user selects information (if the arc target is an information exchange).</li></ul></li></ul>
+
+<p>Further representation aspects of this technique are (see Figure 7):</p>
+<ul>
+  <li>If the source of an arc is a system operation it just represents a node sequence. </li>
+  <li>The information that the user introduces into the system is used to perform a system operation. Thus, the interaction operation that represents the introduction of this information (a solid node stereotyped with the keyword input) depends on the system operation that will use the information. In order to graphically represent this dependency, both elements (interaction operation and system operation) are encapsulated in dashed squares.</li></ul>
+<br />
+
+<div align="center"><img src="p340fig7.jpg" alt="Operation analysis of the action Add CD"/></div>
+<div align="center"><br /><strong>Figure 7: Operation analysis of the action Add CD</strong></div>
+<br />
+
+<p>Figure 7 shows the analysis of the operations that must be performed to carry out the action Add CD<em> </em>(the shaded numbers are not part of the notation). These operations must be performed as follows:</p>
+
+<ul>
+  <li>First, an interaction operation is performed (<span style="background: silver">1</span>). This operation indicates that the system provides the user with information (<em>Output</em>). This information is a list (cardinality*) of music categories (entity). <br />
+    <br />
+  </li>
+  <li>From this list, the user can select a category (<span style="background: silver">2a</span> or <span style="background: silver">2b</span>). <br />
+    <br />
+  </li>
+  <li>If the category has subcategories, the system provides again the user with a list of (sub) categories (<span style="background: silver">2b</span>) by means of the previous interaction operation (<span style="background: silver">1</span>). <br />
+    <br />
+  </li>
+  <li>If the selected category does not have subcategories (<span style="background: silver">2a</span>) the system informs the user about the list of CDs that belong to the selected category by means of an interaction operation (<span style="background: silver">3</span>). <br />
+    <br />
+  </li>
+  <li>If the interaction operation depicted as <span style="background: silver">3</span> is performed, the user can after that: <br />
+    <br />
+  <ul>
+      <li>Select a CD (<span style="background: silver">4a</span>). Then, an interaction operation is performed. This operation (<span style="background: silver">5a</span>) represents that the system (<em>Output</em>) provides the user with a description (cardinality 1) of the selected CD (entity). <br />
+        <br />
+      </li>
+      <li>Activate a system operation (<span style="background: silver">4b</span>). This system operation searches (search stereotype) for the CDs (<span style="background: silver">5b1</span>). To do this, the user must introduce the search criterion that is an artist. This criterion is introduced by means of an interaction operation<em> </em>(<em>Input</em>) (<span style="background: silver">5b2</span>). In order to represent that this interaction operation exclusively depends on the system operation they are encapsulated in a dashed square.<br />
+        If the search returns only one CD, the system provides the user with its detailed description (<span style="background: silver">6b1</span>). Otherwise, the system provides the user with a set of CDs (<span style="background: silver">6b2</span>). </li></ul>
+    <br />
+  </li>
+  <li>When the user has obtained a CD description (<span style="background: silver">5a</span>), s/he can activate a system operation (<span style="background: silver">6a</span>). It is a system operation which adds the selected CD to the shopping cart (<span style="background: silver">7a</span>). In this case, the state of the system is changed by the operation and it then becomes <em>Function</em>. </li></ul>
+
+<h3>Dynamic transformations between levels</h3>
+
+<p>As we have commented above (in the activity theory review section), activities may be automated and frozen when carried out repeatedly under similar circumstances, making conscious control unnecessary, thus transforming the acts into operational constituents of an action.  Furthermore, this transformation may also work the other way, making a living, dynamic structure (<a href="#Baerentsen02">Baerentsen and Trettvik 2002</a>). For instance, when people drive a lot they usually change gear without a conscious action and then this act is an operation.  However, when people are learning to drive, the change of gear is a conscious action that they do in order to perform the activity of driving. This act is then an action. In the same way, and considering the running example, when less expert users of the Internet buy products they may need conscious control over operations such as the access to product descriptions or search of CDs (see Figure 7). In this case, these operations should be defined in the hierarchical description of activities.</p>
+
+<p>In this context different descriptions can be obtained for a same application depending on the expertise of users in performing activities (see figure 8). An act that may be an action for less expert users becomes an operation for more expert users. The technique that we propose in this work facilitates the management of this type of description since both actions and operations are defined in different diagrams. If the subject needs  consciously to control a specific act we represent it as an action in the hierarchy. If the subject does not have consciousness of this act we represent it as an operation of an action. For instance, Figure 8 shows two different representations of the activity analysis for the running example. The representation at the left side of the figure corresponds to the description provided by a less expert user. In this case, users explicitly represent as actions the acts of selecting a music category, selecting a CD and adding it to the shopping cart. The representation at the right side of the figure corresponds to the description provided by a more expert user. In this case, the previously introduced acts are performed without consciousness by users when they add a CD to the shopping cart. In this case, these acts are represented as operations of the action 'Add CD'.  </p>
+
+<div align="center">
+<a href="javascript: bigfigure()"  onclick="window.focus()"><img src="p340fig8a.gif" alt="Little_figure_8" border="2" width="198" height="78" /></a>
+</div>
+
+<div align="center"><br /><strong>Figure 8. Dynamic transformations between levels</strong> [Click for full-sized figure]</div>
+
+<p>Using the structures proposed above to represent activities, actions and operations are also a valuable mechanism that allows us to extract information related to navigation from requirements. Next, we analyse this aspect.</p>
+
+<h3>Extracting navigational semantics from activity descriptions</h3>
+
+<p>The analysis of the activities that users must perform by interacting with a Web application can be used to derive which navigational structure should present this Web application. This navigational structure must be that which properly support users in the performance of the activities. </p>
+
+<p>In this context, descriptions of Web applications performed by means of the technique presented above can be used to systematically derive the navigational structure of Web applications. The navigational structure of a Web application is defined from the mechanisms that allow user to navigate the information. These mechanisms are basically Web pages, links and access information facilities such as search engines. In order to derive these elements from activity descriptions we have defined a set of guidelines.  We present here the following as a representative example:</p>
+
+<ul>
+  <li><strong>Guideline 1.</strong>  Exchange operations represent acts in which the system provides the user     with information or vice versa. In a Web application these exchanges of information are performed throughout Web pages. Thus, we can derive a Web page for each information exchange operation that is defined in an action description. </li>
+
+  <li><strong>Guideline 2.</strong>  In the same way, if two information exchange operations are performed sequentially we can infer that the corresponding Web pages must be connected throughout a link. This link allows users to access one page from the other and thus provides support to the sequence of information exchanges defined in the action description. </li>
+
+  <li><strong>Guideline 3.</strong>  Search system operations are those performed by the system to query the system state. However, these operations are activated by users through a message. Thus, we can derive from these operations search engines that allow users to start a search for information. </li>
+
+  <li><strong>Guideline 4.</strong>  We can also derive navigational information from the temporal   relationship defined between actions. For instance, if users can suspend the action <em>Collect Product</em> in order to perform the action <em>Inspect Shopping Cart</em> we can infer that Web pages derived from the operations of the first action must provide access to the Web pages provided by the operations of the second actions, and vice versa. </li></ul>
+
+<p>Figure 9 shows the navigational structure that is obtained when these guidelines
+	are applied to the action Add CD seen in Figure 7:</p>
+
+<ul>
+  <li>Three Web pages are derived by applying the guideline (one page for each     exchange operation): page A provides users with a list of Music Categories; page B provides users with a list of CDs; and page C provides users with a CD description. </li> 
+
+  <li>Notice how these Web pages are connected by means of links according to     the arcs defined between exchange operations (guideline 2). By selecting a music category in page A we access page B where the CDs that belong to the selected music category are shown; by selecting a CD in page B users access page C where a description of the selected CD is shown. </li>
+
+  <li>The search system operation has been developed into a search engine when guideline 3 is applied. This search engine can be accessed from page B. </li>
+	
+  <li>Finally, notice how the shopping cart is available from the three pages. This link is derived from the temporal relationship <em>Suspend/Resume</em> defined between the actions <em>Add Product to Shopping Cart</em> and <em>Inspect Shopping Cart</em>. This temporal relationship indicates that users must be always able to perform the action <em>Inspect Shopping Cart</em> while they are performing the action <em>Add Product to the Shopping Cart</em> (or any of its sub-actions such as <em>Add CD</em>). </li>
+</ul>
+
+<div align="center"><img src="p340fig9.gif" border="0" alt="Navigational Structure derived from Activity Analysis"/></div>
+<div align="center"><br /><strong>Figure 9: Navigational structure derived from activity analysis</strong></div>
+<br />
+
+<h3>Understanding the social and cultural aspects of users is important</h3>
+
+<p>In activity theory, all practice is seen as being re-formed and shaped by historical development. Consequently, it is important to understand how tools are used not only in a laboratory setting, but also over a period of time. In that period of time, development may occur to make the tool more useful and efficient than might occur in a single laboratory experiment.</p>
+
+<p>History is the basis of classification.  This means that the activity system and its components shall be understood historically.  An activity is not a homogeneous entity.  It is comprised of a variety of disparate elements, voices and viewpoints (<a href="#Engestrom99">Engestr&ouml;m 1999</a>).  The multiplicity can be understood in terms of historical layers.  Activities are not static or rigid, they are constantly evolving.  To understand a phenomenon means to know how it is developed into its existing form (<a href="#Kaptelinin96">Kaptelinin 1996</a>).  This applies to all the elements of an activity.  The current relationship between subject and object includes a condensation of the historical development of that relationship (<a href="#Kuutti96">Kuutti 1996</a>). This means we need to know where the users came from, as well as their beliefs and assumptions about the use of the application.</p>
+
+<p>Relations between elements of an activity are not directed, but mediated. The principle of tool mediation plays a central role in activity theory. Tools shape the way human beings interact with reality. Shaping external activities results in shaping internal ones. Tools usually reflect the experience of other people who tried to  solve similar problems. Tools can all be seen as artefacts for the activity: they are made by humans and they mediate the relations among human beings or between people and the material or product in different stages. Artefacts are there for us when we are introduced into a certain activity, but they are also a product of our activity and as such they are constantly changed through the activity.</p>
+
+<p>In our case study, the online shopping made it more difficult, in one sense, for the subjects purchasing products, because the tools have changed from primarily  purchasing products in a store or shop to  online shopping. The tool-subject  relation allowed us to see many affordances and constraints that must be taken into account in the analysis of the application. </p>
+
+<p>The object is more than raw stimuli.  It is a culturally-formed object with a history, however short or long. The object or focus of activity implies an overall direction of that activity, a (provisionally) shared purpose or <strong>motive</strong>.  In our case study, the motive is, officially, to own the products. Of course the direction or motive of an activity system and its object may be understood differently or even contested, as participants bring many motives to a collective interaction and as conditions change. Clashes, resistance, conflicts and deep contradictions are constantly produced in activity systems.</p>
+
+<p>However, initially, the object and motive for novice users (unexpectedly for the researchers) would be to use the Internet, not the information content. What was expected to be a mediational tool, the computer interface (Amazon.com), became instead the object and motive.</p>
+
+<p>Users participate in multiple activity systems within their local and global contexts including purchasing products. Purchasing product is also an activity system that is embedded within its broader institutional, geographical and historical contexts. The users engaged in one activity system are also simultaneously influenced by other activity systems in which they participate.  These influences are both horizontal, occurring across communities and also vertical as social actions 	  that are also embedded within history, culture and inequitable power relations that are both influencing the meaning production and shaping human activities in important ways.</p>
+
+<p>Activity theory makes the assumption that human identity (our beliefs, values and attitudes, our ways of thinking, talking and behaving) is located and formed through our everyday practice or interaction with our environment through social and cultural contact.  We do not act and interact in isolation. Our practice is mediated and embedded in a wider social matrix comprising of cultural and historical artefacts and rules that govern and guide our actions and relationships. Human societies and human individuals are mutually constitutive.  All of these should be taken into considerations when analysing requirements for Web applications. </p>
+
+<h2>Benefits of activity theory for Web requirements</h2>
+
+<p>There are several benefits in using activity theory for Web requirements analysis. First, activity theory enables us to shift the focus from the interaction between isolated and stand-alone computers to a larger, more ecologically and valid interaction between human beings and their environments.  It sensitises us to the dynamic and evolving nature of human-computer interaction and information system design and evaluation as well as highlighting the rich, multifaceted reality of strips of computer-mediated activity in situ (<a href="#Spasser99">Spasser 1999</a>).  activity theory also provides us with adequate period of time for understanding users' behaviour and their motivation.</p>
+
+<p> Secondly, activity theory describes activities as hierarchical in nature and provides a model for decomposing activities into actions and operations.  However, although current research has focused on these actions and operations, it has failed to address the real intention of the user in carrying out those actions and so has failed to understand the needs of the user at a higher level.  Thirdly, activity theory insists that all activity is mediated by physical or mental tools.  Tools affect the user and are themselves affected by the user.  Fourthly, activity theory views activity not as a simple individual action, but as being culturally and historically located.  Thus it is able to address the importance of organizational influence on the use of Web systems.</p>
+
+<p>Activity theory also models people as agents rather than as collections of cognitive attributes. Activities are inherently context sensitive: the purpose of activity theory is to establish a minimal meaningful context for individual actions (<a href="#Kuutti96">Kuutti 1996</a>).  The activity is the context, defined as a form of doing directed to an object.  Activities do not exist in isolation, they are under continuous development.  Thus their history accumulates and serves to inform their evolution.  This is possible because of the presence of artefacts.  Artefacts carry culture in the form of historical residue, delivering the lessons of the past to the future, mediating between different elements of an activity and enabling the coordination of complex actions.</p>
+
+<p>Another important aspect of requirements analysis is that of conflicts. Because of the interests and needs of different stakeholders, conflicts are unavoidable.  It is important to identify conflicts during requirements analysis, as this helps designers to reflect on possible design strategies accommodating all different requirements, thus fulfilling the stakeholders' objectives and supporting the needs of the users.</p>
+
+<p>Activities in activity theory are not static or given, but are dynamic. They are changing and developing. This development takes place at all levels: new operations are formed from previous actions as a participant's skills  increase. Correspondingly, at the action level, the scope of new actions is enlarging. Totally new actions are also enacted, experimented and adapted as responses to new situations or possibilities encountered in the process of transforming the object.  At the activity level, the object and motive are also reflected, questioned and perhaps adapted, reacting to larger changes and other activities (<a
+href="#Kuutti96">Kuutti 1996</a>). </p>
+
+<p>Because activities are not static but more like nodes crossing hierarchies and networks, they are influenced by other activities and other changes in the environment. External influences change some elements of activities causing imbalances between them (<a href="#Kuutti96">Kuutti 1996</a>). Contradictions are the terms given to misfits within elements, between elements and between different activities or different developmental phases of the same activity. They manifest themselves as problems, ruptures, breakdowns, clashes etc.</p>
+
+<p>According to Engestr&ouml;m (<a href="#Engestrom87">1987</a>), any activity system has four levels of contradictions that must be attended to in analysis of a working situation.  Level 1 is the primary contradiction.  It is the contradiction found within a single node of an activity.  This contradiction emerges from tension between use value and exchange value. It permeates every corner of the triangle and is the basic source of instability and development (<a href="#Engestrom87">Engestr&ouml;m 1987</a>).  Primary contradiction can be understood in terms of breakdowns between actions or sets of actions that realise the activity.  These actions are poly-motivated.  This means that the same action can be executed by different people for different reasons or by the same person as part of two separate activities.  This poly-motivation may be at the root of subsequent contradictions.</p>
+
+<p>Secondary contradictions are those that occur between the constituent nodes.  For example, between the skills of the subject and the tool s/he is using, or between rules and tools.  Tertiary contradictions arise between an existing activity and what is described as a more advanced form of that activity.  This may be found when an activity is remodelled to take account of new motives or ways of working.  Quaternary contradictions are contradictions between the central activity and the neighbouring activities, (e.g., instrument producing, subject-producing and rule-producing activities).</p>
+
+<p>Activity is bound up with motive and there is no activity without a motive.  Just as the concept of motive is related to the concept of activity, the concept of purpose is related to the concept of action (<a href="#Leont’ev78">Leont'ev 1978</a>).   Human activity does not exist except in the form of action or chains of actions.  Action has an operational aspect (how, by what means this can be achieved), which is determined not by the goal in itself, but by the objective-object conditions of its achievement (<a href="#Wilson06">Wilson 2006</a>).</p>
+
+<p>Leont'ev's distinction of activity, action and operation has important implications for analysing tasks in Web requirements engineering.  He distinguishes between activity, actions and operations and relates these to motives, goals and the conditions under which the activity is performed.  The relationship is expressed as shown in Figure 3 above (<a href="#Leont’ev78">Leont'ev 1978</a>).</p>
+
+
+<h2>Conclusions</h2>
+
+<p>In this paper, we have presented a requirements engineering approach for Web applications based on activity theory. The theoretical principles provided by activity theory are applied in the analysis of Web applications requirements which allow us to properly consider organizational requirement that capture the cultural, cognitive and social aspects that are related to the requirements engineering activity.</p>
+
+<p>Furthermore, we have used a technique for representing activity analysis that is based on a hierarchical descriptions of actions plus operation descriptions based on Unified Modelling Language activity diagrams. This technique has been developed to take into account the navigational requirements of Web applications. In this context, we have defined a set of guidelines that allow us to derive the navigational structure of Web applications from activity analysis.</p>
+
+<p>This paper can be also considered as a practical example of how activity theory 	is applied in requirements activities in the development of Web applications. In particular, we have shown how requirements of an e-commerce application are captured through activity analysis.</p>
+
+<p>As it is only a case study, the generalization of the results from the context of this study is limited. However, the strong socio-cultural themes that emerged provide a framework for assisting developers to analyse requirements that take into considerations the social and cultural aspects of the users.</p>
+
+<p>From an activity system perspective, development of the requirements of a Web based application involves understanding the cultural and historic factors that have resulted in the present situation and clarifying the current disturbances in the current form of the system - aspects that are, for example, poorly aligned, inadequate or in opposition and then working to resolve them.</p>
+
+<p>Although activity theory offers benefits for designing analysing Web requirements,  it also has limitations. The key limitation of this approach is that the researcher must have a complete understanding of the activity system under observation, including the dynamic interplay of all the units of the activity system and such understanding takes time to acquire.  The associated strength, of course, is that once the understanding is attained, it serves as a strong bedrock for the investigation. A second limitation is the difficulty faced by researchers in unravelling activity systems and, finally, there is the difficulty of distinguishing between the levels of activity, actions and operations.</p>
+
+<p>It is the authors' belief that the benefits outweigh these limitations. Using the activity system as its unit of analysis, activity theory avoids simple causal explanation of Web requirements design by describing it as an ensemble of multiple, 	systematically interacting elements, including social rules, mediating artefacts and division of labour. The process of context and the dynamic transformation of objects into artefacts can be taken into account. This approach also takes into consideration the perspectives of different actors of an activity system.  However, further work is still needed for it to be used as a robust design method.   To use  activity theory effectively for Web-based requirements analysis, it is important that research time be long enough to understand the objects of activity, the changes of those objects over time and their relations to objects in other settings.  There should also be commitment to understanding things from the users' viewpoint.  This means 	that there should be a phased approach to the design and evaluation of technology use. </p>
+
+<p>We are continuing to evaluate our approach and aim to develop a framework that will guide developers to analyse Web applications that take into consideration the social and cultural aspects of the users.</p>
+
+
+<form action="#">
+<fieldset>
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+
+<ul>
+<li><a name="Al-Rawas96" id="Al-Rawas96"></a>Al-Rawas, A. &amp; Easterbrook, S. (1996). Communication problems in requirements engineering: a field study. In	 <em>Proceedings of the First Westminster Conference on Professional Awareness in Software Engineering, Royal Society, London, 1-2 February 1996.</em> (pp. 47-60). London: University of Westminster.</li>
+
+<li><a name="Avison90" id="Avison90"></a>Avison,D &amp; Wood-Harper, T. (1990). <em>Multiview - an exploration in information systems development</em>. Oxford: Blackwell Scientific Publishers.</li>
+
+ <li><a name="Baerentsen02" id="Baerentsen02"></a>Baerentsen, K.B. &amp; Trettvik, J. (2002). An activity theory approach to affordance. <em>Proceedings of the second Nordic conference on Human-computer interaction  table of contents Aarhus, Denmark.</em> (pp. 51-60).  New York, NY: ACM Press.</li>
+ 
+<li><a name="Bardram98" id="Bardram98"></a>Bardram, J. (1998). <a href="http://www.webcitation.org/5XiPkhcoo" target="_blank">Designing for the dynamics of cooperative work activities.</a> In,  <em>Proceedings of the 1998 ACM conference on Computer supported cooperative work, Seattle, Washington, USA, November 14-18, 1998.</em> (pp. 89-98). New York, NY: ACM Press. Retrieved 10 May, 2008 from http://www.daimi.au.dk/PB/536/PB-536.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5XiPkhcoo)</li>
+
+  <li><a name="Bodker96" id="Bodker96"></a>B&oslash;dker, S. (1996). Applying activity theory to video analysis: how to make sense of video data in HCI. In Nardi, B. (Ed.). <em>Context and consciousness. Activity theory and human computer interaction</em>. (pp. 147-174). Cambridge, MA: MIT Press.</li>
+
+<li><a name="Bolchini03" id="Bolchini03"></a>Bolchini, D. &amp; Mylopoulos, J. (2003). From task-oriented to goal-oriented Web requirements analysis. In, <em>Fourth International Conference on Web Information Systems Engineering Workshops (WISEW'03)</em>.  (p. 166). Washington, DC: IEEE Computer Society. </li>
+
+<li><a name="Burdman99" id="Burdman99"></a>Burdman, J.  (1999). <em>Collaborative Web development</em>. Reading, MA: Addison-Wesley. </li>
+
+ <li><a name="Conklin97" id="Conklin97"></a>Conklin, J. (1987). Hypertext: an introduction and survey. <em>IEEE Computer</em>, <strong>20</strong>(9), 17-41.</li>
+
+<li><a name="Constantine99" id="Constantine99"></a>Constantine, L.L &amp; Lockwood L.A.D.(1999). <em>Software for use: a practical guide to the models and methods of usage-centered design</em>. Reading, MA: Addison Wesley. </li>
+
+<li><a name="Deshpande02" id="Deshpande02"></a>Deshpande, Y., Murugesan, S., Ginige, A., Hansen, S., Schwabe, D., Gaedke, M. &amp; White, B. (2002). <em>Journal of Web&nbsp; Engineering</em>, <strong>1</strong>(1), 003-017. </li>
+
+<li><a name="DeTroyer03" id="DeTroyer03"></a>De Troyer, O. and Casteleyn, S. (2003). <a href="http://www.webcitation.org/5XmX2PnGM" target="_blank">
+Modelling complex processes from Web applications using WSDM</a>. In Luis Olsina, Oscar Pastor, Gustavo Rossi &amp; Daniel Schwabe, (Eds.) <em>Third International Workshop on Web Oriented Software Technologies, Oviedo, Spain, July 15, 2003.</em>. (pp. 1-12).  Retrieved 13 May, 2008 from http://www.dsic.upv.es/~west/iwwost03/articles/DeTroyer%20IWWOST%202003.PDF  (Archived by WebCite&reg; at http://www.webcitation.org/5XmX2PnGM)</li>
+
+<li><a name="Engestrom87" id="Engestrom87"></a>Engestr&ouml;m, Y. (1987). <em>Learning by expanding: an activity-theoretical approach to developmental research</em>. Helsinki: Orienta-Konsultit. </li>
+
+<li><a name="Engestrom99" id="Engestrom99"></a>Engestr&ouml;m, Y. (1999). Expansive visibilization of work: an activity-theoretical perspective. <em>Computer Supported Cooperative Work (CSCW)</em>, <strong>8</strong>(1-2), 63-93.</li>
+
+<li><a name="Engestrom01" id="Engestrom01"></a>Engestr&ouml;m, Y. (2001). Expansive learning at work: towards an activity theoretical reconceptualization. <em>Journal of Education and Work</em>, <strong>14</strong>(1), 133-156.</li>
+
+<li><a name="England99" id="England99"></a>England, E. &amp; Finney, A. (1999). <em>Managing multimedia: project management for interactive media</em> 2nd ed. Reading, MA: Addison-Wesley. </li>
+
+<li><a name="Escalona04" id="Escalona04"></a>Escalona, M.J. &amp; Koch, N. (2004). Requirements engineering for Web applications: a comparative study. <em>Journal on Web Engineering</em>, <strong>2</strong>(3), 193-212. </li>
+
+<li><a name="Goguen93" id="Goguen93"></a>Goguen, J.A. &amp; Linde, C. (1993). Techniques for requirements elicitation. <em>Proceedings of the First IEEE International Symposium on Requirements Engineering (RE 1993), San Diego, California, USA, January 1993</em>. (pp. 152-164). Washington, DC: IEEE Computer Society. </li>
+
+<li><a name="Goguen94" id="Goguen94"></a>Goguen, J. &amp; Jirotka, M. (1994). <em>Requirements engineering: social and technical issues</em>. London: Academic Press. </li>
+
+<li><a name="Gomez00" id="Gomez00"></a>G&oacute;mez, J., Cachero, C. &amp; Pastor, O. (2000). <a href="http://www.webcitation.org/5XmYNvI9Z" target="_blank">Extending an object-oriented conceptual modelling approach to Web application design</a>. In Benkt Wangler and Lars Bergman, (Eds.). <em>Proceedings of the 12th International Conference on Advanced Information Systems Engineering, Stockholm, Sweden, 5-9 June, 2000</em>. (pp. 79-93). Berlin: Springer.  Retrieved 13 May, 2008 from http://gplsi.dlsi.ua.es/iwad/ooh_project/papers/ caise00.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5XmYNvI9Z)</li>
+
+<li><a name="Grechenig93" id="Grechenig93"></a>Grechenig, T. &amp; Tscheligi, M. (Eds.). (1993). <em>Proceedings of the Vienna Conference on Human Computer Interaction</em> London: Springer-Verlag</li>
+
+<!-- <li><a name="Greenspun99" id="Greenspun99"></a>Greenspun, P. (1999). <a href="http://photo.net/wtr/thebook"><em>Philip and Alex guide to Web publishing</em></a>. Retrieved 10 May, 2008 from http://photo.net/wtr/thebook.</li> -->
+
+<li><a name="Harmelen01" id="Harmelen01"></a>Harmelen V.M. (2001). <em>Object modeling and user interface design: designing interactive systems</em>. Reading, MA: Addison Wesley. </li>
+
+<li><a name="Hofman00" id="Hofman00"></a>Hofman, H.F. (2000). <em>Requirements engineering: a situated discovery process</em>. Wiesbaden, Germany: Gabler.</li>
+
+<li><a name="Hollan00" id="Hollan00"></a>Hollan, J., Hutchins, E. &amp; Kirsh, D. (2000). Distributed cognition: toward a new foundation for human-computer interaction research. <em>ACM Transactions on Computer-Human Interaction</em>, <strong>7</strong>(2), 174-196. </li>
+
+<li><a name="Jaaksi98" id="Jaaksi98"></a>Jaaksi, A. (1998). Our cases with use cases. <em>Journal of Object-Oriented Programming</em>, <strong>10</strong>(9), 58-65. </li>
+
+<li><a name="Jonassen99" id="Jonassen99"></a>Jonassen, D.H. &amp; Rohrer-Murphy, L. (1999). Activity theory as a framework for designing constructivist learning environments. <em>Educational Technology Research and Development</em>, <strong>47</strong>(1), 62-79.</li>
+
+<li><a name="Kaenampornpan04" id="Kaenampornpan04"></a>Kaenampornpan, M. &amp; O'Neil, E. (2004). Modality context: an activity theory approach. In Panos Markopoulos, Berry Eggen, Emile Aarts and James L. Crowley, (Eds.). <em>Ambient Intelligence: Second European Symposium (EUSAI 2004), Eindhoven, The Netherlands</em>. (pp. 367-374).  Berlin: Springer</li>
+
+<li><a name="Kaptelinin96" id="Kaptelinin96"></a>Kaptelinin, V. (1996). Activity theory: implications for human-computer interaction. In B. Nardi (ed.), <em>Context and consciousness: activity theory and human-computer interaction</em>. (pp. 45-67). Cambridge, MA: MIT press. </li>
+
+<li><a name="Kaptelinin99" id="Kaptelinin99"></a>Kaptelinin, V., Nardi, B.A. &amp; Macaulay, C. (1999). The activity checklist: a tool for representing the space of context. <em>Interactions Magazine</em>, <strong>6</strong>(4), 27-39. </li>
+
+<li><a name="Kaptelinin00" id="Kaptelinin00"></a>Kaptelinin, V. (2000).  <em>The didactics of the Web: understanding activity transformations in business and administration.</em> Paper presented at the Workshop on Distributed Cognition and Distributed Knowledge: Key issues in Design for e-commerce and E-government, Sharding, Australia, June 14-16, 2000.</li>
+
+<li><a name="Koch00" id="Koch00"></a>Koch, N. (2000). <em>Software engineering for adaptive hypermedia applications</em>. Unpublished doctoral dissertation, Ludwig-Maximilians-University, Munich, Germany. </li>
+
+<li><a name="Kuutti96" id="Kuutti96"></a>Kuutti, K. (1996). Activity theory as a potential framework for human-computer interaction research. In B. Nardi (Ed.), <em> Context and consciousness: activity theory and human-computer interaction</em>. (pp. 17-44). Cambridge, MA: MIT press. </li>
+
+<li><a name="Leite98" id="Leite98"></a>Leite, J.C., Rossi, G., Balaguer, F., Maiorana, V., Kaplan, G., Hadad, G. &amp; Oliveros A. (1998). Enhancing a requirements baseline with scenarios. <em>Requirements Engineering</em>, <strong>1</strong>(4), 184-198.</li>
+
+<li><a name="Leont78" id="Leont78"></a>Leont'ev, A.N. (1978). <em>Activity, consciousness and personality</em>. Englewood Cliffs, NJ: Prentice-Hall. </li>
+
+<li><a name="Leontev81" id="Leontev81"></a>Leont'ev, A.N. (1981). <em>Problems of the development of mind</em>. Moscow: Progress.</li>
+
+<li><a name="Lowe03" id="Lowe03"></a>Lowe, D. (2003). Web system requirements: an overview. <em>International Journal on Requirements Engineering</em>, <strong>8</strong>(2), 102-113.</li>
+
+<li><a name="McDonald01" id="McDonald01"></a>McDonald, A. &amp; Welland, R. (2001). <a href="http://www.webcitation.org/5Xmbb14NW">Web Engineering in Practice</a>. In <em>Proceedings of the 4th Workshop on Web Engineering (in conjunction with 10th International Conference on WWW), Hong Kong, May 21-30, 2001.</em>. Retrieved 10 May, 2008 from http://www.dcs.gla.ac.uk/~andrew/webe2001.pdf (Archived by WebCite&reg; at  http://www.webcitation.org/5Xmbb14NW)</li>
+
+<li><a name="Mwanza01" id="Mwanza01"></a>Mwanza, D. (2001). <a href="http://www.webcitation.org/5Xmd3Mc0Y" target="_blank">Where theory meets practice: a case for an activity theory based methodology to guide computer system design</a>. In Michitaka Hirose (Ed), <em>Proceedings of the 13th International Conference on Human-Computer Interaction, Tokyo, Japan, July 9-13, 2001</em>. (pp. 342-349) Amsterdam: IOS Press. Retrieved 10 May, 2008 from http://tinyurl.com/49ezz9 (Archived by WebCite&reg; at http://www.webcitation.org/5Xmd3Mc0Y)</li>
+
+<li><a name="Nunes00" id="Nunes00"></a>Nunes, N. &amp; Cunha, J. (2000). Wisdom: a software engineering method for small software development companies. <em>IEEE Software</em>, <strong>17</strong>(5), 113-119. </li>
+
+<li><a name="UML07" id="UML07"></a>Object Management Group, Inc. (2007). <em><a href="http://www.webcitation.org/5Xmpccgsr" target="_blank">Unified Modelling Language 2.1.1&mdash;Infrastructure</a></em>. Needham, MA: Object Management Group, Inc.  Retrieved 13 May, 2008 from http://www.omg.org/docs/formal/07-02-06.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5Xmpccgsr)</li>
+
+<li><a name="Overmyer00" id="Overmyer00"></a>Overmyer, S.P. (2000). What's different about requirements engineering for Web sites?. <em>International Journal on Requirements Engineering</em>, <strong>5</strong>(1), 62-65.</li>
+
+<li><a name="Paterno97" id="Paterno97"></a>Patern&ograve;, F., Mancini, C. &amp; Meniconi, S. (1997). ConcurTaskTree: a diagrammatic notation for specifying task models. In  G.W.M. Rauterberg, M. Menozzi  &amp;  J. Wesson,  (Eds.), <em>13th International Conference on Human-Computer Interaction, Sydney, Australia, 14-18 July 1997.</em> (pp. 362-369). Amsterdam: IOS Press</li>
+
+<li><a name="Probert99" id="Probert99"></a>Probert, S.K. (1999). Requirements engineering, soft system methodology and workforce empowerment. <em>International Journal on Requirements Engineering</em>, <strong>4</strong>(2), 85-91.</li>
+
+<li><a name="Robert98" id="Robert98"></a>Robert, D., Berry, D., Isensee, S. &amp;  Mullaly, J. (1998). <em>Designing for the user with OVID</em>. London: MacMillan.</li>
+
+<li><a name="Rosenberg99" id="Rosenberg99"></a>Rosenberg, D. and Scott, K.&amp;nbsp; (1999). <em>Use case driven object modelling with UML</em>. Reading, MA: Addison Wesley.</li>
+
+<li><a name="Schwabe96" id="Schwabe96"></a>Schwabe, D., Rossi, G. &amp; Barbosa, S. (1996). Systematic hypermedia design with OOHDM. In <em>Proceedings of the ACM Conference on Hypertext, Washington, USA, March 1996</em>. (pp 116 - 128). New York, NY: ACM Press.</li>
+
+<li><a name="Shepherd01" id="Shepherd01"></a>Shepherd, A. (2001). <em>Hierarchical task analysis</em>. New York, NY: Taylor &amp;amp; Francis. </li>
+
+<li><a name="Spasser99" id="Spasser99"></a>Spasser, M.A. (1999). Informing information science: the case for activity theory. <em>Journal of the American Society for Information Science</em>, <strong>50</strong>(12), 1136-1138.</li>
+
+<li><a name="Uden01" id="Uden01"></a>Uden, L. &amp; Willis, N. (2001). Designing user interfaces using activity theory. In <em> Proceedings of the 34th Hawaii International Conference on System Sciences, Wailea, Maui, Hawaii, USA.</em> (pp. 5031-5042). Washington, DC: IEEE Computer Society. </li>
+
+<li><a name="Uden07" id="Uden07"></a>Uden, L. (2007). Context design for mobile learning using activity theory. <em>International Journal of Mobile Learning and organization</em>, <strong>1</strong>(1), 81-102. </li>
+
+<li><a name="Vanderdonckt99" id="Vanderdonckt99"></a>Vanderdonckt, J. &amp; Berquin, P. (1999). Towards a very large model-based approach for UI development. In <em>Proceedings of the First International Workshop on User Interfaces to Data Intensive Systems, Edinburg, 5-6 September 1999</em>. (pp. 76-85). Washington, DC: IEEE Computer Society.</li>
+
+<li><a name="Vygotsky78" id="Vygotsky78"></a>Vygotsky, L.S. (1978). <em>Mind and society</em>. Cambridge MA: Harvard University Press. </li>
+  
+<li><a name="Wilson06" id="Wilson06"></a>Wilson, T.D. (2006). <a href="../11-4/paper260.html">A re-examination of information seeking behaviour in the context of activity theory</a>. <em>Information Research</em>, <strong>11</strong>(4) paper 260. Retrieved 10 May, 2008 from http://InformationR.net/ir/11-4/paper260.html</li></ul>
+  </fieldset>
+</form>
+<hr align="left" width="33%" size="1" />
+
+
+<form action="#">
+<fieldset>
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">How to cite this paper</legend>
+<div><br />
+Uden, L., Valderas, P &amp; Pastor, O. (2008). &quot;An activity-theory-based model to analyse Web application requirements&quot; <em>Information Research</em>, <strong>13</strong>(2) paper 340 [Available at http://InformationR.net/ir/13-2/paper340.html from 14 May, 2008]</div>
+
+</fieldset>
+</form>
+
+<table cellspacing="10" align="center">
+	<tr>
+		<td colspan="3" align="center" style="background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>
+	<tr>
+		<td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;application requirements&quot;, &quot;World Wide Web&quot;, &quot;activity theory&quot; &quot;requirements engineering&quot;"></input> <br /><input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+
+</form>
+
+		</td>
+		<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;application requirements&quot;, &quot;World Wide Web&quot;, &quot;activity theory&quot; &quot;requirements engineering&quot;"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+</td>
+<td align="center" valign="top">
+<form method="get" action="http://www.live.com/" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;application requirements&quot;, &quot;World Wide Web&quot;, &quot;activity theory&quot; &quot;requirements engineering&quot;"></input> <br />
+<input type="submit" name="sa" value="Windows Academic"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+
+		</td>
+	</tr>
+
+</table>
+
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+<div align="center">
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="small delicious image"/> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a>
+</div>
+<hr size="1" style="color: #5E96FD;" />
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper340" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+
+&copy; the authors, 2008. <br /> Last updated: 18 April, 2008</div></td>
+
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" />
+
+<!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper340.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online Web site analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online Web site analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+
+</table>
+<hr size="3" style="color: #5E96FD;" />
+
+<table align="center"><tr><td><div class="button">
+
+
+<ul>
+	<li><a href="infres132.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+
+</div></td></tr></table>
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/13-2/paper340.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:21:55 GMT -->
+</html>
+

@@ -1,0 +1,508 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+ <html>
+
+<!-- Mirrored from informationr.net/ir/2-1/paper12.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:00 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css" type="text/css">
+<title>Hypermedia as an experiential learning tool: a theoretical model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="educational software, theoretical model, hypermedia, experiential learning">
+<meta name="description" content="The process of methodical design and development is of extreme importance in the production of educational software.  However, this process will only be effective, if it is based on a theoretical model that explicitly defines what educational approach is being used and how specific features of the technology can best support it.  This paper proposes a theoretical model of how hypermedia can be used as an experiential learning tool. The development of the model was based on a experiential learning approach and simultaneously aims at minimising the inherent problems of hypermedia as the underlying support technology.">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Hypermedia as an experiential learning tool: a theoretical model">
+<meta name="DC.Creator" content="Jose Miguel Baptista Nunes, Susan P. Fowell">
+<meta name="DC.Subject" content="educational software, theoretical model, hypermedia, experiential learning">
+<meta name="DC.Description" content="The process of methodical design and development is of extreme importance in the production of educational software.  However, this process will only be effective, if it is based on a theoretical model that explicitly defines what educational approach is being used and how specific features of the technology can best support it.  This paper proposes a theoretical model of how hypermedia can be used as an experiential learning tool. The development of the model was based on a experiential learning approach and simultaneously aims at minimising the inherent problems of hypermedia as the underlying support technology.">
+<meta name="DC.Publisher" content="Professor T.D. Wilson">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 2  No. 1, August 1996</h4></td></tr>
+  <tr> 
+    <td><a href="infres21.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<a name="paper12"></a><h1>Hypermedia as an experiential learning tool: a theoretical model</h1>
+
+<h4><a href="mailto:J.M.Nunes@sheffield.ac.uk">José Miguel Baptista Nunes</a> and <a href="mailto:Susan.Fowell@uts.edu.au">Susan P. Fowell</a><br>
+Department of Information Studies<br>University of Sheffield, Sheffield, UK</h4>
+
+<p style="text-align : center">'Learning is not separate from reality.'  (<a href="#pape">Papert, 1993</a>: 179)</p>
+
+<br>
+<hr color=#ff00ff size=3>
+<br>
+<h2>Introduction</h2>
+
+<p>Ever since the 1980s, researchers and educators have claimed that hypermedia, side by side with the 
+microcomputer boom, is about to revolutionise education.   However, like so many other promising 
+information technologies, the use of hypermedia for educational purposes did not avoid what <a href="#madd">Maddux <em>et al.</em> (1994)</a> refer to as the Everest Syndrome.  This refers to the attitude among educators that hypermedia should be used for the same reason Hillary said he climbed Mount Everest - just because it is there.  In fact, when using a specific technology there is a fundamental question that must be considered: "If the design of modern information systems makes a tool available, is the mere existence of the tool justification for its use in particular ways ?" (<a href="#cunn">Cunningham <em>et al.</em>, 1993</a>).  A failure to address this question results in the Everest Syndrome.</p>
+
+<p>This attitude among educational hypermedia developers is potentially responsible for the apparent 
+failure in establishing hypermedia as a creditable educational technology.  Specifically, this attitude 
+focuses undue attention on questions about what microcomputers and authoring packages can be made 
+to do, thus distracting researchers, instructional designers and educators from asking more crucial 
+questions about what this technology should accomplish and what should be its role in the teaching 
+and learning processes.</p>
+
+<p>There are two principal consequences of this inappropriate emphasis on what hypermedia can be made 
+to do, instead of how this technology can empower the learning process.  Firstly and quite naturally, 
+the inherent and well known problems of hypermedia systems are imported and amplified in 
+educational applications.  Learners get lost in hyperspace, due to cognitive overload.  This results in 
+the learning process being interrupted by navigation concerns and software mastering, and finally, the 
+lack of guidance means that learners end up studying less meaningful topics and omit to study crucial 
+ones.  Secondly, and potentially more importantly, the focus on the technology neglects educational 
+and pedagogic issues as well as systematic analysis and design.  Unsuitable educational models may 
+hence be adopted, usually based on behaviourist paradigms.</p>
+
+<p>In fact, hypermedia philosophy and characteristics are particularly appropriate for the production of 
+exploratory environments where large numbers of links and cross-references are provided, so that the 
+learner can explore his own interests according to his own experience, background and perspective.  
+Nevertheless, the mere presence of hypermedia in the learning process will not improve learning.  
+Hypermedia is merely an educational technology, and it can be used correctly or incorrectly, just like 
+any other technology.  If hypermedia educational applications are implemented without bearing in 
+mind basic design principles such as why, how, where and by whom they will be used, they will result 
+in failures that will ultimately be reflected in the technology itself.</p>
+
+<p>The process of methodical design and development is therefore of extreme importance in the 
+production of educational software.  However, this process will only be effective, if it is based on a 
+theoretical model that explicitly defines what educational approach is being used and how specific 
+features of the technology can best support it.  This paper proposes a theoretical model of how 
+hypermedia can be used as an experiential learning tool.</p>
+
+<p>The development of the model was based on a experiential learning approach and simultaneously aims 
+at minimising the inherent problems of hypermedia as the underlying support technology.  Two further 
+assumptions were taken into account:</p>
+
+<blockquote>
+<ul>
+<li>It is assumed that educators and pedagogues are the fundamental instructional designers in the creation of educational software, and the model must thus  be workable and understandable by such people.  Additionally, the gap between expert/professional and non-expert/non-professional developer is narrowing, due to the improved facilities of modern hypermedia authoring tools, which aim at supporting both professional quality and do-it-yourself endeavours (<a href="#semp">Semper, 1990</a>).  Thus, the developer of an educational application could ultimately be the educator him/herself, without the need for professional assistance; even so, there would still be a need for the model and the design process.
+<li>Technical domains are highly dynamic and fast-moving, changing and evolving very rapidly.  Thus the model must have an open and adaptable structure, possible to be easily maintained and customised at any given time of its life-cycle.
+</ul>
+</blockquote>
+
+<p>In sum, the key to the successful use of hypermedia in educational environments is an understanding 
+of the technology and of its role in education.  Moreover, the only way to fight the backlash against 
+CAL in general and hypermedia in particular, lies in recognising both its technical and educational 
+components and integrating them in a coherent model which can be the basis for design and 
+development of suitable applications.</p>
+
+<h2>Inherent problems of hypermedia in educational applications</h2>
+
+<p>The essence of hypermedia is non-linearity and information retrieval by association.  The interaction 
+with the hypermedia system is based on a web of links, which associate all stored chunks of 
+information, and allow the user to navigate within this informational body by creating his own path.</p>
+
+<p>The most common problem arising from these characteristics and essentially the one which ultimately 
+limits the use of hypermedia in education is disorientation.  This phenomenon was defined by <a href="#conk">Conklin  (1987</a>) as the tendency to lose the sense of location and direction in a non-linear environment, to 'get lost in hyperspace'.  There are two aspects to this problem,  these being the navigational problem and the content problem (<a href="#maye">Mayes <em>et al.</em>, 1990</a>).  The first refers to the difficulty in accessing required information, and the second addresses the problem of knowing what information is available.  These navigational difficulties tend to arise when learners are unable to match their task goals to the structure of information and activities offered by the system (<a href="#hamm2">Hammond, 1993</a>).  When the hypermedia system is large and its structure unfamiliar it becomes critical when the sheer number of alternative choices 
+make the appropriate selection uncertain (<a href="#jonew">Jones, 1987</a>).  As a direct consequence of this disorientation, learners get lost; they find it difficult to gain an overview of the subject material, and they have trouble finding specific information, even if they know that it is present.  Therefore, learners may fail to see how parts of the knowledge base are related and even miss large relevant sections entirely (<a href="#hamm1">Hammond, 1992</a>).</p>
+
+<p>When faced with any computer-mediated learning system, the learner has to manage the demands of 
+three types of complexity: managing himself in the complex learning environment, facing conflicts 
+with previously acquired intuitive models of the world, and adapting to the new approach to learning 
+which would be working in the content domain as provided by the system and trying to learn 
+simultaneously (<a href="#cunn">Cunningham <em>et al.</em>, 1993</a>).  This last type of complexity management is particularly difficult to handle when using hypermedia systems, due to their inherent navigational and browsing characteristics.  The system often becomes yet another source of complexity for the learner, thus reflecting the second major problem in hypermedia systems: cognitive overhead, which refers to the need of constantly being aware of the process to use the system in addition to the learning process in course.</p>
+
+<p>As a consequence of cognitive overhead, learners become uncertain of their learning objectives or how 
+to attain them.  Navigational concerns and clue searching become the primary activity and the learning 
+process is relegated to a secondary place.  Therefore, learners fail to engage with the learning 
+materials, and instead of trying to understand and think actively about the subject matter, they become 
+increasingly anxious about navigational and browsing issues.  The combination of these two problems 
+means that learners are liable to ramble through the hypermedia web in an instructionally inefficient 
+fashion, with choice motivated by momentary aspects of the interface that attract attention.</p>
+
+<p>Appropriate and careful analysis and design are the unique solution to minimise these problems.  On 
+the other hand, a poor or inadequate design will certainly increase the hypermedia’s inherent flaws 
+creating what <a href="#mart">Martin (1990)</a> ironically designates as hyperchaos.  There are two primordial deficiencies attributable to inferior design: obscure and overly complex structure and deficient human-computer interface.  Hypermedia is a web of information rather than a sequential and cohesive expository presentation.  Therefore, if the links, paths and guidance are ill-designed, navigation and browsing becomes very difficult and disorientation is dramatically increased.  Another of the 
+hypermedia lacunae is the omission of user interface specifications.  Consequently, lack of or poor 
+interface design will not help the learner in the choice of paths nor in the identification of the web 
+structure.  Thus, the cognitive overload of browsing the hypermedia web is increased.</p>
+
+<p>After such an extensive enumeration and description of the problems involving hypermedia usage, it 
+might seem that this information technology is an inappropriate support for learning systems.  Quite to 
+the contrary, hypermedia is a very useful medium for the development of educational software. </p>
+
+<p>The basic hypermedia philosophy, which supports its use for educational purposes, is based on the 
+belief that learners can forge their own paths through the richly interconnected information web in a 
+self-directed manner, assembling the subject matter materials in accordance with their educational 
+goals and their individual learning styles, rather than having slavishly to follow some form of linear 
+tutorial (<a href="#read">Reader and Hammond, 1994</a>).  However, and due to all the inherent problems illustrated above, pure hypermedia systems are poor platforms for the development of educational applications. </p>
+
+<p>Educational hypermedia needs to be empowered with guidance and navigational tools, that can be 
+tailored to specific learning situations by the course developer, by the tutor and by the learner.  If these requirements are taken into account in a systematic and conscious software engineering process, 
+hypermedia is certainly an excellent platform for the development of educational software.  These 
+educational requirements must arise from a well elaborated instructional design process, based on a 
+particular educational approach.  It is this approach that, together with a deep knowledge of the 
+technology being used, will enable the development of a theoretical model which will allow an 
+efficient application of the technology in specific learning settings.</p>
+
+<h3>Characteristics of academic learning </h3>
+
+<p>Like all other designers, hypermedia designers call on prior knowledge and experience when 
+developing their applications.  They call to mind previous solutions and strategies they have used, 
+have experienced, or have seen that fits the particular constraints of the current situation (<a href="#duff">Duffy and Jonassen, 1992</a>).  These previous experiences play a central role in specifying the structure, contents and instructional strategies.  Therefore, if the pedagogical component of the design is not consciously considered and planned, the designer will tend to incorporate in the application its own model of learning, which maybe not correct or adequate for the learning activity planned.  Furthermore, the lack of an overall pedagogical strategy implies a lack of a consistent and adequate educational approach throughout the hypermedia application.</p>
+
+<p>In fact, when producing any kind of learning materials, assumptions are made about the kind of 
+learning and the process of learning that it is hoped will take place (<a href="#jonea">Jones and Mercer, 1993</a>).  Hence, educational hypermedia applications will always incorporate some type of learning model, which may or may not have been consciously considered.  A crucial factor for the success of an educational application of hypermedia is that any assumptions that are made about the learner and the learning process when the learning goals are identified, should be incorporated into the instructional design process.  The design process is the consequence of the selection of an educational approach and the 
+development of a model to support it.   Therefore, an efficient hypermedia application can be 
+appropriately designed only with a clear sense of the theoretical foundations that underpin 
+assumptions about learning and cognition.  Design is the bridge between what is to be accomplished in 
+a particular learning setting and how it will be developed and implemented (<a href="#pfei2">Pfeiffer and Ballew, 1988b</a>).  Therefore, the theoretical foundations provide the means to choosing an appropriate educational approach.  The selection of an approach can be seen as a pre-design concern and is the result of answering basic questions such as: why  is the application being developed; what is the focus of the application; and who are the learners.</p>
+
+<p>In the present case, the model being developed aims to support academic learning in higher education.  
+Defining academic learning is not unproblematic: in general terms it can be seen as a series of 
+activities which promote acquisition of high level knowledge.  However, the acquisition of inert and 
+abstract concepts is of no use if the learner does not have the understanding needed to apply them in 
+appropriate settings (e.g., decontextualised definitions, algorithms and routines).  <a href="#laur">Laurillard (1993)</a> suggests that academic learning must:
+
+<blockquote>
+<ul>
+<li>be situated in the domain of the objective, the activities must match that domain;
+<li>contain both direct experience of the world, and the reflection on that experience that will produce the intended way of representing it.
+</ul>
+</blockquote>
+
+<h4>The learner</h4>
+
+<p>These concepts are considered external to the learner and received by her/him through a 
+process of communication which focuses on behaviour and its modifications, rather than on cognitive 
+or mental processes that facilitate learning (e.g.  constructing, reflecting or planning).  This view of 
+learning prevails even today in many universities and was developed and defended by the behaviourist 
+school of thought founded on the work of the American psychologist B. F. Skinner in the 1930’s.  
+Behaviourist theories of learning do not attempt to account for any mental process which occur in 
+learning, the emphasis being on what the learner does in response to the knowledge transferred to 
+her/him and passively accepted.  Consequently, this view of learning embodies a strongly 
+individualistic conception of learning, in the sense that the individual behaviour is modified due to 
+presentation of stimuli from the learning environment.  Behaviourism embodies a model of the learner 
+as a solitary striver for understanding (<a href="#jonea">Jones and Mercer, 1993</a>) and acquisition of knowledge as an abstract Platonic form (<a href="#laur">Laurillard, 1993</a>).</p>
+
+<p>Conversely, and according to the definition proposed, academic learning is assumed to be much more 
+than a mere process of passive reception and acquisition of knowledge.  The way learners handle 
+knowledge is what really concerns academics (<a href="#laur">Laurillard, 1993</a>).  Knowledge has a contextualised character, which means that it cannot be separated from the situations in which it is used.  When learning occurs in isolation it remains inert, that is, the learner has the information available in 
+memory, but never recognises when it is relevant (<a href="#cogn">Cognition and Technology Group at Vanderbuilt University, 1991</a>).  Acquisition of concepts is of no use if the learner cannot apply those concepts and transfer her/his knowledge across different settings.  Thus, academic learning involves the acquisition of high-level skills of critical thinking and problem solving in addition to the gathering of 
+facts/concepts. </p>
+
+<p>This broader view of learning is not a new concept.  At the same time as Skinner was proposing and 
+demonstrating his ideas, John Dewey was developing a very different philosophy of education, that is 
+now known as the constructivist approach.  Dewey described learning as an active individual process, 
+not something done to someone, but rather something that a person does (<a href="#kuhl">Kuhlthau, 1993</a>).  He coined the concept of 'learning by doing', where learning takes place within the context of a whole experience in which the learner is completely engaged, and results from the combination of acting and reflecting on the consequences (reflective experience and reflective thinking).  Therefore, learning is in general a continuous process of reflective experience in which a person is actively constructing her/his own view of the world.</p>
+
+<p>Modern constructivists believe that knowledge is personally constructed from internal representations by individuals who use their experiences as a foundation.  Knowledge is based upon individual constructions that are not tied to any external reality, but rather to the knower’s interactions with the external world (<a href="#jonas">Jonassen, 1990</a>).  Therefore, meaning is imposed on the world by the individual.  There are many ways to structure the world and there are many meanings or perspectives for any event or concept (<a href="#duff">Duffy and Jonassen, 1992</a>).  In other words, reality is to a degree what the individual conceives it to be (<a href="#jonas">Jonassen, 1990</a>).</p>
+
+<p>Meaning is hence seen as rooted in, and indexed by, experience (<a href="#brow">Brown <em>et al.</em>, 1989</a>).  Experience includes not only the physical context in which the learner acts, but also both the cognitive and physical tasks that the learner engages with while the experience is taking place (<a href="#hone">Honebein <em>et al.</em>, 1993</a>).  However, since knowledge is indexed to the experience from which it was acquired, the context that characterises it is a significant determinant of what is learned and how it is organised in memory.  In fact, as <a href="#grab">Grabinger and Dunlap (1995)</a> theorise, there are two kinds of links that need to be developed during the learning activity: internal and external associations.  Internal associations reflect the learner’s understanding of a concept, external associations refer to connections between the concept and context.  The usability of a constructed concept in the future will depend on these external associations.</p>
+
+<p>The fact that learners must acquire knowledge in ways that help them use it in similar situations in the 
+future has two major consequences:</p>
+
+<blockquote>
+<ul>
+<li>the learning activities must be authentic activities, which must be embedded in realistic and relevant contexts (situated learning);
+<li>learners must be provided with the opportunity to explore multiple perspectives on an issue, that is, one activity is not enough to acquire a comprehensive view of a particular concept.
+</ul>
+</blockquote>
+
+<p>Situated learning raises another important issue in constructivist learning, i.e., the way an individual 
+learns and the cognitive resources which are called upon depend on the nature of the learning situation 
+and previous learning activities (<a href="#hamm2">Hammond, 1993</a>).  Any learning activity in a particular domain is framed by its culture (<a href="#brow">Brown <em>et al.</em>, 1989</a>).  Consequently, meaning and purpose are socially constructed through negotiations among present and past members of that society.  In other words, learning takes place in a social context and conceptual growth comes from the sharing of perspectives and testing of ideas with others.  Learning, in the sense of reaching common understandings and shared meanings, results from social interaction and negotiation with peers and teachers (<a href="#grab">Grabinger and Dunlap, 1995</a>).</p>
+
+<p>The need for situated learning, social negotiation and multiple perspectives implies that a number of 
+different learning strategies must be adopted to assist the learner in the construction of knowledge.  
+The adoption of these different strategies creates learning environments that <a href="#grab">Grabinger and Dunlap, (1995)</a> term Rich Environments for Active Learning (REALs).  REALs promote learning within authentic contexts, and encourage the growth of learner responsibility, initiative, decision-making, intentional learning and ownership over the acquired knowledge.  Additionally, REALs should provide an atmosphere that encourages the formation of knowledge-building learning communities, which assist collaborative social negotiation of meanings and understandings among the members of the community (peers, tutors, subject matter experts).</p>
+
+<p>Academic learning is thus defined here as the process of constructing knowledge and the development 
+of reflexive awareness, where the individual is an active processor of information.  Learning occurs 
+through interaction with rich learning environments, and results from engaging in authentic activities, 
+and social interaction and negotiation.</p>
+
+<h3>The experiential learning approach</h3>
+
+<p>Having outlined these theoretical foundations for academic learning, the next step in the creation of a 
+model for using hypermedia is to adopt a framework that provides a means for applying these ideas in 
+practice.  </p>
+
+<p>There has been less research on student learning at university level than in other areas of education 
+(<a href="#laur">Laurillard, 1993</a>).  We must thus look to the field of Human Resource Development (HRD), i.e., business professional training, for a pragmatic and, at the same time more flexible framework for applying these theoretical foundations.  The experiential learning cycle supports ideas very close to 
+those of the constructivists,  and stems from the concepts of learning by doing first attributed to 
+Dewey (<a href="#kuhl">Kuhlthau, 1993</a>) and reflection and reflective practice postulated by <a href="#scho">Schön (1983)</a>.  The experiential learning approach aims to encourage learners to feel learning as well as to think it , to let them "try on" new behaviours and new emotional and cognitive responses (<a href="#pfei2">Pfeiffer and Ballew, 1988b</a>).
+</p>
+
+<p>Like the constructivists, <a href="#pfei1">Pfeiffer and Ballew (1988a)</a> state that experiential learning occurs when a person engages in some activity, looks back at the activity critically, abstracts some useful insight from the analysis, and puts the result to work.  Based on these assumptions, <a href="#kolb">Kolb <em>et al.</em> (1971)</a> proposed a four-step cycle of learning: Doing, Reflecting, Understanding and Applying.  After engaging in an activity, the learner should reflect on that experience, calling upon prior knowledge and experiences, understand the knowledge involved in the activity with the aid of conceptual and theoretical materials and finally apply it is seen as group activities where social negotiation of meaning and understanding has a primordial part.</p>
+
+<div align="center"><img height=282 width=238 src="model1.gif"></div>
+
+<p>Building on this model, <a href="#pfei1">Pfeiffer and Ballew (1988a)</a> proposed the more elaborate, five-stage cycle described in Figure 1.  The basic assumptions here are that the learner engages in authentic activities, from which meaning is discovered and validated through social negotiation with peers and facilitators.  In the first step of Experiencing  the learner engages in the activity (Doing).  In the second step, Publishing , the learner posts, reports and shares recorded reactions and observations made during the activity.  Next, in the third step, Processing , the learner examines and discusses the patterns and dynamics of the activity and then aims to extrapolate the experience from the learning setting to the outside world, Generalising.  Finally, the learner should Apply the learned concepts in actual situations in which s/he is involved, and eventually plan new Experiences.</p>
+
+<p><a href="#pfei1">Pfeiffer and Ballew (1988a)</a> consider a structured experience as the entire experience the learner engages with throughout the whole experiential learning cycle.  The learner carries out an activity that is designed to produce a certain type of knowledge acquisition (learning), announces her/his reactions, discusses what happened and what that means, draws conclusions and produces generalisations about the learning process that occurred and finally plans the application of that newly acquired knowledge.  <a href="#pfei2">Pfeiffer and Ballew (1988b)</a> consider a wide range of activities that may be used in structured activities such as experiential lectures, discussions, case studies, roleplaying, games, and simulations of real life situations.  However, if structured experiences are to be efficient, they must be embedded in REALs that support social negotiation of meaning, authentic contexts and a variety of other structured experiences which provide multi-perspectives on the concepts being studied.  </p>
+
+<p>In summary, it is suggested here that in order to assist the design of hypermedia applications we need 
+a theoretical model which represents both our approach to the learning process and our strategies for 
+making the best use of the technology.  The inherent problems of hypermedia are identified so that 
+they can be accounted for in the development of the model We then propose that the constructivist 
+approach provides an appropriate theoretical basis for dealing with academic learning requirements 
+and characteristics.  Finally, it is proposed that the experiential learning cycle is a suitable educational 
+framework for implementing the constructivist principles.  These considerations provide the basis for 
+the theoretical model that is proposed in the remainder of this paper.</p>
+
+<h2>A theoretical model for the production of educational hypermedia applications</h2>
+
+<h3>Hypermedia application definition and scope of the model</h3>
+
+<p>Hypertext has become very popular in recent years, and much depends on the exact definition of what 
+constitutes hypermedia (<a href="#niel">Nielsen, 1990</a>).  As a general definition, hypermedia systems are computer-based multimedia systems that provide interactive and link-based navigation and that allow the integration of various types of information in digital form.  Rather than a software system definition, 
+this is the implementation philosophy statement of the principles underpinning the type of system 
+implemented.   With this philosophy in view, hypermedia is well suited for educational applications 
+where the student is allowed freedom of action and encouraged to take the initiative.</p>
+
+<p>An educational hypermedia application is a software application specifically produced for a particular educational use and built using the hypermedia philosophy.  Such an application might be developed using an authoring tool, a programming language or a hypermedia development environment.  These specialised hypermedia applications are developed to resolve a particular educational purpose or 
+learning need.  They thus vary widely in nature, ranging from the traditional drill-and-practice 
+applications to museum information systems, and include hypertextbooks, which are certainly the 
+most popular of all the uses of hypermedia.   Such applications are intended to resolve a specific 
+learning need; they are limited to the solution of the problems arising from that need and use 
+hypermedia as the underlying philosophy.  This means that although they may be linked with other 
+hypermedia applications, other software applications, databases or even computer mediated 
+communications facilities, they have clearly established boundaries.  Such an application is not 
+hypermedia, i.e., it is not an unlimited networked system, linked by associative information paths 
+(<a href="#maur">Maurer, 1993</a>).  A hypermedia application is only a component of such a universe.  This narrowing of the concept of hypermedia application has several implications for the approach to modelling educational applications that is considered in this paper.</p>
+
+<p>The experiential learning approach proposes that knowledge is acquired through structured experience, i.e., resulting from the construction of meaning from experience in specific contexts.  This 
+construction results from two different types of interactivity in the learning process (<a href="#bate">Bates, 1991</a>): private and social interaction.  The first is an individual, private activity between the learner and the learning materials.  The second is a social activity between the learner and the social context of the experience, including tutor, peers and other subject-specialists.</p>
+
+<p>The narrow definition of a hypermedia application considered above is clearly well suited to 
+supporting individual interactivity.  However, it is also clear that there is little support for social 
+interaction in these kind of applications since it was assumed that computer-mediated communication 
+facilities would not be included as standard hypermedia features.  Cconsequently, and if the 
+hypermedia application is to be used to support the experiential learning cycle, it must be but one of 
+the educational components of a REAL that will support both types of interactivities and the whole 
+learning process.  Hypermedia applications aim, therefore, at supporting only some of the stages of the 
+experiential learning cycle, namely Experiencing and some steps of Publishing and Processing.  The 
+model presented in this paper has been developed with these considerations in mind.</p>
+
+<h3>Presentation of the model</h3>
+
+<p>As discussed above, there are two kinds of cognitive links that need to be developed during the 
+learning activity: internal associations, which reflect the learner’s understanding of a concept; and 
+external associations, which refer to connections between the concept and context.  It is this duality of 
+the learning process that suggested the architecture of the model proposed in <a href="#fig2">Figure 2</a>. </p>
+
+<p>Supporting the creation and strengthening of these internal associations is one of the most common 
+uses of hypermedia in the form of hypertextbooks.  In this case, hypermedia is used to enhance a 
+traditional textbook by means of a link structure that provides elaborations on key concepts.  However, 
+while useful, this approach does not capture the real power of hypermedia technology.</p>
+
+<p>In educational terms, the hypertextbook approach follows the traditional behaviourist school of 
+thought, where the textbook serves as an authority on a subject matter.  There are some benefits in this 
+approach, in that the information is organised into a coherent, story like presentation.  However, 
+learning becomes a passive process in which the learner simply receives and accepts the specified 
+questions or points of view (<a href="#cunn">Cunningham <em>et al.</em>, 1993</a>).  There is thus little need for the learner to think about the subject matter, to use the information to determine what is relevant, and to engage in any kind of reflexive activity.  According to <a href="#scar">Scardamalia and Bereiter (1991)</a>, the textbook tends to restrict the learner to thinking about lower-level, fact-oriented questions.  In conclusion, while the hypertextbook approach is a way of supporting internal associations, it results in poor and educationally ineffective applications to support the learning process as a whole.</p>
+
+<p>If we wish to support external links, we need to provide the learner with a set of situated and authentic learning activities containing multiple perspectives on the same concept or set of concepts.  We need an experiential learning space where the learner can engage in these activities, where this space must contain sub-spaces of related activities which reflect different perspectives of common knowledge.  In order to create an overview of all the knowledge contained in the space the learner must engage with at least some of the activities in each of the subspaces.  This is the philosophy behind the architecture of 
+the Experiential Learning Layer in the model proposed in <a href="#fig2">Figure 2</a>. </p>
+
+<p>Two types of pre-navigational activities are required for using these experiential learning spaces.  
+First, tutors (a better in word in this context would be facilitators) must deliver advance organisers that 
+provide appropriately relevant and inclusive introductory explanations on what is to be learned, how 
+the learning will take place, and how the experiential space should be used within the broader learning 
+setting.  Second, the learner has to plan, according to her/his own learning goals and needs and based 
+on those advance organisers, which subspaces to visit and which activities to engage in within each 
+subspace.  This planning activity will encourage learners to take responsibility for their own learning 
+and will create the sense of ownership over the acquired knowledge that will promote active 
+involvement in the learning process. </p>
+
+<p>Having planned her/his route, the learner enters the Experiential Learning Layer in Figure 2 via a 
+Login Point, where information referring to the individual may be recorded.  Immediately after this, 
+the learner enters a Visit Evaluation Point where an account of previous visits to the learning space is 
+stored and where relevant scaffolding to the current visit is given.  After this, the learner is free to 
+enter the subspaces s/he had previously planned to visit.  No navigational constraints are imposed or 
+direct hints given. </p>
+
+<p>When entering each Activity Subspace an optional Entry Reading is offered, which provides a brief 
+introduction to the concepts considered in that subspace.  Once again, the learner is free to choose any 
+of the Experiential Activities offered in the subspace according to her/his previous plan.  Experiential 
+Activities are learning activities that promote experiential learning as described above, ranging from 
+case-study presentations to simulations and games.  Navigation is now constrained by the subspace 
+boundaries but, once again, no direct hints are offered.  Each experiential activity includes a final 
+assessment of the learner’s knowledge according to the perspective adopted and comparing her/his 
+performance with that of an expert.  At the exit of each subspace a Subspace Evaluation Point will 
+provide the learner with an assessment of her/his visit to that subspace.</p>
+
+<p>There is no restriction on the number of subspaces visited and, since the student plan is never 
+recorded, deviations from the initial plan are not checked.  It is the responsibility of the learner to act 
+according to her/his learning objectives and needs, which may change during the learning activity.  On 
+exiting the experiential learning space, the learner passes through a Current Visit Evaluation Point, 
+where the learner is provided with feedback on the current visit to the space and the visit is recorded.</p>
+
+<p>Instructional applications must provide authentic contexts and assistance that will aid the individual in 
+making sense of the environment as it is encountered (<a href="#duff">Duffy and Jonassen, 1992</a>).  The Experiential Learning Layer of the model in <a href="#fig2">Figure 2</a> aims at providing authentic contexts and feedback on the activities performed within those contexts.  However, this layer does not provide conceptual assistance on the concepts and knowledge that are handled in the experiences.</p>
+
+<p>In fact, this assistance is of the utmost importance in academic learning.  The key issue in experiential 
+learning is to extrapolate the experience from the learning setting to real world situations.  This 
+inference is made during the structured experience and starts to take form in the Processing stage of 
+the experiential learning cycle.  It is important that by then, the learner has an accurate understanding 
+of both the activity s/he has engaged with and the concepts that support it.  These concepts may be 
+new ones arising from the experience or may be assumed to have been acquired in previous learning 
+activities.  In either case, a poor understanding of these concepts will hinder the entire learning 
+activity.  This could, of course, be corrected during the Publishing and Generalising phases through 
+negotiation with those of the learner’s peers who are involved in the same activity.  However, and as 
+discussed above, the learner could leave the hypermedia application with a poor understanding of core 
+concepts or, in a worst-case scenario, be unable to finish the learning activities due to lack of 
+understanding of these concepts.</p>
+
+<p>Some degree of support is thus needed, since the learning activity will degenerate into a meaningless 
+and non-constructive activity without appropriate conceptual scaffolding.  In fact, while an individual 
+enters a learning situation with a plan, the critical aspect is the ability to respond to the situational 
+constraints (<a href="#duff">Duffy and Jonassen, 1992</a>).  The hypermedia application must thus provide not only the contexts but also assistance in understanding the subject matter.  In the model of Figure 2, this assistance is provided by the Subject Matter Conceptual Layer.  The assistance is provided in an explicit form and in a hypertextbook format.  The hypertextbook uses the cross-linked hierarchical structure proposed by<a href="#mart"> Martin (1990)</a>.  The hypertextbook is divided into chunks of information, called Concept Units.  Related chunks of information are organised into Concept Envelopes.  One concept unit may be linked to as many envelopes as needed.  Related concept envelopes are organised into higher rank envelopes.  One envelope may be linked to as many other envelopes as needed.  This network forms a cross-linked hierarchical structure.</p>
+
+<div align="center"><a name="fig2"></a><img src="exlmod2.gif"></div>
+
+ <p>The Subject Matter Conceptual layer can be entered from any Experiential Activity whenever the need for support on the subject matter arises.  When entering this layer, the learner faces again the 
+traditional problems of hypertextbooks that have been discussed above.  Once again the learner meets 
+with disorientation and cognitive overload problems which may result in haphazard browsing.  To 
+avoid this problem, <a href="#hamm2">Hammond (1993)</a> suggests that explicit direction and control is needed to restrict the learner to realistic goals and to a sensible part of domain knowledge.  With these considerations in view, the model in Figure 2 recommends that whenever a need for a clarification on a specific concept arises during Experiential Activity a limited view, or window, is opened on the Subject Matter Conceptual Layer.  Here the learner can freely navigate until all problems on that particular concept are resolved.  If the learner tries to go beyond the boundaries of the window warning messages are issued, reminding the learner that the scope of the initial problem is being exceeded, advising the learner to return to the initial learning activity, or providing ther direction/assistance.</p>
+
+<p>The reason for opening a window over a set of related envelopes, instead of just linking to a single 
+concept, lies in the text fragmentation characteristics of hypermedia.  Unlike traditional textbooks, the 
+text in hypertextbooks is non-linear and fragmented in chunks of information.  This fragmentation 
+characteristic is likely to make it difficult for the learner to perceive the author’s intended argument 
+structure if a certain ordering of concepts is not imposed (<a href="#whal">Whalley, 1993</a>).  The Subject Matter Conceptual Layer can alternatively be entered via an Entry Node.  In this case, navigation in the hypertextbook is absolutely free and no navigation control or advice mechanisms are available.  Using the conceptual layer in this way is not recommended; it was only considered to cover the needs of highly holistic learners who might feel inhibited from entering an experimental activity without at least some overview on the subject matter.</p>
+
+<p>The model in Figure 2 is called the Experiential Dual Layer Model (EDLM), illustrating the inherent 
+duality of the learning process.  The Experiential Learning Layer aims at supporting situated 
+experiences and reinforcing connections between concept and context, and the Subject Matter 
+Conceptual Layer aims at strengthening learners’ understanding of the concepts.</p>
+
+<h2>Conclusions and future work</h2>
+
+<p>A sound theoretical foundation is necessary for developing effective practice.  It offers an articulation of underlying complexity that can be understood, discussed and put into practice (<a href="#kuhl">Kuhlthau, 1993</a>).  The EDLM model aims at providing this articulation for the design and development of hypermedia applications using a constructivist approach.</p>
+
+<p>The EDLM model is a theoretical model.  The next step in the research project is to design, implement 
+and evaluate the EDLM model in practice.  It is assumed that applications designed with the EDLM 
+must be embedded in a REAL, and the design of the application must hence be preceded by a 
+constructivist instructional design of the whole REAL.  The specifications for the design of the EDLM 
+application should arise from that instructional design.  Furthermore the testing and evaluation of the 
+application can only be done when embedded in the REAL.</p>
+
+<p>It would be of great interest to adapt the EDLM model to other types of learning in addition to 
+academic learning, such as professional training, school learning or even child education.  For 
+instance, it is obvious that, in this last case, the Subject Matter Conceptual Layer would be greatly 
+simplified if not eliminated.  One other area of interest would be the expansion of the EDLM model to 
+include embedded computer mediated communication (CMC) facilities.  For example, this could be 
+done using the World-Wide Web, if this technology evolves to become a real hypermedia 
+environment.  The inclusion of CMC would allow both synchronous and asynchronous social 
+negotiation from within the actual EDLM application.</p>
+
+<h2>References</h2>
+
+<ul>
+<li><a name="bate">Bates, A. </a>(1991).  Third generation distance education: the challenge of new technology. Research in Distance Education, 3(2), 10-15.</li>
+<li><a name="brow">Brown J., </a>Collins, A. and Duguid, P. (1989).  Situated cognition and the culture of learning. Educational Researcher, 18, 32-42.</li>
+<li><a name="cogn">Cognition</a> and Technology Group at Vanderbuilt University (1991).  Technology and the design of generative learning environments.  In: Duffy, T. and Jonassen, D. (editors) Constructivism and the Technology of Instruction: A Conversation.  New Jersey: Lawrence Erlbaum Associates, pp. 77-89.</li>
+<li><a name="conk">Conklin, J. </a>(1987).  Hypertext: an introduction and a survey.  Computer, 20(9), 17-41.</li>
+<li><a name="cunn">Cunningham, D., </a>Duffy, T. and Knuth, R. (1993).  The textbook of the future.  In: McKnight, C., Dillon, A. and Richardson, J. (editors) Hypertext: a Psychological Perspective.  London: Ellis Horwood, pp. 17-49.</li>
+<li><a name="duff">Duffy, T. </a>and Jonassen, D. (1992).  Constructivism: new implications for instructional technology.  In: Duffy, T. and Jonassen, D. (editors) Constructivism and the Technology of Instruction: A Conversation.  New Jersey, USA: Lawrence Erlbaum Associates, Inc., pp. 1-16.</li>
+<li><a name="grab">Grabinger, R.</a> and Dunlap, C. (1995).  Rich environments for active learning. Association for Learning Technology Journal, 3(2), 5-34</li>
+<li><a name="hamm1">Hammond, N.</a> (1992).  Tailoring hypertext for the learner.  In: Kommers, P., Jonassen, D. and Mayes, J. (editors)   Cognitive Tools for Learning.  Berlin: Springer Verlag, pp. 149-160.</li>
+<li><a name="hamm2">Hammond, N. </a>(1993).  Learning with hypertext: problems, principles and prospects. In: McKnight, C., Dillon, A. and Richardson, J. (editors) Hypertext: a Psychological Perspective.  London: Ellis Horwood, pp. 51-69.</li>
+<li><a name="hone">Honebein, P.,</a> Duffy, T. and Fishman, B. (1993).  Constructivism and the design of learning environments: context and authentic activities for learning.  In: Duffy, T., Lowyck, J. and Jonassen, D. (editors) Designing Environments for Constructive Learning.  Heidelberg: Springer Verlag, pp. 87-108.</li>
+<li><a name="jonas">Jonassen, D.</a> (1990).  Thinking technology.  Educational Technology, September 1990, 32-34.</li>
+<li><a name="jonea">Jones, A. </a>and Mercer, N. (1993).  Theories of learning and information technology.  In: Scrimshaw, P. (editor) Language, Classroom and Computers.  London: Routledge, pp. 11-26.</li>
+<li><a name="jonew">Jones, W.</a> (1987).  How to distinguish the hyper from the hype in non-linear text ?.  In: Bullinger, H. and Shackel, B. (editors) Human-Computer Interaction- Interact’87, pp. 1107-113.</li>
+<li><a name="kuhl">Kuhlthau, C.</a> (1993).  Seeking Meaning: A Process Approach to Library and Information Services.  New Jersey, USA: Ablex Publishing Corporation.</li>
+<li><a name="kolb">Kolb, D., </a>Rubin, M. and McIntyre, J. (1971).  Organizational Psychology - An experimental Approach.  Englewood Cliffs: Prentice Hall.</li>
+<li><a name="madd">Maddux, C.D.,</a> Johnson, L. and Harlow, S. (1994).  Educational computing: avoiding the Everest Syndrome in the 21st century.  Proceedings of Sate 94 - Fifth Annual Conference of the Society for Technology and Teacher Education, 371-374.</li>
+<li><a name="maur">Maurer, H. (</a>1993).  An overview of hypermedia and multimedia systems.  In: Thalmann, N. and Thalmann, D. (editors) Virtual Worlds and Multimedia.  Chichester, UK: John Wiley, pp. 1-12.</li>
+<li><a name="maye">Mayes, T.,</a> Kibby, M. and Anderson, T. (1990).  Signposts for conceptual orientation: some requirements for learning from hypertext.  In: McAleese, R. and Green, C. (editors) Hypertext: State of the Art.  Oxford: Intellect Ltd., pp. 121-129</li>
+<li><a name="niel">Nielsen, J.</a>(1990).  Hypertext and Hypermedia.  San Diego: Academic Press.</li>
+<li><a name="laur">Laurillard, D.</a> (1993).  Rethinking University Teaching: a Framework for the Effective Use of Educational Technology.  New York: Routledge.</li>
+<li><a name="pape">Papert, S.</a> (1993).  Mindstorms: Children, Computers, and Powerful Ideas, 2nd edition.  New York: Harper Collins.</li>
+<li><a name="pfei1">Pfeiffer, J.</a> and Ballew, A. (1988a).  Using Structured Experiences in Human Resource Development. San Diego: University Associates.</li>
+<li><a name="pfei2">Pfeiffer, J</a>. and Ballew, A. (1988b).  Design Skills in Human Resource Development.  San Diego: University Associates.</li>
+<li><a name="read">Reader, W.</a> and Hammond, N (1994).  Computer-based tools to support learning from hypertext: concept mapping tools and beyond.  Computers and Education, 22, 99-106.</li>
+<li><a name="scho">Schön, D.</a> (1983).  The Reflective Practitioner: How Professionals Think in Action.  New York: Basic Books.</li>
+<li><a name="semp">Semper, R</a>. (1990).  HyperCard and education: reflections on the HyperBoom.  In: Ambron, S. and Hooper, K. (editors) Learning with Interactive Multimedia: Developing and Using Multimedia Tools in Education.  Washington: Microsoft Press, pp. 51-68.</li>
+<li><a name="whal">Whalley, P.</a> (1993).  An alternative rhetoric for hypertext.  In: McKnight, C., Dillon, A. and Richardson (editors) Hypertext: a Psychological Perspective.  London: Ellis Horwood, pp. 7-18.</li>
+</ul>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+
+<p style="text-align : left; color : black;">Nunes, Jos&eacute; Miguel Baptista &amp; Fowell, Susan P.   (1996) &nbsp; &quot;Hypermedia as an experiential learning tool: a theoretical model&quot;. &nbsp;Information Research, <strong>2</strong>(1)  Available at: http://InformationR.net/ir/2-1/paper12.html</p>
+
+<p style="text-align : center">&copy; the authors, 1996. </p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:-VoOpiYo1bEJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres21.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper12" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 13 December 2002</h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>	
+<hr color=#ff00ff size=3>		
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/2-1/paper12.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:00 GMT -->
+</html>

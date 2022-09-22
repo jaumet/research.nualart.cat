@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/9-4/paper194.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:41 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../IRstyle.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+<title>Diseño y desarrollo de una plataforma digital de apoyo a la docencia y a la investigación en Archivos Electrónicos: un portal tem&aacute;tico  Thematic Web portals, Web portals, Portals, Electronic archives, Electronic records</title>
+<meta name="dc.title" content="Diseño y desarrollo de una plataforma digital de apoyo a la docencia y a la investigación en Archivos Electrónicos: un portal tem&aacute;tico" />
+<meta name="dc.creator" content="Antonio &Aacute;ngel Ruiz Rodr&iacute;guez y David Gómez Dom&iacute;nguez" />
+<meta name="dc.<span>description</span>" <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> content="The present contribution is aimed at <span>explaining</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in detail a thematic Web portal specialized in digital <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and their impact on the information society from the archives and records management <span>perspective</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> It has been produced by the Faculty of Library Science and Documentation of the University of Granada. This web portal has been developed as the basis of a digital platform for <span>practical</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>exercises in subjects linked to this area which form part of a Masters <span>degree</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in Documentation. Thus, the development of  practice will be enhanced and <span>supported</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>with a wide <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of relevant information resources on this subject. As the  portal will support both <span>teaching</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and research, it contributes to the <span>principal</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>objectives of the university." />
+<meta name="dc.subject.keywords" content="Thematic Web portals, Web portals, Portals, Electronic archives, Electronic records" />
+<meta name="dc.subject" content="Web portal development" />
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.relation.IsPartOf" content="http://informationr.net/9-4/infres94.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+
+<style type="text/css">
+#button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+#button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+#button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+#button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+</style>
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+</style>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body  bgcolor="#ffffff">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"> <img src="../mini_logo2.gif" width="336" height="45" alt="header" /><br />
+Vol. 9  No. 4, July 2004<br /><br /><div id="button">
+<ul>
+	<li><a href="infres94.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+
+</ul>
+</div></td></tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+<hr size="3" style="color:#000080 ;" />
+
+<h1 align="center">Dise&ntilde;o y desarrollo de una plataforma digital de apoyo a la docencia y a la investigaci&oacute;n en Archivos Electr&oacute;nicos: un portal tem&aacute;tico</h1>
+<br />
+<h4 align="center"><a href="mailto: aangel@ugr.es">Antonio &Aacute;ngel Ruiz Rodr&iacute;guez</a> and 
+<a href="mailto: dgomez@fedro.ugr.es">David G&oacute;mez Dom&iacute;nguez</a><br />Facultad de Biblioteconom&iacute;a y Documentaci&oacute;n. <br />Univer0ad de Granada, Granada, Spain</h4>
+<br />
+
+
+<div align="center">
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: Blue;" onclick="doChangeFont()" /></div>
+<hr style="COLOR: #000080" size="1" />
+<div align="center"><strong>Resumen</strong></div>
+
+<blockquote>La presente aportaci&oacute;n pretende explicar, de forma detallada, un portal tem&aacute;tico (http://record.ugr.es), especializado en el tema del documento electr&oacute;nico y su impacto en la sociedad de la informaci&oacute;n desde la perspectiva de los sistemas de gesti&oacute;n de archivos y documentos, realizado desde la Facultad de Biblioteconom&iacute;a y Documentaci&oacute;n de la Univer0ad de Granada. 
+Este portal se ha desarrollado con la intenci&oacute;n de convertirse en la base para el desarrollo de una plataforma digital de pr&aacute;cticas para las asignaturas de la licenciatura de Documentaci&oacute;n relacionadas con la materia. El desarrollo de las pr&aacute;cticas por tanto se ver&aacute; beneficiado y apoyado por un amplio listado de recursos informativos pertinentes con el tema. Al ser &eacute;ste, un portal de gran apoyo para la docencia e investigaci&oacute;n, se conjugan por tanto los dos objetivos perseguidos desde la univer0ad.</blockquote>
+<div align=center><A href="#abstract">Abstract in English</A></div>
+<hr style="COLOR: #000080" size="1" />
+<br />
+
+<h2>Introducci&oacute;n</h2>
+
+<p>En los &uacute;ltimos quince a&ntilde;os, se han realizado multitud de estudios (<a href="#bearman95a">Bearman, 1995a</a>, <a href="#bearman95b">Bearman, 1995b</a>, <a href="#guercio">Guercio, 2001</a>, <a href="#duranti">Duranti, 2001</a>, <a href="#cook">Cook, 2001</a>, <a href="#serra">Serra, 2001</a>, <a href="#kent">Kent, 2002</a> y <a href="#tough">Tough y Moss, 2003</a> - entre otros) y proyectos (<a href="#indiana">Indiana University, 2002</a>, <a href="http://www.interpares.org/">InterPARES Project, 1999-2006</a>, <a href="http://www.euan.org/">Euan Project, 2000</a> y <a href="http://www.malvine.org/">MALVINE, 1998 - </a> entre otros muchos), desde distintos &aacute;mbitos, tendentes a clarificar aspectos tanto conceptuales como metodol&oacute;gicos acerca de los documentos electr&oacute;nicos.
+</p>
+
+<p>Todo esto ha tenido tambi&eacute;n su reflejo en la adaptaci&oacute;n que han sufrido distintas asignaturas de la Diplomatura y Licenciatura de Biblioteconom&iacute;a y Documentaci&oacute;n, nos estamos refiriendo sobre todo a las asignaturas relacionadas con los archivos, la conservaci&oacute;n y la gesti&oacute;n de documentos. Asignaturas que nos competen directamente a los miembros de este portal.</p>
+
+<p>La irrupci&oacute;n de este tipo de documentos en el mundo de la informaci&oacute;n, m&aacute;s concretamente en el campo de los sistemas de gesti&oacute;n de documentos, ha supuesto un gran reto para la sociedad.
+</p>
+
+<p>Se trata de saber conjugar la posibilidades y ventajas que permite la gesti&oacute;n electr&oacute;nica con la garant&iacute;a de asegurar la autenticidad y validez jur&iacute;dica de la misma.</p>
+
+<p>La comunidad cient&iacute;fica internacional est&aacute; avanzando a pasos agigantados en el estudio de esta problem&aacute;tica (prueba de ello es el DLM Forum - Foro Europeo de Documento Electr&oacute;nico) (<a href="#murphy">Murphy, 2002</a>, <a href="#brubach">Brübach, 2002</a> y <a href="#fresko">Fresko, 2002</a>). Es por esto, por lo que un "Portal" especializado en documento electr&oacute;nico y su impacto en los sistemas de gesti&oacute;n, constituye una plataforma ideal para recoger de forma organizada y distribuir de manera actualizada todos los avances cient&iacute;ficos del momento.</p>
+
+<p>De esta manera se puede convertir en punto de referencia y en base te&oacute;rica - pr&aacute;ctica para la investigaci&oacute;n y la innovaci&oacute;n educativa.</p>
+
+<p>Entendemos que la innovaci&oacute;n educativa pasa por dos elementos fundamentales:</p>
+
+<ul><li>La adaptaci&oacute;n de los programas a los avances tecnol&oacute;gicos.</li>
+<li>La homologaci&oacute;n de t&iacute;tulos.</li></ul>
+
+<p>El primer paso requiere un avance r&aacute;pido en la evoluci&oacute;n de los programas que puede ocasionar la dispersi&oacute;n de materias que hace muy poco tiempo eran id&eacute;nticas.
+</p>
+
+<p>Con0eramos adecuado que los profesores que imparten estas materias est&eacute;n informados y puedan intercambiar criterios en un foro com&uacute;n como es el portal. Por otra parte, es fundamental tender a la uni&oacute;n de materias y programas en el marco europeo facilitando as&iacute; la homologaci&oacute;n de t&iacute;tulos representativos.</p>
+
+<p>Tambi&eacute;n, e igualmente importante, es la utilizaci&oacute;n del portal como plataforma de pr&aacute;cticas para las asignaturas relacionadas con la materia de la que versa el mismo. De esta forma conseguimos el doble objetivo que persigue la univer0ad: docencia e investigaci&oacute;n.</p>
+
+<p>Entendemos que sobre archivos y documento electr&oacute;nico es el momento adecuado de intercambiar ideas y proyectos educativos que nos puedan enriquecer a todos.</p>
+
+<p>Por tanto, y a modo de resumen, el portal se va a erigir como plataforma ideal para:</p>
+
+<ul><li>para recoger de forma organizada y distribuir de manera actualizada todos los avances cient&iacute;ficos del momento.</li>
+<li>para desarrollar una serie de pr&aacute;cticas sobre esta tem&aacute;tica encuadradas en las distintas asignaturas que se ven vinculadas con el tema en los estudios de Biblioteconom&iacute;a y Documentaci&oacute;n en nuestro pa&iacute;s o de Ciencias de la Informaci&oacute;n Cient&iacute;fica , Archiv&iacute;stica o cualquier titulaci&oacute;n que comparta contenidos fuera de nuestras fronteras.</li>
+<li>para homologar estudios. Entendemos que debemos desarrollar esfuerzos para homologar titulaciones en el marco europeo; haciendo m&aacute;s f&aacute;cil el desarrollo curricular de nuestros alumnos.</li>
+<li>para compartir contenidos. Una vez desarrollados los presupuestos te&oacute;ricos es el momento de dar un paso m&aacute;s y posibilitar de una forma pr&aacute;ctica que el contenido de las materias no solo sea similar, sino que en una alta proporci&oacute;n sea el mismo, una vez contrastado, evaluado y acordado.</li></ul>
+
+<p>Si profundizamos un poco m&aacute;s en los objetivos perseguidos y que nos han llevado a dise&ntilde;ar y desarrollar este portal, podemos englobarlos fundamentalmente en los siguientes:</p>
+
+<ul><li><b><i>Recopilar de forma selectiva todos los recursos informativos - cient&iacute;ficos de calidad que versen sobre este tema y que fluyan por la red Internet.</i></b></li>
+
+<li><b><i>Apoyar a la docencia.</i></b></li></ul>
+
+<p>El portal puede ser utilizado como apoyo a la docencia bien mediante la utilizaci&oacute;n del material bibliogr&aacute;fico recogido en el mismo, bien mediante la realizaci&oacute;n de una serie de pr&aacute;cticas de archivos electr&oacute;nicos que se est&aacute;n llevando a cabo. </p>
+
+<p>Por tanto, este portal se va a erigir como una plataforma en la docencia que se acerque a la demanda laboral ajustando los contenidos al perfil profesional de la titulaci&oacute;n.</p>
+
+<p>De cada asignatura que forme parte dle portal se virtualizando tambi&eacute;n su material te&oacute;rico para que as&iacute; quede todo a disposici&oacute;n de los alumnos.</p>
+
+<p>Adem&aacute;s, se amplia el uso del mismo a otras univer0ades tanto nacionales como internacionales. Quiere decir esto que mediante acuerdos con las mismas, el portal se ir&aacute; enriqueciendo con pr&aacute;cticas de estas univer0ades. As&iacute;, los alumnos de todas &eacute;stas, podr&aacute;n acceder a una amplia oferta de proyectos pr&aacute;cticos y materiales te&oacute;ricos que enriquecer&aacute; su formaci&oacute;n.</p>
+
+<ul><li><b><i>Apoyar a la investigaci&oacute;n.</i></b></li></ul>
+
+<p>Los recursos informativos recopilados en el portal constituyen una base te&oacute;rico - pr&aacute;ctica que sirve como punto de partida para el desarrollo de futuras investigaciones.</p>
+
+<p>Este ser&aacute; un portal con un material muy activo, lo que dar&aacute; lugar al desarrollo de dos tipos de investigaciones; las investigaciones que analizan el estado de la cuesti&oacute;n sobre un tema concreto y las que trabajan con aportaciones experimentales.</p>
+
+<p>Tambi&eacute;n ser&aacute; especialmenete &uacute;til para la comunidad cient&iacute;fica el foro de debate que presentamos para discutir sobre temas candentes del momento. Los temas del mismo ir&aacute;n rotando conforme las nece0ades cient&iacute;ficas del momento vaya requiriendo.</p>
+
+<ul>
+<li><b><i>Presentar de forma totalmente actualizada los movimientos cient&iacute;ficos nacionales e internacionales en torno a la tem&aacute;tica tratada.</i></b></li>
+</ul>
+
+<p>Debido a la rapidez con las que aparecen publicaciones en este tema, vinculado directamente con las tecnolog&iacute;as, uno de los principales objetivos lo constituye la alerta informativa. Quiere decir esto que el portal estar&aacute; en continua actualizaci&oacute;n, alertando a la comunidad cient&iacute;fica a cerca de la aparici&oacute;n de nuevas investigaciones tan r&aacute;pido como sea posible.</p>
+
+<h2>Portal de Archivos Electr&oacute;nicos</h2>
+
+<p>Este portal, traducido a tres idiomas oficiales de la UE (espa&ntilde;ol, ingl&eacute;s y franc&eacute;s) es el resultado de tres proyectos concedidos por la Univer0ad de Granada. En primer lugar, uno de innovaci&oacute;n docente concedido por el Vicerrectorado de Planificaci&oacute;n, Calidad y Evaluaci&oacute;n Docente titulado &quot;Dise&ntilde;o y desarrollo de una plataforma digital de apoyo a la docencia sobre documento electr&oacute;nico&quot; en segundo lugar, el concedido por el Vicerrectorado de Investigaci&oacute;n titulado &quot;Difusi&oacute;n de recursos sobre documento electr&oacute;nico en archivos: dise&ntilde;o y desarrollo de un portal tem&aacute;tico&quot;; y por &uacute;ltimo, un proyecto que se desarrollar&aacute; durante el presente a&ntilde;o con el t&iacute;tulo &quot;Metodolog&iacute;a para la homologaci&oacute;n de t&iacute;tulos europeos en materia de Archivos y Documentos Electr&oacute;nicos&quot; donde se realizar&aacute;n propuestas concre!
+ tas para virtualizar la ense&ntilde;anza compartiendo contenidos. 
+</p>
+
+<p>La herramienta que presentamos cuenta con tres partes claramente identificadas que iremos comentando una a una a lo largo de toda la contribuci&oacute;n:
+</p>
+
+<ol><li>Informaci&oacute;n</li>
+<li>Listado de recursos</li>
+<li>Asignaturas</li></ol>
+
+<h3>Informaci&oacute;n</h3>
+
+<p>Este primer apartado no deja de ser un aspecto meramente informativo. Aqu&iacute; podemos leer fundamentalmente los objetivos que perseguimos con el desarrollo del portal, la estructura del mismo y las personas que han participado en su desarrollo con informaci&oacute;n indicativa de su posici&oacute;n, lugar de trabajo, l&iacute;neas de investigaci&oacute;n e informaci&oacute;n de contacto.
+</p>
+
+<h3>Listado de recursos</h3>
+
+<p>Esta parte constituye la primera fase a la que nos enfrentamos cuando comenzamos a trabajar en el tema. 
+</p>
+
+<p>En un principio, pretend&iacute;amos abarcar recursos informativos que fluyen por la red relativos a cualquier tem&aacute;tica relacionada con el tratamiento del documento electr&oacute;nico de archivo. Para ello establecimos, mediante un procedimiento cient&iacute;fico, las tem&aacute;ticas m&aacute;s importantes y las m&aacute;s activas en el debate cient&iacute;fico <span>actual</span>. <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>
+</p>
+
+<p>Pronto nos dimos cuenta de lo inabarcable que resultaba una b&uacute;squeda tan amplia, tanto por la cantidad de recursos que se iban localizando como por la brevedad de los plazos que nos permit&iacute;an los distintos proyectos. As&iacute;, decidimos acotar la b&uacute;squeda y centrarnos s&oacute;lo en los recursos relacionados con la conservaci&oacute;n del documento electr&oacute;nico y los sistemas de gesti&oacute;n de documentos electr&oacute;nicos. No obstante, este listado de recursos se ir&aacute; ampliando poco a poco hasta abarcar todas las tem&aacute;ticas que desde un principio ten&iacute;amos en mente.
+</p>
+
+<p>Previo a la realizaci&oacute;n del barrido de informaci&oacute;n en Internet, desarrollamos una base de datos bibliogr&aacute;fica en Procite<i> (ProCite es un programa de gesti&oacute;n bibliogr&aacute;fica, &uacute;til para organizar referencias y crear bibliograf&iacute;as autom&aacute;ticamente desde un procesador de textos. Permite construir bases de datos con las referencias bibliogr&aacute;ficas que se obtienen de las b&uacute;squedas realizadas en cualquier soporte, desde <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>hasta bases de datos Online)</i>, con una plantilla com&uacute;n donde introducir todos los recursos localizados de forma normalizada. Esta base de datos posteriormente llenar&iacute;a de contenidos las distintas categor&iacute;as de recursos que establecimos bajo consenso.
+</p>
+
+<p>Por tanto, como podemos deducir, los recursos han 0o organizados en distintas categor&iacute;as generales:
+</p>
+
+<ul><li><b>Art&iacute;culos:</b> se recogen enlaces a art&iacute;culos electr&oacute;nicos que versen de las materias que comentamos anteriormente. Se trata de una de las categor&iacute;as m&aacute; simportantes desde el punto de vista cient&iacute;fico junto con la de "Proyectos".</li>
+
+<li><b>Autores:</b> se trata de enlaces a p&aacute;ginas web personales de los principales autores que investigan sobre la tem&aacute;tica del portal.</li>
+
+<li><b>Formaci&oacute;n:</b> instituciones de ense&ntilde;anza que imparten formaci&oacute;n espec&iacute;fica de archivos electr&oacute;nicos.</li>
+
+<li><b>Listas de correo:</b> enlaces a listas de correo especializadas en estos temas.</li>
+
+<li><b>Listas de recursos:</b> enlaces a listados de recursos realizados en otros sitios web.</li>
+
+<li><b>Manuales:</b> enlaces a manuales y gu&iacute;as electr&oacute;nicas relacionadas con la gesti&oacute;n del documento electr&oacute;nico.</li>
+
+<li><b>Normas y recomendaciones:</b> se recogen enlaces a normas, recomendaciones, pautas, etc. relacionadas con cualquier &aacute;mbito de la gesti&oacute;n de documentos electr&oacute;nicos.</li>
+
+<li><b>Noticias:</b> enlaces p&aacute;ginas web donde podemos encontrar alguna secci&oacute;n de noticias interesantes sobre la tem&aacute;tica tratada en el portal.</li>
+
+<li><b>Organizaciones:</b> enlaces a los sitios web oficiales de organizaciones relacionadas con la gesti&oacute;n de la informaci&oacute;n y documentaci&oacute;n electr&oacute;nica.</li>
+<li><b>Proyectos:</b> enlaces a las p&aacute;ginas web principales de los proyectos que se est&aacute;n llevando a cabo en el &aacute;mbito de los sistemas de gesti&oacute;n de documentos electr&oacute;nicos.</li>
+<li><b>Revistas electr&oacute;nicas:</b> enlaces a la principales revistas electr&oacute;nicas especializadas en este &aacute;mbito.</li>
+<li><b>Software:</b> enlaces a las p&aacute;ginas web de empresas que comercializan <span>software</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>de gesti&oacute;n de documentos electr&oacute;nicos.</li></ul>
+<p>Cada uno de los recursos albergados en estos marcos contienen la misma informaci&oacute;n, excepto las p&aacute;ginas personales de autores. En este caso, recogemos el lugar de trabajo de los mismos, la direcci&oacute;n de su p&aacute;gina web y su direcci&oacute;n de correo electr&oacute;nico.
+</p>
+
+<p>Un dato a destacar es la inclusi&oacute;n en todos los recursos de un breve resumen del mismo. Este dato aporta un valor a&ntilde;adido al listado dado que no hace falta que acudamos al recurso para saber si nos interesa o no.
+</p>
+
+<p>Tambi&eacute;n recogemos la fecha en la que el recurso fue consultado; informaci&oacute;n tambi&eacute;n importante si pensamos en la rapidez con la que los recursos bien desaparecen bien cambian de direcci&oacute;n.</p>
+
+<h3>Asignaturas</h3>
+
+<p>Estamos ante el apartado m&aacute;s importante desde el punto de vista de la innovaci&oacute;n docente. Actualmente est&aacute; compuesto por ocho asignaturas de la Diplomatura de Biblioteconom&iacute;a y Documentaci&oacute;n y la Licenciatura en Documentaci&oacute;n. Nos referimos a:</p>
+
+<ul>
+<li>Gesti&oacute;n de la informaci&oacute;n en la empresa (archivos de empresa).</li>
+<li>Archiv&iacute;stica.</li>
+<li>Archivos electr&oacute;nicos: sistemas y pr&aacute;cticas.</li>
+<li>Administraci&oacute;n de recursos en unidades informativas.</li>
+<li>Tratamiento t&eacute;cnico de las colecciones especiales en archivos y bibliotecas.</li>
+<li>Fundamentos de documentaci&oacute;n.</li>
+<li>Historia de los impresos y fuentes de informaci&oacute;n especializadas.</li>
+<li>Fuentes de informaci&oacute;n para ciencias de la salud.</li>
+</ul>
+
+<p>Cada una de estas asignaturas albergar&aacute; tantas pr&aacute;cticas y material te&oacute;rico como el profesor responsable de la misma crea oportuno para su desarrollo a lo largo del curso acad&eacute;mico.</p>
+
+<p>El material te&oacute;rico se va colgando en cualquier tipo de formato: .doc, .pdf, .ppt, etc.; de forma que el alumno pueda descargarlo cuando desee y trabajar con &eacute;l en el lugar adecuado.</p>
+
+<p>Los alumnos para acceder al material te&oacute;rico/pr&aacute;ctico, previamente no s&oacute;lo habr&aacute;n tenido que inscribirse en las mismas, sino que habr&aacute;n tenido que darse de alta en el portal.</p>
+
+<p>El portal permite dos formas de realizar el alta del alumno o estudiante; bien v&iacute;a directa a trav&eacute;s de un formulario de alta que rellenan ellos mismos, bien por medio del administrador del sistema que en este caso dar&iacute;a de alta a cada uno de forma individual.</p>
+
+<p>Una vez dados de alta y realizada una conexi&oacute;n al portal v&iacute;a nombre de usuario y contrase&ntilde;a, los alumnos podr&aacute;n acceder al listado completo de asignaturas y pr&aacute;cticas. <span>A+</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>partir de este momento, ya est&aacute;n en disposici&oacute;n de inscribirse en las pr&aacute;cticas que tengan que realizar. El proceso es el siguiente:</p>
+
+<ol><li>
+Hacen un click en la asignatura  que contiene la pr&aacute;ctica que tienen que quieren realizar (aparecer&aacute; un cuadro con todas las pr&aacute;cticas que dependen de esa asignatura).
+</li>
+
+<li>En ese listado de pr&aacute;cticas, hacen un click ya sobre la pr&aacute;ctica en concreto que van a realizar (autom&aacute;ticamente el sistema les realizar&aacute; la siguiente pregunta: "Est&aacute; a punto de inscribirse como alumno en este curso".  ¿Est&aacute; seguro de que desea hacerlo?)</li>
+
+<li>A partir de este momento el alumno accede ya a los contenidos de la pr&aacute;ctica en s&iacute;.</li></ol>
+
+<p>A partir de este momento, cada vez que el alumno entre de forma identificada, en el apartado de pr&aacute;cticas podr&aacute; ver s&oacute;lo las pr&aacute;cticas en las que est&aacute; inscrito. En caso de que quiera inscribirse en otra, mediante el enlace "Todos los cursos" podr&aacute;n acceder al resto en las que no est&aacute; inscrito y realizar el mismo procedimiento comentado anteriormente.</p>
+
+<p>Las pr&aacute;cticas pueden ser bien visualizadas directamente en pantalla en el formato en el que se hayan colgado o bien pueden ser descargadas en formato zip. De esta manera se facilita al alumno la posibilidad de llevarse la pr&aacute;ctica.</p>
+
+<p>Todas las pr&aacute;cticas, al igual que en el caso del listado de recursos y con el mismo objetivo de la normalizaci&oacute;n, presentan la misma estructura: introducci&oacute;n, objetivos, material y m&eacute;todos y resultados.</p>
+
+<p>Al estar montado esta parte del portal en forma de foro de discusi&oacute;n, los alumnos podr&aacute;n interactuar tanto con el profesor como con el resto de alumnos, en cada una de las pr&aacute;cticas.</p>
+
+<h2>Acceso al portal</h2>
+
+<p>El portal permite cuatro tipos de accesos que est&aacute;n en consonancia directa con los cuatro tipos de usuarios distintos que pueden navegar por el mismo. Dependiendo del tipo de usuario del que se trate, tendr&aacute;n acceso a una informaci&oacute;n u otra.</p>
+
+<p>En primer lugar, podemos hablar de la figura del "usuario invitado". Este tipo de usuario, que no requiere de nombre de usuario ni de contrase&ntilde;a, podr&aacute; acceder  a visualizar todos los contenidos del portal excepto al apartado de pr&aacute;cticas; ya que a este apartado se accede v&iacute;a identificada.</p>
+
+<p>El resto de posibles usuarios, todos dados de alta en el sistema y por tanto con acceso identificado, acceder&aacute;n a todos los contenidos con alguna que otra limitaci&oacute;n dependiendo de su condici&oacute;n de alumno, profesor o administrador.</p>
+
+<p>En el caso de los alumnos, &eacute;stos una vez dados de alta, pueden acceder al apartado de pr&aacute;cticas. Ahora bien, s&oacute;lo acceder&aacute;n a las pr&aacute;cticas en las que est&eacute;n inscritos; y dentro de &eacute;stas a la informaci&oacute;n sobre las mismas y su foro de discusi&oacute;n.</p>
+
+<p>Si accedemos como profesor, adem&aacute;s de poder consultar todos los recursos del portal, podremos visualizar las pr&aacute;cticas que dependen de nosotros y toda la informaci&oacute;n relativa a las mismas: listado de participantes y foro de discusi&oacute;n. Tambi&eacute;n el profesor esta autorizado para desmatricular a un alumno del curso en un momento dado y a visualizar todos los registros que realizan los alumnos de su curso.</p>
+
+<p>Por &uacute;ltimo, la figura del administrador est&aacute; por encima de todos los dem&aacute;s. Es el &uacute;nico que puede acceder a toda la informaci&oacute;n del portal y por tanto el encargado de gestionarla.</p>
+
+<h2>Estad&iacute;sticas</h2>
+
+<p>Un apartado muy interesante desde el punto de vista de la administraci&oacute;n del portal lo constituye la secci&oacute;n de estad&iacute;sticas del mismo.</p>
+
+<p>Este m&oacute;dulo al conservar los "ficheros .log" con las estad&iacute;sticas mensuales nos permite realizar distintos tipos de estudios comparativos de acceso al sitio.</p>
+
+<p>Cuando entramos en este enlace desde la p&aacute;gina <span>principal</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> se nos ofrece, en primer lugar, la posibilidad de entrar en el fichero .log del mes que nos interese. Una vez dentro del fichero, e igualmente en cada uno de ellos, la informaci&oacute;n de entrada es un cuadro resumen que nos indica:</p>
+
+<ul>
+<li>El mes en el que nos encontramos.</li>
+<li>Los d&iacute;as del mes que llevan transcurridos.</li>
+<li>El total de visitas que lleva el sitio hasta la fecha.</li>
+<li>La media de visitas por d&iacute;a.</li>
+<li>La media de visitas por hora.</li>
+</ul>
+
+<p>Seguidamente a esta informaci&oacute;n aparecen ya las estad&iacute;sticas del sitio en forma de gr&aacute;ficos y divididas por bloques: por d&iacute;a, por d&iacute;a de la semana, por referencia, por hora, por pa&iacute;ses, por navegadores, por sistema operativo y por host.</p>
+
+<h2>Foro de debate</h2>
+
+<p>Como apuntamos anteriormente el foro de debate es de gran utilidad para la comunidad cient&iacute;fica; es una buena forma de centralizar el debate sobre determinados temas en una &uacute;nica plataforma.</p>
+
+<p>El tema o temas del foro ir&aacute; rotando dependiendo de las nece0ades cient&iacute;ficas del momento; y la adscripción al mismo se puede realizar de forma autom&aacute;tica e individual <span>sin</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>nece0ad de acudir al administrador.</p>
+
+<p>En principio, hemos establecido 4 foros; uno para la comunidad cient&iacute;fica, dos para profesores y alumnos y el &uacute;ltimo s&oacute;lo para alumnos.</p>
+
+<p>El primero de ellos, el dedicado a la comunidad cient&iacute;fica, ser&aacute; el m&aacute;s importante desde el punto de vista de la investigaci&oacute;n; con lo cual estamos cumpliendo con el primero de los dos grandes objetivos del portal que nos marcamos: apoyo a la investigaci&oacute;n.</p>
+
+<p>Y los tres restantes, ahora en apoyo a la docencia, van a permitir la resoluci&oacute;n de cuestiones pr&aacute;ctica de las asignaturas a trav&eacute;s de un "foro de pr&aacute;cticas"; la resoluci&oacute;n de cuestiones te&oacute;ricas tambi&eacute;n de las asignaturas a trav&eacute;s de un "foro te&oacute;rico"; y la comunicaci&oacute;n exclusiva entre alumnos de todas las univer0ades participantes a trav&eacute;s de un "foro de alumnos".</p>
+
+<h2>Conclusiones</h2>
+
+<p>Entendemos que esta experiencia  será útil para cualquier profesional y empresa que esté relacionada con la documentación electrónica, pero fundamentalmente está indicada para el contexto de la docencia universitaria y en especial de la docencia  de determinadas materias de la titulación de Ciencias de la Información.</p> 
+
+<p>Con la aplicación del portal en toda su extensión conseguiremos:</p>
+
+<ul><li>Propiciar el debate sobre temas científicos.</li>
+
+<li>Centralizar las discusiones de temas de actualidad.</li>
+
+<li>Evaluar resultados y proponer soluciones desde la experiencia.</li>
+
+<li>Favorecer  la convergencia de estudios en Ciencias de la Documentación.</li>
+
+<li>Homologar titulaciones pese a tener denominaciones distintas ya que nos basamos en contenidos.</li>
+
+<li>Homologar contenidos teóricos generales respetando la especificidad local.</li>
+
+<li>Homologar contenidos prácticos ya que los centros que se adscriban aceptarán las prácticas existentes y añadirán las que con0eren necesarias.</li>
+
+<li>Evaluar la actividad investigadora en materia de documento electrónico.</li>
+
+<li>Analizar la producción científica sobre archivos electrónicos.</li>
+
+<li>Proponer líneas de investigación ínter universitarias que no hallan experimentado.</li>
+
+</ul>
+
+<p>Para mantener estas conclusiones en plena actualización la Univer0ad de Granada pone en servicio su experiencia en la asignatura de Archivística dentro del programa de adaptación al nuevo criterio de los créditos europeos, donde priman las experiencias prácticas con una metodología muy precisa. Recordemos que esta univer0ad fue la primera que puso en ejecución las asignaturas de Archivística y Archivos Electrónicos en el marco de las Facultades de Biblioteconomía y Documentación.
+</p>
+
+<p>Por otro lado, este es un portal en constante actualizaci&oacute;n y ampliaci&oacute;n de recursos y base para el desarrollo de un aula virtual de ense&ntilde;anza para asignaturas de Archiv&iacute;stica y Documentaci&oacute;n incluy&eacute;ndose mecanismos de auto evaluaci&oacute;n de forma que el alumno en todo momento controle su aprendizaje.</p>
+
+<p>Desde este foro queremos invitar a la Comunidad Cient&iacute;fica a aportar todas las sugerencias que con0eren oportunas para llevar a cabo y mejorar nuestros objetivos.</p>
+
+<p>Por &uacute;ltimo, quer&iacute;amos hacer menci&oacute;n expresa de la casi inexistencia de experiencias como la que desarrollamos. Si es cierto que existen portales sobre archivos; como el de la <a  href="http://portal.unesco.org/ci/ev.php?URL_ID=5761&amp;URL_DO=DO_TOPIC&amp;URL_SECTION=201&amp;reload=1036514637">UNESCO</a>, pero no especializados en &quot;Archivos Electr&oacute;nicos&quot;.</p>
+
+<p>Del mismo modo, tambi&eacute;n hemos de decir que existen m&uacute;ltiples recopilaciones de recursos sobre archivos y archiv&iacute;stica en genral, pero igualmente nada especializado en la materia que tratamos.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a name="bearman95a" id="bearman95a"></a>Bearman, D. (1995a). Archival <span>strategies</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> <em>The American Archivist,</em> <strong>58</strong>(4), 380-413.</li> 
+
+<li><a name="bearman95b" id="bearman95b"></a>Bearman, D. (1995b). Diplomatics, Weberian bureaucracy, and the management of electronic records in Europe and America. <em>The American Archivist,</em> <strong>55</strong>(1), 168-181.</li> 
+
+<li><a name="brubach" id="brubach"></a>Br&uuml;bach, N. (2002) <a href="http://europa.eu.int/historical_archives/dlm_forum/doc/dlm-proceed2002.pdf">
+International standard for archives and records management ISO 15489
+</a>. En Peter Berninger, Frank Brady, Hans Hofmann y Jef Schram, (Eds.), <i>Proceedings of the DLM-Forum: @ccess and preservation of electronic information - best <span>practices</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and <span>solutions</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Barcelona, 2002.</i> (pp. 443-448). Brussels: Secretariat-General of the European Commission. [European Archives News, Supplement VII]  Recuperado 21 Julio, 2004 de http://europa.eu.int/historical_archives/dlm_forum/doc/dlm-proceed2002.pdf</li>
+
+<li><a name="cook" id="cook"></a>Cook, T. (2001). Archival science and postmodernism: new formulations for old concepts. <em>Archival Science,</em> <strong>1</strong>(1), 3-24.</li> 
+
+<li><a name="duranti" id="duranti"></a>Duranri, L. (2001). The impact of digital technology on archival science. <em>Archival Science,</em> <strong>1</strong>(1), 39-55.</li> 
+
+<li><a name="fresko" id="fresko"></a>Fresko, M. (2002).
+ <a href="http://europa.eu.int/historical_archives/dlm_forum/doc/dlm-proceed2002.pdf">
+MoReq metadata - beyond Europe?</a>. En Peter Berninger, Frank Brady, Hans Hofmann y Jef Schram, (Eds.), <i>Proceedings of the DLM-Forum: @ccess and preservation of electronic information - best <span>practices</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and <span>solutions</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Barcelona, 2002.</i> (pp. 465-478). Brussels: Secretariat-General of the European Commission. [European Archives News, Supplement VII]  Recuperado 21 Julio, 2004 de http://europa.eu.int/historical_archives/dlm_forum/doc/dlm-proceed2002.pdf</li>
+
+<li><a name="guercio" id="guercio"></a>Guercio, M. (2001). Principles, methods, and <span>instruments</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>for the creation, preservation, and use of archival rrecords in th digital <span>environment</span>. <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> <em>The American Archivist,</em> <strong>64</strong>(2), 238-269.</li> 
+
+<li><a name="indiana" id="indiana"></a>Indiana University. <em>University Archives</em>. (2002). <a href="http://www.indiana.edu/~libarch/ER/nhprcfinalreport.doc"><em>Indiana University Electronic Records Project - Phase II, 2000-2002. Final report to the 
+National Historical <span>Publications</span>  <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and Records Commission (NHPRC).</em></a>  Bloomington, IN: Indiana University. Recuperado 21 julio, 2004 de http://www.indiana.edu/~libarche/nhprcfinalreport.html</li>
+
+<li><a name="kent" id="kent"></a>Kent, <span>A+</span>. <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> (2002). Electronic records management: a review of the work of a decade and a reflection on <span>future</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>directions. <em>Encyclopedia of Library and Information Science,</em> <strong>71</strong>(34), 47-81.</li> 
+
+<li><a name="murphy" id="murphy"></a>Murphy, P.E. (2002).
+ <a href="http://europa.eu.int/historical_archives/dlm_forum/doc/dlm-proceed2002.pdf">
+Metadata standards and model requirements for electronic document and records management.</a>. En Peter Berninger, Frank Brady, Hans Hofmann y Jef Schram, (Eds.), <i>Proceedings of the DLM-Forum: @ccess and preservation of electronic information - best <span>practices</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and <span>solutions</span>, <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> Barcelona, 2002.</i> (pp. 64-78). Brussels: Secretariat-General of the European Commission. [European Archives News, Supplement VII]  Recuperado 21 Julio, 2004 de http://europa.eu.int/historical_archives/dlm_forum/doc/dlm-proceed2002.pdf</li>
+
+<li><a name="serra" id="serra"></a>Serra Serra, <span>J++</span>. <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> (2001). Gestión de los documentos digitales: estrategias para su conservaci&oacute;n. <em>El profesional de la información,</em> <strong>10</strong> (9), 4-18.</li> 
+
+<li><a name="tough" id="tough"></a>Tough, <span>A+</span>. <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> y Moss, M. (2003). Metadata, <span>controlled</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span><span>vocabulary</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and directories: electronic document management and standards for records management. <em>Record Management Journal,</em> <strong>13</strong>(1), 24-31.</li> 
+</ul>
+<hr size="3" style="color:#000080 ;" />
+
+<div align="center"><a id="<span>abstract</span>" <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> name="<span>abstract</span>" <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> />Design and development of a digital platform to support the teaching<br /> and  <span>investigation</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of electronic archives: a thematic portal.</div>
+
+<div align="center">Abstract</div>
+
+<blockquote>This paper is aimed at <span>explaining</span>  <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in detail a thematic Web portal specialized in digital <span>documents</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and their impact on the information society from the archives and records management <span>perspective</span>. <span class="conce" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> It has been produced by the Faculty of Library Science and Documentation of the University of Granada. This web portal has been developed as the basis of a digital platform for <span>practical</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>exercises in subjects linked to this area which form part of a Masters <span>degree</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>in Documentation. Thus, the development of  practice will be enhanced and <span>supported</span>  <span class="exper" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>with a wide <span>range</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>of relevant information resources on this subject. As the  portal will support both <span>teaching</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>and research, it contributes to the <span>principal</span>  <span class="quanti" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>objectives of the university.</blockquote>
+ <hr style="COLOR: #000080" size="1" />
+<br />
+
+
+
+<h2>Anexo.- Direcciones webs de algunos listados de recursos sobre archivos y archivística generales.</h2>
+
+
+
+<ul><li>ARCHIVES DE FRANCE. Documents &eacute;lectroniques [en l&iacute;nea]. 2003. 
+<a href="http://www.archivesdefrance.culture.gouv.fr/fr/archivistique/index.html">http://www.archivesdefrance.culture.gouv.fr/fr/archivistique/index.html</a>. Recuperado 11 Mayo, 2004 de http://www.archivesdefrance.culture.gouv.fr/fr/archivistique/index.html. <br />
+Resumen: P&aacute;gina de archiv&iacute;stica de los Archivos de Francia que contiene secciones con recursos sobre el documento electr&oacute;nico, la gesti&oacute;n, la digitalizaci&oacute;n, exposiciones virtuales, etc.
+</li>
+
+<li>CERN. Electronic records [en l&iacute;nea]. May 2003. 
+<a href="http://library.cern.ch/archives/elecarch.html">http://library.cern.ch/archives/elecarch.html</a>. Recuperado 07 Marzo, 2004 de http://library.cern.ch/archives/elecarch.html<br />
+Resumen: Lista de recursos del grupo de trabajo sobre archivos electr&oacute;nicos del CERN.
+</li>
+
+<li>DAY, <span>Michael</span>. <span class="quali" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span> <a href="http://homes.ukoln.ac.uk/~lismd/preservation.html">Preservation of electronic information: a bibliography.</a> Dec 2000.  Recuperado 11 Abril, 2004 de
+http://homes.ukoln.ac.uk/~lismd/preservation.html<br /> 
+Resumen: Bibliograf&iacute;a personal especializada en conservaci&oacute;n y preservaci&oacute;n de la informaci&oacute;n electr&oacute;nica.</li>
+
+<li>ICA: INTERNATIONAL COUNCIL OF ARCHIVES. <a href="http://www.ica.org/biblio.php?pbodycode=CER&amp;ppubtype=pub&amp;plangue=eng">Publications - Committee on Current Records in Electronic Environments.</a> Recuperado 13 Junio, 2004 de http://www.ica.org/biblio.php?pbodycode=CER&amp;ppubtype=pub&amp;plangue=eng.<br /> 
+Resumen: Publicaciones del Comit&eacute; de Archivos Activos en Entornos Electr&oacute;nicos del ICA.
+</li>
+
+<li>INTERNATIONAL COUNCIL OF ARCHIVES - SECTION OF ARCHIVAL EDUCATION AND TRAINING. <a href="http://www.ica-sae.org/bibliography/bibliography.html">DLM-Forum (Donn&eacute;es Lisibles par Machine).</a>  Recuperado 27 Julio, 2004 de
+http://www.ica-sae.org/bibliography/bibliography.html<br />
+Resumen: Bibliograf&iacute;a multilingüe sobre los temas relativos a la archiv&iacute;stica, incluyendo a los documentos electr&oacute;nicos.
+</li>
+
+<li>MINNESOTA STATE ARCHIVES. <a href="http://www.mnhs.org/preserve/records/workshops/edarchivistser.html">Educating Archivists and their Constituencies</a> Recuperado 17 Marzo, 2004 de http://www.mnhs.org/preserve/records/workshops/edarchivistser.html<br />
+Resumen:  Contiene Print Resources, Introduction to Archival Theory, Introduction to Electronic Records, Electronic Records Projects, United States Initiatives, International Guidelines, Resource Lists.</li>
+
+<li>NATIONAL ARCHIVES OF AUSTRALIA. <a href="http://www.naa.gov.au/recordkeeping/er/biblio/er_biblio.html">Electronic records bibliography</a>. 2002. Recuperado 12 Marzo, 2004 de http://www.naa.gov.au/recordkeeping/er/biblio/er_biblio.html<br />
+Resumen: Amplia bibliograf&iacute;a sobre diversos aspectos de los archivos electr&oacute;nicos.
+</li>
+
+<li>OHIO ELECTRONIC RECORDS COMMITTEE. <a href="http://www.ohiojunction.net/erc/links.html">Electronic Records Committee (ERC)</a> 
+Recuperado 17 Marzo, 2004 de http://www.ohiojunction.net/erc/links.html<br />
+Resumen: Completo listado de recursos a nivel de Estados Unidos sobre proyectos, normas e iniciativas relacionadas con los documentos electr&oacute;nicos.</li>
+
+<li>PITTSBURGH UNIVERSITY. <a href="http://www.sis.pitt.edu/~lsdept/archives/alinks.html">Archival Resources and Organizations Links</a>. 2003. Recuperado 17 Marzo, 2004 de  http://www.sis.pitt.edu/~lsdept/archives/alinks.html<br />
+Resumen: Contiene organizaciones, organizaciones normativas, revistas, recursos en gestion de archivos elect&oacute;nicos, conservaci&oacute;n, listas de correo, etc.</li>
+
+<li>PITTSBURGH UNIVERSITY. <a href="http://www2.sis.pitt.edu/~rcox/RESOURCESPreface.htm">Resources for archival &amp; records management studies</a>. 2000. Recuperado 17 Marzo, 2004 de
+http://www2.sis.pitt.edu/~rcox/RESOURCESPreface.htm<br />
+Resumen: Extensa bibliograf&iacute;a sobre gesti&oacute;n de archivos de recursos tanto en formato papel como electr&oacute;nico.</li>
+
+<li>UNIVERSITY OF MICHIGAN. <a href="http://www-personal.si.umich.edu/~calz/ermlinks/ermlinks.htm - top">Electronic Recordkeeping Resources.</a> Jul 2002. Recuperado 12 Mayo, 2004 de
+http://www-personal.si.umich.edu/~calz/ermlinks/ermlinks.htm - top<br />
+Resumen: Contiene una amplia bibliograf&iacute;a sobre diversos temas relacionados con la gesti&oacute;n de archivos electr&oacute;nicos.  Incluye una secci&oacute;n con <span>software</span>  <span class="compus" style="width:1px;border-width:81px 27px 81px 27px;position:relative;">.</span>recomendado.</li></ul>
+
+<hr style="COLOR: #000080" size="1" />
+<table cellspacing="10" align="center">
+<tr><td align="center" valign="top">
+<center>
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="&quot;Web portals&quot; &quot;digital documents&quot; archives &quot;records management&quot;"></input> <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-family: Verdana; font-weight: bold;" /></input>
+<input type="hidden" name="num" value="100" /></input>
+</td></tr></table></form>
+<td colspan="2" align="center" style="font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject.</td>
+</center>
+<td align="center" valign="top">
+<!-- Search Google -->
+<center>
+<form method="get" action="http://www.google.com/custom" target="_top">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="&quot;Web portals&quot; &quot;digital documents&quot; archives &quot;records management&quot;"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold;" /></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+</td></tr></table>
+</form>
+</center>
+<!-- Search Google -->
+</td></tr>
+</table>
+
+<hr style="COLOR: #000080" size="1" />
+<div align="center">
+<h4>How to cite this paper:</h4>
+Ruiz Rodr&iacute;guez, Antonio &Aacute;ngel; G&oacute;mez Dom&iacute;nguez, David  (2004);
+&quot;Dise&ntilde;o y desarrollo de una plataforma digital de apoyo a la docencia y a la investigaci&oacute;n en Archivos Electr&oacute;nicos: un portal tem&aacute;tico; &nbsp; <em>Information Research</em>, <strong>9</strong>(4) paper 194 [Available at http://InformationR.net/ir/9-4/paper194.html]</div>
+<br />
+
+<hr style="COLOR: #000080" size="1" />
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper194" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the author, 2004. <br />Last updated: 3 March, 2004
+</div></td>
+
+<td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" />
+</td></tr>
+</table>
+<hr size="1" style="color:#000080 ;" />
+<table align="center"><tr><td><div id="button">
+<ul>
+	<li><a href="infres94.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+</div></td></tr></table>
+<hr size="3" style="color:#000080 ;" />
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/9-4/paper194.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:41 GMT -->
+</html>

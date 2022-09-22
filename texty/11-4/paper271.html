@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/11-4/paper271.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:16 GMT -->
+<head>
+<title>Towards formal evaluation of collaborative work</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../IRstyle.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+
+<!--Enter appropriate data in the content fields-->
+<meta name="dc.title" content="Towards formal evaluation of collaborative work" />
+<meta name="dc.creator" content="R. Baeza-Yates, J.A. Pino" />
+<meta name="dc.subject" content="A method for the evaluation of collaborative work" />
+<meta name="dc.description" content="Introduction. Computer Supported Cooperative Work (CSCW) projects are difficult to evaluate when implemented at most organizations. There are many variables and some of these are qualitative and hard to assess. However, there are other variables that could be measured and, thus, for a specific CSCW system, management could have a performance estimate.  Method. A groupware application is modelled, focusing on the work done and time spent on the collaboration. Analysis. The following variables and their relations are studied: quality of the outcomes, number of people involved and time spent on the overall task, and total work done. Results. An application - collaborative retrieval - is formalized to illustrate the model. For this application, a specific heuristic is proposed to the case when many people search for the same information, thereby increasing the recall and precision of the answer. The evaluation methodology is applied to this case, showing some experimental results. Conclusion. We present an initial attempt to formally evaluate performance measures related to CSCW applications." /> 
+<meta name="dc.subject.keywords" content=" Computer Supported Cooperative Work, CSCW, evaluation, information retrieval, groupware" />
+
+<!--leave the following to be completed by the Editor-->
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="Professor T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="paper271.html" />
+<meta name="dc.relation.IsPartOf" content="infres114.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2006-07-15" />
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+</style>
+</head>
+<body  bgcolor="#ffffff">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"> <img src="../mini_logo2.gif" width="336" height="45" alt="header" /><br />Vol. 11  No. 4, July 2006<br /><br /><div class="button">
+<ul>
+	<li><a href="infres114.html"> Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+
+</ul>
+</div></td></tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<hr size="1" style="color: maroon;" />
+
+<h1>Towards formal evaluation of collaborative work</h1>
+<h4 align="center"><a href="mailto:ricardo.baeza@upf.edu">Ricardo Baeza-Yates</a> and <a href="mailto:jpino@dcc.uchile.cl"> Jos&eacute; A. Pino</a><br />
+Depto. de Ciencias de la Computaci&oacute;n, Universidad de Chile<br />
+Blanco Encalada 2120, Santiago, Chile<br />
+</h4>
+<br />
+
+<div align="center"><input value="change font" class="btn"
+ style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: Blue;"
+ onclick="doChangeFont()" type="button" /></div>
+<hr style="color: rgb(0, 0, 128);" size="1" />
+<br />
+<div align="center"><b>Abstract</b></div>
+
+<blockquote><strong>Introduction</strong>. Computer Supported Cooperative Work (CSCW) projects are difficult to evaluate when implemented at most organizations. There are many variables and some of these are qualitative and hard to assess. However, there are other variables that could be measured and, thus, for a specific CSCW system, management could have a performance estimate.<br />
+  <strong>Method.</strong> A groupware application is modelled, focusing on the work done and time spent on the collaboration. <br />
+  <strong>Analysis.</strong> The following variables and their relations are studied: quality of the outcomes, number of people involved and time spent on the overall task, and total work done. <br />
+  <strong>Results. </strong>An application - collaborative retrieval - is formalized to illustrate the model. For this application, a specific heuristic is proposed to the case when many people search for the same information, thereby increasing the recall and precision of the answer. The evaluation methodology is applied to this case, showing some experimental results.<br />
+  <strong>Conclusion. </strong>We present an initial attempt to formally evaluate performance measures related to CSCW applications. </blockquote>
+
+<hr style="color: rgb(0, 0, 128);" size="1" /><br />
+
+<h2>Introduction</h2>
+<p>
+The introduction of Computer Supported Cooperative Work (CSCW) tools within an organization can have a variety of positive outcomes (<a  href="#Eas96">Eason and Olphert 1996</a>). Generally speaking, these benefits can be classified into three broad categories:</p>
+
+<ol>
+<li>benefits relating to an improved quality of the end product. Better documents, designs or decisions may be the result of the use of collaborative editors, computer-aided design or electronic meeting systems, respectively, when compared with similar outcomes obtained with computer applications intended for individual use.</li>
+
+<li>those relating to the gains received by the individual members of the group and by the group as a whole. These may be in terms of knowledge acquisition, but mainly as improvements in social ties and friendly relationships. In one experience with CSCW, Ellis <i>et al.</i> (<a href="#ELL91">1991</a>) mention the satisfaction of the group members with the result, which was a composite of individual contributions. </li>
+
+<li>efficiency: to reduce wasted time or opportunities for people to contribute effectively to a joint product.</li>
+</ol>
+
+<p> As an example of efficiency gains, consider the writing of an article by a group of co-authors. One simple non-CSCW approach consists of all co-authors seated around a table thinking about the article with only one using a word processor to do the actual writing. One may conjecture that such an arrangement is probably inefficient: perhaps the scribe is doing much work, but the other co-authors may become distracted, or would prefer to start writing the ideas to order them and propose a consistent composite paper. Of course, this does not imply that any other computer-supported approach will be better in all dimensions, since there are process losses (<a href="#Nuna93">Nunamaker et al. 1993</a>). For instance, one scheme in which every co-author can write may produce articles with little style coherence. Efficiency benefits may be also found in workflow implementations, since one of the objectives for its adoption within the organization is to improve the efficiency to achieve its goals (<a  href="#Khos95">Khoshafian and Buckiewicz 1995</a>).</p>
+
+<p>This paper presents a first formal approach to evaluate CSCW applications. This approach does not pretend to be applicable to all CSCW projects or comprehensively evaluate all aspects of them.  Nor do we focus on evaluating the CSCW software or the hardware or the software components. Rather, we concentrate on the relationships among issues such as the quality of the outcomes of a CSCW project, the time spent on it, and the total amount of work done.</p>
+
+<p>Evaluation of a CSCW project is, of course, very important from a managerial point of view. In the first place, evaluation before a project is started is a key information to decide whether the project is worthwhile. . Afterwards, evaluation is also useful as a basis for rewarding participants, to justify financing similar projects, or to justify a second phase of the project.</p>
+
+<p>Grudin (<a href="#Gru89">1989</a>) has clearly illustrated failed cases of CSCW applications. Benefits that are only for one person are a clear example of failure: why should the other participants be willing to contribute in this case? This is different from the traditional management information system, in which people are not supposed to benefit from the system's operation: their job is to do very specific tasks (for instance, feed the system with certain data), independently of who are the beneficiaries. </p>
+
+<p>Let us assume that the <em>quality</em> of a CSCW project could be assessed by some means, such as those summarized by Andriessen (<a  href="#And96">1990</a>). Still, a manager has some very relevant questions to ask, such as, &quot;Could the project have been equally successful with fewer people involved?&quot; Of course, some CSCW projects might have some benefits that are not subject to this type of evaluation; for instance, a joint project may have as its main goal to improve the cohesiveness and sense of community of the members of a department.</p>
+
+<p>An example of the type of projects we would wish to analyse is the following: suppose a group of five persons is assigned the task of doing a computer-aided design project; all members are experts in their fields of specialization and have known each other for some time. For this type of project we would wish to study the relationships among work quality, total amount of work and duration, and number of people involved. Below, we present a detailed example of the applicability of our approach, formalizing what we and other authors call collaborative retrieval. That is, a group of people trying to find at the same time some information needed by the group. There have been some independent attempts on this problem, but it has not been properly formalized regarding retrieval strategies and their performance (<a href="#SH96">Swigger and Hartness 1996</a>, <a  href="#K98"> Karamuftuoglu 1998</a>,<a href="#ASIS"> Sandusky <em>et al,</em> 1998</a>). Two of these attempts appeared after a preliminary version of this paper was presented in a conference (<a href="#groupeval">Baeza-Yates and Pino 1997</a>).</p>
+
+<h2>Basic framework</h2>
+
+<p>We model a certain groupware application as a task to be performed by <em>m</em> persons who have the same abilities and task performance. We assume, without loss of generality, that every person does the same amount of work for the given task, so task distribution is also homogeneous. Heterogeneous users and workload distribution can be handled by straightforward extensions to our model. The task is divided into <em>n</em> stages (<em>n > 1</em>), which models the intrinsic partitionable nature of most groupware tasks (for example, collaborative writing or design). Our team organization roughly corresponds to the <em>synchronous</em> organizational paradigm proposed by Constantine (<a href="#Con93">1993</a>).</p>
+
+<p>Stages can be time-based (days), location-based (meetings) or task-based (sub-projects) and are usually well defined. Other general dependencies exist in the real world (for example, modelled by <a href="http://en.wikipedia.org/wiki/Directed_acyclic_graph" target="_blank">directed acyclic graphs
+</a>), and these can be considered as possible extensions of our proposal. In that case, the graph can be divided into layers and linearized to match our simpler model.</p>
+
+<p>Our goal is to measure the efficiency of the task performed by the group. For this, we define the following concepts:</p>
+
+<ul>
+  <li>Quality: how good is the result of the collaborative work? Improving quality was one of the first motivations of CSCW applications (<a href="#ELL91">Ellis et al. 1991</a>). </li>
+
+  <li>Time: the total time elapsed while working. In the real world, the time span is an important factor. In groupware applications, the time to achieve a task can be decreased by doing work in parallel. </li>
+
+  <li>Work: the total amount of work done. When there is no parallelism, the total amount of work done is proportional to the time spent. When there is parallelism, we define work as time spent times the number of persons involved (analogous to work complexity in parallel algorithms (<a href="#JaJa92">JaJa 1992</a>)).</li>
+</ul>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, sans-serif; background-color: #fdffdd">
+	<caption align="bottom"><br />
+	<strong>Table 1: Examples of CSCW applications related to our model.</strong></caption>
+	<tbody>
+		<tr>
+			<th>Project Type</th>
+			<th>Example</th>
+			<th>Location</th>
+			<th>Stages</th>
+		</tr>
+		<tr>
+			<td align="left">Sequential</td>
+			<td align="left">Electronic mail collaboration</td>
+			<td align="left">Distributed</td>
+			<td align="left">Days</td>
+		</tr>
+		<tr>
+			<td align="left">Parallel and<br />
+				Synchronous</td>
+			<td align="left">Collaborative writing<br />
+				Negotiation<br />
+				Collaborative design</td>
+			<td align="left">Both<br />
+				Local<br />
+				Both</td>
+			<td align="left">Days<br />
+				Meetings<br />
+				Subprojects</td>
+		</tr>
+		<tr>
+			<td align="left">Parallel and<br />
+				Asynchronous</td>
+			<td align="left">Collaborative retrieval</td>
+			<td align="left">Distributed</td>
+			<td align="left">Hours</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>A basic CSCW taxonomy (<a href="#DeG87">DeSantis and Gallupe 1987</a>) relates applications to the location of the users (same or different location) and the time when the collaborative work is carried out (same time or different time). When we have parallelism, the interaction can be synchronous (same time) or asynchronous (different time). We first discuss how this taxonomy fits our framework. Table&nbsp;<a href="#taxo">1</a> shows some examples of applications, their basic stages and the location of the users.</p>
+
+<p>Location is not strongly related to efficiency. It can be claimed that being in the same location improves quality and may decrease time and work, as the communication among the group members is better than in the distributed case. Nevertheless, this fact will be embedded in the performance measures we use and then the same efficiency analysis applies to CSCW applications independently whether or not they are distributed. On the other hand, using parallelism or a distributed setting not only makes the quantitative analysis more difficult, but the implementation of the application as well. </p>
+
+<p>When parallelism is used, our model does not really depend upon whether or not the work is carried out at the same time. Working synchronously may improve quality, but, again, the analysis remains the same. The coordination points at which every person finishes his or her assignment can constitute the milestones separating stages. On the other hand, if a stage is asynchronous, the group's output for the stage must be integrated and made coherent afterwards. This <i>unification</i> activity is the complex part of this collaboration strategy. Further discussion of this topic is presented in the case study below.</p>
+
+<div align="center"><img src="p271fig1.gif" alt="figure 1" border="0" height="214" width="708" /></div>
+<div align="center"><br /><strong>Figure 1: Quality vs. number of stages (left), quality vs. number of persons
+(middle), and work vs. number of persons (right).</strong> </div>
+
+
+<h2>Performance analysis</h2>
+
+<p>We first focus on quality. The first important remark, is that for many tasks quality is difficult to assess in general, independently of having or not a collaborative environment. Therefore, our framework only applies to
+problems where quality can be defined and measured. </p>
+
+<p>As we stated in the previous section, quality improvement analysis is independent of location or parallelism. In most cases, the quality improvement rate decreases with every stage. In the case in which the number of stages is the number of persons involved, there is an optimal number of persons in the sense that the cost of including one more person is not worth the quality improvement. We discuss this issue again, when we look at the time spent in the task. Figure 1 shows an example of prototypical curves.</p>
+
+<p>We want to maximize quality per work done. As usually work increases with the number of people at a rate higher than linear but quality increases at a rate less than linear, there is an optimal number of people which maximizes quality versus work. Considering that usually there is a minimal quality that has to be obtained, we have to choose the maximum of both cases. Figure 2 below (left) illustrates this optimal point, which basically represents where perfectionism starts to be inefficient.</p>
+
+<p>Consider the following simple example of a model for quality <em>Q</em>=1 - e<sup>-<em>m</em>/&alpha;</sup>, where 1 is the maximal quality and &alpha; measures how fast the collaborative task is saturated by <em>m</em> people. Thus, a local task should have larger &alpha;   than a distributed task, as communication among the group members is easier. We can maximize <em>Q/m</em>, assuming a simple model where the work is proportional to the number of users. An approximate solution to the optimal number of people to maximize the quality achieved per people ratio is <em>m</em> &#8776; 3&alpha;/2</p>
+
+<div align="center"><img src="p271fig2.gif" alt="figure2" border="0" height="209" width="556" /></div>
+
+<div align="center"><br /><strong>Figure 2: Quality of work vs. number of persons (left) and time vs. number of persons (right).</strong></div>
+
+<p>When no parallelism is used, collaborative work can only improve quality, but will not reduce the time span nor the work done. In sequential work, the task is passed over to the next person until it is finished. One advantage of sequential collaborative work is that no work is repeated. Clearly, if sequentiality is not intrinsic to the application, parallelism should be used if a reduced overall time is a goal.</p>
+
+<p>In the parallel case we can optimize either quality of work or the total time elapsed. We have already discussed the first in the example shown before, where we used the number of persons to represent the total work done. As in many activities, including additional people helps to decrease time. However, this is true up to a certain limit, when saturation implies that adding other personnel actually delays the project's completion deadline. An early example of this is the software development project discussed by Brooks (<a href="#Myt75">1975</a>). The explanation for that apparent paradox is that the coordination effort for increasingly large human teams grows very fast, outpacing any increase in technical work done by the additional personnel. We can do an analogy to parallel algorithms for which the communication load becomes relevant in the overall running time (<a href="#JaJa92">JaJa 1992</a>). Note also that the amount of work to be done increases faster than linear because we have to add the interaction time and other losses (<a  href="#Finh90">Finholt et al. 1990</a>), such as interruptions (<a href="#inter">van Solingen et al. 1998</a>) or work repetition due to synchronization problems. Figure 2 (right) shows an example of time optimality for a task where parallelism saturates due to a superlinear interaction time.</p>
+
+<h2>Case study: collaborative retrieval</h2>
+
+<p>In this section we apply the ideas outlined above to the specific problem of many people searching together.</p>
+
+<h3>Searching strategies</h3>
+
+<p>Suppose one would like to do collaborative information retrieval. One approach to this subject is what has been called <em>collaborative filtering</em> (<a href="#Gold92">Goldberg et al. 1992</a>): when one person searches, s/he is provided with information that has been useful to other people previously. The corresponding systems have been more adequately re-named as <em>recommender systems</em> (<a href="#Res97">Resnick and Varian 1997</a>).</p>
+
+<p>Our approach does not involve recommendations. We consider a group of people who have been assigned the task of searching for the same information. This case can be viewed as a straightforward extension to the traditional information retrieval mode of only one person searching. There is independent work related to this problem, but its focus is not on searching strategies nor their evaluation (<a
+ href="#SH96">Swigger and Hartness 1996</a>, <a href="#K98">Karamuftuoglu 1998</a>, <a href="#ASIS"> Sandusky et al. 1998</a>, <a href="#workshop">Churchill at al. 1999</a>).</p>
+
+<p>The improvement over single-person search is that several persons doing the job would state the sought items with their own language terms, thereby increasing the <i>recall</i> (proportion of all the relevant material retrieved (<a href="#SH96">Swigger and Hartness 1996</a>; <a  href="#Sal83">Salton and McGill 1983</a>)) of the search process. That is, the knowledge of all the participants acts as a larger thesaurus. This would have practical applicability especially in projects for which a high recall is needed. An example of this need reported in the literature is the case of legal information retrieval discussed by Blair and Maron (<a href="#Bla85">1985</a>). A hypothetical example is a search over the Internet done by several people at the same time, with the help of a visual collaborative tool that keeps track of the global state of the search. It may be noted that in many cases there is no thesaurus easily available and thus collaborative search may make sense as a procedure to increase recall.</p>
+
+<p>An interesting experiment concerning Internet search is reported by Bates (<a href="#Bat98">1998</a>). The 2-term query <em>+&quot;freedom of speech&quot; +Internet</em> and three variations of it (&quot;+First Amendment&quot; &quot;+Web&quot;, &quot;free speech&quot; &quot;+cyberspace&quot;, +&quot;intellectual freedom&quot; &quot;+Net&quot;) were run on the AltaVista search engine. The first screen of ten retrievals for each of the queries does not have any intersection with the other three: forty different addresses were obtained in total. Moreover, expanding the search by combining the eight different terms in all the logical combinations gives sixteen new queries. Processing those queries provides 138 unique different entries (of the 160 possible retrievals). The author concludes: &quot;...thus, if each of the 16 queries had been entered by a different person, each person would have missed 128 other 'top 10' entries on essentially the same topic, not to mention the additional results that could be produced by the dozens of other terminological and search syntax variations possible on this topic&quot; (<a href="#Bat98">Bates, 1998</a>: 1189). </p>
+
+<p>After the items have been retrieved in parallel by each of the group participants, there is a unification process where all the sought sets of retrieved documents are merged into one set. Several strategies to achieve that process can be designed. A trivial one, for instance, could be to define the final set as the union of the individual sets of retrieved documents. For this strategy, the <i>precision</i> (proportion of the answer that is relevant) of the resulting set will probably be low, which in certain cases is acceptable, provided the recall is high (<a href="#Sal86">Salton 1986</a>). Precision and recall are difficult to estimate (<a href="#MIR">Baeza-Yates and Ribeiro-Neto 1999</a>), but there are standard test sets for this task.</p>
+
+<p>Other strategies could involve all participants to refine the final set (even if it is initially defined as the union of the individual sets) in order to improve its precision. Various ways to achieve this are possible, for example, discussion and negotiation of the procedures or language terms which eliminate items from the final set, sequential refinement by the participants, etc.</p>
+
+<p>For our case study, we analyse a particular strategy, the Union-Refine (or U-R) which is stated as follows:</p>
+
+<p>Each user <em>i</em> searches the database individually (in parallel), generating a set of retrieved documents <em>S</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span>. These sets have recall <em>r</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span> and precision <em>p</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span>. Afterwards, an intermediate set <em>T</em> is defined as the <em>r</em><span style="font-size: small; font-style: italic;"><sub>T</sub></span> union of the sets <em>S</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span>. Set <em>T</em> has recall <em>r</em><span style="font-size: small; font-style: italic;"><sub>T</sub></span> and precision <em>p</em><span style="font-size: small; font-style: italic;"><sub>T</sub></span>.</p>
+ 
+<p>Through a collaborative step (unification), the users refine set <em>T</em> creating set <em>F</em> by modifying the search statement to eliminate non-relevant documents from <em>T</em>. This can be done by excluding suffixes from the search terms, adding AND terms, etc. Set <em>F</em> gets recall <em>r</em> and precision <em>p</em>.</p>
+ 
+<p>The described procedure defines one stage on the search task. Since each user works asynchronously, we can think that there is always a <em>current</em> set <em>T</em> and users update it whenever they are ready. This simplifies the unification process.</p>
+
+<p>The following can be easily verified:</p>
+<dl style="">
+  <dt style="text-align: left; margin-left: 40px;">P1.&nbsp;&nbsp;&nbsp;<em>p</em><span style="font-size: small; font-style: italic;"><sub>T</sub></span>  &#8804; <em>max</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span> &#123;<em>p</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span>&#125;  </dt>
+
+<dt style="text-align: left; margin-left: 40px;">P2.&nbsp;&nbsp;&nbsp;<em>p</em> &#8805; <em>p</em><span style="font-size: small; font-style: italic;"><sub>T</sub></span></dt>
+
+<dt style="text-align: left; margin-left: 40px;">P3.&nbsp;&nbsp;&nbsp;For all <em>i</em>,  <em>r</em><span style="font-size: small; font-style: italic;"><sub>T</sub></span> &#8805; <em>r</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span></dt>
+
+<dt style="text-align: left; margin-left: 40px;">P4.&nbsp;&nbsp;&nbsp;<em>r</em> &#8804; <em>r</em><span style="font-size: small; font-style: italic;"><sub>T</sub></span></dt>
+
+  <dt style="text-align: left; margin-left: 40px;">(almost the same; it is not equal because manipulation of the search terms during unification may affect also the retrieval of relevant documents) </dt>
+</dl>
+
+<p>
+Two interesting measures can be defined to evaluate the
+collaborative/group quality of the search:
+</p>
+<ul>
+  <li>Group precision: <em>GP = p/max</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span> &#123;<em>p</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span> &#125; </li>
+
+  <li>Group recall: <em>GR = r/max</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span> &#123;<em>r</em><span style="font-size: small; font-style: italic;"><sub>i</sub></span> &#125;</li>
+</ul>
+
+<p>Taking into account properties P1-P4, it is clear that <em>GP</em> &#8804; 1 and <em>GR</em> &#8805; 1. The bigger these measures are, the better the collaboration performance over the individual contributions. Our performance analysis can be applied by using <em>Q = GP</em> or <em>Q = GR</em> as quality measures. For example, we can have a quality per work done defined as <em>Q / f (m)</em>, where <em>f (m)</em> gives the financial cost of having <em>m</em> people searching. The optimal number of searchers is obtained maximizing <em>Q / f (m)</em>. This can be done analytically if we have a model for <em>Q</em> or experimentally by measuring <em>GP</em> or <em>GR</em> with different numbers of searchers on similar retrieval tasks. In both cases we assume the searchers have similar abilities and experience.</p>
+
+<p>The analysis can also point out how to improve the unification part, and which heuristic is the best. For example, a quantitative selection based on the number of users approving a subset. </p>
+
+<h3>Experiments</h3>
+
+<p>A simple set of experiments was made to observe the number of different search terms groups of users may generate in collaborative retrieval. Since this was the only goal, the experiments did not include the succeeding union-refinement of the retrieved documents.</p>
+
+<p>The subjects were college senior students and were given the task of searching a bibliographic database located at <a href="http://www.renib.cl/" target="_blank">RENIB (Centro de Documentacion de Bienes Patrimoniales, Chile)</a> for documents that might be relevant to a certain need. The students were proficient in Spanish and thus they were asked to state search terms in that language (the database also contains documents in Spanish).</p>
+
+<p>Table 2 shows results for individual searches. Ten subjects were partitioned in three 'groups'. The participants of each group did not have communication among them and had to find documents which they would assess as relevant for the problem at hand, based on the title and abstract of the retrieved bibliographic records. The students were asked to turn in the search terms they used and the ones found really
+useful in finding the relevant documents.</p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: small; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Table 2: Experimental results (numbers separated by commas refer to different participants.)</strong></caption>
+
+<tr><th>Measure</th><th>Group I</th><th>Group II</th><th>Group III</th></tr>
+<tr><td  align="left">Number of participants</td><td align="center">3</td><td align="center">4</td><td align="center">3</td></tr>
+<tr><td  align="left">Number of searches performed</td><td align="center">11, 9, 7</td><td align="center">19, 9, 13, 40</td><td align="center">10, 19, 13</td></tr>
+<tr><td align="left">Avg. No. of searches</td><td align="center">8.1</td><td align="center">20.3</td><td align="center">14</td></tr>
+<tr><td align="left">Total number of search terms</td><td align="center">19, 7, 5</td><td align="center">36, 14, 13, 34</td><td align="center">15, 22, 16</td></tr>
+<tr><td align="left">Number of search terms found useful</td><td align="center">13, 5, 5</td><td align="center">20, 12, 11, 25</td><td align="center">8, 8, 10</td></tr>
+<tr><td align="left">Avg. number of useful search terms</td><td align="center">7.7</td><td align="center">17</td><td align="center">8.7</td></tr>
+<tr><td align="left">Relevant docs. retrieved</td><td align="center">24, 7, 6</td><td align="center">11, 8, 12, 24</td><td align="center">51, 28, 61</td></tr>
+<tr><td align="left">Avg. number of relevant docs.</td><td align="center">12.3</td><td align="center">13.8</td><td align="center">46.7</td></tr>
+
+</table>
+
+
+<p>As may be seen from Table 2, the work among groups varies (probably reflecting differences in task complexity) and within each group (reflecting individual abilities and labour). The document relevance was probably judged differently by each subject and thus we obtain very different numbers of relevant documents retrieved.</p>
+
+<p>Nineteen other subjects were partitioned in five groups. These were real work groups, in the sense they had a joint task. They had some type of parallel work but had to coordinate themselves and turn in a group result.</p>
+
+<p>Groups A and B worked on different problems, but had the same work organization: one person worked alone and passed the results to two other participants who worked in parallel; finally, a fourth participant received the results of the two previous students and produced the final result.</p>
+
+<p>Groups C and D worked again on different problems but had this same organization: three persons worked in parallel but communicated with a coordinator who suggested search terms successfully tried by the members of the group. The coordinator also assembled the final results. Group D had the same problem to work on as group B.</p>
+
+<p>Finally, Group E had three participants working in parallel communicating among themselves with no coordinator. The results are shown in Table 3.</p>
+
+<table width="60%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: small; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+	<caption align="bottom"><br /><strong>Table 3: Relevant documents retrieved.</strong></caption>
+	<tbody>
+	<tr><th>Group</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+	<tr><td align="left">Number of searches performed</td><td align="center">14</td><td align="center">24</td><td align="center">8</td><td align="center">9</td><td align="center">10</td></tr>
+<tr><td align="left">Total number of search terms used</td><td align="center">32</td><td align="center">19</td><td align="center">16</td><td align="center">8</td><td align="center">10</td></tr>
+<tr><td align="left">Number of search terms found useful</td><td align="center">17</td><td align="center">14</td><td align="center">14</td><td align="center">8</td><td align="center">9</td></tr>
+	<tr><td align="left">Relevant documents retrieved</td><td align="center">10</td><td align="center">53</td><td align="center">32</td><td align="center">50</td><td align="center">80</td></tr>
+				
+	</tbody>
+</table>
+
+<p>Group A worked on the same problem as Group II, Group C on the same problem as Group I and Group E on the same problem as Group III. As can be observed, in this experiment at least, the joint work had more relevant documents retrieved than the corresponding individuals (of groups I, II and III) working alone. Of course, this cannot be assured since the students themselves assessed relevance. It is interesting to note that although the number of useful search terms is similar between groups working in the same problem, the number of relevant retrieved documents is higher in the case of collaborative groups. In particular, with respect to the non-collaborative experiments, groups C and E improved significantly the performance by using collaboration, which suggests that communication either with or without coordination makes a difference.</p>
+
+<h2>Discussion and conclusions</h2>
+
+<p>Our work has concentrated on a very limited collaboration scenario. This is because the group members are supposed to make similar contributions to the joint work. This is not frequently found in practice, since most collaborative works benefit from the variety of contributions from the group members. Different members' backgrounds, roles, attitudes and interests contribute to the richness of the joint work. &quot;Nobody's perfect, but a team can be&quot; says Belbin's well-known method building a team with several role specializations (<a href="Bel03html.html">Belbin 2003</a>). An example of rich team building with various interests and backgrounds is provided in the <a href="http://www.ami-communities.eu/wiki/AMI%40Work_on-line_Communities" target="_blank">
+AMI@Work initiative</a>.</p>
+
+<p>The collaboration scenario presented in the previous sections, instead, may be applicable to cases where work can be done interchangeably by people. The collaborative information retrieval case is an example of that. Another instance may be the work carried out by employees of a call centre answering requests from valuable customers, where the same type of work done in parallel for one customer could be justified.</p>
+
+<p>The collaborative information retrieval example shows how it is possible to apply a formal evaluation, in the sense defined here, and analysis to a groupware application. This type of analysis may imply savings in total time span, number of people involved in a project, etc. and may complement qualitative evaluations made over the project. Evaluations of this type would then be useful to managers.</p>
+
+<p>The example showed a simple solution to the unification problem. In other cases, the unification problem could become complicated, for instance, when a variable number of persons interact to consolidate the outcome of one stage. For these cases, the type of analysis we have presented will probably be unsuitable.</p>
+
+<p>The applicability of this type of formal analysis is also limited by the availability of quantitative data concerning the application. For instance, we need to know individual task performances: if we do not know anything about this beforehand it is impossible to do any computation.</p>
+
+<p>The <em>structure</em> we assumed for the CSCW applications is relatively small compared to workflow applications, in which the flow of information is optimized in order to improve the results of a business process (<a href="#Bur94">Burns 1994</a>). Further work will apply our model to existing collaborative applications as well as lifting some of its limitations.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>Ricardo A. Valenzuela performed the illustrative experiments as part of his Engineering graduation project at the Universidad de Chile. This work was partially supported by grant from Fondecyt (Chile) No. 1040952.</p>
+
+<h2>References</h2>
+<ul>
+ <li><a name="And96" id="And96"></a>Andriessen, J.H.E. (1990). The why, how and what to evaluate of interaction technology: a review and proposed integration.In J. Galegher, R.E. Kraut, and C. Egido, (Eds.). <em>Intellectual teamwork</em>, (pp. 107-124). Hillsdale, NJ: Lawrence Erlbaum Associates, Inc. </li>
+
+<li><a name="Bel03" id="Bel03"></a> Belbin, M. (2003). <em>Management teams: why they succeed or fail</em>. 2nd ed.  London: Butterworth Heinemann. </li> 
+
+ <li><a name="Bat98" id="Bat98"></a> Bates, M. (1998). Indexing and access for digital libraries and the Internet: human, database, and domain factors.<em>Journal of the American Society for Information Science </em>, <strong>49</strong>(13), 1185-1205. </li>
+
+ <li><a name="Bla85" id="Bla85"></a> Blair, D.C. &amp; Maron, M.E. (1985). An evaluation of retrieval effectiveness for a full-text document retrieval system. <em>Communications of the ACM</em>, <strong>28</strong>(3), 289-299. </li>
+
+ <li><a name="Myt75" id="Myt75"></a>Brooks, F.P. (1975). <em>The mythical man-month</em>. Reading, MA: Addison-Wesley.</li>
+
+ <li><a name="Bur94" id="Bur94"></a>N.&nbsp;Burns, N. (1994). <em>Workflow automation: a methodology for change. The workflow CD-ROM sampler</em>. Palo Alto, CA: Creative Networks.</li>
+
+ <li><a name="groupeval" id="groupeval"></a>Baeza-Yates, R. &amp; Pino, J.A. (1997). A first step to formally evaluate collaborative work. In <em>Proceedings of the international ACM SIGGROUP conference on supporting group work: the integration challenge, Phoenix, Arizona, USA.</em>, (pp. 56-60). New York, NY: Association for Computing Machinery. </li>
+
+ <li><a name="MIR" id="MIR"></a>Baeza-Yates, R. and Ribeiro-Neto, B. (1999). <em>Modern information retrieval</em>. Harlow, UK: Addison-Wesley-Longman.</li>
+
+ <li><a name="workshop" id="workshop"></a>Churchill, E., Sullivan, J., Golovchinsky, G. &amp; Snowdon, D. (1999). Collaborative and co-operative information seeking: CSCW'98 Workshop Report, <em>SIGGROUP Bulletin</em>, <strong>20</strong>(1), 56-59. </li>
+
+ <li><a name="Con93" id="Con93"></a>Constantine, L.L. (1993). Work organization: paradigms for project management and organization. <em>Communications of the ACM</em>, <strong>36</strong>(10),35-43. </li>
+
+ <li><a name="DeG87" id="DeG87"></a>DeSantis, G. &amp; Gallupe, G. (1987). A foundation for the study of group decision support systems. <em>Management Science</em>, <strong>33</strong>(5), 589-609. </li>
+
+ <li><a name="ELL91" id="ELL91"></a> Ellis, C.A., Gibbs, S.J. &amp; Rein, G.L. (1991). Groupware: some ideas and experiences. <em>Communications of the ACM</em>, <strong>34</strong>(1), 38-58. </li>
+
+ <li><a name="Eas96" id="Eas96"></a>Eason, K. &amp; Olphert, W. (1996). Early evaluation of the organisational implications of CSCW systems. In P.&nbsp;Thomas, editor, <em>CSCW requirements and evaluation</em>, (pp. 75-89). London: Springer. </li>
+
+ <li><a name="Finh90" id="Finh90"></a>Finholt, T., Sproull, L. &amp; Kiesler, S. (1990). Communication and performance in ad hoc task groups. In Galegher, J., Kraut, R.E. &amp; Egido, C. (Eds.). <em>Intellectual
+teamwork</em>, (pp. 291-325). Hillsdale, NJ: Lawrence Erlbaum Associates, Inc. </li>
+
+ <li><a name="Gold92" id="Gold92"></a>Goldberg, D., Nichols, D.,  Oki, B. &amp; Terry, D. (1992). Using collaborative filtering to weave an information tapestry. <em>Communications of the ACM</em>, <strong>35</strong>(12), 61-70. </li>
+
+ <li><a name="Gru89" id="Gru89"></a>Grudin, J. (1989). Why CSCW applications fail: problems in the design and evaluation of organizational interfaces. <em>Office: Technology and People</em>, <strong>4</strong>(3), 245-264. </li>
+
+ <li><a name="JaJa92" id="JaJa92"></a>JaJa, J. (1992). <em>An introduction to parallel algorithms</em>. Reading, MA: Addison Wesley.</li>
+
+ <li><a name="K98" id="K98"></a>Karamuftuoglu, M. (1998). Collaborative information retrieval: towards a social informatics view of IR interaction. <em>Journal of the American Society for Information Sciences</em>,
+<strong>49</strong>(12), 1070-1078. </li>
+
+ <li><a name="Khos95" id="Khos95"></a> Khoshafian, S. &amp; Buckiewicz, M. (1995). <em>Introduction to groupware, workflow, and workgroup computing</em>. New York, NY: John Wiley and Sons. </li>
+
+ <li><a name="Nuna93" id="Nuna93"></a> Nunamaker, J.F., Dennis, A., Valacich, J.S., Vogel, D.R. &amp;  George, J.F. (1993). Group support systems research: experience from the lab and field. In Jessup, L.M. and Valacich, J.S.  (Eds.). <em>Group support systems - new perspectives</em>, (pp. 125-145). New York, NY: Macmillan.</li>
+
+ <li><a name="Res97" id="Res97"></a>Resnick, P. &amp;  Varian, H.R. (1997). Recommender systems. <em>Communications of the ACM</em>, <strong>40</strong>(3), 56-58. </li>
+
+ <li><a name="Sal86" id="Sal86"></a>Salton, G. (1986). Another look at automatic text-retrieval systems. <em>Communications of the ACM</em>, <strong>29</strong>(7), 648-656. </li>
+
+ <li><a name="SH96" id="SH96"></a> Swigger, K.M. &amp; Hartness, K. (1996). Cooperation and online searching via a computer-supported cooperative problem solving environment. <em>Journal of the American Society for Information Sciences</em>, <strong>47</strong>(5), 370-379. </li>
+
+ <li><a name="Sal83" id="Sal83"></a>Salton, G. &amp; McGill, M.J. (1983). <em>Introduction
+to modern information retrieval</em>. Singapore: McGraw-Hill. </li>
+
+ <li><a name="ASIS" id="ASIS"></a>Sandusky, R., Powell, K and Feng, A. (1998). Design for collaboration in networked information retrieval. In <em>Proc. of the ASIS Mid-year Meeting</em>, (pp. 95-105). Orlando,
+FL, USA. </li>
+
+ <li><a name="inter" id="inter"></a>van Solingen, R., Berghout, E. &amp; van Latum, F. (1998). Interrupts: just a minute never is. <em>IEEE Software</em>, <strong>15</strong>(5), 97-103.</li> 
+</ul>
+
+
+<hr style="color: rgb(0, 0, 128);" size="1" />
+<table cellspacing="10" align="center">
+
+ <tr>
+ 	<td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+		<table bgcolor="#ffffff">
+			<tr>
+				<td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="(&quot;computer supported cooperative work&quot; OR &quot;CSCW&quot; OR &quot;computer supported collaborative work&quot;) software evaluation"></input> <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+				</td>
+			</tr>
+		</table></form>
+		</td>
+	<td colspan="2" align="center" style="font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject.<br /></td>
+
+	<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+		<table bgcolor="#ffffff">
+			<tr>
+				<td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="(&quot;computer supported cooperative work&quot; OR &quot;CSCW&quot; OR &quot;computer supported collaborative work&quot;) software evaluation"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+				</td>
+			</tr>
+		</table>
+</form>
+<!-- Search Google -->
+</td></tr>
+</table>
+<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;cites=3997943993990130477" target="_blank">according to Google Scholar</a></div>
+<br />
+<div align="center">
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="delicious post" /> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a>
+</div>
+
+<hr style="color: rgb(0, 0, 128);" size="1" />
+<div align="center">
+<h4>How to cite this paper:</h4>
+Baeza-Yates, R. &amp; Pino, J.A. (2006) &quot;Towards formal evaluation of collaborative work&quot; &nbsp; <em>Information Research</em>, <strong>11</strong>(4) paper 271 (Available at
+http://InformationR.net/ir/11-4/paper271.html)</div>
+<br />
+<hr style="color: rgb(0, 0, 128);" size="1" />
+<div align="center">&copy; the authors, 2006. <br />
+Last updated: 9 July, 2006</div>
+
+<hr size="1" style="color:#000080 ;" />
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper271" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the authors, 2006. <br />Last updated: 13 June, 2006
+</div></td>
+
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper271.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+</table>
+<hr size="1" style="color:#000080 ;" />
+
+<table align="center"><tr><td><div class="button">
+<ul>
+	<li><a href="infres114.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+</div></td></tr></table>
+
+<hr size="3" style="color:#000080 ;" />
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/11-4/paper271.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:16 GMT -->
+</html>

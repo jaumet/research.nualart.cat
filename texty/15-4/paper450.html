@@ -1,0 +1,739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<!-- Mirrored from informationr.net/ir/15-4/paper450.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:23 GMT -->
+<head> 
+<title>Analysis of automatic translation of questions for question-answering systems</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /> 
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" /> 
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" /> 
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" /> 
+ 
+<!--Enter appropriate data in the content fields--> 
+<meta name="dc.title" content="Analysis of automatic translation of questions for question-answering systems" /> 
+<meta name="dc.creator" content="Lola Garcia-Santiago, Maria-Dolores Olvera-Lobo" /> 
+<meta name="dc.subject" content="Analysis of automatic translation of questions for question-answering systems" /> 
+<meta name="dc.description" content="Introduction. Multilingual question-answering systems can provide users with specific data in response to queries by searching for a minimal fragment of text that applies to the query, regardless of the language in which the question is formulated and the answer is found.  The aim of this paper is to analyse the automatic translation of questions (intended as queries input to a cross-language, question-answering system) from German and French into the Spanish language.Method. The evaluation method, based on automatic and subjective measures, appraises whether the translation will serve as input to a system. That is, does the question retain its validity and fulfil its function, allowing a proper response to be found? Analysis. The main features of multilingual question-answering systems are described and then we analyse the effectiveness of the translations achieved through three popular online translating tools: Google Translator, Promt and Worldlingo. Results.  Our findings serve to identify which is the most reliable translator for both pairs of languages overall. However, an even more reliable option would be to use two different translators, depending on which of the two source languages is being dealt with.    Conclusions.  The results  contribute to the realm of innovative search systems by enhancing our understanding of online translators and their potential in the context of multilingual information retrieval." /> 
+<meta name="dc.subject.keywords" content="automatic translation, question-answering systems" /> 
+ 
+<!--leave the following to be completed by the Editor--> 
+<meta name="robots" content="all" /> 
+<meta name="dc.publisher" content="Professor T.D. Wilson" /> 
+<meta name="dc.coverage.placename" content="global" /> 
+<meta name="dc.type" content="text" /> 
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" /> 
+<meta name="dc.identifier" scheme="URI" content="paperhtml.html" /> 
+<meta name="dc.relation.IsPartOf" content="infres154.html" /> 
+<meta name="dc.format" content="text/html" /> 
+<meta name="dc.language" content="en" /> 
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" /> 
+<meta name="dc.date.available" content="2010-12-15" /> 
+ 
+<script language="javascript" type="text/javascript"> 
+ 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script> 
+	
+<style type="text/css"> 
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+ 
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; --> 
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+ 
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+ 
+legend {
+    color: white;
+    background-color: #5E96FD;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+ 
+ 
+</style>
+ 
+</head> 
+<body bgcolor="#ffffff"> 
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 15  no. 4 December, 2010</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres154.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+<hr style="COLOR: #5E96FD" size="1" /> 
+ 
+<br />
+ 
+<h1>Analysis of automatic translation of questions for question-answering systems</h1> 
+<br /> 
+<div style="margin-left: 10%; margin-right: 10%;"> 
+<h4><a href="#author">Lola Garc&iacute;a-Santiago</a> and <a href="#author">Mar&iacute;a-Dolores Olvera-Lobo</a><br />
+CSIC, Unidad Asociada Grupo SCImago, Madrid, Espa&ntilde;a. University of Granada, Department of Library and Information Science, Colegio M&aacute;ximo de Cartuja s/n., 18071 Granada, Spain</h4>
+</div> 
+<br /> 
+ 
+<form action="#"> 
+<fieldset> 
+<legend>Abstract </legend> 
+<blockquote>
+<strong>Introduction.</strong> Multilingual question-answering systems can provide users with specific data in response to queries by searching for a minimal fragment of text that applies to the query, regardless of the language in which the question is formulated and the answer is found.  The aim of this paper is to analyse the automatic translation of questions (intended as queries input to a cross-language, question-answering system) from German and French into the Spanish language.<br />  
+<strong>Method.</strong> The methodology used for evaluation, based on automatic and subjective measures, appraises whether the translation will serve as input to a system. That is, does the question retain its validity and fulfil its function, allowing a proper response to be found? <br />  
+<strong>Analysis.</strong> The main features of multilingual question-answering systems are described and then we analyse the effectiveness of the translations achieved through three popular online translating tools: Google Translator, Promt and Worldlingo.<br />  
+<strong>Results.</strong> Our findings serve to identify which is the most reliable translator for both pairs of languages overall. However, an even more reliable option would be to use two different translators, depending on which of the two source languages is being dealt with. <br /> 
+<strong>Conclusions.</strong> The results  contribute to the realm of innovative search systems by enhancing our understanding of online translators and their potential in the context of multilingual information retrieval.</blockquote> 
+</fieldset> 
+</form> 
+ 
+<br /> 
+<div align="center"> 
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: #5E96FD;" onclick="doChangeFont()" /></div> 
+<br />
+ 
+<h2>Introduction</h2> 
+ 
+<p>Information retrieval is   the collection of tasks implemented by the user to locate and access the information sources that are appropriate to resolve a given need for information. In these tasks, indexing languages, abstracting techniques, and the description of the documental object play key roles, largely determining how fast and efficient retrieval is (<a href="#bel87">Belkin and Croft 1987</a>). Ideally, there is a balance between the precision and the recall of the informational yield. This aspect is increasingly important, as the World Wide Web diffuses vast quantities of new content every day, in a great variety of formats and languages  (<a href="#tur01">Turpin and Hersh 2001</a>).</p> 
+ 
+<p>When a need for information arises, a process called the search strategy is set in motion, which leads to the supply of documents by the system (<a href="#bel87">Belkin and Croft 1987</a>). This process entails seven basic stages:</p>
+ 
+<ol style="list-style: lower-alpha;">
+<li>definition of the information need;</li>
+<li>selection of the information sources to be used;</li>
+<li>translation of the user query expressed in natural language into the indexing language of the information source, if necessary;</li>
+<li>translation of the expression from the indexing language to the query language of each information system;</li>
+<li>implementation of expressions obtained from the query language;</li>
+<li>assessment of results by the user and the redefinition of the query expressions if the results are not relevant; and </li>
+<li>selecting and obtaining the documents that respond to the user&rsquo;s needs.</li>
+</ol>
+
+<p>One step in the evolution toward improved retrieval resides in the use of question-answering systems, which pursue the supply of specific data instead of documents and respond to the questions formulated by users in natural language (<a href="#hal07">Hallet <em>et al.</em> 2007</a>). If this answer derives from documents that are found in other languages, the situation involves a translingual or multilingual question-answering system. This type of system is particularly complex, as it incorporates the capacities of a translingual system for cross-language information retrieval, while also working as a question-answering system.</p> 
+ 
+<p>This approach, where access entails gathering accurate data that respond to specific questions, is a specialization within the more generic concept of  multilingual access to information  (<a href="#lop04">L&oacute;pez-Ostenero <em>et al.</em> 2004</a>).  In important international forums,   principally the <a href="http://www.webcitation.org/query?url=http%3A%2F%2Ftrec.nist.gov&amp;date=2010-11-17" target="_blank">Text REtrieval Conference</a>  (<a href="#voo00">Voorhees and Harman 2000</a>) and the <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.clef-campaign.org&amp;date=2010-11-17" target="_blank">Cross-Language Evaluation Forum</a>  (<a href="#clo04">Clough <em>et al.</em> 2004</a>, <a href="#clo06">2006</a>), such systems have been evaluated, with discussion of innovative proposals and  techniques. Both have set up a track dedicated to studying question-answering systems. In the general scope of cross-lingual information retrieval, there are several proposals intended to overcome the language barrier that appears when queries and the documents obtained are in different languages.</p>
+  
+<p>As mentioned above, systems that deal with multiple languages usually rely on a translation module. The architecture of a cross-lingual information-retrieval system would use one of three main approaches: the translation of the query, the translation of documents from the database, or an interlinguistic approach (<a href="#oar98">Oard and Diekema 1998</a>). However, at present, translation of the answer could be  another possibility (<a href="#bos06">Bos and Nissim 2006</a>). Translating the query is the most frequent option since they are shorter texts than the documents, and therefore their translations have limited computational costs (<a href="#hul96">Hull and Grefenstette 1996</a>). Nevertheless, many researchers describe the problems that arise in the translation process when the questions are short and offer little context to help  eliminate any semantic ambiguity in the terms of the question; in such cases, interaction with the user (<a href="#oar08">Oard <em>et al.</em> 2008</a>) may improve the results. The underlying translation processes apply different linguistic resources,  such as bilingual dictionaries, textual corpora, machine-translation software, and thesauri (<a href="#lop04">L&oacute;pez-Ostenero <em>et al.</em> 2004</a>; <a href="#abu05">Abusalah <em>et al.</em> 2005</a>); and various mechanisms for disambiguation and the selection of the most appropriate translation between the different proposals available (<a href="#kis05">Kishida 2005</a>). </p>
+  
+<p>As depicted in Figure 1, for the systems that incorporate a translation module, the user enters a specific query, generally including some interrogative adverb (e.g. How? When? Where?) in a given natural source language. This question is translated by an automatic translator. The resulting search expression will then be the <em>input</em>, or the formulation of the query to be used by the search engine of the system for comparing and matching it with the documents in the database. Once documents relevant to the query are located, the system breaks them up into sections, selects the excerpts that include the candidate responses and selects a final response. This response, along with its location in the corresponding document, is finally delivered to the  user.</p>
+  
+<div align="center"><img src="p450fig1.jpg" alt="Basic elements of a translingual question-answering system" width="709" height="397" /></div>
+<div align="center"><br /><strong>Figure 1: Basic elements of a translingual question-answering system</strong></div>
+
+<p>Given this background, our study focuses on the first module of the translingual question-answering systems, designed to translate the original user query. In the following sections, we present a comparative study of the quality of the different automatic translation tools that may be used online for no charge, applying three that translate from German and French into the Spanish language. Our perspective is a documental one; that is, we analyse the functionality of the translator as a mediating instrument in the search for answers. To this end, we apply well-known assessment measures (both objective and subjective ones) for machine translation, with the help of <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww-i6.informatik.rwth-aachen.de%2Fweb%2FSoftware%2FEvalTrans%2Findex.html&amp;date=2010-11-17">EvalTrans</a> software. Finally, we analyse the results and offer succinct conclusions.</p> 
+ 
+<h2>Evaluation of automatic translations as input in cross-language question-answering systems</h2>
+
+<p>One of the objectives of this study is to identify the most adequate online translator for a given question-answering system entailing a collection of documents in Spanish. In this case, the questions would be formulated in French or in German and would have to be translated into Spanish in order to constitute the system input before proceeding. </p>
+
+<p>Our study used a set of questions from the <a href="#cle08">Cross-Language Evaluation Forum, 2008</a>, with 200 queries in German and the same 200 in French. The questions as expressed in Spanish by each of the online translators were both manually and automatically analysed, applying objective and subjective measures
+for the evaluation of automatic translation with the aid of EvalTrans software.</p>
+
+<h3>Online translators evaluated</h3>
+
+<p><em><a href="http://www.google.es/translate_t?hl=es" target="_blank">Google Translator</a></em>, <em><a href="http://www.online-translator.com/" target="_blank">Promt</a></em> and <em><a href="http://www.worldlingo.com/en/products_services/worldlingo_translator.html" target="_blank">Worldlingo</a></em> were selected for this study because they allow us to translate and compare results using language pairs of German to Spanish and French to Spanish. Moreover, they are widely used services, they are quick in translating and they show reasonable quality overall. There are limitations regarding the maximum amount of text (from 150 to 300 characters) with which the free online translators
+can work, except <em>Google Translator</em>, which admits much more extensive texts, but these do not interfere with the purposes of our study, as a question-answering system deals with specific questions for which the formulation is not excessively long.</p>
+
+<p><em>Google Translator</em> is an automatic translator; that is, it works without the intervention of human translators, using state-of-the-art technology instead. Most commercial machine-translation systems in use today have been developed using a rule-based approach and require substantial work to define vocabularies and grammars. However, this system takes a different approach; the computer is fed billions of words of text, both monolingual text in the target language as well as aligned text consisting of examples of human translations between the languages. Afterwards statistical learning techniques are applied to build a translation model which is able to contextualise. <em>Promt</em> uses semantic classes to improve the syntactic and the semantic correspondence in a sentence.</p> 
+
+<p>A subdivision of translation systems into transfer-based systems and Interlingua-based systems has been adopted (<a href="#sok09">Sokolova 2009</a>). This subdivision is based on aspects of architectural solutions relating to linguistic algorithms. Translation algorithms for transfer-based systems are built as a composition of three processes: analysis of the input sentence in terms of source language structures, conversion of this structure into a similar target-language structure (<em>transfer</em>) and, finally, synthesis of the output sentence according to the constructed structure. Interlingua-based systems assume <em>a priori</em> that a certain structure metalanguage (<em>Interlingua</em>) is available, which, in principle, can be used for describing any structure of both the source and the target languages. <em>Wordlingo</em> uses statistical techniques from cryptography, applying machine-learning algorithms that automatically acquire statistical models from existing parallel collections of human translations. These models are more likely to be up to date, appropriate and idiomatic, because they are learned directly from real translations. The software can also be quickly customized to any subject area or style and do a full translation of previously unseen text. Statistical machine translation was once thought appropriate only for languages with very large amounts of pre-translated data. Additionally, with customization, such systems can also <em>learn</em> to  translate highly technical material accurately (<a href="#gru09">Grundwald 2009</a>).</p>
+
+<h3>Sample and types of questions</h3>
+
+<p>In the stage of the query analysis, the question-answering system examines the user&rsquo;s question and determines what type of information is being requested. The classification of the questions is crucial for the system, as this information will be utilized in the search stage and in the selection and extraction of the potential responses (<a href="#gar05">Garc&iacute;a Cumbreras <em>et al</em>. 2005</a>).  The collection of 200 Cross-Language Evaluation Forum questions were formulated in German and in French in the input stage (before transformation to an indexing language) and were meant to gather precise data on a given subject. </p>
+
+<p>A sample of 200 cases by each pair of the two languages, French and German, to Spanish is analysed. It is  a sample that reflects a normal distribution for an infinite population. This sample has a 95% confidence level, a significance level of 2.5% (p = 0.025) and a statistical power of 0.8. Bloom, according his taxonomy, considers these queries <em>questions of knowledge</em> (<a href="#blo56">Bloom 1956</a> and <a href="#blo56">Forehand 2005</a>). As in a survey, factual questions can be answered by either <em>Yes</em> or <em>No</em>. In other cases the answer is nominal; for example,  a person, a place or institution. In addition, there are other knowledge questions. Closed-list questions imply a closed group of nominal possibilities (names, verbs, adjectives). Finally, there are definitional questions which describe the existence of some person, thing or process. </p>
+
+<p>These questions may be classified as three types (<a href="#cle08">Cross-Language... 2008</a>): </p>
+
+<ul>
+<li><strong>Factual questions:</strong> which seek tidbits of information such a names of person, organization or place,locations, time, quantities (measurement or recount) or object, among others. The question always starts with any interrogative particle: <em>Who...?, When...?, Where...?, Where...?,.</em>...</li>
+
+<li><strong>Definitional questions:</strong> where the information solicited may entail synonymy and formulation with respect to a person, object, organization or concept (<em>What or who is it</em>?)</li>
+
+<li><strong>Closed list:</strong> questions that call for a response enumerating various items (<em>What/is&hellip;? How&hellip;? or Name</em>&hellip;)</li>
+</ul>
+
+<p>Unlike opinion questions that request an interpretation of the information, e.g. What should I do? or Is it better to do X or Y?, factual questions are focused on finding an specific and objective answer. According to Sloman (<a href="#blo56">2005</a>), these can cover from the most basic issue, which refers to a proposition that is capable of being true or false and requests the information whether the proposition is true or false, to issues which create one or more gaps in the proposition and specify requests for information. Some factual questions (<a href="#slo05">Chan <em>et al.</em> 2003</a>) can require information which is expressed by an interrogative particle, e.g., who (person),  where (location),  how many (number). However, for most questions using the interrogative word 'which'  or what', we need to find the core noun to help us to identify the information required. For example: Which city is home of Superman? or What type of bee drills holes in wood? These kinds of questions are not lengthy and they have a formal and clear structure. </p>
+
+<p>The 200 questions used were mostly (156) of the factual type; and in the Spanish language, they present mainly interrogative particles, as explained above. The remainder (44) are divided fairly equally into definition questions (24) and closed-list questions (20). Some examples are: </p>
+
+<ul>
+<li><em>O&ugrave; l'article de Gerda Taro sur cette bataille a-t-il &eacute;t&eacute; publi&eacute;?</em></li>
+<li><em>Qu'est-ce que la vexillologie?</em></li>
+<li><em>Quels sont les pays membres de l'Observatoire europ&eacute;en austral?</em>/ Welche L&auml;nder sind Mitglied bei der Europ&auml;ischen S&uuml;dsternwarte?</li>
+</ul>
+
+<p>Natural language is not an exact science. Interrogative adverbs in each language change their characteristics and require modifications when these subgroups must be identified clearly. For example, the question 'What political party does Tony Blair belong to?' differs from 'What is a screwdriver?' as the former contains a preposition which goes with the interrogative adverb. Therefore, the latter sentence is classified as a definition-type question. On the other hand, all kinds of questions can include a temporal restriction (e.g.. What book did George Orwell write in 1945?). Hermjakob (<a href="#slo05">2001</a>) classifies questions from a functional perspective during the information search on the Web. Furthermore, he identifies questions which include interrogative adverbs and he emphasizes questions that only ask for a confirmation or disconfirmation. This author sorts out this typology according to the answer rather the question;consequently, he tags them as 'Yes-No questions' and 'True-False questions'. </p>
+
+<h3>Measures for the evaluation of the automatic translation of questions</h3>
+
+<p>Evaluation of machine translation is an unresolved research problem that has been addressed by numerous studies in recent years (<a href="#uef07">Ueffing and Ney 2007</a>). The most extensively used assessment tools are classified into two major groups: automatic objective methods and subjective methods (<a href="#tom03">Tom&aacute;s <em>et al.</em> 2003</a>). The objective evaluation methods compare a set of correct reference translations against the set of translations produced by the translation software under evaluation. The measurement units most often used work at the lexical level, comparing strings of text. </p>
+
+<p>Our study evaluated the online translators in the light of the following parameters: </p>
+
+<ul>
+<li><em>Word error rate</em> (WER) (<a href="#til97">Tillman <em>et al.</em> 1997</a>; <a href="#vid97">Vidal 1997</a>): This is based on comparison of the Levensthein Distance or edit distance between two strings of characters. It measures the number of insertions, substitutions and eliminations necessary to convert one string into another (Figure 2). Yet, unlike the edit distance, which does this through the characters, <em>word error rate</em> calculates this distance in relation to the words involved. It can be seen as a <em>pessimistic</em> means of measurement for the evaluation of an automatic translation system (<a href="#per04">P&eacute;rez <em>et al.</em> 2004</a>), in that, if the output of the system does not coincide exactly with the reference string, it is penalized, even when the expression is considered acceptable by a human translator.</li>
+</ul>
+
+<div align="center"><img src="p450fig2.jpg" alt="Fig2" width="225" height="74" /></div>
+<div align="center"><br /><strong>Figure 2: Word error rate formula</strong> </div>
+
+<ul>
+<li>aWER <em>All references word error rate</em> (aWER) (<a href="#tom03">Tom&aacute;s <em>et al.</em> 2003</a>): which gathers, for comparison, all the reference phrases that may be taken into fair consideration, i.e., those that a human translator would include in the process of assessing translations. In other words, it corresponds to the rate of words which have to be changed, erased or included to achieve a correct translation. In this case, however, we have all the phrases of reference to compare, not only the first and, consequently, more alternatives. </li>
+
+<li><em>Sentence error rate</em> (SER): which compares phrases (the string of output from the automatic translator and the reference string) overall, as units. It identifies or measures the lack of fit found through this comparison, which does not necessarily mean that the translation is erroneous. If the two strings differ in some way, the system is penalized. This may be considered an excessively tough tool (<a href="#per04">P&eacute;rez <em>et al</em>. 2004</a>).</li>
+
+<li><em>All references sentence error rate</em> (aSER) (<a href="#tom03">Tom&aacute;s, <em>et al.</em> 2003</a>): the <em>sentence error rate</em> compares the phrase to be evaluated with a single reference string, whereas the <em>all references sentence error rate</em>, derived from the <em>all references word error rate</em>, is used in order to arrive at the percentage of phrases whose translations are <em>incorrect</em>.</li>
+</ul>
+
+<p>All the means of measurement described above are applied automatically. Therefore, the translations and the phrases of reference are compared without any specific determination of the type of error or discrepancy occurring between the two strings under consideration (Figure 3). For this purpose, there are other types of metrics requiring human intervention for evaluation. In the context of translingual question-answering systems that include the machine translation architecture, the aim of translation is more practical; so other evaluation measures of a subjective nature, such as <em>subjective sentence error rate</em> (sSER), were applied.</p>
+
+<div align="center"><img src="p450fig3.jpg" alt="Fig3: All references sentence error rate formula" width="258" height="52" /></div>
+<div align="center"><em><strong>Figure 3: All references sentence error rate formula</strong></em></div>
+
+<p>Other scoring metrics are:</p>
+
+<ul>
+<li><em>Position independent error rate</em> (PER): this measure is similar to the <em>word error rate</em>, but it ignores or does not take into account the positions of the words in the reference sentences. It is a more suitable metric to evaluate the system for tasks where the source and target language words are arranged in different ways and the output sentence admits different rearrangements.</li>
+
+<li><em>BiLingual Evaluation Understudy</em> (BLEU): this measures the translation closeness between a candidate translation and a set of reference translations with a numerical metric. It scores the ngram precision (unigrams, bigrams, trigrams and 4-grams) with regard to a sample of reference translations. An N-gram is a subsequence of n-elements from such a sequence (<a href="#lin03">Lin and Hovy 2003</a>).</li>
+
+<li><em>National Institute of Standards and Technology</em> (NIST): this algorithm is based on the BLEU metric, but with some modifications. Where BLEU simply calculates n-gram precision, adding equal weight to each one, NIST also calculates how informative a particular n-gram is. That is, n-gram precisions are weighted by the n-gram frequencies, to place more emphasis on the less frequent (and more informative) n-grams. Another significant difference with respect to BLEU is that NIST computes the arithmetic mean of the n-gram precision, also with a length penalty (<a href="#gou06">Goutte 2006</a>).</li>
+</ul>
+
+<p>Up to this point, comparison of sentences has been discussed without evaluating which kind of error or discrepancy occurred between two sentences. However, there are other systems that automatically evaluate translation assessments made by subjective or human methods (<a href="#wik08">Wikipedia 2008</a>). Amongst these are:</p>
+
+<ul>
+<li><em>Subjective sentence error rate</em> (sSER): in this measure the score ranges from 0 to 1, signifying from a perfect translation to a nonsense sentence. Originally, Nie&szlig;en (<a href="#nie00">2000</a>) proposed a score scale from 0 to 10 but has since concluded that scale is too wide and that six or seven quality classes it would function better.</li>
+
+<li><em>Information item error rate</em> (IER): for this measure, the sentence is segmented into information items. A person assesses whether the information from each item is found in the translation. Hence, it can be checked whether, in a wrong translation of the sentence, there are parts that are correctly translated (<a href="#nie00">Nie&szlig;en et al. 2000</a>).</li>
+</ul>
+
+<p>Our aim is to customize the system of automatic-translation evaluation <em>subjective sentence error rate</em> with our research from German to Spanish and from French to Spanish. In addition, we propose an evaluation form adapted specifically to the question-answering systems. A <em>perfect</em> translation is not the aim of this study, but, rather, a translation which is able to preserve the characteristics of the questions and consequently enable the system to locate the suitable answers.</p>
+
+<h3>Analysis with EvalTrans</h3>
+
+<p>The evaluation process was carried out using EvalTrans software (<a href="#nie00">Nie&szlig;en <em>et al.</em> 2000</a>) in its graphic version designed for use with Windows (<a href="#tom03">Tom&aacute;s <em>et al.</em> 2003</a>). This tool can be used freely online, for the evaluation of automatic translation. It provides us with statistics, such as the average Levensthein distance standardized to the length of the target sentence and calculates previous rates by means of automatic metrics (<a href="#dab02">Dabbadie <em>et al</em>. 2002</a>).</p>
+
+<p>One advantage of this program is that it can compare the results of each translator with the other translators studied for the same set of phrases. It works with the follow indicators: WER, mWER, aWER, SER, mSER and sSER (described above). These measures are widely used and they consider important the order of words in the sentence. In addition, it allows for a qualification in the assessment of the translation with a manual and subjective supervision. It is intended to correct the failings of an automatic system without a lexicon when seeking to detect several possible ideal sentences (it supports only a single perfect sentence for comparison). It also includes grading for the assessment (Figure 4).</p>
+
+<p>The selected translators were evaluated independently (e.g., <em>word error rate</em> (WER)) and combined (e.g., <em>all references word error rate</em> (aWER) and <em>all references word sentence rate</em> (aSER)) . EvalTrans highlights the differences in the comparison of the two sentences, which is evaluated with respect to the reference.</p>
+
+<div align="center"><img src="p450fig4.jpg" alt="EvalTrans Example" width="589" height="313" /></div>
+<div align="center"><br /><strong>Figure 4: Example of EvalTrans</strong></div>
+
+<p>The metrics used are designed for phrases and questions are short phrases with a predictable structure according to the grammar of the language. </p>
+
+<p>EvalTrans is a tool for evaluating translations using metrics, which are considered as important as the word order. In an effort to mitigate the rigidity of some of these, the <em>all references word error raqte</em> (aWER) and the <em>all references sentence error rate</em> (aSER) are calculated. The latter takes into account more than one alternative when the sentence assessed is compared or checked with the reference or model-phrase collection. This metric evaluation is made fully automatic by calculating the <em>subjective sentence error rate</em> (sSER) with human values (or subjective ratings rather than the match or not match automatic methods), which considers the functionality of the translation in a question-answering system. The increase in the number of reference phrases in human evaluation also changes the rates of aWER and aSER.</p>
+
+<h2>Analysis of results</h2>
+
+<p>The results shown are averages, based on the yield of the online translators, given the values obtained on applying the measures described above and the values that resulted from the human assessment of each question translated. </p>
+
+<h3>Effectiveness of the online translators according to indicators used</h3>
+
+<p>Tables 1 and 2 show the values based on the set of 200 questions in terms of <em>word error rate</em> (WER) and <em>sentence error rate</em> (SER) for the <em>Google Translator</em>, <em>Promt</em> and <em>Worldlingo</em> in automatic evaluations, from German and French into Spanish.</p>
+
+<table width="60%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom">
+<br />
+<strong>Table 1: Automatic evaluation of the translations from German to Spanish</strong>
+</caption>
+<tr>
+<th>GERMAN</th>
+<th>Google</th>
+<th>WorldLingo</th>
+<th>Promt</th>
+</tr>
+<tr>
+<td>WER</td>
+<td align="center">41.9%</td>
+<td align="center">57.6%</td>
+<td align="center">54.4%</td>
+</tr>
+<tr>
+<td>SER</td>
+<td align="center">95.0%</td>
+<td align="center">98.5%</td>
+<td align="center">99.0%</td>
+</tr>
+</table>
+<br /><br />
+<table width="60%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom">
+<br />
+<strong>Table 2: Automatic evaluation of the translations from French to Spanish</strong>
+</caption>
+<tr>
+<th>FRENCH</th>
+<th>Google</th>
+<th>WorldLingo</th>
+<th>Promt</th>
+</tr>
+
+<tr>
+<td>WER</td>
+<td align="center">43.2%</td>
+<td align="center">40.8%</td>
+<td align="center">39.6%</td>
+</tr>
+<tr>
+<td>SER</td>
+<td align="center">95.5%</td>
+<td align="center">93.0%</td>
+<td align="center">90.0%</td>
+</tr>
+</table>
+
+<p>The high values found for the <em>sentence error rate</em> (SER) can be attributed to the need for the evaluation software to find a string from the online translator that is identical (with the same words and in the same order) to the reference phrase in order to calculate the edition rate. Any variation, even a minor one, is interpreted as an erroneous phrase (in our case an erroneous question) and is left out. Tables 3 and 4 below reflect that the <em>subjective sentence error rate</em> (sSER) measure aims for greater precision than the SER measure, by taking into account human evaluation and the corresponding acceptance or rejection of the phrase supplied by the online translator, judged as correct or incorrect. Our objective, however, is merely to identify the translating program that generates the most functional input for a translingual question-answering program. </p>
+
+<p>In addition, the coefficients corresponding to the <em>all references word error rate</em>, the <em>sentence error rate</em> and <em>all references sentence error rate</em> do indeed vary in conjunction with human intervention (see Tables 3 and 4). For instance, the <em>subjective sentence error rate</em> measure takes the scores for each one of the phrases already translated and evaluated. The <em>all references word error rate</em> measure, meanwhile, gathers all the reference phrases that have been considered subsequently as such by a human translator. These tend to be proposed by the human evaluator as <em>new reference</em> after the reduction of the edit distance; or else, a candidate phrase is scored with a maximum mark. The evaluating program adopts the phrase of reference that is most similar to the group of phrases of reference already existing, not just the first sentence of reference included <em>a priori</em>. </p>
+
+<p>The ranking of the online translation programs analysed with regard to their effectiveness means that the best translator of the three would be the one scoring the lowest index (lowest occurrence of errors), especially evident with  <em>subjective sentence error rate</em> and <em>all references word error rate</em>, which account for human assessment.</p>
+
+<p>Because the applied measures for automatic evaluation do not make a comprehensive syntactic analysis (noting the position of the words in the phrase), the error indexes are greater in German. The fact that the edit distance registers not only the existence of words in the sentence, but also their position, leads to higher error rates when the German language is involved, since alteration in the order of the elements is identified as an error (<a href="#til97">Tillman <em>et al.</em> 1997</a>).</p>
+
+<p>Accordingly, grammatical similarities between the French and Spanish languages result in fewer errors (see Tables 1 and 2). It bears noting that only in the case of <em>Google Translator</em> were the error indexes in conjunction with words (<em>word error rate</em>) higher for French than for German. After the subjective assessments of the translations by the application of <em>all references word error rate</em> (aWER), <em>subjective sentence error rate</em> (sSER) and <em>all references sentence error rate</em> (aSER), the results were as follows:</p> 
+
+<table width="50%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom">
+<br />
+<strong>Table 3: Indicators calculated with human assessment of the translations from German to Spanish</strong><br />
+</caption>
+<tr><th>GERMAN</th><th>Google</th><th>WorldLingo</th><th>Promt</th></tr>
+<tr><td>aWER</td><td align="center">57.6%</td><td align="center">54.6%</td><td align="center">50.4%</td></tr>
+<tr><td>sSER</td><td align="center">90.2%</td><td align="center">91.3%</td><td align="center">77%</td></tr>
+<tr><td>aSER</td><td align="center">88%</td><td align="center">94%</td><td align="center">91%</td></tr>
+</table>
+<br /><br />
+<table width="50%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom">
+<br />
+<strong>Table 4: Indicators calculated with human assessment of the translations
+fromFrench to Spanish</strong><br />
+</caption>
+
+<tr><th>FRENCH</th><th>Google</th><th>WorldLingo</th><th>Promt</th></tr>
+<tr><td>aWER</td><td align="center">36.7%</td><td align="center">29.7%</td><td align="center">27.5%</td></tr>
+<tr><td>sSER</td><td align="center">70.4%</td><td align="center">53.7%</td><td align="center">55.5%</td></tr>
+<tr><td>aSER</td><td align="center">87.5%</td><td align="center">78.5%</td><td align="center">75%</td></tr>
+</table>
+
+<p>Practically all the values decreased with human assessment, meaning that the error indexes were reduced. The consideration of various alternatives as acceptable leads to a greater yield of questions of reference for calculating <em>all references word error rate</em> and <em>all references sentence error rate</em>. The graphic display of the assessment values found with regard to the translations into Spanish from German (Figure 5) and from the French (Figure 6) for the automatic translators evaluated reveal that the error indexes per word (WER and aWER) were lower when the source language was French. </p>
+
+<div align="center"><img src="p450fig5.jpg" alt="Figure 5 : Comparison of overall values after human assessment (German-Spanish)" width="465" height="280" /></div>
+<div align="center"><br /><strong><em>Figure 5 : Comparison of overall values after human assessment (German-Spanish)</em></strong></div>
+<br /><br />
+<div align="center"><img src="p450fig6.jpg" alt="Figure 6: Comparison of values after human assessment (French-Spanish)" width="466" height="269" /></div>
+<div align="center"><strong><em>Figure 6: Comparison of values after
+human assessment (French-Spanish)</em></strong></div>
+
+<p>Likewise, the percentages derived from the errors per phrase, whether subjective (the <em>subjective sentence error rate</em> (sSER)) or automatic (the <em>sentence error rate</em> (SER) and the <em>all references sentence error rate</em> (aSER)), were lower for the translation from French than from German. One reason would be that these measures do not register any coincidence of words if the automatic translator has altered the word order with regard to the phrase of reference. </p>
+
+<p>We may also interpret the <em>word error rate</em> indicators depending on the kind of sentence or phrase. In the 200 phrases studied for each language, regardless of their length, it would be necessary to change, reorder, replace, or modify between four and six words of the string in order to achieve the ideal translation or equal the reference translation (Table 5).</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom">
+<br />
+<strong>Table 5: Average number of words that must be modified to arrive
+at the &ldquo;perfect&rdquo; translation</strong><br />
+</caption>
+<tr>
+<th>Edit Distance </th>
+<th>Google</th>
+<th>WorldLingo</th>
+<th>Promt</th>
+</tr>
+
+<tr>
+<td>GERMAN</td>
+<td align="center">4.29</td>
+<td align="center">5.85</td>
+<td align="center">5.57</td>
+</tr>
+<tr>
+<td>FRENCH</td>
+<td align="center">4.42</td>
+<td align="center">4.12</td>
+<td align="center">4.05</td>
+</tr>
+</table>
+
+<p>Evaluation of the error rate without taking into account the order of the terms within the phrase is reflected the <em>subjective sentence error rate</em> measure: when translating from German into Spanish, this error rate was greater than for French translated into Spanish. In other words, evaluations of the translations are better when the word order is overlooked. For French (Table 4), where grammatical similarity leads to a considerable reduction in error, the <em>Promt</em> translator offers the best results, followed by <em>Worldlingo</em>. However, when the phrases are translated from the German language, Google provides the best results in the automatic measurements (Table 3). The values are lower (better) for <em>Promt</em> than for <em>Google</em>, with <em>Worldlingo</em> taking last place. The fact that this measure relies on human assessment bears weight in the selection of the ideal online translator, since the main criterion to be upheld is the effectiveness of the resulting translation as input in a question-answering system.</p>
+
+<h3>Human evaluation of the translations</h3>
+
+<p>For the manual evaluation of the translations generated by automatic online translators, we applied the Likert scale (<a href="#ueb06">Uebersax 2006</a>), using six levels. We were thus able to reduce the excessive range of the classification method of Niessen <em>et al</em>. (<a href="#nie00">2000</a>), with its eleven levels, adopted by EvalTrans. Taking into account the finality of the translation, the assessment implied that errors such as the position of the elements in the string would not have to be penalized to the same degree as ambiguity, or the loss of some characteristic of the question (e.g., interrogative adverb, or the entity to which the question refers). The resulting assessments were zero when the phrase was totally incorrect and meaningless as a translation, and therefore useless as a question for input in a question-answering system; up to five when the phrase was considered <em>perfect</em>. These values were then used to calculate the indexes given below. </p>
+
+<p>The automatic evaluation compares the output with the reference sentence provided by the Cross-Language Evaluation Forum. First, we have a sample of 200 questions in Spanish and their French and German translations. The human evaluation is made without taking into account reference sentences to compare with the translator&rsquo;s output. The role of a professional human translator is to monitor the outputs of the three new online translators and rating on a scale of 0 to 5 if the new translation is suitable from a functional or operational standpoint and without relying on one or more reference phrases. On the other hand, these measurements were complemented automatically with manual evaluation, in which a professional human translator who works in these three languages, has assigned scores (from 0 to 5). to assess the quality of the translation of each one of the phrases in both language pairs. Also, it was possible to identify the different types of errors that occurred throughout the translation process. The manual evaluation was consistently higher than the phrases translated into Spanish and we should bear in mind that a functional criterion was taken into account in this study to determine the translation quality. Figures 5 and 6 show the results of this human assessment. </p>
+
+<p>As discussed in the section above, according to the <em>subjective sentence error rate</em> index, in the case of German, <em>Promt</em> (77%) is the best translator, followed by <em>Google</em> (with 90.2%). By contrast, when dealing with French, <em>Worldlingo</em> (53.7%) proved to be the best translator, although <em>Promt</em> (55.5%) had a very similar rating. According to the human assessment, the behaviour of the three online translators analysed is more irregular (presenting a greater standard deviation) in the case of the translations from French than for those from German (Table 6). The resulting values were lower for German but more homogeneous for French.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom">
+<br />
+<strong>Table 5: Standard deviation calculated over human assessments</strong><br />
+</caption>
+<tr>
+<th>&nbsp;</th>
+<th>Google</th>
+<th>WorldLingo</th>
+<th>Promt</th>
+</tr>
+
+<tr>
+<td>GERMAN-SPANISH</td>
+<td align="center">1.820</td>
+<td align="center">1.573</td>
+<td align="center">1.522</td>
+</tr>
+<tr>
+<td>FRENCH-SPANISH</td>
+<td align="center">2.010</td>
+<td align="center">2.132</td>
+<td align="center">2.136</td>
+</tr>
+</table>
+
+<p>Figure 6 shows the Bell curve and the normal distribution of the values found. Nevertheless, the irregularity of the translations from French is reflected in greater differences between the translators. In this sense, it is notable that <em>Worldlingo</em>, when translating from French (Figure 7), scores higher in the evaluation of its translations, with a mean value of 2: a nearly correct and quite consistent translation. This is seen in the asymmetric distribution tending toward the left, or lower values on the scale used. The normal distribution is almost fully centred, as in the case of the <em>Google Translator</em>; yet its values are much lower (Figures 7 and 8).</p>
+
+<div align="center"><img src="p450fig7.jpg" alt="Fig6 Distribution of the evaluations involving French" width="549" height="412" /></div>
+<div align="center"><br /><strong>Figure 7: Distribution of the evaluations involving French</strong></div>
+<br /><br />
+<div align="center"><img src="p450fig8.jpg" alt="Fig8" width="546" height="410" /></div>
+<div align="center"><br /><strong>Figure 8: Distribution of the evaluations involving German</strong></div>
+
+<h2>Conclusions</h2>
+
+<p>We studied the automatic online translators <em>Google Translator, Promt</em> and <em>Worldlingo</em>, applying different means of evaluation. Strictly automatic evaluation (in the absence of subjective assessment) was found to render high error indexes that are scarcely representative. </p>
+
+<p>Automatic translators are the most widely used resource for multilingual question-answering systems, followed by textual corpora and dictionaries (<a href="#ngu09">Nguyen <em>et al.</em> 2009</a>). Despite the problems of ambiguity and non-optimal quality of the texts (especially in case of restricted domain systems), automatic translators turn out to be one of the most economical and simple tools to integrate with these systems. However, while this is still the favorite tool of choice for developers, individually or in combination with other language resources, a tendency can be discerned in recent years to incorporate other resources. Indeed the language corpora are also useful, especially for question-answering multilingual systems in a specialized domain, since they are made by professional human translators.</p>
+ 
+<p>The textual corpora that are located on the Web with  pages available in several languages can overcome the problems of computational cost and storage, very common in this type of resource. Furthermore, the grammar and ambiguity problems have decreased the use of dictionaries as a resource for translation in question-answering systems; however, there is increased use of new resources such as ontologies, Wikipedia, databases, thesauri, multilingual lexico-semantic networks, such as <a href="http://www.illc.uva.nl/EuroWordNet/" target="_blank">EuroWordNet</a>, or tools such as computational grammars. Sometimes, a single application or tool is not complete enough to solve the problem of cross-lingual communication so that the use of several could offer better results. </p>
+
+<p>The error indexes from automatic evaluation are higher when the translation is from the German into Spanish, because the most frequently used measurements for evaluating translations use indicators that compare word-by-word, looking for the very same order of elements in the translation produced online as in the initial reference phrase. Therefore, the syntactic errors detected are more numerous because of basic grammatical differences between the source language (German) and the target language (Spanish). Also greater are the error indexes resulting from subjective assessment, as made here, owing to the capacities of the tools themselves in translating from German into Spanish. The grammatical similarities between French and Spanish tend to give a lower error index.</p>
+
+<p>Our findings identify <em>Promt</em> as the most reliable translator for both pairs of languages overall. However, an even more reliable option would be to use two different translators, depending on which of the two source languages is being used. In this case, the selected translators would be <em>Google Translator</em> or <em>Promt</em> for the German language and <em>Promt</em> for French.</p> 
+
+<p>At this point, evaluation measures for automatic translators need to be explored in greater depth in order to arrive at means that provide more flexible criteria (not strictly the dichotomy of exact match vs. not exact match) for assessing the translated phrase to be evaluated. This may be achieved using a larger set of lexical strings of reference, or by adjusting better to the order of the elements within the phrase, or even through some consideration of the roots and canonical forms, as well as the words with their complete flexive and identifying traits (exact match) . Improving the units of measure and techniques for automatic evaluation constitutes a research front which parallels the improvement of automatic translating systems themselves. Moreover, it would prove beneficial if the different tools now being used or developed for the evaluation of translations,  such as EvalTrans, and the various research studies undertaken were to use the same scale of human assessment. This would make it easier to introduce data and to quantify the measures applied by human assessments (such as the <em>subjective sentence error rate</em> measure). </p>
+
+<p>The translation mistakes of the interrogative particles identified in Table 2 vary according to the question and the online automatic translator used. The findings show that there is no direct relationship between the type of interrogative particle and the resulting error. It is worth noting, however, that the mismatch among automatic translators when they make an error indicates that the information stored in each online automatic translator could complement each another so as to improve their efficiency. </p>
+
+<p>Grammar can have an impact on meaning. For an instance in English, an apostrophe makes the contraction <em>it's</em>, which means <em>it is</em>, while the same three letters spell <em>its</em>, the possessive third person pronoun or adjective for <em>it</em>. The absence or presence of the apostrophe is not an option and changes the meaning of the word entirely and, therefore, an online translator should know the difference. In the same sense, a good automatic translator needs the set of rules that apply to the correct usage of a language. In our research, we have discovered that polysemous verbs in the target language lead to the wrong translation. This is the case of the verb <em>sein</em> in German or <em>&ecirc;tre</em> in French (<em>to be</em> in English) which has two possible meanings in Spanish, <em>ser</em> or <em>estar</em>. This polysemous situation could be solved with a syntactic analysis of the sentence. In this example, we could introduce a grammatical rule explaining that the verbs <em>sein</em> or <em>&ecirc;tre</em> can be translated as <em>estar</em> if there is any noun of location in the sentence. </p>
+
+<p>Finally, it bears mentioning here that although the quality of automatic online translations may be poor, the demand for this type of translation tool is widespread and growing, especially in the multilingual context of the Internet. Therefore, such services will be demanded to an increasing extent in the future and we should concentrate continuous effort on their improvement. In future studies our research team will follow this line deeper into the design of efficient and effective multilingual question-answering systems. </p>
+
+<h2>Acknowledgements</h2> 
+ 
+<p>We wish to thank the anonymous referees for their helpful comments.</p>
+
+<h2 id="author">About the authors</h2>
+
+<p> Lola Garc&iacute;a-Santiago is a Doctor of Documentation, University of Granada, where she works as Professor. At present she teaches at both the University School of Documentation and the School of Translation and Interpretation. She is also part of the associated unit of the SCImago research group, in Spain&rsquo;s Higher Council for Scientific Research (CSIC), where her lines of work and published articles focus mainly on Web-mining, Internet information retrieval, question-answering systems and gray literature. She can be contacted at <a href="mailto:mdolo@ugr.es">mdolo@ugr.es</a></p>
+
+<p>Mar&iacute;a-Dolores Olvera-Lobo holds a Ph.D. in Documentation and is full Professor in the Department of Communication and Documentation of the University of Granada and also teaches in the School of Translation and Interpretation. As member of the associated unit of the SCImago team, she participates in a number of research projects now under way and has authored or co-authored several books and numerous articles published in specialized journal. She can be contacted at <a href="molvera_ugr.es">molvera@ugr.es</a></p>
+
+<form action="#"> 
+<fieldset> 
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend> 
+
+ <ul>
+ <li id="abu05">Abusalah, M.,Tait, J. &amp; Oakes, M. (2005). Literature review of cross language information
+ retrieval. <em>Proceedings of World Academy of Science, Engineering and Technology</em>, <strong>4</strong>, 175-177.</li>
+ 
+ <li id="bel87">Belkin, N.J. &amp; Croft, W. B. (1987). Retrieval techniques. <em>Annual Review of Information Science and Technology</em>. <strong>22</strong> 109-146.</li>
+ 
+ <li id="blo56"> Bloom, B.S. &amp; Krathwohl, D.R. (1956). Taxonomy of educational objectives: the classification of educational goals, by a committee of college and university examiners. Handbook 1: Cognitive domain. New York, NY: Longmans.</li>
+
+ <li id="bos06">Bos, J.  &amp; Nissim, M. (2006). <a href="http://www.webcitation.org/5uJHOlGWR">Cross-lingual question answering by answer translation.</a> In C. Peters (Ed.), <em>Working Notes for the CLEF 2006 Workshop, 20-22 September, Alicante, Spain.</em>   Retrieved 17 November, 2010 from http://www.clef-campaign.org/2006/working_notes/workingnotes2006/bosCLEF2006.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5uJHOlGWR)</li>
+ 
+ <li id="cha03">Chang Y., Xu H.B. &amp; Bai, S. (2003). <a href="http://www.webcitation.org/5uJIJ2aEx">
+TREC 2003 question answering track at CAS-ICT.</a> In . M. Voorhees and Lori P. Buckland (Eds.). <em>The Twelfth Text Retrieval Conference (TREC 2003), Gaithersburg, Maryland.</em>  (pp. 147-151). Retrieved 17 November, 2010 from http://trec.nist.gov/pubs/trec12/papers/chinese-acad-sci.qa.final.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5uJIJ2aEx)</li>
+
+<li id="clo06">Clough, P., M&uuml;ller, H., Deselaers, T., Grubinger, M., Lehmann, T., Jensen, J. &amp; Hersh, W. (2006). The CLEF 2005 cross-language image retrieval track. In C. Peters, F.C. Gey, J. Gonzalo, H. M&uuml;ller, G.J.F. Jones, M. Kluck, <em>et al.</em>  (Eds.), <em>Accessing Multilingual Information Repositories. 6th Workshop of the Cross-Language Evaluation Forum, CLEF 2005, Vienna, Austria, 21-23 September, 2005, </em>, (pp. 535-557). Berlin, Heidelberg: Springer-Verlag. (Lecture Notes in Computer Science, 4022)</li>
+
+<li id="clo04">Clough,  P., M&uuml;ller, H. &amp;  Sanderson, M. (2005), (2004). The CLEF cross-language image retrieval track (ImageCLEF) 2004. In P. Enser, Y. Kompatsiaris, N. E. O'Connor, A. F. Smeaton &amp; A.W.M. Smeulders,  (Eds.). <em>Proceedings of the third International Conference Image and Video Retrieval (CIVR) 2004, Dublin, Ireland, July 21-23, 2004.</em>  (p. 2066.)  Berlin, Heidelberg: Springer-Verlag. (Lecture Notes in Computer Science, 3115)</li>
+
+<li id="cle08">Cross-Language Evaluation Forum. (2008). <a href="http://www.webcitation.org/5utnRpnH0">Guidelines for the participants in QA@CLEF 2008</a>.  Retrieved 19 November 2010 from http://clef-qa.fbk.eu/2008/download/QA@CLEF08_Guidelines-for-Participants_new.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5utnRpnH0) </li>
+ 
+<li id="dab02">Dabbadie, M., Hartley A., King M., Miller K.J., Mustafa El Hadi W., Popescu-Belis A. <em>et al.</em> (2002). A hands-on study of the reliability and coherence of evaluation  metrics. In M. King, (Ed.). <em><a href="http://www.webcitation.org/5utoE1adF">Workbook of the LREC 2002 Workshop on Machine Translation Evaluation: Human Evaluators Meet Automated Metrics. Las Palmas de Gran Canaria, Spain, 27 May 2002</a></em>, (pp.8-16). Retrieved 18 november 2010 http://www.mt-archive.info/LREC-2002-WS-MTEval.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5utoE1adF)</li>
+ 
+ <li id="for05"> Forehand, M. . (2005).  <a href="http://www.webcitation.org/5utoUtcPJ">Bloom's taxonomy: original and revised</a>. In M. Orey (Ed.), <em>Emerging perspectives on learning, teaching and technology.</em> Athens, GA: University of Georgia.  Retrieved 8 March, 2010 from http://www.coe.uga.edu/epltt/bloom.htm. (Archived by WebCite&reg; at http://www.webcitation.org/5utoUtcPJ)</li>
+
+<li id="gar05">Garc&iacute,a Cumbreras, M. ., Ure&ntilde;a L&oacute;pez, L.A., Mart&iacute;nez Santiago, F., Montejo Raez, A. (2005). <a href="http://www.webcitation.org/5uvGZxOCU">B&uacute,squeda de respuestas multiling&uuml,e: clasificaci&oacute,n de preguntas en espa&ntilde,ol  basadas en aprendizaje [Multilingual question-answering: classification learning-based of questions in Spanish] </a>. Procesamiento del lenguaje  natural. No. 34, 31-40. Retrieved  18 November, 2010 from
+ http://www.sepln.org/revistaSEPLN/revista/34/03.pdf (Archived by Webcite&reg; at http://www.webcitation.org/5uvGZxOCU) </li>
+
+<li id="gou06"> Goutte, C. (2006). <a href="http://www.webcitation.org/5uvH3utpE">Automatic evaluation of machine translation quality</a>. Presentation at the European Community, Xerox Research Centre Europe, on January 27 2006, Meylan, France. Retrieved 8 March 2010 from http://www.xrce.xerox.com/content/download/6980/52379/file/MTeval.pdf (Archived by Webcite&reg; at http://www.webcitation.org/5uvH3utpE)</li>
+
+<li id="gru09">Grunwald, D. (2009).
+<a href="http://www.webcitation.org/5v4nmRnD7">Worldlingo fights to stay on top of Internet translation market niche </a>.<em>GTS Blog</em>. http://blog.gts-translation.com/2009/08/17/worldlingo-fights-to-stay-on-top-of-internet-translation-market-niche/ (Archived by WebCite&reg; at http://www.webcitation.org/5v4nmRnD7) </li>
+
+<li id="gru09">Grunwald, D. (2009). <a href="http://www.webcitation.org/5uL9r3xIg/">Worldlingo fights to stay on top of Internet translation market niche </a>.<em>GTS Blog</em>. http://blog.gts-translation.com/2009/08/17/worldlingo-fights-to-stay-on-top-of-internet-translation-market-niche/ (Archived by Webcite&reg; at http://www.webcitation.org/5uL9r3xIg ) </li>
+
+ <li id="hal07">Hallet, C., Scott, D &amp;Power, R. (2007). Composing questions through conceptual
+ authoring. <em>Computational Linguistics</em>, <strong>33</strong>(1) 105-133.</li>
+ 
+<li id="her01">Hermjakob, U. (2001). <a href="http://www.webcitation.org/5uL9vd9zX"> Parsing and question classification for question answering.</a>   In <em>Proceedings of the Workshop on Open-Domain Question Answering at Annual Meeting of the Association for Computational Linguistics (ACL) 2001</em>, Volume 12, (pp. 1-6). Stroudsburg, PA: Association for Computational Linguistics. Retrieved 18 November 2010. http://www.isi.edu/~ulf/papers/acl01-qa-parsing.pdf (Archived by Webcite&reg; at http://www.webcitation.org/5uL9vd9zX) </li>.
+
+<li id="kis07">Kishida, K., Chen, K., Lee, S., Kuriyama, K., Kando, N. &amp; Chen, H. (2007). <a href="http://www.webcitation.org/5uLBOzqkn">Overview of cross-lingual information retrieval (CLIR) task at the Sixth NTCIR Workshop</a>. In <em>Proceedings of NII Test Collection for IR Systems (NTCIR) 6 Workshop Meeting, June 15–18</em>.  Tokyo: National Institute for Informatics.  Retrieved 18 November 2010 from http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings6/NTCIR/79.pdf (Archived by Webcite&reg; at http://www.webcitation.org/5uLBOzqkn) </li>
+ 
+<li id="lin03"> Lin, C.Y. &amp;  Hovy, E. (2003). <a href="http://www.webcitation.org/5uvHEaPBz">Automatic  evaluation of summaries using N-gram  co-occurrence statistics</a>. In <em>Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language Technology - Volume 1 (NAACL '03) Edmonton, May-June 2003</em>. Volume 1 (NAACL '03), (pp. 71-78).  Stroudsburg, PA: Association for Computational Linguistics.  Retrieved 8 March 2010 from http://acl.ldc.upenn.edu/N/N03/N03-1020.pdf (Archived by Webcite&reg; at http://www.webcitation.org/5uvHEaPBz)</li>
+ 
+ <li id="lop04">L&oacute;pez-Ostenero, F.,Gonzalo, J. &amp;Verdejo, F. (2004). B&uacute;squeda de informaci&oacute;n multiling&uuml;e: estado del arte. [Multilingual information searching:state of art]  <em>Inteligencia Artificial, Revista Iberoamericana de Inteligencia Artificial</em>. <strong>8</strong>(22), 11-35.</li>
+ 
+ <li id="ngu09">Nguyen, D., Overwijk,  A., Hauff, C., Trieschnigg, D. R.B., Hiemstra, D. &amp;  de Jong, F.M.G. (2009). WikiTranslate: query translation for cross-lingual information retrieval using only Wikipedia. In C. Peters, Th. Deselaers, N. Ferro, J. Gonzalo, G.J.F. Jones, M. Kurimo, <em>et al.</em>  (Eds.). <em>Evaluating Systems for Multilingual and Multimodal Information Access. Proceedings of the 9th Workshop of the Cross-Language Evaluation Forum, CLEF 2008, Aarhus, Denmark, September 17-19, 2008.</em> (pp. 58-65). Berlin, Heidelberg: Springer-Verlag. (Lecture Notes in Computer Science, 5706)</li>
+ 
+<li id="nie00">Niessen, S., Och, F.J., Leusch, G. &amp; Ney, H. (2000). <a href="http://www.webcitation.org/5uMd0IGCE">An evaluation tool for machine translation: fast evaluation for MT research</a>. In  <em>Proceedings of the 2nd International Conference on Language Resources and Evaluation (LREC-2000), Athens, Greece, May-June 2000</em>. (pp. 39-45). Paris: European Language Resources Association.  Retrieved 5 May 2008 from http://www.mt-archive.info/LREC-2000-Niessen.pdf (Archived by Webcite&reg; at http://www.webcitation.org/5uMd0IGCE)</li>
+
+  <li id="oar98">Oard, D. W. &amp; Diekema, A.R. (1998). Cross-language information retrieval. <em>Annual
+ Review of Information Science and Technology</em>, <strong>33</strong>, 223-256.</li>
+ 
+ <li id="oar08">Oard, D. W., He, D. &amp; Wang, J. (2008). User-assisted query translation for interactive cross-language information retrieval. <em>Information Processing &amp; Management</em>,
+ <strong>44</strong>(1) 181-211.</li>
+ 
+<li id="per04"> P&eacute;rez, A., Gonz&aacute;lez, J.,  Casacuberta, F. &amp; Torres, I. (2004). <a href="http://www.webcitation.org/5uvHQwbSL">Traducci&oacute,n autom&aacute,tica mediante  transductores estoc&aacute,sticos de estados finitos basados en gram&aacute,ticas  k-explorables
+</a>. [Automatic translation by finite state stochastic transductors based on k-testable grammars]. In E. Sanchis Arnal,  (Ed.). Actas de las III Jornadas en Tecnolog&iacute;as del Habla, Techabla, Valencia, Noviembre 2004. (pp. 207-213). Retrieved 19 November 2010 from http://lorien.die.upm.es/~lapiz/rtth/JORNADAS/III/actas3JTH.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5uvHQwbSL)</li>
+ 
+<em> <li id="slo05">Sloman, A. (2005). <em><a href="http://www.webcitation.org/5uMiAXuPG">Towards an ontology for factual questions</a>.</em>  Birmingham, UK: Birmingham University. [Incomplete draft notes (Part of CoSy deliverable DR.02.01: Requirements study for representation)].  Retrieved 11 December, 2010 from http://www.cs.bham.ac.uk/~axs/misc/question-ontology.pdf (Archived by Webcite&reg; at ) </li></em> 
+
+ <li id="sok09"> Sokolova, S. (2009).  <em><a href="http://www.webcitation.org/5uJS8YAho">How the computer translates.</a></em> St. Petersburg, Russia: PROMT Ltd.  Retrieved 17 November, 2010 from http://www.promt.com/company/technology/pdf/e_how_computer_translates_sokolova.pdf     (Archived by WebCite&reg; at http://www.webcitation.org/5uJS8YAho)</li>
+
+<li id="til97">Tillman, C., Vogel, S., Ney, H. &amp; Zubiaga, A.  (1997). A DP based search using monotone alignments in statistical translation.  In  <em>Proceedings of the 35th Annual  Meeting of the Association for Computational Linguistics and Eighth Conference of the European Chapter of the Association for Computational Linguistics, Madrid, Spain, July 1997</em>.   (pp. 289-296). Stroudsburg, PA  Association for Computational Linguistics.</li>
+ 
+<li id="tom03">Tom&aacute,s, J.,  Mas, J.A. &amp; Casacuberta, F. (2003). <a href="http://www.webcitation.org/5uO4C88Ai">A
+ quantitative method for machine translation evaluation</a>. In <em>Proceedings of the Euoropean Association of Computational Linguistics Workshop on Evaluation initiatives in NLP: are evaluation methods, metrics and resources reusable?, Budapest, Hungary.</em>  (pp. 27-34). Stroudsburg, PA: Association for Computational Linguistics. Retrieved 20 November 2010 from http://www.aclweb.org/anthology-new/W/W03/W03-2804.pdf (Archived by Webcite&reg; at http://www.webcitation.org/5uO4C88Ai) </li> 
+
+<li id="tur01"> Turpin, A.H. &amp; Hersh, W. (2001) <a href="http://www.webcitation.org/5uvGqzSJB">Why  batch and user evaluations do not give the same results</a> In <em>Proceedings of the 24th Annual International ACM SIGIR Conference on Research &amp; Development on Information Retrieval, September 9-12, 2001, New Orleans, Louisiana, USA.</em> (pp. 225-231). New York, NY: ACM Press.  Retrieved 20 November 2010  from http://www.seg.rmit.edu.au/research/download.php?manuscript=266 (Archived by Webcite&reg; at http://www.webcitation.org/5uvGqzSJB) </li>
+
+<li id="ueb06">Uebersax, J.S. (2006). <a href="http://www.webcitation.org/5uO7Qr2vU">Likert scales: dispelling the confusion</a>. Retrieved 10 November, 2010 from http://www.john-uebersax.com/stat/likert.htm (Archived by Webcite&reg; at http://www.webcitation.org/5uO7Qr2vU)</li>
+
+  <li id="uef07">Ueffing, N. &amp; Ney, H. (2007). Word-level confidence estimation for machine translation. <em>Computational Linguistics</em>, <strong>33</strong>(1), 9-40.</li>
+ 
+<li id="vid97">Vidal, E. (1997).  Finite-states speech-to-speech translation. In <em>Proceedings of the 1997 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP '97), Munich, Germany.</em>. Volume 1  (p. 111). Washington, DC: IEEE Computer Society.</li>
+ 
+ <li id="voo00">Voorhees, E.M.  &amp; Harman, D. (2000). Overview of the Sixth Text REtrieval Conference (TREC-6). <em>Information Processing &amp; Management</em>, <strong>36</strong>(1), 3-35.</li>
+ </ul>
+  </fieldset> 
+</form> 
+ 
+ 
+<form action="#"> 
+<fieldset> 
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">How to cite this paper</legend> 
+<div><br /> 
+Garc&iacute;a-Santiago, L &amp; Olvera-Lobo, M. D.(2009). &quot;Analysis of automatic
+translation of questions for question-answering systems&quot; <em>Information
+Research</em>, <strong>15</strong>(4)
+paper 450. [Available at http://InformationR.net/ir/15-4/paper450.html]</div> 
+</fieldset> 
+</form> 
+ 
+<table cellspacing="10" align="center"> 
+	<tr> 
+		<td colspan="3" align="center" style="background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr> 
+	<tr> 
+		<td align="center" valign="top"> 
+ 
+<form method="get" action="http://scholar.google.com/scholar" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;automatic translation&quot; &quot;question answering&quot;"></input> <br /> 
+<input type="submit" name="sa" value="Scholar Search" style="font-size: small; font-family: Verdana; font-weight: bold;"></input> 
+<input type="hidden" name="num" value="100"></input>					</td> 
+				</tr> 
+			</table> 
+</form>		</td> 
+		<td align="center" valign="top"> 
+<!-- Search Google --> 
+ 
+<form method="get" action="http://www.google.com/custom" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;automatic translation&quot; &quot;question answering&quot;"></input><br /> 
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input> 
+<input type="hidden" name="client" value="pub-5081678983212084"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+ 
+<input type="hidden" name="ie" value="ISO-8859-1"></input> 
+<input type="hidden" name="oe" value="ISO-8859-1"></input> 
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input> 
+<input type="hidden" name="hl" value="en"></input>					</td> 
+				</tr> 
+			</table> 
+</form></td> 
+<td align="center" valign="top"> 
+<form method="get" action="http://www.live.com/" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+ 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;automatic translation&quot; &quot;question answering&quot;"></input> <br /> 
+<input type="submit" name="sa" value="Windows Live" style="font-size: small; font-family: Verdana; font-weight: bold;"></input> 
+<input type="hidden" name="num" value="100"></input>					</td> 
+				</tr> 
+			</table> 
+</form>	</td> 
+	</tr> 
+</table> 
+ 
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> --> 
+<div align="center"> 
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo" /> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a></div> 
+
+ <hr size="1" style="color: #5E96FD;" /> 
+<table align="center" cellpadding="10"> 
+<tr><td align="center" valign="top"><div>  <a href="http://www.digits.com/" target="_blank">
+    <img src="http://counter.digits.com/?counter={383421e6-dd6a-5b74-a545-a3c1b1e529c2}&amp;template=simple" 
+     alt="Hit Counter by Digits" border="0"  />
+  </a>
+</div></td> 
+ 
+<td align="center" valign="top"><div> 
+&copy; the authors 2010. <br />Last updated: 11 December 2010
+</div></td> 
+ 
+ <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START--> 
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID: 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+--> 
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'> 
+<script type="text/javascript"> 
+<!--
+function OneStat_Pageview()
+{
+var d=document;
+var sid="281971";
+var CONTENTSECTION="";
+var osp_URL=d.URL;
+var osp_Title=d.title;
+var t=new Date();
+var p="http"+(d.URL.indexOf('paper450.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+p+="&url="+escape(osp_URL);
+p+="&ti="+escape(osp_Title);
+p+="&section="+escape(CONTENTSECTION);
+p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+p+="&tz="+escape(t.getTimezoneOffset());
+p+="&ch="+escape(t.getHours());
+p+="&js=1";
+p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+if(typeof(screen)=="object"){
+ p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+ p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+}
+d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+ 
+OneStat_Pageview();
+//--> 
+</script> 
+<noscript> 
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a> 
+</noscript> 
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div> 
+<!--ONESTAT SCRIPTCODE END--></td></tr> 
+</table> 
+<hr size="3" style="color: #5E96FD;" /> 
+ 
+<table align="center"><tr><td><div class="button"> 
+ 
+
+<ul>
+	<li><a href="infres154.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul> 
+
+</div></td></tr></table> 
+ 
+ <hr size="3" style="color: #5E96FD;" /> 
+ 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
+</script> 
+<script type="text/javascript"> 
+_uacct = "UA-672528-1";
+urchinTracker();
+</script> 
+</body> 
+
+<!-- Mirrored from informationr.net/ir/15-4/paper450.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:23 GMT -->
+</html> 

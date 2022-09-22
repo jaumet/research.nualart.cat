@@ -1,0 +1,969 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from informationr.net/ir/11-3/paper257.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:21 GMT -->
+<head><title>Untitled</title>
+
+
+
+	
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><meta name="dc.title" content="No bad web pages: reader empowerment and the Web"><meta name="dc.creator" content="Terrence A. Brooks"><meta name="dc.subject" content="Greasemonkey, user scripting, bottom-up web"><meta name="dc.description" content="Background  User scripting heralds a paradigm shift towards web reader empowerment. Powerful web writers of the first decade of the Web needed to be cautioned about usability and accessibility issues. As power shifts to web readers, they become capable of customizing web pages to their own tastes and purposes. This paper describes the development of Greasemonkey extension of the Firefox browser. Argument   User scripting is a product of the development of the open source browser, and individual developers who wish to change webpages. The Greasemonkey extension of the Firefox browser permits web readers to write JavaScripts that (1) Change the look and feel of Web pages, (2) Change the functionality of web page controls, and (3) Facilitates Web page 'mashups', hybrid web presentations composed of content from two or more web pages. The only naturally occurring limit to web page modification may be difficult Web page source code. Tools that shield Web readers from the complexity of HTML are being introduced.  Conclusion  The paradigm shift to Web readers, armed with powerful and easy-to-use tools for customizing Web pages heralds a new era of the Web. It threatens the idea that a Web page has a single look and feel, and emphasizes the trend to design Web pages as mere input to the reading experience, subject to modification of presentation device as well as reader taste and purpose."><meta name="dc.subject.keywords" content="Greasemonkey, user scripting, bottom-up web"><meta name="dc.subject" content="Surveys the development of user scripting with Greasemonkey, an extension of the Firefox browser"><meta name="rating" content="mature"><meta name="vw96.objecttype" content="document"><meta name="robots" content="all"><meta name="dc.publisher" content="Professor T.D. Wilson"><meta name="dc.coverage.placename" content="global"><meta name="dc.type" content="text"><meta name="dc.identifier" scheme="ISSN" content="1368-1613"><meta name="dc.identifier" scheme="URI" content="paper257.html"><meta name="dc.relation.IsPartOf" content="infres113.html"><meta name="dc.format" content="text/html"><meta name="dc.language" content="en"><meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/"><link rel="stylesheet" type="text/css" href="paper257_files/IRStyle.css" media="all"></head><body onload="pageSequence()">
+<!--Ignore the following tags, which will be completed by the Editor-->
+
+<!-- Default stylesheet -->
+
+
+<!-- JavaScript -->
+<script type="text/javascript">
+
+	var totalScreens; // Count of screens
+	var i; // Current screen displayed
+	var flag;  // Flag for font change
+	
+	i = '1'; // Initialize to first screen
+	flag = true;  // Initialize font flag
+
+	// Brooks' JavaScript additions for
+	//  button only in this paper
+	
+	function showJavascript() {
+	var e = document.getElementById("javascript");
+	e.style.display = "block";
+	}
+	function hideJavascript() {
+	var e = document.getElementById("javascript");
+	e.style.display = "none";
+	}
+	
+</script>
+
+<!-- JavaScript functions -->
+<script type="text/javascript" src="paper257_files/IRPageScript.js"></script>
+
+
+
+<!------ Div and button for displaying bibliographic references -->
+<div id="refDisplay">
+<p id="ref"></p>
+<center><input value="Hide" onclick="doHideRef()" type="button"></center>
+</div>
+
+
+<!-- Image bar at top of page -->
+<div class="imageSet">
+
+<img src="paper257_files/wilsonDarkBlue_02.gif"  id="frontPage"  class="floatedImageLeft" onmouseover="switchImg('frontPage','paper257_files/wilsonLightBlue_02.gif')" onmouseout="switchImg('frontPage','paper257_files/wilsonDarkBlue_02.gif')" onclick="showTitlePage()">
+
+<img src="paper257_files/wilsonDarkBlue_03.gif" id="contents"  class="floatedImageLeft" onmouseover="switchImg('contents','paper257_files/wilsonLightBlue_03.gif')" onmouseout="switchImg('contents','paper257_files/wilsonDarkBlue_03.gif')" onclick="showContents()">
+
+
+<img src="paper257_files/wilsonDarkBlue_04.gif" id="IRHome"  class="floatedImageLeft" onmouseover="switchImg('IRHome','paper257_files/wilsonLightBlue_04.gif')" onmouseout="switchImg('IRHome','paper257_files/wilsonDarkBlue_04.gif')" onclick="goHome()">	
+
+<img src="paper257_files/wilsonDarkBlue_05.gif" class="floatedImageLeft"> 
+	
+<span class="floatedSpanLeft">
+<img src="paper257_files/darkBlue_06.gif"><br>
+
+<img id="printer" src="paper257_files/darkBlue_09.gif" onmouseover="switchImg('printer','paper257_files/lightBlue_09.gif')" onmouseout="switchImg('printer','paper257_files/darkBlue_09.gif')" onclick="doPrintVersion()"><br>
+
+
+<img id="refs" src="paper257_files/darkBlue_10.gif"  onmouseover="switchImg('refs','paper257_files/lightBlue_10.gif')" onmouseout="switchImg('refs','paper257_files/darkBlue_10.gif')" onclick="showReferences()"><br>
+
+
+<img id="fontChange" src="paper257_files/darkBlue_11.gif"  onmouseover="switchImg('fontChange','paper257_files/lightBlue_11.gif')" onmouseout="switchImg('fontChange','paper257_files/darkBlue_11.gif')" onclick="handleFont()">
+</span>
+
+
+<img id="prevPage" src="paper257_files/darkBlue_07.gif" class="floatedImageLeft" onmouseover="switchImg('prevPage','paper257_files/lightBlue_07.gif')" onmouseout="switchImg('prevPage','paper257_files/darkBlue_07.gif')" onclick="doPrevious()">
+
+<img id="nextPage"  src="paper257_files/darkBlue_08.gif" class="floatedImageLeft" onmouseover="switchImg('nextPage','paper257_files/lightBlue_08.gif')" onmouseout="switchImg('nextPage','paper257_files/darkBlue_08.gif')" onclick="doNext()">
+<br clear="all">
+</div>
+
+<!-- Main text sequence -->
+
+<div id="readerPage">
+
+<div style="display: block;" id="1">
+<!-- Title of article -->
+<h1 align="center">No bad web pages:<br>reader empowerment and the Web</h1>
+<h4 align="center">
+<a href="mailto:tabrooks@u.washington.edu">Terrence A. Brooks</a><br>
+Information School, University of Washington<br>
+Seattle, WA 98195 USA<br>
+</h4>
+<br>
+
+
+<div align="center"><b>Abstract</b></div>
+<blockquote>
+<strong><em>Background</em></strong>&nbsp;&nbsp;User scripting heralds
+a paradigm shift towards web reader empowerment. Powerful web writers
+of the first decade of the Web needed to be cautioned about usability
+and accessibility issues. As power shifts to web readers, they become
+capable of customizing web pages to their own tastes and purposes. This
+paper describes the development of Greasemonkey extension of the
+Firefox browser.<br>
+<strong><em>Argument</em></strong>&nbsp;&nbsp; User scripting is a
+product of the development of the open source browser, and individual
+developers who wish to change webpages. The Greasemonkey extension of
+the Firefox browser permits web readers to write JavaScripts that (1)
+Change the look and feel of Web pages, (2) Change the functionality of
+web page controls, and (3) Facilitates Web page "mashups", hybrid web
+presentations composed of content from two or more web pages. The only
+naturally occurring limit to web page modification may be difficult Web
+page source code. Tools that shield Web readers from the complexity of
+HTML are being introduced.<br>
+<strong><em>Conclusion</em></strong>&nbsp;&nbsp;The paradigm shift to
+Web readers, armed with powerful and easy-to-use tools for customizing
+Web pages heralds a new era of the Web. It threatens the idea that a
+Web page has a single look and feel, and emphasizes the trend to design
+Web pages as mere input to the reading experience, subject to
+modification of presentation device as well as reader taste and
+purpose.
+</blockquote>
+</div>
+
+<div style="display: none;" id="2">
+<h2>A note about the paper</h2>
+<blockquote>This paper is an experiment in the presentation on-screen
+of the scientific paper. In spite of the continuing popularity of the
+printed page, more and more people are reading material on computer
+screens and this is an attempt to implement the idea of 'screen
+rhetoric', the notion that text intended to be read from the screen
+needs to be presented differently from that intended to be read on the
+printed page.<br><br>
+Please explore the way the paper is presented and let <a href="mailto:tabrooks@u.washington.edu">the author</a> and <a href="wilsontd_gmail.com">myself</a>
+have your feedback on your reactions. Do you enjoy reading this way, or
+hate it? Are there features you would like to see added or bits and
+pieces you could do without? Can you think of a way to do it better?
+Any and all comment will be collected and presented on a Web page
+linked to the paper and the more (useful) comment we have, the better.
+<br><br>
+Prof. Tom Wilson, Editor-in-Chief
+</blockquote>
+</div>
+
+<div style="display: none;" id="3">
+<h2>Who controls Web text?</h2>
+
+<p>Commentaries on the creation of digital text suggest that there is
+an asymmetric power relationship between Web readers and writers.
+Generally, powerless readers must suffer with what they are given,
+while writers are urged to be sympathetic to readers' needs.</p>
+
+<ul>
+
+<li>Poor documents are so commonplace that deciphering bad writing and
+bad visual design have become part of the coping skills needed to
+navigate in the so-called information age. But bad document design is
+not inevitable. (<span class="ref" onclick="showRef('schriver')">Schriver</span> 1997: xxiii)</li>
+
+<li>It will take time and effort to identify the optimum forms of
+electronic text. Currently, designers lack the expertise and
+experiences that have evolved with paper text and the present work
+seeks to contribute to the increased research and development effort on
+this front. (<span class="ref" onclick="showRef('dillon')">Dillon</span> 1994: 2)</li>
+
+<li>This year's list of top problems clearly proves the need to get
+back to Web design basics. There's much talk about new fancy 'Web 2.0'
+features on the Internet industry's mailing lists and Websites, as well
+as at conferences. But users do not care about technology and do not
+especially want new features. They just want quality improvements in
+the basics. (<span class="ref" onclick="showRef('nielsen10305')">Nielsen</span> October 3, 2005)</li>
+</ul>
+
+<p>The impression that readers are powerless derives from a book
+culture where readers were unable to customize ink and paper to suit
+their individual tastes and purposes. Paper books and Web pages,
+however, are not technically analogous. Books are products of an
+industrial process of printing generally beyond the control of readers,
+while Web pages are digital presentations created by the reader's own
+Web browser. The moment of publication of a Web page is immediate, and
+the locus of publication is at hand. By seizing control of the browser
+running in their own computers, Web readers can modify Web pages. This
+heralds a paradigm shift of empowered readers who will customize Web
+pages according to their tastes and purposes.</p>
+
+<p>Customization of Web presentation by user scripting was a product of
+the development of the open-source browser, which provided pioneering
+developers a chance to target certain Web pages for customization.
+</p>
+</div>
+
+<div style="display: none;" id="4">
+<h2>The browser wars of the 1990s</h2>
+
+<p>Netscape Navigator, the first Web browser, appeared in 1994 and was
+an enormous success. With the rapid growth of the Web, Web browsers
+appeared to be strategic applications with the potential to direct Web
+traffic, place advertising and promote the use of proprietary software.
+Internet Explorer, Microsoft's browser, originally shipped as the
+Internet Jumpstart Kit in Microsoft Plus! For Windows 95. (<span class="ref" onclick="showRef('ieHistory')">Internet Explorer history</span> June 30, 2003)</p>
+
+<p>The browser wars during the late 1990s were a struggle between Internet Explorer and Netscape Navigator.</p>
+
+
+
+<blockquote>The wars effectively ended in 1998 when it became clear
+that Netscape's declining market share trend was irreversible...
+Netscape responded by open sourcing its product, creating Mozilla... In
+2004, Firefox 1.0 was released. &nbsp;&nbsp; Wikipedia, <em><span class="ref" onclick="showRef('wiki_browser')">Web browser</span></em></blockquote>
+
+<p>Open sourcing an application gives it to the Web community where
+volunteers may continue its development. Open sourcing also reflects
+the belief that perhaps some creative spirit outside the commercial
+mainstream may extend the application in new and unexpected directions.</p>
+</div>
+
+
+<div style="display: none;" id="5">
+<h2>Writers dominate the top-down Web</h2>
+
+<p>Controlling the Web browser is valuable if the Web is a publishing
+or advertising channel that can reliably place content before potential
+consumers. In long-established publishing and advertising channels,
+such as magazines, radio and television, readers have little control
+over the information placed before them. For example, the reader of a
+magazine has no power to modify or block an advertisement that s/he
+might happen upon by turning a page. Web readers in the 1990s were in a
+similarly weak position, armed with only modest browser modifications
+such as changing font size, background color or resizing the browser
+window.</p>
+
+<p>The pop-up controversy in the early 2000s illustrates the
+asymmetrical power relationship between writers and readers in the
+top-down Web (e.g. <span class="ref" onclick="showRef('onlineAds')">Online ads get in your face</span>
+June 13, 2001). With a decline in advertising revenue from banner
+advertisements, Web pages began to feature pop-ups and pop-unders to
+produce a higher click rate (Wikipedia, <em>"<span class="ref" onclick="showRef('wiki_popUp')">Pop-up ad</span>"</em>).
+Pop-ups are designed to react to reader events such as opening a
+window, closing a window, returning to an earlier Web page, and so on.
+Carried to an abusive extreme by some pornography Websites, Web readers
+could be trapped by a seemingly infinite series of pop-ups, effectively
+anchoring them to a Website despite their efforts to escape. The outcry
+against such reader abuse resulted in a number of add-ons to Web
+browsers that blocked pop-ups. In 2004 Microsoft added pop-up blocking
+to Internet Explorer. </p>
+
+<p>The emergence of 'usability' as one of the signature issues of the
+top-down Web indicates that Web readers had little power to block
+content or modify the functionality of Web pages, but had to rely on
+caring Web writers:
+</p>
+<ul>
+	<li><em>Usability</em>. A considerable literature counselled Web
+writers how to write Web pages useful to Web readers. Jakob Nielsen
+reflected on the meaning of usability: 'On the one hand, it's a quality
+assurance methodology that tells you what works and what doesn't work
+in the field of user experience. On the other hand, usability is a
+belief system that aims to ensure human mastery of the constructed
+environment'. (<span class="ref" onclick="showRef('nielsen2705')">Nielsen</span>
+June 27, 2005). This last comment could be interpreted as an admonition
+to Web writers to create Web pages that fostered the belief that <em>they</em> -- the Web readers -- were masters of the Web content placed before them.</li>
+	<li><em>Accessibility</em>: The World Wide Web Consortium sponsors a <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a> to promote accessibility of the Web for readers regardless of disabilities such as color blindness, and so on.</li>
+</ul>
+</div>
+
+<div style="display: none;" id="6">
+<h2>The architectural irony of the top-down Web</h2>
+
+<p>It is an irony that all Web pages, even the ones with repugnant
+content or coersive behaviour that readers would otherwise seek to
+avoid, are constructed on the Web readers' own machines. Common
+parlance suggests that a Web server sends 'Web pages' to a client
+browser as if these were inviolable containers of information that the
+reader's browser can only passively present. In reality, the Web server
+sends a variety of Web-page components such as hypertext markup files,
+image files, sound files, style sheet files, JavaScript files, and so
+on to the browser. The layout engine of the browser parses the
+hypertext markup, applies style sheets, and runs any scripts to create
+the artifact that readers recognize as a Web page.</p>
+
+<blockquote>Basically, a layout engine takes content (such as HTML,
+XML, image files, applets, and so on) and formatting information (such
+as Cascading Style Sheets, hard-code HTML tags, etc.) and displays the
+formatted content on the screen. It 'paints' the browser's content
+area, which is the blank area inside the browser window's
+'chrome'.&nbsp;&nbsp;<span class="ref" onclick="showRef('mozilla')">FAQ, nglayout project/gecko layout engine</span> </blockquote>
+
+<p>The fundamental enabler of Web-reader empowerment is the local
+construction of Web pages. By seizing control of the Web-page
+construction process running inside their own machines, Web readers can
+redress the power inequity of the top-down Web. </p>
+</div>
+
+<div style="display: none;" id="7">
+<h2>The development of an extensible browser</h2>
+
+<p>In 2004 Mozilla Firefox 1.0 was released. Firefox is an open-source
+Web browser designed to be extended by its development community.</p>
+
+<blockquote>
+Extensions are small add-ons that add new functionality to Firefox.
+They can add anything from a toolbar button to a completely new
+feature. They allow the application to be customized to fit the
+personal needs of each user if they need additional features, while
+keeping Firefox small to download.&nbsp;&nbsp; <em><span class="ref" onclick="showRef('FF_extensions')">Firefox extensions</span></em>
+</blockquote>
+
+<p>Eventually the personal needs of a member of the Firefox development
+community would include changing the look and feel of a specific Web
+site.</p>
+
+<p>On July 19, 2004 Adrian Holovaty posted 
+<span class="ref" onclick="showRef('holovaty_7192004')">Site-specific browser extension: All Music Guide</span>. 
+His extension modified the look and feel of the <a href="http://www.allmusic.com/">All Music Guide</a>
+Website in his Firefox browser. An annoying Flash widget was hidden and
+the links on the Web page were changed. He reflected on the ability to
+arbitrarily change the appearance and functionality of Websites:</p>
+
+<blockquote> To my knowledge, using browser extensions to 'fix' Web
+sites, or add extra functionality, is unexplored territory. There's a
+huge potential here. Site-specific Firefox extensions are an elegant,
+one-click-install solution to the problem of, well, lousy Web
+interfaces&#8212;a problem Web users have had to shut up and deal with for as
+long as the Web has been around.&nbsp;&nbsp;<span class="ref" onclick="showRef('holovaty_7192004')">Adrian Holovaty</span> July 19, 2004</blockquote>
+
+<p>Changeable presentation of content has been a continuing interest since the establishment of the Web. Lie and Bos (<span class="ref" onclick="showRef('lieBos')">1999</span>)
+highlight this ambition in their history of cascading style sheets.
+Korpela refers to 'presentation control by readers' as an ideal in his
+analysis of Web writing (<span class="ref" onclick="showRef('korpela')">Korpela</span> 1997). In 2001 Turner suggested 'active browsing' as a model for Web browsers (<span class="ref" onclick="showRef('turner2001')">Turner</span> 2001).
+
+Browsers under development, such as <a href="http://www.flock.com/home/" target="_blank">Flock</a>, describe "moving back to the original vision of Tim Berners-Lee, that the Web should be a two-way experience" (<span class="ref" onclick="showRef('macintyre')">MacIntyre</span> September 14, 2005) between readers and writers.</p>
+</div>
+
+<div style="display: none;" id="8">
+
+<h2>Lowering the barrier of technical difficulty</h2>
+<p>Using a Firefox extension may be an elegant one-click-install
+solution for some people, but the average Web reader would find writing
+an extension for the Firefox browser a non-trivial task. <a href="http://roachfiend.com/archives/2004/12/08/how-to-create-firefox-extensions/" target="_blank">achfiend.com's</a>
+tutorial, for example, involves creating an XPI file, modifying a RDF
+file and an XUL file, creating a globally unique identifier and writing
+a JavaScript extension. Technical challenges like these would daunt
+most Web readers and limit the popularity of modifying Web pages.</p>
+
+<p>On December 6, 2004, Aaron Boodman announced the release of <a href="http://greasemonkey.mozdev.org/" target="_blank">Greasemonkey</a>, a Firefox extension that reduces the technical challenge to writing your own site-specific script in JavaScript.</p>
+
+<blockquote>Greasemonkey is a Firefox extension which lets you to add
+bits of DHTML ('user scripts') to any Webpage to change its behaviour.
+In much the same way that user CSS lets you take control of a Webpage's
+style, user scripts let you easily control any aspect of a Webpage's
+design or interaction.&nbsp;&nbsp;<span class="ref" onclick="showRef('aaron_1262004')">Aaron Boodman</span></blockquote>
+
+<p>Lowering the barrier of user scripting to writing a JavaScript
+immediately empowers the large existing community of JavaScripters. <a href="http://www.w3schools.com/dhtml/default.asp" target="_blank">Tutorials</a> already exist for Dynamic HyperText Markup Language (DHTML), there is an active literature (e.g., "<a href="http://www.sitepoint.com/books/dhtml1/" target="_blank">DHTML Utopia: Modern Web Design Using JavaScript &amp; DOM</a>")
+promoting its role in Web page design, and it has an established
+relationship with the World Wide Web Consortium's definition of the DOM
+(Document Object Model). The DOM models a Web page as a tree-like
+structure, which permits an addressing strategy that branches from root
+to leaf node in identifying each element of a Web page.</p>
+
+  <blockquote>Dynamic
+HTML (DHTML) is a term used by some vendors to describe the combination
+of HTML, style sheets and scripts that allows documents to be animated.
+The scripting interfaces provided in DHTML have a significant overlap
+with the DOM, particularly with the HTML module. Compatibility with
+DHTML was a motivating factor in the development of the DOM.
+&nbsp;&nbsp; <span class="ref" onclick="showRef('w3c')">Document Object Model FAQ</span>  </blockquote>
+
+<p style="border: medium solid black; padding: 20px;"><em style="font-size: smaller;">Technical background note:</em><br><br><strong>Why is the link between DOM and DHTML important?</strong><br><br>To
+change a Webpage one must be able to focus on specific elements of the
+HTML source code of the Webpage. A Web browser such as Firefox
+constructs a tree-like representation of the HTML source code called a
+Document Object Model (DOM). A Greasemonkey script is composed of
+JavaScript that manipulates elements of the DOM.
+Using JavaScript to manipulate the DOM to enhance Web page design
+already has a considerable literature.
+Aligning Greasemonkey with DHTML and DOM permits scripters to leverage
+this literature.</p>
+</div>
+
+<div style="display: none;" id="9">
+
+<h2>Hacking Web pages made easy</h2> 
+
+<p>Greasemonkey reduces, but does not eliminate the technical
+difficulty of modifying Web pages. Writing JavaScript still involves
+programming code. As illustrated by Mark Pilgrim's <a href="http://diveintogreasemonkey.org/" target="_blank">Dive into Greasemonkey</a>, the essential Greasemonkey online text, user scripting is enhanced by another powerful technology,  <a href="http://www.w3.org/TR/xpath" target="_blank">XPath</a>, that is used to target elements of the DOM. Thus the scripter's toolbox includes a number of sophisticated tools:</p>
+
+<ul>
+<li><strong>JavaScript</strong>: One can write standard programming constructs such as <em>if-then</em> decisions, <em>for</em> loops, subroutines, and so on.</li>
+<li><strong>DOM</strong>: The Document Object Model builds a tree-like structure of all the HTML elements of the Web page.</li>
+<li><strong>DHTML methods</strong>: One can target HTML elements by their id attributes using a method such as <em>getElementById("address")</em>.</li>
+<li><strong>XPath</strong>: One can target HTML elements in terms of
+their position in the DOM structure. For example, the second table in
+the DOM has an XPath such as <em>//table[2]</em>.</li>
+</ul>
+
+<p>Getting all these powerful tools working together properly may be
+tricky, but my own experience tells me that a big challenge of
+modifying Web pages is revealed when would-be scripters examine the
+HTML code written by their friends in the Web community. The Web is a
+democratic information experiment, which really means that practically
+anyone can hack together a Web page. As a result, the Web has many
+excellent examples of bricolage: inconsistent, sloppy messes created by
+amateurs. Web pages may include both a CSS file and some inline CSS
+code, have HTML element names in both upper and lower case, specify
+colours with both words and hex codes, lack id attributes and so on.
+Many Web pages are constructed by embedding tables within tables within
+tables, <em>ad infinitum</em>. In short, bewildering HTML code may
+turn out to be a naturally occurring upper limit on the wide
+application of do-it-yourself user scripting.</p>
+</div>
+
+<div style="display: none;" id="10">
+
+<p>The revolution of user scripting awaits the development of WYSIWYG
+(What you see is you what you get) tools that shield the scripter from
+the messy details. A current example is <a href="http://platypus.mozdev.org/index.html" target="_blank">Platypus</a>, a Firefox extension created by Scott Turner that automates the creation of Greasemonkey scripts.</p>
+
+<blockquote>
+Platypus is a Firefox extension which lets you modify a Web page from
+your browser&#8212;'What You See Is What You Get'&#8212;and then save those changes
+as a Greasemonkey script so that they'll be repeated the next time you
+visit the page. </blockquote>
+
+<p>The following snippet from the Platypus toolbar (version 0.5)
+indicates the sorts of tasks that can be accomplished with Platypus.</p>
+
+<div class="centerImage">
+<img src="paper257_files/platypus.JPG" alt="Platypus toolbar" border="0" height="40" width="369">
+</div>
+
+<p>The challenge of writing user scripts is also an opportunity for entrepreneurs such as <a href="http://overstimulate.com/articles/2005/04/23/custom-greasemonkey-userscripts" target="_blank">Custom Greasemonkey Userscripts</a>.</p>
+</div>
+
+<div style="display: none;" id="11">
+
+<h2>An example Greasemonkey application</h2>
+
+<p>Perhaps more interesting than the technical details of user scripts
+is Greasemonkey's potential for placing usability issues in Web
+readers' hands and giving them a new tool for personal information
+management.</p>
+
+<p>These issues can be illustrated by my script that changes the homepage of the <a href="http://www.ischool.washington.edu/" target="_blank">Information School</a> at the University of Washington, my academic home. The top half of this Web page looked like this in July 2005:</p>
+
+<div class="centerImage">
+<img src="paper257_files/iSchool.JPG" alt="Information School">
+</div>
+
+<p style="border: medium solid black; padding: 20px;">
+<strong>Attention!</strong>&nbsp;The following description of how and
+why I script against this Web page reflects my own travails of
+information management and is not my recommendation of how you might
+script against this Web page or any other Web page. This script
+reflects my <em>personal</em> strategy for managing information resources.</p>
+</div>
+
+<div style="display: none;" id="12">
+<p>My script helps me because</p>
+<ul>
+<li><strong>Link excavation:</strong>&nbsp;I use the geography consumed
+by the "iSchool News" centre column to place the links that would be
+otherwise buried under the pull-downs such as 'Programs' and 'Courses'.
+Instead of having to hunt up and down somebody else's term hierarchy, I
+have simplified my Web experience to 'point and click'... the stuff I
+need is right there in front of me when I land on this Web page. (See
+'A' below).</li>
+<li><strong>Link association:</strong>&nbsp;I am also burdened with
+links that are associated with the Information School, but that are not
+integral parts of its Web page. My personal strategy for remembering
+these links is to place them in a significant location that is
+associated with their use, i.e., the iSchool homepage. Painful
+experience has taught me that I will lose links like these in the
+hierarchy of my Favorites or Bookmarks lists, or in the hierarchy of my
+e-mail folders. Once again, my personal information strategy succeeds
+when I transform my Web experience into 'point and click'... the links
+that I associate with the iSchool are right there in front of me when I
+land on this Web page. (See 'B' below)</li>
+<li><strong>Quality-of-life issues:</strong>&nbsp;I treat myself to a picture of lovely flowers. (See 'C' below)</li>
+</ul>
+
+<p>My version of the Information School page looks like this:</p>
+
+<div class="centerImage">
+<img src="paper257_files/myIschool.JPG" alt="My version of the Information School">
+</div>
+</div>
+<div style="display: none;" id="13">
+<p>Moving between the official version of the Information School Web
+page and my version is simply done by toggling my Greasemonkey script
+on and off.</p>
+
+<input value="Show My Information School Script" onclick="showJavascript()" type="button">&nbsp;&nbsp;&nbsp;<input value="Hide" onclick="hideJavascript()" type="button">
+<div id="javascript" style="display: none;">
+<br>
+<p><a href="http://www.ischool.washington.edu/tabrooks/GreaseMonkey/myScripts/ischoolFlowers.htm" target="_blank">Download</a> the latest version of this script</p>
+<br>
+
+<pre style="text-align: left;">// ==UserScript==
+// @name             iNews
+// @author           Terry Brooks
+// @date             July 12, 2005 
+// @namespace        http://faculty.washington.edu/tabrooks
+// @include          http://www.ischool.washington.edu/
+// @exclude          http://faculty.washington.edu/tabrooks/ 
+// ==/UserScript==
+
+(function()
+{
+// Put my own flower picture
+var myFlowers, theirPic;
+
+myFlowers = "http://www.ischool.washington.edu/tabrooks/
+             GreaseMonkey/myScripts/whiteFlowers.jpg";
+theirPic = document.evaluate(
+	"//TABLE[2]//TD[3]/TABLE//IMG",
+	document,
+	null,
+	XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+	null);
+	
+theirPic.snapshotItem(0).src = myFlowers;
+
+
+// Put my own news
+var allNewstitles, thisNewstitle;
+
+allNewstitles = document.evaluate(
+	"//TD[@class='newsitem']",
+	document,
+	null,
+	XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+	null);	
+	
+for (var i = 0; i &lt; allNewstitles.snapshotLength; i++) 
+{
+	thisNewstitle = allNewstitles.snapshotItem(i);
+	
+	if ( i == 0 ) 
+	{
+		thisNewstitle.style.backgroundColor = "white";
+		thisNewstitle.style.paddingLeft = "10px";
+		thisNewstitle.innerHTML = 
+		"&lt;a href='http://www.ischool.washington.edu/courses/descriptions.aspx' 
+		style='color:black'&gt;Course descriptions&lt;/a&gt;&lt;br&gt;" +
+		"&lt;a href='http://www.ischool.washington.edu/courses/schedules.aspx'
+		style='color:black'&gt;Course schedules&lt;/a&gt;&lt;br&gt;"  +
+		"&lt;a href='http://www.ischool.washington.edu/courses/courseWebs.aspx'
+		style='color:black'&gt;Course Web pages&lt;/a&gt;&lt;br&gt;"  +
+		"&lt;a href='http://help.ischool.washington.edu/faqs/' 
+		style='color:black'&gt;Technology FAQS&lt;/a&gt;&lt;br&gt;" +
+		"&lt;a href='http://msdn.e-academy.com/washington_is/' 
+		style='color:black'&gt;E-Academy software&lt;/a&gt;" +
+		"&lt;br&gt;&lt;br&gt;" +
+		"&lt;a href='https://www.ischool.washington.edu/Webadmin/
+		programs/informatics/viewapplications.aspx' 
+		style='color:black'&gt;Informatics Admission Database&lt;/a&gt;&lt;br&gt;" +
+		"&lt;a href='http://ecampus.ischool.washington.edu/evals-archive.asp'
+		style='color:black'&gt;Distance course evaluations&lt;/a&gt;" ;
+	} 
+	else
+	{
+		thisNewstitle.style.display = "none";
+	}
+
+}
+}) ();
+
+</pre>
+
+</div>
+<br>
+
+</div>
+
+<div style="display: none;" id="14">
+<h2>Readers create the bottom-up Web</h2>
+
+<p>In the top-down Web, writers had to be reminded constantly of
+usability and accessibility issues, but these concerns fade in the
+bottom-up Web where the focus shifts to the many ways readers will
+transform Web pages to suit themselves. In the bottom-up Web, there are
+no 'bad' Web pages <em>per se</em>, merely Web pages you have yet to modify according to your tastes.</p>
+
+<p><span class="ref" onclick="showRef('dodds')">Leigh Dodds</span> (2005, April 4) has speculated on how users will  change Web pages and suggests the following categories:</p>
+
+<ul>
+<li><strong>Action</strong>: As a Web page loads, it is transformed to
+address concerns of both usability and accessibility. For example, Web
+page elements are modified, resized, re-coloured, forms filled in,
+annotations added, and so on. My iSchool script is an example. Scripts
+can also customize Web applications. An example is the addition of
+persistent searches to Gmail. 'While one doesn't normally think of Web
+apps as having such advanced power user features, it recently occurred
+to me that it should be possible to add persistent searches to Gmail' (<span class="ref" onclick="showRef('mp')">Parparita</span> March 2005). </li>
+<li><strong>Trigger</strong>: A script reacts to a user event. For
+example, the nine-year old son of Prakash Kailasa, a Greasemonkey
+developer, was preparing for a spelling bee. Using a dictionary Web
+site, the young speller had to click a microphone icon to hear a word
+pronounced. Prakash wrote a Greasemonkey user script ("<a href="http://kailasa.net/prakash/moz/greasemonkey/Webster-say-word.user.js" target="_blank">Webster-say-word</a>") that changed the functionality of the Web page so that the pronunciation was triggered by a simple mouse over.</li>
+<li><strong>Mash-ups</strong>: Two or more Web pages are <em>mashed</em>
+together in new and unexpected ways. In the top-down Web, Web writers
+resisted submerging their work with other writers and sought to
+distinguish their Web pages from others. Web readers, on the other
+hand, often recognize that the information of one Web page can be
+enhanced by combining it with the information of another Web page. For
+example, both
+<a href="http://www.amazon.com/gp/browse.html/102-1490336-3097768?%5Fencoding=UTF8&amp;node=3435361" target="_blank">Amazon.com</a> and <a href="http://www.google.com/apis/maps/">Google Maps</a>
+have been extensively mashed. Both provide an API (Application
+Programming Interface) to facilitate linkages with other Web pages. <a href="http://overstimulate.com/articles/2005/04/24/greasemonkey-book-burro-find-cheap-books" target="_blank">Book Burro</a> mashes together prices from several online book sellers. 'Marrying maps to data for a new Web service' (<span class="ref" onclick="showRef('markoff')">Markoff</span> July 18, 2005) details how Google maps has been utilized by dozens of Web pages.</li>
+</ul>
+</div>
+
+<div style="display: none;" id="15">
+
+<p>The Greasemonkey community script archive lists hundreds of scripts designed for <a href="http://dunck.us/collab/GreaseMonkeyUserScriptsGeneric" target="_blank">all Web pages</a> and <a href="http://dunck.us/collab/GreaseMonkeyUserScriptsSpecific" target="_blank">specific Websites</a>.
+A number of Websites have been extensively scripted so far (this list
+probably reflects the interests of the members of the Greasemonkey
+development community):</p>
+
+<ul>
+<li><a href="http://www.bloglines.com/" target="_blank">Bloglines</a>, </li>
+<li><a href="http://del.icio.us/" target="_blank">del.icio.us</a>, </li>
+<li><a href="http://www.ebay.com/" target="_blank">eBay</a>, </li>
+<li><a href="http://www.flickr.com/" target="_blank">Flickr</a>, </li>
+<li><a href="http://www.livejournal.com/" target="_blank">LiveJournal</a>, </li>
+<li><a href="http://www.netflix.com/Default" target="_blank">Netflix</a>, </li>
+<li><a href="http://www.nytimes.com/" target="_blank">New York Times</a>, and </li>
+<li><a href="http://slashdot.org/" target="_blank">Slashdot</a>.
+</li></ul>
+
+<p>Google services such as Adwords, Alerts, Blogger, Gmail, History,
+Images, Maps, and Yahoo services such as Mail, Maps, Music, and Groups
+have all attracted a large number of scripts. There may be a corporate
+strategy at work here of embedding services as extensively as possible
+in other Web applications.</p>
+
+<p>There is a notable sub-species of mash-ups that link Amazon.com with
+library digital catalogues. Scripts have been written that alert the
+Amazon shopper if an item already exists in the collection of the
+Seattle Public Library, Peninsula Library System (California) or
+Markham Public Library (Ontario, Canada).</p>
+
+<p>As the number of public scripts increases, finding scripts and evaluating scripts become problems. Two current resources are <a href="http://blogmarks.net/tag/greasemonkey+user.js" target="_blank">Last public marks</a> and <a href="http://userscripts.org/" target="_blank">Userscripts</a></p>
+</div>
+
+<div style="display: none;" id="16">
+<h2>Other browsers introduce scripting</h2>
+
+<p>Web reader empowerment is spreading to other browsers. Each may have
+unique technical implementations, but there seems to be a general
+convergence towards the Greasemonkey model.</p>
+
+<ul>
+<li><strong>Opera 8.0</strong>&nbsp;&nbsp;"<a href="http://www.opera.com/support/tutorials/userjs/" target="_blank">Take control with user JavaScript</a>" introduces user scripting for the Opera browser. Opera supports Greasemonkey scripts and features, as well, a special <em>window.opera</em> object. The Opera development community is beginning to compile user scripts and techniques: '<a href="http://people.opera.com/rijk/opera/userjs.html" target="_blank">User JavaScript</a>' and '<a href="http://my.opera.com/hallvors/journal/44" target="_blank">Opera 8 beta 3 introduces User JavaScript</a>'</li>
+<li><strong>Safari</strong>&nbsp;&nbsp;<a href="http://culater.net/software/PithHelmet/PithHelmet.php" target="_blank">PithHelmet</a>
+is an extended site preferences and advertisement blocking plugin for
+Apple's Safai browser. In contrast to Greasemonkey's focus on the DOM,
+PithHelmet focuses on string parsing.</li>
+<li><strong>Internet Explorer</strong>&nbsp;&nbsp;<a href="http://www.reifysoft.com/turnabout.php" target="_blank">Turnabout</a>
+generally supports Greasemonkey scripts with some minor JavaScript
+engine and CSS differences. There is limited XPath support. <a href="http://www.bhelpuri.net/Trixie/Trixie.htm" target="_blank">Trixie</a> is a scripting add-on for Internet Explorer that is no longer under development.</li>
+</ul>
+
+<p>As an example of the future is the following blog posting by <a href="http://www.extended64.com/blogs/rafael/archive/2005/07/27/1026.aspx" target="_blank">Rafael Rivera</a> on July 27, 2005.  He wrote a user script in <a href="http://www.bhelpuri.net/Trixie/Trixie.htm" target="_blank">Trixie</a>to
+simplify the Windows Genuine Advantage logon. Note the ecumenical
+approach to other browsers indicating that user scripting is no longer
+limited to one type of browser:</p>
+
+<div class="centerImage">
+<img src="paper257_files/wga.JPG" alt="Blog posting of Rafael Rivera" border="1" height="486" width="497">
+</div>
+</div>
+
+<div style="display: none;" id="17">
+
+<h2>Broken scripts and breaking scripts</h2>
+
+<p>It is probably salutary for would-be scripters to remind themselves
+that Web pages are short-lived phenomena; therefore, user scripts will
+probably frequently break. At one extreme, Web page content could be
+churned at every request, which would create an impossibly fast
+changing scripting target. On average, however, Web pages refresh
+content every 100 days (<span class="ref" onclick="showRef('brewington')">Brewington and Cybenko</span>
+2000). My own experience indicates that scripts targeting specific
+words or phrases are short-lived, while scripts targeting Web page
+structure are more robust.</p>
+
+<p>There has also been some concern that Web writers will defend their Web pages by instigating a <a href="http://greaseblog.blogspot.com/2005/03/user-script-arms-race-has-begun.html" target="_blank">script war</a>.
+A script war presumes that scripters would have made their scripts
+public, and the Web writer would have both the time and interest to
+change his Web page to defeat scripts. Cost-effective defense of a Web
+page becomes more problematical if scripts are private, there are many
+active scripters and different aspects of a Web page are under attack.
+In this situation, successful defense of a Web page's presentation is
+not so clear. Defense becomes even more expensive if scripting is
+occurring with several different types of browsers. Facing these
+disadvantages, Web writers are unlikely to succeed in script warfare.</p>
+
+<p>Essentially, the architecture of request/response of the Web means
+that Web servers lose control of the Web page when they send it to the
+browser. Instead of warring with scripters, however, Web writers might
+co-opt them as volunteer Web-page usability consultants in order to
+refine Web-page design.</p>
+</div>
+
+<div style="display: none;" id="18">
+<h2>Web design co-evolution</h2>
+
+<p>The greatest effect of user scripting will be in changing the
+culture of the Web. The top-down Web considered Web pages as containers
+of information placed before passive readers. The bottom-up Web
+considers Web pages as mere input to the reading experience. The
+culture of the Web will evolve so that reading a Web page will be like
+assembling a scrapbook where you can cut and paste, shift things about,
+mix together interesting pieces from various sources, and create
+something wholly unique for your purposes. User scripting permits the
+personalization of Web pages.</p>
+
+<p>
+Web writers have much to gain from user scripting. By studying how
+readers change Web pages, Web writers can improve Web page designs.
+User scripting is, in effect, free usability testing and free product
+development (<span class="ref" onclick="showRef('holovaty')">Holovaty</span>, 2005, April 12). For example, Neil Kandalgaonkar scripted against <a href="http://www.flickr.com/" target="_blank">Flickr</a>, a Website for storing and sharing photographs. An early version of Flickr used Flash, which Neil's script, <a href="http://brevity.org/code/mozilla/greasemonkey/lickr/" target="_blank">Lickr</a> disabled. The result was a evolution in the Flickr Website:</p>
+
+<br>
+<div class="centerImage">
+<img src="paper257_files/lickr.JPG" alt="Lickr Web page post" border="0" height="321" width="614">
+</div>
+</div>
+
+<div style="display: none;" id="19">
+<p>
+User scripting represents one further step in the evolution of the Web
+as a democratic information utility. Widespread user scripting will
+create a virtuous feedback loop to change the Web faster. </p>
+
+<blockquote>The key to survival will be going meta: design for the
+bright kids. Create a flexible, modular set of APIs and a
+well-documented example UI or two that shows how they are used. Learn
+from Amazon and release your grip on the end-user experience. <span class="ref" onclick="showRef('sindikkaeshin')">Sindikkaeshin</span> (2005, February 2)
+</blockquote>
+
+<p>Consider <a href="mailto:jonasgalvez@gmail.com">Jonas Galvez</a> as a bellwether of the future of distributed digital content.  He has reduced his <a href="http://jonasgalvez.com/br/blog/" target="_blank">blog</a>
+to its essentials making it as easy as possible to write personalized
+Greasemonkey skins. His readers has responded and customized his blog
+to their tastes and purposes.</p>
+
+<blockquote>
+Date: Fri, 09 Sep 2005 05:44:23 -0300<br>
+From: Jonas Galvez &lt;jonasgalvez@gmail.com&gt;<br>
+Subject: [Greasemonkey] Greasemonkey-based Website skins
+<br><br>
+Has anyone thought of implementing this already? I'm running a contest
+right now on my blog (in Brazilian Portuguese) in which I'll give a
+copy of 'Greasemonkey Hacks' (due in November, right?) to the authors
+of the
+3 best skins for my blog. <br>My idea is simple: I've stripped down
+my blog layout to the simplest thing possible, making it easy to create
+GM-based skins. If users don't like the basic layout they can install a
+local script that dynamically skins the blog. Saves bandwidth and gives
+more power to the user. <br>I know it won't really catch on but I
+really like the idea, and it's been well received by my readers. 24
+hours after I launched the contest, I received the first entry (which
+looks like a winner): <br>http://jonasgalvez.com/br/blog/ (this is the
+blog, unstyled) http://tinyurl.com/827mv (this is the GM-based skin)
+http://tinyurl.com/95n9o (screenshot of the skin applied)
+<br>
+I'm fascinated.
+<br>
+The author even loaded my del.icio.us links on a sidebar (and said he's working in a solution to cache them in cookies, too).<br><br>
+<strong>Greasemonkey Digest, Vol 10, Issue 29</strong>
+&lt;/jonasgalvez@gmail.com&gt;
+</blockquote>
+
+
+
+<h2>Acknowledgements</h2>
+
+<p>The author wishes to acknowledge the contributions of Aaron Boodman,
+Mark Pilgrim, Scott Barker, Scott Turner and the suggestions of the
+anonymous referees.</p>
+
+</div>
+
+<div style="display: none;" id="20">
+
+<h2>References</h2>
+
+<ul>
+<li id="aaron_1262004">Boodman, A. (2004, December 6). <a href="http://www.youngpup.net/2004/1214110251" target="_blank">Happy to announce</a>. Retrieved 15 July, 2005 from http://www.youngpup.net/2004/1214110251</li>
+
+<li id="brewington">Brewington, B.E. &amp; Cybenko, G. (2000). "<a href="http://www9.org/w9cdrom/264/264.html" target="_blank">How dynamic is the Web?</a> In <em>Conference Proceedings. 9th International World Wide Web Conference, Amsterdam, May 15-19 2000.</em> Retrieved 22 July, 2005 from
+http://www9.org/w9cdrom/264/264.html</li>
+
+<li id="dillon">Dillon, A. (1994).  <em>Designing usable electronic text: ergonomic aspects of human information usage</em>.  London: Taylor and Francis.</li>
+
+<li id="dodds">Dodds, L. (2005, April 4). <a href="http://www.ldodds.com/projects/patterns/patterns_of_intermediation.html" target="_blank">Patterns of intermediation</a>.  Retrieved 15 July, 2005 from http://www.ldodds.com/projects/patterns/patterns_of_intermediation.html</li>
+
+<li id="gertner">Gertner, M. (2005, March 15). <a href="http://www.allpeers.com/blog/?p=62" target="_blank">Greasemonkeys and obfuscators</a>.  Retrieved 21 July, 2005 from http://www.allpeers.com/blog/?p=62 </li>
+
+<li id="holovaty_7192004">Holovaty, A. (2004, July 19). <a href="http://holovaty.com/blog/archive/2004/07/19/2210" target="_blank">Site-specific browser extension: All Music Guide</a>. Retrieved 6 July, 2005 from http://holovaty.com/blog/archive/2004/07/19/2210</li>
+
+<li id="holovaty">Holovaty, A. (2005, April 12). <a href="http://holovaty.com/blog/archive/2005/04/12/1126" target="_blank">Why Greasemonkey is good for publishers</a> Retrieved 26 July, 2005 from http://holovaty.com/blog/archive/2005/04/12/1126</li>
+
+<li id="korpela">Korpela, J. (1997). <a href="http://www.cs.tut.fi/~jkorpela/webpub.html" target="_blank">Publishing on the Web is different</a> Retrieved 4 October, 2005 from http://www.cs.tut.fi/~jkorpela/webpub.html</li>
+
+<li id="lieBos">Lie, H.W. &amp; Bos, B. (1999). <a href="http://www.w3.org/Style/LieBos2e/history/" target="_blank">The CSS saga</a> In <em>Cascading style sheets, designing for the Web</em>, (pp. 355-360) New York, NY: Addison Wesley. Retrieved 4 October, 2005 from http://www.w3.org/Style/LieBos2e/history/ </li>
+
+<li id="macintyre">MacIntyre, J. (2005, September 14). <a href="http://www.wired.com/news/technology/0,1282,68823,00.html" target="_blank">Killer buzz flocks to new browser</a>. <em>Wired news.</em>  Retrieved 5 October, 2005 from http://www.wired.com/news/technology/0,1282,68823,00.html</li>
+
+<li id="markoff">Markoff, J. (2005, July 18). Marrying maps to data for a new Web service. <em>New York Times</em>, Section C, p. 1,8.</li>
+
+<li id="ieHistory">Microsoft Corporation. (2003, June 30). <a href="http://www.microsoft.com/windows/WinHistoryIE.mspx" target="_blank">Windows history, Internet Explorer history</a>. 
+Retrieved 4 October, 2005 from http://www.microsoft.com/windows/WinHistoryIE.mspx</li>
+
+<li id="mozilla">Mozilla. (n.d.). <a href="http://www.mozilla.org/newlayout/faq.html" target="_blank">nglayout project/gecko layout engine</a>. Retrieved 20 July, 2005 from http://www.mozilla.org/newlayout/faq.html</li>
+
+<li id="FF_extensions">Mozilla Update. (n.d.). <a href="https://addons.mozilla.org/extensions/?application=firefox" target="_blank">Firefox extensions</a>. Retrieved 10 July, 2005 from https://addons.mozilla.org/extensions/?application=firefox</li>
+
+<li id="onlineAds">News.Com. (2001, June 13). <a href="http://news.com.com/2100-1023-268365.html?legacy=cnet" target="_blank">Online ads get in your face</a>. Retrieved 28 July, 2005 from http://news.com.com/2100-1023-268365.html?legacy=cnet</li>
+
+<li id="nielsen2705">Nielsen, J. (2005, June 27).  <a href="http://www.useit.com/alertbox/20050627.html" target="_blank">Usability: empiricism or ideology?</a>  Retrieved 5 July, 2005 from http://www.useit.com/alertbox/20050627.html </li>
+
+<li id="nielsen10305">Nielsen, J. (2005, October 3).
+<a href="http://www.useit.com/alertbox/designmistakes.html" target="_blank">Top ten Web design mistakes of 2005</a>
+Retrieved 3October , 2005 from http://www.useit.com/alertbox/designmistakes.html</li>
+
+<li id="mp">Parparita, M. (2005, March). <a href="http://persistent.info/archives/2005/03/01/gmail-searches" target="_blank">Adding persistent searches to Gmail</a>.  Retrieved 5 October, 2005 from http://persistent.info/archives/2005/03/01/gmail-searches</li>
+
+<li id="schriver">Schriver, K.A. (1997).  Dynamics in document design: creating text for readers.  New York, NY: John Wiley.</li>
+
+<li id="sindikkaeshin">Sindikkaeshin. (2005, February 2). <a href="http://dream.sims.berkeley.edu/~ryanshaw/wordpress/2005/02/18/greasemonkey-stole-your-job-and-your-business-model/" target="_blank">Greasemonkey stole your job (and your business model)</a>. Retrieved 14 July, 2005 from http://dream.sims.berkeley.edu/~ryanshaw/wordpress/2005/02/18/
+greasemonkey-stole-your-job-and-your-business-model/</li>
+
+<li id="turner2001">Turner, S. (2001). Active Browsing, <em>Proceedings of the IASTED International Conference Internet and Multimedia Systems and Applications</em> (Honolulu, HI, August 13&#8211;16, 2001), pp. 181&#8211;186.</li>
+
+<li id="wiki_popUp">Wikipedia. (n.d.). <em><a href="http://en.wikipedia.org/wiki/Popup_ads" target="_blank">Pop-up ad</a>. </em> Retrieved 5 July, 2005 from http://en.wikipedia.org/wiki/Popups_ads</li>
+
+<li id="wiki_browser">Wikipedia. (n.d.).<em><a href="http://en.wikipedia.org/wiki/Web_browser" target="_blank">Web browser</a>. </em> Retrieved 3 July, 2005 from http://en.wikipedia.org/wiki/Web_browser</li>
+
+<li id="w3c">W3C. (n.d.).<a href="http://www.w3.org/DOM/faq.html#Webpages">Document Object Model FAQ</a>. Retrieved 20 July , 2005 from http://www.w3.org/DOM/faq.html#Webpages
+</li>
+</ul>
+
+
+<hr style="color: rgb(0, 0, 128);" size="1">
+
+<table align="center" cellspacing="10">
+<tbody><tr><td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+<table bgcolor="#ffffff">
+<tbody><tr>
+<td align="center" height="32" nowrap="nowrap" valign="top">
+<input name="q" size="31" maxlength="255" value="&quot;alt tags&quot;  &quot;image files&quot;   keywords" style="background-color: Yellow;" type="hidden"> <br>
+<input name="sa" value="Scholar Search" style="font-family: Verdana; font-weight: bold;" type="submit">
+<input name="num" value="100" type="hidden">
+</td>
+</tr>
+</tbody></table>
+</form>
+</td>
+<td style="font-family: verdana; font-size: small; font-weight: bold;" align="center">Find other papers on this subject.<br></td>
+<td align="center" valign="top">
+<!-- Search Google -->
+<form method="get" action="http://www.google.com/custom" target="_top">
+<table bgcolor="#ffffff">
+<tbody><tr>
+<td align="center" height="32" nowrap="nowrap" valign="top">
+<input name="q" size="31" maxlength="255" value="&quot;alt tags&quot;  &quot;image files&quot;   keywords" type="hidden"><br>
+<input name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold;" type="submit">
+<input name="client" value="pub-5081678983212084" type="hidden">
+<input name="forid" value="1" type="hidden">
+<input name="ie" value="ISO-8859-1" type="hidden">
+<input name="oe" value="ISO-8859-1" type="hidden">
+<input name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" type="hidden">
+<input name="hl" value="en" type="hidden">
+</td>
+</tr>
+</tbody></table>
+</form> 
+</td></tr></tbody></table>
+
+<hr style="color: rgb(0, 0, 128);" size="1">
+<div align="center">
+<h4>How to cite this paper:</h4>Brooks, T.A. (2006). &quot;No bad Web pages: reader empowerment and the Web&quot; &nbsp; <em>Information Research</em>, <strong>11</strong>(3) paper 257 [Available at http://InformationR.net/ir/11-3/paper257.html]</div>
+<br>
+<hr style="color: rgb(0, 0, 128);" size="1">
+
+
+<table align="center" cellpadding="10">
+<tr>
+	<td width="200" align="center">
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper257" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+
+	</td>
+	<td align="center" width="300">&copy; the author, 2006. <br />Last updated: 16 March, 2006</td>
+
+<td width="200" align="right"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44">
+</td>
+</tr>
+</table>
+
+<!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border="0" cellpadding="0" cellspacing="0" align="center"><tbody><tr><td align="center">
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper257.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0"
+src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;"
+ALT="online web site analytics"></a>
+</noscript>
+</td></tr><tr><td align="center"><div style="color: black; display: none; font-family: 'Verdana';"><a href="http://www.onestat.com/" style="text-decoration: none;">online web site analytics</a><br></div></td></tr></tbody></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+
+
+</td></tr>
+</tbody></table>
+
+
+<hr style="color: rgb(0, 0, 128);" size="1" />
+
+</div>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+<!-- Mirrored from informationr.net/ir/11-3/paper257.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:21 GMT -->
+</html>

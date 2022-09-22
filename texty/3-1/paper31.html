@@ -1,0 +1,614 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/3-1/paper31.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:38:13 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="../IRstyle.css">
+<title>Learner support in a distributed learning environment:the use of WWW-based teachware packages</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="networked learner support, on-line learning, online, distance education, telematics, university, academic, library, information literacy, WWW, World Wide Web">
+<meta name="description" content="Various forms of education and training, based on the   classical Computer Based Training (CBT), have become well established within   companies and in higher education. With regard to the flexibility in terms of   time and location, as well as in terms of incurred cost, they are far superior   to traditional forms of instruction. A relatively recent development which has   not yet gained widespread acceptance is the use of the World Wide Web (WWW) as   a basis and platform for distributed computer assisted teaching and learning.  In addition to the advantages outlined with regard to classical CBT, the WWW   offers the two advantages of world wide availablity as well as ease of   promptly updating courses, but also adds many possibilities of collaborative   learning. Using the Java programming language and the ever improving means of   online presentation it has become possible to realize sophisticated WWW-based   teachware packages which are comparable in terms of appearance and   functionality to classical CBT applications created with dedicated authoring  systems. ">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<link rel=schema.vw96 href="http://vancouver-webpages.com/META/VW96-schema.html">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Learner support in a distributed learning environment: the use of   WWW-based teachware packages">
+<meta name="DC.Creator" content="Christian Langenbach, Freimut Bodendorf">
+<meta name="DC.Subject" content="Learner support in a distributed learning environment:the use of   WWW-based teachware packages">
+<meta name="DC.Description" content="Various forms of education and training, based on the   classical Computer Based Training (CBT), have become well established within   companies and in higher education. With regard to the flexibility in terms of   time and location, as well as in terms of incurred cost, they are far superior   to traditional forms of instruction. A relatively recent development which has   not yet gained widespread acceptance is the use of the World Wide Web (WWW) as   a basis and platform for distributed computer assisted teaching and learning.   In addition to the advantages outlined with regard to classical CBT, the WWW   offers the two advantages of world wide availablity as well as ease of   promptly updating courses, but also adds many possibilities of collaborative   learning. Using the Java programming language and the ever improving means of   online presentation it has become possible to realize sophisticated WWW-based   teachware packages which are comparable in terms of appearance and   functionality to classical CBT applications created with dedicated authoring   systems. ">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 3  No. 1, July 1997</h4></td></tr>
+  <tr> 
+    <td><a href="infres31.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+       
+    <h1>Learner support in a distributed learning environment:<br>the use of 
+  WWW-based teachware packages</h1>
+  
+  <h4><a href="mailto:Christian.Langenbach@wi2.wiso.uni-erlangen.de">Christian 
+  Langenbach</a> and <a  href="mailto:Freimut.Bodendor@wi2.wiso.uni-erlangen.de">Freimut 
+  Bodendorf</a><br>Department of  Information Systems <br>University of Erlangen-Nuremberg 
+  <br>Nuremberg, Germany</h4> 
+<br>
+  
+  <div align="center">Abstract</div>
+  
+  <blockquote>At the University of Erlangen-Nuremberg, a project to create a "virtual campus", providing a  network based learning experience is currently being run. Part of this undertaking is to provide students with multimedia WWW-based teachware packages on various subjects. This work aims at incorporating the highest possible level of support into the software itself - in particular through integrated navigational and orientation guides, with subsequent support through tutors, who are available through corresponding communication tools within the distributed environment of learning, teaching and co-operation.</blockquote> 
+<br>
+
+
+  <h2>Motivation</h2>
+  
+<p>  Various forms of education and training, based on the 
+  classical Computer Based Training (CBT), have become well established within 
+  companies and in higher education. With regard to the flexibility in terms of 
+  time and location, as well as in terms of incurred cost, they are far superior 
+  to traditional forms of instruction. A relatively recent development which has 
+  not yet gained widespread acceptance is the use of the World Wide Web (WWW) as 
+  a basis and platform for distributed computer assisted teaching and learning. 
+  In addition to the advantages outlined with regard to classical CBT, the WWW 
+  offers the two advantages of world wide availablity as well as ease of 
+  promptly updating courses, but also adds many possibilities of collaborative 
+  learning. Using the Java programming language and the ever improving means of 
+  online presentation it has become possible to realize sophisticated WWW-based 
+  teachware packages which are comparable in terms of appearance and 
+  functionality to classical CBT applications created with dedicated authoring 
+  systems.</p> 
+  <p>When developing this type of online courses a variety of WWW-specific 
+  mechanisms have to be taken into consideration. The WWW based hypertext 
+  concept, for instance, is particularly ambivalent within this context, as on 
+  the one hand it allows for a user determined exploration of learning 
+  materials, but on the other hand can create significant orientation problems 
+  for the user ("Lost in hyperspace" problem). This potential problem should be 
+  met with flexible navigational and orientation guides. Furthermore the 
+  learners within a distributed network based environment must not be left to 
+  study by themselves, as in the classical CBT situation. In addition to the 
+  support integrated into the teachware, it is crucial to offer the assistance 
+  of tutors through integrated media channels and to give the students the 
+  possibility of collaborative learning sessions with other participants. 
+  Finally when designing, preparing and presenting a WWW-based course, a few 
+  specific ergonomic and didactic requirements need to be met.</p> 
+  <p>At the University of Erlangen-Nuremberg, which is spread out over an area 
+  of about 500 km2, a project to create a "virtual campus", providing a new type 
+  of network based learning experience is currently being run. Part of this 
+  undertaking is to create an open environment for teaching, learning and 
+  co-operation, which provides students with multimedia WWW-based teachware 
+  packages on various subjects. This work, which is being pursued as part of a 
+  teleteaching/telelearning project [6], attempts to take into consideration all 
+  the requirements outlined above. It aims at incorporating the highest possible 
+  level of support into the software itself - in particular through integrated 
+  navigational and orientation guides, with subsequent support through tutors, 
+  which are available through corresponding communication tools within the 
+  distributed environment of learning, teaching and co-operation.</p> 
+  <h2>Design of WWW-based teachware packages</h2>
+  <h3>Educational approach</h3>
+  
+  <p>The educational approach within the concepts 
+  presented here is influenced by the constructivistic philosophy of learning, 
+  which defines learning as an active, self-motivated, context and situation 
+  oriented social process [10]. While asynchronous on-demand forms of learning 
+  inherently require active and self motivated learning, the demand for context 
+  and situation oriented learning is satisfied by providing appropriate 
+  interaction modules. They permit the interactive discussion of authentic 
+  problems within the individual learning context, and hence offer a means for 
+  immediately applying the knowledge gained. For a HTML course for instance a 
+  JavaScript-based HTML test editor was developed, which allows the interactive 
+  creation and illustration of HTML documents.</p>
+   
+  <p>In order to offer the learner interactive components as in standard 
+  progression tests, a building block was developed in Java, which provides a 
+  simple definition of <i>free form and multiple choice questions and 
+  answers</i>, that can be integrated into a WWW-based teachware package.</p> 
+  <p>To create a social aspect, collaborative, guided learning, as well as 
+  multilateral communication and co-operation between learner and instructor are 
+  supported. Within this setting the increased activity demanded from the 
+  student is met on the instructor side through a role change from a presenter 
+  of information to a tutor, coach and moderator [9].</p> 
+  <p>One of the main areas of application for WWW-based teachware packages is 
+  seen in supplementing conventional forms of teaching and learning. In this 
+  capacity they are particularly valuable in conveying basic knowledge. This 
+  could be realized by presenting individual university lectures or by 
+  integrating course materials from any number of courses into a reference type 
+  application. The teachware package hence acts as the basis for a conventional 
+  face-to-face lecture series, where the knowledge acquired is discussed in 
+  depth.</p> 
+  <h3>Screen design</h3>
+  
+  <p>The multimedia WWW-based teachware packages introduced 
+  here draw upon a single unified screen design in all course modules, so that 
+  the user quickly becomes familiar with the learning environment and can 
+  develop a certain routine when dealing with the individual teachware 
+  application. This approach also counteracts the danger of inadvertently 
+  leaving the study package, for instance by following links to external sources 
+  of information on the WWW. A sudden change in screen design hence indicates to 
+  the user that he or she is no longer within the bounds of the original 
+  teachware application.</p> 
+  
+  <p>The goal when designing the graphical user interface (GUI) was to achieve a 
+  clear and structured, yet graphically appealing layout. Graphical overload, 
+  which is often observed in information services on the Internet, is avoided in 
+  order to reduce transfer time. The use of complex backgrounds is completely 
+  omitted, as these substantially curtail the readability of the document and 
+  lead to fatigue and drop in concentration when the reader is confronted with 
+  longer passages of text. High contrast colours are chosen for background and 
+  text, by default black type on a white background is used. Since the use of 
+  WWW applications is potentially platform independent, one needs to consider 
+  different display resolutions when developing teachware packages. This 
+  requirement is met by a layout, which is set up for working comfortably at 
+  resolutions of 640*480, 800*600, 1024*768 as well as 1152*900.</p>
+   
+  <p>Figure 1 shows the standard screen design of the multimedia WWW-based 
+  teachware packages. The subdivision of the browser window into two separate 
+  frames is based on the layout suggested in [7], which calls for the actual 
+  information being displayed in the centre of the screen and being supported by 
+  core functionalities, such as navigational information and access information, 
+  in a persistent frame at the bottom of the screen. Consequently the 
+  presentation of course content and the activation of various other functions, 
+  which are discussed in chapter 2.3, in the top frame (information frame (2)) 
+  is governed by a control panel located in the bottom frame (control frame 
+  (1)).</p> 
+
+  <div align="center"><img alt="Figure 1" height=605  src="langfig1.gif" width=559></div>
+<div align="center"><br><strong>Figure 1: Standard screen design</strong></div>
+
+  <p>The frame-based implementation guarantees that the control panel is always 
+  directly accessible. The problem of scrolling the navigation out of bounds, 
+  which often occurs in longer documents on the WWW with navigational areas at 
+  the top or bottom of the document, is hence avoided.</p> 
+  <p>A colour coding of all different course modules simplifies the orientation 
+  within a teachware package. In practice this concept is implemented through a 
+  vertical colour bar on the left border of each document (3). The main course 
+  chapters of a teachware package are therefore allocated a unique colour, so 
+  that the learner can use this guide to always determine which part of the 
+  course he or she is currently viewing. In addition the colour coding serves as 
+  one building block within the extended orientation support (cf. chap. 3.4).</p> 
+  <p>Longer course modules also provide jump-spots as an additional navigational 
+  aid, which are located in the side menu (4) and which ensure fast access to 
+  individual sections of the course module. The colour of the jump-spots 
+  corresponds to the vertical colour bar of that particular module. There are 
+  also other coloured jump-regions in the side menu, which provide particular 
+  interaction options and are labelled as interaction-spots. Their colour coding 
+  is consistent throughout the tutorial, for example red for standard 
+  progression tests in form of questions and answers or blue for context 
+  oriented interaction components.</p> 
+  <p>At the end of each course module you find information about the author and 
+  the creation date.</p> 
+  
+  <h3>Value-added functionality</h3>
+  
+  <p>The approach of the multimedia WWW-based 
+  teachware packages relies on a principle true for all computer assisted 
+  learning, that there must be a substantial difference in the electronic 
+  presentation of lecture material. The implementation must do away with the 
+  one-to-one conversion of paper documents, and must realize the potential for 
+  added value inherent in an interactive presentation, such as dialogue 
+  components and training modules.</p> 
+  <p>With these requirements in mind the teachware packages are based on a 
+  building block system with a variety of reusable core components, which 
+  provide important functionalities and serve as a framework for the creation of 
+  multimedia WWW-based teachware packages on any topic. These functionalities 
+  are at the disposal of the user during the teachware session through the 
+  various buttons within the control panel introduced in chapter 2.2 (see figure 
+  2). Depending on the context these buttons are dynamically deactivated or made 
+  available.</p>
+     
+  <div align="center"><img alt="Figure 2" height=180  src="langfig2.gif" width=626></div>
+<div align="center"><br><strong>Figure 2: Control panel</strong></div>
+  
+  <p>The graphical design of the control panel, implemented in Java, operates as 
+  one intuitively would expect. When clicking a button the action is 
+  acknowledged through a clicking sound and a button down-state. Through this 
+  audio-visual feedback the user is reassured that his or her interaction has 
+  been accepted by the teachware module. Buttons that are dynamically 
+  deactivated, or which are unavailable in certain contexts, are presented to 
+  the user in a shaded state. A click on these buttons is neither accompanied by 
+  a clicking sound nor through any change in the button state. The function of 
+  each individual button is shown in the status line of the browser as the mouse 
+  moves over the clickable area. The navigational buttons for instance show the 
+  target course content as the mouse moves over the hotspots. The following 
+  section briefly outlines the optional functionalities that can be activated 
+  through the control panel.</p>
+ 
+  <ul>
+    <li>The <i>time display</i> offers two modes of operation. By default it 
+    displays the current time. One click on the display reveals the time passed 
+    during the current learning session. Another click makes the display revert 
+    back to the current time mode. 
+    <li>An integrated <i>online manual</i> offers the learner assistance with 
+    the use of the teachware package, the functionalities of the core features 
+    introduced here, as well as with operating the communication tools to get in 
+    contact with the tutor, the technical support staff and other learners. By 
+    optionally opening another browser window, the online manual can be used 
+    concurrently with the teachware application. 
+    <li>The <i>start button</i> allows the user at any time to return to the 
+    homepage of the individual teachware package. 
+    <li>A Java-applet is provided to <i>simplify the navigation</i> within the 
+    hierarchically structured information of the teachware package. The applet 
+    which is part of the control panel, has three buttons, up, next and 
+    previous, the latter being of particular importance, discussed in chapter 
+    3.3. 
+    <li>Within a multimedia WWW-based teachware package essentially two methods 
+    are used as an orientation guide. First, a <i>colour coding</i> is applied 
+    to the course materials, arranged according to a hierarchical system. 
+    Second, dynamically updated <i>tables of contents</i> for the individual 
+    chapter and the whole course can be switched on and off in a separate frame 
+    by using two corresponding buttons on the control panel. This approach 
+    enables the learner to always easily determine his or her exact position 
+    within the course without leaving the guided tour. A detailed description of 
+    the concept behind this course of action is given in chapter 3.4. 
+    <li>The <i>glossary</i>, which is subdivided into three levels, is always 
+    available to the learner to access definitions of unclear terms without 
+    having to go through any search procedures. Additional external resources 
+    from the WWW are easily linked into the package if needed. The glossary can 
+    be reached not only through the button in the control panel but also through 
+    certain terms within the package that are hyperlinked to it. This mechanism 
+    can compensate for different levels of prior knowledge among the learners. 
+    Users with a higher level of proficiency are not distracted by lengthy 
+    definitions which to them are superfluous and would disturb the flow of 
+    reading. Learners with less knowledge are only one mouseclick away from the 
+    definition of unclear terms in the glossary. For an in depth study of 
+    sources and literature in support of a specific area of interest, one could 
+    imagine an interface to an <i>electronic library</i>. 
+    <li>An <i>annotation pad</i> gives the learner the opportunity to take 
+    individual notes on each chapter, which can also be accessed out of context 
+    during a subsequent session with the corresponding teachware package. 
+    <li>During the online use of a teachware package in a distributed network 
+    based teaching and learning environment the learner must always be able to 
+    <i>contact a tutor and the supporting technical staff</i> through integrated 
+    media channels [3]. This enables the learner to receive help and to jointly 
+    find solutions to content related problems. Some interfaces for this type of 
+    feedback and interaction are already tied into the teachware package - 
+    reachable via the control panel - to use WWW-based synchronous and 
+    asynchronous communication tools, while the integration of others is 
+    anticipated. These mechanisms for interaction range from pre-addressed email 
+    forms over bulletin boards and whiteboard tools to shared application and 
+    videoconferencing systems. 
+    <li><i>Multilateral communication</i> among geographically distributed 
+    learners in an online course is realized. One of the tools provided is a 
+    multimedia WWW-based bulletin board system, accessible via a button in the 
+    control panel. In this forum for asynchronous discussion the tutor can 
+    create closed user groups, within which learners can jointly solve problems 
+    without the feeling of being observed by a third party. An additional 
+    feature of the system is its support of multimedia elements, for instance 
+    recorded audio contributions or video clips, which permits asynchronous 
+    communication not only on a textual level. </li></ul>
+	
+  <h2>Implementation</h2>
+  
+ <p> The multimedia WWW-based teachware packages are 
+  <i>implemented entirely in HTML, Java, JavaScript and WWW-compatible media 
+  formats</i>, with no CGI processes taking place. This provides the means for 
+  online use on the Internet and Intranet but also allows for offline use via 
+  CD-ROM. The only prerequisite for the use of the teachware packages is a 
+  Java-compatible browser as a front end, with no additional applications or 
+  plug-ins to be installed and configured.</p> 
+  <p>The teachware packages are based on a series of modular reusable 
+  components, which provide core functionalities and serve as a framework for 
+  developing WWW-based teachware packages with any type of content. In 
+  particular teaching material which is being produced within a teleteaching and 
+  telelearning context is frequently (re)used in WWW-based teachware packages. 
+  This teaching material consists of excerpts from lecture video recordings, 
+  corresponding digitized blackboard snapshots and overhead transparencies, as 
+  well as of contents from multimedia presentations, electronic lecture notes, 
+  excerpts from the course textbooks, exercises etc. In addition, computer 
+  animation, textual, visual and audio components are added and external 
+  supplementary WWW resources for an online use are linked. The integration of 
+  these components, such as navigational guides, or a quiz applet as an 
+  interaction module for progression testing, does not require any changes Java 
+  or JavaScript program code.</p> 
+  <p>The respective course author's tasks only include the subdivision of 
+  available electronic learning materials into suitable course modules and the 
+  integration of the materials into HTML documents, as well as linking the 
+  contents of the course to the supporting components outlined above, taking 
+  into account their specific advantages (i. e. navigational guidance, 
+  possibility of annotation, progression tests etc.) within the respective 
+  teachware package. </p>
+  <h2>Flexible navigational and orientation guides</h2>
+  
+  <h3>Discussion</h3>
+  
+  <p>Hypertext systems such as the WWW are based on the idea of 
+  subdividing the bulk of information on one type of subject into individual 
+  information units (knots) which are interconnected to yield a networked type 
+  of structure. Within this arrangement the user can freely explore the 
+  information surrounding a certain subject, where the degree of freedom of 
+  navigation depends on the organisation of the hypertext. Building on this 
+  concept, unstructured hypertext allows for a flexible exploration of the 
+  information within. Hypertext which is structured hierarchically, linear or in 
+  matrix form curtails this freedom of navigation, yet offers the means for an 
+  unaccustomed user of keeping a good sense of perspective.</p>
+   
+  <p>The advantages inherent in a user determined exploration of course content 
+  are compromised by significant orientation problems on behalf of the learner. 
+  These occur when the user has difficulties while determining his or her exact 
+  position within the information presented, or is not able to locate certain 
+  information. These problems are often linked with difficulties in visualising 
+  the overall structure of the hypertext.</p> 
+  <p>Besides the latent danger of disorientation, hypertext systems are often 
+  associated with problems of cognitive overload. The latter results from the 
+  fact that the learner must utilize additional mental capacity to realize the 
+  available possibilities of navigation, which information has already been 
+  dealt with and which information remains subject to exploration etc. [11]. 
+  When realizing WWW-based teachware packages the design and implementation of 
+  flexible navigational and orientation guides are crucial. On the one hand the 
+  learner should always be able to determine his or her current position within 
+  the presented information (<i>orientation capability</i>). On the other hand, 
+  the user should at any time recognize the available navigational options, and 
+  be able to easily locate information, which is known to be part of the 
+  teachware package (<i>navigation capability</i>).</p> 
+  <h3>Structure of course materials</h3>
+  
+  <p>With an unstructured presentation of 
+  information one can rarely get a perspective of the subject area, which 
+  hinders the search for individual information and orientation within the 
+  available material. When creating WWW-based teachware packages, the course 
+  materials are generally structured in a hierarchical manner. In order to 
+  facilitate the navigation for unaccustomed hypertext-users and to present the 
+  individual course modules which are based on each other way, the hierarchical 
+  structure is supplemented by a linear guided tour. This path then encompasses 
+  all the electronic chapters of a teachware package.</p> 
+  <p>The potential inherent in the hypertext concept of the WWW is utilized by 
+  cross linking information within the package and by linking to external 
+  resources on the Internet. Figure 3 shows the basic structure of a WWW-based 
+  teachware package.</p> 
+  
+  <div align="center"><img  alt="Figure 3" height=202 src="langfig3.gif" width=297></div>
+    <div align="center">&nbsp;<strong>Figure 3: Structure of a multimedia WWW-based teachware package</strong></div>
+   
+  <p>One could envisage an extension of the chosen structure to incorporate 
+  additional guided tours, which would for instance be able to accommodate the 
+  different levels of knowledge among users. Furthermore a flexible generation 
+  of paths is conceivable, which would adapt to the knowledge level of the 
+  learner in the course of the teachware use. To achieve this one could either 
+  predefine a diverging system of learning paths, or one could generate an 
+  individual learning path „on the fly" using knowledge based methods [8]. With 
+  the approach chosen for multimedia WWW-based teachware packages, a single 
+  linear guided tour is thought to be sufficient, as different knowledge levels 
+  are accommodated by optionally skipping one chapter and through the efficient 
+  and simple mechanisms of locating information.</p>
+   
+  <p>The definition of a guided tour as the basis of navigational support within 
+  WWW-based teachware packages differs from related research work as described 
+  in [2], [4] and [5]. In particular the complete absence of CGI techniques is a 
+  new approach, hence removing the need for any client-server interaction. The 
+  CGI interactions are replaced by a client side Java/JavaScript implementation 
+  which not only offers better performance, but also allows for the offline 
+  operation of the teachware package using file protocol interactions.</p>
+   
+  <h3>Navigational guides</h3>
+  
+ <p> In principle the course content may be experienced 
+  in two ways. First, through unstructured exploration, looking at the table of 
+  contents, overview pages and by following links to more information within the 
+  teachware package (<i>user determined presentation</i>). Second, by using the 
+  <i>next</i> button to follow the predefined guided tour step by step 
+  (<i>system determined presentation</i>). In the context of this second 
+  approach the <i>previous</i> button allows the user to go back one step on the 
+  guided tour, whereas the <i>up</i> button brings the user to the root of the 
+  hierarchically preceding course module. If the user initially decides to use 
+  the system determined presentation, but leaves the predefined path, for 
+  instance to follow links and cross-references to supplementary external 
+  resources on the WWW (<i>composite type presentation</i>), he or she can 
+  always directly return to the last viewed chapter of the online course by 
+  using the <i>previous</i> button.</p>
+   
+  <p>Figure 4 shows a schematic representation of the navigation guides within a 
+  composite type presentation: If the user selects a link to an external source 
+  of information on the WWW, the learner is alerted that he or she is about to 
+  leave the guided tour of the teachware package (1). At this point the user has 
+  the option to return to the guided tour by pressing the <i>previous</i> button 
+  (2a), or to follow the external link (2b). If the learner at this point 
+  chooses the latter option, the information is loaded from the WWW into the 
+  information frame without relinquishing the functionality of the control panel 
+  which is preserved in the adjacent control frame. Within the external sources 
+  of information on the WWW the user can follow any other links (3). By using 
+  the <i>previous</i> button he or she can always directly return to the last 
+  chapter within the guided tour of the teachware package (4), without having to 
+  use browser specific aides, such as multiple clicks on the "back" button.</p> 
+  <center>
+  
+<div align="center"><img alt="Figure 4"  height=388 src="langfig4.gif" width=700></div>
+  <div align="center"><br><strong>Figure 4: Example of navigational guidance</strong></div>
+  
+  <p>This functionality, referred to as <i>guided tour support,</i> is available 
+  in all situations, open to a departure from the predetermined path, i. e., 
+  when looking up terms in the glossary or when consulting the online manual.</p> 
+  <h2>Orientation guides</h2>
+  
+<p>  To avoid the problem of disorientation within the 
+  course material, WWW-based teachware packages are structured hierarchically, 
+  with colour coded main chapters. A colour bar, displayed on the left side of 
+  each page, indicates the association of each unit with a certain chapter (cf. 
+  chap. 2.2). Since despite all these efforts a disorientation of the user 
+  cannot be completely ruled out, a supplementary orientation concept was 
+  implemented which is accessible via two buttons in the control panel. Figure 5 
+  demonstrates the possible course of action taken by the user to determine the 
+  current location.</p> 
+  <center>
+  <div align="center"><img alt="Figure 5"  height=420 src="langfig5.gif" width=700></div>
+  <div align="center"><br><strong>Figure 5: Example of orientation guidance</strong></div>
+  
+  <p>A schematic yet detailed view of the current chapter is shown in a separate 
+  frame via the chapter-content button (1). Below the entries the headline of 
+  the current unit within the chapter is displayed (2). At the top of the 
+  chapter content listing the name of the current chapter is noted. This in term 
+  corresponds to an entry in the schematic view of the entire course structure 
+  (3), which is accessible by clicking on the overall-content button (4). Based 
+  on these interconnections the structure of all the information that is 
+  available immediately becomes transparent, thus allowing the user to always 
+  determine his exact position. By using frame technology this approach does not 
+  require the user to leave the guided tour.</p>
+   
+  <h2>Summary and outlook</h2>
+  
+ <p> An evaluation of the introduced approach to 
+  multimedia WWW-based teachware packages in an open environment of teaching, 
+  learning and co-operation is taking place at the University of 
+  Erlangen-Nuremberg during the 1997 summer semester. The goal is to examine the 
+  integration of a WWW-based course into the regular curriculum. In order to 
+  achieve this, 60 students will be given access to a teachware package as part 
+  of a business information systems seminar, containing various multimedia 
+  teaching materials from different lectures at the University of 
+  Erlangen-Nuremberg. This teachware package will be employed to impart basic 
+  knowledge in the field of Internet and WWW related technologies. The 
+  participants will have three weeks to interact with the teachware package at 
+  their individual pace and without being restricted to a certain location, to 
+  gain the fundamental knowledge in the subject being dealt with. During this 
+  period of time the participants can make use of the bulletin board system 
+  outlined above, where the tutor acts as a coach moderating the entries on the 
+  board. The tutor and the development team of the teachware package are always 
+  available for questions regarding content, technology and ergonomy, through 
+  asynchronous communication tools and also via synchronous videoconferencing 
+  and groupware tools during certain office hours. In this scenario the 
+  teachware package acts as the basis for a conventional face-to-face lecture 
+  series, where the knowledge acquired is discussed in depth. In addition, the 
+  application of this knowledge in a business related context is dealt with.</p>
+   
+  <p>The positive feedback to this prototype framework for multimedia WWW-based 
+  teachware packages - award winning in this year's software competition 
+  "Multimedia Transfer '97" of the German Academic Software Co-operation - 
+  encourages an extended evaluation beyond the boundaries of our university. An 
+  evaluation of the package is planned at several German and Austrian 
+  universities and colleges, as well as in companies and in the area of teacher 
+  training. The interest shown by external institutions and a group of experts 
+  in the field of higher education, suggests that multimedia WWW-based teachware 
+  packages may not only present a suitable medium for WWW-based learning in 
+  higher education, but also a means for knowledge transfer between universities 
+  and external interest groups. Areas of application are conceivable within 
+  companies, in research institutes, in private and public educational 
+  institutions as well as for private individuals, who are required to face the 
+  challenge of lifelong learning.</p>
+   
+  <p>Furthermore the development of additional reusable components for 
+  multimedia WWW-based teachware packages is planned. Particular emphasis will 
+  be placed on the development of Java-based interactive components as well as 
+  on an extended navigation support with graphical overviews and an adaptive 
+  approach.</p> 
+  <p>Finally the reusability of the WWW-based course modules and content is 
+  considered a very important issue. The aim is to create a set of tools, which 
+  allows the tutor to easily combine teaching materials already present on the 
+  WWW, forming individual courses with any type of content.</p> 
+  
+  <h2>References</h2>
+<p>  [1] Euler, D., "Didaktik des computerunterstuetzten Lernens 
+  - Praktische Gestaltung und theoretische Grundlagen", Nuremberg 1992, p. 19.</p> 
+  <p>[2] Goldberg, M. W., Salari, S., Swoboda, P., "World Wide Web - Course 
+  Tool: An Environment for Building WWW-based Courses", in: Computer Networks 
+  and ISDN Systems, 28 (7-11) 1996, pp. 1219-1231. 
+  <p>[3] Graesel, C., Bruhn, J., Mandl, H., Fischer, F., "Lernen mit 
+  Computernetzen aus konstruktivistischer Perspektive", Research Paper No. 73, 
+  Dpt. of Empirical Pedagogics and Pedagogical Psychology, 
+  Ludwig-Maximilians-University of Munich, Munich 1996, pp. 17-20. 
+  <p>[4] Hauck, F. J., "Supporting Hierachical Guided Tours in the World Wide 
+  Web", in: Computer Networks and ISDN Systems, 28 (7-11) 1996, pp. 1233-1242. 
+  <p>[5] Kutschera, P., "Combining Database Technology with the World Wide Web 
+  for Tele-teaching Environments", in: Swiridow, A. P., Widmayer, P., Oberhoff, 
+  W.-D., Unger, H. (Eds.), "New Media for Education and Training in Computer 
+  Science", Infix, St. Augustin 1996, pp. 99-108. 
+  <p>[6] Langenbach, C., Grebner, R., Bodendorf, F., "Multimedia-unterstuetzte 
+  Dezentralisierung interdisziplinaerer Lehre", Research Paper Information 
+  Systems II, No. 05/1997, Friedrich-Alexander-University of Erlangen-Nuremberg, 
+  Nuremberg 1997 (forthcoming). 
+  <p>[7] Macaulay, L., "Human-Computer Interface for Software Designers", London 
+  1995, p. 74. 
+  <p>[8] Eklund, J., "Adaptive Hypertext &amp; Hypermedia", 
+  http://www.education.uts.edu.au/ projects/ah/, May 27th, 1997. 
+  <p>[9] Reimann, P., Schult, Th., "Schneller schlauer - Bildung im 
+  Multimedia-Zeitalter", in: c't - magazine for computer techniques, 9 (1996), 
+  p. 186. 
+  <p>[10] Reinmann-Rothmeier, G., Mandl, H., "Multimediale Lernumgebungen", in: 
+  Geissler, K. A., v. Landsberg, G., Reinartz, M. (Hrsg.), „Handbuch 
+  Personalentwicklung und Training", Deutscher Wirtschaftsdienst, Cologne 1997 
+  (forthcoming). 
+  <p>[11] Tergan, S., "Hypertext/Hypermedia - Konzeption, Lernmoeglichkeiten, 
+  Lernprobleme", Tuebingen 1995, p. 12. 
+            <hr color=#ff00ff size=3>
+			 <h5 align="left" style="">Paper presented at the <a href="http://netways.shef.ac.uk/rbase/2ndsym2.htm#programme">2nd  International Symposium on Networked Learner Support</a> 23rd-24th June 1997,  Sheffield, England<br><b>New services, roles and partnerships for the on-line learning environment</b></h5>
+<hr color=#ff00ff size=1>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Langenbach, Christian &amp; Bodendorf, Freimut (1997)&nbsp; &quot;Learner support in a distributed learning environment:the use of WWW-based teachware packages&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>3</strong>(1) Available at: http://informationr.net/ir/3-1/paper31.html</p>
+<p style="text-align : center">&copy; the author, 1997. Updated 7th August 1999</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:IMbSEHsTjmcJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres31.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper31" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 28 December 2002</h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/3-1/paper31.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:38:13 GMT -->
+</html>

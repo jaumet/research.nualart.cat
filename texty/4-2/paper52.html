@@ -1,0 +1,626 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/4-2/paper52.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:19:22 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<title>Information contracting tools in a cancer specialist unit:the role of Healthcare Resource Groups (HRGs)</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="management information, contracting, national health service, NHS, computing, clinical requirements, financial requirements, patient-centred, episodes of care,Healthcare Resource Groups, HRG, chronic care, cancer, Health Benefit Groups">
+<meta name="description" content="The need for high quality management information within the contracting process has driven many of the major developments in health service computing. These have often merged clinical and financial requirements, usually along patient-centred lines. In order to identify a common currency for a range of clinical activities that are inherently variable, price tariffs have been drawn up on the basis of 'episodes of care' within specialties. Healthcare Resource Groups (HRGs) were designed to meet the need for a common information currency. However, they were designed for acute care. The study on which this paper is based aims to examine their applicability to chronic care in a cancer specialist unit. The data were drawn from the patient information system within a major cancer unit. The focus of the investigation is encapsulated in the following questions: a) Do HRGs really work as a grouping and costing methodology? b) How relevant are HRG classifications for long-term patient care? The investigation demonstrated that not all HRGs are iso-resource within this environment. The findings from the data analysis are echoed by the NHS Executive's own evaluation . This does not negate advantages in their use. Furthermore, the development of Health Benefit Groups as information management tools, through a focus on health conditions and interventions rather than on purely on treatments, offers potential for greater validity within a chronic care situation.">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Information contracting tools in a cancer specialist unit:the role of Healthcare Resource Groups (HRGs)">
+<meta name="DC.Creator" content="Carol Marlow, Hugh Preston">
+<meta name="DC.Subject" content="management information, contracting, national health service, NHS, computing, clinical requirements, financial requirements, patient-centred, episodes of care,Healthcare Resource Groups, HRG, chronic care, cancer, Health Benefit Groups">
+<meta name="DC.Description" content="The need for high quality management information within the contracting process has driven many of the major developments in health service computing. These have often merged clinical and financial requirements, usually along patient-centred lines. In order to identify a common currency for a range of clinical activities that are inherently variable, price tariffs have been drawn up on the basis of 'episodes of care' within specialties. Healthcare Resource Groups (HRGs) were designed to meet the need for a common information currency. However, they were designed for acute care. The study on which this paper is based aims to examine their applicability to chronic care in a cancer specialist unit. The data were drawn from the patient information system within a major cancer unit. The focus of the investigation is encapsulated in the following questions: a) Do HRGs really work as a grouping and costing methodology? b) How relevant are HRG classifications for long-term patient care? The investigation demonstrated that not all HRGs are iso-resource within this environment. The findings from the data analysis are echoed by the NHS Executive's own evaluation . This does not negate advantages in their use. Furthermore, the development of Health Benefit Groups as information management tools, through a focus on health conditions and interventions rather than on purely on treatments, offers potential for greater validity within a chronic care situation.">
+<meta name="DC.Publisher" content="Professor T.D. Wilson">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 4  No. 2, October 1998</h4></td></tr>
+  <tr> 
+    <td><a href="infres42.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<h1>Information contracting tools in a cancer specialist unit: the role of Healthcare Resource Groups (HRGs)</h1>
+
+
+<h4>Carol Marlow</a><br>Royal Marsden Hospital, London<br><a href="MAILTO: hjp@aber.ac.uk">Hugh Preston</a><br>Department of Information and Library Studies<br>University of Wales, Aberystwyth, SY23 3AS</h4>
+
+
+<div>Abstract</div>
+
+
+<blockquote>The need for high quality management information within the contracting process has driven many of the major developments in health service computing. These have often merged clinical and financial requirements, usually along patient-centred lines. In order to identify a common currency for a range of clinical activities that are inherently variable, price tariffs have been drawn up on the basis of 'episodes of care' within specialties. Healthcare Resource Groups (HRGs) were designed to meet the need for a common information currency. However, they were designed for acute care. The study on which this paper is based aims to examine their applicability to chronic care in a cancer specialist unit. The data were drawn from the patient information system within a major cancer unit. The focus of the investigation is encapsulated in the following questions: a) Do HRGs really work as a grouping and costing methodology? b) How relevant are HRG classifications for long-term patient care? The investigation demonstrated that not all HRGs are iso-resource within this environment. The findings from the data analysis are echoed by the NHS Executive's own evaluation (<a href="#refs">NHSE, 1995</a>). This does not negate advantages in their use. Furthermore, the development of Health Benefit Groups as information management tools, through a focus on health conditions and interventions rather than on purely on treatments, offers potential for greater validity within a chronic care situation.
+</blockquote>
+<br>
+
+<h2>Role of Healthcare Resource Groups </h2>
+
+<p>In order to establish a manageable, equable and equitable currency,
+the NHS Executive has attempted to establish a means of identifying
+episodes within clinically homogeneous, isoresource groups. Since
+1992 it has been promoting the use of such categories for inpatient
+and daycase episodes, under the title of Healthcare Resource Groups
+(HRG). The role of these was made clear in NHSE statements (<a href="#refs">NHSE,
+1994</a>):</p>
+
+<p>&quot;HRGs are a nationally recognised method of classifying casemix
+by categorising patients into a manageable number of groups which
+are:</p>
+
+<ul>
+<li>clinically similar (homogeneous);</li>
+<li>expected to consume similar amounts of resource (iso-resource);</li>
+<li>used as a &quot;language&quot; between clinicians and managers&quot;</li>
+</ul>
+
+<p>The methods employed to develop HRGs have also been set out and
+indicate the reliance on clinical coding standards (<a href="#refs">NHSE, 1993</a>):</p>
+
+<p>
+&quot;HRGs use ICD diagnostic codes and OPCS procedure codes as
+the basis of grouping, together with information on age and discharge
+status. Records can be grouped using only the Minimum Contract
+Dataset information which is collected on all acute inpatient
+and daycase episodes&quot;.</p>
+<p>
+As such, HRGs are intended to offer a workable solution to the need for more meaningful information. They are at an intermediate level of statistical analysis coming between specialty, which contains insufficient detail about patient based workload, and diagnosis, with so much detail that the global view becomes lost. This is shown as follows:</p>
+
+
+<table bgcolor="#D2FFFF" align="center" border cellpadding="5">
+<caption align="bottom"><br><div>Table 1</div></caption>
+<tr><th><i>Classification</i></th><th><i>Number</i></th></tr>
+<tr><td>Specialties</td><td align="right"> ~15</td></tr>
+<tr><td>HRGs</td><td align="right">~500</td></tr>
+<tr><td>ICD10 diagnostic codes</td><td align="right">~12000</td></tr>
+</table>
+
+<p>A comparative overview is offered by the NHS Executive's Information
+Management Group in documentation relating to the classifications
+(<a href="#refs">NHSE IMG, 1994</a>).</p>
+
+<h2>The study: the use of HRGs in cancer care </h2>
+
+<p>The research project forming the basis of this paper is a study
+of the application of HRGs in contracting for cancer services.
+This is an evaluation of their suitability as groupings within
+administrative information systems in respect of purchasers' requirements
+and patients' needs. The focus of the investigation is encapsulated
+in the following questions:</p>
+
+<ul>
+<li>Do HRGs really work as a grouping and costing methodology?</li>
+<li>How relevant are HRG classifications for long-term patient
+care?</li>
+</ul>
+
+<p>These questions arose from the managerial need to match episode
+based costing of healthcare with the requirements of cancer treatment.
+The concept of a hospital episode as a commercial commodity and
+information entity may be appropriate for many acute medical conditions,
+but chronic diseases require long term care. The management of
+cancer patients involves three different treatment modalities:
+surgery, chemotherapy and radiotherapy, alone or in combination.
+The duration of active treatment is variable. It can span over
+many years, during which time the patient can have several admissions
+to hospital; or may be treated entirely on an outpatient basis.
+The investigation of HRGs and their relevance to cancer care was
+initiated as a result of the immediate paradox between the treatment
+of chronic disease and the costing of the care. Leading on from
+initial findings, it explores the ways in which contract information
+can be enhanced, either as an alternative to, or in combination
+with, HRGs.</p>
+
+<p>Collection of data for the study has taken place within a major
+specialist cancer unit and examines the relevance of HRG information
+for a group of cancer patients within the gynaecology specialty.
+This focus was the result of there being no current HRGs for oncology,
+so gynaecology was chosen as an instance of a grouped clinical
+activity involved in cancer diagnosis and treatment. 1997/8 information
+from the National Casemix Office indicates that this will continue
+for the time being. The methodology involved a retrospective analysis
+of patient data to obtain information about the care episodes
+that comprise individual treatments for specific cancer diagnoses.
+Costed patient activity data were classified within HRGs and tested
+to ascertain the homogeneity of the groupings - to see whether
+they are &quot;iso-resource&quot;. The data were then analysed
+further, within diagnostic categories, to try and establish whether
+any pattern, of treatments and costs, could be discerned from
+the activity records.</p>
+
+<h3>Characteristics of the study </h3>
+
+<p>The perceived anomalies in treatment of chronic disease and in
+the costing of the care, provided the background to a problem
+area that had other irregular characteristics. The reliance of
+HRG based costing formulae on episodes of care, implied that these
+episodes were commonly understood and interpreted. A survey of
+1994/95 price tariffs for extra-contractual referrals (ECRs) issued
+by twenty different Trusts showed that charges were based on episodes
+of care, classified as FCEs (finished consultant episodes). These
+were either within specialties, which in these instances might
+include paediatrics, or for specific treatments eg. bone marrow
+transplants. Some hospitals had additional tariffs for diagnostic
+procedures, such as X-rays and blood tests. These episodes of
+care are inpatient stays, daycase admissions and outpatient attendance.
+Such standard measures give the impression of similarity, but
+these classifications do not always imply homogeneous services.
+Tariffs, for example, could be qualified by making additional
+charges for inpatient stays exceeding 28 days, patient transport
+costs, prostheses or certain high-cost drugs. The unit of an FCE
+may not necessarily be the whole period of an admission, as it
+refers to the part of an inpatient stay spent under the care of
+an individual consultant - whose definition is not always interpreted
+in a consistent manner. Even where there may be consistency in
+relating admissions to consultants, the admissions themselves
+may vary in the extent to which they relate to an FCE (<a href="#refs">Clarke
+&amp; McKee, 1992</a>). Different hospitals have different methods
+of coding this activity for contracting purposes; some count each
+patient <i>visit</i> for chemotherapy or radiotherapy as a daycase
+FCE while another counts a <i>course</i> of chemotherapy or radiotherapy
+as an outpatient FCE (<a href="#refs">Gandy, 1996</a>)</p>
+<p>
+Finally, there may be differences in the classifications themselves.
+A patient suffering from gynaecological cancer could be categorised
+within one of several specialties: general surgery, medical oncology,
+radiotherapy or gynaecology - depending on their treatment and
+the hospital's method of assigning diagnoses, or treatments, to
+clinical specialties. Consistency of management information is
+clearly an issue in this context.</p>
+
+<h3>Episode cost analysis </h3>
+
+<p>
+The classification of Gynaecology HRGs is based primarily on operating
+procedures, although they are split into two groups: surgical
+and medical. The information that determines the classification
+of admission and daycase episodes by HRG is diagnosis, procedure
+and patient age. For ordinary admission episodes the length of
+stay is also relevant: data is &quot;trimmed&quot; to exclude
+&quot;outliers&quot; - episodes of abnormally long duration. The
+NCMO guidelines include statistical information on average lengths
+of stay, and the &quot;trim point&quot;, for each HRG (<a href="#refs">NCMO, 1994</a>).</p>
+<p>
+In order to establish the existence of relationships between HRGs
+and costs, a cost analysis of eight sets of HRGs used in this
+study is given in the following table. These were the datasets
+for which the information system provided a significant number
+of records.</p>
+
+<ul>
+<li>Two surgical HRGs M04 and M07 - ordinary admission episodes (within &quot;normal&quot; length-of-stay limits)</li>
+<li>Four medical HRGs M27, M28, M29 and M30 - ordinary admission episodes (within &quot;normal&quot; length-of-stay limits)</li>
+<li>One medical HRG M29 - ordinary admission episodes (outliers) </li>
+<li>One medical HRG M29 - daycase episodes</li>
+</ul>
+<br>
+
+<table bgcolor="#D2FFFF" align="center" border cellpadding="5">
+<caption align="bottom"><br><div>Table 2: Summary of costed HRG episodes</div></caption>
+<tr><th>HRG</th><th>Episode Type</th><th>Events</th><th>Lower<br>Quartile</th><th>Median<br>Cost</th><th>Upper<br>Quartile</th></tr>
+<tr><td>M29</td><td>Daycase</td><td align="right">200</td><td align="right">&#163;216</td><td align="right">&#163;271</td><td align="right">&#163;552</td></tr>
+<tr><td>M04</td><td>FCE (trimmed)</td><td align="right">36</td><td align="right">&#163;1,194</td><td align="right">&#163;1,392</td><td align="right">&#163;1,600</td></tr>
+<tr><td>M07</td><td>FCE (trimmed)</td><td align="right"> 22</td><td align="right">&#163;1,040</td><td align="right">&#163;1,253</td><td align="right">&#163;1,576</td></tr>
+<tr><td>M28</td><td>FCE (trimmed)</td><td align="right">31</td><td align="right">&#163;272</td><td align="right">&#163;524</td><td align="right">&#163;815</td></tr>
+<tr><td>M29</td><td>FCE (trimmed)</td><td align="right">380</td><td align="right">&#163;288</td><td align="right">&#163;505</td><td align="right">&#163;834</td></tr>
+<tr><td>M30</td><td>FCE (trimmed)</td><td align="right">44</td><td align="right">&#163;707</td><td align="right">&#163;1,508</td><td align="right">&#163;3,420</td></tr>
+<tr><td>M31</td><td>FCE (trimmed)</td><td align="right">174</td><td align="right">&#163;537</td><td align="right">&#163;791</td><td align="right">&#163;1,215</td></tr>
+<tr><td>M29</td><td>FCE (outliers)</td><td align="right">50</td><td align="right">&#163;2,589</td><td align="right">&#163;3,863</td><td align="right">&#163;5,740</td></tr>
+</table>
+               
+<p>It should be noted that the prices for this exercise are estimates
+as a tool for the research. They are <i>comparative</i> rather
+than absolute and have no bearing on any actual costs within a
+particular cancer unit.</p>
+
+<p>The data records relating to these eight HRGs were then studied
+to try to arrive at an answer to the question &quot;do HRGs work,
+as a costing methodology?&quot;. The costed episodes within each
+HRG were analysed to see whether:</p>
+
+<ul>
+<li>- each group was homogeneous, i.e. similar in terms of cost (iso-resource);</li>
+<li>- individual groups could be separately identified (by their cost ranges or mean values);</li>
+<li>- costs are related to HRG categories, i.e. to determine whether a HRG category might be a reasonably accurate predictor of the likely cost of an episode.</li>
+</ul>
+
+<p>From the table we can see that two pairs of HRGs for trimmed ordinary
+admissions appear to be very similar:</p>
+
+
+<ul>
+<li>M04 Minor procedures uterus/adnexae &amp; M07 Intermediate procedures cervix/uterus
+<li>M28 Carcinoma of ovary aged &gt; 69 or with complications &amp; M29 Carcinoma of ovary aged &lt; 70 without complications
+</ul>
+
+<p>
+and that M04/M07, M28/M29 and M31 appear to be discrete sets,
+distinguishable by their different median values while at the
+same time having comparable inter-quartile ranges.</p>
+<p>
+The table also highlights the wide ranges between the upper and
+lower quartiles for M30 (other gynaecological malignancy aged
+&gt; 64 or with complications), trimmed ordinary admissions and
+M29 outliers (those whose admission lasted longer than six nights)
+- and the considerable contrast between the cheapest (M29 daycases)
+and most expensive (M29 outliers) groups.</p>
+<p>
+The 937 data records were analysed using Minitab software. Parametric
+tests such as analysis of variance and T-Tests (to decide whether
+there is a significant difference between the mean costs of two
+populations) assume a normal distribution. Had the data been plotted
+on a graph, with cost values (grouped into cost bands) along the
+x axis and number of episodes in each cost band on the y axis,
+this would have shown a non-normal distribution, that is, positively
+skewed. For this reason it was more appropriate to use non-parametric
+tests on the data sets.</p>
+
+<h4>Kruskal-Wallis test </h4>
+
+<p>The purpose of this test was to establish whether or not each
+set of HRG data records are different from each other. HRGs are
+designed to be homogeneous in respect of their clinical classifications,
+but unless there is also some difference in terms of cost then
+the point of having so many different groupings within the same
+specialty would be questionable.</p>
+
+<p>The results of the Kruskal-Wallis test are reproduced in the following table:</p>
+
+
+<table bgcolor="#D2FFFF" align="center" border cellpadding="5">
+<caption align="bottom"><br><div>Table 3: Costed HRG episodes: Kruskal-Wallis test</div></caption>
+<tr><th>HRG</th><th>Episode Type</th><th>No. of <br>Observations</th><th>Median<br>Cost</th><th>Average<br>Rank</th><th>Z Value</th></tr>
+<tr><td>M04</td><td>FCE (trimmed)</td><td align="center">36</td><td align="right">&#163;1,392.2</td><td align="right">757.0</td><td align="right">6.51</td></tr>
+<tr><td>M07 </td><td>FCE (trimmed)</td><td align="center">22</td><td align="right">&#163;1,253.2</td><td align="right">720.6</td><td align="right">4.41</td></tr>
+<tr><td>M28</td><td>FCE (trimmed)</td><td align="center">31</td><td align="right">&#163;523.6</td><td align="right">409.4</td><td align="right">-1.25 </td></tr>
+<tr><td>M29</td><td>FCE (trimmed)</td><td align="center">380</td><td align="right">&#163;505.4</td><td align="right">415.5</td><td align="right">-5.00</td></tr>
+<tr><td>M30 </td><td>FCE (trimmed)</td><td align="center">44</td><td align="right">&#163;1,507.9</td><td align="right">711.5</td><td align="right">6.09</td></tr>
+<tr><td>M31</td><td>FCE (trimmed)</td><td align="center">174</td><td align="right">&#163;790.6</td><td align="right">568.7</td><td align="right">5.39</td></tr>
+<tr><td>M29</td><td>Daycases</td><td align="center">200</td><td align="right">&#163;271.1</td><td align="right">254.7</td><td align="right">-12.63</td></tr>
+<tr><td>M29</td><td>FCE (outliers)</td><td align="center">50</td><td align="right">&#163;3,863.2</td><td align="right">891.5</td><td align="right">11.35</td></tr>
+<tr><td>OVERALL</td><td>&nbsp;</td><td align="center">937</td><td align="right">&nbsp;</td><td align="right">469.0</td><td align="right">&nbsp;</td></tr>
+</table>
+
+<p>The &quot;Z value&quot; is the distance from the mean rank of
+the whole data set (937 records) in comparison with the mean rank
+of each group within it. The null hypothesis, that there is little
+difference between each set, would yield a Z value of zero. The
+result shows that all values except M28 are significantly different
+from the mean rank (that is, having a Z value greater than two
+or less than minus two). This may not be surprising since each
+of the sets excludes the outliers and the daycases, the longer
+than average stays and the shortest stays - but they have been
+included in the test as separate groups. To see just how much
+the results are affected by these two groups the test was repeated
+- excluding the outliers and daycases:</p>
+
+<table bgcolor="#D2FFFF" align="center" border cellpadding="5">
+<caption align="bottom"><br><div>Table 4: Costed HRG episodes: Kruskal-Wallis test on trimmed FCEs</div></caption>
+<tr><th>HRG</th><th>Episode Type</th><th>No. of <br>Observations</th><th>Median<br>Cost</th><th>Average<br>Rank</th><th>Z Value</th></tr>
+<tr><td>M04</td><td>FCE (trimmed)</td><td align="center">36</td><td align="right">&#163;1,392.2</td><td align="right">558.6</td><td align="right">6.67</td></tr>
+<tr><td>M07</td><td>FCE (trimmed)</td><td align="center">22</td><td align="right">&#163;1,253.2</td><td align="right">523.0</td><td align="right">4.30</td></tr>
+<tr><td>M28</td><td>FCE (trimmed)</td><td align="center">31 </td><td align="right">&#163;523.6</td><td align="right">271.3</td><td align="right">-2.09</td></tr>
+<tr><td>M29</td><td>FCE (trimmed)</td><td align="center">380</td><td align="right">&#163;505.4</td><td align="right">275.1</td><td align="right">-10.12</td></tr>
+<tr><td>M30</td><td>FCE (trimmed)</td><td align="center">44 </td><td align="right">&#163;1,507.9</td><td align="right">513.8</td><td align="right">5.86</td></tr>
+<tr><td>M31</td><td>FCE (trimmed)</td><td align="center">174</td><td align="right">&#163;790.6</td><td align="right">397.4</td><td align="right">4.11</td></tr>
+<tr><td>OVERALL</td><td>&nbsp;</td><td align="center">687 </td><td align="right">&nbsp;</td><td align="right">344.0</td><td align="right">&nbsp;</td></tr>
+</table>
+
+ 
+<p>This time, <i>all</i> the Z values were significantly different
+from the mean rank. The Z values show where differences arise,
+which leads on to the next test.</p>
+
+<h4>Mann-Whitney test </h4>
+
+<p>This test compares the medians of two populations, the null hypothesis being that they have distributions which are identical in all respects. For this test four pairs of HRGs were selected, on the
+basis that they have logical links:</p>
+
+<table bgcolor="#D2FFFF" align="center" border cellpadding="5">
+<caption align="bottom"><br><div>Table 5: HRG pairs for Mann-Whitney test</div></caption>
+<tr><td>M04 and M07</td><td>the two surgical groups</td></tr>
+<tr><td>M28 and M29</td><td>Ca. ovary: medical patients aged &gt; 69<br>  
+compared with those aged &lt; 70</td></tr>
+<tr><td>M30 and M31</td><td>other gynaecological malignancy:<br>       
+medical patients aged &gt; 64 compared<br>    
+with those aged &lt; 65</td></tr>
+<tr><td>M29 (trimmed) <br>and M29 (outliers)</td><td>Ca. ovary: medical patients aged &lt;<br>     
+70, those who stayed for a maximum of <br> 
+6 nights compared with those who<br>       
+stayed longer  </td></tr>
+</table>
+
+<p>The results of these tests confirmed the original indications
+from the Kruskal-Wallis test. There was no significant difference
+between the two surgical groups M04 and M07. And although there
+was no difference between the two groups with Ca. ovary, M28 and
+M29, there was a very clear difference between the trimmed M29
+episodes and the outliers. Also the groups of patients with &quot;other
+gynaecological malignancies&quot;, M30 and M31, were found to
+differ.</p>
+
+<h3>Data analysis</h3>
+
+<p>Of the data sets analysed in this study, some results were much
+as anticipated while some of the findings were somewhat ambiguous.
+Any conclusions drawn from the results of the investigations are
+limited, because of the omission of radiotherapy and chemotherapy
+expenditure in calculating the episode costs of the medical HRGs.</p>
+
+<p>Two pairs of groups appeared to be similar in terms of cost: M04
+and M07, M28 and M29, despite the differences in their trim points.
+Although group M04 comprises minor surgical procedures while M07
+is a group of intermediate procedures, the average duration of
+the admissions were very similar and there was no significant
+difference between their episode costs. For M04 the trim point
+is 3 nights, 6 nights for M07. The records show that 4 nights
+was the maximum duration for the 22 patients whose admission coded
+to M07. Both groups had a very similar average length of stay
+- in fact M04 were slightly longer with an average of 2.19 nights
+while M07 averaged 2.05 nights.</p>
+
+<p>Comparing groups M28 and M29 shows the same picture: they are
+not significantly different. Although it would seem that the older
+patients are expected to tend to stay longer (the trim point for
+M28 is 23 nights, but it is only 6 nights for the younger patients,
+M29), in fact the average duration for both groups was virtually
+the same: 1.77 nights for M28 and 1.76 nights for M29. For the
+sample patients, then, it seems reasonable to assume that the
+patients' ages did not influence their lengths of stay and, it
+follows, the median cost of these episodes.</p>
+
+<p>Therefore, for this study group, it appears that the two pairs
+of groups that looked similar really do seem to be comparable
+in terms of both cost and duration of admission. What is surprising
+then is that these HRGs (M04/M07 and M28/M29) are separate classifications.
+This would seem to imply that there <i>ought</i> to have been
+differences in these groups, in their lengths of stay (and episode
+costs).</p>
+
+<p>The largest group in the dataset was the trimmed M29 episodes,
+that is, patients aged below 70 with carcinoma of ovary, excluding
+outliers. There were 380 of these events. The episodes related
+to 145 patients, all but one of whom had an ICD9 code of 183.0
+(malignant neoplasm ovary), the single exception having a diagnosis
+of metastatic adenocarcinoma of ovary, ICD9 code 198.6.</p>
+<p>
+For ovarian cancer the standard treatment, for patients with operable
+disease, is total hysterectomy, salpingo-oophorectomy and omentectomy
+- surgical episodes which would have derived a HRG code of M11
+&quot;Major procedures of uterus/adnexae&quot;. Where the disease
+is more advanced, but still localised to the abdominopelvic cavity,
+surgery is followed by platinum based chemotherapy (Neal &amp;
+Hoskin, 1994). In patients whose disease is beyond all hope of
+cure, radiotherapy may be given for symptom palliation. Eight
+of the patients in the study group received radiotherapy, four
+of these women were given no other form of treatment at the unit.</p>
+<p>
+Excluding the cost of drugs and radiotherapy, all the medical
+episodes that were coded to HRG M29 have a median cost of &#163;505
+and average cost of &#163;644. The cost at the upper quartile
+was &#163;834, &#163;329 (65%) more than the median and &#163;190
+(30%) more than the mean. The cost of the most expensive episode
+in this group was &#163;2,925 which is almost six times greater
+than the median value. Even this group, with all its similarities
+in diagnoses and narrow range of admission durations (maximum
+duration of stay being six nights), had quite widely varying episode
+costs. It seems reasonable to assume that if treatment costs had
+been included in the episode prices this additional cost variable
+would have led to even more differences in price.</p>
+<p>
+For the same group of patients, HRG M29, there was a clear difference
+between the trimmed admission episodes and the outliers. We know
+that the episode costs are largely determined by the duration
+of the admission, particularly for the medical groups where treatment
+costs are excluded from the data. So it was no surprise to find
+that the outliers, who all stayed in excess of six nights, were
+found to have a much higher median value (i.e. were dearer) than
+the trimmed data: patients who stayed a maximum of six nights.</p>
+<p>
+For the M29 outliers the minimum length of stay was seven nights
+and there was no maximum set (in fact the average number of beddays
+was 15, the longest duration was for a patient who stayed 44 nights).
+This was the dearest group in the study, with the greatest inter-quartile
+range.</p>
+<p>
+As anticipated, M29 daycases were clearly much cheaper than other
+groups. The evidence for this is provided by the table and the
+Kruskal-Wallis test. This group had the smallest inter-quartile
+range, which was doubtless due to the parity in lengths of stay:
+all patients were admitted and discharged on the same day.</p>
+<p>
+As has been stated, both the groups with carcinoma of ovary, M28
+and M29, were not significantly different, however it appears
+that age <i>could</i> affect episode costs for &quot;other gynaecological
+malignancies&quot;: these two groups, M30 and M31, were found
+to be different. This is not unexpected, considering the differences
+in trim points - although it might potentially have been caused
+by differences in casemix.</p>
+<p>
+Of the 174 episodes in M31, 159 (91%) were for Ca. cervix. The
+episodes in this group had a median cost of &#163;791, but the
+trim point is only 13 nights and the average length of stay was
+3 nights.</p>
+<p>
+The median cost of M30 episodes, with a trim point of 40 nights,
+was &#163;1,508. The average length of stay for the M30 group
+was, in fact, 10 nights with durations of admission ranging between
+1 night and 37 nights. The variation in lengths of stay also explains
+the large disparity between the lower and upper quartiles for
+the episode costs of this group. M30 comprised 44 episodes, of
+which 11 were for patients with cancer of the vulva and had an
+average duration of 17 nights. 31 episodes related to Ca. cervix,
+but even they had, on average, a longer stay than the women in
+the younger age group with the same diagnosis: 8 nights.</p>
+
+<h3>Discussion of findings</h3>
+
+<p>
+Statistical measures of correlation applied to the historical
+data provide some guidance in attempting to answer the two questions
+relating to the value and relevance of HRGs. As management information
+tools, they need to offer sufficient uniformity as a currency
+to act as identifiable units. In addressing the original questions
+behind the study, the findings indicate the following.</p>
+<p>
+<i>Do HRGs really &quot;work&quot; - as a grouping and costing
+methodology?</i> </p>
+<p>
+The investigation demonstrated that not all HRGs are iso-resource.
+The findings from the data analysis are echoed by the NHSE's own
+evaluation (<a href="#refs">NHSE, 1995</a>). This does not negate advantages in their
+use. In some cases HRGs were found to be isoresource by one measure.
+An example of this is the correlation between cost and length
+of stay. An additional analysis took place of the costs of ordinary
+admissions plotted against their beddays. The correlation found
+between these two variables, 0.95 in the data set, confirms their
+close relationship, even though the surgical HRGs included treatment
+costs while the medical HRGs did not. Consequently, the longer
+the duration of the admission the greater the cost of the episode.</p>
+<p>
+<i>How relevant are HRG classifications for long-term patient
+care?</i> </p>
+<p>
+This cannot be answered fully just yet. The gynaecology HRGs analysed
+in this study would be adequate for surgical episodes, but this
+may only reflect a single stage of the overall treatment strategy.
+In respect of medical treatments for cancer patients HRGs give
+no clinical information and, in this study, no indication of the
+cost of the treatment element. HRGs devised specially for oncology
+would be designed to overcome these failings. Current development
+of Health Benefit Groups (HBGs) may hold the answer through better
+understanding of outcomes and the actual benefits of healthcare.
+These are an example of various techniques for measuring casemix
+that are currently being researched, such as Patient Management
+Categories, Resource Utilisation Groups and HBGs themselves. They
+are intended to enable a better understanding of outcomes, and
+to reflect the benefits of care. HBGs will &quot;provide an invaluable
+tool for strategic commissioning and contracting for health benefit,
+as well as enhancing the use of HRGs by linking health need to
+costed patient care&quot; (<a href="#refs">NCMO, 1995</a>). HBGs will be additionally
+valuable as information tools through their mapping to ICD codes
+and HRGs (<a href="#refs">NCMO, 1996a</a>).</p>
+<p>
+HBGs should be particularly appropriate in the cancer setting.
+While HRGs are primarily concerned with treatments and take no
+account of the severity of a patient's illness, HBGs are based
+on the condition and the level of severity within that condition,
+with the aim of determining the appropriate treatment and predicting
+the likely outcome. &quot;HBGs are linked with appropriate HRGs
+in a matrix to enable the resource requirements of a population
+to be measured and the likely benefits identified&quot; (<a href="#refs">NCMO,
+1996b</a>). This system should increase the clinical relevance of
+contract management information. Even if it does not entirely
+succeed it still offers considerable benefits, particularly to
+purchasers. It promises a combination of qualitative information,
+the clinical details, with the quantitative information necessary
+for contract management. HBGs provide information on resources
+linked to people rather than treatments. They should enable <i>prediction</i>
+of treatment and link this to outcomes. This capability is not
+a feature of HRGs although version 3 of the groupings, released
+in September 1997 may, with further analysis, prove more effective
+(<a href="#refs">NCMO, 1997</a>).</p>
+
+<h2><a name="refs"></a>References</h3>
+<ul>
+<li>Clarke, A. &amp; McKee, M. (1992) &quot;The consultant episode: an unhelpful measure.&quot; <i>British Medical Journal</i>, <b>305</b>, 1307-8
+<li>Gandy, R. (1996) &quot;Clinical coding and cancer care.&quot; <i>British Journal of Healthcare Computing and Information Management</i>, <b>13</b> (4).
+<li>NCMO. (1994) <i>Healthcare Resource Groups Version 1.2 Introduction and Guidance</i>. Winchester: NCMO.
+<li>NCMO. (1995) <i>The national casemix office of the information management group - Project progress report. Issue 6</i>. Winchester: NCMO.
+<li>NCMO. (1996a) <i>Health Benefit Groups Development Project: information sheet</i>, Winchester: NCMO.
+<li>NCMO. (1996b) <i>The national casemix office of the information management group - Project progress report. Issue 10</i>. Winchester: NCMO.
+<li>NCMO. (1997) <i>Version 3 HRG documentation set - compendium</i>. Winchester: NCMO.
+<li>Neal, A. &amp; Hoskin, P. (1994)<i> Clinical oncology: a textbook for students</i>. London: Edward Arnold.
+<li>NHSE. (1993) <i>Healthcare resource group version 2 consultation documents EL(93)91</i>. Leeds: NHSE.
+<li>NHSE. (1994) <i>Costing for Contracting Manual: Acute Services FDL(94)46</i>. Leeds: NHSE.
+<li>For example, <i>NHSE IMG. (1994) ICD-10</i>, Leeds: NHSE IMG.
+<li>NHSE. (1995)<i> Costing for contracting. Costed HRGs - evaluation summary report</i>. Leeds: NHSE.
+</ul>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Marlow, Carol &amp; Preston, Hugh (1998)&nbsp; &quot;Information contracting tools in a cancer specialist unit&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>4</strong>(2) Available at: http://informationr.net/ir/4-2/paper52.html</p>
+<p style="text-align : center">© the authors, 1998. Last updated: 22nd September 1998</p>
+<hr color=#ff00ff size=3>
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres42.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper52" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+
+<!-- Mirrored from informationr.net/ir/4-2/paper52.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:19:22 GMT -->
+</html>

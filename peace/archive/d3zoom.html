@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta itemprop="name" content="SVGPanZoom" />
+    <!-- HELLO CSS: -->
+        <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+        <title>PAX - Alluvial of Mentions</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+    <!-- HELLO JS: -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" integrity="sha256-Xb6SSzhH3wEPC4Vy3W70Lqh9Y3Du/3KxPqI2JHQSpTw=" crossorigin="anonymous"></script>
+        <script src='https://unpkg.com/panzoom@9.2.4/dist/panzoom.min.js'></script>
+        <script>
+
+                
+const elem = document.getElementById('svgfile')
+                const panzoom = Panzoom(elem, {
+                maxScale: 5
+                })
+                panzoom.pan(10, 10)
+                panzoom.zoom(2, { animate: true })
+
+                // Panning and pinch zooming are bound automatically (unless disablePan is true).
+                // There are several available methods for zooming
+                // that can be bound on button clicks or mousewheel.
+                button.addEventListener('click', panzoom.zoomIn)
+                elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel)
+            
+        </script>
+    </head>
+    <body>
+        <div id=svgfile>
+            <script> 
+                var mysvg = d3.xml('./svgs/04.svg')
+                    .then(data => {
+                    document.body.append(data.documentElement)
+                });
+                d3.zoom().on("zoom", function () {
+                    svg.attr("transform", d3.event.transform)
+                })
+                
+            </script>
+        </div>
+    </body>
+</html>

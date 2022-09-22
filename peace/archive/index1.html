@@ -1,0 +1,221 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>PA-X :: Aluviat of mentions</title>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.js"></script>
+    <script type="text/javascript" src="./js/jquery.svg.pan.zoom.js"></script>
+    <script>
+        $( document ).ready(function() {
+        $( function() {
+            $("#dialog" ).dialog({
+            autoOpen: false,
+            show: {
+                effect: "blind",
+                duration: 1000
+            },
+            hide: {
+                effect: "blind",
+                duration: 1000
+            }
+            });
+        
+            $( "#opener" ).on( "click", function() {
+                $( "#dialog" ).dialog("open");
+            });
+
+        // Initial dialog
+        $( "#dialog" ).dialog({
+            autoOpen: true,
+            width: 800,
+            height: 540
+        });
+        });
+
+
+
+        // Pan and Zoom
+            //var example1, example2; //globals so we can manipulate them in the debugger
+            //$(function() {
+            //    "use strict";
+            //    var examples = $("svg").svgPanZoom();
+            //});
+
+            
+        });
+</script>
+
+<!--<link href="./css/area.css" rel="stylesheet" type="text/css" media="all">
+-->
+<link href="./css/jquery-ui.css" rel="stylesheet" type="text/css" media="all">
+
+    <style>
+    /* Static & general: */
+    html {
+        background-color:rgb(23, 23, 23);
+        color:#c1c1c1;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    rect,text {
+        fill:white;
+        stroke:#c1c1c1;
+        width:30;
+    }
+    /* Mouseover highlights: */ 
+    .mybranch  {
+        stroke:  rgb(56, 5, 5);
+        fill: rgb(212, 14, 14);
+        font-size:18px;
+    }
+    /* Rest of the page & other: */
+    #featurres span.actions {
+        border:1px solid rgb(142, 18, 190);
+        padding:5px;
+        background-color:rgb(23, 23, 23);
+        border-radius:9px;
+        font-weight:bold;
+    }
+    #featurres span.cat {
+        border:1px solid green;
+        padding:5px;
+        background-color:rgb(23, 23, 23);
+        border-radius:9px;
+        font-weight:bold;
+    }
+    #svgfile {
+        border:0 solid grey;
+        width:100%;
+        height:100%;
+
+    }
+    svg {
+        border:0 solid red;
+        width:100%;
+        height:100%;
+    }
+    span {
+        cursor:pointer;
+        line-height: 2em;
+
+    }
+    #featurres span.actions:hover, #featurres span.cat:hover { 
+        border:1px solid red;
+    }
+    div {
+        color:#c1c1c1;
+    }
+    #dialog {
+        background-color:rgb(23, 23, 23);
+        z-index: 10;
+        color:#c1c1c1;
+    }
+
+</style>
+</head>
+<body>
+    <div id="featurres">
+        <h2>Welcome to AoM: the Aluviat of Mentions of Peace Agreements [prototype june 2020]</h2>
+        <p>
+        <button id="opener">About</button>
+
+        <span class="actions" id="c00" onclick="location.reload();">All 3 Levels</span>
+        <span class="cat" id="c99" onclick="getzoom('c99');">Only 2 levels</span>
+        <span class="actions"  id="a1">Hide/Show flows</span>
+        </p>
+        <p>
+        <span class="cat" id="c01" onclick="getzoom(this);">Gender</span>
+        <span class="cat" id="c02" onclick="getzoom(this);">Groups</span>
+        <span class="cat" id="c03" onclick="getzoom(this);">State definition</span>
+        <span class="cat" id="c04" onclick="getzoom(this);">Governance</span>
+        <span class="cat" id="c05" onclick="getzoom(this);">Power-sharing</span>
+        <span class="cat" id="c06" onclick="getzoom(this);">HR and Equality</span>
+        <span class="cat" id="c07" onclick="getzoom(this);">Justice Sector Reform</span>
+        <span class="cat" id="c08" onclick="getzoom(this);">Socio-Economic Reconstruction</span>
+        <span class="cat" id="c09" onclick="getzoom(this);">Land, property, and environment</span> 
+        <span class="cat" id="c10" onclick="getzoom(this);">Security Sector</span>
+        <span class="cat" id="c11" onclick="getzoom(this);">Transitional Justice</span>
+        <span class="cat" id="c12" onclick="getzoom(this);">Implementation</span>
+    </p>
+
+    </div>
+
+    <div id="svgfile" style="width:100%; overflow:auto;:auto;"><svg></svg></div>
+
+    <div id="dialog" title="PA-X alluvial mentions">
+        <h2>Welcome to the <b>alluvial of mentions</b> in Peace Agreements (PA-X).</h2>
+        <p>This is a web prototype that represents the structure and the mentions of 194 categories, issues and sub-issues</p>
+        <p><h3>What is about:</h3>
+            This site presents Alluvial diagrams (in most cases a synonym of <a href="https://en.wikipedia.org/wiki/Sankey_diagram" target="wikipedia-sankey_diagram">Sankey diagram</a>). Each diagram presents from left to right these columns: Category names > Issue names > sub-issue names. Each of the 293 names have a visual width relative to the number of Peace Agreements documents where it is mentioned.
+        </p>
+
+        <p><h3>HINTS:</h3>
+            <ul>
+                <li>Pan&Zoom using click and drag, and double-click. (it works better than the mouse-wheel.</li>
+                <li>Click on the Category buttons to get the alluviat of one Category</li>
+                <li>Click on the purple buttons to get other features, lik hide/show the flows at the diagrams, and so on.</li>
+                <li>CHECK Category "Implementation". There is a test where tree-branches get highlighted by  mouseover. Just click the far left green  button. </li>
+                <li>You can move and close this dialog. Open it again by clicking "About" button.</li>
+                <li>This is a prototype, It means no last design is present. Not last user interaction is definitive. Not yet added links on the names on the diagrams. Back-links to PA-X site, to Area, ... </li>
+            </ul>
+        </p>
+    </div>
+
+<script>
+console.log("Eooo!");
+       // Click to toggle hide/show
+        //$('path').hover(
+        //    $(this).css({"stroke":"green"})
+        //);
+
+        // $('rect[id="klt"]').attr('width', '150');
+        //$('path').css("stroke","yellow")
+        //$('svg path').remove();
+
+
+
+
+        // Branch highlight:
+        function getlights() {
+            $("rect,text").on({"mouseover": function () {
+                var myclass = $(this).attr('class');
+                //console.log("myclass: "+myclass+" | this:"+event.target.nodeName);
+                $(".b, ."+myclass).stop(true,true).addClass("mybranch", 500);
+            },
+            mouseleave: function () {
+                //var myclass = $(this).attr('class');
+                $(".b, rect,text").stop(true,true).removeClass("mybranch", 500);
+            }
+            });
+        }
+        // Load SVG files and get them pan%zoom
+        function getzoom(item) {
+            if(item!="c00" && item!="c99") {
+                myid = $(item).attr("id");
+                var wi=1000; var he=1000;                
+            } else {
+                myid=item;
+
+                var wi=1200; var he=7500;
+;            }
+                console.log("id1: "+myid, wi, he);
+            var num = myid.substring(1, 3);
+            $('#svgfile').load('./svgs/'+num+'.svg').delay(1000).promise().done(function() {
+                $("svg").svgPanZoom({initialViewBox:{x:-300,y:-300,width:wi,height:he},maxZoom:9,zoomFactor:4});
+                console.log("id2: "+myid);
+                getlights();
+                $('rect').attr('width', '30');
+            })
+        }
+        // toggle element view
+        $("#a1").click(function(){
+            $("path").toggle('slow');
+        });
+        // Load an SVG file:
+        //$("span.cat").click(getzoom());
+        getzoom("c00");
+</script>
+<footer>Comments to jaume AT nualart.cat</footer>
+</body>
+</html>

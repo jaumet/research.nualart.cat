@@ -1,0 +1,259 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/2-2/paper13.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:29 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<title>Stemming and N-gram matching for <span>term</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>conflation in Turkish texts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="<span>free</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>text,  indexing,  retrieval, information retrieval, word forms, spelling errors, alternative spellings, multi-word concepts, transliteration, affixes, abbreviations, conflation <span>algorithm</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> Turkish">
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> content="One of the <span>main</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>problems involved in the use of <span>free</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>text for indexing and retrieval is the <span>variation</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in word forms that is likely to be encountered.   The most common type of variations are spelling errors, alternative spellings, multi-word concepts, transliteration, affixes and abbreviations.  One way to alleviate this problem is to use a conflation <span>algorithm</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> a <span>computational</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>procedure that is <span>designed</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to bring together words that are semantically related, and to reduce them to a single form for retrieval <span>purposes</span>. <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  In this paper, we <span>discuss</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the use of conflation techniques for Turkish text databases.">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Stemming and N-gram matching for <span>term</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>conflation in Turkish texts">
+<meta name="DC.Creator" content="F. Çuna Ekmekçioglu, <span>Michael</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>F. Lynch, and Peter Willett">
+<meta name="DC.Subject" content="<span>free</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>text,  indexing,  retrieval, information retrieval, word forms, spelling errors, alternative spellings, multi-word concepts, transliteration, affixes, abbreviations, conflation <span>algorithm</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> Turkish">
+<meta name="DC.Description" content="One of the <span>main</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>problems involved in the use of <span>free</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>text for indexing and retrieval is the <span>variation</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in word forms that is likely to be encountered.   The most common type of variations are spelling errors, alternative spellings, multi-word concepts, transliteration, affixes and abbreviations.  One way to alleviate this problem is to use a conflation <span>algorithm</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> a <span>computational</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>procedure that is <span>designed</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to bring together words that are semantically related, and to reduce them to a single form for retrieval <span>purposes</span>. <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  In this paper, we <span>discuss</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the use of conflation techniques for Turkish text databases.">
+<meta name="DC.Publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>T.D. Wilson">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 2 No. 2, October 1996</h4></td></tr>
+  <tr> 
+    <td><a href="infres22.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3>
+
+<a name="paper13"></a><h1><b>Stemming and <i>N</i>-gram matching for <span>term</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>conflation in
+Turkish texts</b></h1>
+
+<h4>F. &Ccedil;una Ekmek&ccedil;ioglu, <span>Michael</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>F. Lynch, and <a href="mailto:p.willett@shef.ac.uk">Peter Willett</a><br>Department of Information Studies<br>University of Sheffield, Sheffield, UK</h4>
+<br>
+<hr color=#ff00ff SIZE=3>
+<br>
+<h2>Introduction</h2>
+
+<p>One of the <span>main</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>problems involved in the use of <span>free</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>text for indexing and retrieval is the <span>variation</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in word forms that is likely to be encountered (<a href="#lenn81">Lennon, et al., 1981</a>)  The most common type of variations are spelling errors, alternative spellings, multi-word concepts, transliteration, affixes and abbreviations.  One way to alleviate this problem is to use a conflation <span>algorithm</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> a <span>computational</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>procedure that is <span>designed</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to bring together words that are semantically
+related, and to reduce them to a single form for retrieval <span>purposes</span>. <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  In this paper, we <span>discuss</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the use of conflation techniques for Turkish text databases.</p>
+
+<p>Turkish is a member of the south-western or Oghuz group of the Turkic <span>languages</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> which also includes Turkmen, Azerbaijani or Azeri, Ghasghai and Gagauz (<a href="#crys87">Crystal, 1987</a>; <a href="#lewi91">Lewis, 1991</a>).  The Turkish language uses a <span>Latin</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>alphabet consisting of twenty-nine letters, of which eight are vowels and twenty-one are consonants.  Unlike the <span>main</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>Indo-European
+<span>languages</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>(such as French and German), Turkish is an example of an <i>agglutinative language</i>, where words are a <span>combination</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of several morphemes and suffixes.  Here, words contain a root and suffixes are combined with this root in order to extend its meaning or to create other <span>classes</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of words.  In Turkish the process of adding one suffix to another can result in relatively long words, which often contain an amount of <span>semantic</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>information equivalent to a whole <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>phrase, clause or <span>sentence</span>. <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  Due to this complex morphological structure, a single Turkish word can give <span>rise</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to a very large number of variants, with a consequent need for effective conflation procedures if high recall is to be <span>achieved</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in searches of Turkish text databases.  Here, we summarise the <span>principal</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>results thus far of a project to develop and to evaluate such procedures; full <span>details</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of the work are presented by <a href="#ekme95">Ekmek&ccedil;ioglu <i>et al.</i> (1995</a>, <a href="#ekme96">1996</a>).</p>
+
+<h2>Conflation techniques</h2>
+
+<p>Conflation <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>can be broadly <span>divided</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>into two <span>main</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>classes: <i>stemming algorithms</i>, which are language dependent and which are <span>designed</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to handle morphological variants, and <i>string-similarity
+algorithms</i>, which are (usually) language independent and which are <span>designed</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to handle all types of variant.</p>
+
+<h3>Stemming algorithms</h3>
+
+<p><a href="#lovi68">Lovins (1968)</a> defines a stemming <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>as &quot;a procedure to reduce all words with the same stem to a common form, usually by stripping each word of its derivational and inflectional suffixes&quot;.  Stemming is generally effected by means of suffix dictionaries that contain lists of possible word endings, and this approach has been applied successfully to many different <span>languages</span>. <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  It is, however, less applicable to an agglutinative language such as Turkish, which <span>require</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>a more <span>detailed</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>level of morphological analysis, where <span>purely</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>morphological techniques are required that remove suffixes from words according to their internal structure.  They proceed from the left to the right of a word and first look in a lexicon for a root matching an initial substring of the word; they then use <span>grammatical</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>information stored in the <span>lexical</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>entry to determine what possible suffixes may follow.  When a suffix matching a further substring is found <span>subsequent</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><span>grammatical</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>information in the <span>lexical</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>entry for that suffix again determines what class of suffixes may follow.  The stemming is successful if the end of the word can be <span>reached</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>by iteration of this process, and if the last suffix is one which may end a word.  Examples of agglutinative <span>languages</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for which morphological analysers have been developed include Finnish (<a href="#kosk83">Koskenniemi, 1983</a>, <a href="#japp85">Jäppinnen, <em>et al.</em>,  1985</a>) and Turkish (<a href="#hank84">Hankamer, 1984;</a>  <a href="#sola93">Solak. & Oflazer, 1993</a>; <a href="#ofla94">Oflazer, 1994</a>).</p>  
+
+<h3><i>N</i>-Grams</h3>
+
+<p>String-similarity <span>approaches</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to conflation involve the system calculating a measure of similarity between an input query <span>term</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and each of the <span>distinct</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>terms in the database.  Those database terms that have a high similarity to a query <span>term</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>are then displayed to the user for possible inclusion in the query.  <i>N-gram matching </i>techniques are one of the most common of these <span>approaches</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> (<a href="#freu82">Freund & Willett, 1982</a>).  An <i>n</i>-gram is a set of <i>n</i> consecutive characters extracted from a word.  The <span>main</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>idea behind this approach is that, similar words will have a high proportion of <i>n</i>-grams in common.  Typical <span>values</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for <i>n</i> are 2 or 3, these corresponding
+to the use of digrams or trigrams, <span>respectively</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  For example, the word BILGISAYAR<b> </b>(computer) results in the generation of the digrams</p>
+
+<p>*B, BI, IL, LG, GI, IS, SA, AY, YA, AR, R*</p>
+
+<p>and the trigrams</p>
+
+<p>**B, *BI, BIL, ILG, LGI, GIS, <span>ISA</span>, <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> SAY, AYA, YAR, AR*, R**</p>
+
+<p>where '*' denotes a padding space.  There are <i>n</i>+1 such digrams and <i>n</i>+2 such trigrams in a word <span>containing</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><i>n</i> characters.</p>
+
+<h2>Experimental <span>details</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and results</h2>
+
+<h3>Stopword <span>list</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and compression experiments</h3>
+
+<p>The two <span>main</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>objectives to be <span>achieved</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in the first stage of the research were the development of a stopword <span>list</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for Turkish and the evaluation of a stemming <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>that takes account of the language's morphological structure.  The frequencies of occurrence of the word types in the Turkish corpora were found to follow a <span>typical</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>Zipfian <span>distribution</span>, <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> with a few word types providing a very high percentage of the <span>observed</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>tokens.  The most <span>frequently</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>occurring words were mainly function words such as conjunctions, postpositions, pronouns, <i>etc</i>., and, these words were selected for inclusion in the stopword <span>list</span>. <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  <span>Furthermore</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> some of the large numbers of low-frequency Turkish words were morphological variants of very commonly occurring function words; these former words were also included in the stopword <span>list</span>. <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span></p>  
+
+<p>The experiments used a a political news database that <span>contained</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>376,187 Turkish word tokens; experiments with additional corpora are reported by <a href="#ekme95">Ekmek&ccedil;ioglu <i>et al</i>. (1995)</a>.  <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>was created from this database, and the stopwords <span>eliminated</span>. <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  The two-level morphological parser, PC-KIMMO  (<a href="#anth90">Anthworth, 1990</a>) and the PC-KIMMO <span>description</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of the Turkish</p>
+
+<hr>
+<pre width=132>
+Corpus      Word       Word       Distinct  Distinct  Compression   
+            Tokens     <span>Types</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>     Terms     Stems     (%)           
+
+Turkish     376,187    49,479     41,370      6,363         84.6    
+
+<span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>    567,574    19,044     18,348    11,671          36.4    
+</pre>
+<hr>
+
+<p><b>Table 1</b>.  Level of compression in the six Turkish text
+corpora and in the <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>text.</p>
+
+<p>language developed at Bilkent University [11] were employed to parse the words in the Turkish dictionaries to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the stems.  The results of this procedure were evaluated in terms of  percentage
+of compression, <i>i.e.</i>, in terms of the number of reduced words in the <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>after stemming.  For <span>comparison</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> the results were compared with those obtained when <a href="#port80">Porter's (1980)</a> stemming <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>was applied to a newswire database <span>containing</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>567,574 <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>word tokens.</p>
+
+<p>An inspection of Table 1 shows that the <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>database <span>yields</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>a much smaller number of word types than does the Turkish database, despite the fact that the former contains many more word tokens.  This indicates the much greater richness of the variations that <span>occur</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in the Turkish language, a <span>conclusion</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>that is reinforced by con0eration of the compression results.  Employment of the Turkish stemming <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>reduces the number of the words by no less than 84.6%, which indicates that stemming can bring about very substantial reductions in the numbers of word variants that must be processed in a Turkish free-text retrieval system.  The compression <span>figure</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for the <span>English</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>database is far smaller, at
+36.4%, illustrating clearly the lower <span>degree</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of morphological <span>variation</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in <span>English</span>. <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span></p>
+
+<h3>Searching experiments</h3>
+
+<p>A <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>was created <span>containing</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>all of the word types, and each word was then <span>represented</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>by its lists of constituent digrams or trigrams.  <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>query <span>term</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>was <span>represented</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>by an analogous <span>list</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and then matched against each of the<i> n</i>-gram lists in turn to find the similarity between the query word and the corresponding <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>word, using the overlap similarity measure.  The <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>words were ranked in decreasing order of similarity and some <span>fixed</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>number, 10 in the experiments reported here, of the top-ranked words displayed as the possible variants of the <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><span>term</span>. <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span></p> 
+
+<p>The query words here were a random <span>selection</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of 50 words from the <span>dictionary</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> and the effectiveness of a <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>was <span>measured</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>by the mean number of relevant words retrieved when averaged over the entire set of query words, where a relevant word is taken to be one that appears to be a correct variant of the chosen query word.  Conventionally, <i>n</i>-gram matching has been applied to unstemmed document and query words.  However, we have also carried out experiments that involve both stemming and <i>n</i>-gram matching.  Specifically, each of the query words was stemmed prior to the implementation of the <i>n</i>-gram procedures.  The experiments thus involve unstemmed <span>documents</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and queries (the simple <i>n</i>-gram runs), and unstemmed <span>documents</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and stemmed queries (the combined
+experiments).</p>
+    
+<p>The results of the <i>n</i>-gram searches are shown in Table 2, which suggests that the trigrams perform better, irrespective of whether or not the query words are stemmed prior to the</p>
+
+<hr>
+<pre width=132>
+<i>n</i>-grams         Unstemmed         Stemmed      
+                Query Words    Query Words     
+
+Digrams              4.76            5.80      
+
+Trigrams             5.42            6.08      
+</pre>
+<hr>
+
+<p><b>Table 2</b>.  Mean number of relevant words (averaged over
+the entire set of query words) retrieved in the <i>n</i>-gram
+searching experiments with a cutoff of the top-10 words.</p>
+
+<hr>
+<pre width=132>
+                  Type-A    Type-B     
+Stem <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>      8.56        7.33     
+Combined <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  8.48        6.08     
+</pre>
+<hr>
+
+<p><b>Table3</b>.  Mean number of relevant words (averaged over the
+entire set of query words) using the stem <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and the combined
+<span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>(trigrams and stemming of query words).</p>
+
+<p>generation of the <i>n-</i>gram lists.  The Sign <span>test</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>was used to determine the <span>significance</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of the difference in <span>performance</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>between pairs of different sets of different searches.  The trigram searches are significantly better(<i>p</i>=0.00) than the digram searches when no stemming is applied but there is no significant difference when stemming is applied to the query words prior to the generation of the <i>n</i>-gram lists.  However, these combined searches are significantly better (<i>p</i>=0.00 for both digrams and trigrams) than the searches that use unstemmed query words.  We thus conclude that the best results are obtained by using trigrams derived from the stemmed query terms.</p>
+
+<p>Further <span>tests</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>were carried out in which the best <i>n</i>-gram searches, <i>i.e.</i>, those <span>involving</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>both trigrams and stemming, were compared with searches in which both the query words and the <span>dictionary</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>words were stemmed, which is the most common way of implementing stem-based retrieval.  Such a <span>comparison</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span><span>requires</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>a way of equalising the outputs of the two types of <span>search</span>, <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> and two <span>approaches</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>were taken to achieve this [5].  In both cases, a stem <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>is carried out for a query word and the number, <i>s</i>, of matching stems noted.  In the first approach, <span>referred</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to as Type-A searches, the corresponding <i>n</i>-gram <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>was evaluated using the top ranked <i>s</i> words.  In the second, Type-B, approach, if <i>s</i>&lt;10 then 10-<i>s</i> non-relevant words were <span>added</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to the <i>s</i> words that were retrieved; otherwise the number of relevant words was multiplied by 10/<i>s</i>.  The Type-A searches are thus biased towards the stem searches while the Type-B searches are biased towards the <i>n</i>-gram searches.</p>
+ 
+<p>The results of this <span>comparison</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>is shown in Table 3, where it will be seen that stemming is superior (but not significantly so; <i>p</i>=0.26 and <i>p</i>=0.07, respectively) to the combined <span>search</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in both
+the Type-A and Type-B searches</p> 
+
+<h2>Conclusions</h2>
+
+<p>Our experiments show that the use of a stopword <span>list</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and a stemming <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>can bring about substantial reductions in the numbers of word variants encountered in searches of Turkish text databases; moreover, stemming appears to be superior, but not significantly so, to <i>n</i>-gram matching for conflating such variants.  However, the experiments thus far have been <span>limited</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in that have involved only single-word searches of a <span>dictionary</span>. <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  The procedures are thus now being implemented in a version of the OKAPI (<a href="#walk88">Walker, 1988</a>) retrieval system to carry out both conflated and non-conflated searches of Turkish databases.  This work will be reported shortly.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>We thank Dr. Sandy Robertson and Dr. Kemal Oflazer for assistance and helpful <span>discussions</span>, <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> and Dr.
+Hilmi &Ccedil;elik, director of the Library of the Turkish Parliament, for the provision of the political news database used in this study.</p>
+
+<h2>References</h2>
+
+<dir>
+<li><a name="anth90">Anthworth, E.L</a>. (1990) <i>PC-KIMMO: <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>Two-level Processor for Morphological Analysis</i>.  Dallas, Texas: Summer Institute of Linguistics.
+<p>
+<li><a name="crys87">Crystal, D</a>.  (1987)<i>The Cambridge Encyclopaedia of Language</i>.   Cambridge: Cambridge University Press.
+<p>
+<li><a name="ekme95">Ekmek&ccedil;ioglu, F</a>.&Ccedil;., Lynch, M. F. &amp; Willett, P. (1995) <span>Development</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and evaluation of conflation techniques for the implementation of a document retrieval system for Turkish text databases. <i> The New Review of Document and Text Management</i>, <b>1</b>, 131-146.
+ <p>
+<li><a name="ekme96">Ekmek&ccedil;ioglu, F.</a>&Ccedil;., Lynch, M.F., Robertson, <span>A+</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>M., Sembok, T.M.T. &amp; Willett, P.  (1996)  Comparison of <i>n</i>-gram matching and stemming for <span>term</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>conflation in <span>English</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> Malay, and Turkish texts.  <i>Text Technology</i>,<b> 6</b>,  1-14.
+<p>
+<li><a name="freu82">Freund, G.E.</a> &amp; Willett, P. (1982) Online identification of word variants and <span>arbitrary</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>truncation searching using a string similarity measure.  <i>Information Technology: Research and Development</i>, <b>1</b>,  177-187.
+<p>
+<li><a name="hank84">Hankamer, <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span></a> (1984)   Turkish generative morphology and morphological parsing.  Presented at the <i>Second International Conference on Turkish Linguistics</i>, Istanbul.
+<p>
+<li><a name="japp85">J&auml;ppinnen, H.,</a> Niemisto, <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> &amp; Ylilammi, M.  (1985)  FINNTEXT - text retrieval system for an agglutinative language.  <i>RIAO 85 Recherche d'Informations</i>, Grenoble: IMAG, 1985, 217-226
+<p>
+<li><a name="kosk83">Koskenniemi, K.</a> (1983)  <i>Two-level Morphology: <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>General Computational Model for Word-Form Recognition and Production</i>.  <span>Publications</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of the Department of General Linguistics, 11.  Helsinki: University of Helsinki.
+<p>
+<li><a name="lenn81">Lennon, M.,</a> Peirce, D.S., Tarry, B.D. &amp; Willett, P. (1981)   An evaluation of some conflation <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for information retrieval.  <i>Journal of Information Science</i>, <b>3</b>, 177-183.
+ <p>
+<li><a name="lewi91">Lewis, G.L. </a> (1991) <i>Turkish Grammar.  </i>Oxford: Oxford University Press, 1991.
+ <p>
+<li><a name="lovi68">Lovins, <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>B.</a> (1968)   <span>Development</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of a stemming <span>algorithm</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>  <i>Mechanical Translation and Computational Linguistics</i>, <b>11</b>, 1968, 22-31.
+ <p>
+<li><a name="ofla94">Oflazer, K.</a>  (1994)  Two-level <span>description</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of Turkish morphology.  <i>Literary and <span>Linguistic</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>Computing</i>,<i> </i><b>9</b>, 175-198.
+ <p>
+<li><a name="port80">Porter, M.F. </a> (1980)  An <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for suffix stripping.  <i>Program</i>, <b>14</b>,  130-137.
+ <p>
+<li><a name="sola93">Solak, <span>A+</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span></a> &amp; Oflazer, K.  (1993)  <span>Design</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and implementation of a spelling checker for Turkish.  <i>Linguistic and Literary <span>Computing</span>, <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> </i><b>8</b>, 1993.
+ <p>
+<li><a name="walk88">Walker, S.</a>  (1988)    Improving subject access painlessly: recent work on the Okapi online catalogue projects. <i>Program</i>, <b>22</b>,  21-31.
+</dir>
+
+<hr color=#ff00ff SIZE=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Ekmek&ccedil;ioglu, F. &Ccedil;una, Lynch, <span>Michael</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>F. &amp; Willett, Peter   (1996)&nbsp; &quot;Stemming and N-gram matching for <span>term</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>conflation in Turkish texts&quot;&nbsp;<em>Information Research</em>, <strong>1</strong>(1) Available at: http://informationr.net/ir/2-2/paper13.html</p>
+<p style="text-align : center">&copy; the authors, 1996.</p>
+<hr color="#ff00ff" size="1">
+<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:Xim-RWBNxM4J:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres22.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><IMG SRC="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper13" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 13 December 2002</h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/2-2/paper13.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:29 GMT -->
+</html>

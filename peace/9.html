@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta itemprop="name" content="SVGPanZoom" />
+    <!-- HELLO JS: -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/jquery-ui.js"></script>
+        <script src='./js/panzoom.js'></script>
+    <!-- HELLO CSS: -->
+        <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+        <title>PAX - Alluvial of Mentions</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="./css/jquery-ui.css" rel="stylesheet" type="text/css" media="all">
+        <link href="./css/jquery-ui.structure.css" rel="stylesheet" type="text/css" media="all">
+        <link href="./css/theme.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <div id="menu">
+            <button class="dropdown-item" type="button" id="opener">README</button>
+            <button class="dropdown-item actions" type="button" id="99" onclick="mysvgkit('99');">All Categories (3 Levels)</button>
+            <button class="dropdown-item cat" type="button" id="00" onclick="mysvgkit('00');">All Categories (2 levels)</button>
+            <button class="dropdown-item actions" type="button"  id="a1">Hide/Show flows</button>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item cat" type="button" id="01" onclick="mysvgkit('01');">Gender</button>
+             <button class="dropdown-item cat" type="button" id="02" onclick="mysvgkit('02');">Groups</button>
+             <button class="dropdown-item cat" type="button" id="03" onclick="mysvgkit('03');">State definition</button>
+             <button class="dropdown-item cat" type="button" id="04" onclick="mysvgkit('04');">Governance</button>
+             <button class="dropdown-item cat" type="button" id="05" onclick="mysvgkit('05');">Power-sharing</button>
+             <button class="dropdown-item cat" type="button" id="06" onclick="mysvgkit('06');">HR and Equality</button>
+             <button class="dropdown-item cat" type="button" id="07" onclick="mysvgkit('07');">Justice Sector Reform</button>
+             <button class="dropdown-item cat" type="button" id="08" onclick="mysvgkit('08');">Socio-Economic Reconstruction</button>
+             <button class="dropdown-item cat" type="button" id="09" onclick="mysvgkit('09');">Land, property, and environment</button> 
+             <button class="dropdown-item cat" type="button" id="10" onclick="mysvgkit('10');">Security Sector</button>
+             <button class="dropdown-item cat" type="button" id="11" onclick="mysvgkit('11');">Transitional Justice</button>
+             <button class="dropdown-item cat" type="button" id="12" onclick="mysvgkit('12');">Implementation</button>
+        </div>
+        
+        <div id=svgfile></div>
+
+        <div id="dialog" title="Alluvial of mentions in PA-X">
+            <h2>Welcome to the Alluvial of Mentions (AoM) in Peace Agreements database (<a href="">PA-X</a>).</h2>
+            <p>AoM is a tracker of 293 categories and issues/sub-issues along the PA-X collection of peace agreements.</p>
+            <p>This is a web prototype that represents the structure and the mentions of 194 categories, issues and sub-issues</p>
+            <p>
+                <h3>What is about:</h3>
+                This site presents Alluvial diagrams (in most cases a synonym of <a href="https://en.wikipedia.org/wiki/Sankey_diagram" target="wikipedia-sankey_diagram">Sankey diagram</a>). Each diagram presents from left to right these columns: Category names > Issue names > sub-issue names. Each of the 293 names have a visual width relative to the number of Peace Agreements documents where it is mentioned.
+            </p>
+            <p><h3>HINTS:</h3>
+                <ul>
+                    <li>Pan&Zoom using click and drag, and double-click. (it works better than the mouse-wheel.</li>
+                    <li>Click on the Category buttons to get the alluviat of one Category</li>
+                    <li>Click on the purple buttons to get other features, lik hide/show the flows at the diagrams, and so on.</li>
+                    <li>I recommend "full screen" mode, and lower the light.</li>
+                    <li>CHECK Category "Implementation". There is a test where tree-branches get highlighted by  mouseover. Just click the far left green  button. </li>
+                    <li>You can move and close this dialog. Open it again by clicking "README" from the MEnu button in the top left og this page..</li>
+                    <li>This is a prototype, Not yet implemented: links on the names on the diagrams, back-links to PA-X site, to Area, ... I'm trying to get a perfect zoom&pan interaction, etc  :-) </li>
+                    <li>Comments to jaume AT nualart.cat. This site is not yet published, this is a draft. So I, Jaume Nualart own the copyright of what I did. Soon it will be free and  easily accessible under a free licence. Comments to jaume AT nualart.cat</li>
+                </ul>
+            </p>
+        </div>
+    
+        <!-- HELLO JS scripts: -->    
+        <script>
+            // Jquery-UI Dialog function:
+            $( function() {
+                $("#dialog" ).dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "blind",
+                    duration: 1000
+                }
+                });
+            
+                $( "#opener" ).on( "click", function() {
+                    $( "#dialog" ).dialog("open");
+                });
+
+                // Initial dialog
+                $( "#dialog" ).dialog({
+                    autoOpen: true,
+                    width: 800,
+                    height: 640
+                });
+            })
+        // Branch highlight:
+            function getlights() {
+                $("rect,text").on({"mouseover": function () {
+                    var myclass = $(this).attr('class');
+                    //console.log("myclass: "+myclass+" | this:"+event.target.nodeName);
+                    $(".b, ."+myclass).stop(true,true).addClass("mybranch", 500);
+                },
+                mouseleave: function () {
+                    //var myclass = $(this).attr('class');
+                    $(".b, rect,text").stop(true,true).removeClass("mybranch", 500);
+                }
+                });
+            }
+        // toggle element view
+            $("#a1").click(function(){
+                $("path").toggle('slow');
+            });
+        // Menu
+            $( "#menu" ).menu({
+               position: { my: "left top", at: "right-5 top+5" }
+            });
+
+            function mysvgkit(my) {
+                // SVG loading + pan&zoo2
+                $('#svgfile').load('./svgs/'+my+'-.svg').delay(2000).promise().done(function(){
+                    
+                    if (my=='99') {myz =1 } else {myz = 1}
+                    // Center the SVG through science$()
+                    const elem = document.getElementById('mysvg')
+                    const panzoom = Panzoom(elem, {
+                        maxScale: 20 
+                    })
+                    panzoom.zoom(myz  , { animate: true })
+                    panzoom.pan(10, 10, { relative: false })
+        
+                    // Panning and pinch zooming are bound automatically (unless disablePan is true).
+                    // There are several available methods for zooming
+                    // that can be bound on button clicks or mousewheel.
+                    //button.addEventListener('click', panzoom.zoomIn)
+                    elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel)          
+                });    
+
+            }
+            mysvgkit('99');
+
+            </script>
+    </body>
+</html>

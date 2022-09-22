@@ -1,0 +1,135 @@
+.QuestionError { 
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 9pt; 
+        color: #cc0000;
+        font-style: normal; 
+	font-weight: normal; 
+        font-variant: normal; 
+	line-height: normal; 
+        text-transform: none;
+}
+
+.QuestionDescription {
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size: 9pt;
+        color: #413F3F; 
+        font-style: normal; 
+	font-weight: normal; 
+        font-variant: normal; 
+	line-height: normal; 
+        text-transform: none;
+}
+
+.QuestionText { 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+        color: #413F3F;
+        font-style: normal; 
+	font-weight: normal; 
+        font-variant: normal; 
+	line-height: normal; 
+        text-transform: none;
+}
+
+.AltQuestionText {
+        background: #cccccc; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+        color: #413F3F;
+        font-style: normal; 
+	font-weight: normal; 
+        font-variant: normal; 
+	line-height: normal; 
+        text-transform: none;
+}
+
+.AnswerText {
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+        color: #413F3F;
+        font-style: normal; 
+	font-weight: normal; 
+        font-variant: normal; 
+	line-height: normal; 
+        text-transform: none;
+}
+
+.AltAnswerText { 
+        background: #cccccc; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+        color: #413F3F;
+        font-style: normal; 
+	font-weight: normal; 
+        font-variant: normal; 
+	line-height: normal; 
+        text-transform: none;
+}
+
+.SurveyHeader { 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+        color: #413F3F;
+        font-style: normal; 
+	font-weight: bold; 
+        font-variant: normal; 
+	line-height: normal; 
+        text-transform: none;
+        text-align: center;
+        background: none;
+}
+
+.SurveyFooter { 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size: 8.5pt; 
+        color: #413F3F;
+        font-style: normal; 
+	font-weight: normal; 
+        font-variant: normal; 
+	line-height: normal; 
+        text-transform: none;
+        text-align: center;
+}
+
+.SurveyValidation { 
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 8.5pt; 
+        color: #413F3F;
+        font-style: normal; 
+	font-weight: normal; 
+        font-variant: normal; 
+	line-height: normal; 
+        text-transform: none;
+}
+
+.Divider { 
+         background: #CCCCCC;
+} 
+
+.Separator {
+        border-bottom: 3px solid #CCCCCC;
+}
+
+.headingBox1 { 
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #ffffff;
+        font-style: normal;
+        font-weight: bold;  
+        font-variant: normal; 
+	line-height: normal; 
+        text-transform: none;
+        background-color: #707070; 
+        padding: 6px; 
+        margin: 0px;
+        color: #ffffff;
+}
+
+.conjointHeader { 
+        color: #ffffff; 
+        font-weight: bold;
+        background : #006699;
+}
+
+
+

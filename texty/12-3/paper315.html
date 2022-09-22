@@ -1,0 +1,801 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/12-3/paper315.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:24:57 GMT -->
+<head>
+<title>Uma revis&atilde;o dos algoritmos de radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+
+<!--Enter appropriate data in the content fields-->
+<meta name="dc.title" content="Uma revis&atilde;o dos algoritmos de radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa" />
+<meta name="dc.creator" content="Angel Freddy Godoy Viera, Johnny Virgil" />
+<meta name="dc.subject" content="A review of stemming algorithms for the Portuguese language" />
+<meta name="dc.description" content="Introduction.The significance of information retrieval has been increased as a result of the increasing frequency with which digital files are created and used. One of the many strategies for processing texts for the indexing of their contents in information retrieval systems is called stemming, which consists in the reduction of similar words to the same unvarying representation. Stemming relies on the morphological structure of the language with which it is intended to work. Aim.This paper aims at defining the concept of stemming, presenting the algorithms available for Portuguese and commenting on several topics related to the use of this type of algorithms. Method. Literature review on stemming for Portuguese known to the authors. Results. To this day, there are only three algorithms published which deal with stemming in Portuguese: Porter's, Orengo's and Gonzalez's. Conclusion. Today,improvement in terms of stemming for the Portuguese language cannot be achieved successfully, since there is little research being done in this area." /> 
+<meta name="dc.subject.keywords" content="stemming, information retrieval, information science" />
+
+<!--leave the following to be completed by the Editor-->
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="Professor T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="htttp://InformationR.net/ir/12-3/paper315.html" />
+<meta name="dc.relation.IsPartOf" content="htttp://InformationR.net/ir/12-3/infres123.html" />
+<meta name="dc.date.available" content="2007-04-15" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+		fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted maroon;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: maroon;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+</style>
+</head>
+<body  bgcolor="#ffffff">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"> <img src="../mini_logo2.gif" width="336" height="45" alt="header" /><br />
+<div>Vol. 12  No. 3, April 2007</div><br /><br /><div class="button">
+<ul>
+	<li><a href="infres123.html">Contents | </a></li>
+	<li><a href="../iraindex.html">Author index | </a></li>
+	<li><a href="../irsindex.html">Subject index | </a></li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+
+</ul>
+</div></td></tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<hr size="1" style="color: maroon;" />
+
+<h1>Uma revis&atilde;o dos algoritmos de radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa</h1>
+
+<div style="margin-left: 10%; margin-right: 10%;"><h4><a href="mailto:godoy@cin.ufsc.br">Angel Freddy Godoy Viera</a> e <a href="mailto:johnnyvirgilbr@gmail.com">Johnny Virgil</a><br />
+Programa de P&oacute;s-gradua&ccedil;&atilde;o em Ci&ecirc;ncia da Informa&ccedil;&atilde;o <br />
+Universidade Federal de Santa Catarina<br /> 
+Florian&oacute;polis, Brasil</h4></div>
+<br /><br />
+
+<form action="http://informationr.net/ir/12-3/none">
+<fieldset style="margin-left: 5%; margin-right: 5%;">
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">Resumo</legend>
+
+<blockquote><strong>Introdu&ccedil;&atilde;o</strong>.
+A recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o teve a sua import&acirc;ncia aumentada com a gera&ccedil;&atilde;o e o uso 
+costumeiro de arquivos digitais, principalmente no &acirc;mbito da Ci&ecirc;ncia da 
+Informa&ccedil;&atilde;o. Uma das diversas estrat&eacute;gias de tratamento dos textos para a indexa&ccedil;&atilde;o 
+do seu conte&uacute;do por sistemas de recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o &eacute; a denominada radicaliza&ccedil;&atilde;o, 
+que consiste na redu&ccedil;&atilde;o de palavras cong&ecirc;neres em uma representa&ccedil;&atilde;o &uacute;nica. A radicaliza&ccedil;&atilde;o 
+depende da estrutura morfol&oacute;gica da l&iacute;ngua que se prop&otilde;e a tratar. <br />
+<strong>Objetivo</strong>. Este artigo pretende 
+definir o conceito de radicaliza&ccedil;&atilde;o, apresentar os algoritmos dispon&iacute;veis para a l&iacute;ngua 
+portuguesa e tecer coment&aacute;rios sobre v&aacute;rios pontos relativos ao uso dessa esp&eacute;cie de 
+algoritmos.<br />
+<strong>Metodologia</strong>. Realizou-se uma revis&atilde;o de toda a literatura pertinente &agrave; 
+radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa de conhecimento dos autores.<br />
+<strong>Resultados</strong>. At&eacute; o momento, h&aacute; apenas tr&ecirc;s algoritmos divulgados que tratam da
+radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa: os de Porter, Orengo e Gonzalez.<br />
+<strong>Conclus&atilde;o</strong>.
+Atualmente, a perfei&ccedil;&atilde;o no processo de radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa n&atilde;o pode ser 
+obtida com sucesso absoluto, em raz&atilde;o do pouco estudo que &eacute; est&aacute; sendo desenvolvido
+na &aacute;rea.
+</blockquote>	  
+</fieldset>
+</form>
+
+<div align="center">
+<a href="#abstract">Abstract in English</a></div>
+<br />
+<br />
+
+
+<div align="center">
+<input type="button" value="change font" class="btn"
+style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: maroon;" onclick="doChangeFont()" /></div>
+<br />
+
+<br />
+ 
+<h2>Introdu&ccedil;&atilde;o</h2>
+
+<p>No conjunto das diversas &aacute;reas que envolvem a Ci&ecirc;ncia da Informa&ccedil;&atilde;o, a recupera&ccedil;&atilde;o 
+inteligente da informa&ccedil;&atilde;o ocupa um espa&ccedil;o n&atilde;o totalmente compreendido por setores mais voltados a aspectos relacionados com o estudo de usu&aacute;rios. No entanto, o uso cada vez mais corriqueiro de computadores e a onda crescente de avan&ccedil;os em processamento textual t&ecirc;m gerado, na pr&aacute;tica, uma infinidade de arquivos digitais. Esses arquivos tanto podem representar relat&oacute;rios simples quanto artigos cient&iacute;ficos, monografias, not&iacute;cias de jornal, livros, enciclop&eacute;dias, dicion&aacute;rios, p&aacute;ginas Web, entre outros tipos de documentos. Esse ac&uacute;mulo de documentos acabou criando a necessidade de encontrar solu&ccedil;&otilde;es para melhorar a recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o neles contida.</p>
+
+<p>A aplica&ccedil;&atilde;o de mecanismos de recupera&ccedil;&atilde;o inteligente da informa&ccedil;&atilde;o no universo 
+empresarial, principalmente no que se refere aos mecanismos de busca na Internet, enfatizou a import&acirc;ncia comercial e estrat&eacute;gica do acesso r&aacute;pido e confi&aacute;vel &agrave;s fontes de informa&ccedil;&atilde;o. Empresas como Google (http://www.google.com), AltaVista (http://www.altavista.com) e  Yahoo! (http://www.yahoo.com) tornaram-se refer&ecirc;ncia no que tange &agrave; divulga&ccedil;&atilde;o, disponibiliza&ccedil;&atilde;o, organiza&ccedil;&atilde;o e recupera&ccedil;&atilde;o de informa&ccedil;&otilde;es em um contexto de acesso p&uacute;blico e gratuito pela comunidade mundial de internautas.</p>
+
+<p>A possibilidade de varrer o conte&uacute;do textual (letras, palavras, par&aacute;grafos) dos documentos digitais gerou diversas abordagens distintas no &acirc;mbito da recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o. Uma delas ser&aacute; tratada neste artigo. No caso, estudar-se-&aacute; uma das t&eacute;cnicas de pr&eacute;-processamento do texto, etapa realizada sobre os documentos digitais antes de sua indexa&ccedil;&atilde;o. Essa t&eacute;cnica &eacute; a <i>radicaliza&ccedil;&atilde;o</i>, ou <i>stemming</i> (em l&iacute;ngua inglesa), ou ainda <i>determina&ccedil;&atilde;o do radical</i>, dentre outras denomina&ccedil;&otilde;es, que visa a reduzir varia&ccedil;&otilde;es de uma mesma raiz vocabular com a finalidade de recuperar palavras correlatas.</p>
+
+<p>Infelizmente, a radicaliza&ccedil;&atilde;o &eacute; um processo que implica algoritmos diferentes de acordo com a l&iacute;ngua em quest&atilde;o. Na opini&atilde;o de Figuerola, G&oacute;mez D&iacute;az e L&oacute;pez de San Rom&aacute;n (<a href="#fig00">2000: 1</a>): "...there are notable differences between different languages in the way of forming derivatives and inflected forms, so that the application of specific techniques can produce unequal results according to the language of the documents and queries". (<a href="#footnote1">Nota 1</a>)</p>
+
+<p>Porter (<a href="#por80">1980</a>) desenvolveu um algoritmo extremamente eficiente para a l&iacute;ngua inglesa, 
+que tem sido utilizado extensivamente, nas palavras do seu autor: '<em>the Algorithm has been widely used, quoted, and adapted over the past 20 years</em>' (<a href="#por05">Porter 2005</a>) (<a href="#footnote2">Nota 2</a>). No entanto, as 
+caracter&iacute;sticas da l&iacute;ngua inglesa s&atilde;o distintas, por exemplo, das da l&iacute;ngua portuguesa. 
+Isso obriga afirmar que a radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa deve possuir um algoritmo 
+que esteja de acordo com a sua morfologia.</p>
+
+<p>At&eacute; o momento, diversos algoritmos de radicaliza&ccedil;&atilde;o foram criados para as mais diferentes 
+l&iacute;nguas. Esses algoritmos s&atilde;o apresentados no Quadro 1.</p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Quadro 1: Algoritmos de radicaliza&ccedil;&atilde;o para v&aacute;rias l&iacute;nguas</strong>
+<br />
+Fontes: Adaptado de Porter (<a href="#por80">1980</a>, <a href="#por05">2005</a>), 
+Paice (<a href="#pai90">1990</a>),
+Popovic e Willett (<a href="#pop90">1990</a>), 
+Krovetz (<a href="#kro93">1993</a>), 
+Kraaij e Pohlmann (<a href="#kra94">1994</a>),
+Ekmek&ccedil;ioglu <em>et al.</em> (<a href="#ekm95">1995</a>),
+Schinke <em>et al.</em> (<a href="#sch96">1996</a>),
+Figuerola <em>et al.</em> (<a href="#fig01">2001</a>), 
+Carlberger <em>et al.</em> (<a href="#car01">2001</a>),
+Alemayehu e Willett (<a href="#ale02">2002</a>),
+Chaves (<a href="#cha03">2003</a>) e Nakov (<a href="#nak03">2003</a>).
+</caption>
+
+<tr><th valign="middle">L&iacute;ngua</th><th>Algoritmo</th><th>Autoria</th></tr>
+
+<tr><td rowspan="5">Ingl&ecirc;s</td><td>Porter</td><td>Porter</td></tr>
+<tr><td>KStem</td><td>Krovetz</td></tr>
+<tr><td>Paice/Husk</td><td>Paice e Husk</td></tr>
+<tr><td>Porter 2</td><td>Porter</td></tr>
+<tr><td>Dawson</td><td>Dawson</td></tr>
+<tr><td rowspan="3">Portugu&ecirc;s</td><td>Porter - Portugu&ecirc;s</td><td>Porter</td></tr>
+<tr><td>Orengo</td><td>Orengo</td></tr>
+<tr><td>Pegastemming</td><td>Gonzalez</td></tr>
+<tr><td rowspan="2">Alem&atilde;o</td><td>Porter - Alem&atilde;o</td><td>Porter</td></tr>
+<tr><td>Porter - Alem&atilde;o - Varia&ccedil;&atilde;o</td><td>Porter</td></tr>
+<tr><td>Am&aacute;rico (et&iacute;ope)</td><td>Alemayehu-Willett</td><td>Alemayehu e Willett</td></tr>
+<tr><td>B&uacute;lgaro</td><td>BulStem</td><td>Nakov</td></tr>
+<tr><td>Dinamarqu&ecirc;s</td><td>Porter - Dinamarqu&ecirc;s</td><td>Porter</td></tr>
+<tr><td>Esloveno</td><td>Popovic-Willett</td><td>Popovic e Willett</td></tr>
+<tr><td>Espanhol</td><td>Porter - Espanhol</td><td>Porter</td></tr>
+<tr><td>Finland&ecirc;s</td><td>Porter - Finland&ecirc;s</td><td>Porter</td></tr>
+<tr><td>Franc&ecirc;s</td><td>Porter - Franc&ecirc;s</td><td>Porter</td></tr>
+<tr><td rowspan="2">Holand&ecirc;s</td><td>Porter - Holand&ecirc;s</td><td>Porter</td></tr>
+<tr><td>Kraaij-Pohlmann</td><td>Kraaij e Pohlmann</td></tr>
+<tr><td>Italiano</td><td>Porter - Italiano</td><td>Porter</td></tr>
+<tr><td>Latim</td><td>Schinke <em>et al.</em></td><td>Schinke <em>et al.</em></td></tr>
+<tr><td rowspan="2">Noruegu&ecirc;s</td><td>Porter - Noruegu&ecirc;s</td><td>Porter</td></tr>
+<tr><td>Carlberger <em>et al.</em></td><td>Carlberger <em>et al.</em></td></tr>
+<tr><td>Russo</td><td>Porter - Russo</td><td>Porter</td></tr>
+<tr><td>Sueco</td><td>Porter - Sueco</td><td>Porter</td></tr>
+<tr><td>Turco</td><td>Ekmek&ccedil;ioglu <em>et al.</em></td><td>Ekmek&ccedil;ioglu <em>et al.</em></td></tr>
+</table>
+
+<p>Apesar de a l&iacute;ngua portuguesa possuir mais de 220 milh&otilde;es de falantes no mundo (<a href="#tem05">"Tem&aacute;tica Barsa" 2005: 46</a>), estando entre as dez mais faladas, e possuir uma baixa representa&ccedil;&atilde;o em termos de recursos lingü&iacute;sticos em rela&ccedil;&atilde;o a outras l&iacute;nguas europ&eacute;ias como o franc&ecirc;s e o espanhol (<a href="#ore04">Orengo 2004: 63</a>), pouco se fez em termos de construir um algoritmo que radicaliza&ccedil;&atilde;o que acrescentasse vantagens &agrave; vers&atilde;o portuguesa do algoritmo de Porter, de uso p&uacute;blico (<a href="#ore04">Orengo 2004: 48</a>).</p> 
+
+<p>O objetivo deste artigo, por conseguinte, &eacute; apresentar alguns dos algoritmos de 
+radicaliza&ccedil;&atilde;o para a l&iacute;ngua portuguesa. Na primeira parte, a radicaliza&ccedil;&atilde;o ser&aacute; definida, 
+para que haja clareza sobre a sua significa&ccedil;&atilde;o e abrang&ecirc;ncia; na segunda parte, 
+apresentam-se os algoritmos dispon&iacute;veis para a l&iacute;ngua portuguesa; na &uacute;ltima parte, tecem-se 
+algumas considera&ccedil;&otilde;es sobre os problemas e lacunas existentes na &aacute;rea.</p>
+
+<h2>Radicaliza&ccedil;&atilde;o</h2>
+
+<p>O voc&aacute;bulo <i>radical</i> pode ser definido como o "elemento que serve de base &agrave;s palavras de 
+uma mesma fam&iacute;lia etimol&oacute;gica [...], e que &eacute; tomado como ponto de partida para o estudo da 
+estrutura dos voc&aacute;bulos numa l&iacute;ngua, como <i>luc-</i>, <i>luz-</i>, em <i>elucidar</i>, <i>transl&uacute;cido</i>, 
+<i>luzir</i>" (<a href="#rad99">"Radical" 1999: 1697</a>).</p>
+
+<p>O Dicion&aacute;rio Houaiss da L&iacute;ngua Portuguesa apresenta o seguinte significado para radical: 'parte da estrutura de uma palavra que cont&eacute;m seu significado b&aacute;sico e recebe os sufixos flexionais, como, p.ex., <i>livro/livros</i>; pode ou n&atilde;o ter afixos derivacionais: <i>livreiro/livreiros</i> [&Eacute; simples, se constitu&iacute;do de um &uacute;nico morfema: <i>feliz</i>; e complexo, se constitu&iacute;do por mais de um morfema: <i>infeliz</i> (<i>in-</i> + <i>feliz</i>), <i>livreiro</i> (<i>livr-</i> + 
+<i>-eir-</i> + <i>-o</i>).] (<a href="#rad01">Radical 2001: 2374</a>).</p>
+
+<p>A palavra <i>radicaliza&ccedil;&atilde;o</i> n&atilde;o remete a nenhum desses significados (<a href="#raz99">"Radicaliza&ccedil;&atilde;o" 1999: 
+1697</a>; <a href="#raz01">"Radicaliza&ccedil;&atilde;o" 2001: 2374</a>). Assim, depreende-se que <i>radicaliza&ccedil;&atilde;o</i> apresenta um 
+significado novo que ainda n&atilde;o foi incorporado ao vern&aacute;culo da l&iacute;ngua portuguesa.</p>
+ 
+<p>De maneira semelhante, a palavra equivalente em l&iacute;ngua inglesa, <i>stemming</i>, tamb&eacute;m 
+carece de um significado apropriado &agrave; nova id&eacute;ia que procura introduzir, como atesta a 
+sua aus&ecirc;ncia como entrada no Oxford Advanced Learner's Dictionary (<a href="#oxf95">1995</a>), no The Newbury 
+House Dictionary of American English (<a href="#the99">1999</a>) e no Merriam-Webster Online Dictionary (<a href="#mer05">2005</a>). 
+Conv&eacute;m salientar que a palavra <i>stem</i> seria traduzida para o portugu&ecirc;s como <i>radical</i>.</p>
+
+<p>Dessa forma, o conceito de <i>radical</i> norteia a defini&ccedil;&atilde;o de <i>radicaliza&ccedil;&atilde;o</i>.</p>
+
+<p>Uma outra possibilidade de nomenclatura para <i>radicaliza&ccedil;&atilde;o</i> poderia ser <i>normaliza&ccedil;&atilde;o 
+morfol&oacute;gica</i>, apesar de aparecer dividida originalmente em dois tipos: <i>stemming</i> e 
+<i>normaliza&ccedil;&atilde;o canônica</i> (<a href="#gon03">Gonzalez <em>et al.</em> 2003: 2</a>). O termo <i>confla&ccedil;&atilde;o</i> tamb&eacute;m aparece na literatura, com 
+o sentido de fus&atilde;o e combina&ccedil;&atilde;o de variantes morfol&oacute;gicas, segundo Chaves (<a href="#cha03">2003: 2</a>), 
+apoiando-se em Frakes e Baeza-Yates (<a href="#footnote3">Nota 3</a>).</p>
+
+<p>Al&eacute;m das interpreta&ccedil;&otilde;es dadas por dicion&aacute;rios, conv&eacute;m levar em considera&ccedil;&atilde;o o que gram&aacute;ticos e lingüistas dizem a respeito.</p>
+
+<p>Sacconi (<a href="#sac91">1991: 78</a>) define radical desta maneira: "<b><i>Radical</i></b>, <b><i>lexema</i></b> ou <b><i>semantema</i></b> 
+&eacute; o elemento portador de significado, comum a um grupo de palavras da mesma 
+fam&iacute;lia. Assim, na fam&iacute;lia de palavras <b><i>terra</i></b>, <b><i>terrinha</i></b>, <b><i>terriola</i></b>, <b><i>t&eacute;rreo</i></b>, 
+<b><i>terr&aacute;queo</i></b>, <b><i>terreno</i></b>, <b><i>terreiro</i></b>, <b><i>terroso</i></b>, existe um elemento comum: <b><i>terr-</i></b>, que 
+&eacute; o radical."</p>
+
+<p>Um pouco mais adiante, Sacconi (<a href="#sac91">1991: 79</a>), em contraposi&ccedil;&atilde;o &agrave; <i>semantema</i>, define 
+<i>morfema</i>: "d&aacute;-se o nome de <b><em>morfema</em></b> ao elemento lingü&iacute;stico que, isolado, n&atilde;o possui 
+nenhum valor, servindo apenas para relacionar semantemas na ora&ccedil;&atilde;o, para definir a 
+categoria gramatical (g&ecirc;nero, n&uacute;mero e pessoa), etc."</p>
+
+<p>C&acirc;mara J&uacute;nior (<a href="#cam80">1980: 94</a>) trata <i>semantemas</i> e <i>morfemas</i> como <i>formas m&iacute;nimas</i>, 
+"elementos &uacute;ltimos de significa&ccedil;&atilde;o" (<a href="#cam80">C&acirc;mara J&uacute;nior 1980: 91</a>), assim denominados de 
+acordo com a designa&ccedil;&atilde;o proposta por Vendryes (<a href="#ven58">1958: 133</a>):
+"Por <i>semantemas</i> deben entenderse los elementos lingü&iacute;sticos que expresan las ideas de 
+las representaciones [...], y por <i>morfemas</i>, los que expresan las relaciones 
+entre las ideas [...]. Los morfemas, por lo tanto, expresan las relaciones 
+que el esp&iacute;ritu establece entre los semantemas." (<a href="#footnote4">Nota 4</a>)</p>
+
+<p>Em suma, "o voc&aacute;bulo ...&eacute; uma combina&ccedil;&atilde;o de formas m&iacute;nimas na base de um 
+semantema e um morfema" (<a href="#cam80">C&acirc;mara J&uacute;nior 1980: 93</a>).</p>
+
+<p>Contudo, <i>semantemas</i> e <i>morfemas</i> nada mais s&atilde;o que, lato sensu, 
+morfemas (<a href="#cam80">C&acirc;mara J&uacute;nior 1980: 91-92</a>). Bloomfield (<a href="#blo69">1969: 161</a>) parece 
+ter o mesmo ponto de vista: "A linguistic form which bears no 
+partial phonetic-semantic resemblance to any other form is a <i>simple</i> 
+form or <i>morpheme</i>. Thus, <i>bird</i>, <i>play</i>, <i>dance</i>, <i>cran-</i>, <i>-y</i>, 
+<i>-ing</i> are morphemes." (<a href="#footnote5">Nota 5</a>)</p>
+
+<p>No &acirc;mbito da recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o, a radicaliza&ccedil;&atilde;o &eacute; vista com algumas vari&acirc;ncias.</p>
+
+<p>Allan e Kumaran (<a href="#all03">2003: 1</a>) indicam uma afinidade com o entendimento lingü&iacute;stico, quando dizem que "stemming is the process of collapsing words into their morphological root" (<a href="#footnote6">Nota 6</a>).</p>
+
+<p>Com pouca diverg&ecirc;ncia, Xu e Croft (<a href="#xuj98">1998: 1</a>) afirmam que "stemming is used in many information retrieval (IR) systems to reduce variant words to common roots" (<a href="#footnote7">Nota 7</a>).</p>
+
+<p>De modo semelhante, para Orengo (<a href="#ore04">2004: 48</a>), a radicaliza&ccedil;&atilde;o, ou <i>stemming</i>, "is the process of conflating the variant forms of a word into a common representation, the stem" (<a href="#footnote8">Nota 8</a>).</p> 
+
+<p>Baeza-Yates e Ribeiro-Neto (<a href="#bae99">1999: 165</a>) definem radicaliza&ccedil;&atilde;o, ou <i>stemming</i>, como a remo&ccedil;&atilde;o dos afixos (prefixos e sufixos) das palavras, a qual ocorre durante o pr&eacute;-processamento do texto.</p>
+
+<p>Para Russell e Norvig (<a href="#rus04">2004: 817</a>), a radicaliza&ccedil;&atilde;o (os autores se valem do termo traduzido como <i>determina&ccedil;&atilde;o do radical</i>) &eacute; algo t&atilde;o simples quanto "reduzir 'poltronas' &agrave; forma de radical 'poltrona'", ou seja, t&atilde;o simples quanto eliminar o morfema gramatical de plural. Essa elimina&ccedil;&atilde;o resulta, para a l&iacute;ngua inglesa, em um aumento de 2% na recupera&ccedil;&atilde;o, apesar de que os efeitos podem ser melhores com outras l&iacute;nguas, como o alem&atilde;o, o finland&ecirc;s, o turco, o inuit e o yupik (<a href="#rus04">Russell &amp; Norvig 2004: 817</a>).</p>
+
+<p>Porter (<a href="#por80">1980</a>) indica que a sua preocupa&ccedil;&atilde;o foi remover sufixos com base em determinados crit&eacute;rios, sem se preocupar diretamente com os aspectos lingü&iacute;sticos: 
+"In any suffix stripping program for IR work, two points must be borne in mind. Firstly, the suffixes are being removed simply to improve IR performance, and not as a linguistic exercise. This means that it would not be at all obvious under what circumstances a suffix should be removed, even if we could exactly determine the suffixes of a word by automatic means." (<a href="#footnote9">Nota 9</a>)</p>
+
+<p>Logo, pode-se sintetizar o conceito de radicaliza&ccedil;&atilde;o para a recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o da seguinte maneira: radicaliza&ccedil;&atilde;o &eacute; o processo de reduzir varia&ccedil;&otilde;es de uma mesma palavra a uma representa&ccedil;&atilde;o &uacute;nica, objetivando aumentar o n&iacute;vel de recupera&ccedil;&atilde;o de documentos. Em teoria, essa representa&ccedil;&atilde;o tem a inten&ccedil;&atilde;o de isolar o semantema das palavras dos seus morfemas, assim como na lingü&iacute;stica. Contudo, n&atilde;o existe obrigatoriedade nesse sentido, uma vez que as representa&ccedil;&otilde;es podem ser simplifica&ccedil;&otilde;es n&atilde;o preocupadas com a perfei&ccedil;&atilde;o, mas, sim, com oferecer benef&iacute;cios de recupera&ccedil;&atilde;o sem onerar o sistema e impactar na rapidez de processamento, seja no momento da indexa&ccedil;&atilde;o, seja no momento da consulta.</p>
+
+<p>Na continua&ccedil;&atilde;o, apresentam-se os algoritmos de radicaliza&ccedil;&atilde;o para a l&iacute;ngua portuguesa e, na pr&oacute;xima se&ccedil;&atilde;o, apresentam-se os problemas desses algoritmos de radicaliza&ccedil;&atilde;o.</p>
+
+<h2>Algoritmos de radicaliza&ccedil;&atilde;o para a l&iacute;ngua portuguesa</h2>
+
+<p>Infelizmente, poucos s&atilde;o os algoritmos de radicaliza&ccedil;&atilde;o dispon&iacute;veis para a l&iacute;ngua portuguesa. 
+A proposta mais conhecida para a l&iacute;ngua portuguesa &eacute; a de Orengo (<a href="#ore04">2004</a>). Segundo 
+Silva (<a href="#sil04">2004: 8</a>), "para a l&iacute;ngua portuguesa, dispomos dos algoritmos de Porter e 
+Viviane Orengo", ou seja, existe uma vers&atilde;o portuguesa desenvolvida pelo pr&oacute;prio 
+Porter (<a href="#por05">2005</a>), seguindo as mesmas regras daquele desenvolvido para a l&iacute;ngua 
+inglesa. Chaves (<a href="#cha03">2003: 3</a>), al&eacute;m de mencionar o algoritmo de Orengo, apresenta uma outra 
+possibilidade chamada <i>Pegastemming</i>, criada por Marco Antonio Insaurriaga Gonzalez.</p>
+
+<p>Russell e Norvig (<a href="#rus04">2004: 817</a>) ainda dividem o processo de radicaliza&ccedil;&atilde;o em dois tipos de algoritmos: os baseados em regras, que realizam opera&ccedil;&otilde;es de redu&ccedil;&atilde;o geralmente de acordo com as termina&ccedil;&otilde;es das palavras, e os baseados em dicion&aacute;rio, que realizam uma checagem pr&eacute;via em uma lista para evitar que todas ou determinadas palavras com caracter&iacute;sticas espec&iacute;ficas sofram uma redu&ccedil;&atilde;o irregular.</p>
+
+<h3>O algoritmo de Porter</h3>
+
+<p>O algoritmo original de Porter (<a href="#por80">1980</a>) est&aacute; baseado em regras ou crit&eacute;rios: 
+"Assuming that one is not making use of a stem dictionary, and that the purpose of the task is to improve IR performance, the suffix stripping program will usually be given an explicit list of suffixes, and, with each suffix, the criterion under which it may be removed from a word to leave a valid stem. This is the approach adopted here." (<a href="#footnote10">Nota 10</a>)</p> 
+ 
+<p>O algoritmo de Porter (<a href="#por05">2005</a>) adaptado &agrave; l&iacute;ngua portuguesa tamb&eacute;m est&aacute; baseado em 
+regras. Cinco s&atilde;o os passos realizados por ele (preliminarmente, &eacute; necess&aacute;rio tratar as 
+vogais nasalizadas <i>&atilde;</i> e <i>&otilde;</i>):
+<br />
+- remo&ccedil;&atilde;o dos sufixos;
+<br />
+- remo&ccedil;&atilde;o dos sufixos verbais, se o primeiro passo n&atilde;o realizou nenhuma altera&ccedil;&atilde;o;
+<br />
+- remo&ccedil;&atilde;o do sufixo <i>i</i>, se precedido de <i>c</i>;
+<br />
+- remo&ccedil;&atilde;o dos sufixos residuais <i>os</i>, <i>a</i>, <i>i</i>, <i>o</i>, <i>&aacute;</i>, <i>&iacute;</i>, <i>&oacute;</i>;
+<br />
+- remo&ccedil;&atilde;o dos sufixos <i>e</i>, <i>&eacute;</i>, <i>&ecirc;</i> e tratamento da cedilha.
+</p>
+<p>Ao final, devem-se voltar as vogais nasalizadas &agrave; sua forma original.</p>
+
+<h3>O algoritmo de Orengo</h3>
+
+<p>O algoritmo de Orengo (<a href="#ore04">2004</a>) est&aacute; baseado em regras para a remo&ccedil;&atilde;o de sufixos. No total, 
+apresenta 199 delas. Contudo, as regras apresentam exce&ccedil;&otilde;es, que s&atilde;o tratadas com 
+base em um pequeno dicion&aacute;rio de 32 mil termos, permitindo uma redu&ccedil;&atilde;o em termos de 
+<i>overstemming</i> (quando parte do radical &eacute; removida pelo algoritmo) de 5% (<a href="#ore04">Orengo 2004: 49 e 51</a>). Pode-se dizer, ent&atilde;o, que o algoritmo &eacute; um misto das duas alternativas apresentadas por Russell e Norvig.</p>
+
+<p>O algoritmo de Orengo (<a href="#ore04">2004: 50-53</a>) apresenta oito etapas, que s&atilde;o apresentadas no Quadro 2.</p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Quadro 2: Descri&ccedil;&atilde;o das etapas do removedor de sufixos</strong>
+<br />
+Fonte: Adaptado de Orengo (<a href="#ore04">2004: 50-53</a>)</caption>
+
+<tr><th valign="middle">Etapa</th><th>Descri&ccedil;&atilde;o</th></tr>
+
+<tr><td>1. Redu&ccedil;&atilde;o do plural</td><td>Remove-se o final <i>-s</i> indicativo de plural de palavras que n&atilde;o se constituem em exce&ccedil;&otilde;es &agrave; regra, realizando modifica&ccedil;&otilde;es, quando necess&aacute;rio.</td></tr>
+<tr><td>2. Redu&ccedil;&atilde;o do feminino</td><td>Remove-se o final <i>-a</i> de palavras femininas com base nos sufixos mais comuns.</td></tr>
+<tr><td>3. Redu&ccedil;&atilde;o adverbial</td><td>Remove-se o final <i>-mente</i> de palavras que n&atilde;o se constituem em exce&ccedil;&atilde;o.</td></tr>
+<tr><td>4. Redu&ccedil;&atilde;o do aumentativo/diminutivo</td><td>Removem-se os indicadores de aumentativo e diminutivo mais comuns.</td></tr>
+<tr><td>5. Redu&ccedil;&atilde;o nominal</td><td>Removem-se 61 sufixos poss&iacute;veis para substantivos e adjetivos.</td></tr>
+<tr><td>6. Redu&ccedil;&atilde;o verbal</td><td>Reduzem-se as formas verbais aos seus radicais.</td></tr>
+<tr><td>7. Remo&ccedil;&atilde;o de vogais</td><td>Removem-se as vogais <i>a</i>, <i>e</i> e <i>o</i> das palavras que n&atilde;o foram tratadas pelos dois passos anteriores.</td></tr>
+<tr><td>8. Remo&ccedil;&atilde;o de acentos</td><td>Removem-se os sinais diacr&iacute;ticos das palavras.</td></tr>
+</table>
+
+<p>Essas etapas ocorrem em uma seqü&ecirc;ncia estabelecida previamente.</p>
+
+<p>Note-se que algumas etapas s&atilde;o executadas apenas se determinada caracter&iacute;stica &eacute; encontrada. Isso ocorre no caso na redu&ccedil;&atilde;o do plural e na redu&ccedil;&atilde;o do feminino. Em outras duas situa&ccedil;&otilde;es, determinados procedimentos deixam de ser executados se uma etapa anterior foi realizada. &Eacute; o caso da redu&ccedil;&atilde;o verbal, que s&oacute; ocorre se a redu&ccedil;&atilde;o nominal n&atilde;o ocorreu. &Eacute;, tamb&eacute;m, o caso da remo&ccedil;&atilde;o de vogais, que ocorre somente quando a redu&ccedil;&atilde;o nominal e a redu&ccedil;&atilde;o verbal n&atilde;o foram feitas.</p>
+
+<p>A Figura 1 apresenta o fluxograma do algoritmo de Orengo.</p>
+
+<div align="center"><a name="Figure1" id="Figure1"></a><img src="p315fig1.jpg" alt="Figura1" border="0" /></div>
+<div align="center"><br /><strong>Figura 1: Seqü&ecirc;ncia de passos para o removedor de sufixos</strong> (<a href="#footnote11">Nota 11</a>) Fonte: Orengo (<a href="#ore05">2005</a>).</div>
+
+<h3>O algoritmo de Gonzalez</h3>
+
+<p>Chaves (<a href="#cha03">2003: 3</a>) apresenta o algoritmo <em>Pegastemming</em> de autoria de Gonzalez, mas n&atilde;o fornece muitas informa&ccedil;&otilde;es
+pertinentes ao seu funcionamento.</p>
+
+<p>Esse algoritmo n&atilde;o realiza nenhum tratamento para artigos, conjun&ccedil;&otilde;es e preposi&ccedil;&otilde;es 
+(<a href="#cha03">Chaves 2003: 4</a>). Tal comportamento pode ser facilmente comprovado por uma
+visita ao s&iacute;tio onde o programa de radicaliza&ccedil;&atilde;o reside (http://www.inf.pucrs.br/~gonzalez/ri/pesqdiss/analise.htm) 
+e pela visualiza&ccedil;&atilde;o dos resultados obtidos a partir de documentos previamente disponibilizados.</p>
+
+<p>Em geral, esse algoritmo se preocupou em implementar a remo&ccedil;&atilde;o de sufixos comuns.</p>
+
+<p>A literatura n&atilde;o apresenta nenhuma outra men&ccedil;&atilde;o ao algoritmo de Gonzalez, n&atilde;o existindo nenhuma 
+descri&ccedil;&atilde;o p&uacute;blica dispon&iacute;vel do seu funcionamento interno.</p>
+
+<h2>Problemas e lacunas dos algoritmos de radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa</h2>
+
+<p>Russell e Norvig (<a href="#rus04">2004: 817</a>) j&aacute; mencionam a possibilidade de que um algoritmo de radicaliza&ccedil;&atilde;o possa prejudicar, em vez de melhorar, a recupera&ccedil;&atilde;o das informa&ccedil;&atilde;o.</p> 
+
+<p>Orengo (<a href="#ore04">2004: 49</a>) simplifica os problemas existentes com a radicaliza&ccedil;&atilde;o propondo duas categorias:
+<br /> 
+a) os problemas de <i>overstemming</i>, ou seja, quando se remove parte do radical, o que resulta na associa&ccedil;&atilde;o de palavras n&atilde;o relacionadas;
+<br /> 
+b) os problemas de <i>understemming</i>, ou seja, quando um sufixo n&atilde;o &eacute; removido, o que remete a uma situa&ccedil;&atilde;o em que n&atilde;o houve a radicaliza&ccedil;&atilde;o.
+</p>
+
+<p>De maneira espec&iacute;fica, a l&iacute;ngua portuguesa apresenta diversas raz&otilde;es para complicar o 
+processo de radicaliza&ccedil;&atilde;o. Orengo (<a href="#ore04">2004: 53-55</a>), principalmente no que se 
+refere &agrave; morfologia, cita:
+<br />
+a) o n&uacute;mero de exce&ccedil;&otilde;es, dado o aparecimento comum de sufixos como termina&ccedil;&otilde;es de palavras (o algoritmo de Porter n&atilde;o se preocupa com esse aspecto);
+<br />
+b) o n&uacute;mero de hom&oacute;grafos, que podem pertencer a diferentes classes gramaticais, interferindo na categoriza&ccedil;&atilde;o dos sufixos;
+<br />
+c) a irregularidade na conjuga&ccedil;&atilde;o dos verbos;
+<br />
+d) mudan&ccedil;as no radical morfol&oacute;gico, como no caso de <i>emiss&atilde;o</i> e <i>emitir</i>;
+<br />
+e) o uso de nomes pr&oacute;prios, que n&atilde;o deveriam ser radicalizados.
+</p>
+
+<p>O algoritmo de Orengo apresenta uma sens&iacute;vel melhora em rela&ccedil;&atilde;o &agrave; vers&atilde;o 
+aportuguesada do algoritmo de Porter (<a href="#ore04">Orengo 2004: 56</a>).</p>
+ 
+<p>O algoritmo de Porter reduz o tamanho do vocabul&aacute;rio em 44%, enquanto o algoritmo de Orengo reduz 
+o tamanho em at&eacute; 51%. Al&eacute;m disso, o algoritmo de Orengo gera menos erros de <i>understemming</i> e 
+de <i>overstemming</i> (<a href="#ore04">Orengo 2004: 60</a>).</p>
+
+<p>Chaves (<a href="#cha03">2003: 5</a>), em an&aacute;lise comparativa dos algoritmos de Gonzalez e Orengo, aferiu que o algoritmo de Orengo se comporta com melhor efic&aacute;cia, gerando menos erros de <i>overstemming</i> e <i>understemming</i> no geral.</p>
+
+<p>Assim, pode-se afirmar que, atualmente, o algoritmo proposto por Orengo &eacute; o mais adequado para o uso em l&iacute;ngua portuguesa.</p>
+
+<p>Apesar do funcionamento apropriado do algoritmo de Orengo e do avan&ccedil;o que ele representa, diversas considera&ccedil;&otilde;es devem ser feitas.</p>
+
+<p>A primeira delas envolve a pr&oacute;pria lista de exce&ccedil;&otilde;es. A partir do momento em que 
+determinados termos s&atilde;o selecionados conscientemente por um especialista no funcionamento 
+do algoritmo e se lhes imputa o car&aacute;ter de serem exce&ccedil;&otilde;es, parece evidente que se cria 
+um vocabul&aacute;rio de pequenas propor&ccedil;&otilde;es, cuja apar&ecirc;ncia esconde uma anterioridade 
+objetiva, proposital. Assim, apesar de serem invocadas em situa&ccedil;&otilde;es espec&iacute;ficas 
+conforme o sufixo sendo removido, as exce&ccedil;&otilde;es nada mais s&atilde;o do que o esfor&ccedil;o de 
+evitar que determinadas palavras previamente conhecidas conduzam a um problema de 
+<i>overstemming</i> ou <i>understemming</i>. Da mesma forma, os problemas do algoritmo ficam 
+mascarados pelos desvios sancionados pelas exce&ccedil;&otilde;es. Por fim, a lista de exce&ccedil;&otilde;es 
+cita, muitas vezes, palavras pouco comuns (<a href="#ore04">Orengo 2004: 136-142</a>), preciosismo 
+esse que pode influenciar a performance do sistema negativamente.</p>
+
+<p>A segunda considera&ccedil;&atilde;o trata de se encarar o radical morfol&oacute;gico, ou seja, o 
+semantema, como o produto que deva ser gerado pelo algoritmo de radicaliza&ccedil;&atilde;o. 
+Essa id&eacute;ia aparece impl&iacute;cita no trabalho de Orengo (<a href="#ore04">2004</a>), contudo Porter 
+(<a href="#por80">1980</a>) parece n&atilde;o ver essa quest&atilde;o pelo mesmo prisma. Por isso, parece ser mais 
+interessante para um algoritmo de radicaliza&ccedil;&atilde;o que a forma verbal da primeira da 
+pessoa do singular do presente do indicativo <i>mato</i> seja reduzida a <i>mat-</i>, enquanto o 
+substantivo <i>mato</i> permane&ccedil;a <i>mato</i>. Dessa, evitar-se-ia que <i>matem</i>, <i>matar&aacute;s</i>, 
+<i>mataria</i> se 
+confundissem com <i>mato</i>, <i>matos</i> na recupera&ccedil;&atilde;o dos documentos. Nesse sentido, a normaliza&ccedil;&atilde;o 
+lingü&iacute;stica parece ser uma boa hip&oacute;tese a ser estudada (<a href="#ara00">Arampatzis <em>et al.</em> 2000: 20</a>). 
+Todavia, cumpre salientar que os algoritmos de radicaliza&ccedil;&atilde;o podem ser mais eficientes se 
+n&atilde;o se preocuparem em produzirem &uacute;nica e exclusivamente semantemas.</p>
+
+<p>A terceira considera&ccedil;&atilde;o envolve o que se espera em n&iacute;vel de corre&ccedil;&atilde;o ortogr&aacute;fica.
+ &Eacute; de se notar que os algoritmos de radicaliza&ccedil;&atilde;o partem do 
+ princ&iacute;pio de que o texto que processam se encontra de acordo com as regras de 
+ ortografia da l&iacute;ngua. O algoritmo de Orengo, em v&aacute;rios momentos (<a href="#ore04">Orengo 2004: 136-142</a>), 
+ requer, inclusive, que a acentua&ccedil;&atilde;o tenha sido corretamente aplicada, 
+ assim como o de Porter (<a href="#por05">2005</a>). Partindo-se da premissa de que os textos 
+ processados pelo algoritmo de radicaliza&ccedil;&atilde;o s&atilde;o provenientes de fontes que 
+ priorizam a corre&ccedil;&atilde;o ortogr&aacute;fica, chega-se a um segundo problema, que &eacute; a 
+ especifica&ccedil;&atilde;o da consulta pelo usu&aacute;rio do sistema de recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o, 
+ que pode ou n&atilde;o ter respeito &agrave;s conven&ccedil;&otilde;es lingü&iacute;sticas. Obviamente, se se consideram 
+ acentos como relevantes no processamento do texto, no momento em que o usu&aacute;rio 
+ erroneamente informar <em>len&ccedil;ois</em> ao inv&eacute;s de <em>len&ccedil;&oacute;is</em>, o sistema de recupera&ccedil;&atilde;o 
+ executar&aacute; o mesmo algoritmo utilizado com o texto sobre a palavra-chave e 
+ retornar&aacute; <i>len&ccedil;ois</i>, quando, na verdade, deveria trazer <i>len&ccedil;ol</i> (<a href="#footnote12">Nota 12</a>). Isso se torna 
+ uma caracter&iacute;stica pouco adequada em situa&ccedil;&otilde;es onde n&atilde;o existe controle sobre a 
+ entrada de dados feita pelo usu&aacute;rio.</p>
+ 
+<p>O quarto ponto envolve a incapacidade de um algoritmo de radicaliza&ccedil;&atilde;o tratar todos 
+os casos e situa&ccedil;&otilde;es poss&iacute;veis. Assim, por mais que o algoritmo de Orengo (<a href="#ore04">2004: 137</a>) 
+tenha buscado prever problemas por meio do tamanho m&iacute;nimo do radical e de 
+exce&ccedil;&otilde;es, adv&eacute;rbios como <i>somente</i> e <i>v&atilde;mente</i> continuam sendo radicalizados de 
+forma incorreta.</p>
+
+<p>Em muitos casos, parece evidente que existe a necessidade de um reconhecimento morfol&oacute;gico-sem&acirc;ntico 
+das palavras, ou seja, seria satisfat&oacute;rio saber qual &eacute; a classe gramatical das palavras durante a aplica&ccedil;&atilde;o 
+do algoritmo de radicaliza&ccedil;&atilde;o. Com esse tipo de informa&ccedil;&atilde;o, determinados passos de um algoritmo poderiam ser 
+desprezados em fun&ccedil;&atilde;o das caracter&iacute;sticas intr&iacute;nsecas das palavras. Para a l&iacute;ngua portuguesa, parece l&oacute;gico 
+que um adv&eacute;rbio n&atilde;o deva ser testado em rela&ccedil;&atilde;o a sufixos de plural; da mesma forma, sufixos verbais n&atilde;o 
+deveriam ser testados com substantivos. Certamente, tal informa&ccedil;&atilde;o &eacute; dif&iacute;cil de depreender, uma vez que 
+toma em considera&ccedil;&atilde;o aspectos diversos, como termos adjacentes, pontua&ccedil;&atilde;o e o pr&oacute;prio contexto. Em parte, 
+essa &eacute; a proposta de Gonzalez <em>et al.</em> (<a href="#gon03">2003: 8</a>), quando realiza o etiquetamento
+do texto de entrada com as classes morfol&oacute;gicas dos itens lexicais.</p>
+
+<p>Outro ponto importante na avalia&ccedil;&atilde;o da efic&aacute;cia de um algoritmo de radicaliza&ccedil;&atilde;o se 
+refere &agrave; capacidade de tratar a multiplicidade de significados. Palavras como 
+<i>casa</i> (substantivo no singular) e <i>casa</i> (verbo na 3a. pessoa do singular do 
+indicativo presente) apresentam significados completamente distintos, mas ambas 
+gerariam, caso a redu&ccedil;&atilde;o fosse adotada, o mesmo radical <i>cas-</i>. Nessa situa&ccedil;&atilde;o, 
+se o algoritmo n&atilde;o objetivasse a redu&ccedil;&atilde;o das palavras em n&uacute;mero de 
+letras mas focasse exclusivamente o tratamento das representa&ccedil;&otilde;es &uacute;nicas, 
+poder-se-ia ter o radical do substantivo <i>casa</i> como <i>cas-</i> e o radical do verbo <i>casa</i> como <i>casar</i>.</p>
+
+<p>A &uacute;ltima considera&ccedil;&atilde;o trata de textos que se valem com freqü&ecirc;ncia de termos estrangeiros, ou que s&atilde;o compostos por por&ccedil;&otilde;es em mais de uma l&iacute;ngua. Como os algoritmos de radicaliza&ccedil;&atilde;o devem respeitar a morfologia de uma l&iacute;ngua em espec&iacute;fico, quando h&aacute; termos de diferentes origens que n&atilde;o podem ser isolados ou corretamente identificados, o sistema de recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o tende a criar aberra&ccedil;&otilde;es devido ao desconhecimento sobre a inser&ccedil;&atilde;o de elementos de outro idioma no texto, at&eacute; ent&atilde;o supostamente escrito em uma &uacute;nica l&iacute;ngua.</p>
+
+<p>Todas as considera&ccedil;&otilde;es acima resumem a problem&aacute;tica imposta por algoritmos de
+radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa.</p>  
+
+<h2>Considera&ccedil;&otilde;es finais</h2>
+
+<p>A recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o, em raz&atilde;o do aumento no n&uacute;mero de documentos digitais e da necessidade inerente de pesquisar no seu conte&uacute;do, tem-se mostrado cada vez mais importante na &aacute;rea da Ci&ecirc;ncia da Informa&ccedil;&atilde;o.</p>
+
+<p>Uma das abordagens existentes no contexto da recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o &eacute; a chamada <i>radicaliza&ccedil;&atilde;o</i>. A radicaliza&ccedil;&atilde;o nada mais &eacute; do que a redu&ccedil;&atilde;o de varia&ccedil;&otilde;es de uma palavra em uma &uacute;nica representa&ccedil;&atilde;o. Apesar de existir a tend&ecirc;ncia de se associar essas representa&ccedil;&otilde;es ao semantema das palavras, n&atilde;o existe obrigatoriedade de correla&ccedil;&atilde;o nesse sentido.</p>
+
+<p>O algoritmo mais lembrado para a l&iacute;ngua inglesa &eacute; o de Porter (<a href="#por80">1980</a>), que teve adapta&ccedil;&otilde;es para outros idiomas. Contudo, a remo&ccedil;&atilde;o de sufixos depende da morfologia da l&iacute;ngua a que se refere, obrigando, sempre, a exist&ecirc;ncia de um algoritmo adaptado &agrave;s especificidades. Para a l&iacute;ngua portuguesa, o algoritmo mais moderno e mais completo &eacute; o proposto por Orengo (<a href="#ore04">2004</a>).</p> 
+
+<p>Em geral, os algoritmos de radicaliza&ccedil;&atilde;o apresentam alguns problemas e lacunas: a exist&ecirc;ncia de uma lista de exce&ccedil;&otilde;es mascara as falhas nas regras dos algoritmos; a melhor forma de representar um radical nem sempre &eacute; o seu semantema; a premissa de que o texto deve estar ortograficamente correto aumenta o risco de radicaliza&ccedil;&otilde;es incorretas, principalmente no momento da recupera&ccedil;&atilde;o; a incapacidade de tratar todas as exce&ccedil;&otilde;es por meio de regras; a necessidade deduzida de um reconhecimento sem&acirc;ntico anterior &agrave; radicaliza&ccedil;&atilde;o; a multiplicidade de significados das palavras, que geram radicais com sentidos distintos; a exist&ecirc;ncia de termos estrangeiros nos textos.</p>
+
+<p>Em suma, a discuss&atilde;o sobre a radicaliza&ccedil;&atilde;o para a l&iacute;ngua portuguesa se abre para quatro frentes: a primeira delas leva a crer que a complexidade da l&iacute;ngua portuguesa inviabiliza uma radicaliza&ccedil;&atilde;o satisfat&oacute;ria dos termos; a segunda incrementa a lista de exce&ccedil;&otilde;es &agrave; medida que elas v&atilde;o surgindo na vis&atilde;o do modelador do sistema de recupera&ccedil;&atilde;o; a terceira utiliza uma estrutura de dicion&aacute;rio que visa a criar uma lista de varia&ccedil;&otilde;es com seus respectivos radicais; a quarta se vale do reconhecimento morfol&oacute;gico das palavras. Dessas quatro alternativas n&atilde;o est&atilde;o exclu&iacute;das as abordagens mistas. De qualquer maneira, a perfei&ccedil;&atilde;o n&atilde;o &eacute; obtida por esta ou aquela forma, atualmente, mas t&atilde;o-somente pela sele&ccedil;&atilde;o humana baseada no contexto fornecido pelo texto.</p>
+
+<p>Por fim, os algoritmos de radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa, atualmente, n&atilde;o se prestam &agrave; perfei&ccedil;&atilde;o, constituindo-se num vasto campo de pesquisa sobre recupera&ccedil;&atilde;o inteligente da informa&ccedil;&atilde;o na &aacute;rea da Ci&ecirc;ncia da Informa&ccedil;&atilde;o.</p>
+
+<h2>Notas</h2>
+
+<p><a name="footnote1" id="footnote1"></a>1. Do ingl&ecirc;s: "...h&aacute; not&aacute;veis diferen&ccedil;as entre l&iacute;nguas diferentes na maneira de gerar formas derivadas e flexionadas, tal que a aplica&ccedil;&atilde;o de t&eacute;cnicas espec&iacute;ficas pode produzir resultados d&iacute;spares de acordo com a l&iacute;ngua dos documentos e das consultas." (<a href="#fig00">Figuerola, G&oacute;mez D&iacute;az &amp; L&oacute;pez de San Rom&aacute;n 2000: 1</a>)</p> 
+<p><a name="footnote2" id="footnote2"></a>2. Do ingl&ecirc;s: "o Algoritmo tem sido usado, citado e adaptado extensivamente ao longo dos &uacute;ltimos 20 anos" (<a href="#por05">Porter 2005</a>).</p>
+<p><a name="footnote3" id="footnote3"></a>3. Frakes, W.B., &amp; Baeza-Yates,  R. (1992). <em>Information  retrieval:  data  structures  algorithms</em>. Upper Saddle River, NJ: Prentice Hall.</p> 
+<p><a name="footnote4" id="footnote4"></a>4. Do espanhol: "Por <em>semantemas</em> devem ser entendidos os elementos lingü&iacute;sticos que expressam as id&eacute;as das representa&ccedil;&otilde;es [...], e por <em>morfemas</em>, os que expressam as rela&ccedil;&otilde;es entre as id&eacute;ias [...]. Os morfemas, portanto, expressam as rela&ccedil;&otilde;es que o esp&iacute;rito estabelece entre os semantemas." (<a href="#ven58">Vendryes 1958: 133</a>)</p> 
+<p><a name="footnote5" id="footnote5"></a>5. Do ingl&ecirc;s (os exemplos n&atilde;o foram traduzidos porque s&atilde;o caracter&iacute;sticas morfol&oacute;gicas da l&iacute;ngua inglesa): "Uma forma lingü&iacute;stica que n&atilde;o fornece uma semelhan&ccedil;a fon&eacute;tico-lingü&iacute;stica parcial com qualquer outra forma &eacute; uma forma <em>simples</em> ou <em>morfema</em>. Assim, <em>bird</em>, <em>play</em>, <em>dance</em>, <em>cran-</em>, <em>-y</em>, <em>-ing</em> s&atilde;o morfemas." (<a href="#blo69">Bloomfield 1969: 161</a>)</p> 
+<p><a name="footnote6" id="footnote6"></a>6. Do ingl&ecirc;s: "radicaliza&ccedil;&atilde;o &eacute; o processo de reduzir as palavras ao seu radical morfol&oacute;gico" (<a href="#all03">Allan &amp; Kumaran 2003: 1</a>).</p> 
+<p><a name="footnote7" id="footnote7"></a>7. Do ingl&ecirc;s: "a radicaliza&ccedil;&atilde;o &eacute; usada em muitos sistemas de recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o (RI) para reduzir palavras variantes a radicais comuns" (<a href="#xuj98">Xu &amp; Croft 1998: 1</a>).</p> 
+<p><a name="footnote8" id="footnote8"></a>8. Do ingl&ecirc;s: "&eacute; o processo de mesclar as formas variantes de uma palavra em uma representa&ccedil;&atilde;o comum, o radical" (<a href="#ore04">Orengo 2004: 48</a>).</p> 
+<p><a name="footnote9" id="footnote9"></a>9. Do ingl&ecirc;s: "Em qualquer programa de remo&ccedil;&atilde;o de sufixos para o trabalho da recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o, dois pontos devem ser tidos em mente. Primeiramente, os sufixos est&atilde;o sendo removidos simplesmente para melhorar a performance da recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o, e n&atilde;o como um exerc&iacute;cio lingü&iacute;stico. Isso significa que n&atilde;o &eacute; de todo &oacute;bvio saber sob que circunst&acirc;ncias um sufixo deve ser removido, mesmo se n&oacute;s pudermos determinar de maneira exata os sufixos de uma palavra por meios autom&aacute;ticos." (<a href="#por80">Porter 1980</a>)</p> 
+<p><a name="footnote10" id="footnote10"></a>10. Do ingl&ecirc;s: "Tendo-se a premissa de que n&atilde;o se est&aacute; fazendo uso de um dicion&aacute;rio de radicais, e que o prop&oacute;sito da tarefa &eacute; melhorar a performance da recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o, ser&aacute; dada ao programa de remo&ccedil;&atilde;o de sufixos uma lista expl&iacute;cita de sufixos, e, junto a cada sufixo, o crit&eacute;rio que diz como ele pode ser removido da palavra para gerar um radical v&aacute;lido. Essa &eacute; a abordagem adotada aqui." (<a href="#por80">Porter 1980</a>)</p>
+<p><a name="footnote11" id="footnote11"></a>11. Do ingl&ecirc;s, da esquerda para a direita, de cima para baixo, n&atilde;o seguindo obrigatoriamente o fluxo: "In&iacute;cio", "A palavra termina em 's'?", "N&atilde;o", "Sim", "Redu&ccedil;&atilde;o do plural", "A palavra termina em 'a'?", "N&atilde;o", "Sim", "Redu&ccedil;&atilde;o do feminino", "Redu&ccedil;&atilde;o do aumentativo", "Redu&ccedil;&atilde;o adverbial", "Redu&ccedil;&atilde;o nominal", "Sufixo removido", "N&atilde;o", "Redu&ccedil;&atilde;o verbal", "Sim", "Sufixo removido", "N&atilde;o", "Remove vogal", "Remove acentos", "Sim", "Fim".</p>
+<p><a name="footnote12" id="footnote12"></a>12. Exemplo dado com base no algoritmo de Orengo (<a href="#ore04">2004</a>).</p>
+
+<form action="#">
+<fieldset>
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+<ul>
+<li><a id="ale02" name="ale02" />Alemayehu, N. &amp; Willett, P. (2002). Stemming of Amharic words for information retrieval. <em>Literary and Linguistic Computing</em>, <strong>17</strong>(1), 1-17.</li> 
+
+<li><a id="all03" name="all03" />Allan, J. &amp; Kumaran, G. (2003). <a href="http://www.webcitation.org/5NnpiKUq9" target="_blank"><i>Details on stemming in the language modeling framework</i></a>. Amherst, MS: University of Massachusetts, Center for Intelligent Information Retrieval
+Recuperado em 1 apr. 2007 do http://ciir.cs.umass.edu/pubfiles/ir-284.pdf</li>
+
+<li><a id="ara00" name="ara00" />Arampatzis, A., van der Weide, T.P., van Bommel, P. &amp; Koster, C.H.A. (2000). <a href="http://www.webcitation.org/5Nnq3h6QN" target="_blank">Linguistically motivated information retrieval</a>. In <em>Encyclopedia of Library and Information Science</em>. New York, NY: Marcel Dekker. Recuperado em 1 apr. 2007 do  http://tinyurl.com/2uhwmt</li>
+
+<li><a id="bae99" name="bae99" />Baeza-Yates, R. &amp; Ribeiro-Neto, B. (1999). <i>Modern information retrieval</i>. New York, NY: Addison Wesley.</li>
+
+<li><a id="blo69" name="blo69" />Bloomfield, L. (1969). <em>Language</em>. London: George Allen &amp; Unwin.</li>
+
+<li><a id="cam80" name="cam80" />C&acirc;mara J&uacute;nior, J.M. (1980). <i>Princ&iacute;pios de lingü&iacute;stica geral: como introdu&ccedil;&atilde;o aos estudos superiores da l&iacute;ngua portuguesa</i>. (6a ed.). Rio de Janeiro, Brasil: Padr&atilde;o.</li>
+
+<li><a id="car01" name="car01" />Carlberger, J., Dalianis, H., Hassel, M. &amp; Knutsson, O. (2001). <a href="http://www.webcitation.org/5NnvSj5BV" target="_blank">Improving precision in information retrieval for Swedish using stemming</a>. In <em>Proceedings of the NoDaLiDa '01: 13th Nordic conference on computational linguistics</em>, 2001, Uppsala. Uppsala, Su&eacute;cia: Uppsala University. Recuperado em 1 apr. 2007 do http://www.nada.kth.se/~xmartin/papers/Stemming_NODALIDA01.pdf</li>
+
+<li><a id="cha03" name="cha03" />Chaves, M.S. (2003). <a href="http://www.webcitation.org/5Nscr1EN4" target="_blank"><em>Um estudo e aprecia&ccedil;&atilde;o sobre algoritmos de stemming para a l&iacute;ngua portuguesa</em></a>. Artigo apresentado nas IX Jornadas Iberoamericanas de Inform&aacute;tica, Cartagena de Indias, Colômbia. Recuperado em 1 apr. 2007 do http://xldb.di.fc.ul.pt/~mchaves/pg_portugues/public/stemming.pdf</li>
+
+<li><a id="ekm95" name="ekm95" />Ekmek&ccedil;ioglu, F.&Ccedil;., Lynch, M.F. &amp; Willett, P. (1995). Development and evaluation of conflation techniques for the implementation of a document retrieval system for Turkish text databases. <em>The New Review of Document and Text Management</em>, <strong>1</strong>, 131-146.</li> 
+
+<li><a id="fig00" name="fig00" />Figuerola, C.G., G&oacute;mez D&iacute;az, R. &amp; L&oacute;pez de San Rom&aacute;n, E. (2000, dezembro). <a href="http://www.webcitation.org/5NnvUS51R" target="_blank">Stemming and n-grams in Spanish: an evaluation of their impact on information retrieval</a>. <em>Journal of Information Science</em>, <strong>26</strong>(6), 461-467. Recuperado em 1 apr. 2007 do http://reina.usal.es/pub/figuerola2000stemming.pdf</li>
+
+<li><a id="fig03" name="fig01" />Figuerola, C.G., G&oacute;mez, R., Rodr&iacute;guez, A.F.Z. &amp; Berrocal, J.L.A. (2001). <a href="http://www.webcitation.org/5NnvVf6HV" target="_blank">Stemming in Spanish: a first approach to its impact on information retrieval</a>. In C. Peters (Ed.), <em>Results of the cross-language system evaluation campaing CLEF 2001</em>. Darmstadt, Alemanha: IEI-CNR. Recuperado em 1 apr. 2007 do  http://www.ercim.org/publication/ws-proceedings/CLEF2/figuerola.pdf</li>
+
+<li><a id="gon03" name="gon03" />Gonzalez, M., Toscani, D., Rosa, L., Dorneles, R. &amp; Lima, V.L.S. de. (2003). <a href="http://www.webcitation.org/5NnvX7yyW" target="_blank">Normaliza&ccedil;&atilde;o de itens lexicais baseada em sufixos</a>. <em>Workshop em tecnologia da informa&ccedil;&atilde;o e da linguagem humana</em>, <em>1</em>. Recuperado em 1 apr. 2007 do http://www.nilc.icmc.usp.br/til2003/oral/gonzalez_21.pdf</li>
+
+<li><a id="kra94" name="kra94" />Kraaij, W. &amp; Pohlmann, R. (1994). <a href="http://www.webcitation.org/5NnvYRNtk" target="_blank">Porter's stemming algorithm for Dutch</a>. In L.G.M. Noordman &amp; W.A.M. Vroomen, <em>Informatiewetenschap 1994: Wetenschappelijke bijdragen aan de derde STINFON Conferentie</em>. [S.l.: s. n.]. Recuperado em 1 apr. 2007 do http://tinyurl.com/3b7yc2</li>
+
+<li><a id="kro93" name="kro93" />Krovetz, R. (1993). <a href="http://www.webcitation.org/5Nnva2Lm2" target="_blank">Viewing morphology as an inference process</a>. In <em>Proceedings of ACM-SIGIR93</em>, 1993, [s.l.]. [S.l.: s.n.]. Recuperado em 1 apr. 2007 do http://ciir.cs.umass.edu/pubfiles/ir-35.pdf</li>
+
+<li><a id="mer05" name="mer05" /><a href="http://www.m-w.com/" target="_blank"><em>Merriam-Webster online dictionary</em></a>. (2005). Recuperado em 1 apr. 2007 do http://www.m-w.com</li>
+
+<li><a id="nak03" name="nak03" />Nakov, P. (2003). <a href="http://www.webcitation.org/5NnvbjCOm" target="_blank">Design and evaluation of inflectional stemmer for Bulgarian</a>. In <em>Proceedings of Workshop on Balkan Language Resources and Tools</em>, 2003, Thessaloniki. Thessaloniki, Gr&eacute;cia: [s.n.]. Recuperado em 1 apr. 2007 do  http://www.cs.berkeley.edu/~nakov/selected_papers_list/nakov_BLRT_BulStem.pdf</li>
+
+<li><a id="ore04" name="ore04" />Orengo, V.M. (2004). <em>Assessing relevance using automatically translated documents for cross-language information retrieval</em>. Tese de Doutorado, School of Computing Science, Middlesex University, London.</li>
+
+<li><a id="ore05" name="ore05" />Orengo, V.M. (2005). <a href="http://www.webcitation.org/5NnvdIzOb" target="_blank"><em>RSLP stemmer (Removedor de sufixos da lingua Portuguesa)</em></a>. Recuperado em 1 apr. 2007 do http://www.inf.ufrgs.br/~vmorengo/rslp/index.htm</li>
+
+<li><a id="oxf95" name="oxf95" /><em>Oxford advanced learner's dictionary</em>. (1995, 5a ed.). Oxford: Oxford University Press.</li>
+
+<li><a id="pai90" name="pai90" />Paice, C.D. (1990). <a href="http://www.webcitation.org/5Nnvetcz6" target="_blank">Another stemmer</a>. <em>SIGIR Forum</em>, <strong>24</strong>(3), 56-61. Recuperado em 1 apr. 2007 do http://www.comp.lancs.ac.uk/computing/research/stemming/paice/article.htm</li>
+
+<li><a id="pop90" name="pop90" />Popovic, M. &amp; Willett, P. (1990). Processing of documents and queries in a Slovene language free text retrieval system. <em>Literary and Linguistic Computing</em>, <strong>5</strong>(2), 182-190.</li> 
+
+<li><a id="por80" name="por80" />Porter, M. (1980). <a href="http://www.webcitation.org/5NnvgB3zG" target="_blank">An algorithm for suffix stripping</a>. <em>Program</em>, <strong>14</strong>(3), 130-137. Recuperado em 1 apr. 2007 do http://www.tartarus.org/~martin/PorterStemmer/def.txt</li>
+
+<li><a id="por05" name="por05" />Porter, M. (2005). <a href="http://snowball.tartarus.org/index.php" target="_blank"><em>Snowball</em></a>. Recuperado em 1 apr. 2007 do http://snowball.tartarus.org/index.php</li>
+
+<li><a id="rad99" name="rad99" />Radical. (1999). In <em>Novo Aur&eacute;lio S&eacute;culo XXI: o dicion&aacute;rio da l&iacute;ngua portuguesa</em>. Rio de Janeiro, Brasil: Nova Fronteira.</li>
+
+<li><a id="rad01" name="rad01" />Radical. (2001). In <em>Dicion&aacute;rio Houaiss da l&iacute;ngua portuguesa</em>. Rio de Janeiro, Brasil: Objetiva.</li>
+
+<li><a id="raz99" name="raz99" />Radicaliza&ccedil;&atilde;o. (1999). In <em>Novo Aur&eacute;lio S&eacute;culo XXI: o dicion&aacute;rio da l&iacute;ngua portuguesa</em>. Rio de Janeiro, Brasil: Nova Fronteira.</li>
+
+<li><a id="raz01" name="raz01" />Radicaliza&ccedil;&atilde;o. (2001). In <em>Dicion&aacute;rio Houaiss da l&iacute;ngua portuguesa</em>. Rio de Janeiro, Brasil: Objetiva.</li>
+
+<li><a id="rus04" name="rus04" />Russell, S. &amp; Norvig, P. (2004). <em>Intelig&ecirc;ncia artificial</em>. (2a ed.). Rio de Janeiro, Brasil: Elsevier.</li>
+
+<li><a id="sac91" name="sac91" />Sacconi, L.A. (1991). <i>Nossa gram&aacute;tica: teoria</i>. S&atilde;o Paulo, Brasil: Atual.</li>
+
+<li><a id="sch96" name="sac96" />Schinke, R., Greengrass, M., Robertson, A.M. &amp; Willett, P. (1996). A stemming algorithm for Latin text databases. <em>Journal of Documentation</em>, <strong>52</strong>(2), 172-187.</li>
+
+<li><a id="sil04" name="sil04" />Silva, C.F. (2004). <em>Uso de informa&ccedil;&otilde;es lingü&iacute;sticas na etapa de pr&eacute;-processamento em minera&ccedil;&atilde;o de textos</em>. Disserta&ccedil;&atilde;o de Mestrado, Ci&ecirc;ncias Exatas e Tecnol&oacute;gicas, Universidade do Vale do Rio dos Sinos, S&atilde;o Leopoldo, Brasil.</li>
+
+<li><a id="tem05" name="tem05" /><em>Tem&aacute;tica Barsa</em> (Vol. 8). (2005). Rio de Janeiro, Brasil: Barsa Planeta, 2005.</li>
+
+<li><a id="the99" name="the99" /><em>The Newbury House dictionary of American English</em>. (1999). Boston, MA: Heinle &amp; Heinle.</li>
+
+<li><a id="ven58" name="ven58" />Vendryes, J. (1958). <i>El lenguaje: introducci&oacute;n lingü&iacute;stica a la historia</i>. M&eacute;xico, D.F., M&eacute;xico: UTEHA.</li>
+
+<li><a id="xuj98" name="xuj98" />Xu, J. &amp; Croft, W.B. (1998). <a href="http://www.webcitation.org/5NnviKSZU" target="_blank">Corpus-based stemming using co-occurrence of word variants</a>. <i>ACM Transactions on Information Systems</i>, <strong>16</strong>(1), 61-68. Recuperado em 1 apr. 2007 do http://ciir.cs.umass.edu/pubfiles/ir-95.pdf http://ciir.cs.umass.edu/pubfiles/ir-95.pdf</li>
+</ul>
+</fieldset>
+</form>
+<br /><br />
+
+<form action="http://informationr.net/ir/12-3/none">
+<fieldset style="margin-left: 5%; margin-right: 5%;">
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;"><a id="abstract" name="abstract" />Abstract in English</legend>
+
+<blockquote><strong>Introduction</strong>.The significance of information retrieval has been increased as a result of the increasing frequency with which digital files are created and used. One of the many strategies for processing texts for the indexing of their contents in information retrieval systems is called stemming, which consists in the reduction of similar words to the same unvarying representation. Stemming relies on the morphological structure of the language with which it is intended to work. <br />  <strong>Aim</strong>.This paper aims at defining the concept of stemming, presenting the algorithms available for Portuguese and commenting on several topics related to the use of this type of algorithms. <br /> <strong>Method</strong>. Literature review on stemming for Portuguese known to the authors. <br />  <strong>Results</strong>. To this day, there are only three algorithms published which deal with stemming in Portuguese: Porter's, Orengo's and Gonzalez's.<br />   <strong>Conclusion</strong>. Today,improvement in terms of stemming for the Portuguese language cannot be achieved successfully, since there is little research being done in this area.
+</blockquote>
+</fieldset>
+</form>
+<br />
+<form action="#">
+<fieldset>
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">How to cite this paper</legend>
+<div><br />
+Viera, A.F.G. and Virgil, J.  (2007). &quot;Uma revis&atilde;o dos algoritmos de radicaliza&ccedil;&atilde;o em l&iacute;ngua portuguesa&quot; <em>Information Research</em>, <strong>12</strong>(3) paper 315. [Available at http://InformationR.net/ir/12-3/paper315.html]</div>
+
+</fieldset>
+</form>
+
+<table cellspacing="10" align="center">
+	<tr>
+		<td colspan="3" align="center" style="background-color: maroon; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>
+	<tr>
+		<td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+			<table bgcolor="#ffffff">
+
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;stemming algorithms&quot; &quot;information retrieval&quot; Portuguese"></input> <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+
+</form>
+		</td>
+
+		<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;stemming algorithms&quot; &quot;information retrieval&quot; Portuguese"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="safe" value="active"></input>
+<input type="hidden" name="flav" value="0000"></input>
+<input type="hidden" name="sig" value="1VdDFkBo0f4i6gd7"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FFFFCC;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;LH:45;LW:336;L:http://informationr.net/ir/mini_logo2.gif;S:http://;FORID:1"></input>
+<input type="hidden" name="hl" value="en"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+</td>
+<td align="center" valign="top">
+<form method="get" action="http://www.live.com/" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;stemming algorithms&quot; &quot;information retrieval&quot; Portuguese"></input> <br />
+<input type="submit" name="sa" value="Windows Academic"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+
+		</td>
+	</tr>
+
+</table>
+
+<br />
+<hr size="1" style="color: maroon;" />
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper315" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the authors, 2007. <br />Last updated: 1 April, 2007
+</div></td>
+
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper315.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online Web site analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online Web site analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+</table>
+<hr size="1" style="color: maroon;" />
+
+<table align="center"><tr><td><div class="button">
+
+<ul>
+	<li><a href="infres123.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+</div></td></tr></table>
+
+<hr size="3" style="color: maroon ;" />
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/12-3/paper315.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:24:57 GMT -->
+</html>

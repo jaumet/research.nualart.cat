@@ -1,0 +1,221 @@
+HU: Parrot    Saved: 04/06/99 16:12:57
+ATLAS.ti Atlas Prolog Notation (APN) Version: WIN 4.2
+
+CLAUSE: hermUnit (id, date, author, dateOfLastAccess, primSuff, protection, comment)
+
+hermUnit (Parrot!, 3103435106, Super, 3105965277, 5, private,  !).
+
+
+CLAUSE: coAuthor (accountName)
+card (coAuthor, 0).
+
+coAuthor (SUPER).
+
+
+CLAUSE: pt (longName, dosName, date, author,dateOfLastAccess, fragmentSuffix, comment, mediatype, encoding)
+card (pt, 4).
+
+pt (P 1: parrot.txt!, G:\bhs\FORUM\Atlasti\ATLASti\TEXTBANK\parrot.txt|, 3103435130, Super, 3103435459, 17,  !, txt, 0).
+pt (P 2: parrot04.jpg!, G:\bhs\FORUM\Atlasti\ATLASti\TEXTBANK\parrot04.jpg|, 3103435575, Super, 3103435575, 0,  !, bmp, 0).
+pt (P 4: norway.bmp!, G:\bhs\FORUM\Atlasti\ATLASti\TEXTBANK\norway.bmp|, 3103451097, Super, 3103451160, 1,  !, bmp, 0).
+pt (P 5: parrot04.bmp!, G:\bhs\FORUM\Atlasti\ATLASti\TEXTBANK\parrot04.bmp|, 3103451702, Super, 3103451740, 1,  !, bmp, 0).
+
+
+CLAUSE: q (id, date, author, dateOfLastAccess, firstFewLetters, von, bis, comment)
+card (q, 19).
+
+q (1:1, 3103435205, Super, 3103435205, C: 'Ello, Miss? Owner: What do..!, 1 @ 9, 56 @ 11,  !).
+q (1:2, 3103435235, Super, 3103435235, C: Never mind that, my lad. I ..!, 1 @ 13, 75 @ 14,  !).
+q (1:3, 3103435244, Super, 3103435244, dead!, 53 @ 15, 56 @ 15,  !).
+q (1:4, 3103435251, Super, 3103435251, resting!, 28 @ 16, 34 @ 16,  !).
+q (1:5, 3103435266, Super, 3103435266, stone dead!, 42 @ 19, 51 @ 19,  !).
+q (1:6, 3103435292, Super, 3103435292, stunned!, 24 @ 33, 30 @ 33,  !).
+q (1:7, 3103435330, Super, 3103435330, Norwegian Blues stun easily!, 53 @ 35, 79 @ 35,  !).
+q (1:8, 3103435340, Super, 3103435340, deceased!, 98 @ 36, 105 @ 36,  !).
+q (1:9, 3103435349, Super, 3103435349, pining for the fjords!, 37 @ 37, 57 @ 37,  !).
+q (1:10, 3103435372, Super, 3103435372, demised!, 102 @ 45, 108 @ 45,  !).
+q (1:11, 3103435382, Super, 3103435382, is no more!, 49 @ 47, 58 @ 47,  !).
+q (1:12, 3103435390, Super, 3103435390, ceased to be!, 68 @ 47, 79 @ 47,  !).
+q (1:13, 3103435396, Super, 3103435396, gone to meet 'is maker!, 99 @ 47, 120 @ 47,  !).
+q (1:14, 3103435406, Super, 3103435406, Bereft of life!, 137 @ 47, 150 @ 47,  !).
+q (1:15, 3103435415, Super, 3103435415, rests in peace!, 156 @ 47, 169 @ 47,  !).
+q (1:16, 3103435440, Super, 3103435440, slug!, 12 @ 54, 15 @ 54,  !).
+q (1:17, 3103435459, Super, 3103435459, WELL IT'S HARDLY A BLOODY REPL..!, 4 @ 60, 47 @ 60,  !).
+q (4:1, 3103451160, Super, 3105965277, norway.bmp!, 22 @ 336, 68 @ 371, Possible breeding site of the Norwegian Blue
+Parrot!).
+q (5:1, 3103451740, Super, 3103451800, parrot04.bmp!, 41 @ 5, 223 @ 192,  !).
+
+
+CLAUSE: code (id, date, author, dateOfLastAccess, comment)
+card (code, 22).
+
+code (Bereft of life!, 3103435406, Super, 3103436693,  !).
+code (breeding site!, 3103450705, Super, 3103451160,  !).
+code (ceased to be!, 3103435390, Super, 3103436722,  !).
+code (conflict!, 3103435914, Super, 3103436026,  !).
+code (dead!, 3103435244, Super, 3103437329,  !).
+code (Dead Parrot!, 3103435875, Super, 3103436794,  !).
+code (deceased!, 3103435340, Super, 3103436591,  !).
+code (demised!, 3103435372, Super, 3103436631,  !).
+code (gone to meet 'is maker!, 3103435396, Super, 3103436722,  !).
+code (habitat!, 3105965277, Super, 3105965277,  !).
+code (Humour Types!, 3103435894, Super, 3103436049,  !).
+code (improbability!, 3103435235, Super, 3103436018,  !).
+code (irreplacability!, 3103435459, Super, 3103436809,  !).
+code (is no more!, 3103435382, Super, 3103436702,  !).
+code (non-sequitur!, 3103435205, Super, 3103436009,  !).
+code (Norwegian Blues stun easily!, 3103435330, Super, 3103437263,  !).
+code (pining for the fjords!, 3103435349, Super, 3103451389,  !).
+code (resting!, 3103435251, Super, 3103437329,  !).
+code (rests in peace!, 3103435415, Super, 3103436711,  !).
+code (slug!, 3103435440, Super, 3103436809,  !).
+code (stone dead!, 3103435266, Super, 3103436591,  !).
+code (stunned!, 3103435292, Super, 3103451800,  !).
+
+
+CLAUSE: codeRelation (id, icon, thesRel, menuItem, mathPropList, displayAttributes, explanation)
+card (codeRelation, 9).
+
+codeRelation (LATIN, lat, lat, equiv, [symmetric], (000000 1 1 R),  !).
+codeRelation (PROP, *}, P, is property of, [asymmetric], (000000 1 1 D),  !).
+codeRelation (BTP, [], G, is part of, [transitive], (000000 1 1 U), The part-of relation links objects, not
+concepts of different abstractional level (as does ISA)!).
+codeRelation (ASSO, ==, R, is associated with, [symmetric], (000000 1 1 R), Relates concepts without subsumption.!).
+codeRelation (CONTRA, <>, A, contradicts, [symmetric], (000000 1 1 R),  !).
+codeRelation (ISA, isa, O, is a, [transitive], (000000 2 1 U), The ISA relation links specific concepts to
+general concepts. It is widely used to represent
+structural relationships in knowledge based
+systems (expert systems).
+It is also used for structuring the term base of
+descriptors in information-retrieval systems. Such
+structured descriptor sets are labeled "thesauri".!).
+codeRelation (A-SAX, a-sax, a-sax, synonym, [symmetric], (000000 1 1 R),  !).
+codeRelation (EUPH, euph, euph, euphemism, [symmetric], (000000 1 1 R),  !).
+codeRelation (NONAME, , , noname, [symmetric], (000000 1 1 R), If no other relation applies for a link,
+this one does.....!).
+
+
+CLAUSE: hyperRelation (id, icon, thesRel, menuItem, mathPropList, displayAttributes, explanation)
+card (hyperRelation, 0).
+
+
+
+CLAUSE: hyperLink (relation_id, source, sink, date, author, comment)
+card (hyperLink, 0).
+
+
+
+CLAUSE: memo (id, date, author, dateOfLastAccess, type, text{,filename})
+card (memo, 0).
+
+
+
+CLAUSE: codeLink (relation_id, source, sink, date, author, comment)
+card (codeLink, 23).
+
+codeLink (NONAME, demised!, Bereft of life!, 3103436602, GUEST,  !).
+codeLink (NONAME, demised!, ceased to be!, 3103436628, GUEST,  !).
+codeLink (EUPH, gone to meet 'is maker!, ceased to be!, 3103436718, GUEST,  !).
+codeLink (CONTRA, resting!, dead!, 3103437326, GUEST,  !).
+codeLink (LATIN, demised!, deceased!, 3103436523, GUEST,  !).
+codeLink (NONAME, stone dead!, deceased!, 3103436588, GUEST,  !).
+codeLink (NONAME, dead!, demised!, 3103436571, GUEST,  !).
+codeLink (NONAME, demised!, gone to meet 'is maker!, 3103436621, GUEST,  !).
+codeLink (EUPH, rests in peace!, gone to meet 'is maker!, 3103436708, GUEST,  !).
+codeLink (ISA, conflict!, Humour Types!, 3103436023, GUEST,  !).
+codeLink (BTP, Dead Parrot!, Humour Types!, 3103436041, GUEST,  !).
+codeLink (ISA, improbability!, Humour Types!, 3103436016, GUEST,  !).
+codeLink (ISA, non-sequitur!, Humour Types!, 3103436007, GUEST,  !).
+codeLink (BTP, Dead Parrot!, irreplacability!, 3103436789, GUEST,  !).
+codeLink (ASSO, slug!, irreplacability!, 3103436802, GUEST,  !).
+codeLink (EUPH, Bereft of life!, is no more!, 3103436658, GUEST,  !).
+codeLink (NONAME, demised!, is no more!, 3103436609, GUEST,  !).
+codeLink (NONAME, resting!, pining for the fjords!, 3103437232, GUEST,  !).
+codeLink (NONAME, demised!, rests in peace!, 3103436614, GUEST,  !).
+codeLink (EUPH, is no more!, rests in peace!, 3103436699, GUEST,  !).
+codeLink (A-SAX, dead!, stone dead!, 3103436456, GUEST,  !).
+codeLink (PROP, Norwegian Blues stun easily!, stunned!, 3103437252, GUEST,  !).
+codeLink (NONAME, pining for the fjords!, stunned!, 3103437240, GUEST,  !).
+
+
+CLAUSE: cq (code, quotations)
+card (cq, 19).
+
+cq (Bereft of life!, [1:14 ]).
+cq (breeding site!, [4:1 ]).
+cq (ceased to be!, [1:12 ]).
+cq (dead!, [1:3 ]).
+cq (deceased!, [1:8 ]).
+cq (demised!, [1:10 ]).
+cq (gone to meet 'is maker!, [1:13 ]).
+cq (habitat!, [4:1 ]).
+cq (improbability!, [1:2 ]).
+cq (irreplacability!, [1:17 ]).
+cq (is no more!, [1:11 ]).
+cq (non-sequitur!, [1:1 ]).
+cq (Norwegian Blues stun easily!, [1:7 ]).
+cq (pining for the fjords!, [1:9 4:1 ]).
+cq (resting!, [1:4 ]).
+cq (rests in peace!, [1:15 ]).
+cq (slug!, [1:16 ]).
+cq (stone dead!, [1:5 ]).
+cq (stunned!, [1:6 5:1 ]).
+
+
+CLAUSE: mq (memo, quotations)
+card (mq, 0).
+
+
+
+CLAUSE: codeFamily (id, date, author, comment, codes)
+card (codeFamily, 1).
+
+codeFamily (death!, 3103436075, Super,  !, [ dead! stone dead! is no more! ceased to be! deceased! Bereft of life! gone to meet 'is maker! demised! rests in peace!]).
+
+
+CLAUSE: memoFamily (id, date, author, comment, memos)
+card (memoFamily, 0).
+
+
+
+CLAUSE: ptFamily (id, date, author, comment, pts)
+card (ptFamily, 0).
+
+
+
+CLAUSE: scode (id, date, author, dateOfLastAccess, comment, queryTerm)
+card (scode, 0).
+
+
+
+CLAUSE: netWork (id, date, author, comment, nodes)
+card (netWork, 5).
+
+netWork (death!, 3103436195, Super,  !, [ Kode: Bereft of life! 612 @ 68! Kode: ceased to be! 670 @ 404! Kode: dead! 149 @ 179! Kode: deceased! 387 @ 348! Kode: demised! 385 @ 176! Kode: gone to meet 'is maker! 696 @ 307! Kode: is no more! 718 @ 153! Kode: rests in peace! 721 @ 232! Kode: stone dead! 126 @ 344!]).
+netWork (Focussed Network on: 4:1!, 3103451560, Super,  !, [ Kode: breeding site! 336 @ 386! Kode: pining for the fjords! 246 @ 63! Fragment: 4:1! 20 @ 153!]).
+netWork (Focussed Network on: 5:1!, 3103451810, Super,  !, [ Fragment: 5:1! 20 @ 213! Kode: stunned! 178 @ 58!]).
+netWork (Focussed Network on: pining for the fjords!, 3103451439, Super,  !, [ Kode: stunned! 157 @ 133! Kode: resting! 370 @ 427! Kode: pining for the fjords! 326 @ 61! Fragment: 4:1! 497 @ 147! Fragment: 5:1! 73 @ 204!]).
+netWork (parrot!, 3103435662, Super,  !, [ Kode: Bereft of life! 20 @ 278! Kode: ceased to be! 314 @ 478! Kode: dead! 389 @ 134! Kode: deceased! 417 @ 405! Kode: demised! 289 @ 291! Kode: gone to meet 'is maker! 20 @ 478! Kode: improbability! 20 @ 20! Kode: irreplacability! 605 @ 128! Kode: is no more! 20 @ 342! Kode: non-sequitur! 20 @ 68! Kode: Norwegian Blues stun easily! 572 @ 478! Kode: pining for the fjords! 616 @ 316! Kode: resting! 677 @ 227! Kode: rests in peace! 20 @ 409! Kode: slug! 690 @ 35! Kode: stone dead! 504 @ 289! Kode: stunned! 671 @ 410! Kode: Dead Parrot! 277 @ 20! Kode: Humour Types! 290 @ 78! Kode: conflict! 164 @ 20! Fragment: 1:1! 20 @ 107!]).
+
+
+CLAUSE: mmLink (source, sink)
+card (mmLink, 0).
+
+
+
+CLAUSE: mcLink (source, sink)
+card (mcLink, 0).
+
+
+
+CLAUSE: cmLink (codeSource, memoSink)
+card (cmLink, 0).
+
+
+
+CLAUSE: settings (bookMark, pt, fragment, code, memo, fFilter,fSort, kFilter, kFamily, kSort, mFilter, mFamily, mSort)
+card (settings, 1).
+
+settings (bookMark(, ), 1, , habitat!,  !, All, Nummer, All,  !, Alphabetisch, All,  !, Alphabetisch).
+
+

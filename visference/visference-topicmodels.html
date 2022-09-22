@@ -1,0 +1,465 @@
+<HTML><TITLE>ICML 2013 Simple Topic Model</TITLE><BODY>
+<H2>ICML 2013 Simple Topic Model</H2>
+
+<H4>Background</H4>
+<P>ICML 2013 PDF papers are downloaded from the JMLR site.
+A simple text processor hueristically converts each paper into
+multiple sections without header information, acknowledgements or references.
+Each section is then given to the topic modelling algorithm as a
+"document" using a very strict tokenisation scheme to
+delete the weird mathematical symbols rife in ICML papers.
+</P>
+For each topic we give:
+<UL>
+<LI>proposed name,</LI>
+<LI>percent proportion as <i>p</i></LI>
+<LI>word sparsity as <i>ws</i>,
+i.e., 80% means only 20% of vocabulary occures in topic,</LI>
+<LI>document sparsity as <i>ds</i>,
+i.e., 80% means only 20% of documents have some fraction of this,</LI>
+<LI>most prevalent papers/sections with this topic, title and link to
+abstyract at JMLR.</LI>
+</UL>
+<H4>Topics</H4>
+
+<P><B>Proposed:  SVNs and Kernels:</B>
+Topic 0 (p=6.55%,ws=80.1%,ds=18.2%) words = svm, classifiers, kernels, margin, embedding, svms, multiclass, hilbert, embeddings, multi-class, multi-task, boosting, rkhs, kernelized, reproducing, kernel, learners, mapped, joachims, cortes
+</P><OL>
+<LI>(0.960107) <A HREF="https://jmlr.org/proceedings/papers/v28/dembczynski13.html">dembczynski13.html</a>
+"Optimizing the F-Measure in Multi-Label Classification", <I>section 2. Multi-Label Classification</I></LI>
+<LI>(0.586831) <A HREF="https://jmlr.org/proceedings/papers/v28/nguyen13a.html">nguyen13a.html</a>
+"Algorithms for Direct 0\x{2013}1 Loss Optimization in Binary Classification", <I>section 2. Linear Binary Classification</I></LI>
+<LI>(0.540081) <A HREF="https://jmlr.org/proceedings/papers/v28/sun13.html">sun13.html</a>
+"Reordering Base Learner", <I>section 7. Conclusion and Future Work</I></LI>
+<LI>(0.498309) <A HREF="https://jmlr.org/proceedings/papers/v28/jose13.html">jose13.html</a>
+"Local Deep Kernel Learning for Efficient Non-linear SVM Prediction", <I>section 3. Localized Multiple Kernel Learning</I></LI>
+<LI>(0.497768) <A HREF="https://jmlr.org/proceedings/papers/v28/xu13.html">xu13.html</a>
+"Cost-Sensitive Tree of Classifiers", <I>section 3. Cost-sensitive classification</I></LI>
+<LI>(0.496991) <A HREF="https://jmlr.org/proceedings/papers/v28/yi13.html">yi13.html</a>
+"Semi-supervised Clustering by Input Pattern Assisted Pairwise Similarity Matrix Completion", <I>section 2. Related work</I></LI>
+<LI>(0.493009) <A HREF="https://jmlr.org/proceedings/papers/v28/kadri13.html">kadri13.html</a>
+"A Generalized Kernel Approach to Structured Output Learning", <I>section 2. Preliminaries</I></LI>
+<LI>(0.484122) <A HREF="https://jmlr.org/proceedings/papers/v28/jose13.html">jose13.html</a>
+"Local Deep Kernel Learning for Efficient Non-linear SVM Prediction", <I>section 2. Related work</I></LI>
+<LI>(0.467938) <A HREF="https://jmlr.org/proceedings/papers/v28/kadri13.html">kadri13.html</a>
+"A Generalized Kernel Approach to Structured Output Learning", <I>section 3. Operator-valued Kernel Formulation</I></LI>
+<LI>(0.459561) <A HREF="https://jmlr.org/proceedings/papers/v28/giguere13.html">giguere13.html</a>
+"On the Regression Approach to Structured Output Regression", <I>section 2. From Structured Output Prediction</I></LI>
+<LI>(0.457371) <A HREF="https://jmlr.org/proceedings/papers/v28/malioutov13.html">malioutov13.html</a>
+"Exact Rule Learning via Boolean Compressed Sensing", <I>section 4. Rule sets</I></LI>
+<LI>(0.456633) <A HREF="https://jmlr.org/proceedings/papers/v28/pele13.html">pele13.html</a>
+"The Pairwise Piecewise-Linear Embedding", <I>section 4. Related Work</I></LI>
+<LI>(0.448908) <A HREF="https://jmlr.org/proceedings/papers/v28/malioutov13.html">malioutov13.html</a>
+"Exact Rule Learning via Boolean Compressed Sensing", <I>section 5. Empirical results</I></LI>
+<LI>(0.447152) <A HREF="https://jmlr.org/proceedings/papers/v28/cortes13.html">cortes13.html</a>
+"Multi-Class Classi\x{fb01}cation with Maximum Margin Multiple Kernel", <I>section 1. Introduction</I></LI>
+<LI>(0.438798) <A HREF="https://jmlr.org/proceedings/papers/v28/niu13.html">niu13.html</a>
+"Squared-loss Mutual Information Regularization", <I>section 6. Conclusions</I></LI>
+<LI>(0.437408) <A HREF="https://jmlr.org/proceedings/papers/v28/giguere13.html">giguere13.html</a>
+"On the Regression Approach to Structured Output Regression", <I>section 6. Conclusion</I></LI>
+<LI>(0.434773) <A HREF="https://jmlr.org/proceedings/papers/v28/kadri13.html">kadri13.html</a>
+"A Generalized Kernel Approach to Structured Output Learning", <I>section 5. Related Work</I></LI>
+<LI>(0.430014) <A HREF="https://jmlr.org/proceedings/papers/v28/kadri13.html">kadri13.html</a>
+"A Generalized Kernel Approach to Structured Output Learning", <I>section 1. Introduction</I></LI>
+<LI>(0.429245) <A HREF="https://jmlr.org/proceedings/papers/v28/jose13.html">jose13.html</a>
+"Local Deep Kernel Learning for Efficient Non-linear SVM Prediction", <I>section 7. Conclusions</I></LI>
+<LI>(0.425775) <A HREF="https://jmlr.org/proceedings/papers/v28/pele13.html">pele13.html</a>
+"The Pairwise Piecewise-Linear Embedding", <I>section 2. Problem Setup</I></LI>
+</OL>
+<P><B>Proposed:  Matrix Issues:</B>
+Topic 1 (p=6.41%,ws=79.3%,ds=17.5%) words = recovery, compressed, sensing, arms, estimator, noiseless, rmn, nuclear, rounds, stability, coming, incoherence, mab, arora, ucb, candes, tsybakov, tests, subsampled, estimators
+</P><OL>
+<LI>(0.679618) <A HREF="https://jmlr.org/proceedings/papers/v28/yi13.html">yi13.html</a>
+"Semi-supervised Clustering by Input Pattern Assisted Pairwise Similarity Matrix Completion", <I>section 4. Analysis</I></LI>
+<LI>(0.559094) <A HREF="https://jmlr.org/proceedings/papers/v28/oliva13.html">oliva13.html</a>
+"Distribution to Distribution Regression", <I>section 5. Estimator of Output Density for</I></LI>
+<LI>(0.537158) <A HREF="https://jmlr.org/proceedings/papers/v28/kolar13.html">kolar13.html</a>
+"Feature Selection in High-Dimensional Classification", <I>section 7. Discussion</I></LI>
+<LI>(0.514519) <A HREF="https://jmlr.org/proceedings/papers/v28/liu13.html">liu13.html</a>
+"Guaranteed Sparse Recovery under Linear Transformation", <I>section 4. The Condition Number of D</I></LI>
+<LI>(0.507141) <A HREF="https://jmlr.org/proceedings/papers/v28/oliva13.html">oliva13.html</a>
+"Distribution to Distribution Regression", <I>section 8. Discussion and Conclusion</I></LI>
+<LI>(0.494763) <A HREF="https://jmlr.org/proceedings/papers/v28/bubeck13.html">bubeck13.html</a>
+"Multiple Identifications in Multi-Armed Bandits", <I>section 4. Multi-bandit best arm identification</I></LI>
+<LI>(0.482291) <A HREF="https://jmlr.org/proceedings/papers/v28/shin13.html">shin13.html</a>
+"A New Frontier of Kernel Design for Structured Data", <I>section 5. Empirical result</I></LI>
+<LI>(0.474127) <A HREF="https://jmlr.org/proceedings/papers/v28/gopi13.html">gopi13.html</a>
+"One-Bit Compressed Sensing: Provable Support and Vector Recovery", <I>section 2. Related Work</I></LI>
+<LI>(0.466452) <A HREF="https://jmlr.org/proceedings/papers/v28/jreddi13.html">jreddi13.html</a>
+"Scale Invariant Conditional Dependence Measures", <I>section 7. Conclusion</I></LI>
+<LI>(0.465653) <A HREF="https://jmlr.org/proceedings/papers/v28/avron13.html">avron13.html</a>
+"Efficient Dimensionality Reduction for Canonical Correlation Analysis", <I>section 3. Perturbation Bounds for Matrix</I></LI>
+<LI>(0.457094) <A HREF="https://jmlr.org/proceedings/papers/v28/karnin13.html">karnin13.html</a>
+"Almost Optimal Exploration in Multi-Armed Bandits", <I>section 4. Fixed Budget Setting</I></LI>
+<LI>(0.456758) <A HREF="https://jmlr.org/proceedings/papers/v28/wang13.html">wang13.html</a>
+"Noisy Sparse Subspace Clustering", <I>section 5. Numerical simulation</I></LI>
+<LI>(0.447382) <A HREF="https://jmlr.org/proceedings/papers/v28/chen13g.html">chen13g.html</a>
+"Spectral Compressed Sensing via Structured Matrix Completion", <I>section 6. Structured Matrix Completion</I></LI>
+<LI>(0.442163) <A HREF="https://jmlr.org/proceedings/papers/v28/gittens13.html">gittens13.html</a>
+"Revisiting the Nystr¨", <I>section 4. Theoretical Aspects of SPSD</I></LI>
+<LI>(0.438147) <A HREF="https://jmlr.org/proceedings/papers/v28/bubeck13.html">bubeck13.html</a>
+"Multiple Identifications in Multi-Armed Bandits", <I>section 2. Problem setup</I></LI>
+<LI>(0.437779) <A HREF="https://jmlr.org/proceedings/papers/v28/bubeck13.html">bubeck13.html</a>
+"Multiple Identifications in Multi-Armed Bandits", <I>section 3. m-best arms identification</I></LI>
+<LI>(0.435735) <A HREF="https://jmlr.org/proceedings/papers/v28/shender13.html">shender13.html</a>
+"Computation-Risk Tradeoffs for Covariance-Thresholded Regression", <I>section 6. Proofs of Technical Results</I></LI>
+<LI>(0.433636) <A HREF="https://jmlr.org/proceedings/papers/v28/lopes13.html">lopes13.html</a>
+"Estimating Unknown Sparsity in Compressed Sensing", <I>section 4. Deterministic measurement matrices</I></LI>
+<LI>(0.431452) <A HREF="https://jmlr.org/proceedings/papers/v28/jreddi13.html">jreddi13.html</a>
+"Scale Invariant Conditional Dependence Measures", <I>section 5. Generalized Dependence Measures</I></LI>
+<LI>(0.428428) <A HREF="https://jmlr.org/proceedings/papers/v28/karnin13.html">karnin13.html</a>
+"Almost Optimal Exploration in Multi-Armed Bandits", <I>section 3. Fixed Confidence Setting</I></LI>
+</OL>
+<P><B>Proposed:  Policies and Games:</B>
+Topic 2 (p=3.30%,ws=80.5%,ds=46.3%) words = policies, rewards, reward, actions, reinforcement, game, mdp, policy, bandit, auer, feedback, games, mdps, moore, player, discounted, playing, environment, action, sutton
+</P><OL>
+<LI>(0.570786) <A HREF="https://jmlr.org/proceedings/papers/v28/silver13.html">silver13.html</a>
+"Concurrent Reinforcement Learning from Customer Interactions", <I>section 3. Concurrent Reinforcement Learning</I></LI>
+<LI>(0.549959) <A HREF="https://jmlr.org/proceedings/papers/v28/maillard13.html">maillard13.html</a>
+"Near-optimal State-Representation in RL", <I>section 2. Setting</I></LI>
+<LI>(0.547032) <A HREF="https://jmlr.org/proceedings/papers/v28/silver13.html">silver13.html</a>
+"Concurrent Reinforcement Learning from Customer Interactions", <I>section 4. Concurrent TD Learning</I></LI>
+<LI>(0.518167) <A HREF="https://jmlr.org/proceedings/papers/v28/silver13.html">silver13.html</a>
+"Concurrent Reinforcement Learning from Customer Interactions", <I>section 6. Conclusion</I></LI>
+<LI>(0.516763) <A HREF="https://jmlr.org/proceedings/papers/v28/silver13.html">silver13.html</a>
+"Concurrent Reinforcement Learning from Customer Interactions", <I>section 1. Introduction</I></LI>
+<LI>(0.505341) <A HREF="https://jmlr.org/proceedings/papers/v28/golub13.html">golub13.html</a>
+"Learning an Internal Dynamics Model from Demonstration", <I>section 2. Problem Formulation</I></LI>
+<LI>(0.496882) <A HREF="https://jmlr.org/proceedings/papers/v28/sodomka13.html">sodomka13.html</a>
+"Coco-Q: Learning in Stochastic Games with Side Payments", <I>section 5. Conclusions and Future Work</I></LI>
+<LI>(0.495613) <A HREF="https://jmlr.org/proceedings/papers/v28/vanseijen13.html">vanseijen13.html</a>
+"Efficient Planning in MDPs by Small Backups", <I>section 6. Related Work</I></LI>
+<LI>(0.490713) <A HREF="https://jmlr.org/proceedings/papers/v28/vanseijen13.html">vanseijen13.html</a>
+"Efficient Planning in MDPs by Small Backups", <I>section 4. Reversed Full Backup</I></LI>
+<LI>(0.468970) <A HREF="https://jmlr.org/proceedings/papers/v28/vanseijen13.html">vanseijen13.html</a>
+"Efficient Planning in MDPs by Small Backups", <I>section 1. Introduction</I></LI>
+<LI>(0.464591) <A HREF="https://jmlr.org/proceedings/papers/v28/tamar13.html">tamar13.html</a>
+"TD Methods for the Variance of the Reward-To-Go", <I>section 2. Framework and Background</I></LI>
+<LI>(0.454176) <A HREF="https://jmlr.org/proceedings/papers/v28/grosshans13.html">grosshans13.html</a>
+"Bayesian Games for Adversarial Regression Problems", <I>section 7. Conclusion</I></LI>
+<LI>(0.452555) <A HREF="https://jmlr.org/proceedings/papers/v28/sodomka13.html">sodomka13.html</a>
+"Coco-Q: Learning in Stochastic Games with Side Payments", <I>section 2. Coco Values in Normal-Form Games</I></LI>
+<LI>(0.451633) <A HREF="https://jmlr.org/proceedings/papers/v28/golub13.html">golub13.html</a>
+"Learning an Internal Dynamics Model from Demonstration", <I>section 4. Internal model estimation from</I></LI>
+<LI>(0.445567) <A HREF="https://jmlr.org/proceedings/papers/v28/golub13.html">golub13.html</a>
+"Learning an Internal Dynamics Model from Demonstration", <I>section 1. Introduction</I></LI>
+<LI>(0.445122) <A HREF="https://jmlr.org/proceedings/papers/v28/curtin13.html">curtin13.html</a>
+"Tree-Independent Dual-Tree Algorithms", <I>section 4. Tree Traversals</I></LI>
+<LI>(0.439019) <A HREF="https://jmlr.org/proceedings/papers/v28/sodomka13.html">sodomka13.html</a>
+"Coco-Q: Learning in Stochastic Games with Side Payments", <I>section 3. Coco Values in Stochastic Games</I></LI>
+<LI>(0.438949) <A HREF="https://jmlr.org/proceedings/papers/v28/golub13.html">golub13.html</a>
+"Learning an Internal Dynamics Model from Demonstration", <I>section 5. Discussion</I></LI>
+<LI>(0.433494) <A HREF="https://jmlr.org/proceedings/papers/v28/sodomka13.html">sodomka13.html</a>
+"Coco-Q: Learning in Stochastic Games with Side Payments", <I>section 4. Coco Values in Grid Games</I></LI>
+<LI>(0.432284) <A HREF="https://jmlr.org/proceedings/papers/v28/dekel13.html">dekel13.html</a>
+"Better Rates for Any Adversarial Deterministic MDP", <I>section 1. Introduction</I></LI>
+</OL>
+<P><B>Proposed:  Images and Neural Networks:</B>
+Topic 3 (p=4.58%,ws=79.1%,ds=45.9%) words = images,layer, layers, activation, neural, pixels, image, autoencoder, pooling, rbm, units, sigmoid, activations, patches, convolutional, autoencoders, architectures, lecun, hinton, coates
+</P><OL>
+<LI>(0.650536) <A HREF="https://jmlr.org/proceedings/papers/v28/gupta13b.html">gupta13b.html</a>
+"Natural Image Bases to Represent Neuroimaging Data", <I>section 2. Preliminaries</I></LI>
+<LI>(0.641375) <A HREF="https://jmlr.org/proceedings/papers/v28/xiao13.html">xiao13.html</a>
+"Domain Adaptation with Probabilistic Language Adaptation Model", <I>section 5. Conclusion</I></LI>
+<LI>(0.623235) <A HREF="https://jmlr.org/proceedings/papers/v28/alain13.html">alain13.html</a>
+"Gated Autoencoders with Tied Input Weights", <I>section 2. Gated autoencoders</I></LI>
+<LI>(0.598160) <A HREF="https://jmlr.org/proceedings/papers/v28/cho13.html">cho13.html</a>
+"Simple Sparsification Improves Sparse Denoising Autoencoders in Image Denoising", <I>section 1. Introduction</I></LI>
+<LI>(0.578951) <A HREF="https://jmlr.org/proceedings/papers/v28/memisevic13.html">memisevic13.html</a>
+"Learning invariant features by harnessing the aperture problem", <I>section 1. Introduction</I></LI>
+<LI>(0.577582) <A HREF="https://jmlr.org/proceedings/papers/v28/cho13.html">cho13.html</a>
+"Simple Sparsification Improves Sparse Denoising Autoencoders in Image Denoising", <I>section 5. Discussion and Conclusion</I></LI>
+<LI>(0.567270) <A HREF="https://jmlr.org/proceedings/papers/v28/coates13.html">coates13.html</a>
+"Deep learning with COTS HPC systems", <I>section 3. Algorithm and Network Architecture</I></LI>
+<LI>(0.548588) <A HREF="https://jmlr.org/proceedings/papers/v28/cho13.html">cho13.html</a>
+"Simple Sparsification Improves Sparse Denoising Autoencoders in Image Denoising", <I>section 3. Image Denoising</I></LI>
+<LI>(0.545911) <A HREF="https://jmlr.org/proceedings/papers/v28/xiao13.html">xiao13.html</a>
+"Domain Adaptation with Probabilistic Language Adaptation Model", <I>section 1. Introduction</I></LI>
+<LI>(0.518730) <A HREF="https://jmlr.org/proceedings/papers/v28/sohn13.html">sohn13.html</a>
+"Learning and Selecting Features Jointly with Point-wise Gated Boltzmann Machines", <I>section 3. Proposed Models</I></LI>
+<LI>(0.516133) <A HREF="https://jmlr.org/proceedings/papers/v28/memisevic13.html">memisevic13.html</a>
+"Learning invariant features by harnessing the aperture problem", <I>section 2. Complex cells and subspace pooling</I></LI>
+<LI>(0.512490) <A HREF="https://jmlr.org/proceedings/papers/v28/wang13d.html">wang13d.html</a>
+"Max-Margin Multiple-Instance Dictionary Learning", <I>section 4. MMDL for Image Representation</I></LI>
+<LI>(0.495542) <A HREF="https://jmlr.org/proceedings/papers/v28/memisevic13.html">memisevic13.html</a>
+"Learning invariant features by harnessing the aperture problem", <I>section 4. Discussion</I></LI>
+<LI>(0.486973) <A HREF="https://jmlr.org/proceedings/papers/v28/alain13.html">alain13.html</a>
+"Gated Autoencoders with Tied Input Weights", <I>section 1. Introduction</I></LI>
+<LI>(0.486832) <A HREF="https://jmlr.org/proceedings/papers/v28/memisevic13.html">memisevic13.html</a>
+"Learning invariant features by harnessing the aperture problem", <I>section 3. Learning invariant features from</I></LI>
+<LI>(0.484289) <A HREF="https://jmlr.org/proceedings/papers/v28/sohn13.html">sohn13.html</a>
+"Learning and Selecting Features Jointly with Point-wise Gated Boltzmann Machines", <I>section 1. Introduction</I></LI>
+<LI>(0.484122) <A HREF="https://jmlr.org/proceedings/papers/v28/goodfellow13.html">goodfellow13.html</a>
+"Maxout Networks", <I>section 7. Model averaging</I></LI>
+<LI>(0.481285) <A HREF="https://jmlr.org/proceedings/papers/v28/liu13.html">liu13.html</a>
+"Guaranteed Sparse Recovery under Linear Transformation", <I>section 3. Main Results</I></LI>
+<LI>(0.478424) <A HREF="https://jmlr.org/proceedings/papers/v28/rastegari13.html">rastegari13.html</a>
+"Predictable Dual-View Hashing", <I>section 5. Conclusion</I></LI>
+<LI>(0.472712) <A HREF="https://jmlr.org/proceedings/papers/v28/jia13.html">jia13.html</a>
+"On Compact Codes for Spatially Pooled Features", <I>section 1. Introduction</I></LI>
+</OL>
+<P><B>Proposed:  Experiments:</B>
+Topic 4 (p=14.80%,ws=72.8%,ds=19.4%) words = experiment, outperforms, report, plot, versus, plots, five, figures, ran, accuracies, bottom, tried, seconds, dashed, percentage, matlab, axis, ten, median, plotted
+</P><OL>
+<LI>(0.750814) <A HREF="https://jmlr.org/proceedings/papers/v28/long13.html">long13.html</a>
+"Consistency vs. Realizable H-Consistency", <I>section 5. Experiments</I></LI>
+<LI>(0.603310) <A HREF="https://jmlr.org/proceedings/papers/v28/ogawa13a.html">ogawa13a.html</a>
+"Infinitesimal Annealing for Semi-Supervised SVMs", <I>section 6. Experiments</I></LI>
+<LI>(0.596251) <A HREF="https://jmlr.org/proceedings/papers/v28/peharz13.html">peharz13.html</a>
+"The Most Generative Maximum Margin Bayesian Networks", <I>section 5. Experiments</I></LI>
+<LI>(0.583625) <A HREF="https://jmlr.org/proceedings/papers/v28/gilboa13.html">gilboa13.html</a>
+"Scaling Multidimensional Gaussian Processes using Projected Additive Approximations", <I>section 3. Results</I></LI>
+<LI>(0.560969) <A HREF="https://jmlr.org/proceedings/papers/v28/kontorovich13.html">kontorovich13.html</a>
+"On learning parametric-output HMMs", <I>section 5. Simulation Results</I></LI>
+<LI>(0.557903) <A HREF="https://jmlr.org/proceedings/papers/v28/valko13.html">valko13.html</a>
+"Stochastic Simultaneous Optimistic Optimization", <I>section 4. Analysis</I></LI>
+<LI>(0.556719) <A HREF="https://jmlr.org/proceedings/papers/v28/pele13.html">pele13.html</a>
+"The Pairwise Piecewise-Linear Embedding", <I>section 5. Results</I></LI>
+<LI>(0.552399) <A HREF="https://jmlr.org/proceedings/papers/v28/golovin13.html">golovin13.html</a>
+"Large-Scale Learning with Less RAM via Randomization", <I>section 5. Experimental Results</I></LI>
+<LI>(0.551790) <A HREF="https://jmlr.org/proceedings/papers/v28/allenzhu13.html">allenzhu13.html</a>
+"A Local Algorithm for Finding Well-Connected Clusters", <I>section 6. Empirical Evaluation</I></LI>
+<LI>(0.547044) <A HREF="https://jmlr.org/proceedings/papers/v28/kolar13.html">kolar13.html</a>
+"Feature Selection in High-Dimensional Classification", <I>section 6. Simulation Results</I></LI>
+<LI>(0.539074) <A HREF="https://jmlr.org/proceedings/papers/v28/duvenaud13.html">duvenaud13.html</a>
+"Structure Discovery in Nonparametric Regression through Compositional Kernel Search", <I>section 7. Quantitative evaluation</I></LI>
+<LI>(0.535019) <A HREF="https://jmlr.org/proceedings/papers/v28/cortes13.html">cortes13.html</a>
+"Multi-Class Classi\x{fb01}cation with Maximum Margin Multiple Kernel", <I>section 6. Experiments</I></LI>
+<LI>(0.534363) <A HREF="https://jmlr.org/proceedings/papers/v28/appel13.html">appel13.html</a>
+"Quickly Boosting Decision Trees", <I>section 5. Experiments</I></LI>
+<LI>(0.533240) <A HREF="https://jmlr.org/proceedings/papers/v28/wang13a.html">wang13a.html</a>
+"Fast dropout training", <I>section 6. Experiments</I></LI>
+<LI>(0.528879) <A HREF="https://jmlr.org/proceedings/papers/v28/gao13.html">gao13.html</a>
+"One-Pass AUC Optimization", <I>section 5. Experiments</I></LI>
+<LI>(0.524694) <A HREF="https://jmlr.org/proceedings/papers/v28/cotter13.html">cotter13.html</a>
+"Optimally Sparse SVMs", <I>section 7. Experiments</I></LI>
+<LI>(0.520418) <A HREF="https://jmlr.org/proceedings/papers/v28/denil13.html">denil13.html</a>
+"Consistency of Online Random Forests", <I>section 5. Experiments</I></LI>
+<LI>(0.518858) <A HREF="https://jmlr.org/proceedings/papers/v28/wong13.html">wong13.html</a>
+"Adaptive Sparsity in Gaussian Graphical Models", <I>section 3. Experiments</I></LI>
+<LI>(0.518395) <A HREF="https://jmlr.org/proceedings/papers/v28/chen13j.html">chen13j.html</a>
+"Fast Image Tagging", <I>section 4. Experimental Results</I></LI>
+<LI>(0.516238) <A HREF="https://jmlr.org/proceedings/papers/v28/li13a.html">li13a.html</a>
+"Learning Hash Functions Using Column Generation", <I>section 3. Experimental results</I></LI>
+</OL>
+<P><B>Proposed:  Definitions:</B>
+Topic 5 (p=22.92%,ws=70.9%,ds=7.4%) words = let, denote, definition, notation, satisfies, suppose, exists, implies, element, inequality, holds, define, strictly, replace, satisfied, analogous, else, tion, imply, simplify
+</P><OL>
+<LI>(0.902614) <A HREF="https://jmlr.org/proceedings/papers/v28/livni13.html">livni13.html</a>
+"Vanishing Component Analysis", <I>section 5. Analysis</I></LI>
+<LI>(0.801722) <A HREF="https://jmlr.org/proceedings/papers/v28/yu13.html">yu13.html</a>
+"Characterizing the Representer Theorem", <I>section 3. Complete Characterization</I></LI>
+<LI>(0.795491) <A HREF="https://jmlr.org/proceedings/papers/v28/shin13.html">shin13.html</a>
+"A New Frontier of Kernel Design for Structured Data", <I>section 3. Characterization of partitionable</I></LI>
+<LI>(0.795247) <A HREF="https://jmlr.org/proceedings/papers/v28/osting13.html">osting13.html</a>
+"Enhanced statistical rankings via targeted data collection", <I>section 2. Eigenvalues of the w-weighted graph</I></LI>
+<LI>(0.794052) <A HREF="https://jmlr.org/proceedings/papers/v28/shin13.html">shin13.html</a>
+"A New Frontier of Kernel Design for Structured Data", <I>section 2. The theory of partitionable kernels</I></LI>
+<LI>(0.793706) <A HREF="https://jmlr.org/proceedings/papers/v28/kolmogorov13.html">kolmogorov13.html</a>
+"Inference algorithms for pattern-based CRFs on sequence data", <I>section 3. Computing partition function</I></LI>
+<LI>(0.781447) <A HREF="https://jmlr.org/proceedings/papers/v28/yu13.html">yu13.html</a>
+"Characterizing the Representer Theorem", <I>section 4. Extension to Matrices</I></LI>
+<LI>(0.775822) <A HREF="https://jmlr.org/proceedings/papers/v28/homrighausen13.html">homrighausen13.html</a>
+"The lasso, persistence, and cross-validation", <I>section 4. Proof of main results</I></LI>
+<LI>(0.744919) <A HREF="https://jmlr.org/proceedings/papers/v28/livni13.html">livni13.html</a>
+"Vanishing Component Analysis", <I>section 4. The VCA algorithm</I></LI>
+<LI>(0.723857) <A HREF="https://jmlr.org/proceedings/papers/v28/dekel13.html">dekel13.html</a>
+"Better Rates for Any Adversarial Deterministic MDP", <I>section 2. Preliminaries</I></LI>
+<LI>(0.718937) <A HREF="https://jmlr.org/proceedings/papers/v28/yang13c.html">yang13c.html</a>
+"Activized Learning with Uniform Noise", <I>section 5. A Universal Activizer for C under</I></LI>
+<LI>(0.712794) <A HREF="https://jmlr.org/proceedings/papers/v28/shamir13.html">shamir13.html</a>
+"SGD: Convergence Results and Optimal Averaging Schemes", <I>section 3. Convergence of Individual SGD</I></LI>
+<LI>(0.705008) <A HREF="https://jmlr.org/proceedings/papers/v28/rebagliati13.html">rebagliati13.html</a>
+"Strict Monotonicity in the Lattice of Clusterings", <I>section 2. Definitions and Preliminaries of</I></LI>
+<LI>(0.696366) <A HREF="https://jmlr.org/proceedings/papers/v28/yu13.html">yu13.html</a>
+"Characterizing the Representer Theorem", <I>section 2. Previous Work</I></LI>
+<LI>(0.681089) <A HREF="https://jmlr.org/proceedings/papers/v28/kyrillidis13.html">kyrillidis13.html</a>
+"Sparse projections onto the simplex", <I>section 5. Main results</I></LI>
+<LI>(0.677565) <A HREF="https://jmlr.org/proceedings/papers/v28/allenzhu13.html">allenzhu13.html</a>
+"A Local Algorithm for Finding Well-Connected Clusters", <I>section 3. Guarantee Better Accuracy</I></LI>
+<LI>(0.677348) <A HREF="https://jmlr.org/proceedings/papers/v28/allenzhu13.html">allenzhu13.html</a>
+"A Local Algorithm for Finding Well-Connected Clusters", <I>section 4. Guarantee Better Cut Conductance</I></LI>
+<LI>(0.668254) <A HREF="https://jmlr.org/proceedings/papers/v28/tamar13.html">tamar13.html</a>
+"TD Methods for the Variance of the Reward-To-Go", <I>section 3. Approximation of the Variance of</I></LI>
+<LI>(0.664296) <A HREF="https://jmlr.org/proceedings/papers/v28/long13.html">long13.html</a>
+"Consistency vs. Realizable H-Consistency", <I>section 4. A sufficient condition for a loss</I></LI>
+<LI>(0.660372) <A HREF="https://jmlr.org/proceedings/papers/v28/yang13f.html">yang13f.html</a>
+"Quantile Regression for Large-scale Applications", <I>section 2. Preliminaries</I></LI>
+</OL>
+<P><B>Proposed:  Optimisation:</B>
+Topic 6 (p=7.09%,ws=80.3%,ds=24.3%) words = descent, relaxation, iterative, subgradient, nesterov, boyd, dual, iterate, non-smooth, step-size, iterates, solvers, relaxations, solver, hazan, thresholding, sgd, duality, accelerated, combinatorial
+</P><OL>
+<LI>(0.703179) <A HREF="https://jmlr.org/proceedings/papers/v28/mairal13.html">mairal13.html</a>
+"Optimization with First-Order Surrogate Functions", <I>section 5. Accelerated Scheme</I></LI>
+<LI>(0.624531) <A HREF="https://jmlr.org/proceedings/papers/v28/zhang13e.html">zhang13e.html</a>
+"", <I>section 2. Related Work</I></LI>
+<LI>(0.617565) <A HREF="https://jmlr.org/proceedings/papers/v28/cuturi13.html">cuturi13.html</a>
+"Mean Reversion with a Variance Threshold", <I>section 4. Semidefinite Relaxations</I></LI>
+<LI>(0.613782) <A HREF="https://jmlr.org/proceedings/papers/v28/zhang13e.html">zhang13e.html</a>
+"", <I>section 6. Conclusion</I></LI>
+<LI>(0.578479) <A HREF="https://jmlr.org/proceedings/papers/v28/gong13a.html">gong13a.html</a>
+"GIST: General Iterative Shrinkage and Thresholding algorithm", <I>section 3. Related Work</I></LI>
+<LI>(0.574851) <A HREF="https://jmlr.org/proceedings/papers/v28/jaggi13.html">jaggi13.html</a>
+"Revisiting Frank-Wolfe: Projection-Free Sparse Convex Optimization", <I>section 2. The Duality Gap and Certificates</I></LI>
+<LI>(0.569085) <A HREF="https://jmlr.org/proceedings/papers/v28/mairal13.html">mairal13.html</a>
+"Optimization with First-Order Surrogate Functions", <I>section 6. Incremental Scheme</I></LI>
+<LI>(0.567642) <A HREF="https://jmlr.org/proceedings/papers/v28/zhang13e.html">zhang13e.html</a>
+"", <I>section 1. Introduction</I></LI>
+<LI>(0.561853) <A HREF="https://jmlr.org/proceedings/papers/v28/ouyang13.html">ouyang13.html</a>
+"Stochastic ADMM", <I>section 2. Stochastic ADMM Algorithm</I></LI>
+<LI>(0.557920) <A HREF="https://jmlr.org/proceedings/papers/v28/mairal13.html">mairal13.html</a>
+"Optimization with First-Order Surrogate Functions", <I>section 4. Frank-Wolfe Scheme</I></LI>
+<LI>(0.557769) <A HREF="https://jmlr.org/proceedings/papers/v28/lacoste-julien13.html">lacoste-julien13.html</a>
+"Block-Coordinate Frank-Wolfe Optimization for Structural SVMs", <I>section 4. Frank-Wolfe for Structural SVMs</I></LI>
+<LI>(0.554946) <A HREF="https://jmlr.org/proceedings/papers/v28/richard13.html">richard13.html</a>
+"Intersecting singularities for multi-structured estimation", <I>section 4. Algorithms for minimizing Λ-trace</I></LI>
+<LI>(0.534585) <A HREF="https://jmlr.org/proceedings/papers/v28/lacoste-julien13.html">lacoste-julien13.html</a>
+"Block-Coordinate Frank-Wolfe Optimization for Structural SVMs", <I>section 8. Discussion</I></LI>
+<LI>(0.533722) <A HREF="https://jmlr.org/proceedings/papers/v28/iyer13.html">iyer13.html</a>
+"Fast Semidifferential-based Submodular Function Optimization", <I>section 7. Discussion and Conclusions</I></LI>
+<LI>(0.531245) <A HREF="https://jmlr.org/proceedings/papers/v28/lacoste-julien13.html">lacoste-julien13.html</a>
+"Block-Coordinate Frank-Wolfe Optimization for Structural SVMs", <I>section 3. The Frank-Wolfe Algorithm</I></LI>
+<LI>(0.530889) <A HREF="https://jmlr.org/proceedings/papers/v28/lacoste-julien13.html">lacoste-julien13.html</a>
+"Block-Coordinate Frank-Wolfe Optimization for Structural SVMs", <I>section 7. Related Work</I></LI>
+<LI>(0.521082) <A HREF="https://jmlr.org/proceedings/papers/v28/kumar13c.html">kumar13c.html</a>
+"Convex Relaxations for Learning Bounded-Treewidth Decomposable Graphs", <I>section 4. Solving the dual problem</I></LI>
+<LI>(0.519988) <A HREF="https://jmlr.org/proceedings/papers/v28/lim13.html">lim13.html</a>
+"Robust Structural Metric Learning", <I>section 3. Optimization</I></LI>
+<LI>(0.519533) <A HREF="https://jmlr.org/proceedings/papers/v28/iyer13.html">iyer13.html</a>
+"Fast Semidifferential-based Submodular Function Optimization", <I>section 4. The discrete MM framework</I></LI>
+<LI>(0.502887) <A HREF="https://jmlr.org/proceedings/papers/v28/mairal13.html">mairal13.html</a>
+"Optimization with First-Order Surrogate Functions", <I>section 3. Block Coordinate Scheme</I></LI>
+</OL>
+<P><B>Proposed:  Probabilistic Models:</B>
+Topic 7 (p=6.58%,ws=79.2%,ds=33.8%) words = graphical, priors, nonparametric, monte, sampler, message, analytically, poisson, beta, rasmussen, ghahramani, carlo, gamma, jordan, potentials, log-likelihood, hmms, multivariate, particle, kronecker
+</P><OL>
+<LI>(0.656385) <A HREF="https://jmlr.org/proceedings/papers/v28/wilson13.html">wilson13.html</a>
+"Gaussian Process Kernels for Pattern Discovery and Extrapolation", <I>section 2. Gaussian Processes</I></LI>
+<LI>(0.637805) <A HREF="https://jmlr.org/proceedings/papers/v28/qi13.html">qi13.html</a>
+"Message passing with l1 penalized KL minimization", <I>section 2. Background: EP and BP</I></LI>
+<LI>(0.618463) <A HREF="https://jmlr.org/proceedings/papers/v28/ross13a.html">ross13a.html</a>
+"Nonparametric Mixture of Gaussian Processes with Constraints", <I>section 2. Background</I></LI>
+<LI>(0.616687) <A HREF="https://jmlr.org/proceedings/papers/v28/wulsin13.html">wulsin13.html</a>
+"Parsing Epileptic Events Using a Markov Switching Process for Correlated Time Series", <I>section 3. Posterior Computations</I></LI>
+<LI>(0.612437) <A HREF="https://jmlr.org/proceedings/papers/v28/song13.html">song13.html</a>
+"Hierarchical Tensor Decomposition of Latent Tree Graphical Models", <I>section 2. Background</I></LI>
+<LI>(0.578907) <A HREF="https://jmlr.org/proceedings/papers/v28/gupta13a.html">gupta13a.html</a>
+"Factorial Multi-Task Learning", <I>section 2. Background</I></LI>
+<LI>(0.576276) <A HREF="https://jmlr.org/proceedings/papers/v28/chen13i.html">chen13i.html</a>
+"Dependent Normalized Random Measures", <I>section 2. Normalized Random Measures</I></LI>
+<LI>(0.567294) <A HREF="https://jmlr.org/proceedings/papers/v28/willemvandemeent13.html">willemvandemeent13.html</a>
+"Hierarchically-coupled hidden Markov models for learning kinetic rates from single-molecule data", <I>section 2. Related Work</I></LI>
+<LI>(0.564832) <A HREF="https://jmlr.org/proceedings/papers/v28/simsekli13.html">simsekli13.html</a>
+"Learning the Divergence in Tweedie Compound Poisson Matrix Factorization Models", <I>section 6. Conclusion</I></LI>
+<LI>(0.542413) <A HREF="https://jmlr.org/proceedings/papers/v28/chen13i.html">chen13i.html</a>
+"Dependent Normalized Random Measures", <I>section 4. Posterior Inference</I></LI>
+<LI>(0.536838) <A HREF="https://jmlr.org/proceedings/papers/v28/williamson13.html">williamson13.html</a>
+"Parallel Markov Chain Monte Carlo for Nonparametric Mixture Models", <I>section 2. Background</I></LI>
+<LI>(0.531575) <A HREF="https://jmlr.org/proceedings/papers/v28/bugraerol13.html">bugraerol13.html</a>
+"The Extended Parameter Filter", <I>section 3. The extended parameter filter</I></LI>
+<LI>(0.529123) <A HREF="https://jmlr.org/proceedings/papers/v28/williamson13.html">williamson13.html</a>
+"Parallel Markov Chain Monte Carlo for Nonparametric Mixture Models", <I>section 3. Introducing auxiliary variables to</I></LI>
+<LI>(0.528960) <A HREF="https://jmlr.org/proceedings/papers/v28/wulsin13.html">wulsin13.html</a>
+"Parsing Epileptic Events Using a Markov Switching Process for Correlated Time Series", <I>section 2. A Structured Bayesian</I></LI>
+<LI>(0.527237) <A HREF="https://jmlr.org/proceedings/papers/v28/salazar13.html">salazar13.html</a>
+"Exploring the Mind: Integrating Questionnaires and fMRI", <I>section 3. Posterior inference</I></LI>
+<LI>(0.526710) <A HREF="https://jmlr.org/proceedings/papers/v28/emtiyazkhan13.html">emtiyazkhan13.html</a>
+"Fast Dual Variational Inference for Non-Conjugate LGMs", <I>section 2. Latent Gaussian Models</I></LI>
+<LI>(0.525320) <A HREF="https://jmlr.org/proceedings/papers/v28/heaukulani13.html">heaukulani13.html</a>
+"Latent Feature Propagation in Social Networks", <I>section 2. Dynamic Network Models</I></LI>
+<LI>(0.518692) <A HREF="https://jmlr.org/proceedings/papers/v28/gupta13a.html">gupta13a.html</a>
+"Factorial Multi-Task Learning", <I>section 4. Model Inference</I></LI>
+<LI>(0.516850) <A HREF="https://jmlr.org/proceedings/papers/v28/lopez-paz13.html">lopez-paz13.html</a>
+"Gaussian Process Vine Copulas for Multivariate Dependence", <I>section 2. Copulas and Vines</I></LI>
+<LI>(0.513614) <A HREF="https://jmlr.org/proceedings/papers/v28/tang13.html">tang13.html</a>
+"Tensor Analyzers", <I>section 3. Preliminaries</I></LI>
+</OL>
+<P><B>Proposed:  Discussion:</B>
+Topic 8 (p=24.51%,ws=67.6%,ds=1.1%) words = related, introduction, recent, conclusion, applications, recently, unlike, potentially, suitable, help, despite, automatically, discussion, particularly, commonly, rely, motivated, reasons, techniques, nature
+</P><OL>
+<LI>(0.995509) <A HREF="https://jmlr.org/proceedings/papers/v28/denil13.html">denil13.html</a>
+"Consistency of Online Random Forests", <I>section 1. Introduction</I></LI>
+<LI>(0.979611) <A HREF="https://jmlr.org/proceedings/papers/v28/jancsary13.html">jancsary13.html</a>
+"Learning Convex Quadratic Programming Relaxations for Structured Prediction", <I>section 2. Related Work</I></LI>
+<LI>(0.910119) <A HREF="https://jmlr.org/proceedings/papers/v28/duvenaud13.html">duvenaud13.html</a>
+"Structure Discovery in Nonparametric Regression through Compositional Kernel Search", <I>section 8. Discussion</I></LI>
+<LI>(0.899079) <A HREF="https://jmlr.org/proceedings/papers/v28/mehta13.html">mehta13.html</a>
+"Predictive Sparse Coding Bounds", <I>section 6. Discussion and open problems</I></LI>
+<LI>(0.793968) <A HREF="https://jmlr.org/proceedings/papers/v28/wang13g.html">wang13g.html</a>
+"Robust and Discriminative Self-Taught Learning", <I>section 3. Related Methods</I></LI>
+<LI>(0.624251) <A HREF="https://jmlr.org/proceedings/papers/v28/izbicki13.html">izbicki13.html</a>
+"Algebraic classifiers", <I>section 6. Conclusion</I></LI>
+<LI>(0.597153) <A HREF="https://jmlr.org/proceedings/papers/v28/wang13d.html">wang13d.html</a>
+"Max-Margin Multiple-Instance Dictionary Learning", <I>section 6. Conclusion</I></LI>
+<LI>(0.596812) <A HREF="https://jmlr.org/proceedings/papers/v28/kolmogorov13.html">kolmogorov13.html</a>
+"Inference algorithms for pattern-based CRFs on sequence data", <I>section 9. Conclusions and future work</I></LI>
+<LI>(0.591106) <A HREF="https://jmlr.org/proceedings/papers/v28/yang13e.html">yang13e.html</a>
+"Robust Model for Lasso-like Algorithms", <I>section 6. Conclusions</I></LI>
+<LI>(0.585321) <A HREF="https://jmlr.org/proceedings/papers/v28/sutskever13.html">sutskever13.html</a>
+"On the importance of initialization and momentum in deep learning", <I>section 6. Discussion</I></LI>
+<LI>(0.584120) <A HREF="https://jmlr.org/proceedings/papers/v28/jancsary13.html">jancsary13.html</a>
+"Learning Convex Quadratic Programming Relaxations for Structured Prediction", <I>section 6. Discussion and Summary</I></LI>
+<LI>(0.578794) <A HREF="https://jmlr.org/proceedings/papers/v28/grunewalder13.html">grunewalder13.html</a>
+"Smooth Operators", <I>section 5. Conclusion</I></LI>
+<LI>(0.573756) <A HREF="https://jmlr.org/proceedings/papers/v28/xu13b.html">xu13b.html</a>
+"Anytime Representation Learning", <I>section 6. Discussion</I></LI>
+<LI>(0.564727) <A HREF="https://jmlr.org/proceedings/papers/v28/agarwal13.html">agarwal13.html</a>
+"Selective sampling algorithms for cost-sensitive multiclass prediction", <I>section 6. Discussion</I></LI>
+<LI>(0.554300) <A HREF="https://jmlr.org/proceedings/papers/v28/livni13.html">livni13.html</a>
+"Vanishing Component Analysis", <I>section 9. Discussion</I></LI>
+<LI>(0.551134) <A HREF="https://jmlr.org/proceedings/papers/v28/yu13a.html">yu13a.html</a>
+"", <I>section 8. Conclusion and Future Work</I></LI>
+<LI>(0.546023) <A HREF="https://jmlr.org/proceedings/papers/v28/wytock13.html">wytock13.html</a>
+"Sparse Gaussian conditional random fields", <I>section 6. Conclusion and discussion</I></LI>
+<LI>(0.536104) <A HREF="https://jmlr.org/proceedings/papers/v28/xiang13.html">xiang13.html</a>
+"Efficient Sparse Group Feature Selection via Nonconvex Optimization", <I>section 7. Conclusion and Future Work</I></LI>
+<LI>(0.534280) <A HREF="https://jmlr.org/proceedings/papers/v28/juhwang13.html">juhwang13.html</a>
+"Analogy-preserving Semantic Embedding for Visual Object Categorization", <I>section 5. Conclusion</I></LI>
+<LI>(0.529367) <A HREF="https://jmlr.org/proceedings/papers/v28/wulff13.html">wulff13.html</a>
+"Monochromatic Bi-Clustering", <I>section 8. Conclusions</I></LI>
+</OL>
+<P><B>Proposed:  Topic and Latent Variable Models:</B>
+Topic 9 (p=3.26%,ws=80.6%,ds=49.8%) words = topics, documents, users, corpus, social, music, vocabulary, corpora, individuals, word, interactive, cascades, external, ratings, blei, entities, news, topical, interests, co-occurrence
+</P><OL>
+<LI>(0.581558) <A HREF="https://jmlr.org/proceedings/papers/v28/chuang13.html">chuang13.html</a>
+"Topic Model Diagnostics: Assessing Domain Relevance via Topical Alignment", <I>section 2. Related Work</I></LI>
+<LI>(0.580892) <A HREF="https://jmlr.org/proceedings/papers/v28/ahmed13.html">ahmed13.html</a>
+"Nested Chinese Restaurant Franchise Process", <I>section 5. Modeling Documents with nCRFs</I></LI>
+<LI>(0.528618) <A HREF="https://jmlr.org/proceedings/papers/v28/shalit13.html">shalit13.html</a>
+"Modeling Musical Influence with Topic Models", <I>section 7. Conclusion</I></LI>
+<LI>(0.527251) <A HREF="https://jmlr.org/proceedings/papers/v28/shalit13.html">shalit13.html</a>
+"Modeling Musical Influence with Topic Models", <I>section 3. Modeling Influence</I></LI>
+<LI>(0.523469) <A HREF="https://jmlr.org/proceedings/papers/v28/zhai13.html">zhai13.html</a>
+"Online Latent Dirichlet Allocation with Infinite Vocabulary", <I>section 7. Conclusion and Future Work</I></LI>
+<LI>(0.507397) <A HREF="https://jmlr.org/proceedings/papers/v28/gomez-rodriguez13.html">gomez-rodriguez13.html</a>
+"Modeling Information Propagation with Survival Theory", <I>section 1. Introduction</I></LI>
+<LI>(0.504499) <A HREF="https://jmlr.org/proceedings/papers/v28/chuang13.html">chuang13.html</a>
+"Topic Model Diagnostics: Assessing Domain Relevance via Topical Alignment", <I>section 4. Reference Concepts</I></LI>
+<LI>(0.501981) <A HREF="https://jmlr.org/proceedings/papers/v28/chuang13.html">chuang13.html</a>
+"Topic Model Diagnostics: Assessing Domain Relevance via Topical Alignment", <I>section 1. Introduction</I></LI>
+<LI>(0.494793) <A HREF="https://jmlr.org/proceedings/papers/v28/shalit13.html">shalit13.html</a>
+"Modeling Musical Influence with Topic Models", <I>section 1. Introduction</I></LI>
+<LI>(0.469838) <A HREF="https://jmlr.org/proceedings/papers/v28/yang13a.html">yang13a.html</a>
+"Mixture of Mutually Exciting Processes for Viral Diffusion", <I>section 1. Introduction</I></LI>
+<LI>(0.462948) <A HREF="https://jmlr.org/proceedings/papers/v28/raman13.html">raman13.html</a>
+"Stable Coactive Learning via Perturbation", <I>section 3. Coactive Learning Model</I></LI>
+<LI>(0.460182) <A HREF="https://jmlr.org/proceedings/papers/v28/yang13a.html">yang13a.html</a>
+"Mixture of Mutually Exciting Processes for Viral Diffusion", <I>section 4. Related work</I></LI>
+<LI>(0.447204) <A HREF="https://jmlr.org/proceedings/papers/v28/zhai13.html">zhai13.html</a>
+"Online Latent Dirichlet Allocation with Infinite Vocabulary", <I>section 5. Online Inference</I></LI>
+<LI>(0.446599) <A HREF="https://jmlr.org/proceedings/papers/v28/shalit13.html">shalit13.html</a>
+"Modeling Musical Influence with Topic Models", <I>section 2. The Problem Setup</I></LI>
+<LI>(0.441273) <A HREF="https://jmlr.org/proceedings/papers/v28/chuang13.html">chuang13.html</a>
+"Topic Model Diagnostics: Assessing Domain Relevance via Topical Alignment", <I>section 3. Topical Alignment</I></LI>
+<LI>(0.435421) <A HREF="https://jmlr.org/proceedings/papers/v28/das13.html">das13.html</a>
+"Subtle Topic Models and Discovering Subtly Manifested Software Concerns Automatically", <I>section 6. Conclusion</I></LI>
+<LI>(0.418554) <A HREF="https://jmlr.org/proceedings/papers/v28/chuang13.html">chuang13.html</a>
+"Topic Model Diagnostics: Assessing Domain Relevance via Topical Alignment", <I>section 5. Applications</I></LI>
+<LI>(0.414244) <A HREF="https://jmlr.org/proceedings/papers/v28/weinshall13.html">weinshall13.html</a>
+"LDA Topic Model with Soft Assignment of Descriptors to Words", <I>section 2. Extended LDA Model</I></LI>
+<LI>(0.412055) <A HREF="https://jmlr.org/proceedings/papers/v28/das13.html">das13.html</a>
+"Subtle Topic Models and Discovering Subtly Manifested Software Concerns Automatically", <I>section 1. Introduction</I></LI>
+<LI>(0.395288) <A HREF="https://jmlr.org/proceedings/papers/v28/chuang13.html">chuang13.html</a>
+"Topic Model Diagnostics: Assessing Domain Relevance via Topical Alignment", <I>section 6. Discussion</I></LI>
+</OL>
+</BODY></HTML>

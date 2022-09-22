@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/12-4/colis/colis13.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:24 GMT -->
+<head>
+<title>Resolvability of References in Users' Personal Collections</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../IRstyle2.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+
+<!--Enter appropriate data in the content fields-->
+<meta name="dc.title" content="Resolvability of References in Users' Personal Collections" />
+<meta name="dc.creator" content="Nishikant Kapoor, John T Butler, Gary C Fouty, James A stemper, Joseph A Konstan" />
+<meta name="dc.subject" content="In this paper we describe the study we conducted to understand the nature of references in users' personal collections, their quality in terms of their resolvability, and offer a composite approach to enhancing resolvability of such reference collections. The purpose of the study is to identify how library services such as a citation recommender system, could benefit from users' personal reference collections, both in terms of being able to offer better recommendations between users, and across digital library collections. We studied 30,336 references of 96 users of a web-based reference management system, RefWorks , and found that over 90% of the total references in these collections could possibly have a valid unique ID (Document Object Identifier (DOI) for Journal articles, and ISBN for books), and therefore, are potentially resolvable. However, only about 17% of the references in these collections had a unique ID, and fewer than 11% actually resolved successfully. Using a combination of available reference resolvers, we were able to enhance the total resolvability of the references in these collections from under 11% to over 41%." />
+<meta name="dc.description" content="In this paper we describe the study we conducted to understand the nature of references in users' personal collections, their quality in terms of their resolvability, and offer a composite approach to enhancing resolvability of such reference collections. The purpose of the study is to identify how library services such as a citation recommender system, could benefit from users' personal reference collections, both in terms of being able to offer better recommendations between users, and across digital library collections. We studied 30,336 references of 96 users of a web-based reference management system, RefWorks , and found that over 90% of the total references in these collections could possibly have a valid unique ID (Document Object Identifier (DOI) for Journal articles, and ISBN for books), and therefore, are potentially resolvable. However, only about 17% of the references in these collections had a unique ID, and fewer than 11% actually resolved successfully. Using a combination of available reference resolvers, we were able to enhance the total resolvability of the references in these collections from under 11% to over 41%." />
+<meta name="dc.subject.keywords" content="Digital libraries, reference resolution, resolvability, bibliometrics, information retrieval, recommender systems" />
+
+<!--leave the following to be completed by the Editor-->
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="Professor T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="colis13.html" />
+<meta name="dc.relation.IsPartOf" content="colis.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2007-10-15" />
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			}
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}
+		}
+
+	</script>
+
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted maroon;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: maroon;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+
+
+</style>
+
+</head>
+<body bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../../mini_logo2.gif"
+      width="336" /><br /><div>Vol. 12 No. 4, October 2007</div><br />
+        <br />
+      <div class="button">
+      <ul>
+        <li><a href="colis.html">Contents</a> |  </li>
+        <li><a href="../../iraindex.html">Author index</a> |  </li>
+        <li><a href="../../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../../search.html">Search</a> |  </li>
+        <li><a href="../infres124.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+<hr style="COLOR: maroon" size="1" />
+
+<h2 style="text-align: center;">Proceedings of the Sixth International Conference on Conceptions<br /> of Library and Information Science&mdash;&quot;Featuring the Future&quot;</h2>
+
+<h1 align="center">Resolvability of references in users' personal collections</h1>
+<br />
+<div style="margin-left: 10%; margin-right: 10%;">
+<h4 align="center"><a href="mailto:nkapoor@cs.umn.edu">Nishikant Kapoor</a><sup><font size="-1">1</font></sup>, <a href="mailto:j-butl@umn.edu">John T Butler</a><sup><font size="-1">2</font></sup>, <a href="mailto:g-fout@umn.edu">Gary C Fouty</a><sup><font size="-1">2</font></sup>, <a href="mailto:stemp003@umn.edu">James A Stemper</a><sup><font size="-1">2</font></sup>, <a href="mailto:konstan@cs.umn.edu">Joseph A Konstan</a><sup><font size="-1">1</font></sup><br />
+<sup><font size="-1">1</font></sup>GroupLens Research, Department of Computer Science and Engineering, 200 Union Street SE, University of Minnesota, Minneapolis, MN 55455, USA
+<br />
+<sup><font size="-1">2</font></sup>University Libraries, 117 Pleasant St SE, University of Minnesota, Minneapolis, MN 55455, USA
+</h4>
+</div>
+<br />
+<form action="#">
+<fieldset>
+<legend>Abstract</legend>
+<blockquote>
+<strong>Introduction.</strong> Digital library users collect, enhance and manage their online reference collections to facilitate their research tasks. These personal collections, therefore, are likely to reflect users' interests, and are representative of their profile. Understanding these collections offers great opportunities for developing personalized digital library services, such as reference recommender systems.<br />
+<strong>Method.</strong> We recruited subjects by individual e-mails to the users of RefWorks - a web-based personal reference management tool installed for use at the University of Minnesota. To participate, subjects needed to give their consent and share their references with us. 96 subjects participated, majority (65) of who were graduate students, resulting into 30,336 references. Based on the type of the reference, these were stratified into one of the three valid identifying IDs - DOI, ISBN, or URL. Multiple reference resolvers (CrossRef, WorldCat) were used to enhance the overall resolvability of these collections.<br />
+<strong>Analysis.</strong> Descriptive statistics and simple graphics analysis were used to describe the dataset.<br />
+<strong>Results.</strong> Over 90% of the total references in users' personal collections could possibly have a valid ID (DOI, ISBN, URL), and therefore, are potentially resolvable. However, only about 17% of the references in these collections had a valid ID, and fewer than 11% actually resolved successfully. Using a combination of reference resolvers, the total resolvability of the references in these collections was enhanced from under 11% to over 41%.<br />
+<strong>Conclusions.</strong> Users' personal reference collections have a tremendous potential of building, supporting, and enhancing personalized digital library services, such as reference recommender systems.</blockquote>
+</fieldset>
+</form>
+
+<br />
+<div align="center">
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: maroon;" onclick="doChangeFont()" /></div>
+
+<br />
+
+<h2>Introduction</h2>
+<p>Digital libraries continue to grow enormously, and rapidly as more and more people access the networked digital environment. Additionally, people gather, build and manage their very own personal collections, and have come to expect those to be integrated with online digital libraries. While this ongoing growth offers an immense power of information to its users, it poses several challenges as well. Finding useful information, effectively and efficiently, continues to be the primary challenge.</p>
+<p>Recommender Systems (<a href="#mcn02">McNee et al. 2002</a>, <a href="#tor04">Torres et al. 2004</a>, <a href="#mcn06">McNee et al. 2006</a>) offer a viable solution, but rely heavily on personalization (<a href="#ras02">Rashid et al. 2002</a>) i.e. they need to know the user before they can help her find something useful. Recommender Systems compare users with similar interests, and predict new items of interest to the user, given some information about her profile. These systems build users' profile by collecting information using a combination of explicit and implicit methods, and draw on the similarities (or dissimilarities) of these profiles to generate recommendations for users (<a href="#mal95">Maltz et al. 1995</a>). </p>
+<p>Users' personal reference collections are an implicit means to learn about their interests, and are a close representative of their profiles. These collections, therefore, offer a great potential for systems such as a reference recommender system, to offer personalized tools and services in digital libraries. However, recommender systems first need to be able to harvest these collections effectively before they can use these to build users' profile.  And, that can be made possible if these references had a valid ID that uniquely identified them. Unique identification of identical references in different users' collections is the key to building similarities between the users. It opens the door to matching references between collections, and to obtaining additional metadata from which to generate recommendations. In order to realize the potential of references in users' personal collections, it is important that we uderstand their nature and assess them in terms of their resolvability.</p>
+<p>Most recommenders in digital libraries have focused on mining the implicitly rated references in the reference section of a paper (i.e., public collections of rated references). The cited references in a technical paper are indicative of their support for the paper, and are considered by the recommenders as implicit 'ratings' for the paper. Quickstep and Foxtrot recommender systems explored recommending on-line research papers to academic researchers (<a href="#mid04">Middleton et al. 2004</a>). TechLens used references in the published paper to build correlations between papers (<a href="#mcn02">McNee et al. 2002</a>).</p>
+<p>Our work focuses on references in users' personal collections - to understand how these collections can be uniquely identified, and to assess their potential for developing digital library services using recommenders. We are not the first to explore the quality and nature of references. Numerous reference analysis tools and methods have been developed to support bibliometric research, including citation counts and frequencies, impact factors (<a href="#gar55">Garfield 1955</a>), clustering (<a href="#car73">Carpenter et al. 1973</a>), bibliographic coupling (<a href="#kes63">Kessler 1963</a>), and co-citation analysis (<a href="#sma73">Small 1973</a>). However, all these analyses have been performed on published citations, and hinge on the degree of citation accuracy and completeness.</p>
+<p>In this study, we explore resolvability of references in users' personal collections to unique identifiers, and to their online sources. We analyzed the contents of 96 reference collections from university students, faculty and staff, maintained in the RefWorks (http://www.refworks.com/) references management system, to address two primary research questions:</p>
+<ul><li>How resolvable are references in users' personal collections? And, how many of those do actually resolve to their online sources?</li>
+<li>How can we enhance resolvability of references in these collections?</li></ul>
+
+
+<h2>Resolvability</h2>
+<p>A reference is resolvable if it has (a) a valid unique ID that leads to its online source, or (b) enough information such as title, author, etc., that could be used to resolve it to its online source. An online source of a reference establishes definitive online presence of the reference, either by leading to its full-text, or to its description. For example, a valid unique ID for a reference to a Journal article is a DOI (Digital Object Identifier), which leads to its full-text, and a valid unique ID for a reference to a book is its ISBN (International Standard Book Number) number, which leads to its description  (in some cases, to its full-text). A reference to an online entity (URL - Universal Resource Locator) may not be its unique identifier, but it reaffirms its existence. A valid DOI, ISBN or a URL of a reference is expected to lead us to its online source, provided the online source is available. If the online source is not available (it might not be in digital form yet), we conclude that the ID for the reference is not valid. Our dataset consisted of references to various types such as references to Journal articles, whole books, book chapters, web pages, newspaper articles, maps, reports, etc. Of all the different reference types, the ones that could possibly have a unique ID are</p>
+<ul><li>DOI based i.e. references to articles in Journals, Journal-Electronic and Conference Proceedings - 25,267 references (83.29%)</li>
+<li>ISBN based i.e. references to book Whole, Book Edited, Monograph - 2,216 references (7.30%)</li>
+<li>URL based i.e. references with URL (includes references that have DOI and/or ISBN) - 622 references - (2.05%)</li></ul>
+
+
+<table width="50%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #ffffff">
+<caption align="bottom"><br /><strong>Figure 1: Total potentially resolvable references</strong></caption>
+<tr>
+    <td align="center"> <img src="colis13fig1.gif" width="296" height="95" alt="Total potentially resolvable references"/></td>
+  </tr>
+<tr><td align="center">Total potentially resolvable references:
+<br />24,719 + 548 + 74 + 2,216 = 27,557 (90.84%)
+</td></tr>
+</table>
+
+<p>Figure 1 shows the total number of potentially resolvable references, i.e., references that can be represented using a valid unique ID. Since DOI and ISBN numbers are unique IDs, combining these (minus the ones that are common in both) gives the total number of references that could possibly have a unique ID. In addition, there are 74 references that contain a URL. Assuming that all these references have a valid ID and are available online, we get the total number of references that are potentially resolvable as 27,557 (90.84%).</p>
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Table 1: Distribution of references with IDs</strong></caption>
+<tr><th>Reference Types</th><th>DOI</th><th>ISBN</th><th>URL</th></tr>
+<tr><td>Journal</td><td align="center">3,765</td><td align="center">&nbsp;</td><td align="center">545</td></tr>
+<tr><td>Conference Proceedings</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">3</td></tr>
+<tr><td>Book Whole</td><td align="center">&nbsp;</td><td align="center">777</td><td align="center">&nbsp;</td></tr>
+<tr><td>Book Edited</td><td align="center">&nbsp;</td><td align="center">15</td><td align="center">&nbsp;</td></tr>
+<tr><td>Monograph</td><td align="center">&nbsp;</td><td align="center">1</td><td align="center">&nbsp;</td></tr>
+<tr><td>Report</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">16</td></tr>
+<tr><td>Generic</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">36</td></tr>
+<tr><td>Web Page</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">14</td></tr>
+<tr><td>Newspaper Article</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">5</td></tr>
+<tr><td>Book Section</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">1</td></tr>
+<tr><td>Map</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">1</td></tr>
+<tr><td>Hearing</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">1</td></tr>
+<tr><th align="left">Totals</th><th>3,765</th><th>793</th><th>622</th></tr>
+</table>
+
+<p>Table 1 shows the distribution of references that in actual have at least one of the three possible IDs. For example, number of references having an ISBN ID is the sum of references to [Book Whole (777) + Book Edited (15) + Monograph (1)], which totals to 793. There are other reference types that have ISBN numbers, but they are not included in ISBN count  (i.e. towards references that are resolved via ISBN query) because those references are defined under reference type other than Book Whole, Book Edited, and Monograph. Similarly, there are 3,765 references having DOIs. However, all references having a URL, regardless of their reference type, are counted towards the references that can be resolved via URL query, because a URL in any reference can lead us to its online source, in which case it would be considered resolvable.</p>
+
+<p>Not all the IDs that were available in the reference collections resolved to their respective online sources. Reasons varied from reference not available online to mal-formatted IDs to actually incorrect IDs. Figure 2 shows the original resolvability of users' personal reference collections. Out of the total of 30,336 references, there were 5,180 references that had an ID, out of which 3,247 actually resolved, giving a total original resolvability of 10.70%.</p>
+
+<table width="50%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #ffffff">
+  <caption align="bottom">
+  <br />
+  <strong>Figure 2: Original resolvability</strong> 
+  </caption>
+  <tr> 
+    <td width="50%" align="center"><img src="colis13fig2.gif" width="24" height="22" alt="present"/>Present 
+      <br />
+      3,765+793+622 = 5,180 (17.07%)</td>
+    <td width="50%" align="center"><img src="colis13fig3.gif" width="24" height="24" alt="resolved"/>Resolved 
+      <br />
+      1,932+771+544 = 3,247 (10.70%)</td>
+  </tr>
+  <tr> 
+    <td colspan="2" align="center"><img src="colis13fig4.gif" width="353" height="198" alt="original resolvability" /></td>
+  </tr>
+</table>
+
+<h2>Resolving references</h2>
+<p>We used a combination of reference resolving queries to asses the resolvability of references in our dataset.</p>
+<ul>
+<li><b>DOI Query Interface</b> - For all the references that were to articles in Journal, in Conference Proceedings, and in Journal-Electronic, we created a query using the available information in the reference, and submitted it to CrossRef.org  for fetching its DOI. The only required values being a journal title and either author or first page to help identify the article. The remaining fields are optional, but recommended.</li>
+<li><b>OpenURL Query Interface</b> - Similar to DOI Query Interface, CrossRef provides an OpenURL interface that also fetches the DOIs. The key information for these queries is author last name, journal title, publication year, volume, issue and date. We used this query to augment the resolvability in the DOI Query.</li>
+<li><b>ISBN Query Interface</b> - WorldCat Libraries (http://www.worldcat.org/)  provides an interface for querying a specific title, based on ISSN or ISBN. Since ISBN uniquely identifies a reference, whereas an ISBN is a unique identifier for a collection, we limited this query interface to references of only the types that could possibly have an ISBN number i.e. to references to Book Whole, Book Edited, and to Monograph. A successful query returned the ISBN ID for the reference.</li>
+<li><b>URL Validation</b> - References having a URL were validated against their online sources i.e. if the URL existed, the reference was concluded to have a valid ID.</li>
+</ul>
+
+<table width="50%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #ffffff">
+<caption align="bottom"><br /><strong>Figure 3: Resolvability computation</strong></caption>
+<tr>
+    <td align="center"> <img src="colis13fig5.gif" width="318" height="164" alt="resolvability computation"/></td>
+  </tr>
+<tr><td align="center" >Resolvability = 60+1+8646+213+321+1349+1914+9 = 12,513 (41.25%)</td></tr>
+</table>
+
+<p>We executed four different queries to assess the resolvability of our dataset. Recall that when a query fetched a valid unique ID for a refernce, the reference was concluded to be resolved.  Figure 3 shows the breakdown of the four queries, and the contribution of each towards the cumulative resolvability. The cumulative resolvability is expressed in terms of the cumulative resolvability of the three valid IDs i.e. DOI, ISBN and URL. ISBN query resolved 1,349 references with ISBN IDs, whereas URL validation resolved 544 references. However, out of the 544 references with URL, there were 223 references that had a valid DOI as well. These DOIs were fetched using one of the two queries - OpenURL query, or DOI query. Together, the two queries resolved 11,164 references with valid DOI IDs, with an overlap of 8859 references between them. ISBN query did not have any overlap with any other query.</p>
+<p>Almost all but 61 DOIs that were resolved by OpenURL query were also resolved by the DOI query. Additionally, DOI query resolved another 1,923 valid unique DOIs that OpenURL query could not. These numbers should be interpreted mindful of the fact that all these resolved references include the references that resolved in the original dataset as well i.e. 3,247 (figure 2). The total resolvability from figure 3 can thus be computed by summing up all the individual components, which comes out to be 12,513 references, or approximately 41.25% of the total references.</p>
+
+<h2>Discussion</h2>
+<p>Since a large number of references with unique IDs had DOIs (figure 1), we wanted to ensure their validity i.e. if the reference type had been correctly assigned to the references. We created a random sample of 100 references to articles in Journals and in Conference Proceedings, and manually verified them online. Only 3 of the 100 references could not be traced back to their respective online sources, giving us an assurance that at least 97% of the total references with DOIs were indeed references to articles in Journals and in Conference Proceedings.</p>
+<p>Our resolvability computation (figure 3) found that over 41% of references in our dataset are reliable and accurate. This is significantly higher than the original resolvability (10.70%, figure 2). We expect the computed resolvability of the references to be even higher, because not all the intellectual content has been digitized yet. So, if there were any references that did not have any DOIs, we assumed them to be not resolvable programmatically. However, as the visual inspection results revealed, the very same references could actually be resolved.</p>
+<p>We noticed that some references had ISBN numbers even when they did not belong to any of the reference types - Book Whole, Book Edited, and Monograph. Similar was the case with DOIs. References in such cases were ignored for this study, and were not attempted to resolve. However, we believe that a closer look at these might uncover references that either have an incorrect reference type, or are additional reference types that can possibly have a valid unique ID.</p>
+<p>We resolved the references via querying them at some of the authoritative resolvers in the digital libraries arena, i.e., CrossRef and WorldCat Libraries, which provide services, as well as the APIs to accomplish the reference lookup. However, we believe that adding additional services for lookup (for example, Citation Matcher from PubMed) will considerably enhance the resolvability.</p>
+<p>The original dataset from RefWorks did not differentiate between references with ISBN numbers, and the ones with ISSN numbers. An ISBN is a unique ten or a thirteen digit ID of an intellectual entity called a book. The ISSN is a unique ID of a much larger package called a journal which may contain thousands of intellectual entities called articles, many, though not all, are now digital. We needed to separate these two types of references to accurately compute resolvability because a single ISSN applies to the entire population of references within a journal, and is not a unique ID of a reference. We used the checksum verification, and the format checking to ensure that we take into account only the references with ISBN numbers, and not the ones with ISSN numbers.</p>
+
+<h2>Results and contributions</h2>
+<p>To understand the nature of users' personal reference collections in terms of their resolvability, and how it could be used to enhance library services such as building a reference recommender system, we examined 30,336 references maintained by 96 users. These users were selected from faculty, researchers, graduates, and undergraduates who used RefWorks reference management web-based tool at the University of Minnesota. The references in users' collections were of many different types, including but not limited to references to Journals, to Books, to Reports, and to Web pages.</p>
+<p>To the best of our knowledge, there has not been any study that evaluates resolvability of users' personal references collections. In this study, we establish an in-depth understanding of uniquely identifying such collections, and assessing their quality in terms of their resolvability. Using the composite approach to resolvability, we were able to enhance the original resolvability of these collections from under 11% to over 41%. We should state that this is a complementary reference resolution technique that should not attempt to replace formal reference resolution methods, but rather augment them.</p>
+<p>With over 90% of potentially resolvable references, we believe, users' personal collections have a tremendous potential of building, and supporting digital library services. Vastly enhanced resolvability of these collections allows more perspective to the designers of systems like reference recommender systems, and offers them endless opportunities to build tools, and personalized digital library services that are built on top of personal collections.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>We would like to thank RefWorks for allowing us to use a reference-sharing feature to harvest references from consenting participants. This research is funded by a grant from the University of Minnesota Libraries, and grant IIS- 0534939 from the National Science Foundation.</p>
+
+<form action="#">
+<fieldset>
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+  <ul>
+    <li><a id="car73" name="car73"></a>Carpenter, M.P.; Narin, F. 1973. Clustering 
+      of scientific journals. <em>Journal of the American Society for Information 
+      Science, </em><strong>24</strong>(6), 425-436</li>
+    <li> <a id="gar55" name="gar55"></a>Garfield, E. 1955. Citation indexes for 
+      science: A new dimension in documentation through association of ideas. 
+      <em>Science </em><strong>122</strong>(July 1955), 108-111, 473-476</li>
+    <li><a id="kes63" name="kes63"></a>Kessler, M.M. 1963. Bibliographic coupling 
+      between scientific papers. <em>American Documentation</em>,<em> </em><strong>14</strong>(Jan. 
+      1963), 10-25</li>
+    <li><a id="mal95" name="mal95"></a>Maltz, D. and Ehrlich, K. 1995. Pointing 
+      the way: active collaborative filtering. In I. R. Katz, R. Mack, L. Marks, 
+      M. B. Rosson, and J. Nielsen ( Eds.) Conference on Human Factors in Computing 
+      Systems (pp 202-209). New York, NY: ACM Press/Addison-Wesley Publishing 
+      Co.</li>
+    <li><a id="mcn02a" name="mcn02"></a>McNee, S., Albert, I., Cosley, D., Gopalkrishnan, 
+      P., Lam, S.K., Rashid, A.M., Konstan, J.A., &amp; Riedl, J. (2002). On the 
+      Recommending of Citations for Research Papers.<em> Proceedings of ACM 2002 
+      Conference on Computer Supported Cooperative Work (CSCW2002)</em>, 116-125</li>
+    <li><a id="mcn06" name="mcn06"></a>McNee, S. M., Kapoor, N., and Konstan, 
+      J. A. 2006. <a href="http://doi.acm.org/10.1145/1180875.1180903">Don't look 
+      stupid: avoiding pitfalls when recommending research papers</a>. <em>Proceedings 
+      of the 2006 Anniversary Conference on Computer Supported Cooperative Work</em>, 
+      20, 171-180. Retrieved 3 October, 2007 from http://doi.acm.org/10.1145/1180875.1180903</li>
+    <li><a id="mid04" name="mid04"></a>Middleton, S. E., Shadbolt, N. R., and 
+      De Roure, D. C. 2004. <a href="http://doi.acm.org/10.1145/963770.963773">Ontological user profiling in recommender systems</a>. 
+      <em>ACM Transactions on Information Systems, </em><strong>22</strong>(1) 
+      (Jan. 2004), 54-88. Retrieved 3 October, 2007 from http://doi.acm.org/10.1145/963770.963773</li>
+    <li><a id="ras02" name="ras02"></a>Rashid, A. M., Albert, I., Cosley, D., 
+      Lam, S. K., McNee, S. M., Konstan, J. A., and Riedl, J. 2002. Getting to 
+      know you: learning new user preferences in recommender systems. <em>Proceedings 
+      of the international Conference on intelligent User interfaces</em>, 7, 
+      127-134.</li>
+    <li><a id="sma73" name="sma73"></a>Small, H. 1973. Co-citation in the scientific 
+      literature: A new measure of the relationship between two documents. <em>Journal 
+      of the American Society for Information Science, </em><strong>24</strong>(4), 
+      265-269</li>
+    <li><a id="tor04" name="tor04"></a>R. Torres, S.M. McNee, M. Abel, J.A. Konstan, 
+      and J. Riedl. Enhancing Digital Libraries with TechLens+. <em> Proceedings 
+      of the ACM/IEEE Joint Conference on Digital Libraries,</em> 228-237</li>
+  </ul>
+</fieldset>
+</form>
+
+<form action="#">
+<fieldset>
+<legend style="color: white; background-color: maroon; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">How to cite this paper</legend>
+<div><br />
+    Kapoor, N., Butler, J.T., Fouty, G.C., Stemper, J.A. &amp; Konstan, J.A. (2007). 
+    &quot;Resolvability of references in users' personal collections&quot; <em>Information 
+    Research</em>, <strong>12</strong>(4) paper colis13. [Available at http://InformationR.net/ir/12-4/colis/colis13.html]</div>
+
+</fieldset>
+</form>
+
+<table cellspacing="10" align="center">
+	<tr>
+		<td colspan="3" align="center" style="background-color: maroon; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>
+	<tr>
+		<td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;Digital libraries&quot; &quot;reference resolution&quot; resolvability bibliometrics &quot;information retrieval&quot; &quot;recommender systems&quot;"></input> <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+
+</form>
+		</td>
+		<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+			<table bgcolor="#ffffff">
+				<tr>
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;Digital libraries&quot; &quot;reference resolution&quot; resolvability bibliometrics &quot;information retrieval&quot; &quot;recommender systems&quot;"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+</td>
+<td align="center" valign="top">
+<form method="get" action="http://www.live.com/" target="_blank">
+			<table bgcolor="#ffffff">
+				<tr>
+
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;Digital libraries&quot; &quot;reference resolution&quot; resolvability bibliometrics &quot;information retrieval&quot; &quot;recommender systems&quot;"></input> <br />
+<input type="submit" name="sa" value="Windows Academic"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+					</td>
+				</tr>
+			</table>
+</form>
+
+		</td>
+	</tr>
+
+</table>
+
+<br />
+<hr size="1" style="color: maroon;" />
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/colis13" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+<td align="center" valign="top"><div> &copy; the authors, 2007. <br />
+        Last updated: 18 August, 2007</div></td>
+
+         <td align="center" valign="middle"><img src="../../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('colis13.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+</table>
+<hr size="1" style="color: maroon;" />
+
+<table align="center"><tr><td><div class="button">
+
+      <ul>
+        <li><a href="colis.html">Contents</a> |  </li>
+        <li><a href="../../iraindex.html">Author index</a> |  </li>
+        <li><a href="../../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../../search.html">Search</a> |  </li>
+        <li><a href="../infres124.html">Home</a>  </li>
+   </ul>
+</div></td></tr></table>
+
+<hr size="3" style="color: maroon ;" />
+
+</body>
+
+<!-- Mirrored from informationr.net/ir/12-4/colis/colis13.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:24 GMT -->
+</html>

@@ -1,0 +1,1410 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<!-- Mirrored from informationr.net/ir/7-2/paper127.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:15:44 GMT -->
+<head>
+<title>The RATF Formula (Kwok's Formula): Exploiting Average Term Frequency in Cross-Language Retrieval</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="<span>Microsoft</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Word 97">
+   <meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> content="In an earlier study, we presented a query key goodness scheme, which can be used to <span>separate</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>between good and bad query keys. The scheme is based on the relative average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency (RATF) <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of query keys. In the present paper, we tested the effectiveness of the scheme in Finnish to <span>English</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>cross-language retrieval in several experiments. Query keys were weighted and queries were reduced based on the RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of keys. The <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>were carried out in TREC and CLEF document collections using the InQuery retrieval system. The TREC <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>indicated that the best RATF-based queries delivered substantial and statistically significant <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>improvements, and performed as well as syn-structured queries shown to be effective in many CLIR studies. The CLEF <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>indicated the limitations of the use of RATF in CLIR. However, the best RATF-based queries performed better than baseline queries also in the CLEF <span>collection</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>">
+   <meta name="rating" content="Mature">
+   <meta name="VW96.objecttype" content="Document">
+   <meta name="ROBOTS" content="ALL">
+   <meta name="DC.Title" content="The RATF Formula (Kwok's Formula): Exploiting Average Term Frequency in Cross-Language Retrieval">
+
+   <meta name="DC.Creator" content="Ari Pirkola;Erkka Leppänen;Kalervo Järvelin">
+   <meta name="DC.Description" content="In an earlier study, we presented a query key goodness scheme, which can be used to <span>separate</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>between good and bad query keys. The scheme is based on the relative average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency (RATF) <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of query keys. In the present paper, we tested the effectiveness of the scheme in Finnish to <span>English</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>cross-language retrieval in several experiments. Query keys were weighted and queries were reduced based on the RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of keys. The <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>were carried out in TREC and CLEF document collections using the InQuery retrieval system. The TREC <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>indicated that the best RATF-based queries delivered substantial and statistically significant <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>improvements, and performed as well as syn-structured queries shown to be effective in many CLIR studies. The CLEF <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>indicated the limitations of the use of RATF in CLIR. However, the best RATF-based queries performed better than baseline queries also in the CLEF <span>collection</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>">
+   <meta name="DC.Publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>T.D. Wilson">
+   <meta name="DC.Coverage.PlaceName" content="Global">
+   <meta name="GENERATOR" content="Mozilla/4.6 [en] (Win95; I) [Netscape]">
+   <title>The RATF Formula (Kwok's Formula): Exploiting Average Term Frequency in Cross-Language Retrieval</title>
+<link rel="stylesheet" href="../IRstyle.css">
+<link REV=made href="mailto:t.d.wilson@shef.ac.uk">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center" colspan="5"><h4>Information Research, Vol. 7 No. 2, January 2002,</h4></td></tr>
+  <tr> 
+    <td><a href="infres72.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3>
+
+<h1>The RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>(Kwok's formula): exploiting average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency in cross-language retrieval </h1> 
+<!--Insert your title in the field above-->
+
+<h4><a href="mailto:pirkola@cc.jyu.fi">Ari Pirkola</a>,
+Erkka Lepp&auml;nen and Kalervo J&auml;rvelin<br>
+Department of Information Studies<br>
+University of Tampere<br>
+Finland</font></i></h4>
+
+<br>
+
+<div align="center" style="font-family: sans-serif; font-size: medium; font-weight: bold;"><b>Abstract</b></div>
+<br>
+
+
+<blockquote><i>In an earlier study, we presented a query key goodness scheme,
+which can be used to <span>separate</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>between good and bad query keys. The scheme
+is based on the relative average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency (RATF) <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of query
+keys. In the present paper, we tested the effectiveness of the scheme in
+Finnish to <span>English</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>cross-language retrieval in several experiments. Query
+keys were weighted and queries were reduced based on the RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of
+keys. The <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>were carried out in TREC and CLEF document collections
+using the InQuery retrieval system. The TREC <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>indicated that the best
+RATF-based queries delivered substantial and statistically significant
+<span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>improvements, and performed as well as syn-structured queries
+shown to be effective in many CLIR studies. The CLEF <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>indicated the
+limitations of the use of RATF in CLIR. However, the best RATF-based queries
+performed better than baseline queries also in the CLEF <span>collection</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></i></blockquote>
+ 
+<br> 
+<h2>Introduction</h2>
+ 
+<p>Standard best-match retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>are based on the tf.idf weighting scheme (e.g., <a href="#Robertson95">Robertson, <i>et</i> <i>al</i>., 1995</a>; <a href="#Salton89">Salton, 1989</a>; <a href="#Singhal96">Singhal, <i>et al</i>., 1996</a>; <a href="#Turtle90">Turtle, 1990</a>). The basic idea of tf.idf weighting is that the more occurrences a query key has in a document and the fewer there are <span>documents</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>where the
+key <span>occurs</span>, <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> the more likely the document is to be relevant with respect to the query. However, tf.idf does not <span>necessarily</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>indicate the goodness of keys, e.g., in some relevant <span>documents</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>an important key may <span>occur</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>just once, though it generally has high tf in <span>documents</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p> 
+
+
+<p>In an earlier study we demonstrated that the use of <i>average term
+frequencies</i> of keys as key weights contributes to better retrieval
+<span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in monolingual IR (<a href="#Pirkola01b">Pirkola and J&auml;rvelin,
+2001b</a>). We developed <i>a query key goodness scheme</i> that calculates
+goodness weights for keys on the basis of cf/df (average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency)
+and df statistics of a document <span>collection</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> Cf stands for <i>collection
+frequency</i> and <span>refers</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to the number of occurrences of a key in a <span>collection</span>, <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>
+and df stands for <i>document frequency</i> and <span>refers</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to the number of
+<span>documents</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in which the key <span>occurs</span>. <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> The key goodness scheme (called RATF
+<span>formula</span>, <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> where RATF <span>refers</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to <i>relative average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency</i>) was
+tested through several experiments in monolingual retrieval in a TREC <span>collection</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>
+The highest ranked keys by the RATF scheme were weighted higher than other
+keys structurally and using the RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>as query key and subquery weights.
+The <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>indicated that RATF-based key weighting as well as RATF-based
+query structuring delivered substantial and statistically significant performance
+improvements.</p>
+
+<p>In the title of this paper the <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span><i>Kwok's <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></i>is used as
+a synonym to the term<i> RATF <span>formula</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> </i>This is because the basic idea
+of the RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>is the same as that behind the query key weighting
+<span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>presented by Kwok in <a href="#Kwok96">1996</a>: important keys
+often have high average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency and low document frequency - therefore
+it is often useful to <span>weight</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>high such keys in queries. We developed the
+RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span><span>independently</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>based on our <span>findings</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in Pirkola and J&auml;rvelin
+(<a href="#Pirkola01a">2001a</a>), which showed that typically 1-2 query
+keys have far higher cf/df and far lower df than the other keys of a query.
+Kwok (<a href="#Kwok96">1996</a>) used his scheme for query key weighting
+in monolingual retrieval and was able to show clear improvements in retrieval
+<span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>owing to the use of his <span>formula</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> In this study we will test
+whether the RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>is useful in <i>cross-language information retrieval</i>.</p>
+
+<p>Cross-language information retrieval (CLIR) <span>refers</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to an information
+retrieval task where the language of queries is other than that of the
+retrieved <span>documents</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> Different <span>approaches</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to cross-language retrieval are
+discussed in Oard and Diekema (<a href="#Oard98">1998</a>). <span>A+</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>standard
+method in dictionary-based CLIR is to replace each <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language key
+by all of its target language equivalents included in a translation dictionary
+(<a href="#Pirkola98">Pirkola, 1998</a>; <a href="#Pirkola01">Pirkola,
+<i>et al</i>., 2001</a>). Dictionaries typically give several <span>translations</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for
+one <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language word, and the number of mistranslated keys, i.e., the
+keys that have <span>wrong</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>meanings in the context of the <span>topic</span>, <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> in a CLIR query
+(the final <span>translated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>query) is usually high. We argued that the RATF formula
+could be exploited in the same way in cross-language retrieval as in monolingual
+retrieval to improve query <span>performance</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> We thus assumed that by applying
+RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>as key and subquery weights CLIR queries will perform well
+despite the abundance of mistranslated and other bad keys. This is because
+many of the bad keys are general words whose RATFs are low, and when RATF
+<span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>are used as key weights bad keys are downweighted with respect to
+the more specific important keys which typically have high RATFs.</p>
+
+<p>This approach as a starting point, we will examine in this paper the
+utilization of the RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in CLIR. We will <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>the effectiveness
+of the <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>by using the same RATF weighting method as in Pirkola and
+J&auml;rvelin (<a href="#Pirkola01b">2001b</a>), where RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of keys
+as such were used key weights. We will also develop and <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>new RATF-based
+key weighting methods that particularly are suited for CLIR. We will also
+explore whether the removal of keys with low RATFs will improve retrieval
+<span>performance</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> The RATF-based CLIR queries are compared with <i>syn-queries</i>.
+In many studies the syn-queries of the <i>Inquery retrieval system</i>
+
+have been demonstrated to perform very well in CLIR (<a href="#Ballesteros98">Ballesteros
+and Croft, 1998</a>; <a href="#Gollins00">Gollins, 2000</a>; <a href="#Hedlund01a">Hedlund,
+<i>et al</i>., 2001a</a>; <a href="#Meng00">Meng, <i>et al</i>., 2000</a>;
+<a href="#Pirkola98">Pirkola, 1998</a>; <a href="#Pirkola00">Pirkola, <i>et al</i>., 2000</a>; <a href="#Oard01">Oard and Wang, 2001</a>; <a href="#Sperer00">Sperer and Oard, 2000</a>).</p>
+
+<p>The <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>presented in this paper were performed using TREC and CLEF
+(<a href="#Peters00">Peters, 2000</a>) document collections as <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>collections.
+The TREC <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>contained 515,000 <span>documents</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>and the CLEF collection
+some 112,000 <span>documents</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> As <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>requests we used 50 TREC and 50 CLEF topics.
+The title and <span>description</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>fields of the topics were <span>translated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>by a professional
+translator into Finnish. The Finnish words were <span>translated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>back to English
+by means of an automatic translation system. The automatically translated
+words were used as query keys in the CLIR queries. Several RATF-based weighting
+methods were tested. As a <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>system we used the Inquery retrieval system.
+We will demonstrate that query key weighting based on the RATF formula
+will yield substantial <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>improvements in cross-language retrieval
+with respect to queries where no disambiguation method is applied. However,
+we will also show that there are restrictions in applying RATF in CLIR.</p>
+
+<p>The <span>remainder</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of this paper is structured as follows. Section 2 presents
+the RATF <span>formula</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> Section 3 describes the methodology, and Section 4 the
+<span>findings</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> Sections 5 and 6 contain the discussion and conclusions.
+
+<h2>The RATF formula</h2>
+
+<p>The RATF scheme computes <i>relative average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency</i> <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for keys. The scheme is defined as the function RATF as follows:</p> 
+
+<p>Let <i>k</i> denote some key of a <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>and cf<sub>k</sub> its <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency, and df<sub>k</sub> its document frequency. Let <i>SP</i> be a <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>dependent scaling parameter, and <i>p</i> the power parameter.
+The function RATF(<i>k</i>) gives the relative average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency of the key <i>i.</i></p>
+
+<blockquote>RATF(<i>k</i>) = (cf<sub>k </sub>/ df<sub>k</sub>) * 10<sup>3</sup>
+/ <i>ln</i>(df<sub>k</sub> + <i>SP</i>)<i><sup>p</sup></i></blockquote>
+
+<p>The RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>gives high <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for the keys whose atf (i.e., cf/df) is high and df low. The scaling parameter <i>SP</i> is used to downweight rare words. In our training experiments, <i>SP</i> = 3000 and <i>p </i>=3, gave the best query <span>performance</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> SP = 3000 was used in the TREC <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of this study. In the CLEF <span>tests</span>, <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> the SP value of 800 was used based on the relative <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>sizes of the TREC and CLEF collections. RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>were assigned automatically to the words using a <span>program</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>produced for this study.</p>
+
+<p>Table 1 presents an example of a RATF value set, showing RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for the words of the <span>description</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>field of the TREC <span>topic</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>51 (the stop-words <i>to, or, a, between,</i> <i>and, over, the, of</i> as well as <span>duplicates</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>were first removed), as well as document frequencies and average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequencies of the words. The <span>description</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the <span>topic</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>51 is as follows:</p>
+
+<ul>
+<li><i>Document will <span>discuss</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>government assistance to Airbus Industrie, or mention a trade <span>dispute</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>between Airbus and a United States aircraft producer over the issue of sub0ies.</i></li>
+</ul>
+
+<p>Table 2 presents the RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for the retranslated words of the Topic 51. The words above (excluding stop-words) were first manually <span>translated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>into Finnish and then <span>translated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>back to <span>English</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>using an automatic translation system and a <span>program</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>that automatically assigns RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to words. (The <span>dictionary</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>gave 60 translations; in Table 2 only the words with the highest and lowest RATFs are presented).</p>
+
+<p>In Tables 1 and 2, words are sorted by their RATF <span>values</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> In both cases the word <i>Airbus</i> is ranked high. Note that its atf is high and df low (Table 1). If key weighting is solely based on the tf.idf weighting scheme, the word <i>mention</i> might have a strong influence on <span>search</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>results because of its low df, though it apparently is non-topical. The RATF <span>formula</span>, <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> however, ranks it low because of its low atf. </p>
+
+<p>The <span>figures</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in Table 2 <span>suggest</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>that the RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>is effective in CLIR. The <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>gives high <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for the important <span>topic</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>words (<i>Airbus</i>, <i>sub0y</i>), and low <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for mistranslated and other bad words. However, automatic translation provides some pecularities. The form <i>industrielle </i>is a Finnish inflectional form of the word <i>Industrie</i>. The morphological analyzer did not recognize the form, and it <span>occurs</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in its Finnish form in the <span>list</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of Table 2, as well as in the CLIR query. The word <i>interstice</i> is an example of a mistranslated word whose RATF is high.</p>
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=4 WIDTH="378" >
+<caption align="bottom"><br><b>Table 1: Df, atf, and RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for the words of the TREC <span>topic</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>51</b></caption>
+
+<tr>
+<th VALIGN=TOP WIDTH="25%" HEIGHT="32"> Word</th>
+<th VALIGN=TOP WIDTH="25%" HEIGHT="32">RATF</th>
+<th VALIGN=TOP WIDTH="25%" HEIGHT="32">DF</th>
+<th VALIGN=TOP WIDTH="25%" HEIGHT="32">ATF</th>
+</tr>
+
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">airbus</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">3,74</td>
+
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">663</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">2,07</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">sub0ies</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">2,86</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">3063</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,89</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">industrie</td>
+
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">2,39</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">262</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,27</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">trade</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">2,27</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">38039</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">2,73</td>
+</tr>
+
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">aircraft</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">2,09</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">9719</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,76</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">document</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,62</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">17306</td>
+
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,58</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">government</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,59</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">90080</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">2,39</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">assistance</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,53</td>
+
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">13940</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,41</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">dispute</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,48</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">11359</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,30</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">states</td>
+
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,39</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">139126</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">2,32</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">united</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,38</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">63172</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,89</td>
+</tr>
+
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">mention</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,34</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">8731</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,11</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">producer</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,17</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">45584</td>
+
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,47</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">issue</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,16</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">63640</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,58</td>
+</tr>
+<tr>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">discuss</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">0,91</td>
+
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">48523</td>
+<td align="center" VALIGN=TOP WIDTH="25%" HEIGHT="1">1,16</td>
+</tr>
+</table>
+
+<br>
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=4 WIDTH="378" >
+<caption align="bottom"><br><b>Table 2: RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for the re-translated words of the TREC <span>topic</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>51</b></caption>
+<tr>
+<th VALIGN=TOP WIDTH="25%" HEIGHT="32"> Word </th>
+<th VALIGN=TOP WIDTH="25%" HEIGHT="32"> RATF </th>
+
+<th VALIGN=TOP WIDTH="25%" HEIGHT="32"> Word </th>
+<th VALIGN=TOP WIDTH="25%" HEIGHT="32"> RATF </th>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">industrielle</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">5,29</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">bargain</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,91</td>
+</tr>
+
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">airbus</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">3,74</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">aid</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,87</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">engine</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">2,93</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">shop</td>
+
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,86</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">sub0y</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">2,86</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">gap</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,85</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">interstice</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">2,36</td>
+
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">merit</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,75</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">flight</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">2,32</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">originate</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,72</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">trade</td>
+
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">2,27</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">machine</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,68</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">transaction</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">2,09</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">controversy</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,67</td>
+</tr>
+
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">motor</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">2,05</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">distance</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,64</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">contrivance</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">2,04</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">...</td>
+
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">-</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">talent</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,97</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">existence</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,11</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">apparatus</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,96</td>
+
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">help</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,06</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">collaborate</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,95</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">come</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,02</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">virtue</td>
+
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,92</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">develop</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,01</td>
+</tr>
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">space</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,91</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">time</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">0,99</td>
+</tr>
+
+<tr>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">interval</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">1,91</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">relation</td>
+<td align="center" VALIGN="TOP" WIDTH="25%" HEIGHT="1">0,98</td>
+</tr>
+</table>
+
+<br>
+
+<h2>Methods and data</h2>
+
+<h3>Test collections, requests, and query formulation</h3>
+
+<p>In this study we used the same <i>training request</i> <i>set</i> as in the monolingual retrieval <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in Pirkola and J&auml;rvelin (<a href="#Pirkola01b">2001b</a>). The training request set <span>consisted</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the TREC topics 51-75 and 101-125. In this study the training queries were used in the development of different RATF-based query types, and in determining the threshold RATFs. </p>
+
+<p><i>The TREC <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>request</i> <i>set</i> <span>consisted</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the TREC Topics
+76-100 and 126-150. The <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>queries used in the <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of this paper were
+<span>formed</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>from the <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>requests. The TREC topics 101-150 are narrower in
+scope and have fewer relevant <span>documents</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>than the topics 51-100 (<a href="#Harman93">Harman,
+1993</a>). The average <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>level of the queries 51-100 is higher
+than that of the queries 101-150. To get a representative <span>sample</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of different
+types of topics (narrow and broad), the <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>request set (as well as the
+training request set) was <span>formed</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>from two different TREC <span>topic</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>sets with
+topics of different <span>characteristics</span>. <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> The words of the (1) title and (2)
+title and <span>description</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>fields of the TREC request sets were used as query
+keys. The former queries are called <i>short queries</i> and the latter
+ones <i>long queries</i>.</p>
+
+<p><i>The CLEF <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>request</i> <i>set</i> <span>contained</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>CLEF 2001 topics (50
+topics). The words of the title and <span>description</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>fields of the topics were
+used as query keys. The TREC and CLEF queries differed from each other,
+first, in that unlike TREC queries duplet keys were retained in the CLEF
+queries. Second, in the CLEF <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>proper <span>names</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>and other words not contained
+in the translation <span>dictionary</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>were <span>translated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>by an n-gram matching method.
+The method is described in detail in the paper by Pirkola and colleagues
+in this issue of <i>Information Research</i>.</p>
+
+<p>A professional translator <span>translated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>the TREC and CLEF topics (title
+and <span>description</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>fields) into Finnish according to the guidelines provided
+by CLEF (<a href="#Peters00">Peters, 2000</a>). The Finnish words were
+retranslated to <span>English</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>using an automatic query translation and construction
+system developed in the Information Retrieval Laboratory at the University
+of Tampere (UTA). The different query versions tested in this study were
+formulated manually, however. The language and query processing components
+of the automatic query translation and construction system are described
+in detail in Hedlund, <i>et al</i>. (<a href="#Hedlund01a">2001a</a>) and
+Pirkola, <i>et al</i>. (<a href="#Pirkola01">2001</a>).</p>
+
+<h3>Retrieval system and query operators</h3>
+
+<p>As a <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>system, the study used the <i>Inquery retrieval system</i> (<a href="#Allan00">Allan,
+<i>et al</i>., 2000</a>; <a href="#Broglio94">Broglio, <i>et al</i>., 1994</a>). <span>English</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>keys and the words of <span>documents</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>were normalized using the morphological analyzer <i>Kstem</i>, which is part of Inquery. Inquery is based on Bayesian
+<span>inference</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>networks. All keys are attached with a <i>belief value</i>, which is calculated by the tf.idf modification of the system (<a href="#Allan00">Allan, <i>et al</i>., 2000</a>):</p>
+
+<div align="center"><img src="p127fig1.gif" width="584" height="220" border="0" alt=""></div>
+
+<p>tf<sub>ij</sub> = the frequency of the query key i in the document j<br>
+df<sub>i</sub> = the number of <span>documents</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>which contain the query key i<br>
+dl<sub>j</sub> = the <span>length</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the document j (in words)<br>
+
+adl = average document <span>length</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in the <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>(in words)<br>
+N = the number of <span>documents</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in the collection</p>
+
+<p>The value 0.4 is a default value given to a key not occurring in a document.</p>
+
+<p>The Inquery query language provides a set of operators to specify relations between quey keys.</p>
+
+<p>For the <i>sum</i>-operator, the system computes the average of key (or subquery) weights. The keys <span>contained</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in the <i>weighted sum</i> (<i>wsum</i>) operator are weighted according to the <span>weight</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>value associated with each key (or subexpression). The final belief score, a weighted average, is scaled by the <span>weight</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>value associated with the <i>wsum</i> itself.</p>
+
+<p>The <i>syn</i>-operator treats its operand <span>search</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>keys as instances of the same <span>search</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>key. For the keys linked by the syn-operator, an aggregate document frequency is computed <span>instead</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of individual document frequencies for every key (<a href="#Sperer00">Sperer and Oard, 2000</a>).</p>
+
+<p>The <i>uwn</i>-operator (unordered window) is a proximity operator. It only retrieves the <span>documents</span>, <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> which contain the arguments of the operator within the defined window.</p>
+
+<p>In queries, the operators are marked by the hash sign "#", e.g., #sum and #wsum. Commas are not needed between query keys or their weights. Therefore, #sum(south africa sanctions) and #wsum(1 2 south 2 africa 1 sanctions) are well-formed <span>expressions</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in the InQuery query language.</p>
+
+<h3>Baseline and <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>queries</h3>
+
+<p>In this section, we will describe the baseline and <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>queries (CLIR queries) <span>investigated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in the study. The following notations will be used:</p>
+
+<p>The translation equivalents (included in a dictionary) of <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language keys <span>A+</span>, <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> B, C ... are the sets {a<sub>1</sub>, ..., a<sub>n</sub>}, {b<sub>1, ..., bm</sub>}, {c<sub>1, ..., ck</sub>}, ..., <span>respectively</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>  Similarly, the translation equivalents of the components of a <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language compound <i>AB </i>are the sets {a<sub>1</sub>, ..., a<sub>n</sub>} and {b<sub>1,
+..., bm</sub>}. In query language <span>expressions</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>below the translation equivalents are just enumerated, without intervening commas and braces, following the InQuery query language syntax.</p>
+
+<p>The RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the words (translation equivalents) {a<sub>1</sub>, ..., a<sub>n</sub>}, {b<sub>1</sub>, ..., b<sub>m</sub>},..., are <span>denoted</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>by RATF(a<sub>1</sub>), ..., RATF(a<sub>n</sub>), RATF(b<sub>1</sub>), ..., RATF(b<sub>m</sub>), ... .</p>
+
+<p>The average of the RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the translation equivalents in an equivalent set, e.g., S<sub>A</sub> = {a<sub>1</sub>, ..., a<sub>n</sub>} is <span>denoted</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>by <i>avgRATF</i>(S<sub>A</sub>). Its value is given by:</p>
+
+<blockquote>| S<sub>A</sub> |<sup>-1</sup>* <font face="Symbol">S</font><sub>a<font face="Symbol">e</font>S<sub>A</sub></sub></font> RATF(a)</blockquote>
+
+
+
+<p><i>AekvRATF</i>({a<sub>1</sub>, ..., a<sub>n</sub>}) denotes key weighting where the average RATF of the words {a<sub>1</sub>, ..., a<sub>n</sub>}is reduced on the basis of the number of translation equivalents in an equivalent set (Section 3.3.2.). The rationale behind aekvRATF(S<sub>A</sub>) is that that those keys (concepts) that have many <span>translations</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in another language <span>probably</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>are harmful or less important than the keys that only have a few <span>translations</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>
+Its value is given by:</p>
+
+<blockquote>aekvRATF(S<sub>A</sub>) = <i>avgRATF</i>(S<sub>A</sub>), if |S<sub>A</sub>| &lt; <i>c</i></blockquote>
+
+<blockquote>aekvRATF(S<sub>A</sub>) = <i>avgRATF</i>(S<sub>A</sub>) - 0.2*(|S<sub>A</sub>|-<i>c</i>), if |S<sub>A</sub>|> <i>c</i></blockquote>
+
+ 
+<p>Here <i>c</i> is a <span>constant</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>parameter <span>setting</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>the <span>limit</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for excessive number of <span>translations</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> It is <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>dependent and derived experimentally. In our experiments we employed <i>c</i> = 3.</p>
+
+<p>For example, the following 8 words appear in the same equivalent set (their RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>are in the parentheses): <i>interstice</i> (2,36), <i>interval</i> (1,91), <i>space</i> (1,91), <i>gap</i> (1,85), <i>distance</i> (1,64), <i>stretch</i>
+
+(1,59), <i>time</i> (0,99), <i>relations</i> (0,98). For each word (and a syn-set <span>containing</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>these words), the avgRATF is 1,65. For each word (syn-set), aekvRATF is 1,65 - (5*0.20) = 0.65.</p>
+
+<p>In the case of equivalent sets <span>containing</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>1-3 equivalents, <i>aekvRATF</i> (S<sub>A</sub>) is the same as <i>avgRATF</i>(S<sub>A</sub>).</p>
+
+<h4>Baseline queries</h4>
+
+<p>We compared the CLIR queries that are presented in Section 3.3.2 with the following three types of baseline queries. All the baseline and <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>query types were run in the TREC <span>collection</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> Undisambiguated (unstructured, unweighted) and syn-queries (types 2 and 3 below) and the best <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>query types based on the results of the TREC <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>were run in the CLEF <span>collection</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> Duplicates were not removed from the CLEF queries. Therefore the CLEF queries are
+marked by (QKF) in Table 10, where QKF <span>refers</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to <i>query key frequency</i>. In fact, in the case of CLEF queries 'undisambiguated' queries were disambiguated, in part, through QKF.</p>
+
+
+<p>(1)&nbsp;&nbsp;&nbsp;<u>The original <span>English</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>queries</u> <span>contained</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>as query keys the title words (short queries) and the title and <span>description</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>words (long queries) of the TREC Topics (76-100 and 126-150). The <span>English</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>queries were run in the study to show the <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>level of the <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>queries. The original <span>English</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>queries were flat sum-queries:</p>
+
+<blockquote>#sum(A B ...)</blockquote> 
+
+
+<p>(2)&nbsp;&nbsp;&nbsp;<u>Undisambiguated CLIR queries</u> were flat sum-queries:</p>
+
+<blockquote>#sum(a<sub>1</sub>... a<sub>n</sub> b<sub>1</sub>... b<sub>m</sub> ...)</blockquote>
+
+<p>The undisambiguated CLIR queries included the same query keys as the <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>queries, but no disambiguation method was applied. However, as mentioned above <span>duplicate</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>keys were retained in the CLEF queries. The use of query key frequency is a kind of disambiguation <span>technique</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+<p>(3)&nbsp;&nbsp;&nbsp;<u>Syn-queries</u></p>
+
+<p>In<i> syn-based structuring</i> the translation equivalents of each <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language key are grouped together by the <i>syn-</i>operator of the Inquery retrieval system. Query structuring using the syn-operator has been shown to be an effective disambiguation method in many CLIR studies (<a href="#Ballesteros98">Ballesteros and Croft, 1998</a>; <a href="#Gollins00">Gollins, 2000</a>; <a href="#Hedlund01a">Hedlund, <i>et al</i>., 2001a</a>; <a href="#Meng00">Meng, <i>et al</i>., 2000</a>; <a href="#Oard01">Oard and Wang, 2001</a>; <a href="#Pirkola98">Pirkola, 1998</a>; <a href="#Pirkola00">Pirkola, <i>et al</i>., 2000</a>; <a href="#Sperer00">Sperer and Oard, 2000</a>). In many studies in which the effects of the syn-operator have been tested, the proximity operator (uwn) has been used in syn-queries to handle the compound words; the translation equivalents that correspond to the first part of a <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language compound are combined to the equivalents that correspond to the second part of the compound using the uwn-operator.</p>
+
+<p>In earlier studies the contribution of the uwn-operator on the effectiveness of syn-queries have not been tested. We, however, tested the effects of the uwn-operator. The results are presented in a later paper. The <span>findings</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>showed that syn-queries performed better than any of the combined (i.e., syn + uwn) query types tested. Therefore in this study we will use the best syn-query type (i.e., syn-queries without uwn) as baseline for RATF-based queries.</p>
+
+<p>The results of the syn/uwn <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>are published later but shortly discussed here. An important point is that one has to make difference between the disambiguation effect of a proximity operation and phrase-based searching. The disambiguation effect of the uwn-operator <span>refers</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to the fact that normally a <span>combination</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of two mistranslated keys does not make any sense. Therefore, the proximity <span>combination</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>method applied for the translation equivalents <span>probably</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>has a clear disambiguation effect. On the other hand, many studies on monolingual retrieval which have used sophisticated linguistic analysis or <span>statistical</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>methods have shown that phrase-based searching does not improve retrieval <span>performance</span>, <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> or that improvements are just small (<a href="#Buckley95">Buckley, <i>et al</i>., 1995</a>; <a href="#Mitra97">Mitra, <i>et al</i>., 1997</a>; <a href="#Smeaton98">Smeaton, 1998</a>). It should be noted that this monolingual component is involved in CLIR. One should also note that there are different types compounds, which <span>probably</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>should be handled in different ways for improved CLIR <span>performance</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> This issue is <span>investigated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>by Hedlund and colleagues at UTA. </p>
+
+<p>For a <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language query <span>containing</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>the keys <span>A+</span>, <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> B, and C, the syn-query was <span>formed</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>as follows:</p>
+
+<blockquote>#sum(#syn(a<sub>1</sub>... a<sub>n</sub>) #syn(b<sub>1</sub>... b<sub>m</sub>) #syn(c<sub>1</sub>...
+c<sub>k</sub>))</blockquote>
+
+<p>For a <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language query including a compound AB and a single word C, the syn-query is as follows:</p>
+
+<blockquote>#sum(#syn(a<sub>1</sub>...a<sub>n</sub> b<sub>1</sub>...b<sub>m</sub> ) #syn(c<sub>1</sub>...
+c<sub>k</sub>))</blockquote>
+
+<br>
+<h4>Test queries (CLIR queries)</h4>
+
+<p><i><u>Reduced Queries</u></i></p>
+
+<p>In the first <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>we examined whether the RATF scheme is helpful in recognizing <i>bad query keys</i>, i.e., keys which tend to lower query <span>performance</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> Bad keys involve, particularly, mistranslated keys and marginal topical and performative words used in natural language queries (as well as in Description fields of TREC Topics). Based on the results in the training data, the keys of RATF &lt; 1.4 (the first experiment) and aekvRATF &lt; 0.8 (the second experiment) were removed from the undisambiguated CLIR queries (baseline 2).</p>
+
+<p><i><u>Single Key Weighting</u></i></p>
+
+<p>In the second <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>we <span>investigated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>whether the RATF scheme applies for the weighting of single keys. The following four weighting methods were tested. (RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>were multiplied by 100.) </p>
+
+<p><u>RATF</u>. Query keys were weighted by their RATF <span>values</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+<ul><li>#wsum(100 100*RATF(a<sub>1</sub>) a<sub>1 </sub>...100*RATF(a<sub>n</sub>) a<sub>n</sub> 100*RATF(b<sub>1</sub>) b<sub>1 </sub>...</li>
+
+<li>100*RATF(b<sub>m</sub>) b<sub>m ...</sub>)</li></ul>
+
+<p>A <span>sample</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>RATF-weighted query is demonstrated below. The query is <span>formed</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>on the basis of the title of the TREC Topic 52 (<i>South African Sanctions</i>). Table 3 shows the RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for these keys.</p>
+
+<blockquote>#wsum(100 382 africa 249 sanction 177 south)</blockquote>
+
+<table bgcolor="#FDFFBB" align="center" BORDER CELLPADDING=4 WIDTH="302">
+<caption align="bottom"><br><b>Table 3: RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for the words of the title of the Topic 52</b></caption>
+
+<tr><th VALIGN="TOP" WIDTH="50%" HEIGHT="24"> Key </th>
+<th VALIGN="TOP" WIDTH="50%" HEIGHT="24"> RATF </th></tr>
+<tr><td align="center" VALIGN="TOP" WIDTH="50%" HEIGHT="10">africa</td>
+<td align="center" VALIGN="TOP" WIDTH="50%" HEIGHT="10">3,82</td></tr>
+<tr><td align="center" VALIGN="TOP" WIDTH="50%" HEIGHT="10">sanction</td>
+<td align="center" VALIGN="TOP" WIDTH="50%" HEIGHT="10">2,49</td></tr>
+<tr><td align="center" VALIGN="TOP" WIDTH="50%" HEIGHT="10">south</td>
+<td align="center" VALIGN="TOP" WIDTH="50%" HEIGHT="10">1,77</td></tr>
+
+</table>
+
+<p><u>RATF/nil-parameter</u>. In this <span>experiment</span>, <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> the <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of SP = 0 and p = 1 were used in the RATF <span>formula</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> In other words, the <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>was reduced to RATF(<i>k</i>) = (cf<sub>k </sub>/ df<sub>k</sub>)/<i>ln</i>(df<sub>k</sub>).
+Query keys were weighted by their RATF/nil-parameter <span>values</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+<p><u>AvgRATF</u>. Keys were weighted by their avgRATF <span>values</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+
+<ul><li>#wsum(100 100*avgRATF(S<sub>A</sub>) a<sub>1</sub>... 100* avgRATF(S<sub>A</sub>) a<sub>n</sub> 100*avgRATF(S<sub>B</sub>) b<sub>1</sub>...100* avgRATF(S<sub>B</sub>) b<sub>m </sub>...)</li></ul>
+
+<p><u>AekvRATF</u>. Keys were weighted by their aekvRATF <span>values</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+
+<ul><li>#wsum(100 100*aekvRATF(S<sub>A</sub>) a<sub>1</sub>... 100* aekvRATF(S<sub>A</sub>)
+a<sub>n</sub> 100*aekvRATF(S<sub>B</sub>) b<sub>1</sub>... 100* aekvRATF(S<sub>B</sub>)
+b<sub>m </sub>...)</li></ul>
+
+<p>AekvRATF was calculated by reducing avgRATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of keys by the RATF
+unit of 0.20 per equivalent after three equivalents (for equivalents contained
+in equivalent sets of more than three equivalents).</p>
+
+<p><i><u>Syn-Set Weighting</u></i></p>
+
+<p>In this <span>test</span>, <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> syn-sets of syn-queries (baseline 3) were weighted using avgRATF and aekvRATF.</p>
+
+<p><u>AvgRATF</u>. Syn-sets were weighted by their avgRATF <span>values</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+<ul><li>#wsum(100 100*avgRATF(S<sub>A</sub>) #syn(a<sub>1</sub>... a<sub>n</sub>) 100*avgRATF(S<sub>B</sub>)
+#syn(b<sub>1</sub>... b<sub>m</sub>) ...)</li></ul>
+
+<p><u>AekvRATF</u>. Syn-sets were weighted by their aekvRATF <span>values</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+<ul><li>#wsum(100 100*aekvRATF(S<sub>A</sub>)
+#syn(a<sub>1</sub>... a<sub>n</sub>) 100*aekvRATF(S<sub>B</sub>)
+#syn(b<sub>1</sub>... b<sub>m</sub>) ...)</li></ul>
+
+<h2>Findings</h2>
+
+<p>The effectiveness of the <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>queries was evaluated as precision at 10%
+recall (Pr. at 10% R) and average precision over 10%-100% recall levels
+(avg. precision). The former is a user-oriented measure for high-precision
+queries while the latter is a system-oriented average <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>measure.Statistical
+<span>significance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the difference between the <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>queries
+and that of unstructured queries was tested using <i>Wilcoxon signed ranks
+<span>test</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> </i>The Wilcoxon<i> </i>test uses both the <span>direction</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>and the relative
+<span>magnitude</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the difference of comparable <span>samples</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> The <span>statistical</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>program
+that was used is based on Conover (<a href="#Conover80">1980</a>). The
+<span>statistical</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>significance levels of 0.01 and 0.001 are indicated in the
+<span>tables</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+<p><i>The TREC tests</i></p>
+
+<p>Table 4 shows the results of the baseline TREC runs. Tables 5-9 show
+the results of the <span>test</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>TREC runs. In Tables 5-9 the <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of test
+queries is compared with that of undisambiguated queries.
+
+<p>The <span>findings</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of query key removal are shown in Table 5. As can be seen,
+long RATF-reduced queries perform slightly better than unreduced (undisambiguated)
+queries, but in the case of short queries the removal of low-RATF keys
+<span>actually</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>results in <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>drop. An obvious reason for this is that,
+though most keys with low RATFs apparently are harmful, some keys with
+low RATFs are important. AekvRATF seems to attack this problem, since for
+both query types the queries where the keys of aekvRATF &lt; 0.8 were removed
+perform clearly better than the baseline queries.</p>
+
+<p>Tables 6 (long queries) and 7 (short queries) present the results of
+single key weighting. As shown in the <span>tables</span>, <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> all the weighting methods
+give substantial <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>improvements. For <i>long queries</i>, the
+relative improvement <span>figures</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>(avg. precision) due to single key weighting
+are 94.1% (RATF), 98.0% (avgRATF), and 123.5% (aekvRATF). In the case of
+precision at 10% recall, improvements are somewhat smaller (58.8% - 85.3%),
+but still substantial. RATF/non-parameter queries perform worse than the
+queries where key weighting is based on the basic RATF <span>formula</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> The improvement
+potentials for <i>short</i> <i>RATF-based</i> queries are <span>limited</span>, <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> since
+short undisambiguated queries perform very well. <span>Nevertheless</span>, <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> for short
+queries, the improvements in average precision are clear, i.e., 7.0% -
+15.0% (avg. precision) and 11.4% - 24.3% (Pr. at 10% R). In all cases,
+the most effective RATF-based weighting method is aekvRATF. Performance
+differences between aekvRATF-queries and syn-queries are small (Tables
+6-7).</p>
+
+<p>The results for the question whether the RATF-weighting of syn-sets
+of syn-queries will improve <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>are shown in Tables 8 (long queries)
+and 9 (short queries). As can be seen, in the case of long queries the
+RATF-based syn-queries perform slightly better than plain syn-queries.
+However, short avgRATF/syn-queries and short aekvRATF/syn-queries perform
+slightly worse than short plain syn-queries.</p>
+
+
+<p><i>The CLEF tests</i></p>
+
+<p>The CLEF results are presented in Table 10. As shown, single key weighting
+using RATF results in the decrease in retrieval <span>performance</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> Probably,
+this is largely due to n-gram matching. N-gram matching typically gives
+one correct correspondent whose RATF is high and five <span>false</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>correspondents
+whose RATFs also are high (see the Discussion section). The correct correspondent
+of a <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language proper name often occurred in the set of 1-10 best
+matching words in the ranked word <span>list</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of n-gram matching. Therefore in
+our CLEF 2001 <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>we selected the six best correspondents for the final
+query (<a href="#Hedlund01b">Hedlund, <i>et al</i>., 2001b</a>). The correspondents
+were combined by the syn-operator. This method was useful improving query
+<span>performance</span>, <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> but in RATF-weighting seems to be harmful.</p>
+
+<p>Single key weighting based on aekvRATF gives better <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>than
+baseline. In the case of average precision <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>improvements are
+clear (12.2%) but statistically insignificant. AekvRATF reduces the weights
+of <span>false</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>correspondents of n-gram matching. This is because the six best
+corespondents of n-gram matching were grouped together, and aekvRATF was
+computed for this key group of the six keys.</p>
+
+<p>Syn-queries perform markedly better than the baseline queries, with
+the improvement percentages being 12,6% and 18,4%. Plain syn-queries perform
+better than syn/avgRATF and syn/aekvRATF queries. Thus, using avgRATF and
+aekvRATF as syn-set weights does not improve <span>performance</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> The factors that
+affect the <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of syn-queries are discussed in Pirkola, <i>et al</i>.
+(<a href="#Pirkola01">2001</a>). In addition, the performace of syn-queries
+<span>depends</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>on query <span>length</span>, <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> as shown in this study and in Sperer and Oard
+(<a href="#Sperer00">2000</a>).</p>
+
+
+<h2>Discussion</h2>
+
+<p>One of the <span>main</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>problems associated with dictionary-based CLIR is <i>translation
+ambiguity</i>, which <span>refers</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to the abundance of mistranslated keys in CLIR
+queries. The techniques to handle translation ambiguity involve corpus-based
+query <span>expansion</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to reduce the effects of mistranslated and other bad keys
+(<a href="#Ballesteros97">Ballesteros and Croft, 1997</a>; <a href="#Chen99">Chen,
+<i>et al</i>., 1999</a>), the use of word co-occcurrence statistics for selecting
+the best or correct <span>translations</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>(<a href="#Chen99">Chen, <i>et al</i>.,
+1999</a>), the <span>selection</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of translation equivalents on the basis of aligned
+<span>sentences</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>(<a href="#Davis96">Davis, 1996</a>; <a href="#Davis95">Davis
+and Dunning, 1995</a>), the <span>selection</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of translation equivalents on the
+basis of word frequencies in the target-corpus (<a href="#Kwok00">Kwok,
+2000</a>) and query structuring using Inquery's syn-operator (<a href="#Pirkola98">Pirkola,
+1998</a>). Syn-based structuring alters (relatively) tf.idf weights of
+keys in a query:</p>
+
+<ul>
+<li>
+In unstructured queries mistranslated keys with low document frequency
+may ruin query <span>performance</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> In structured queries in syn-sets they are
+downweighted because of the aggregate document frequency (<a href="#Sperer00">Sperer
+and Oard 2000</a>)</li>
+
+<li>
+Important keys often have 1-2 <span>translations</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>only, and have relatively more
+<span>weight</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in structured than in unstructured CLIR queries.</li>
+</ul>
+
+<p>Kwok (<a href="#Kwok00">2000</a>) used a similar kind of method in which
+the keys in a translation equivalent set were con0ered as synonyms. For
+the equivalent set an aggregate <i>collection <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency</i> was computed.
+The researcher demonstrated that the method is useful in <span>English</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to Chinese
+CLIR.</p>
+
+<p>In this study we tested the use of the RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in CLIR. The formula
+calculates goodness <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for query keys on the basis of document frequency
+and <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency statistics of words in a document <span>collection</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>
+The rationale behind using the RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in CLIR is that many of the
+bad translation equivalents are common words whose RATFs are low, whereas
+the <span>actual</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>topic words often are more specific words with their RATFs being
+higher.</p>
+
+<p>The <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in the TREC <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>showed that there are many effective
+RATF-based weighting methods. The best one was aekvRATF, which takes into
+account both the number of translation equivalents of a <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language
+key and the RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the equivalents. AekvRATF-queries performed
+as well as, or even somewhat better than syn-queries which have been reported
+to perform well for different language pairs. The fact that RATF-based
+queries, in particular aekvRATF-queries are effective in CLIR is significant
+in that document and <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequencies often are standard records
+in retrieval system packages. This allows an easy <span>integration</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of a RATF-type
+key goodness evaluation method into cross-language retrieval <span>systems</span>. <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> The
+syn-operator (or that kind of operator) is not a standard operator. Therefore,
+syn-queries can be run only in some <span>systems</span>. <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+<p>Nevertheless, the experiments in the CLEF <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>showed that the
+utilization of RATF in CLIR has limitations. The CLEF experiments differed
+from the TREC experiments in three <span>main</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>points. The first one was a collection
+size. The size of the CLEF <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>was around one fourth of that of
+the TREC <span>collection</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>(Section 3.1).</p>
+
+<p>Second, duplet query keys were not removed from the CLEF queries. In
+other words, in the CLEF experiments the effectiveness of RATF-based queries
+was tested against that of queries in which query key frequencies were
+applied. In CLEF topics important <span>topic</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>words often have 1-3 occurrences
+(in the title and <span>description</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>fields). The results <span>suggest</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>that RATF-based
+weighting is not useful in queries where important keys are weighted through
+query key frequencies. RATF-based weighting and query key frequency weighting
+seem to be competitive methods.</p>
+
+<p>Third, in the CLEF <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span><span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>query keys not found in the dictionary
+were <span>translated</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>by an n-gram matching <span>technique</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> The six best matching
+keys were used in the final CLIR queries. Selecting several best matching
+words was necessary, because the correct key is often found in the word
+set of 1-10 best words in the ranked word <span>list</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of n-gram matching. However,
+from the RATF weighting <span>perspective</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>the use of several best matching keys
+is harmful, since it disturbs query <span>balance</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> For instance, in the query
+43 the RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>gave the value of 5,64 for the important key <i>nino</i>
+
+(referring to <i>El Nino</i>) and correctly ranked it higher than the less
+important keys of the query 43, such as <i>effect</i> (1,77), <i>impression</i>
+(2,55), and <i>influence</i> (2,12). However, n-gram translation also gave
+<span>false</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>correspondents whose RATFs were high, e.g., <i>nio</i> (11,45) and
+<i>annino</i>(5,72).</p>
+
+<p>In aekvRATF-queries, however, the effects of such <span>kinds</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of keys are
+depressed. It should be noted that aekvRATF-queries performed better than
+baseline queries both in the TREC and CLEF <span>tests</span>. <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+<p>The next step in the development of our automatic CLIR system at UTA
+is to develop a more effective n-gram translation <span>technique</span>. <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> We have developed
+a collocation identification method (called RKA and presented in <a href="#Pirkola01b">Pirkola
+and J&auml;rvelin, 2001b</a>) that may be useful in separating the correct
+correspondents of proper <span>names</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>and other untranslatable words from false
+correspondents. The preliminary <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>have been encouraging. It is possible
+that n-gram matching together with RKA will effectively recognize the correct
+correspondents. This in turn may allow an effective use of RATF in CLIR
+also when n-gram based translation is applied. In particular, the effectiveness
+of aekvRATF can be <span>expected</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>to improve.</p>
+
+<h2>Conclusions</h2>
+
+<p>In Pirkola and J&auml;rvelin (<a href="#Pirkola01b">2001b</a>) we proposed
+a query key goodness scheme, which can be used to identify the best keys
+among the words of a natural language request. The scheme is based on the
+relative average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency (RATF) <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of query keys. It gives high
+weights to words whose average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency is high and document frequency
+low (but not very low). The <span>parameters</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for RATF <span>calculation</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>were learned
+through <span>extensive</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>tests using a training set of 50 requests and several
+parameter value combinations.</p>
+
+<p>In this study the RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>was tested in cross-language retrieval.
+We conclude that <i>RATF as</i> <i>such</i> is useful in CLIR queries formed
+from such <span>source</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>language queries in which each key has one occurrence
+(such queries typically used, for example, in the Web). RATF as such is
+not useful in queries in which important keys are weighted high using query
+key frequencies.</p>
+
+<p>Neither is RATF useful in CLIR queries in which proper <span>names</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>are translated
+through n-gram matching. N-gram translation gives many bad words whose
+RATFs are high. However, it is possible to improve the effectiveness of
+n-gram translation. This in turn may allow an effective use of RATF also
+in the case of n-gram translation.</p>
+
+<p>An important result is that <i>aekvRATF</i>, which takes into account
+the RATF <span>values</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of keys and the number of translation equivalents of source
+keys was effective in all <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of this study. The importance of this finding
+is in that aekvRATF can be computed <span>easily</span>. <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> It thus seems to apply for
+many types of cross-language retrieval <span>systems</span>. <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></p>
+
+<table bgcolor="#FDFFBB" align="center" BORDER CELLPADDING=4 WIDTH="451" >
+<caption align="bottom"><br><b>Table 4: The <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of the baseline TREC queries</b></caption>
+<tr>
+<th VALIGN="TOP" WIDTH="50%" HEIGHT="32">Query type</th>
+<th VALIGN="TOP" WIDTH="25%" HEIGHT="32">Pr. at 10% R</th>
+<th VALIGN="TOP" WIDTH="25%" HEIGHT="32">Avg. Pr.</th>
+</tr>
+<tr>
+<td VALIGN="TOP" WIDTH="50%"colspan="3"><b>Longqueries</b></td></tr>
+<tr>
+<td VALIGN="TOP" WIDTH="50%">OriginalEnglish</td>
+
+<td align="center" VALIGN="TOP" WIDTH="25%">27,0</td>
+<td align="center" VALIGN="TOP" WIDTH="25%">10,4</td>
+</tr>
+<tr>
+<td VALIGN="TOP" WIDTH="50%">Undisambiguated (unweighted)</td>
+<td align="center" VALIGN="TOP" WIDTH="25%">13,6</td>
+<td align="center" VALIGN="TOP" WIDTH="25%">5,1</td>
+</tr>
+<tr>
+<td VALIGN="TOP" WIDTH="50%">Syn</td>
+<td align="center" VALIGN="TOP" WIDTH="25%">26,0</td>
+
+<td align="center" VALIGN="TOP" WIDTH="25%">10,6</td>
+</tr>
+<tr>
+<td VALIGN="TOP" WIDTH="50%" colspan="3"><b>Short queries</b></td></tr>
+<tr>
+<td VALIGN="TOP" WIDTH="50%">Original English</td>
+<td align="center" VALIGN="TOP" WIDTH="25%">29,0</td>
+<td align="center" VALIGN="TOP" WIDTH="25%">12,0</td>
+</tr>
+<tr>
+<td VALIGN="TOP" WIDTH="50%">Undisambiguated (unweighted)</td>
+
+<td align="center" VALIGN="TOP" WIDTH="25%">21,0</td>
+<td align="center" VALIGN="TOP" WIDTH="25%">10,0</td>
+</tr>
+<tr>
+<td VALIGN="TOP" WIDTH="50%">Syn&nbsp;</td>
+<td align="center" VALIGN="TOP" WIDTH="25%">25,8</td>
+<td align="center" VALIGN="TOP" WIDTH="25%">11,8</td>
+</tr>
+</table>
+
+<br>
+
+<table align="center"  bgcolor="#FDFFBB" BORDER CELLPADDING=4 WIDTH="528">
+<caption align="bottom"><br><strong>Table 5: The <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of reduced queries (TREC)</strong></caption>
+<tr><th VALIGN="top" WIDTH="57%" HEIGHT="32">Query type</th>
+<th VALIGN="top" WIDTH="21%" HEIGHT="32">Pr. at 10% R</th>
+<th VALIGN="top" WIDTH="21%" HEIGHT="32">Avg. Pr.</th></tr>
+<tr>
+<td VALIGN="top" WIDTH="57%" colspan="3"><b>Long queries</b></td>
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%"><i>Undisambiguated - baseline</i></td>
+
+<td align="center" VALIGN="top" WIDTH="21%">13,6</td>
+<td align="center" VALIGN="top" WIDTH="21%">5,1</td>
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%"><i>Removal of keys, threshold RATF 1,4</i></td>
+<td align="center" VALIGN="top" WIDTH="21%">16,5</td>
+<td align="center" VALIGN="top" WIDTH="21%">6,8</td>
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%">Change %</td>
+<td align="center" VALIGN="top" WIDTH="21%">+21,3</td>
+
+<td align="center" VALIGN="top" WIDTH="21%">+33,3</td>
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="21%">0,01</td>
+<td align="center" VALIGN="top" WIDTH="21%">0,001</td>
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%"><i>Removalof keys, threshold aekvRATF 0,8</i></td>
+<td align="center" VALIGN="top" WIDTH="21%">19,2</td>
+<td align="center" VALIGN="top" WIDTH="21%">7,8</td>
+
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%">Change %</td>
+<td align="center" VALIGN="top" WIDTH="21%">+41,2</td>
+<td align="center" VALIGN="top" WIDTH="21%">+52,9</td>
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%" HEIGHT="25">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="21%" HEIGHT="25">0,001</td>
+<td align="center" VALIGN="top" WIDTH="21%" HEIGHT="25">0,001</td>
+</tr>
+
+<tr>
+<td VALIGN="top" WIDTH="57%" colspan="3"><b>Short queries</b></td></tr>
+<tr>
+<td VALIGN="top" WIDTH="57%"><i>Undisambiguated - baseline</i></td>
+<td align="center" VALIGN="top" WIDTH="21%">21,0</td>
+<td align="center" VALIGN="top" WIDTH="21%">10,0</td>
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%"><i>Removal of keys, threshold RATF 1,4</i></td>
+<td align="center" VALIGN="top" WIDTH="21%">19,9</td>
+<td align="center" VALIGN="top" WIDTH="21%">9,5</td>
+
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%">Change %</td>
+<td align="center" VALIGN="top" WIDTH="21%">-5,2</td>
+<td align="center" VALIGN="top" WIDTH="21%">-5,0</td>
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="21%">-</td>
+<td align="center" VALIGN="top" WIDTH="21%">-</td>
+</tr>
+
+<tr>
+<td VALIGN="top" WIDTH="57%"><i>Removal of keys, threshold aekvRATF 0,8</i></td>
+<td align="center" VALIGN="top" WIDTH="21%">23,3</td>
+<td align="center" VALIGN="top" WIDTH="21%">10,8</td>
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="57%">Change %</td>
+<td align="center" VALIGN="top" WIDTH="21%">+11,0</td>
+<td align="center" VALIGN="top" WIDTH="21%">+8,0</td>
+</tr>
+<tr>
+
+<td VALIGN="top" WIDTH="57%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="21%">-</td>
+<td align="center" VALIGN="top" WIDTH="21%">-</td>
+</tr>
+</table>
+
+<br>
+
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=4 WIDTH="491">
+<caption align="bottom"><br><strong>Table 6: The <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of single key weighted queries. Long TREC queries</strong></caption>
+<tr>
+<th VALIGN="top" WIDTH="54%" HEIGHT="32"> Query type </th>
+
+<th VALIGN="top" WIDTH="23%" HEIGHT="32"> Pr. at 10% <span>R++</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span></th>
+<th VALIGN="top" WIDTH="23%" HEIGHT="32"> Avg. Pr. </th>
+</tr>
+<tr>
+<td VALIGN="top" WIDTH="54%"><i>Undisambiguated - baseline</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">13,6</td>
+<td align="center" VALIGN="top" WIDTH="23%">5,1</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Original English</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">27,0</td>
+
+<td align="center" VALIGN="top" WIDTH="23%">10,4</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">26,0</td>
+<td align="center" VALIGN="top" WIDTH="23%">10,6</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Single key weighting, RATF&nbsp;</i></td>
+<td align="center" VALIGN="top" WIDTH="23%"> 22,1</td>
+<td align="center" VALIGN="top" WIDTH="23%">9,9</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+
+<td align="center" VALIGN="top" WIDTH="23%">+62,5</td>
+<td align="center" VALIGN="top" WIDTH="23%">+94,1</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="23%">0,01</td>
+<td align="center" VALIGN="top" WIDTH="23%">0,001</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Single key weighting, RATF/nil-parameter</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">20,1</td>
+<td align="center" VALIGN="top" WIDTH="23%">9,5</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+
+<td align="center" VALIGN="top" WIDTH="23%">+47,8</td>
+<td align="center" VALIGN="top" WIDTH="23%">+86,3</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="23%">&nbsp;0,01</td>
+<td align="center" VALIGN="top" WIDTH="23%">&nbsp;0,001</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Single key weighting, avgRATF</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">21,6</td>
+<td align="center" VALIGN="top" WIDTH="23%">10,1</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+
+<td align="center" VALIGN="top" WIDTH="23%">+58,8</td>
+<td align="center" VALIGN="top" WIDTH="23%">+98,0</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="23%">0,001</td>
+<td align="center" VALIGN="top" WIDTH="23%">0,001</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Single key weighting, aekvRATF</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">25,2</td>
+<td align="center" VALIGN="top" WIDTH="23%">11,4</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+
+<td align="center" VALIGN="top" WIDTH="23%">+85,3</td>
+<td align="center" VALIGN="top" WIDTH="23%">+123,5</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="23%">0,001</td>
+<td align="center" VALIGN="top" WIDTH="23%">0,001</td></tr>
+</table>
+
+<br>
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=4 WIDTH="491">
+<caption align="bottom"><br><strong>Table 7: The <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of single key weighted queries. Short TREC queries</strong></caption>
+
+<tr><th VALIGN="top" WIDTH="54%" HEIGHT="32">Query type</th>
+<th VALIGN="top" WIDTH="23%" HEIGHT="32">Pr. at 10% R</th>
+<th VALIGN="top" WIDTH="23%" HEIGHT="32">Avg. Pr.</th></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Undisambiguated-baseline</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">21,0</td>
+<td align="center" VALIGN="top" WIDTH="23%">10,0</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Original English</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">29,0</td>
+<td align="center" VALIGN="top" WIDTH="23%">12,0</td></tr>
+
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">25,8</td>
+<td align="center" VALIGN="top" WIDTH="23%">11,8</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Single key weighting, RATF&nbsp;</td>
+<td align="center" VALIGN="top" WIDTH="23%">23,4</td>
+<td align="center" VALIGN="top" WIDTH="23%">10,7</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center" VALIGN="top" WIDTH="23%">+11,4</td>
+<td align="center" VALIGN="top" WIDTH="23%">+7,0</td></tr>
+
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="23%">-</td>
+<td align="center" VALIGN="top" WIDTH="23%">-</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Single key weighting, RATF/nil-parameter</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">22,7</td>
+<td align="center" VALIGN="top" WIDTH="23%">10,5</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center" VALIGN="top" WIDTH="23%">+8,1</td>
+<td align="center" VALIGN="top" WIDTH="23%">+5,0</td></tr>
+
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="23%">-</td>
+<td align="center" VALIGN="top" WIDTH="23%">-</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Single key weighting, avgRATF</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">24,0</td>
+<td align="center" VALIGN="top" WIDTH="23%">11,1</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center" VALIGN="top" WIDTH="23%">+14,3</td>
+<td align="center" VALIGN="top" WIDTH="23%">+11,0</td></tr>
+
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="23%">-</td>
+<td align="center" VALIGN="top" WIDTH="23%">-</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Single key weighting, aekvRATF</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">26,1</td>
+<td align="center" VALIGN="top" WIDTH="23%">11,5</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center" VALIGN="top" WIDTH="23%">+24,3</td>
+<td align="center" VALIGN="top" WIDTH="23%">+15,0</td></tr>
+
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center" VALIGN="top" WIDTH="23%">0,01</td>
+<td align="center" VALIGN="top" WIDTH="23%">0,01</td></tr>
+</table>
+
+<br>
+
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=4 WIDTH="491">
+<caption align="bottom"><br><strong>Table 8: The <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of RATF-weighted syn-queries. Long TREC queries</strong></caption>
+<tr>
+<th VALIGN="top" WIDTH="54%" HEIGHT="32">Query type</th>
+
+<th VALIGN="top" WIDTH="23%" HEIGHT="32">Pr. at 10% R</th>
+<th VALIGN="top" WIDTH="23%" HEIGHT="32">Avg. Pr.</th></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Undisambiguated-baseline</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">13,6</td>
+<td align="center" VALIGN="top" WIDTH="23%">5,1</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Original English</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">27,0</td>
+<td align="center" VALIGN="top" WIDTH="23%">10,4</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn&nbsp;</i></td>
+
+<td align="center" VALIGN="top" WIDTH="23%">26,0</td>
+<td  align="center"VALIGN="top" WIDTH="23%">10,6</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn-set weighting, avgRATF&nbsp;</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">26,1</td>
+<td align="center" VALIGN="top" WIDTH="23%">11,8</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center" VALIGN="top" WIDTH="23%">+91,9</td>
+<td align="center" VALIGN="top" WIDTH="23%">+131,4</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+
+<td  align="center"VALIGN="top" WIDTH="23%">0,001</td>
+<td align="center" VALIGN="top" WIDTH="23%">0,001</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn-set weighting, aekvRATF</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">26,3</td>
+<td align="center" VALIGN="top" WIDTH="23%">11,8</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center" VALIGN="top" WIDTH="23%">+93,4</td>
+<td align="center" VALIGN="top" WIDTH="23%">+131,4</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+
+<td align="center" VALIGN="top" WIDTH="23%">0,001</td>
+<td align="center" VALIGN="top" WIDTH="23%">0,001</td></tr>
+</table>
+
+<br>
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=4 WIDTH="491" >
+<caption align="bottom"><br><strong>Table 9: The <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of RATF-weighted syn-queries. Short TREC queries</strong></caption>
+<tr><th VALIGN="top" WIDTH="54%" HEIGHT="32">Query type</th>
+<th VALIGN="top" WIDTH="23%" HEIGHT="32">Pr. at 10% R</th>
+<th VALIGN="top" WIDTH="23%" HEIGHT="32">Avg. Pr.</td></tr>
+
+<tr><td VALIGN="top" WIDTH="54%"><i>Undisambiguated-baseline</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">21,0</td>
+<td align="center"  VALIGN="top" WIDTH="23%">10,0</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Original English</i></td>
+<td align="center"  VALIGN="top" WIDTH="23%">29,0</td>
+<td align="center"  VALIGN="top" WIDTH="23%">12,0</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn&nbsp;</i></td>
+<td align="center"  VALIGN="top" WIDTH="23%">25,8</td>
+<td align="center"  VALIGN="top" WIDTH="23%">11,8</td></tr>
+
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn-set weighting, avgRATF&nbsp;</i></td>
+<td align="center"  VALIGN="top" WIDTH="23%">25,5</td>
+<td align="center"  VALIGN="top" WIDTH="23%">11,6</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+21,4</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+16,0</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center"  VALIGN="top" WIDTH="23%">0,01</td>
+<td align="center"  VALIGN="top" WIDTH="23%">0,01</td></tr>
+
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn-set weighting, aekvRATF</i></td>
+<td align="center"  VALIGN="top" WIDTH="23%">24,7</td>
+<td align="center"  VALIGN="top" WIDTH="23%">11,2</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+17,6</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+12,0</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center"  VALIGN="top" WIDTH="23%">-</td>
+<td align="center"  VALIGN="top" WIDTH="23%">0,01</td></tr>
+
+</table>
+
+<br> 
+
+
+<table align="center" bgcolor="#FDFFBB" BORDER CELLPADDING=4 WIDTH="491">
+<caption align="bottom"><br><strong>Table 10: The <span>performance</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>of CLEF queries</strong></caption>
+<tr>
+<th VALIGN="top" WIDTH="54%" HEIGHT="32">Query type</th>
+<th VALIGN="top" WIDTH="23%" HEIGHT="32">Pr. at 10% R</th>
+<th VALIGN="top" WIDTH="23%" HEIGHT="32">Avg. Pr.</th></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Query key frequency (QKF) - baseline</i></td>
+<td align="center" VALIGN="top" WIDTH="23%">48,6</td>
+
+<td align="center"  VALIGN="top" WIDTH="23%">29,4</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn (QKF)</i></td>
+<td align="center"  VALIGN="top" WIDTH="23%">54,7</td>
+<td align="center"  VALIGN="top" WIDTH="23%">34,8</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+12,6</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+18,4</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center"  VALIGN="top" WIDTH="23%">-</td>
+
+<td align="center"  VALIGN="top" WIDTH="23%">-</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Single key weighting, RATF (QKF)</i></td>
+<td align="center"  VALIGN="top" WIDTH="23%">41,9</td>
+<td align="center"  VALIGN="top" WIDTH="23%">26,7</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center"  VALIGN="top" WIDTH="23%">-13,8</td>
+<td align="center"  VALIGN="top" WIDTH="23%">-9,2</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center"  VALIGN="top" WIDTH="23%">-</td>
+
+<td align="center"  VALIGN="top" WIDTH="23%">-</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Single key weighting, aekvRATF (QKF)</i></td>
+<td align="center"  VALIGN="top" WIDTH="23%">49,2</td>
+<td align="center"  VALIGN="top" WIDTH="23%">33,0</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+1,2</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+12,2</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center"  VALIGN="top" WIDTH="23%">-</td>
+
+<td align="center"  VALIGN="top" WIDTH="23%">-</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn-set weighting, avgRATF (QKF)</i></td>
+<td align="center"  VALIGN="top" WIDTH="23%">49,8</td>
+<td align="center"  VALIGN="top" WIDTH="23%">32,1</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+2,5</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+9,2</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center"  VALIGN="top" WIDTH="23%">-</td>
+
+<td align="center"  VALIGN="top" WIDTH="23%">-</td></tr>
+<tr><td VALIGN="top" WIDTH="54%"><i>Syn-set weighting, aekvRATF (QKF)</i></td>
+<td align="center"  VALIGN="top" WIDTH="23%">49,6</td>
+<td align="center"  VALIGN="top" WIDTH="23%">31,8</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Change %</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+2,1</td>
+<td align="center"  VALIGN="top" WIDTH="23%">+8,2</td></tr>
+<tr><td VALIGN="top" WIDTH="54%">Statistical sign. level</td>
+<td align="center"  VALIGN="top" WIDTH="23%">-</td>
+
+<td align="center"  VALIGN="top" WIDTH="23%">-</td></tr>
+</table>
+
+<br>
+<h2>Acknowledgements</h2>
+
+<p>The <i>Inquery</i> <span>search</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>engine was provided by the Center for Intelligent
+Information Retrieval at the University of Massachusetts. This research
+is part of the research project <i>Query structures and dictionaries as
+<span>tools</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in concept-based and cross-lingual information retrieval</i> funded
+by the Academy of Finland (Research Projects 44703; 49157).</p>
+<br>
+
+<h2>References</h2>
+
+<ul>
+<li>
+<a NAME="Allan00"></a>Allan, <span>J++</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>, Connell, M.E., Croft, W.B., Feng, F.-F,
+Fisher, D., and Li, <span>X++</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>  (2000) <a href="http://trec.nist.gov/pubs/trec5/papers/umass-trec96.ps.gz">&quot;Inquery and TREC-9.&quot;</a> <i>The Ninth Text REtrieval
+Conference (TREC-9)</i>, Gaithesburg, MD. Available at: http://trec.nist.gov/pubs/trec5/papers/umass-trec96.ps.gz [Accessed 21 January 2002]</li>
+
+<li>
+<a NAME="Ballesteros97"></a>Ballesteros, L. and Croft, W.B.  (1997)  &quot;Phrasal
+translation and query <span>expansion</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>techniques for cross-language information
+retrieval&quot;. <i>Proceedings of the 20th Annual International ACM SIGIR Conference
+on Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in Information Retrieval</i>, Philadelphia,
+PA, pp. 84-91.  New York, NY: Association for <span>Computing</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Machinery.<br><br></li>
+
+<li>
+<a NAME="Ballesteros98"></a>Ballesteros, L. and Croft, W.B.  (1998).  &quot;Resolving
+ambiguity for cross-language retrieval&quot;. <i>Proceedings of the 21st Annual
+International ACM SIGIR Conference on Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in Information
+Retrieval</i>, Melbourne, Australia, pp. 64-71. New York, NY: Association for <span>Computing</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Machinery.<br></li>
+
+<li><a NAME="Broglio94"></a>Broglio, <span>J++</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>, Callan, <span>J++</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> and Croft, W.B. (1994).  &quot;Inquery system overview&quot;. <i>Proceedings of the TIPSTER Text Program</i> <i>(Phase I)</i>, pp. 47-67.  San Francisco, CA: Morgan Kaufman Publishers Inc.<br></li>
+
+<li><a NAME="Buckley95"></a>Buckley, C., Singhal, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>, Mitra, M. and Salton, G.  (1995)  <a href="http://trec.nist.gov/pubs/trec4/papers/Cornell_trec4.ps.gz">&quot;New retrieval <span>approaches</span>  <span class="quali" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>using SMART: TREC-4</a>. <i>The</i> <i>Fourth Text REtrieval Conference (TREC-4)&quot;</i>, Gaithesburg, MD. Available at: http://trec.nist.gov/pubs/trec4/papers/Cornell_trec4.ps.gz [Accessed 21 January 2002]<br></li>
+
+<li><a NAME="Conover80"></a>Conover, W.<span>J++</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> (1980) <i>Practical non-parametric statistics</i>. New York: John Wiley &amp; Sons.<br></li>
+
+<li><a NAME="Davis95"></a>Davis, M. and Dunning, T.  (1995). <a href="http://trec.nist.gov/pubs/trec4/papers/nmsu.ps.gz">&quot;A TREC evaluation of query translation methods for multi-lingual text retrieval.</a> <i>TheFourth Text REtrieval Conference (TREC-4)&quot;</i>, Gaithesburg, MD. Available from: http://trec.nist.gov/pubs/trec4/papers/nmsu.ps.gz  [Accessed 20 January 2002]<br></li>
+
+<li><a NAME="Davis96"></a>Davis, M. (1996). <a href="http://trec.nist.gov/pubs/trec5/papers/nmsu.davis.paper.ps.gz">&quot;New experiments in cross-language text retrieval at NMSU's <span>Computing</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Research Lab.&quot;</a> <i>The Fifth</i> <i>Text REtrieval Conference (TREC-5)</i>, Gaithesburg, MD. Available from: http://trec.nist.gov/pubs/trec5/papers/nmsu.davis.paper.ps.gz  [Accessed 21 January 2002]<br></li>
+
+<li><a NAME="Gollins00"></a>Gollins, T.<span>J++</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> (2000). <i>Dictionary based transitive cross-language information retrieval using <span>lexical</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>triangulation</i>.  Sheffield: University of Sheffield. (Master of Science Thesis).<br></li>
+
+<li><a NAME="Harman93"></a>Harman, D. (1993). <a href="http://trec.nist.gov/pubs/trec2/papers/txt/01.txt">&quot;Overview of the Second Text REtrieval Conference (TREC-2).&quot;</a> <i>The Second Text REtrieval</i> <i>Conference (TREC-2)</i>, Gaithesburg, MD. Available at: http://trec.nist.gov/pubs/trec2/papers/txt/01.txt  [Accessed 21 January 2002]<br></li>
+<li>
+<a NAME="Hedlund01a"></a>Hedlund T, Keskustalo H, Pirkola <span>A+</span>, <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> Sepponen M &amp; J&auml;rvelin K, (2001a). &quot;Bilingual <span>tests</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>with Swedish, Finnish and German queries: dealing with morphology, compound words and query structure&quot;.  In: Carol Peters,  ed. <i>Cross-Language Information Retrieval and Evaluation: Proceedings of the CLEF 2000 Workshop, Lecture Notes in <span>Computer</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Science</i>, 2069, pp. 211-225.  Heidelberg: Springer.<br></li>
+
+<li>
+<a NAME="Hedlund01b"></a>Hedlund, T., Keskustalo, H., Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>, Airio, E., and J&auml;rvelin, K. (2001b). &quot;<a href="http://www.ercim.org/publication/ws-proceedings/CLEF2/hedlund.pdf">UTACLIR @ CLEF 2001.</a>&quot; <i>Working</i> <i>Notes for CLEF 2001 Workshop</i>. Available at: http://www.ercim.org/publication/ws-proceedings/CLEF2/hedlund.pdf<br></li>
+
+<li>
+<a NAME="Kwok96"></a>Kwok, K.L.  (1996). &quot;A new method of weighting query terms for ad-hoc retrieval.&quot; <i>Proceedings of the 19th Annual </i>I<i>nternational ACM SIGIR Conference on Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in Information Retrieval</i>, Zurich, Switzerland, pp. 187-195.  New York, NY: Association for <span>Computing</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Machinery.<br></li>
+
+<li><a NAME="Kwok00"></a>Kwok, K.L.  (2000). Exploiting a Chinese-English bilingual wordlist for English-Chinese cross language information retrieval. <i>Proceedings of the 5<sup>th</sup> International Workshop on Information Retrieval with Asian <span>languages</span>, <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> IRAL2000</i>, pp. 173-179.<br></li>
+
+<li><a NAME="Meng00"></a>Meng, H., Chen, B., Grams, E., Khudanpur, S., Lo, W-K., Levow, G-A, Oard, D., Schone, B., Tang, K., Wang, H-M., and Wang, <span>J++</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Q.  (2000).  &quot;<a href="http://hlt2001.org/papers/hlt2001-50.pdf">Mandarin-English Information (MEI): Investigating Translingual
+Speech Retrieval</a>&quot;. <i>HLT</i> <i>2001, <span>Human</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span><span>Language</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Technology Confererence</i>,
+March 18-21, 2001, San Diego, California.  Available at http://hlt2001.org/papers/hlt2001-50.pdf  [Accessed 21 January 2002]<br></li>
+
+<li>
+<a NAME="Mitra97"></a>Mitra, M., Buckley, C., Singhal, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> and Cardie, C. (1997). &quot;An analysis of <span>statistical</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>and <span>syntactic</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>phrases&quot;. <i>Proceedings of RIAO'97, <span>Computer</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Assisted Information Searching on the Internet</i>,
+Montreal, Canada, pp., 200-214.<br></li>
+
+<li>
+<a NAME="Oard01"></a>Oard, D. and Wang, <span>J++</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>  (2001).  &quot;<a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings2/jianqiang.pdf">NTCIR-2 experiments at Maryland: Comparing structured queries and balanced translation</a>&quot;. <i>The Second NTCIR Workshop</i>, March 7-9, Tokyo, Japan.  Available at http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings2/jianqiang.pdf  [Accessed 21 January 2002]<br></li>
+
+<li><a NAME="Oard98"></a>Oard, D. and Diekema, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> (1998). &quot;Cross-Language Information Retrieval&quot;. <i>Annual Review of Information Science</i> <i>and Technology (ARIST)</i>, <strong>33</strong>, 223-256.<br></li>
+
+<li><a NAME="Peters00"></a>Peters, C.  (2000). <i><a href="http://galileo.iei.pi.cnr.it/DELOS/CLEF/clef.html">CLEF - Cross-Language Evaluation Forum</i></a>.  Available at http://galileo.iei.pi.cnr.it/DELOS/CLEF/clef.html  [Accessed 21 January 2002]<br></li>
+
+<li><a NAME="Pirkola98"></a>Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>  (1998). &quot;The effects of query structure and <span>dictionary</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>setups in dictionary-based cross-language information retrieval&quot;. <i>Proceedings of the 21st Annual International ACM Sigir Conference on Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in Information Retrieval</i>, Melbourne, Australia, pp. 55-63. New York, NY: Association for <span>Computing</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Machinery.<br></li>
+
+<li><a NAME="Pirkola00"></a>Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>, Hedlund, T., Keskustalo, H., J&auml;rvelin, K. (2000). &quot;Cross-lingual Information Retrieval Problems: <span>Methods</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>and <span>findings</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>for three language pairs&quot;.  In: Irene Wormell, ed. <i>ProLISSa Progress in Library and Information Science in Southern Africa. First</i> <i>biannual DISSAnet Conference</i>. Pretoria, 26-27 October 2000. Pretoria : Centre for Information <span>Development</span>, <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> University of Pretoria<br></li>
+
+<li><a NAME="Pirkola01a"></a>Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> and J&auml;rvelin, K. 2001a. &quot;Employing the <span>resolution</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>power of <span>search</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>keys&quot;. <i>Journal of the American Society for Information Science and Technology</i>, <strong>52</strong>(7), 575 -583.<br></li>
+
+<li><a NAME="Pirkola01b"></a>Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> and J&auml;rvelin, K. (2001b). Exploiting average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency and word <span>distribution</span>  <span class="exper" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>statistics in text retrieval. Submitted to <i>ACM Transactions of Information Systems</i>.<br></li>
+
+<li><a NAME="Pirkola01"></a>Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>, Hedlund, T., Keskustalo, H., and J&auml;rvelin, K. (2001). &quot;Dictionary-based cross-language information retrieval: problems, methods, and research findings&quot;. <i>Information Retrieval</i>, <strong>4</strong>(3/4), 209-230.<br></li>
+
+<li><a NAME="Robertson95"></a>Robertson, S.E., Walker, S., Beaulieu, M.M., Gatford, M., and Payne, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>  (1995). <a href="http://trec.nist.gov/pubs/trec4/papers/city.ps.gz">&quot;Okapi at TREC-4<&quot;</a>  <i>The Fourth</i> <i>Text REtrieval Conference (TREC-4)</i>, Gaithesburg, MD. Available at: http://trec.nist.gov/pubs/trec4/papers/city.ps.gz [Accessed 20 January 2002]<br></li>
+
+<li><a NAME="Salton89"></a>Salton, G. (1989). <i>Automatic text processing: the transformation, analysis, and retrieval of information by computer</i>. Reading, MA: Addison-Wesley.<br></li>
+
+<li><a NAME="Singhal96"></a>Singhal, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>, Buckley, C. and Mitra, M. (1996). Pivoted document <span>length</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>normalization. <i>Proceedings of the 19th</i> <i>Annual International ACM SIGIR Conference on Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in Information Retrieval</i>, Zurich, Switzerland, pp. 21-29.  New York, NY: Association for <span>Computing</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Machinery<br></li>
+
+<li><a NAME="Smeaton98"></a>Smeaton, <span>A+</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>F. (1998).  &quot;<a href="ftp://ftp.compapp.dcu.ie/pub/w-papers/1998/CA0898.ps.Z">User-chosen phrases in interactive query formulation for information retrieval</a>&quot;. <i>Proceedings of</i> <i>the 20th BCS-IRSG Colloquium on IR Research</i>, Grenoble, France. Available at: ftp://ftp.compapp.dcu.ie/pub/w-papers/1998/CA0898.ps.Z [Accessed 20 January 2002]<br></li>
+
+<li><a NAME="Sperer00"></a>Sperer, <span>R++</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> and Oard, D. (2000) Structured translation for cross-language IR. <i>Proceedings of the 23rd Annual International ACM SIGIR Conference on Research and <span>Development</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>in Information Retrieval</i>, Athens, Greece, pp. 120-127. New York, NY: Association for <span>Computing</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>Machinery.<br></li>
+
+<li><a NAME="Turtle90"></a>Turtle, H.<span>R++</span>. <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> 1990. <i>Inference networks for document retrieval</i>.   Amherst, MA: University of Massachusetts, <span>Computer</span>  <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>and Information Science Department. PhD Dissertation. (COINS Technical Report 90-92)<br></li>
+
+</ul>
+
+<hr color="#ff00ff" SIZE=3>
+
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+
+<p style="text-align : left; color : black;">Pirkola, <span>A+</span>, <span class="compus" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span> Lepp&auml;nen, E &amp; J&auml;rvelin, K (2002) &quot;The RATF <span>formula</span>  <span class="quanti" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>(Kwok's formula): exploiting average <span>term</span>  <span class="conce" style="width:1px;border-width:114px 38px 114px 38px;position:relative;">.</span>frequency in cross-language retrieval" <i>Information Research</i>, <b>7</b>(2) [Available at http://InformationR.net/ir/7-2/paper127]
+<br>
+&copy; the authors, 2001. <br>Last updated: 18th January, 2001
+</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:8_zt4Q82fgkJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres72.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><IMG SRC="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper127" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff SIZE=3>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/7-2/paper127.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:15:44 GMT -->
+</html>

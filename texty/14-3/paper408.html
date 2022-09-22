@@ -1,0 +1,874 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<!-- Mirrored from informationr.net/ir/14-3/paper408.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:26 GMT -->
+<head> 
+<title>Categorical and specificity differences between user-supplied tags and search query terms for images: an analysis of  Flickr tags and Web image search queries</title> 
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" /> 
+<link href="../IRstyle2html.html" rel="stylesheet" media="screen" title="serif" /> 
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" /> 
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" /> 
+ 
+<!--Enter appropriate data in the content fields--> 
+<meta name="dc.title" content="Categorical and specificity differences between user-supplied tags and search query terms for images: an analysis of Flickr tags and Web image search queries" /> 
+<meta name="dc.creator" content="EunKyung Chung, JungWon Yoon]" /> 
+<meta name="dc.subject" content="image, tags, queries, comparison" /> 
+<meta name="dc.description" content="Recently, user-supplied tags for images have been approached as significant resources in building user-oriented indexing systems. Especially,  Flickr has received much attention from image indexing/retrieval communities because of its popularity and the abundance of tags. These approaches and efforts, however, have been attempted based on little empirical research regarding to what extent user-supplied tags are related to users' search needs. The purpose of this study is to compare characteristics and features of user-supplied tags and search query terms for images on the Web in terms of categories of pictorial meanings and level of term specificity. Overall categorical distributions of tags and search term queries looked similar; the Generic category was used most frequently, the Specific and the Abstract categories followed, and the Color category was used least frequently for tags and search term queries. However, the results of statistical analyses demonstrated that there were significant differences in categories among tags and different stages of search query terms. The overall distributions of the levels of term specificity also had similar pattern in both tags and search query terms, but statistically significant differences were found between tags and search query terms. The results of this study demonstrated that Flickr tags have its own unique features compared to users' queries for image searching. The findings suggest that image tags should not be generally applied to other image collections while they have been considered as a resourceful data in developing a user-centered indexing system. Therefore, when utilizing user-supplied tags for user-centered indexing systems, it is desirable to consider the functions and users' tasks applied in tags rather than depending on statistical features merely obtained from the tag analysis." /> 
+<meta name="dc.subject.keywords" content="image, tags, queries, comparison" /> 
+ 
+<!--leave the following to be completed by the Editor--> 
+<meta name="robots" content="all" /> 
+<meta name="dc.publisher" content="professor t.d. wilson" /> 
+<meta name="dc.coverage.placename" content="global" /> 
+<meta name="dc.type" content="text" /> 
+<meta name="dc.identifier" scheme="issn" content="1368-1613" /> 
+<meta name="dc.identifier" scheme="uri" content="paper408.html" /> 
+<meta name="dc.relation.ispartof" content="infres143.html" /> 
+<meta name="dc.format" content="text/html" /> 
+<meta name="dc.language" content="en" /> 
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" /> 
+<meta name="dc.date.available" content="2009-09-15" /> 
+ 
+<script language="javascript" type="text/javascript"> 
+ 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script> 
+	
+<style type="text/css"> 
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+ 
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; --> 
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+ 
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+ 
+legend {
+    color: white;
+    background-color: #5E96FD;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+ 
+ 
+</style> 
+ 
+</head> 
+<body bgcolor="#ffffff"> 
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 14  no. 3, September, 2009</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres141.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+	<hr style="color: #5e96fd" size="1" />
+
+ 
+<h1>Categorical and specificity differences between user-supplied tags and search query terms for images. An analysis of  <em>Flickr</em> tags and Web image search queries</h1> 
+
+<br /> 
+<div style="margin-right:10%; margin-left:10%;"> 
+<h4><a href="mailto:echung@ewha.ac.kr">EunKyung Chung</a><br /> 
+Library and Information Science, Ewha Womans University, Seoul, Korea</h4> 
+<h4><a href="mailto:jyoon@cas.usf.edu">JungWon Yoon</a><br /> 
+School of Library and Information Science, University of South Florida, Tampa, FL, United States</h4> 
+</div> 
+<br /> 
+ 
+<form action="#"> 
+<fieldset><legend>Abstract
+</legend><blockquote>
+<strong>Introduction</strong>. The purpose of this study is to compare characteristics and features of user-supplied tags and search query terms for images on the  <em>Flickr</em> Website in terms of categories of pictorial meanings and level of term specificity.<br />
+<strong>Method</strong>. This study focuses on comparisons between tags and search queries using Shatford's categorization schemes and the level of specificity based on the basic level theory.<br />
+<strong>Analysis</strong>. Frequency distributions and chi-squared analyses were performed on the data. The results of statistical analyses demonstrated that there were significant differences in categories among tags and different stages of search query terms. The overall distributions of the levels of term specificity also had similar pattern in both tags and search query terms, but statistically significant differences were found between tags and search query terms.<br />
+<strong>Results</strong>. The results of this study demonstrated that  <em>Flickr</em> tags have their own unique features compared to users' queries for image searching. The findings suggest that image tags should not be generally applied to other image collections although they have been considered as useful data in developing a user-centered indexing system.<br />
+<strong>Conclusions</strong>. When utilizing user-supplied tags for user-centered indexing systems, it is desirable to consider the functions and users' tasks applied in tags rather than depending on statistical features merely obtained from the tag analysis.
+</blockquote>
+</fieldset>
+</form>
+
+ 
+<div align="center"> 
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: #5E96FD;" onclick="doChangeFont()" /></div> 
+<br /> 
+ 
+<h2>Introduction</h2> 
+ 
+<p>Tags, users' own descriptions of images, are becoming widely used as participation on the Web increases. The potential of user-generated descriptors was offered by O'Connor (<a href="#oco96">1996</a>) more than a decade ago. He asserted that 'by changing our model of where the act of representation takes place', (p. 150) images can be represented with user-generated tags as well as adjective and functional tags which are difficult for a single indexer to represent. The advent of Web 2.0 technology made this approach possible in the real world, and  <em>Flickr</em> became a popular image tagging system in America. Accordingly, a great deal of practical approaches and research endeavors have focused on tag utilization in user-centered indexing mechanisms (see the Related studies section). Compared to document-centred indexing, user-centred indexing is more interested in users' needs and focuses on incorporating possible user queries into the indexing terms (<a href="#fid94">Fidel 1994</a>; <a href="#soe85">Soergel 1985</a>). Therefore, in order to evaluate the actual effectiveness of tag utilization as a user-centred indexing mechanism, user-generated tags need to be reflected in search query terms, i.e., representations of user needs. </p>
+
+<p>However, comparative analyses between image tags and search queries have not been adequately investigated. Studies on image search queries have mainly compared them to the general search queries on the Web. These comparisons between image search queries and general search queries reveal quantitative differences in the amount of image search queries and the distribution of query terms (<a href="#jan00">Jansen <em>et al.</em> 2000</a>; <a href="#goo01">Goodrum and Spink 2001</a>). Jansen <em>et al.</em> (<a href="#jan00">2000</a>) reported that image search queries formed a small portion (less than 3%) of overall users' queries on the Web. Goodrum and Spink (<a href="#goo01">2001</a>) found that image search queries contained a larger number of terms and terms that were more diverse compared to general search queries. On the other hand, research on image tags primarily focuses on the potential of tags for developing user-centred image indexing systems (i.e., folksonomies). </p>
+
+<p>As a way of employing tags as a user-centred organization tool, researchers have attempted to identify patterns and features of social tags (<a href="#gol06">Golder and Huberman 2006</a>; <a href="#mor08">Morrison 2008</a>; <a href="#stv07">Stvilia and Jogensen 2007</a>) or to develop controlled vocabulary systems using computational algorithms (<a href="#sch06">Schmitz 2006</a>; <a href="#aur06">Aurnhammer et al. 2006</a>). These research efforts are based on the underlying assumption that utilizing user-supplied tags for images has benefits when building user-centred indexing systems. Since end-users directly supply the tags when describing images, it seems reasonable to assume that tags employed in user-centred indexing systems represent users' needs and perceptions of images. However, to determine this representation, it is necessary to investigate to what extent user-supplied tags are similar or different from search queries. This study is designed to fill this gap, because there is little empirical research evaluating user-supplied tags in terms of search queries for images.</p>
+
+<p>This study aims to explore the characteristics and features of user-supplied tags for non-domain-specific images compared to search queries on the Web. More specifically, this study focuses on comparisons between tags and search queries using Shatford’s (<a href="#sha86">1986</a>) categorization schemes and the level of specificity based on the basic level theory. These two methods have been adopted as tools in related studies (<a href="#arm97">Armitage and Enser 1997</a>; <a href="#cho03">Choi and Rasmussen 2003</a>; <a href="#jor03">Jogensen 2003</a>; <a href="#ror08">Rorrisa 2008</a>) because they provide a clear understanding of an image's semantic content. Using a categorization scheme makes it possible to examine dominant categories used in image representation (describing or searching) processes.  An image contains multilayered meanings, so it is important to elucidate dominant categories (or attributes) in an image (<a href="#cho03">Choi and Rasmussen 2003</a>). In addition, an object can be articulated differently depending on term specificity (e.g., the same object can be described as 'animal', 'dog', or 'Chihuahua'). Similar to dominant meanings in images, if it is possible to find any specific level of terms, those specific levels of terms should be the main focus of the indexing process (<a href="#bat98">Bates 1998</a>).  Following two methods, Shatford's categorization and specificity level, the characteristics and features of image tags are elucidated through comparison to search queries. In this context, the goals of this study are as follows:</p>
+
+<ul>
+<li>To determine to what extent user-supplied tags and search query terms for images are different in categorization.</li>
+<li>To determine to what extent user-supplied tags and search query terms for images are different in the level of specificity.</li>
+</ul>
+
+<h2>Related studies</h2>
+ 
+<p>This section introduces lines of studies on examining image search queries and user-supplied tags on images. Their fundamental purposes were to understand users' needs, perceptions of image searching behaviour, so that the findings could provide evidences on implementing more effective image retrieval systems.</p>
+
+<h3>Query analysis for image retrieval</h3>
+
+<p>Studies of image query analysis mainly consist of two areas: studies on image search queries which have been submitted to traditional visual/image collections in libraries and museums, and studies on image search queries in Web search engines.</p> 
+
+<p>Studies on image search queries generally attempted to identify the users' needs by analysing the users' queries submitted to visual information archives in libraries and museums. Armitage and Enser (<a href="#arm97">1997</a>) analysed 1,749 queries submitted to visual information archives of seven libraries for image retrieval by categorizing users' requests based on Shatford's categorical analysis. The results of this study identified observable similarities in image query categorization across multiple libraries. The majority of users' queries of visual information archives from seven libraries were categorized as Specific, and the remaining queries were categorized as Generic or Abstract (the latter containing the fewest queries). More specifically, Hastings (<a href="#has95">1995</a>) analysed queries of art historians for digitized Caribbean paintings. The analysis identified four levels of complexity from least complex to most complex. The least complex type of queries included questions such as <em>Who?</em>, <em>Where?</em>, and <em>When?</em>; while the most complex type of queries included <em>Meaning</em>, <em>Subject</em>, and <em>Why?</em>. The intermediate level of queries included <em>How?</em>, <em>Identity of Object</em>, and <em>Activities</em> as well as <em>What are?</em> questions. The results of this categorical analysis were applied to retrieval parameters for image and image characteristics.</p> 
+
+<p>Another query analysis on a specific image collection was conducted by Choi and Rasmussen (<a href="#cho03">2003</a>).  Based on Batley's (<a href="#batl98">1988</a>) four categories, they identified image search needs by analysing thirty-eight search requests from the Library of Congress <a href="http://memory.loc.gov/ammem/index.html" target="_blank">
+American Memory</a> photo archive. The results demonstrated that more than half of search queries were categorized general/namable needs (60.5%), then specific needs (26.3%), general/abstract needs (7.9%), and general or subjective needs (5.3%). They also analysed 185 search terms using Shatford's category, and demonstrated that 64.87% of search terms were included in the generic category and 26.49% and 8.64% were in the specific and abstract categories, respectively.</p>
+
+<p>Given the characteristics of general searching behaviour in the context of the Web, there are several studies focusing on image search queries conducted on the Web. Jansen, Goodrum and Spink (<a href="#jan00">2000</a>) identified image, audio, and video search queries from 1,025,908 search queries and 211,058 sessions on a major Web search engine. They identified 27,144 image queries representing 2.65% of all search queries. In terms of search query characteristics, they demonstrated that users applied more search terms (3.27 terms for images) when searching multimedia compared to general Web searches (2 terms for general searches). In addition, Goodrum and Spink (<a href="#goo01">2001</a>) examined users' Web image queries to understand visual information needs in terms of the number of image queries, terms, and sessions. The average number of image queries per user was 3.36 while the average number of general queries was 2. The categories were identified as diverse including image terms, modifiers, sexual terms, cost, sex, other, people, and art and leisure. From another perspective, Goodrum <em>et al.</em> (<a href="#goo03">2003</a>) identified search query reformulation patterns by using Markov analysis of state transitions with seventy-one image search queries on the Web. Eighteen state categories were identified as search tool, collection selection, queries, context moves, or relevance judgments.</p>
+
+<h3>Social tagging as an image representation mechanism</h3>
+
+<p>Recently, social tagging has received attention in the library and information science field as a promising information organization mechanism. Based on the idea that users not only organize information for their own use but also share their organized collections with others, researchers in the field expect that user-supplied tags can serve as a user-oriented indexing approach. A social tagging system has promising advantages: for example, information loss, which inevitably occurs during the information representation process, can be overcome, or at least decreased, through social tags. This is because for most of the social tagging systems, the information loss is from people having different viewpoints and is not from a single indexer's perspective (<a href="#shind">Shirky, n.d.</a>). In addition, since users engaged with social tagging systems describe content with their own vocabulary, tagging systems can reveal the conceptual structure and current terminologies of the user community (<a href="#fur06">Furnas <em>et al.</em> 2006</a>).</p>
+
+<p>The potential of social tagging seems more beneficial for image indexing and retrieval. First, information loss has been identified as one of main obstacles in representing image documents. In other words, as an image document conveys multiple levels of meaning, including subjective impression, it has been argued that a single indexer cannot provide all possible index terms for an image document. However, user-supplied tags, even infrequently used tags, can be utilized in expanding indexing terms by reflecting a diversity of users' viewpoints (<a href="#jor07">Jogensen 2007</a>). Secondly, it has been recognized that there are discrepancies between professional indexers' and naive users' perspectives in interpreting and representing image documents. As Bates (<a href="#bat98">1998</a>) noted, although professional indexers assign index terms to assist  users, their professional knowledge often leads to mismatches between index terms and search terms. By using user-supplied tags, it will be possible to reflect index terms that are familiar to end-users. Thirdly, browsing has been addressed as a significant activity during the image retrieval process, because verbal queries have limitations in expressing visual needs. Therefore, social tagging systems, which can assist users' browsing activities, will be a beneficial feature for an image retrieval system. Finally, there is another unique feature of image documents that can take advantage of a social tagging system. An image includes multi-layered messages that belong to different attributes (or categories). Therefore, as noted above, a prominent research area has been the discovery of which attributes of pictorial messages are significant in retrieving image documents. By analysing user-supplied tags, it is possible to discover which attributes are frequently adopted by users for organizing images for their own and others' use.</p>
+
+<p>Since a social tagging system demonstrates its potential for providing access to image documents, several researchers, mostly in information science, have examined and utilized user-supplied tags. A series of studies has investigated how users use <a href="http://www.flickr.com/" target="_blank">Flickr</a>, a photo management and sharing site, which employs social tagging. On the  <em>Flickr</em> site, which was launched in 2004, users may upload their photographs with tags. Susequently, photographs may be viewed and searched by the public. Compared to other social tagging Websites, where users assign tags for digital resources created by others,  <em>Flickr</em> users assign tags for their own photographs. Guy and Tonkin's (<a href="#guy06">2006</a>) study attempted to investigate how to make tags more effective as access points, based on the finding that there is a convergence of tags as time goes on. They focused on 'sloppy tags' from <em>delicious</em> (the social bookmarking site) and  <em>Flickr</em>  and proposed methods for improving tags by handling these sloppy tags. However, they also pointed out that these tidying up processes may discourage users' participation. </p>
+
+<p>Marlow et al. (<a href="#mar06">2006</a>) analysed   <em>Flickr</em>  tag usage patterns to propose a tagging system based on their findings. According to their results, most users have only a few unique tags, and the growth of unique tags adopted by an individual user declines over time. They also found correlations between contact networks among  <em>Flickr</em> users and the formation of tag vocabulary (i.e., degree of common tag usage). Stvilia and Jogensen (<a href="#stv07">2007</a>) investigated the collection building behaviour of  <em>Flickr</em> users by comparing descriptions given to two different types of photo sets (i.e., user-selected thematic collections), individual users' photo sets and groups' photo sets. They found that, whereas descriptions of individual users' photosets were focused on the users' contexts and events, descriptions of group photosets include more general concepts and the scope of the group. </p>
+
+<p>A few studies have compared tags and the traditional indexing approach. Matusiak (<a href="#mat06">2006</a>) compared tags and professionally-created metadata using two sets of images, one from the  <em>Flickr</em> site and the other from a digital image collection. She concluded that tags cannot be used as an alternative to professional indexing because of their inconsistency and inaccuracy.  Instead, they may be used as an enhancement or a supplement to indexing. Winget (<a href="#win06">2006</a>) focused on authority and control issues, and asserted a positive potential for tags with digital resources. According to Winget, users choose appropriate, thorough and authoritative terms, and there are informal policies which enforce appropriate tagging behaviour among users.</p>
+
+<p>Researchers in computer science  have developed algorithmic models connecting tags with existing indexing mechanisms. Schmitz (<a href="#sch06">2006</a>) proposed a model which induced ontology from the  <em>Flickr</em> tag vocabulary, and discussed how the model can improve retrieval effectiveness by integrating it into a tagging community. Aurnhammer <em>et al.</em> (<a href="#aur06">2006</a>) proposed combining tagging and visual features, and demonstrated that their model can overcome problems that may occur by only using one of two approaches.</p>
+
+<p>The potential of social tagging has been explored in the museum community as a mechanism to bridge the gap between professional cataloguers and naive viewers. Although subject indexing is a significant access point for viewers, most cataloguing standards for museum collections do not require subject descriptions as a core element. Even if professionals assign subject index terms, findings reveal they cannot easily represent naive users' viewpoints (<a href="#bea05">Bearman and Trant 2005</a>). Considering that tags can represent museum objects with the users' language as well as provide diverse views from many individual contributions, several museums, such as the <a href="http://www.metmuseum.org/" target="_blank">Metropolitan Museum of Art</a>, the <a href="http://www.guggenheim.org/" target="_blank">Guggenheim Museum</a>, and the <a href="http://www.clevelandart.org/Explore/" target="_blank">Cleveland Museum of Art</a>, have implemented projects integrating tags in museum collections. According to a study comparing terms assigned by professional cataloguers and by volunteer taggers at the Metropolitan Museum of Art, 88% of tags were not included in existing cataloguing records. Of these, 75% were evaluated as appropriate terms by the museum's Subject Cataloguing Committee. This study showed that tags can increase the number of user-friendly access points (<a href="#tra06">Trant 2006</a>).</p>
+
+<h2>Research design</h2>
+
+<h3>Data set</h3>
+
+<p>This study used two data sets for comparison: a set of search terms and a set of user-supplied tags. For search terms, the Web search log of <em>Excite</em> 2001 was used. The Web search log of Excite 2001, which has been used frequently in several Web query studies (<a href="#spi02">Spink <em>et al.</em> 2002</a>; <a href="#eas03">Eastman and Jansen 2003</a>; <a href="#jan05">Jansen and Spink 2005</a>), contains 262,025 sessions and 1,025,910 queries (<a href="#spi02">Spink <em>et al.</em> 2002</a>). Since the search engine <em>Excite</em> did not provide an explicit means to specify users' queries as image search queries, users had to supply specific terms  to denote image search queries (e.g. <em>apple image</em> rather than simply <em>apple</em>). Accordingly, for the first phase of query processing, the image queries needed to be selected using the specific terms which were identified in Jansen <em>et al.</em> (<a href="#jan00">2000</a>) (Table 1). Out of the total of 1,025,910 queries, 32,664 image queries remained.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Table 1: Image terms in the queries (<a href="#jan00">Jansen <em>et al.</em> 2000</a>)</strong></caption>
+  <tr>
+    <td>art, bitmap,bmp, .bitmap, .bmp, camera, cartoon, gallery, gif, .gif, image, images, jpeg, jpg, pcx, .jpeg, .jpg, .pcx, photo, photographs, photograph, photos, pic, pics, .pic, pics, picture, pictures, png, .png, tif, tiff, .tif, .tiff</td>
+  </tr>
+</table>
+
+<p>For the second phase, each of 32,664 queries was reviewed to eliminate the following queries from the data set:</p> 
+
+<ol>
+<li>repeated queries which were re-sent by users without change,</li> 
+<li>pornographic terms in queries (according to Goodrum and Spink's (<a href="#goo01">2001</a>) study, which used the same data set, twenty-five terms among the 100 most frequent search terms dealt with sexual content),</li> 
+<li>queries containing simply 'image, picture, photo, etc.', and</li> 
+<li>others (such as non-English queries).</li> 
+</ol>
+
+<p>After the de-selection process, a total of 8,444 queries and 5,688 sessions remained. For the third phase, three subsets of queries, initial query, second revised query and third revised query, were extracted for two reasons. First, some sessions include a large number of queries; for example one session has thirty queries. If the queries are analysed as a whole, highly repeated query terms in one session may cause biased results (e.g., a query term occurring thirty times in one session should be distinguished from a query term occurring thirty times in thirty different sessions). To eliminate high-frequency queries generated by a single searcher, queries were analysed by search stages. Secondly, by analysing queries based on the search stages, it is possible to determine whether there are any differences in features of search queries during the progress of the search. Finally, since the tagging system used in this study allows only individual words as tags, search queries were also parsed into one-word search terms, except for people's names. Then, to exclude highly subjective search terms, only terms that appear more than three times were used for comparing user-supplied tags (see Table 2).</p>
+
+<table width="60%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Table 2: Features of query in terms of query revision process</strong></caption>
+  <tr><th width="20%">Query</th>
+   <th width="20%">Number of queries</th>
+   <th width="20%">Number of unique terms occurring more than three times</th></tr>
+   <tr>
+  <td align="center">Initial query</td>
+  <td align="center">5,688</td>
+  <td align="center">629</td>
+   </tr>
+   <tr>
+  <td align="center">2nd revised query</td>
+  <td align="center">1,478</td>
+  <td align="center">135</td>
+   </tr>
+   <tr>
+  <td align="center">3rd revised query</td>
+  <td align="center">598</td>
+  <td align="center">60</td>
+  </tr>
+</table>
+
+<p>A data set, consisting of user-supplied tags, was collected from <em>Flickr</em>. Using the API provided by the  <em>Flickr</em> Website, 33,742 tags assigned to 8,998 photographs were collected - half of the photographs were uploaded in September and October of 2004 and the other half were uploaded in May 2007. A possible limitation of this study is the time difference between the  <em>Flickr</em> data set and the Excite search query. However, an analysis demonstrated no differences between tags generated in 2004 and in 2007 in terms of categorization distribution and specificity levels. Therefore, based on this result, it is assumed that the time difference between the two data sets does not significantly influence the current study results. Since tags provided by a single user can be too subjective, 535 unique tags provided by more than two users were identified as the data set.</p>
+
+<h3>Comparison tools</h3>
+
+<p>We adopted and revised a classification scheme developed by Shatford (<a href="#sha86">1986</a>) (see Table 3) to compare category distributions of terms used in tags and queries. Shatford proposed categorizing image subjects as <em>Generic of</em>, <em>Specific of</em> and <em>About</em>, based on Panofsky's theory which describes three levels of pictorial meanings. She then developed a faceted classification scheme by applying <em>Who</em>, <em>What</em>, <em>When</em> and <em>Where</em> facets to those three categories. Shatford's faceted classification scheme has been used in examining the categories of meanings included in an image and which categories are dominant during a search for images (<a href="#cho03">Choi and Rasmussen 2003</a>; <a href="#arm97">Armitage and Enser 1997</a>). This study investigates whether there are differences in category distributions between user-supplied tags and search terms.</p>
+
+<table width="75%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Table 3: Category of pictorial meaning</strong></caption>
+  <tr><th width="30%" colspan="2">Shatford's faceted classification</th><th width="35%">Revised category</th><th width="10%">Example</th></tr>
+  <tr><td width="10%" rowspan="6" valign="top">Abstract (A)</td><td width="20%">Abstract object (A1)</td> <td width="35%">Mythical or fictitious being (A1)</td> <td width="10%">Dragon</td></tr>
+  <tr><td rowspan="3" valign="top">Emotion/Abstraction (A2)</td> <td>Symbolic value (A2-1)</td> <td>Classic</td></tr>
+  <tr><td>General feeling, atmosphere (A2-2)</td> <td>Cold</td></tr>
+  <tr><td>Individual affection, emotional cue (A2-3)</td> <td>Happy</td></tr>
+  <tr><td>Abstract location (A3)</td> <td>Place symbolized (A3)</td> <td>Urban</td></tr>
+  <tr><td>Abstract time (A4)</td> <td>Emotion, abstraction symbolized by time (A4)</td> <td>-</td></tr>
+  <tr><td rowspan="7" valign="top">Generic (G)</td><td rowspan="3" valign="top">Generic object (G1)</td> <td>Kind of person, people, parts of a person (G1-1)</td> <td>Baby</td></tr>
+  <tr><td>Kind of animal, parts of an animal (G1-2)</td> <td>Bear</td></tr>
+  <tr><td>Kind of thing (G1-3)</td> <td>Airplane</td></tr>
+  <tr><td rowspan="2" valign="top">Generic event/activity (G2)</td> <td>Kind of event (G2-1)</td> <td>Birthday</td></tr>
+  <tr><td>Kind of action (G2-2)</td> <td>Bowling</td>  </tr>
+  <tr><td>Generic location (G3)</td> <td>Kind of place (G3)</td> <td>Beach</td></tr>
+  <tr><td>Generic time (G4)</td> <td>Cyclical time, time of day (G4)</td> <td>Morning</td></tr>
+  <tr>    <td rowspan="7" valign="top">Specific (S)</td><td rowspan="3" valign="top">Specific object (S1)</td> <td>Individually named person (S1-1)</td> <td>Chris</td></tr>
+  <tr><td>Individually named animal (S1-2)</td> <td>Heron</td></tr>
+  <tr><td>Individually named thing (S1-3)</td> <td>Sega</td></tr>
+  <tr><td rowspan="2" valign="top">Specific event/activity (S2)</td> <td>Individually named event (S2-1)</td> <td>Olympic</td>  </tr>
+  <tr><td>Individually named action (S2-2)</td> <td>-</td>  </tr>
+  <tr><td>Specific location (S3)</td> <td>Individually named geographic location (S3)</td> <td>Florida</td>  </tr>
+  <tr><td>Specific time (S4)</td> <td>Linear time (date or period) (S4)</td> <td>2007</td>  </tr>
+  <tr>    <td rowspan="6" valign="top">[Others]</td><td>&nbsp;</td> <td>Colour (C)</td> <td>Black</td>  </tr>
+  <tr><td>&nbsp;</td> <td>Boolean + search command (B)</td> <td>AND, Find</td>  </tr>
+  <tr><td>&nbsp;</td> <td>Image related (I)</td> <td>Photo etc.</td>  </tr>
+  <tr><td>&nbsp;</td> <td>Flickr related (F)</td> <td>Geotag</td>  </tr>
+  <tr><td>&nbsp;</td> <td>Number (N)</td> <td>1</td>  </tr>
+  <tr><td>&nbsp;</td> <td>Part of speech (P)</td> <td>And</td>  </tr>
+</table>
+
+<p>For comparing the level of term specificity, the basic level theory was adopted. The basic theory explains that concepts can be categorized into one of three levels, the superordinate level, the basic level or the subordinate level.  Experimental studies have demonstrated most people tend to use the basic level concept rather than the superordinate or subordinate concept (<a href="#ros76">Rosch <em>et al.</em> 1976</a>). Since it has been found that a set of basic level terms are dominantly used and commonly shared by general users, researchers in library and information science assumed that basic level terms should be the level of specificity for concepts, and should receive focus during the indexing process (<a href="#bat98">Bates 1998</a>; <a href="#gre06">Green 2006</a>). By following this assumption, this study examined the level of specificity of user-supplied tags and search terms by applying the basic level theory. Since most research on basic level theory has explored concrete objects and colours, this study also analysed tags and search terms in the <em>Generic</em> and <em>Colour</em> categories.</p> 
+
+<p>Rosch and her colleagues demonstrated features of superordinate, basic and subordinate categories through their empirical studies (<a href="#ros76">Rosch <em>et al.</em> 1976</a>), but they did not provide established criteria which can clearly distinguish those three categories; whereas, in information scince, some recent studies developed their coding schemes for applying the basic level theory (<a href="#gre06">Green 2006</a>; <a href="#ror08">Rorissa 2008</a>; <a href="#ror082">Rorissa and Iyer 2008</a>). This study attempted to establish a coding scheme which reflects an existing hierarchical structure among concepts in addition to considering features of three categories illustrated by previous studies.</p>
+
+<p>This study made use of the hierarchies appearing in the Library of Congress Thesaurus for Graphic Materials (hereafter, 'the Thesaurus') by following three steps. First, it examined how nine taxonomies used in the empirical study of Rosch <em>et al.</em> (<a href="#ros76">1976</a>) are designated in the the Thesaurus hierarchy (Figure 1).  We found that the absolute level of depth appearing in the Thesaurus hierarchy cannot be directly used in deciding three categories. For example, in the case of an <span style="font-family: monospace; font-weight: bold;">Object &rarr; Food &rarr; Fruit &rarr; Apple</span> hierarchy, the lowest-level word, <span style="font-family: monospace; font-weight: bold;">Apple</span>, obviously satisfies features of the basic level, the upper three concepts belong to the superordinate level and this hierarchy does not include a subordinate level. The examples of <span style="font-family: monospace; font-weight: bold;">Hammer, Saws</span> and <span style="font-family: monospace; font-weight: bold;">Crosscut saws</span> shows that two basic-level terms, <span style="font-family: monospace; font-weight: bold;">Hammer</span> and <span style="font-family: monospace; font-weight: bold;">Saws</span>, belong to two different levels in the Thesaurus and a subordinate term <span style="font-family: monospace; font-weight: bold;">Crosscut saws</span> is placed at the same level as <span style="font-family: monospace; font-weight: bold;">Hammer</span>. Although the absolute depth of the Thesaurus's hierarchy cannot be a criterion for deciding basic-level categories, it was obvious that considering its hierarchical relations among concepts can help make decisions on basic levels. Therefore, secondly, other tags and terms not included in nine taxonomies but found in the Thesaurus were categorized into one of three levels.  This was done by considering features of the three categories as well as Thesaurus hierarchies. Finally, tags and terms not included in the Thesaurus were also categorized in a consistent way (refer to <a href="#yoon09">Yoon(2009)</a> for a more detailed explanation). With regards to basic level colours, the analysis process was more straightforward because eleven basic colours were identified in a previous study (<a href="#ber69">Berlin and Kay 1969</a>): black, white, grey, red, yellow, green, blue, pink, orange, brown, and purple.</p>
+
+<div align="center"><img src="p408fig1.jpg" alt="figure 1. tgm hierarchy and rosch's nine taxonomies. bolded concepts exist in nine taxonomies used by rosch, et al. (1976)." border="0" width="500" height="700" /></div>
+<div align="center"><br /><strong>Figure 1. TGM hierarchy and Rosch's nine taxonomies. Bolded concepts exist in nine taxonomies used by Rosch <em>et al.</em> (<a href="#ros76">1976</a>)</strong></div>
+
+<p>Categories and term specificity were coded by a trained masters' level student in the School of Library and Information Science at the University of South Florida. For checking the reliability of the coding for categorical analysis, two methods were used. First, tags and query terms were sorted by attribute and then alphabetical order, and then one of the researchers reviewed the coding, discussed with the student the anomalous codes and corrected anomalous codes (error rate &lt; .01%). Secondly, another trained masters' level student in the same school performed coding checks on 10% of the records. The percentages of inter-coder agreement were 92% for user-supplied tags and 96.4% for search terms. The reliability of the coding for term specificity analysis was checked by examining inter-coder agreement. Again a trained masters' level student in the same school performed coding checks on 10% of the records. The percentages of inter-coder agreement were 89% for both user-supplied tags and search terms.</p>
+
+<h2>Findings</h2>
+
+<h3>General description by categories</h3>
+
+<p>As a way of identifying characteristics of user-supplied tags and search query terms, a general observation of categorical distributions was described, respectively. First, as shown in Table 4, categorical distributions of user-supplied tags were indicated with respect to the number of unique tags and tag occurrence. The Generic category is the highest number of unique tags (338 unique tags, 63.18%). The Specific category is the next holding 105 unique tags at approximately 20%. The Abstract category and <em>Flickr</em> category show similar percentages of 8.05% and 6.17%, respectively. The <em>Part of speech</em> category takes only three unique tags, less than 1%. It can be noted that there is uniformity across the number of unique tags and tag occurrence. The tags in the <em>Generic</em> category appeared most frequently, 4,905 times or 52.10%, and those in the <em>Specific</em> category appeared 2,740 times (29.97%). The <em>Flickr</em>, <em>Abstract</em> and <em>Colour</em> category appeared 697 times (7.45%), 594 times (6.35%) and 389 times (7.45%), respectively. In general, an overall observation between the number of unique tags and their occurrence confirms that categories with more unique terms have more occurrences of those unique tags.</p>
+
+<table width="65%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Table 4: Frequencies of unique tag and tag occurrence</strong></caption>
+  <tr><th width="15%" rowspan="2">Category</th><th colspan="2" width="25%">Unique tag</th><th colspan="2" width="25%">Tag occurrence</th></tr>
+  <tr><th width="13%">Number</th><th width="12%">%</th><th width="13%">Number</th><th width="12%">%</th></tr>
+  <tr><td>Abstract</td><td align="center">43</td> <td align="center">8.04</td><td align="center">594</td> <td align="center">6.35</td></tr>
+   <tr><td>Colour</td><td align="center">13</td> <td align="center">2.43</td><td align="center">389</td> <td align="center">4.16</td></tr>
+   <tr><td>Generic</td> <td align="center">338</td> <td align="center">63.18</td><td align="center">4,905</td> <td align="center">52.40</td></tr>
+   <tr><td>Specific</td> <td align="center">105</td> <td align="center">19.63</td><td align="center">2,740</td> <td align="center">29.27</td></tr>
+   <tr><td>Part of speech</td> <td align="center">3</td> <td align="center">0.56</td><td align="center">35</td> <td align="center">0.37</td></tr>
+   <tr><td>Flickr</td> <td align="center">33</td> <td align="center">6.17</td><td align="center">697</td> <td align="center">7.45</td></tr>
+   <tr><td>Total</td> <td align="center">535</td> <td align="center">100</td><td align="center">9,360</td> <td align="center">100</td></tr>
+</table>
+
+<p>On the other hand, Table 5 shows the uniqueness and occurrence of search terms in three stages of the search process: initial, second, and third stages. Search term distributions in categories are opposite to tag distributions, with more unique tags appearing more frequently in tag distributions. It can be noted that there is little uniformity across the number of unique terms and term occurrence. In the initial stage, unique terms in the <em>Generic</em>, <em>Specific</em>, and <em>Abstract</em> categories account for more than 80%, but <em>Image related</em>, <em>Part of speech</em>, and <em>Boolean categories</em> comprise more than 75% of term occurrences. The tendency for several non-semantic terms to occur very frequently in image search queries similarly appeared in the second and third stages with slight variations. The search query terms in the <em>Generic</em> category show the highest percentage of unique terms in all three stages. In the case of term occurrence distributions, the <em>Image related</em> (I) category accounts for approximately 50% of total term occurrences. As mentioned above, users are supposed to include image related terms in order to articulate their visual information needs when using the Excite search engine. Also, this study finds that users frequently used Boolean (B) terms and Part of Speech (P) when articulating their search needs into queries.</p>
+
+<p>In summary, as shown in Table 4 and Table 5, there are clear differences between tags and search query terms. More specifically, it is recognized that there is considerable discrepancy due to characteristics unique to either search query terms or tags. For instance, search query terms are likely to contain substantial numbers of <em>Image related</em> terms and <em>Boolean operators</em> in order to express users' visual information needs in a query form; whereas tags include  <em>Flickr</em> related tags, which are only meaningful in <em>Flickr</em> communities. Since this study compares tags and search queries in order to see the potential of tags as a user-centred subject indexing mechanism, it is reasonable to select semantically meaningful categories such as <em>Abstract</em>, <em>Colour</em>, <em>Generic</em>, and <em>Specific</em> as a way of analysing the differences between tags and search query terms.</p>
+
+<table width="78%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Table 5: Frequencies of unique search term and term occurrence</strong></caption>
+  <tr>
+<th rowspan="3" width="6%">Category</th><th width="24%" colspan="4">Initial search term</th><th width="24%" colspan="4">2nd search term</th><th width="24%" colspan="4">3rd search term</th></tr>
+  <tr><th colspan="2">Unique term</th><th colspan="2">Term occurrence</th><th colspan="2">Unique term</th><th colspan="2">Term occurrence</th><th colspan="2">Unique term</th><th colspan="2">Term occurrence</th>  </tr>
+  <tr>  <th width="6%">No.</th> <th width="6%">%</th> <th width="6%">No.</th> <th width="6%">%</th><th width="6%">No.</th> <th width="6%">%</th> <th width="6%">No.</th> <th width="6%">%</th><th width="6%">No.</th> <th width="6%">%</th> <th width="6%">No.</th> <th width="6%">%</th></tr>
+  <tr><td align="center"> A</td><td align="center">81</td> <td align="center">13.41</td> <td align="center">596</td> <td align="center">4.17</td><td align="center">18</td> <td align="center">13.95</td> <td align="center">96</td> <td align="center">3.47</td><td align="center">6</td> <td align="center">11.54</td> <td align="center">25</td> <td align="center">2.27</td></tr>
+  <tr><td align="center"> C</td><td align="center">8</td> <td align="center">1.32</td> <td align="center">88</td> <td align="center">0.62</td><td align="center">3</td> <td align="center">2.33</td> <td align="center">20</td> <td align="center">0.72</td><td align="center">1</td> <td align="center">1.92</td> <td align="center">6</td> <td align="center">0.55</td></tr>
+  <tr><td align="center"> G</td><td align="center">276</td> <td align="center">45.70</td> <td align="center">1904</td> <td align="center">13.32</td><td align="center">65</td> <td align="center">50.39</td> <td align="center">326</td> <td align="center">11.78</td><td align="center">20</td> <td align="center">38.46</td> <td align="center">93</td> <td align="center">8.45</td></tr>
+  <tr><td align="center"> S</td><td align="center">138</td> <td align="center">22.85</td> <td align="center">734</td> <td align="center">5.13</td><td align="center">12</td> <td align="center">9.30</td> <td align="center">47</td> <td align="center">1.70</td><td align="center">4</td> <td align="center">7.69</td> <td align="center">12</td> <td align="center">1.09</td></tr>
+  <tr><td align="center"> P</td><td align="center">37</td> <td align="center">6.13</td> <td align="center">1581</td> <td align="center">10.62</td><td align="center">12</td> <td align="center">9.30</td> <td align="center">422</td> <td align="center">15.25</td><td align="center">8</td> <td align="center">15.38</td> <td align="center">180</td> <td align="center">16.36</td></tr>
+  <tr><td align="center"> N</td><td align="center">10</td> <td align="center">1.66</td> <td align="center">49</td> <td align="center">0.34</td><td align="center">2</td> <td align="center">1.55</td> <td align="center">7</td> <td align="center">0.25</td><td align="center">0</td> <td align="center">0.00</td> <td align="center">0</td> <td align="center">0.00</td></tr>
+  <tr><td align="center"> I</td><td align="center">22</td> <td align="center">3.64</td> <td align="center">7424</td> <td align="center">51.92</td><td align="center">14</td> <td align="center">10.85</td> <td align="center">1294</td> <td align="center">46.77</td><td align="center">11</td> <td align="center">21.15</td> <td align="center">547</td> <td align="center">49.73</td></tr>
+  <tr><td align="center"> B</td><td align="center">3</td> <td align="center">0.50</td> <td align="center">1848</td> <td align="center">12.92</td><td align="center">2</td> <td align="center">1.55</td> <td align="center">549</td> <td align="center">19.84</td><td align="center">2</td> <td align="center">3.85</td> <td align="center">237</td> <td align="center">21.55</td></tr>
+  <tr><td align="center"> O</td><td align="center">29</td> <td align="center">4.80</td> <td align="center">138</td> <td align="center">0.97</td><td align="center">1</td> <td align="center">0.78</td> <td align="center">6</td> <td align="center">0.22</td><td align="center">0</td> <td align="center">0.00</td><td align="center">0</td> <td align="center">0.00</td></tr>
+  <tr><td align="center"> Total</td><td align="center">604</td> <td align="center">100.00</td> <td align="center">14299</td> <td align="center">100.00</td><td align="center">129</td> <td align="center">100.00</td> <td align="center">2767</td> <td align="center">100.00</td><td align="center">52</td> <td align="center">100.00</td> <td align="center">1100</td> <td align="center">100.00</td></tr>
+  <tr><td colspan="13">A: Abstract, C: Colour, G: Generic, S: Specific, P: Part of speech, N: Number, I: Image related, B: Boolean, O: Others</td></tr>
+</table>
+
+<h3>Categorical comparisons</h3>
+
+<p>Figure 2 demonstrates categorical distributions of unique terms used in tags, the initial search stage, the second search stage and the third search stage. As shown in Figure 2, the overall pattern among tags, initial search terms, second search terms, and third search terms are found to be similar. The <em>Generic</em> category accounts for the majority of tags and search terms in three different stages, and the <em>Colour</em> category comprises only a minor portion. The <em>Abstract</em> and <em>Specific</em> categories are second to the <em>Generic</em> categories, but the order between the two categories is dependent on whether they are in tags, initial search terms, second search terms, or third search terms.</p>
+
+<div align="center"><img src="p408fig2.jpg" alt="figure 2. categorical distribution of tags, initial, 2nd, &amp; 3rd search terms" border="0" width="669" height="423" /></div><div align="center"><br /><strong>Figure 2. Categorical distribution of tags, initial, second, &amp; third search terms</strong></div>
+
+<p>Based on overall categorical distributions of tags and terms in three stages, a chi-squared test was used to examine whether differences among them are statistically significant. As shown in Table 6, there are significant differences in category distributions among the tag and the search terms in three stages. In addition, there are significant differences between the categories of tags and initial search terms. Even among the search terms in different stages, there are significant differences in categorical distributions.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"> <br /><strong>Table 6: Chi-squared results for category distribution</strong></caption>
+<tr><th width="14%">Row variable</th><th width="14%">Column variable</th><th width="14%" rowspan="2">Chi squared</th><th width="14%" rowspan="2">df</th><th width="14%" rowspan="2">p</th></tr>
+<tr><th width="14%">Category</th><th width="14%">Source term</th></tr>
+<tr><td width="14%" rowspan="3">Abstract; Colour;<br />Generic; Specific</td>
+<td width="14%">Tag, Initial, 2nd, &amp; 3rd search terms</td>
+<td align="center" width="14%">34.422</td>
+<td align="center" width="14%">(4-1)*(4-1)=9</td><td width="14%">0.000</td></tr>
+<tr><td align="center" width="14%">Tag &amp; Initial search term</td><td align="center" width="14%">23.562</td>
+<td align="center" width="14%">(4-1)*(2-1)=3</td><td align="center" width="14%">0.000</td></tr>
+<tr><td align="center" width="14%">Initial, 2nd, &amp; 3rd search terms</td><td align="center" width="14%">13.359</td>
+<td align="center" width="14%">(4-1)*(3-1)=6</td><td align="center" width="14%">0.038</td></tr>
+</table>
+
+<br /><br />
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Table 7: Frequencies of tag and search terms in four categories</strong></caption>
+  <tr>
+<th width="6%">&nbsp;</th><th width="8%" colspan="2">Tag</th><th width="8%" colspan="2">Initial search term</th><th width="8%" colspan="2">2nd search term</th><th width="8%" colspan="2">3rd search term</th></tr>
+  <tr><th width="6%">&nbsp;</th><th width="9%">Number</th><th width="7%">%</th><th width="9%">Number</th><th width="7%">%</th><th width="9%">Number</th><th width="7%">%</th><th width="9%">Number</th><th width="7%">%</th></tr>
+  <tr><td align="center">A1</td><td align="center">1</td> <td align="center">0.20</td> <td align="center">8</td> <td align="center">1.59</td><td align="center">2</td> <td align="center">2.04</td> <td align="center">2</td> <td align="center">6.45</td></tr>
+		  <tr>
+<td align="center">&nbsp;A2-1</td>
+<td align="center">20</td> <td align="center">4.01</td> <td align="center">37</td> <td align="center">7.36</td>
+		<td align="center">9</td> <td align="center">9.18</td> <td align="center">1</td> <td align="center">3.23</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;A2-2</td>
+<td align="center">11</td> <td align="center">2.20</td> <td align="center">27</td> <td align="center">5.37</td>
+		<td align="center">5</td> <td align="center">5.10</td> <td align="center">2</td> <td align="center">6.45</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;A2-3</td>
+<td align="center">7</td> <td align="center">1.40</td> <td align="center">5</td> <td align="center">0.99</td>
+		<td align="center">1</td> <td align="center">1.02</td> <td align="center">1</td> <td align="center">3.23</td>
+  </tr>
+		  <tr>
+<td align="center">A2</td>
+<td align="center">38</td> <td align="center">7.62</td> <td align="center">69</td> <td align="center">13.72</td>
+		<td align="center">15</td> <td align="center">15.31</td> <td align="center">4</td> <td align="center">12.90</td>
+  </tr>
+		  <tr>
+<td align="center">A3</td>
+<td align="center">4</td> <td align="center">0.80</td> <td align="center">4</td> <td align="center">0.80</td>
+		<td align="center">1</td> <td align="center">1.02</td> <td align="center">0</td> <td align="center">0.00</td>
+  </tr>
+		  <tr>
+<td align="center">A4</td>
+<td align="center">0</td> <td align="center">0.00</td> <td align="center">0</td> <td align="center">0.00</td>
+		<td align="center">0</td> <td align="center">0.00</td> <td align="center">0</td> <td align="center">0.00</td>
+  </tr>
+		  <tr>
+<td align="center">A</td>
+<td align="center">43</td> <td align="center">8.62</td> <td align="center">81</td> <td align="center">16.10</td>
+		<td align="center">18</td> <td align="center">18.37</td> <td align="center">6</td> <td align="center">19.35</td>
+  </tr>
+		  <tr>
+<td align="center">C</td>
+<td align="center">13</td> <td align="center">2.61</td> <td align="center">8</td> <td align="center">1.59</td>
+		<td align="center">3</td> <td align="center">3.06</td> <td align="center">1</td> <td align="center">3.23</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;G1-1</td>
+<td align="center">28</td> <td align="center">5.61</td> <td align="center">48</td> <td align="center">9.54</td>
+		<td align="center">17</td> <td align="center">17.35</td> <td align="center">6</td> <td align="center">19.35</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;G1-2</td>
+<td align="center">31</td> <td align="center">6.21</td> <td align="center">32</td> <td align="center">6.36</td>
+		<td align="center">6</td> <td align="center">6.12</td> <td align="center">1</td> <td align="center">3.23</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;G1-3</td>
+<td align="center">189</td> <td align="center">37.88</td> <td align="center">109</td> <td align="center">21.67</td>
+		<td align="center">23</td> <td align="center">23.47</td> <td align="center">8</td> <td align="center">25.81</td>
+  </tr>
+		  <tr>
+<td align="center">G1</td>
+<td align="center">248</td> <td align="center">49.70</td> <td align="center">189</td> <td align="center">37.57</td>
+		<td align="center">46</td> <td align="center">46.94</td> <td align="center">15</td> <td align="center">48.39</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;G2-1</td>
+<td align="center">11</td> <td align="center">2.20</td> <td align="center">8</td> <td align="center">1.59</td>
+		<td align="center">4</td> <td align="center">4.08</td> <td align="center">1</td> <td align="center">3.23</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;G2-2</td>
+<td align="center">19</td> <td align="center">3.81</td> <td align="center">39</td> <td align="center">7.75</td>
+		<td align="center">7</td> <td align="center">7.14</td> <td align="center">0</td> <td align="center">0.00</td>
+  </tr>
+		  <tr>
+<td align="center">G2</td>
+<td align="center">30</td> <td align="center">6.01</td> <td align="center">47</td> <td align="center">9.34</td>
+		<td align="center">11</td> <td align="center">11.22</td> <td align="center">1</td> <td align="center">3.23</td>
+  </tr>
+		  <tr>
+<td align="center">G3</td>
+<td align="center">52</td> <td align="center">10.42</td> <td align="center">34</td> <td align="center">6.76</td>
+		<td align="center">7</td> <td align="center">7.14</td> <td align="center">3</td> <td align="center">9.68</td>
+  </tr>
+		  <tr>
+<td align="center">G4</td>
+<td align="center">8</td> <td align="center">1.60</td> <td align="center">6</td> <td align="center">1.19</td>
+		<td align="center">1</td> <td align="center">1.02</td> <td align="center">1</td> <td align="center">3.23</td>
+  </tr>
+		  <tr>
+<td align="center">G</td>
+<td align="center">338</td> <td align="center">67.74</td> <td align="center">276</td> <td align="center">54.87</td>
+		<td align="center">65</td> <td align="center">66.33</td> <td align="center">20</td> <td align="center">64.52</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;S1-1</td>
+<td align="center">13</td> <td align="center">2.61</td> <td align="center">49</td> <td align="center">9.74</td>
+		<td align="center">6</td> <td align="center">6.12</td> <td align="center">0</td> <td align="center">0.00</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;S1-2</td>
+<td align="center">2</td> <td align="center">0.40</td> <td align="center">1</td> <td align="center">0.20</td>
+		<td align="center">0</td> <td align="center">0.00</td> <td align="center">0</td> <td align="center">0.00</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;S1-3</td>
+<td align="center">2</td> <td align="center">0.40</td> <td align="center">32</td> <td align="center">6.36</td>
+		<td align="center">3</td> <td align="center">3.06</td> <td align="center">0</td> <td align="center">0.00</td>
+  </tr>
+		  <tr>
+<td align="center">S1</td>
+<td align="center">17</td> <td align="center">3.41</td> <td align="center">82</td> <td align="center">16.30</td>
+		<td align="center">9</td> <td align="center">9.18</td> <td align="center">0</td> <td align="center">0.00</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;S2-1</td>
+<td align="center">3</td> <td align="center">0.60</td> <td align="center">6</td> <td align="center">1.19</td>
+		<td align="center">1</td> <td align="center">1.02</td> <td align="center">1</td> <td align="center">3.23</td>
+  </tr>
+		  <tr>
+<td align="center">&nbsp;S2-2</td>
+<td align="center">0</td> <td align="center">0.00</td> <td align="center">0</td> <td align="center">0.00</td>
+		<td align="center">0</td> <td align="center">0.00</td> <td align="center">0</td> <td align="center">0.00</td>
+  </tr>
+		  <tr>
+<td align="center">S2</td>
+<td align="center">3</td> <td align="center">0.60</td> <td align="center">6</td> <td align="center">1.19</td>
+		<td align="center">1</td> <td align="center">1.02</td> <td align="center">1</td> <td align="center">3.23</td>
+  </tr>
+		  <tr>
+<td align="center">S3</td>
+<td align="center">76</td> <td align="center">15.23</td> <td align="center">45</td> <td align="center">8.95</td>
+		<td align="center">2</td> <td align="center">2.04</td> <td align="center">3</td> <td align="center">9.68</td>
+  </tr>
+		  <tr>
+<td align="center">S4</td>
+<td align="center">9</td> <td align="center">1.80</td> <td align="center">5</td> <td align="center">0.99</td>
+		<td align="center">0</td> <td align="center">0.00</td> <td align="center">0</td> <td align="center">0.00</td>
+  </tr>
+		  <tr>
+<td align="center">S</td>
+<td align="center">105</td> <td align="center">21.04</td> <td align="center">138</td> <td align="center">27.44</td>
+		<td align="center">12</td> <td align="center">12.24</td> <td align="center">4</td> <td align="center">12.90</td>
+  </tr>
+		  <tr>
+<td align="center">Total</td>
+<td align="center">499</td> <td align="center">100.00</td> <td align="center">503</td> <td align="center">100.00</td>
+		<td align="center">98</td> <td align="center">100.00</td> <td align="center">31</td> <td align="center">100.00</td>
+  </tr>
+  <tr><td colspan="9">(A: Abstract, C: Color, G: Generic, S: Specific)</td></tr>
+		  </table>
+
+<p>As shown in Table 7, categorical distributions were analysed in detail using the sub-categories for <em>Abstract</em>, <em>Colour, Generic</em>, and <em>Specific</em>. From the <em>Abstract</em> category, image searchers on the Web used abstract terms more frequently in all three search stages compared to  <em>Flickr</em> users (8.62% in tags vs. 16.10% in initial search, 18.37% in second search, and 19.35% in third search). More specifically, Figure 3 presents various search terms that appear in the <em>Mythical and fictitious beings</em> (A1) and the <em>Emotion/Abstraction</em> (A2) categories. In the A1 category, terms such as angel, devil, gods, ghost and so on, were only found as search terms. In the A2 category, search terms in <em>Symbolic value</em> (A2-1) and <em>Atmosphere</em> (A2-2) were more diverse than tags. The <em>Abstract location</em> category (A3), however, was identified nearly in similar proportions. The <em>Abstract time</em> category (A4) was neither used in tags or search query terms.</p>
+
+<div align="center"><img src="p408fig3.jpg" alt="figure 3. detailed comparison in abstract category" border="0" width="534" height="319" /></div>
+<div align="center"><br /><strong>Figure 3. Detailed comparison in the <em>Abstract</em> category</strong></div>
+
+<p>For the <em>Colour</em> category, it was found that basic colour terms identified in a previous study (<a href="#ber69">Berlin and Kay 1969</a>) were used in both tags and search query terms.</p>
+
+<p>By examining the subcategories of the <em>Generic</em> category in Figure 4, it can be noted that the subcategories of G1-3 (<em>Kind of thing</em>), G1-2 (<em>Kind of animal</em>), G2-1 (<em>Kind of event</em>), and G3 (<em>Generic location</em>) present more diversity in tags than in search query terms. One plausible explanation for this can be deduced by considering photo-storing behaviors in <em>Flickr</em>. Just as with analogue photo albums, users might use  <em>Flickr</em> to store travel photos, pet photos, etc. In this sense, image taggers are more likely to use various generic terms compared to image searchers on the Web. On the other hand, search query terms in G1-1 (<em>Kind of person</em>) and G2-2 (<em>Kind of action</em>) are more various compared to tags. Whereas it was difficult to identify what type of G2-2 terms were more frequently used as search queries, in the G1-1 category, terms representing people's occupations (fighter, knights, president, queens, sailor, slave, wife and so on) were prominent in search terms.</p>
+
+<div align="center"><img src="p408fig4.jpg" alt="figure 4. detailed comparison in generic category" border="0" width="532" height="319" /></div>
+<div align="center"><br /><strong>Figure 4. Detailed comparison in the <em>Generic</em> category</strong></div>
+
+<p>The <em>Specific</em> category is shown in Figure 5. By examining subcategories, it was found that tags in S1-2 (<em>Individually named animal</em>), S3 (<em>Individually named geographic location</em>), and S4 (<em>linear time: date and period</em>) were more diversely used than search query terms in overall, mainly because of S3 (15.23% out of 21.04%). This result can be comprehended in terms of <em>Flickr</em>'s photo album features, because  <em>Flickr</em> users often apply <em>Specific location</em> names when they upload their pictures for their travel photos and there are only a limited number of popular places where people travel. On the other hand, S1-1 (<em>individually named person</em>), S1-3(<em>individually named thing</em>), and S2-1(<em>individually named event</em>) were in a variety of search terms compared to tags. This trend can be understood due to search engines' general usages, since users often want to find photos of celebrities, cartoon or movie characters, and specific brand names. For S2-2 (<em>individually named action</em>), there was no incidence in tags or search query terms.</p>
+
+<div align="center"><img src="p408fig5.jpg" alt="figure 5. detailed comparison in specific category" border="0" width="532" height="319" /></div><div align="center"><br /><strong>Figure 5. Detailed comparison in the <em>Specific</em> category</strong></div>
+
+<h3>Term specificity comparison</h3>
+
+<p>With respect to term specificity in tags and search query terms, the level of term specificity was examined in the <em>Colour</em> and <em>Generic</em> categories based on the basic level theory. In the case of the <em>Colour</em> category, eleven basic colour names were used in tags and all stages of search terms. In the <em>Generic</em> category, as noted in Table 8 and Figure 6, the overall distribution of term specificity among tags and search terms was similar; the distribution pattern, with basic level concepts most frequent, was also consistent with the related studies' results. However, this study result also demonstrated that compared to tags, search engine users tend to use subordinate level terms less frequently (13.61% from tag vs. 6.88%, 6.15% &amp; 5.00% from search terms). In addition, contrasting basic and subordinate levels, it seems that the superordinate level in search terms on the Web relatively increases as users revise search query terms toward second and third search phases. In other words, while  <em>Flickr</em> users tag images by using more specific terms, Web searchers tend to use superordinate terms more frequently and attempt broader terms when revising initial search queries.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Table 8: Basic level distribution in the <em>Generic</em> category</strong></caption>
+  <tr>
+<th width="14%">Level</th>
+	<th width="7%" colspan="2">Tag</th>
+	<th width="7%" colspan="2">Initial search term</th>
+	<th width="7%" colspan="2">2nd search term</th>
+	<th width="7%" colspan="2">3rd search term</th>
+  </tr>
+  <tr>
+<th width="14%">&nbsp;</th>
+<th width="7%">Number</th>
+<th width="7%">%</th>
+<th width="7%">Number</th>
+<th width="7%">%</th>
+<th width="7%">Number</th>
+<th width="7%">%</th>
+<th width="7%">Number</th>
+<th width="7%">%</th>
+  </tr>
+  <tr>
+<td>Superordinate</td><td align="center">20</td> <td align="center">5.92</td> <td align="center">18</td> <td align="center">6.52</td><td align="center">8</td> <td align="center">12.31</td> <td align="center">4</td> <td align="center">20.00</td>  </tr>
+  <tr><td>Basic</td><td align="center">272</td> <td align="center">80.47</td> <td align="center">239</td> <td align="center">86.59</td><td align="center">53</td> <td align="center">81.54</td> <td align="center">15</td><td align="center">75.00</td></tr>
+  <tr><td>Subordinate</td><td align="center">46</td> <td align="center">13.61</td> <td align="center">19</td> <td align="center">6.88</td><td align="center">4</td> <td align="center">6.15</td> <td align="center">1</td> <td align="center">5.00</td>  </tr>
+  <tr><td>Total</td><td align="center">338</td> <td align="center">100.00</td> <td align="center">276</td> <td align="center">100.00</td><td align="center">65</td> <td align="center">100.00</td> <td align="center">20</td> <td align="center">100.00</td></tr>
+</table>
+<br /><br />
+<div align="center"><img src="p408fig6.jpg" alt="figure 6. graphical representation of basic level distribution" border="0" width="532" height="319" /></div>
+<div align="center"><br /><strong>Figure 6. Graphical representation of basic level distribution</strong></div>
+
+<p>A chi-squared analysis was performed at the level of term specificity of the <em>Generic</em> category to determine whether there were any statistically significant differences among tags, initial search terms, second search terms, and third search terms. As shown in Table 9, it was found that there are significant differences in basic level distribution among the tags and three stages of search terms. Further analysis shows that whereas there is a significant difference between tags and initial search terms, there is no significant difference among search terms in the three stages.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Table 9: Chi-squared results for basic level distribution</strong></caption>
+  <tr><th width="14%">Row variable</th><th width="14%">Column variable</th><th width="14%" rowspan="2">chi squared</th><th width="14%" rowspan="2">df</th><th width="14%" rowspan="2">p</th></tr>
+  <tr><th width="14%">Term specificity level</th><th width="14%">Source term</th></tr>
+  <tr><td width="14%" rowspan="3">Superordinate;<br />Basic;<br />Subordinate</td><td width="14%">Tag, Initial, 2nd, &amp; 3rd search terms</td><td align="center" width="14%">17.297</td><td align="center" width="14%">(3-1)*(4-1)=6</td><td align="center" width="14%">0.008</td></tr>
+  <tr><td width="14%">Tag &amp; Initial search term</td><td align="center" width="14%">7.265</td><td align="center" width="14%">(3-1)*(2-1)=2</td><td align="center" width="14%">0.026</td>  </tr>
+  <tr><td width="14%">Initial, 2nd, &amp; 3rd search terms</td><td align="center" width="14%">6.139</td><td align="center" width="14%">(3-1)*(3-1)=4</td><td align="center" width="14%">0.189</td> </tr>
+</table>
+
+<h2>Discussion</h2>
+
+<p>Recent studies have utilized user-supplied tags, especially  <em>Flickr</em> tags, as a way of representing images from users' perspectives and for indexing schemes and thesaurus constructions. Although these endeavours have been conducted on the assumption that user-supplied tags have considerable potential as a user-centred organization mechanism, there has been little research to understand how these tags compare to search terms. This study investigated the features of tags and search query terms by categorical comparisons and the level of specificity comparisons. In addition to examining overall patterns,  statistical analyses were conducted to examine whether there were any significant differences in categories and specificity levels between tags and search query terms in three different stages.</p>
+
+<p>In general, tags, initial, second, and third search terms appeared to have similar categorical and term specificity distribution; however, the results of chi-squared analyses demonstrated that there are significant differences both in categories and term specificity between tags and search query terms. Since this research is one of the first studies to compare tags and search queries, these findings can be explained in many ways.  Explanations from a more fundamental perspective would be desirable in this sense. First, although both  <em>Flickr</em> and Web search engines contain general or non-domain-specific image collections which are open to public users, there exist to some extent unique characteristics that inherently distinguish the two collections.  <em>Flickr</em> users tag their own images not only for sharing with others (i.e., indexing), but also for storing and organizing their photos (i.e., describing), whereas search engine users search images (i.e., retrieving), which have been created by others without any concrete ideas of which images are searchable and how. For example,  <em>Flickr</em> users often upload pictures from their travels, producing many general and specific location tags, whereas search engine users are more likely to search pictures on the basis of specific information such as celebrities' names, cartoon characters, and products with specific brand names.</p> 
+
+<p>Secondly, a task-oriented perspective can explain differences between describing tasks in tags and retrieving tasks in queries. In the case of the <em>Abstract</em> category, this result is consistent with Jogensen's (<a href="#jor95">1995</a>; <a href="#jor98">1998</a>) and Fidel's (<a href="#fid97">1997</a>) results which showed that users have a tendency to use abstract terms more frequently in retrieving tasks than in describing tasks. Again, this result supports the idea which emphasizes the importance of providing an access mechanism for abstract categories in image retrieval systems, in spite of the difficulties in representing abstract messages (<a href="#gre02">Greisdorf and O'Connor 2002</a>; <a href="#bla04">Black <em>et al.</em> 2004</a>; <a href="#ens07">Enser <em>et al.</em> 2007</a>). The results of the analysis of term specificity level also can be understood on the same basis. As found in previous basic level studies on images (<a href="#jor03">Jogensen 2003</a>; <a href="#ror08">Rorissa 2008</a>), overall basic level terms were dominant in tags as well as all stages of search terms. However, when statistically comparing tags and search queries, it was found that there are differences in the level of term specificities between describing and searching tasks; image searchers who do not have a clear idea of what they want to find are more likely to use superordinate level terms, whereas  <em>Flickr</em> users who describe their own photographs tend to use subordinate terms more frequently than searchers.</p>
+
+<p>In this sense, the findings of this study might present a challenge to current research efforts on utilizing user-supplied tags as a promising access point for images. As introduced in the Related studies section, lines of research have attempted to utilize  <em>Flickr</em> tags in order to understand users' image describing patterns as well as to develop a user-centred controlled vocabulary. These recent studies have been based on the assumption that frequently used terms in  <em>Flickr</em> can be an access point in the image search process. Overall, patterns of categorical and specificity distribution results support this approach. However, statistical results demonstrated significant differences in categorical distribution and term specificity levels. The findings of this study suggest that although  <em>Flickr</em> tags, which are currently the most popular image tagging system, can be a valuable source for understanding user-centred image representation patterns, it is important to consider its image collection features and its user groups - i.e., Flickr users describe their own pictures. In other words,  <em>Flickr</em> tags can provide some basics for public users' image describing behaviours in general, but they need to be customized depending on the collection. In addition, the findings of this study suggest collecting tags should be collected for each collection, if possible, and then utilized for that particular collection, such as in the <a href="http://www.steve.museum/">Steve Museum</a> project.</p>
+
+<p>In addition to the comparisons between tags and search terms, this study compared search terms in different stages. In general, tags and initial search query terms are similar in terms of overall categorical distributions. The <em>Generic</em> category is the most popular followed by the <em>Specific</em> and the <em>Abstract</em> categories; the <em>Colour</em> category is the least popular. On the other hand, compared to initial search query terms, second search query terms and third search query terms present slightly different categorical distributions, as the <em>Abstract</em> and <em>Generic</em> categories are more frequently used, and the <em>Specific</em> category is less prominently used. Although a significant difference was not identified, the term specificity level analysis showed that searchers tend to adopt more superordinate terms instead of subordinate terms as they revise search terms. This implies that an image retrieval system should facilitate users revising their searches by providing semantically related concepts including related abstract terms and superordinate concepts. Also, if users tend to avoid terms in the <em>Specific</em> category due to the difficulties in finding alternative specific terms, the image retrieval system should provide useful guidelines for alternative terms - either other terms in the <em>Specific</em> category or related terms in the <em>Generic</em> category - for terms in <em>Specific</em> category.</p>
+
+<h2>Conclusion</h2>
+
+<p>Image descriptions supplied by users are clearly good resources to adopt when constructing user-centred indexing systems. Many efforts have attempted to understand the characteristics and features of tags, while little empirical research exists to explore user-supplied tags compared to search queries. In this sense, this study explored the differences between tags and queries submitted for searching images in order to investigate the features and characteristics of user-supplied tags in terms of user-centred indexing system construction.</p> 
+
+<p>This study identified differences between user-supplied tags and search queries for images in terms of categories and levels of specificity. Overall distribution of categories and levels of specificity were found to be similar between user-supplied tags and search query terms. The <em>Generic</em> category is the most frequently used for both tags and search query terms. Following the <em>Generic</em> category, the <em>Specific</em> and <em>Abstract</em> categories were next in frequency. The <em>Colour</em> category was identified as the least used category. </p>
+
+<p>The findings of this study are in line with previous research (<a href="#che01">Chen 2001</a>; <a href="#col98">Collins 1998</a>; <a href="#cho03">Choi and Rasmussen 2003</a>; <a href="#jor98">Jogensen 1998</a>). Regarding levels of specificity, distribution in three levels (superordinate, basic, and subordinate) demonstrated that the basic level was most frequently used. Superordinate and subordinate levels followed. Moreover, statistical analyses on distributions were performed to examine whether the differences in categories and levels were statistically significant. In regards to categories, significant differences were found among tags, initial search terms, second search terms, and third search terms. Statistical analyses on the level of specificity demonstrated significant differences between tags and the three stages of search query terms, but no significant differences among the three different stages of a single search. While many possible explanations can be applied to the results of this study, one fundamental reason for these differences in categories and levels of specificity can be induced from the inherent functionality of each collection,  <em>Flickr</em> and image search engines on the Web. For instance, tags in  <em>Flickr</em> are mainly created for storing and sharing, not considering retrieval uses, while search queries for images on the Web are primarily for searching images. Another fundamental perspective is to understand the inherent differences because of dissimilar tasks such as searching and describing an image.</p>
+
+<p>These findings have fundamental and practical implications. Basically, the findings of this study imply that directly utilizing  <em>Flickr</em> tags on user-centred indexing systems needs to be reconsidered. It is desirable to take into account collections, users' features, and differences in tasks when designing user-oriented index systems. More practically, involvement would at least address interface design issues of image searching and tagging. In terms of image searching and tagging interface design, the results in this work provide categorical and specificity guidelines for designing image retrieval and tagging system interfaces. For instance, image tagging and searching interfaces could employ appropriate categories and levels of specificity as users progress their searches.</p>
+
+<p>Evidently, future studies and analyses are necessary to further comprehend the relationships between user-supplied tags and search queries for images. This study compared two different data sets,  <em>Flickr</em> and Web search queries. It is a meaningful approach to have used the most popular image tagging system in analysing user-tagging behaviors, because it demonstrated that  <em>Flickr</em> tags have their own unique features which cannot simply be generalized for other image collections. However, in order to investigate differences between two tasks, tagging and searching, future studies should compare two data sets which are extracted from a single collection. Also, tags might exist which do not match search queries but would assist users to navigate or browse image collections. Therefore, in addition to comparing tags and queries in quantitative ways, it should be investigated how users use tags during the actual image search process and how tags improve search effectiveness. Another future research area proposed by the current study is image search query reformulation. As this study demonstrated changes from initial search queries to transformed queries, once reformulation patterns can be specified, they will be useful in designing an interactive image retrieval system which effectively support the query revising process of users.</p> 
+ 
+<h2>Acknowledgements</h2> 
+ 
+<p>The authors gratefully acknowledge Dr. Jim Jansen's generous sharing of Excite data and insightful reviews from two anonymous reviewers. We also thank Stacy Davis for her assistance in data analysis and Ga Young Lee for her various assistance. </p> 
+ 
+<form action="#"> 
+<fieldset> 
+<legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend> 
+<ul>
+<li><a id="arm97" name=" arm97"></a>Armitage, L.H. &amp;  Enser, P.G.B. (1997). Analysis of user need in image archives. <em>Journal of Information Science</em>, <strong>23</strong>(4), 287-299.</li>
+
+<li><a id="aur06" name="aur06"></a>Aurnhammer, M., Hanappe, P. &amp;  Steels, L. (2006). <a href="http://www.webcitation.org/5j0KFvhoy">Integrating collaborative tagging and emergent semantics for image retrieval.</a> <em>In Proc. Of the Collaborative Web Tagging Workshop</em> Retrieved November 10 2008 from http://www3.isrl.illinois.edu/~junwang4/langev/localcopy/pdf/aurnhammer06semanticsWWW.pdf Archived by WebCite&reg; at http://www.webcitation.org/5j0KFvhoy)</li>
+
+<li><a id="bat98" name="bat98"></a>Bates, M. (1998). Indexing and access for digital libraries and the Internet: human, database, and domain factors. <em>Journal of the American Society for Information Science</em>, <strong>49</strong>(13), 1185-1205.</li>
+
+<li><a id="batl98" name="batl98"></a>Batley, S. (1988). Visual information retrieval: browsing strategies in pictorial databases. In: <em>Online information/'88</em>, Vol. 1, (Proceedings of the 12th International Online Information Meeting). (pp. 373-381).  Oxford: Learned Information Ltd.</li>
+
+<li><a id="bea05" name="bea05"></a>Bearman, C. &amp; Trant, J. (2005). <a href="http://www.webcitation.org/5j0KZ04nl">Social terminology enhancement through vernacular engagement: exploring collaborative annotation to encourage interaction with museum collections</a>. <em>D-Lib Magazine</em>, <strong>11</strong>(9). Retrieved June 2 2008 from http://www.dlib.org/dlib/september05/bearman/09bearman.html  (Archived by WebCite&reg; at http://www.webcitation.org/5j0KZ04nl)</li>
+
+<li><a id="ber69" name="ber69"></a>Berlin, B. &amp; Kay, P. (1969). <em>Basic color terms: their universality and evolution</em>. Berkeley, CA: University of California.</li>
+
+<li><a id="bla04" name="bla04"></a>Black, J.A., Kahol, K., Tripathi, P., Kuchi, P. &amp; Panchanathan, S. (2004). <a href="http://www.webcitation.org/5j0LJK9Q6">Indexing natural images for retrieval based on kansei factors.</a> In <em>Human Vision and Electronic Imaging IX: Proceedings of the SPIE</em>, <strong>5292</strong>, 353-375. Retrieved 13 August, 2009 from http://www.public.asu.edu/~kkahol/publications/kansei.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5j0LJK9Q6)</li>
+
+<li><a id="che01" name="che01"></a>Chen, H. (2001). An analysis of image retrieval tasks in the field of art history. <em>Information Processing &amp; Management</em>, <strong>37</strong>(5), 701-720.</li>
+
+<li><a id="cho03" name="cho03"></a>Choi, Y. &amp; Rasmussen, E. (2003). Searching for images: the analysis of users' queries for image retrieval in American history. <em>Journal of the American Society for Information Science and Technology</em>, <strong>54</strong>(6), 498-511.</li>
+
+<li><a id="col98" name="col98"></a>Collins, K. (1998). Providing subject access to images: a study of user queries. <em>The American Archivist</em>, <strong>61</strong>(1), 36-55.</li> 
+
+<li><a id="eas03" name="eas03"></a>Eastman, C. &amp; Jansen, B. J. (2003). Coverage, relevance, and ranking: the impact of query operators on Web search engine results. <em>ACM Transactions on Information Systems</em>, <strong>21</strong>(4), 383-411.</li>
+
+<li><a id="ens07" name="ens07"></a>Enser, P.G.B., Sandom, C.J., Hare, J.S. &amp; Lewis, P.H. (2007). Facing the reality of semantic image retrieval. <em>Journal of Documentation</em>, <strong>63</strong>(4), 465-481.</li>
+
+<li><a id="fid94" name="fid94"></a>Fidel, R. (1994). User-centered indexing. <em>Journal of the American Society for Information Science</em>, <strong>45</strong>(8), 572-576.</li>
+
+<li><a id="fid97" name="fid97"></a>Fidel, R. (1997). The image retrieval task: implications for the design and evaluation of image databases. <em>The New Review of Hypermedia and Multimedia</em>, <strong>3</strong>, 181-199.</li>
+
+<li><a id="fur06" name="fur06"></a>Furnas, G., Fake, C., Ahn, L., Schachter, J., Golder, S., Fox, K., Davis, M., Marlow, C. &amp; Naaman, M. (2006). Why do tagging systems work?. In  <em>CHI '6 extended abstracts on human factors in computing systems</em>, (pp. 36-39). New York, NY: ACM Press.</li>
+
+<li><a id="gol06" name="gol06"></a>Golder, S.A. &amp; Huberman, B.A. (2006). Usage patterns of collaborative tagging systems. <em>Journal of Information</em>, <strong>32</strong>(2), 198-208.</li>
+
+<li><a id=" goo03" name="goo03"></a>Goodrum, A., Bejune, M.M. &amp; Siochi, A.C. (2003). A state transition analysis of image search patterns on the Web. In G. Goos, J. Hartmanis and J. van Leeuwen. (Eds.) <em>Image and Video Retrieval. Second International Conference, CIVR 2003 Urbana-Champaign, IL, USA, July 24–25, 2003 Proceedings</em> (pp. 281-290). Berlin: Springer. (Lecture Notes in Computer Science, 2728) </li>
+
+<li><a id="goo01" name="goo01"></a>Goodrum, A. &amp; Spink, A. (2001). Image searching on the Excite Web search engine. <em>Information Processing &amp; Management</em>, <strong>37</strong>(2), 295-311.</li>
+
+<li><a id="gre06" name="gre06"></a>Green, R. (2006). <a href="http://www.webcitation.org/5j0RF151A"><em>Vocabulary alignment via basic level concepts. Final Report 2003 OCLC/ALISE Library and Information Science Research Grant Project</em></a>. Dublin, OH: OCLC Online Computer Library, Inc.  Retrieved May 14 2008 from http://www.oclc.org/programsandresearch/grants/reports/green/rg2005.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5j0RF151A)</li>
+
+<li><a id="gre02" name="gre02"></a>Greisdorf. H. &amp; O'Connor, B. (2002). Modeling what users see when they look at images: a cognitive view point. <em>The Journal of Documentation</em>, <strong>58</strong>(1), 6-29.</li>
+
+<li><a id="guy06" name="guy06"></a>Guy, M. &amp; Tonkin, E. (2006). <a href="http://www.webcitation.org/5j0RSPqV7">Folksonomies: tidying up tags?</a>. <em>D-Lib Magazine</em>, <strong>12</strong>(1). Retrieved May 21 2008 from http://www.dlib.org/dlib/january06/guy/01guy.html  (Archived by WebCite&reg; at http://www.webcitation.org/5j0RSPqV7)</li>
+
+<li><a id="has95" name="has95"></a>Hastings, S.K. (1995). Query categories in a study of intellectual access to digitized art images. <em>Proceedings of the American Society for Information Science</em>, <strong>32,</strong> 3-8.</li>
+
+<li><a id="jan00" name="jan00"></a>Jansen, B.J., Goodrum, A. &amp; Spink, A. (2000). <a href="http://www.webcitation.org/5j0RgU7bT">Searching for multimedia: analysis of audio, video, and image Web queries.</a> <em>World Wide Web</em>, <strong>3</strong>, 249-254. Retrieved 13 August, 2009 from http://ist.psu.edu/faculty_pages/jjansen/academic/pubs/jansen_www.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5j0RgU7bT)</li>
+
+<li><a id="jan05" name="jan05"></a>Jansen, B.J. &amp; Spink, A. (2005). How are we searching the World Wide Web? An analysis of nine search engine transaction logs. <em>Information Processing &amp; Management</em>, <strong>42</strong>(1), 248-263.</li>
+
+<li><a id=" jor95" name="jor95"></a>J&ouml;rgensen, C. (1995). Classifying images: criteria for grouping as revealed in a sorting task. In R. Schwartz (Ed.),<em> Advances in classification research 6 (proceedings of the 6th ASIS SIG/CR Classification Research Workshop)</em> (pp. 45-64). Medford, NJ: Information Today.</li>
+
+<li><a id=" jor98" name="jor98"></a>J&ouml;rgensen, C. (1998). Attributes of images in describing tasks. <em>Information Processing &amp; Management</em>, <strong>34</strong>(2/3), 161-174.</li>
+
+<li><a id=" jor03" name="jor03"></a>J&ouml;rgensen, C. (2003). <em>Image retrieval: theory and research</em>. Lanham, MD: Scarecrow Press.</li>
+
+<li><a id="jor07" name="jor07"></a>J&ouml;rgensen, C. (2007). <a href="http://www.webcitation.org/5j17lGhUa">Image access, the semantic gap, and social tagging as a paradigm shift</a>. In Joan  Lussky, (Ed.)  <em>Proceedings 18th Workshop of the American Society for Information Science and Technology Special Interest Group in Classification Research, Milwaukee, Wisconsin</em>. Retrieved June 20 2008 from http://dlist.sir.arizona.edu/2064/  (Archived by WebCite&reg; at http://www.webcitation.org/5j17lGhUa)</li>
+
+<li><a id="mar06" name="mar06"></a>Marlow, C., Naaman, M., Boyd, D. &amp; Davis, M. (2006). <a href="http://www.webcitation.org/5j1IwV2j5"><em>Position paper, tagging, taxonomy, Flickr, article, ToRead.</em></a> Paper presented at the  Collaborative Web Tagging Workshop, 15th International World Wide Web Conference, Edinburgh, Scotland, May 2006. Retrieved June 13 2008 from: http://www.danah.org/papers/WWW2006.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5j1IwV2j5)</li>
+
+<li><a id="mat06" name="mat06"></a>Matusiak, K. (2006). Towards user-centered indexing in digital image collections. <em>OCLC Systems &amp; Services: International Digital Library Perspectives</em>, <strong>22</strong>(4), 283-298.</li>
+
+<li><a id="mor08" name="mor08"></a>Morrison, P. J. (2008). Tagging and searching: Search retrieval effectiveness of folksonomies on the World Wide Web. <em>Information Processing &amp; Management</em>, <strong>44</strong>, 1562-1579.</li>
+
+<li><a id="oco96" name="oco96"></a>O'Connor, B. C. (1996). <em>Explorations in indexing and abstracting: pointing, virtue, and power</em>. Englewood, CO: Libraries Unlimited.</li>
+
+<li><a id="ror08" name="ror08"></a>Rorissa, A. (2008). User-generated descriptions of individual images versus labels of groups of images: a comparison using basic level theory. <em>Information Processing &amp; Management</em>, <strong>44</strong>(5), 1741-1753.</li>
+
+<li><a id="ror082" name="ror082"></a>Rorissa, A. &amp; Iyer, H. (2008). Theories of cognition and image categorization: What category labels reveal about basic level theory. <em>Journal of the American Society for Information Science and Technology</em>, <strong>59</strong>(9), 1383-1392.</li>
+
+<li><a id="ros76" name="ros76"></a>Rosch, E., Mervis, C.B., Gray, W.D., Johnson, D.M. &amp; Boyes-Braem, P. (1976). Basic objects in natural categories. <em>Cognitive Psychology</em>, <strong>8</strong>(3), 382-439.</li>
+
+<li><a id="sch06" name="sch06"></a>Schmitz, P. (2006). <a href="http://www.webcitation.org/5j1JkOAlA"><em>Inducing ontology from Flickr tags.</em></a> Paper presented at the Collaborative Web Tagging Workshop, 15th International World Wide Web Conference, Edinburgh, Scotland, May 2006. Retrieved November 10 2008 from http://www.semanticmetadata.net/hosted/taggingws-www2006-files/22.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5j1JkOAlA)</li>
+
+<li><a id="sha86" name="sha86"></a>Shatford, S. (1986). Analysing the subject of a picture: a theoretical approach. <em>Cataloging &amp; Classification Quarterly</em>, <strong>6</strong>(3), 39-62.</li>
+
+<li><a id="shind" name="shind"></a>Shirky, C. (n.d.). <a href="http://www.webcitation.org/5j1PMWpJ7">Ontology is overrated: categories, links, and tags</a>. Retrieved June 19 2008 from http://www.shirky.com/writings/ontology_overrated.html  (Archived by WebCite&reg; at http://www.webcitation.org/5j1PMWpJ7)</li>
+
+<li><a id="soe85" name="soe85"></a>Soergel, D. (1985). <em>Organizing information: principles of database and retrieval systems</em>. Orlando, FL: Academic Press.</li>
+
+<li><a id="spi02" name="spi02"></a>Spink, A., Jansen, B. J., Wolfram, D. &amp; Saracevic, T. (2002). From E-sex to E-commerce: Web search changes. <em>IEEE Computer</em>, <strong>35</strong>(3), 107-111.</li>
+
+<li><a id="stv07" name="stv07"></a>Stvilia, B. &amp; J&ouml;rgensen, C. (2007). End-user collection building behavior in Flickr. <em>Proceedings of the Annual Meeting of the American Society for Information Science and Technology</em>, <strong>44</strong>(1), 1-20</li>
+
+<li><a id="tra06" name="tra06"></a>Trant, J. (2006). Exploring the potential for social tagging and folksonomy in art museums: Proof of concept. <em>New Review of Hypermedia and Multimedia</em>, <strong>12</strong>(1), 83-105.</li>
+
+<li><a id="win06" name="win06"></a>Winget, M. (2006). <a href="http://www.webcitation.org/5j1QG8p4W"><em>User-defined classification on the online photo sharing site Flickr...or, how I learned to stop worrying and love the million typing monkeys</em></a>.  Paper presented at the 17th Workshop of the American Society for Information Science and Technology Special Interest Group in Classification Research, Austin, Texas. Retrieved May 17 2008 from http://dlist.sir.arizona.edu/1854/  (Archived by WebCite&reg; at http://www.webcitation.org/5j1QG8p4W)</li>
+
+<li><a id="yoon09" name="yoon09"></a>Yoon, J. (2009). Towards a user-oriented thesaurus for non-domain-specific image collections. <em>Information Processing &amp; Management</em>, <strong>45</strong>(4), 452-468.</li>
+ </ul> 
+</fieldset> </form>
+
+ 
+ 
+<form action="#"> 
+<fieldset> <legend
+style="color: white; background-color: #5e96fd; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">How to cite this paper</legend><div>
+<br />
+Chung, E.  &amp; Yoon, J. (2009). &quot;Categorical and specificity differences between user-supplied tags and search query terms for images: an analysis of  <em>Flickr</em> tags and Web image search queries&quot;. <em>Information Research</em>, <strong>14</strong>(3). paper 408. [Available from 15 August, 2009 at http://InformationR.net/ir/14-3/paper408.html]</div>
+</fieldset> </form>
+
+<table cellspacing="10" align="center"> 
+	<tr> 
+		<td colspan="3" align="center" style="background-color: #5e96fd; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr> 
+	<tr> 
+		<td align="center" valign="top"> 
+ 
+<form method="get" action="http://scholar.google.com/scholar" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(&quot;social tagging&quot; OR tags) (&quot;search terms&quot; OR &quot;query terms&quot; OR &quot;search queries&quot;) &quot;image retrieval&quot; Flickr" /><br /> 
+<input type="submit" name="sa" value="scholar search"  style="font-size: small; font-family: verdana; font-weight: bold;" />
+<input type="hidden" name="num" value="100" />
+					</td> 
+				</tr> 
+			</table> 
+ 
+</form> 
+		</td> 
+		<td align="center" valign="top"> 
+<!-- Search Google --> 
+<form method="get" action="http://www.google.com/custom" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(&quot;social tagging&quot; OR tags) (&quot;search terms&quot; OR &quot;query terms&quot; OR &quot;search queries&quot;) &quot;image retrieval&quot; Flickr" /><br /> 
+<input type="submit" name="sa" value="google search" style="font-family: verdana; font-weight: bold; font-size: small;" /> 
+<input type="hidden" name="client" value="pub-5081678983212084" /> 
+<input type="hidden" name="forid" value="1" />
+ 
+<input type="hidden" name="ie" value="iso-8859-1" />
+<input type="hidden" name="oe" value="iso-8859-1" /> 
+<input type="hidden" name="cof" value="galt:#0066cc;gl:1;div:#999999;vlc:336633;ah:center;bgc:ffffff;lbgc:ff9900;alc:0066cc;lc:0066cc;t:000000;gfnt:666666;gimp:666666;forid:1;" /> 
+<input type="hidden" name="hl" value="en" />
+					</td> 
+				</tr> 
+			</table> 
+</form> 
+</td> 
+<td align="center" valign="top"> 
+<form method="get" action="http://www.live.com/" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+ 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(&quot;social tagging&quot; OR tags) (&quot;search terms&quot; OR &quot;query terms&quot; OR &quot;search queries&quot;) &quot;image retrieval&quot; Flickr" /> <br /> 
+<input type="submit" name="sa" value="windows live"  style="font-size: small; font-family: verdana; font-weight: bold;" /> 
+<input type="hidden" name="num" value="100" />
+					</td> 
+				</tr> 
+			</table> 
+</form> 
+ 
+		</td> 
+	</tr> 
+</table> 
+ 
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> --> <div
+align="center">
+
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo" /> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeuricomponent(location.href)+'&amp;title='+encodeuricomponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a> 
+</div> 
+<hr size="1" style="color: #5e96fd;" /> 
+ 
+<table align="center" cellpadding="10"> 
+<tr><td align="center" valign="top"><div> <a href="http://www.digits.com/" target="_blank">
+    <img src="http://counter.digits.com/?counter={a0b4f9eb-697e-96f4-4528-ac4dcff6bc7b}&amp;template=simple" 
+     alt="Hit Counter by Digits" border="0"  />
+  </a>
+
+</div></td> 
+ 
+<td align="center" valign="top"><div> 
+&copy; the authors, 2009. <br />Last updated: 14 August, 2007
+</div></td> 
+ 
+ <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="valid xhtml 1.0!" height="16" width="44" />
+<!--ONESTAT SCRIPTCODE START--> <!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+--> <div
+id="onestattag"><table
+border='0'
+cellpadding='0'
+cellspacing='0'><tr><td
+align='center'>
+
+<script type="text/javascript"> 
+<!--
+function OneStat_Pageview()
+{
+var d=document;
+var sid="281971";
+var CONTENTSECTION="";
+var osp_URL=d.URL;
+var osp_Title=d.title;
+var t=new Date();
+var p="http"+(d.URL.indexOf('paper408.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+p+="&url="+escape(osp_URL);
+p+="&ti="+escape(osp_Title);
+p+="&section="+escape(CONTENTSECTION);
+p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+p+="&tz="+escape(t.getTimezoneOffset());
+p+="&ch="+escape(t.getHours());
+p+="&js=1";
+p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+if(typeof(screen)=="object"){
+   p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+   p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+}
+d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+ 
+OneStat_Pageview();
+//--> 
+</script> 
+<noscript /> </td></tr><tr><td
+align="center"><div
+style="font-family:verdana; color:black; display:none;"><a
+href="http://www.onestat.com/"
+style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div>
+
+<!--ONESTAT SCRIPTCODE END--> </td></tr>
+
+</table> 
+<hr size="3" style="color: #5e96fd;" /> 
+ 
+<table align="center"><tr><td><div class="button"> 
+ 
+
+<ul>
+	<li><a href="infres143.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul> 
+</div></td></tr></table>
+
+ 
+ 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
+</script> 
+<script type="text/javascript"> 
+_uacct = "UA-672528-1";
+urchinTracker();
+</script> 
+</body>
+
+<!-- Mirrored from informationr.net/ir/14-3/paper408.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:27 GMT -->
+</html> 

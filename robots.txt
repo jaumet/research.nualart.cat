@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://myeye.click/sitemap.xml

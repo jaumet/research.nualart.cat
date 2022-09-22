@@ -1,0 +1,124 @@
+body {
+	background:#fff;
+    padding-left:0px;
+    margin:0;
+    background: #ffffff; /* #4C4848; */
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.5em;
+}
+
+.wrapper {
+  margin 100px;
+}
+
+.grid-item a img {
+  position:relative;
+  height:70%;
+  max-width:100%;
+}
+
+.grid-item a img:hover {
+  height:75%;
+}
+.grid-item:hover {
+    margin:0;
+    padding:22px;
+}
+
+.post-title a {
+	color:#000;
+	text-decoration:none;
+    font-size: 0.6em;
+}
+h2.post-title {
+    line-height: 0.8em;
+    margin:0;
+}
+
+.title {
+	float:left;
+}
+
+a {
+    color:#000;
+	text-decoration:none;
+    font-weight: bold;
+}
+.navigation {
+    background: #4C4848;
+    color:#fff;
+    height:90px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+main {
+	padding-top:30px;
+	padding-left:30px;
+}
+
+.navigation a {
+	float:left;
+	margin-top:18px;
+	margin-left:50px;
+    color:#fff;
+	text-decoration:none;
+    font-weight: bold;
+}
+
+.title {
+	color:#fff;
+	font-size:1.7em;
+	padding-left:25px;
+}
+
+.grid-item {
+	float:left;
+	padding:20px;
+	margin:2px;
+	width: 30%;
+	height:330px;
+	border:1 solid #c3c3c3;
+    /*border-radius:5%;*/
+    background: #fff;
+}
+
+area {
+    margin: 20% auto;
+}
+
+.post-content, header {
+    background: #fff;
+    padding: 0;
+    margin:15% auto;
+    margin-top:0;
+    margin-bottom:0;
+}
+.post-content p:first {
+    text-align: right;
+    padding-right:10%;
+}
+
+.post-header {
+	padding:1px;
+}
+
+.img_wrap {
+	float:left;
+	margin:30px;
+	padding-top:0;
+	margin-top:0;
+}
+
+.wp-caption-text {
+    margin:0;
+		font-style:italic;
+}
+
+.wp-caption {
+    margin:auto;
+}
+
+article {
+	width:70%;
+}

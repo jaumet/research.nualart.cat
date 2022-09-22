@@ -1,0 +1,1037 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/5-1/paper64.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:23 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 97">
+<title>Using newsgroup headers to predict document relevance</title>
+<link rev=made href="mailto: ad6509@wayne.edu">
+<meta name="keywords" content="Usenet, postings, newsgroups, philosophy, document quality, relevance">
+<meta name="description" content="Describes a pilot study of Usenet Newsgroup postings about Philosophy. The aim of the research is to arrive at a set of predictors of the quantity and usefulness of documents posted on the Net with the aim of assisting educators in the development of curricula, and LIS practitioners in the assessment of networked resources. In particular, we wished to see whether relationships existed between the layout of digital artefacts and the usefulness and reliability of their content.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<link rel=schema.vw96 href="http://vancouver-webpages.com/META/VW96-schema.html">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Using newsgroup headers to predict document relevance">
+<meta name="DC.Creator" content="Christopher Brown-Syed</a> and William Morrissey">
+<meta name="DC.Subject" content="Using Newsgroup Headers to Predict Document Relevance">
+<meta name="DC.Description" content="Describes a pilot study of Usenet Newsgroup postings about Philosophy. The aim of the research is to arrive at a set of predictors of the quantity and usefulness of documents posted on the Net with the aim of assisting educators in the development of curricula, and LIS practitioners in the assessment of networked resources. In particular, we wished to see whether relationships existed between the layout of digital artefacts and the usefulness and reliability of their content.">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 5  No. 1, October 1999</h4></td></tr>
+  <tr> 
+    <td><a href="infres51.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<h1>Using newsgroup headers to predict document relevance</h1>
+<br>
+<h4 align="center"><a href="mailto: ad6509@wayne.edu">Christopher Brown-Syed</a> and William Morrissey<br>
+Library and Information Science Program<br>
+Wayne State University <br>
+Detroit, Michigan, USA</h4> 
+<br><br>
+<div align="center"><b>ABSTRACT</b></div>
+
+
+<blockquote>Describes a pilot study of Usenet Newsgroup postings about Philosophy. The aim of the research is to arrive at a set of predictors of the quantity and usefulness of documents posted on the Net with the aim of assisting educators in the development of curricula, and LIS practitioners in the assessment of networked resources. In particular, we wished to see whether relationships existed between the layout of digital artefacts and the usefulness and reliability of their content.<br>
+The current study suggests that a strong correlation exists between the email header elements stating the number of cross postings to multiple newsgroups and the relevance of a posted document to its purported topic. Articles deemed "useful", namely those which exhibited facility with technical terminology and methods appropriate to the field of discussion, also appear to be briefer or less verbose. We suggest that the number of cross-postings, and the number of lines in a message, are better predictors of the usefulness of message content than are other header elements such as the purported subject, or the sender's Internet domain of origin. </blockquote>
+<br><br>
+
+
+<h2>Introduction and Statement of problem</h2>
+
+<p>The process of scholarly publishing and editing, including the peer
+review process, has been in existence for many generations. Publishers
+have adopted certain conventions, such as title pages, contents pages,
+descriptions of authors' credentials, references, and indexes, which assist
+librarians and other researchers who wish to assess their reliability.
+The layout of books allows immediate categorization - as "mass-market",
+"trade", or "scholarly" material.
+
+<p>Scholars are thus able to appraise monographs and serials quickly, based
+on their physical appearance or packaging, before actually examining their
+texts. In some cases, the reputation of the book publisher, or the journal's
+editorial board, may be recommendation enough. While no scholar can claim
+to provide the absolute 'truth', the editorial process ensures that the
+contents of printed materials have been given reasonable scrutiny prior
+to their release.
+
+<p>The same is true of audio visual media, such as sound recordings, films,
+and videotapes, which have equivalent characteristics. For instance, a
+documentary film can usually be distinguished from a dramatic work, merely
+by examining its citation or by looking at its credits.
+
+<p>However, digital media present evaluation problems which are to some
+degree inherent in their design. There is no "cover" nor "title page" to
+an email message, and rarely are credits and references given for Web pages.
+Digital documents are volatile, transient, and multitudinous.
+
+<p>Accordingly, in these pilot studies, we sought to examine the headers
+of email type postings to Usenet Newsgroups on academic topics, and the
+amounts of personal self-revealing information provided by selected groups
+of academic Web authors. The primary group of people studied were those
+purporting to hold credentials in, or to be seriously interested in the
+topic of Philosophy. We wished to determine, in the first instance, whether
+there were any email header elements which might reliably forecast the
+appropriateness of the texts, and in the second, to determine how much
+we could determine about authors' bona fides by examining their Web pages.
+
+<h2>Review of the Literature</h2>
+
+<p>Within the literature of librarianship, many of the articles on internet
+use have been what might be termed "use studies". These include a series
+of publications emanating from Australia. They include works by <a href="#refs">Applebee
+et al.</a> (1997), <a href="#refs">Bruce</a> (1995 and 1994), <a href="#refs">Pascoe et al</a>. (1996), and <a href="#refs">Organ and McGurk</a> (1996). <a href="#refs">Blinko</a> (1996) conducted a study of staff and students at
+a British university, while <a href="#refs">McClure</a> (1994) discussed the broader impacts
+of the Net on academia in the United States. Other articles focus upon
+the searching behavior of users, and upon reference services and use of
+the net by practitioners. <a href="#refs">Clayton et al</a>. (1996), discuss the problems associated
+with user surveys conducted over the Net. Having conducted an email survey
+ourselves (<a href="#refs">Brown-Syed and Witzke</a>, 1996), and having experienced quite a
+low rate of return, we did not attempt to use similar methods in this phase
+of our research. It is partially because email surveys are not terribly
+representative that we wished to study the documents themselves. (<a href="#refs">Brown-Syed
+and Witzke</a>, 1996).
+
+<p>Studies of related Internet services, especially of the World Wide Web,
+are more prevalent. Our 1996 study of traffic on a Bitnet Listserv designed
+to provide peer support for users of Unesco's Micro CDS/ISIS library automation
+software (<a href="#refs">Brown-Syed &amp; Witzke</a>, 1996), sought to determine the usefulness
+of the information contained on the list, and the reasons for its use.
+This study included a user survey and analysis of the content of postings.
+It concluded that, while the list was indeed fulfilling its function of
+user support, a striking number of postings were of limited use, or offered
+seemingly conflicting advice. If this was the case in a moderated mailing
+list, how would posting patterns in unmoderated Usenet Newsgroups compare?
+
+<p>Like Bitnet lists, (Listservs), Usenet News predates the global Internet.
+In the 1980s, it was employed heavily by commercial, educational, and military
+users, and offered non-profit organizations an inexpensive vehicle for
+the exchange of ideas and information. Like Listservs, Usenet Newsgroups
+can be moderated by human or mechanical editors, but by far the majority
+of them are unmoderated. Because of the ease with which users can subscribe
+and unsubscribe to Newsgroups, they are perhaps more vulnerable to spurious
+or misdirected messages.
+
+<p>In the 1980s, Newsgroups were used for scholarly and technical communication,
+as well as for recreation. Netiquette guides like Brad Templeton's "Emily
+Postnews" documents (which appears from time to time in <i>news.announce.newusers</i>),
+informed users that there was a place on the Net for any sort of conversation,
+but that it was up to users to ensure that they discussed designated topics
+in appropriate groups. Ed Krol's classic <i>Whole Internet Catalog</i>
+explains the hierarchy of Newsgroups, and the complicated voting procedure
+used to create new ones (<a href="#refs">Krol</a>, 1995).
+
+<p>In 1998, T. Matthew Ciolek, of the Research School of Pacific and Asian
+Studies, Australian National University, conducted an "impromptu" survey
+of some 1700 academics on the Net. This survey was aimed at ascertaining
+the time spent in various online activities. Ciolek observed: "Activities
+on the Net are twofold: (1) traversing the system and making use of its
+various information resources; (2) active research and construction work
+aimed at provision of networked information resources. Not surprisingly,
+construction work was less common (and less time-intensive) of the two."
+(Ciolek,1998). The results of this survey, while interesting, do not assist
+us greatly in determining just who is constructing which resources, and
+how useful, reliable, or effective those resources might be. However, they
+do suggest that network creation activities increase with user experience:
+ Ciolek's observations on construction of personal pages are congruent
+with the results of the Oct-Nov 1997 Survey (GVU 1997) where 10,108 participants
+reported that 46% of them have created a web page and where was found that
+"the percentage of respondents creating web pages increases with the length
+of their online experience." (<a href="#refs">Ciolek</a>, 1988). If one wished to apply this
+logic to Usenet News postings, an author's frequency of posting and cumulative
+number of posts might be considered&nbsp; analogous. Tools like <i><a href="http://www.dejanews.com/">DejaNews</a></i>
+have allowed reaearchers to perform citation searches or topical searches,
+but because of the volume of traffic, most sites do not keep copies of
+the News for lenghty periods.
+
+<p>When we began our investigations, personal Web pages on the Net had
+been the subject of only one study of which we were aware. <a href="#refs">Bates and Lu</a>
+(1997), who reported no similar studies, performed a content analysis of
+114 personal Web pages derived from an online directory available through
+Netscape's menus. The purpose of their study was not to determine grounds
+for accepting or rejecting information, but rather, to categorize the types
+of pages found with respect to metaphors from other media. Its goal was
+to determine whether certain types of information were more apt to be present
+consistently, and to see whether any conclusions about stylistic elements
+and the cultural function of personal Web pages emerged. Quoting <a href="#refs">December
+&amp; Randall</a> (1994), they defined "home" pages as designated entry points
+to local Web sites. Operationally, in this study, a home page was defined
+as the first screen of information that appears upon entering the URL address
+(drawn from the People Page directory) of a Web site.... (<a href="#refs">Bates &amp; Lu</a>,
+1997). However, as analysis of the authors' own web site access logs demonstrate,
+the nominal "front" or "home" pages are quite apt to be bypassed by users
+who use search engines or direct links to locate specific documents on
+the target sites (<a href="#refs">Brown-Syed</a>, 1999a).
+
+<p>Table 1. demonstrates how access to pages not linked from an academic
+site's home page can constitute the majority of traffic from bona fide
+off-campus visitors during a two fairly typical periods toward the middle
+of an academic term. The high number of hits on the "King Arthur" material
+can perhaps be accounted for simply. Of several thousand pages devoted
+to this supposed monarch, the page ranks highly on search sets retrieved
+from AltaVista, and other engines. As well, other Arthurian sites link
+to this short bibliography <i>cum</i> Weblog. Even during an exceptionally
+busy time for students, hits to the home page constitute only about a tenth
+of all visits to the site.</p>
+
+<table width="70%" align="center" cellpadding="5">
+<caption align="bottom">Table 1. External visits to valinor.purdy.wayne.edu</caption>
+<tr><td>29 Sept - 05 Oct 1999.&nbsp; (N = 1539).<br>&nbsp;&nbsp;
+<table align="center"  border=0 cols=3 width="60%" style="font-family: sans-serif; font-size: small; font-weight: bold;">
+<tr>
+<td><a href="http://valinor.purdy.wayne.edu/arthur.html">King Arthur</a></td>
+<td align="center">117</td>
+<td align="center">11.5%</td></tr>
+
+<tr><td><a href="http://valinor.purdy.wayne.edu/csyed.html">Home Page</a></td>
+<td align="center">98</td>
+<td align="center">6.4%</td></tr>
+</table>
+&nbsp;</td>
+</tr>
+
+<tr>
+<td>21-27 Sept 1999.&nbsp; (N = 2716).&nbsp;
+<br>&nbsp;&nbsp;
+<center><table border=0 cols=3 width="60%" >
+<tr>
+<td><a href="http://valinor.purdy.wayne.edu/arthur.html">King
+Arthur</a></td>
+
+<td align="center">268</td>
+
+<td align="center">9.9%</td>
+</tr>
+
+<tr>
+<td><a href="http://valinor.purdy.wayne.edu/csyed.html">Home
+Page</a></td>
+
+<td align=right>260</td>
+
+<td align=right>9.6%</td>
+</tr>
+</table>
+&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<p>The assumption that a site's popularity is an indicator of its quality or relevance is problematic. Moreover, results can be easily 
+skewed. The publication of the current article may in itself skew future results, as other researchers follow the links it contains.</p>
+
+<p>Since 1994, the Graphic, Visualization, &amp; Usability Center (GVU)
+located at Georgia Tech, has conducted surveys of the Net aimed at collecting
+demographic data. (GVU, 1999). Descriptions of several papers derived from
+these surveys are available online, however, the documents are "preprints"
+and may not be cited nor quoted. The URL for the GVU study appears in the
+attached References. The GVU surveys do not focus upon the academic use
+of the Net. However, some of their findings are of interest, for instance,
+while the October 1997 GVU survey found a majority of Net users were over
+50 years old, for the first time, among the cohort of newer users, there
+was a higher ratio of females to males.
+
+<p>A demographic study based upon responses of about 1800 network users,
+had been performed by the Canadian government in 1996. By comparison, it
+had determined: "[T]he majority of respondents (72.6%) were between the
+ages of 25 and 54 years of age.... The majority of all respondents were
+males (76.6%), 23.4% were females." (<a href="#refs">Canada</a>, 1996, summarized in <a href="#refs">Canada</a>,
+1999b). This survey determined that most network users were highly educated,
+middle class, and living in heavily populated and economically prominent
+areas of the country. The survey was not limited to Web use. It contained
+questions about other services, such as telnet, ftp, and discussion groups.
+(<a href="#refs">Canada</a>, 1999a). However, it did not concentrate upon the creation of networked
+documents, nor upon the scholarly use of the Net, but upon users of government
+Web sites. Moreover, it depended upon an admittedly skewed sample - only
+people who found the survey could respond to it. Surveys like these give
+us insight into the characteristics of Net users, and may provide benchmarks
+against which to compare the characteristics of the cyber-scholar population.
+
+<p>With the advent of the global Internet and the entry of commercial network
+service providers, and the popularity of the World Wide Web, older services
+such as mailing lists and Newsgroups have been largely ignored, perhaps
+deservedly so. Some of the older Newsgroups have lost their hitherto professional
+character, and appear to have become the haunts of users who have never
+read about Newsgroup hierarchies and Netiquette. Some groups are now completely
+given over to mass-mailed advertisements, despite the former strict adherence
+to rules which allowed advertisements only in certain groups. Indeed, as
+this article went to press, the home page at&nbsp; "DejaNews", now re-launched
+as <a href="http://24.226.50.107/www.deja.com">deja.com&nbsp;</a> had all
+but completely de-emphasized the organization's original role as a Usenet
+news search engine facility, and had been largely given over to online
+shopping.
+
+<p>These developments do not necessarily spell the end of Usenet. Rather,
+they may herald a return to the facility's halcyon days as a vehicle for
+serious scholarly and scientific exchange. The NASA sponsored news group,
+sci.space.news, for instance, carries up to date press releases and mission
+itineraries, and contains almost no spurious messages.. The group is moderated,
+and reader comments are re-directed to another group, called sci.space.policy.
+
+<h2>Methods</h2>
+
+<p>We felt that the usefulness of message contents could be functions of the posters' proper use of jargon appropriate to a given field, their provision of references (whether direct or indirect), and their stylistic familiarity with the medium. We subsequently adapted the methods used in this study in our examination of Web authorship. After examining several groups on the screen, we were able to arrive at several specific hypotheses. </p>
+
+<p>In particular, we felt that the use of technical jargon appropriate to a field, and the contribution of authoritative or verifiable material in postings about that field, might be predicted from the path, from, subject, and physical extent fields of the posting headers. The manner in which we operationalized the dependent and independent variables is outlined below. </p>
+
+<p>Our dependent variable, "Usefulness", was determined by collapsing measures of the use of appropriate technical jargon, and of evident relevance to the expressed title or topic given in the "subject" line. </p>
+<p>Independent variables proposed included: the number of cross-postings to other groups, the length of the documents themselves, the domains of origin of the senders, and their use of actual rather than proxy addresses. </p>
+
+<p>Two Usenet Newsgroups related to philosophy were chosen for this study. We chose these groups because we were familiar with technical or professional philosophy , and felt we would be able to identify direct or oblique references to its recognized practitioners and arguments. We chose philosophy groups because we felt, due to our previous academic degrees, that we would be competent to recognize the terms and concerns of professional philosophers when they occurred in the texts of News documents. </p>
+
+<p>Beginning with the first article carried on the University's news server, we extracted every tenth article from two related Newsgroups, to a total of twenty articles per group. By examining the documents, we extracted the following information: </p>
+
+<ol>
+<li type="1">domain of origin (com, mil, edu, etc.)</li>
+<li type="1">"real life" name and email address of poster</li>
+<li type="1">actual machine of origin (determined from the Path line)</li>
+<li type="1">user-declared site of origin (the From line)</li>
+<li type="1">number of lines of text in the message</li>
+<li type="1">number of newsgroups to which the message was cross-posted</li>
+</ol>
+
+<p>As well, we examined attached ".signature" files, when these were provided. Some experienced users use the News reader's capabilities to attach contact information automatically to outgoing mail. Typical signatures include postal addresses, phone, alternate email, or fax numbers, along with affinity statements, such as "Associate Professor, Such and Such University". However, not all users are aware of the signature mechanism, and some experienced users append very brief ones, often humorous rather than informative in nature. </p>
+<p>Interestingly enough, during our preliminary search for groups to study, we discovered a fraudulent professor. The poster, evidently a computer programmer in Melbourne, Australia, passes himself off as a Professor of Developmental Psychology at a non-existent university, evidently for the purpose of eliciting information about sexual behaviour from unsuspecting teen agers. Accordingly, we felt that a more detailed examination of signature files would best be left to a follow-up study. </p>
+
+<p>To operationalize the dependent variables, we applied two measures to the document contents. A technical jargon variable and a relevance variable were constructed. </p>
+
+<p>Each document was assigned a technical language value from 0 to 2. If a poster clearly referred to commonly known philosophical arguments, named specific philosophers, or constructed formal philosophical arguments, the document was assigned a value of 2. If the poster appeared to be concerned with a traditional problem or branch of philosophy, but did not employ professional methods or references to technical philosophy, the document was assigned a value of 1. If the user's posting had no philosophical content whatsoever, it was given a zero. </p>
+<p>Similarly, we compared document contents to the stated subject of the posting as provided in the header. A document which clearly advanced the topic of discussion was assigned a value of 2, while one only moderately on topic was given a 1, and a value of zero was assigned to documents which had no bearing whatsoever on the topic at hand. </p>
+
+<p>Realizing that staying on topic and employing appropriate technical language or methods could be interpreted as two aspects of a document's relevance, we later combined the two original independent variables, labelling the composite variable "usefulness". We then used statistical tests to determine the likely influence of the individual independent variables, derived from the document headers, as well as combinations of them, upon each dependent variable in turn, and upon the composite variable "posting relevance". The data were analysed using SPSS 9.0, with the results shown in Table 2: </p>
+
+<table align="center" border="1" cellpadding="3">
+<caption align="bottom">Table 2: Correlations between variables</caption>
+<tr><th>&nbsp;</th><th>&nbsp;lines&nbsp;</th><th>techno</th><th>&nbsp;subj=&nbsp;<br>&nbsp;disc&nbsp;</th><th>x-posts</th><th>useful-<br>ness</th></tr>
+<tr><td>lines&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pearson correlation<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sig. 2-tailed<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+<td align="right">1.000<br>-<br>38</td>
+<td align="right">-.279<br>.094<br>37</td>
+<td align="right">-.107<br>.528<br>37</td>
+<td align="right">.738**<br>.000<br>38</td>
+<td align="right">-.222<br>.187<br>37</td>
+</tr>
+<tr><td>techno&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pearson correlation<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sig. 2-tailed<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+<td align="right">-.279<br>.094<br>37</td>
+<td align="right">1.000<br>-<br>37</td>
+<td align="right">.678**<br>.000<br>37</td>
+<td align="right">-.401*<br>.014<br>37</td>
+<td align="right">.935*<br>.000<br>37</td>
+</tr>
+<tr><td>subj=disc&nbsp;&nbsp;&nbsp;Pearson correlation<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sig. 2-tailed<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+<td align="right">-.107<br>.528<br>37</td>
+<td align="right">.678**<br>.000<br>37</td>
+<td align="right">1.000<br>-<br>37</td>
+<td align="right">-.209<br>.215<br>37</td>
+<td align="right">.894*<br>.000<br>37</td>
+</tr>
+<tr><td>x-posts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pearson correlation<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sig. 2-tailed<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+<td align="right">.738**<br>.000<br>38</td>
+<td align="right">-.401*<br>.014<br>37</td>
+<td align="right">-.209<br>.215<br>37</td>
+<td align="right">1.000<br>-<br>38</td>
+<td align="right">.345*<br>.037<br>37</td>
+</tr>
+<tr><td>usefulness&nbsp;&nbsp;Pearson correlation<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sig. 2-tailed<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+<td align="right">-.222<br>.187<br>37</td>
+<td align="right">.935**<br>.000<br>37</td>
+<td align="right">.894**<br>.000<br>37</td>
+<td align="right">-.345<br>.037<br>37</td>
+<td align="right">1.000<br>-<br>37</td>
+</tr>
+</table>
+
+
+<p>In Table 2, drawn from a sample of postings in philosophy newsgroups, we see how a document's scores on use of appropriate technical language, the tendency of its contents to reflect the stated subject of discussion, and therefore its "usefulness", are inversely proportionate to the number of lines contained therein, and to the number of groups to which the document has been cross posted. While we observe strong relationships between pairs of variables, such as "use of technical language" and the tendency to "stay on topic", among the strongest relationships, and therefore, among the most reliable quick indicators of a document's likely relevance, is the number of groups to which the message has been cross posted. This fact is particularly useful in quick reference settings, because it is easily determined from the document header, and requires no facility with technical terms particular to a discipline. Similarly, the number of lines in a posting appears to correlate well with the number of cross posts - the most verbose postings tend to be the ones most widely distributed. </p>
+
+<h2>Discussion</h2>
+
+<p>As the following summary statistics and Table 2 demonstrate, our investigation of email header elements suggests that a cursory examination of the header elements "lines" and "x-posts" can indeed be used is a rough predictor of a document's relevance to the announced topic of a Newsgroup. However, further research is required due to some ambiguities in the current research design. These will be explained below. </p>
+<p>Ambiguity arises first and foremost in the determination of relevance, which we have expressed in terms of a collapsed variable called "usefulness". Our samples were drawn from two specific Newsgroups, and we have considered all articles with respect to their relevance to those two points of entry. However, any one user may have post a message to another group, and for various reasons, chosen to copy the message to one of the groups we sampled. Further studies might attempt to analyse the priorities given to groups named in the "x-posts" header element. Such research would have to cope with the fact that "replies" to postings are often made indiscriminately. A user sees a message, touches the "follow-up" key, and does not necessarily check to see how many groups the reply will affect.</p>
+
+<p>This "quick trigger finger" behaviour can be embarrassing, and "noisy", especially if the original poster was merely seeking answers to an open question, and had not really determined the "most proper" group in which to post. It can lead to a sort of institutionalized irrelevance in the News. Once a thread of discussion begins, subsequent contributors may perpetuate an initial misdirection unintentionally. </p>
+
+<p>Another ambiguity may obtain from the broad focus of the groups selected, and from the fact that words like "metaphysics" have popular as well as technical meanings. The same may not be true of other topics. For instance, the term "personal water craft" has a precise meaning, and it is unlikely that users would post messages in a group devoted to this topic unless they were aware of that meaning. </p>
+
+<p>In future studies, we hope to draw representative samples from other newsgroups whose known or stated functions are professional or academic, and also from those whose users seek primarily to exchange recreational or avocation information. For example, genealogists have a tightly controlled, terse, and concise way of requesting information from other genealogists. Almost all of the postings in genealogy Newsgroups exhibit voluntary conformity to standards which have evolved over the past decade or so. It is possible that amateurs of other fields, such as computing, photography, skiing, or other hobbies, are more productive in their use of the medium than are users interested in more intellectual pursuits like philosophy. Because genealogy, for instance, has its own vocabulary, which tends to dissuade outsiders, chance users may feel less inclined to post rambling or badly-formed requests to genealogy lists than do those whose interest in philosophy is avocation rather than professional. The same may be true of other scholarly mailing lists and Newsgroups, which, by their very natures, invite speculation from people in other fields of endeavour. </p>
+
+<p>A much larger sample, using data drawn from a variety of discussions on various fields and reflecting various disciplines, would be required before any sweeping conclusions could be drawn. However, with the volume of traffic in Newsgroups, and the number of Newsgroups both increasing exponentially, any sampling method which was based on an educated guess about the population would likely prove fruitless. However, our pilot study suggests that of all the elements in standard Newsgroup email headers, number of cross postings and length of the submission in lines are generally good at predicting the likely usefulness of postings. If librarians or researchers are in a hurry, these elements may help them identify relevant documents quickly. </p>
+
+<p>It appears that we were correct in assuming that some indication of the value of a newsgroup posting can be ascertained from the document headers. While we recognize the limitations of this pilot study, we feel that it is possible to construct measures of document relevance and to predict their occurrence based on header information. </p>
+
+<p>We attach one important caveat to this suggestion: in order to construct such a measure, one must be somewhat familiar with a given field. This study made no at tempt to confine itself to "established" newsgroups - ones which had passed the complicated voting procedures outlined in <a href="#refs">Krol</a> (1995) and conducted in the Newsgroup news.announce.newgroups. Groups established outside the formal process, "alternate" groups, often have no charters or rules of appropriate conduct. Future studies should compare the traffic in "alternate" groups, with "official" groups established by calls for votes. As well, the traffic of "talk" and "miscellaneous" groups should be compared with that in groups with more restrictive applicability, such as those in the "science", "computing", or "society" hierarchies. </p>
+
+<p>As well, there is some surface evidence from the sample that a user's frequency of posting, and the phenomenon of discussion "threads" or topics of conversation, may have considerable bearing upon the relevance of postings. </p>
+
+<p>Finally, it would appear that our measure of document relevance remains valid regardless of the actual name of the newsgroup or its presence in or absence from the hierarchy of official groups. When we examined sci.astronomy.research, for instance, our University server carried only five articles. All used the jargon of astrophysics appropriately, and all discussed matters referred to in their headers. Conversely, the group alt.sex, established when a discussion group for human sexuality was defeated in the call for votes process, was originally set up for serious discussions of sexuality. It now scores poorly, according to our measure, since it is given over almost wholly to advertisements. A more careful examination of this measure of document relevance would have to be undertaken before it could be applied to general discussion groups with "talk" or "misc" in their names, since it might prove hard to identify appropriate technical jargon in these largely amateur, rather than professionally dominated, groups. </p>
+
+<h2>Conclusions and Suggestions for Future Research</h2>
+
+<p>Our investigation of Usenet Newsgroups suggested that brevity and focus of articles could indeed be determined by examining the header elements "lines" and "x-posts". Our investigation of the personal Web pages of academics suggests that those earlier in their careers tend to reveal more about themselves, hence providing more clues to credibility, and at the same time, to produce a greater volume of digital artefacts. We feel that further research into potential means of ascertaining the reliability of documents on the Net is indeed critical for information intermediaries such as librarians, archivists, or news reporters, and that the absence of editorial control on the Net makes it critical that such "hallmarks of authenticity" be determined. Despite initiatives such as Metadata, information about Net authorship is provided voluntarily for the most part, and we feel that further studies to facilitate the rapid assessment of such information are essential. </p>
+
+<h2>References</h2>
+<ul>
+<a name="refs"></a>
+<li>
+Applebee, A. et al. (1997). Australian academic use of the Internet. Internet
+Research v.7 no.2 ('97) p. 85-94.</li>
+
+<li>
+Bates M. &amp; Lu Shaojun, (1997) An exploratory profile of personal home
+pages: content, design, metaphors. Online &amp; CDROM Review v. 21 (Dec.
+'97) p. 331-40</li>
+
+<li>
+Blinko, B. (1996). "Academic staff, students and the Internet: the experience
+at the University of Westminster." <i>Electronic Library</i> v. 14 (Apr.
+'96) p. 111-16.</li>
+
+<li>
+Brown-Syed, C. (1998). "SOS Calls, Breaking Stories, Network Disinformation,
+and the Process of Scholarly Communication: Implications for Information
+Intermediaries." Information Science at the Dawn of the Next Millennium.
+Ottawa: CAIS/ACSI Conference, (Proceedings), 3-5 June, 1998.</li>
+
+<li>
+Brown-Syed, C. (1999)."Back Door Entries, Invisible Ink, and False Drops
+on the Web: an Interim Research Note" <i>Information Research: an electronic
+journal</i> Volume 4 No 3 February 1999. Available: <a href="../4-3/paper58.html">http://InformationR.net/ir/4-3/paper58.html</a></li>
+
+<li>
+Brown-Syed, C.; Witzke, K. (1996). "E-mail for Development: An Exploratory
+Study of the CDS-ISIS Distribution List." <i>Interdisciplinary Conference
+on the Evolution of World Order: Building a Foundation for Peace in the
+Third Millennium</i>. Ryerson Polytechnical University, June 6-8, 1977.
+(Proceedings). Toronto: Ryerson Polytechnical University and the Caledon
+Centre for Culture and Education of SGI Canada, 1997.</li>
+
+<li>
+Bruce, H. (1995). Internet and academic teaching in Australia. Education
+for Information v.13 (Sept. '95) p. 177-9.</li>
+
+<li>
+Bruce, H. (1994). Internet services and academic work: an Australian perspective.
+Internet Research v.4 (Summer '94) p. 24-34.</li>
+
+<li>
+Canada, (1999a). "Who is Using the Internet, What for and How often"? <i>Government
+of Canada Internet Guide</i>. Available: <a href="http://canada.gc.ca/programs/guide/1_1_3e.html">http://canada.gc.ca/programs/guide/1_1_3e.html</a></li>
+
+<li>
+Canada, (1999b). <i>Federal Government Internet Usage Survey Results</i>.
+Online. Available: <a href="http://canada.gc.ca/programs/guide/5_5e.html">http://canada.gc.ca/programs/guide/5_5e.html</a></li>
+
+<li>
+Ciolek, M., 1998."The Scholarly Uses of the Internet: 1998 Online Survey".
+Available: <a href="http://www.ciolek.com/PAPERS/InternetSurvey-98.html">http://www.ciolek.com/PAPERS/InternetSurv/ciolek</a></li>
+
+<li>
+Clayton, P. et al (1996) "Email surveys: old problems with a new delivery
+medium". <i>LASIE</i> v.27 (June '96) p. 30-9.</li>
+
+<li>
+GVU (1999). Graphics, Visualization, and Usability Center. "GVU's Eighth WWW User Survey". Available: <a href="http://www.cc.gatech.edu/gvu/user_surveys">http://www.cc.gatech.edu/gvu/user_surveys</a></li>
+
+<li>
+Krol, E. (1994). <i>The whole Internet catalog user's guide and catalog</i>.
+(Second edition). Sebastopol, CA,. O'Riley &amp; Associates Inc.</li>
+
+<li>
+McClure, C. (1994). So what are the impacts of networking on academic institutions?
+<i>Internet Research</i> v. 4 (Summer '94) p.2-6.</li>
+
+<li>
+Pascoe, C. et al. (1996). Tidal wave or ripple? The impact of Internet
+on the academic. (Bibliographic essay). <i>Australian Library Review</i>
+v.13 (May '96) p. 147-55.</li>
+
+<li>
+Organ, M. (1996). Surfing the Internet and academic research: what use
+for historians? <i>Australian Academic &amp; Research Libraries</i> v.
+17 (Mar. '96) p. 31-9. 14 oct 98</li>
+
+<li>
+<i><a href="news:news.announce.newusers" target="_top">News.announce.newusers</a>.</i>
+[Electronic discussion group].</li>
+</ul>
+
+<ul>Note: Listserv<sup><font size=-1>&reg;</font></sup> is a trademark
+of L-Soft International Inc.</ul>
+
+<hr color=#ff00ff size=3>
+
+<h1>
+Appendix</h1></center>
+Measures of the relationshps among number of cross-postings, lines of messages,
+and document usefulness.
+<br>The following results were obtained using SPSS 9.0.
+<center>&nbsp;</center>
+
+<center><table border cellspacing=0 cellpadding=5 >
+<caption><b>Case Processing Summary</b>&nbsp;</caption>
+
+<tr>
+<th align=left rowspan="3" bgcolor="#FFFFFF"></th>
+
+<th colspan="6" bgcolor="#FFFFFF"><font color="#000000">Cases</font></th>
+</tr>
+
+<tr>
+<th colspan="2" bgcolor="#FFFFFF"><font color="#000000">Valid</font></th>
+
+<th colspan="2" bgcolor="#FFFFFF"><font color="#000000">Missing</font></th>
+
+<th colspan="2" bgcolor="#FFFFFF"><font color="#000000">Total</font></th>
+</tr>
+
+<tr>
+<th bgcolor="#FFFFFF"><font color="#000000">N</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Percent</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">N</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Percent</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">N</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Percent</font></th>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">x-posts * usefulness</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">37</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">92.5%</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">3</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">7.5%</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">40</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">100.0%</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">lines * usefulness</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">37</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">92.5%</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">3</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">7.5%</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">40</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">100.0%</font></td>
+</tr>
+</table></center>
+&nbsp;
+<center>
+<h1>
+x-posts * usefulness</h1></center>
+
+<center>&nbsp;</center>
+
+<center><table border cellspacing=0 cellpadding=5 >
+<caption><b>Directional Measures</b>&nbsp;</caption>
+
+<tr>
+<th align=left colspan="3" bgcolor="#FFFFFF"></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Value</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Asymp. Std. Error(a)</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Approx. T(b)</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Approx. Sig.</font></th>
+</tr>
+
+<tr>
+<th align=left rowspan="8" bgcolor="#FFFFFF"><font color="#000000">Nominal
+by Nominal</font></th>
+
+<th align=left rowspan="3" bgcolor="#FFFFFF"><font color="#000000">Lambda</font></th>
+
+<th align=left bgcolor="#FFFFFF"><font color="#000000">Symmetric</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.159</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.104</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">1.439</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.150</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">x-posts Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.160</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.090</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">1.695</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.090</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">usefulness Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.158</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.145</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">1.014</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.311</font></td>
+</tr>
+
+<tr>
+<th align=left rowspan="2" bgcolor="#FFFFFF"><font color="#000000">Goodman
+and Kruskal tau</font></th>
+
+<th align=left bgcolor="#FFFFFF"><font color="#000000">x-posts Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.138</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.040</font></td>
+
+<td bgcolor="#FFFFFF"></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.193(c)</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">usefulness Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.218</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.046</font></td>
+
+<td bgcolor="#FFFFFF"></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.142(c)</font></td>
+</tr>
+
+<tr>
+<th align=left rowspan="3" bgcolor="#FFFFFF"><font color="#000000">Uncertainty
+Coefficient</font></th>
+
+<th align=left bgcolor="#FFFFFF"><font color="#000000">Symmetric</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.258</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.050</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">4.425</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.235(d)</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">x-posts Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.230</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.047</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">4.425</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.235(d)</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">usefulness Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.294</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.059</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">4.425</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.235(d)</font></td>
+</tr>
+
+<tr>
+<td align=left colspan="7" bgcolor="#FFFFFF"><font color="#000000">a Not
+assuming the null hypothesis.</font></td>
+</tr>
+
+<tr>
+<td align=left colspan="7" bgcolor="#FFFFFF"><font color="#000000">b Using
+the asymptotic standard error assuming the null hypothesis.</font></td>
+</tr>
+
+<tr>
+<td align=left colspan="7" bgcolor="#FFFFFF"><font color="#000000">c Based
+on chi-square approximation</font></td>
+</tr>
+
+<tr>
+<td align=left colspan="7" bgcolor="#FFFFFF"><font color="#000000">d Likelihood
+ratio chi-square probability.</font>&nbsp;</td>
+</tr>
+</table></center>
+&nbsp;
+<center>&nbsp;</center>
+
+<center><table border cellspacing=0 cellpadding=5 >
+<caption><b>Symmetric Measures</b>&nbsp;</caption>
+
+<tr>
+<th align=left colspan="2" bgcolor="#FFFFFF"></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Value</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Approx. Sig.</font></th>
+</tr>
+
+<tr>
+<th align=left rowspan="3" bgcolor="#FFFFFF"><font color="#000000">Nominal
+by Nominal</font></th>
+
+<th align=left bgcolor="#FFFFFF"><font color="#000000">Phi</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.844</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.334</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">Cramer's V</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.422</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.334</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">Contingency Coefficient</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.645</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.334</font></td>
+</tr>
+
+<tr>
+<th align=left colspan="2" bgcolor="#FFFFFF"><font color="#000000">N of
+Valid Cases</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">37</font></td>
+
+<td bgcolor="#FFFFFF"></td>
+</tr>
+
+<tr>
+<td align=left colspan="4" bgcolor="#FFFFFF"><font color="#000000">a Not
+assuming the null hypothesis.</font></td>
+</tr>
+
+<tr>
+<td align=left colspan="4" bgcolor="#FFFFFF"><font color="#000000">b Using
+the asymptotic standard error assuming the null hypothesis.</font>&nbsp;</td>
+</tr>
+</table></center>
+&nbsp;
+<center>
+<h1>
+lines * usefulness</h1></center>
+
+<center>&nbsp;</center>
+
+<center><table border cellspacing=0 cellpadding=5 >
+<caption><b>Directional Measures</b>&nbsp;</caption>
+
+<tr>
+<th align=left colspan="3" bgcolor="#FFFFFF"></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Value</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Asymp. Std. Error(a)</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Approx. T(b)</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Approx. Sig.</font></th>
+</tr>
+
+<tr>
+<th align=left rowspan="8" bgcolor="#FFFFFF"><font color="#000000">Nominal
+by Nominal</font></th>
+
+<th align=left rowspan="3" bgcolor="#FFFFFF"><font color="#000000">Lambda</font></th>
+
+<th align=left bgcolor="#FFFFFF"><font color="#000000">Symmetric</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.283</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.094</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">2.614</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.009</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">lines Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.088</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.084</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">1.014</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.311</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">usefulness Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.632</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.150</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">2.820</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.005</font></td>
+</tr>
+
+<tr>
+<th align=left rowspan="2" bgcolor="#FFFFFF"><font color="#000000">Goodman
+and Kruskal tau</font></th>
+
+<th align=left bgcolor="#FFFFFF"><font color="#000000">lines Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.101</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.005</font></td>
+
+<td bgcolor="#FFFFFF"></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.752(c)</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">usefulness Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.708</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.019</font></td>
+
+<td bgcolor="#FFFFFF"></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.743(c)</font></td>
+</tr>
+
+<tr>
+<th align=left rowspan="3" bgcolor="#FFFFFF"><font color="#000000">Uncertainty
+Coefficient</font></th>
+
+<th align=left bgcolor="#FFFFFF"><font color="#000000">Symmetric</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.446</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.041</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">8.300</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.997(d)</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">lines Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.312</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.035</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">8.300</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.997(d)</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">usefulness Dependent</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.779</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.052</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">8.300</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.997(d)</font></td>
+</tr>
+
+<tr>
+<td align=left colspan="7" bgcolor="#FFFFFF"><font color="#000000">a Not
+assuming the null hypothesis.</font></td>
+</tr>
+
+<tr>
+<td align=left colspan="7" bgcolor="#FFFFFF"><font color="#000000">b Using
+the asymptotic standard error assuming the null hypothesis.</font></td>
+</tr>
+
+<tr>
+<td align=left colspan="7" bgcolor="#FFFFFF"><font color="#000000">c Based
+on chi-square approximation</font></td>
+</tr>
+
+<tr>
+<td align=left colspan="7" bgcolor="#FFFFFF"><font color="#000000">d Likelihood
+ratio chi-square probability.</font>&nbsp;</td>
+</tr>
+</table></center>
+&nbsp;
+<center>&nbsp;</center>
+
+<center><table border cellspacing=0 cellpadding=5 >
+<caption><b>Symmetric Measures</b>&nbsp;</caption>
+
+<tr>
+<th align=left colspan="2" bgcolor="#FFFFFF"></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Value</font></th>
+
+<th bgcolor="#FFFFFF"><font color="#000000">Approx. Sig.</font></th>
+</tr>
+
+<tr>
+<th align=left rowspan="3" bgcolor="#FFFFFF"><font color="#000000">Nominal
+by Nominal</font></th>
+
+<th align=left bgcolor="#FFFFFF"><font color="#000000">Phi</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">1.745</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.466</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">Cramer's V</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.872</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.466</font></td>
+</tr>
+
+<tr>
+<th align=left bgcolor="#FFFFFF"><font color="#000000">Contingency Coefficient</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.868</font></td>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">.466</font></td>
+</tr>
+
+<tr>
+<th align=left colspan="2" bgcolor="#FFFFFF"><font color="#000000">N of
+Valid Cases</font></th>
+
+<td align=right bgcolor="#FFFFFF"><font color="#000000">37</font></td>
+
+<td bgcolor="#FFFFFF"></td>
+</tr>
+
+<tr>
+<td align=left colspan="4" bgcolor="#FFFFFF"><font color="#000000">a Not
+assuming the null hypothesis.</font></td>
+</tr>
+
+<tr>
+<td align=left colspan="4" bgcolor="#FFFFFF"><font color="#000000">b Using
+the asymptotic standard error assuming the null hypothesis.</font>&nbsp;</td>
+</tr>
+</table></center>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Brown-Syed, Christopher &amp; Morrissey, William (1999)&nbsp; &quot;Using newsgroup headers to predict document relevance.&quot;&nbsp;&nbsp; <em>Information Research</em>, <strong>5</strong>(1) Available at: http://informationr.net/ir/5-1/paper64.html</p>
+<p style="text-align : center">© the authors, 1999. Last updated: 8th October 1999</p>
+<hr color=#ff00ff size=3>
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres51.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper64" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/5-1/paper64.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:23 GMT -->
+</html>

@@ -1,0 +1,630 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/3-1/paper27.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:38:06 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="../IRstyle.css">
+<title>Beyond the on-line library - the Learning Environment</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="networked learner support, on-line learning, online, distance <span>education</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> telematics, university, academic, library, information literacy">
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> content="This paper describes a collaborative project which has   defined requirements and a model for holistic networked learner support. Based  on these requirements, a working <span>prototype</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>for a Learning Environment has been  developed. Technical, organisational and <span>business</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>issues which have arisen are discussed. ">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<link rel=schema.vw96 href="http://vancouver-webpages.com/META/VW96-schema.html">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Beyond the on-line library - the Learning Environment">
+<meta name="DC.Creator" content="Bob Banks">
+<meta name="DC.Subject" content="Beyond the on-line library - the Learning Environment">
+<meta name="DC.Description" content="This paper describes a collaborative project which has   defined requirements and a model for holistic networked learner support. Based   on these requirements, a working <span>prototype</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>for a Learning Environment has been   developed. Technical, organisational and <span>business</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>issues which have arisen are  discussed. ">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 3  No. 1, July 1997</h4></td></tr>
+  <tr> 
+    <td><a href="infres31.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+       
+<br>
+  <h1 align="center">Beyond the on-line library - the Learning Environment</h1>
+  <h4><a href="mailto:bbanks@fdgroup.co.uk">Bob 
+  Banks</a><br>Fretwell Downing 
+  Informatics<br> Sheffield, U.K</h4>
+  <br>. 
+
+
+  <div align="center"><strong>Abstract</strong></div>
+  
+ <blockquote> This paper describes a collaborative project which has 
+  defined requirements and a model for holistic networked learner support. Based 
+  on these requirements, a working <span>prototype</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>for a Learning Environment has been 
+  developed. Technical, organisational and <span>business</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>issues which have arisen are 
+  discussed.</blockquote> 
+  <br><br>
+  <h2>Introduction</h2>
+  
+  <blockquote><i>'The library, as we know it, is obsolescent … The university, 
+    as we know it, is obsolescent … Your kind [ Librarians], and mine 
+    [Universities], are clearly at some kind of fork in our road … We must 
+    either lead, follow, or get out of the way!'</i> : <br>N. Langenburg, 
+  (1)</blockquote>
+  
+<p>  In the brave new on-line world facing libraries and <span>education</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> 
+  an important component is the availability of learning materials and IT 
+  support for access to these materials. However, to fully support learners, yet 
+  more is needed. </p>
+  
+  <p>In general terms, the "more" <span>refers</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to the structure within which learning 
+  takes place for each learner - commonly known as the curriculum - and support 
+  for each student as he or she progresses through their learning. How best to 
+  provide this holistic concept of networked learner support is a complex 
+  question with educational, organisational and technical components, to which 
+  we do not yet have the answers. </p>
+  
+  <p>To help <span>derive</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>some answers the Learning Environment Club was <span>formed</span>. <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> The 
+  club <span>consisted</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of eleven Further Education colleges, together with a <span>software</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  supplier and some associate institutions (2). Whilst the <span>focus</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>was on FE, the 
+  principles of the Club's work are applicable to all sectors of <span>education</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> The 
+  remit was to: </p>
+  
+  <ul>
+    <li>Ascertain key requirements for successful online support of the entire 
+    learning process. 
+    <li>Develop and evaluate <span>prototype</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Learning Environment <span>software</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>which 
+    fulfils these requirements. 
+    <li>Identify the best ways of fitting this kind of technology into the 
+    institutions' <span>framework</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to maximise benefits and minimise problems. 
+  </li></ul>
+  
+<p>  The Club has run from July, 1995 to May, 1997, and trialling is 
+  continuing through to 1998. </p>
+  
+  <p>There has been a fair amount of other work addressing various aspects of 
+  online learning. The <span>main</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>differentiating <span>feature</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of the Learning Environment 
+  collaboration has been our holistic approach, with the online resource base at 
+  the centre of the model. 
+  </p>
+  <h2>Key Requirements which were Identified</h2>
+  
+<p>  These requirements were derived 
+  in a series of workshops with Club members (a mixture of information 
+  specialists (librarians), tutors, senior college managers, IT support people 
+  and curriculum planners): </p>
+  
+  <p>1) Full support for a resource-based, student-centred open learning model. 
+  This implies: </p>
+  <p>1a) Making learning materials available to learners in two ways: </p>
+  <blockquote>- Through research. The learner locates them him/herself - 
+    through searching and browsing - with the resource itself available online - 
+    not just the catalogue record (as well as retaining access to books, videos 
+    etc. which are not <span>held</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>online). <br>- Guided learning - structured <span>direct</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+    access to the learning materials which are at the core of each learner's 
+    programme of study. This includes both standard materials for the programme 
+    of learning which the learner is pursuing, and materials <span>added</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in by a tutor 
+    to meet the individual needs of a learner.</blockquote>
+  <p>1b) Further <span>extending</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>support to the entire learning process, which was 
+  defined for our <span>purposes</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in <span>figure</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>1. (See also (3).) </p>
+  
+
+  <div align="center"><img alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>1"   height=247 src="bnkfig1.gif" width=421></div>
+   <div align="center"><br><strong>Fig. 1 - Learning model for the individual learner</strong></div>
+  
+  <p>In this model, planning and reflection, with the student <span>taking</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  responsibility for his or her own learning are seen as integral to learning. </p>
+  
+  <p>1c) Embedding online communication / discussion within the core structure 
+  of the learning. </p>
+  <p>2) Flexibility is of the essence, both in meeting the individual needs of 
+  learners, and adapting the institution's offering rapidly as needs change. 
+  This means meeting the needs of individual learners by, for example, support 
+  for individually tailored learning programmes, with the capability to provide 
+  the learning resources that are just right for a particular individual, and to 
+  change these immediately as the needs of the individual (or group) change. 
+  <br>It also implies adapting the institution's offering as needs change - not 
+  just on a <span>fixed</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>annual cycle. So, for example, existing courses can quickly be 
+  adapted to meet the needs of a customer organisation for a particular kind of 
+  training for it's workforce. </p>
+  <p>3) To achieve this, support for the learner is likely to be provided by a 
+  team which may comprise (for example) a curriculum area specialist, a resource 
+  centre staff member (or librarian / information specialist), a personal tutor, 
+  and a workplace training manager. There is hope that a new, predominantly 
+  online, support regime may work better than traditional arrangements, through:</p> 
+
+  <ul>
+    <li>One-to-one asynchronous access to the right support <span>person</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>for the 
+    student the moment questions <span>arise</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>through (for example) integrated e-mail. 
+    Rather than having to wait for next week's tutorial with the one member of 
+    staff who is assigned to him or her, the student can <span>direct</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>a question at 
+    the appropriate person(s) - e.g. curriculum specialist, resource centre 
+    staff, or (importantly!) fellow <span>students</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> and hope to have a <span>response</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>within 
+    a <span>day</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>or two. 
+    <li>Availability of up-to-the-minute information on student progress to the 
+    team of tutors, with the automated ability to <span>focus</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in on problem areas - 
+    e.g. overdue assignments - enabling tutors to spot any problems as soon as 
+    they <span>arise</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> Effective support for individual student tracking (4) was seen 
+    as very important. </li></ul>
+	
+<p>	4) None of this is possible without the right 
+  learning materials being available. Generally <span>speaking</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> it will be <span>impossible</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  for staff to develop the bulk of the materials for a course themselves. The 
+  model has to be sharing and re-use of materials, both within an institution, 
+  and between institutions. The learning institution, and its library, should be 
+  playing a <span>central</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>role of broker of learning objects.</p> 
+  
+  <p><b>Key to this are:</b> </p>
+  
+  <ul>
+    <li>Effective and flexible <span>search</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>facilities for locating the right 
+    materials. (Also, ideally, automatic notification facilities when new 
+    relevant materials become available.) 
+    <li>The <span>added</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>value obtained by cataloguing materials for optimum 
+    accessibility. This principle extends to external resources - such as Web 
+    pages etc. 
+    <li>The <span>design</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of materials for re-use. This encompasses both adaptation of 
+    materials for new <span>purposes</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and also use of materials in a number of 
+    <span>contexts</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> For example, a resource may relate to a number of curriculum areas 
+    and also to key skills in number, communication, etc.. 
+    <li>The appropriate level of <span>quality</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>assurance for an institution's 
+    materials. </li></ul>
+	
+  <p>The ability to automatically monitor usage of resources to evaluate their 
+  effectiveness and help plan <span>future</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>acquisitions is important. </p>
+  
+  <p>5) Support for <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>(and staff) working from a variety of locations, 
+  such as home, the workplace, <span>community</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>centres, or open learning centres in 
+  the institution. </p>
+  <h2>Learning Environment Architecture and Implementation</h2>
+  
+  <p>To fulfil the requirements for integrated support for the entire learning process, a 
+  <span>prototype</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>online Learning Environment was <span>designed</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and built in a number of 
+  phases, with feedback from club members at each stage. The starting point was 
+  OLIB(5), an existing commercial library / online resource management system 
+  <p>An <b>information model</b> was developed (figure 2), validated with 
+  members of the club, and implemented. Because of the methodology and <span>software</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  toolset used (6), rapid incremental development was possible, with comments 
+  from users feeding back quickly into the model and the <span>software</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> In the model, 
+  the ovals denote the <span>main</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span><span>kinds</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of information <span>held</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>(referred to as 
+  "domains"). The <span>lines</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>denote <span>links</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>between them.</p> 
+  
+  <div align="center"><img alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>2"  height=521 src="bnkfig2.gif" width=525></div>
+<div align="center"><br><strong>Figure 2 - Learning Environment Information Mode</strong></div>
+
+  <p>Some significant points are: </p>
+  <ul>
+    <li>The curriculum model is split into delivery and assessment strands, 
+    following recommended practice in FE (7, 8) enabling greater flexibility in 
+    meeting <span>students</span>' <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> needs. </li>
+    <li>The model supports active learning, through "activities" which each 
+    student undertakes (individually or in a team), and which are <span>supported</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>by 
+    learning resources. </li>
+    <li>The model supports competency based assessment (as well as other forms). 
+    The <span>units</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>can be broken down into sub-units, sub-sub-units etc., all of 
+    which can be marked as <span>achieved</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>as appropriate. This will be when the 
+    appropriate evidence (either activities or evidence for Accreditation of 
+    Prior Learning) is successfully completed and / or when all the sub-units 
+    have been <span>achieved</span>. <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> In the current model there is a basic <span>degree</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of 
+    automation of this process of marking chunks of assessment as <span>achieved</span>. <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> This 
+    could be <span>extended</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to provide fairly comprehensive automation. </li>
+    <li>Each activity may provide evidence for any number of chunks of 
+    assessment. For example, a <span>survey</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of patient needs could provide evidence 
+    for the achievement of elements in a mandatory Health and <span>Social</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Care unit, 
+    but also for elements of key skills <span>units</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in number and IT. </li>
+    <li>When <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>enrol on a programme (standard or individualised), 
+    individual "copies" of the programme, delivery modules, assessment <span>units</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and 
+    activities are automatically made. This means that: </li>
+    <ul type=disc>
+      <li>the progress of each student is recorded individually </li>
+      <li>each student has their own copy of each activity, which they can 
+      complete online as appropriate. </li>
+      <li>each student's programme and modules can be individually tailored - 
+      e.g. providing extra activities to reinforce areas where the student has 
+      <span>difficulties</span>, <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> or to challenge and extend able <span>students</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span></li>
+	  </ul>
+    <li>Re-use of resources (including activities) across the whole <span>range</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of the 
+    curriculum is <span>supported</span>. <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> </li>
+	</ul>
+	
+<p>	<b>The architecture</b> incorporates the  concept of brokerage of learning objects (9) (fig. 3). Libraries and  librarians have always acted as information brokers between learners, 
+  information repositories and information providers. There is a current <span>move</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to 
+  extend this concept (10) to the educational institution as a whole, 
+  particularly in the context of electronic information. Rather than being 
+  imparters of a <span>fixed</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>body of knowledge to a set of <span>students</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> learning support 
+  staff are being seen as facilitators of learning who responsively <span>direct</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to appropriate learning resources and monitor their progress. </p>
+  <p>This brokerage adds value to the information by: </p>
+  <ul>
+    <li>locating it in the context of an individual student's (or group's) 
+    programme of study and progression, using the expertise of the tutor.</li> 
+    <li>linking it to assessment and accreditation for each student. </li>
+    <li>supporting dialogue with the student to help understanding.</li>
+	</ul>
+
+
+<div align="center"><img  alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>3" height=413 src="bnkfig3.gif" width=568></div>
+<div align="center"><br><strong>Figure 3: Learning Environment as Learning Resource broker</strong></div>
+
+  <p>In the Learning Environment, there are currently two <span>prime</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>routes to 
+  resources <span>held</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span><span>out0e</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of the institution's boundary, via World Wide Web URLs, 
+  or via Z39.50. The latter is an international standard for information 
+  exchange between heterogeneous information bases, which allows remote 
+  information bases to be queried, and result sets returned in standard format. 
+  This capability is being <span>extended</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in the Learning Environment in two 
+  European-funded projects: <span>Renaissance</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and Universe (11). <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span><span>third</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>related 
+  project, DALI (11), has <span>investigated</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and implemented a charging model for 
+  document delivery from remote sites - a <span>crucial</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>component if this kind of 
+  flexible remote access to resources is to become widespread. </p>
+  
+  <p>The <b>User interface</b> for <span>students</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> tutors and information managers is 
+  based around three <span>modes</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of <span>interaction</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in <span>line</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>with requirement 1a above. </p>
+  <ul>
+    <li>Structured <span>mode</span>, <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> through the users' "workspace" where the core 
+    information they will most commonly be working with is presented to them. 
+    (figure 4). </li>
+    <li>Research <span>mode</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>- where the user can formulate queries and explore freely 
+    (if they have permissions) the entire information base (figure 5). </li>
+    <li>Online communication in context. This is currently is via integrated 
+    e-mail, but video-conferencing, etc. could equally be employed. Also, 
+    folders of resources can be created and shared for collaborative learning. 
+    </li></ul>
+
+
+    <div align="center"><a  href="../bnkfig4.gif" height='600"' 
+  width="800"><img alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>4" height=200 src="bnkfig41.gif" 
+  width=320></a></div>
+<div align="center"><br><strong>Figure 4: "Structured <span>mode</span>" <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> - <span>typical</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>initial view of a learner's  workspace</strong></div>
+
+<div align="center"><br><strong>Figure 5: "Research <span>mode</span>" <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> - a query of the database</strong></div> 
+<div align="center"><a 
+  href="../bnkfig5.gif" height='600"' 
+  width="800"><img alt="<span>Figure</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>5" height=200 src="bnkfig51.gif" 
+  width=320></a></div>
+  
+  <p><b>Resources</b> can be located within or <span>out0e</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>the LE database. For 
+  example, they can be: </p>
+  
+  <ul>
+    <li>Word-processed <span>documents</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>- either in read-only or (for activities) in 
+    updateable <span>mode</span>. <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> </li>
+    <li>Adobe Acrobat <span>documents</span>. <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> These allow the embedding of multimedia 
+    components, and hyperlinks. (As indeed - though to an <span>arguably</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>lesser extent 
+    to most <span>modern</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>word-processors.) </li>
+    <li>Multimedia learning resources - which may have been authored using a 
+    variety of packages. </li>
+    <li>World Wide Web pages anywhere on the Internet. The same con0erations 
+    that apply to any educational use of the Web obviously apply here, and must 
+    be addressed in determining an institution's Internet policy. </li>
+    <li>Web pages on the institution's internal intranet (some of which may be 
+    copies of pages obtained from the global Internet - but <span>held</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>locally to save 
+    on the phone bill, and to avoid the perceived dangers to innocent <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+    lurking out there on the Internet. </li>
+    <li>Etc. etc.</li></ul>
+	
+  <p>In terms of physical location, resources may be <span>held</span>, <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> for example: </p>
+  <ul>
+    <li>Within the LE database </li>
+    <li>On a local area <span>network</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>server (which could be a dedicated document 
+    server). This may provide advantages in speed of access, but may <span>limit</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>the 
+    visibility of the resources (e.g. to users connected over a local area as 
+    <span>opposed</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to wide area <span>network</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>) </li>
+    <li>On the Internet or intranet - referenced in standard Web fashion via a 
+    URL (Universal Resource Locator) </li>
+    <li>On a <span>CD-ROM</span>, <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> distributed to the <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>enrolled on a particular 
+    programme, and inserted into their own <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>drive. This provides 
+    advantages of fast loading for multimedia resources without the expense of 
+    high bandwidth <span>network</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span><span>connections</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> The obvious disadvantage is the 
+    inability to update resources without sending out new copies of the <span>CD-ROM</span>, <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> 
+    but this may not matter. </li>
+    <li>On CD-ROMs mounted on the local <span>network</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>on a <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>jukebox.</li></ul>
+	
+  <p>The <span>choice</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of the mixture of <span>strategies</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to be adopted for mounting 
+  resources is one of the <span>major</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>strategic questions an institution faces in 
+  developing online learning. </p>
+  <p>The provision for online <b>communication / discussion</b> with tutors and 
+  with fellow learners may <span>depend</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>on learning <span>style</span>, <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> educational model, 
+  confidence of <span>students</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> <span>degree</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of support required, etc. Examples of a 
+  structure would be: </p>
+  <ul>
+    <li>At the end of each module of delivery - e.g. e-mailing the tutor(s) to 
+    comment on the learning which has taken place in the module being the final 
+    activity in the module. </li>
+    <li>Ad hoc - when problems or inspirations <span>arise</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> Almost certainly, this 
+    will be important. </li>
+    <li>Once a week (This is traditional but perhaps rarely 
+appropriate!)</li></ul>
+
+  <p>Incorporating discussion with fellow learners in the process may be as 
+  important as (or more important than!) discussion with tutors.  </p>
+  
+  <p>The Learning Environment was implemented in a client - server <span>environment</span>, <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> 
+  supporting access over local or wide area networks (tcp-ip). An <span>Oracle</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  database on the <span>central</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>server(s) holds the information. The client runs on 
+  Windows PCs. In principle, the application could equally run over the World 
+  Wide Web, with a web browser providing the client, and (for example) <span>Oracle</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  Web Server providing access to the database. Extension to this <span>environment</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>is 
+  under con0eration.  </p>
+  <h2>Strategies for Networked Learner Support</h2>
+  
+<p>  In the Learning Environment 
+  Club, there have typically been three overall <span>roles</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>involved in Learner 
+  Support:</p> 
+  <ul>
+    <li>Subject Tutor - the specialist in a curriculum area </li>
+    <li>Progression Tutor - the tutor with an overall view of the student's 
+    learning needs and progress, who provides counselling around this, etc. </li>
+    <li>Information Specialist - also <span>referred</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to in this paper as "Resource 
+    Centre Staff". Providing support around information / resource needs. 
+  </li></ul>
+  <p>Often, a single <span>person</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>fulfils more than one of these <span>roles</span>, <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> in part or 
+  fully. </p> 
+  <p>Each of these are involved in the provision of three types of support: </p> 
+  <ul>
+    <li>Responsive. Providing information and advice in <span>response</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to <span>students</span>' <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> 
+    requests for support. </li>
+    <li>Proactive. Providing input for <span>students</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> either in a scheduled fashion, 
+    or as a result of the way a student is progressing (falling behind, showing 
+    misunderstanding in assignments, not being stretched, etc.) </li>
+    <li>Structural. This is the traditional role of a librarian, but <span>extended</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+    into an online context and with more <span>focus</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>on how resources fit into the 
+    curriculum. This covers the management of resources (including delivery 
+    modules, assessment <span>units</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>etc.) to ensure optimal accessibility. In our 
+    case, it also covers the development of new learning programmes; a role 
+    which may well be performed by a different <span>person</span>. <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> </li></ul>
+  <p>The way that individual staff fit into this matrix will differ between 
+  institutions. The <span>description</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of <span>typical</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>uses of the learning <span>environment</span>, <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> 
+  below will make it clear how these types of support operate. </p> 
+  
+  <h2>Typical Uses of the Learning Environment</h2>
+  
+  <p>These are described for the  four <span>typical</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>types of user shown in <span>figure</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>3. </p>
+  
+  <p><i><b>1) By a Learner</b></i> <br>Tony is enrolled on a modular <span>degree</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  course. He generally works from home - in the evenings or whilst his <span>children</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  are at nursery. However, fellow <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>on the course who have no <span>computer</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>at 
+  home work at a number of open learning centres, on or off campus, or at 
+  "Electronic Village Halls" near their homes. </p>
+  
+  <p>Before starting the course, Tony had a number of meetings with tutors to:</p>
+   
+  <blockquote>- Identify his learning needs. <br>- Decide on his learning 
+    goals . <br>- Formulate an <span>action</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>plan (12) for his learning, and decide on 
+    the programme / modules on which he is going to enrol.</blockquote>
+	
+  <p>This information is maintained (as word-processed documents) within the 
+  learning <span>environment</span>, <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> and can be periodically revisited and reassessed. </p>
+  
+  <p>In a <span>typical</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>learning session, Tony may connect in, and initially check his 
+  mail, for example picking up a reply from his tutor about a problem he had 
+  yesterday, a couple of responses to points he made in group discussion, and a 
+  pointer to a resource from a resource centre staff member in <span>response</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>to a 
+  query. He then looks at his learning <span>environment</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>workspace, where the <span>list</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of 
+  activities for the module he is currently working on are shown to him (fig. 
+  4). He has just finished one activity, and starts on the next, which is marked 
+  as current. It may be, for example, a word processed activity sheet, which 
+  Tony completes with help from the <span>list</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of learning resources attached. These 
+  could be, for example, a web page, a multimedia Acrobat document, and an 
+  online video. Postits, supplied by the module tutor, and visible just to all 
+  the <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in this group, explain how each resource might best be used in 
+  this context. </p>
+  
+  <p>In this case, his tutor has <span>added</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>an additional learning resource to help 
+  him with the <span>statistical</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>analysis of the activity results, which he has been 
+  <span>finding</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>difficult. <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>"postit" against the resource explains how to use it. 
+  (His tutor found it by a <span>search</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of the college resource bank <span>held</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>on the 
+  Learning Environment.) </p>
+  
+  <p>When Tony has a problem, he can instantly e-mail his tutor, or others in 
+  his support team, such as the resource centre staff. To do this, he clicks on 
+  the right mouse button over the activity, which brings up the <span>action</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>menu. He 
+  selects "e-mail tutor" which brings up his e-mail application, with the "To" 
+  box automatically populated with the address of the tutor for this module, and 
+  the "About" box populated with the name of the activity. </p>
+  
+  <p>When the activity is completed, Tony clicks on "Completed" on the <span>action</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  menu, and the next activity automatically becomes current, whilst this one 
+  appears in the tutor's folder of activities for marking. </p>
+  
+  <p>Tony can also freely research the resource base to explore other items that 
+  might be relevant. </p>
+  
+  <p>In this example, Tony is pursuing a fairly standard college course, 
+  although there may be a good <span>deal</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of <span>variation</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>between course members in which 
+  optional modules they choose. However, learning programmes may equally be 
+  totally individual, on a "pick and mix" basis. There are many possible 
+  variations between the extremes of standard college courses and total 
+  individuality. For example, many colleges give <span>students</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>diagnostic <span>tests</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>in 
+  key skills when they enrol. These can be presented as activities, marked 
+  on-line, and based on the results, supplementary chunks of work can be dropped 
+  into the student's programme, to catch up on areas of deficiency. 
+  <p>From time to time Tony (and his tutors) will wish to see how he is 
+  progressing with the assessment 0e of things, which is visible to both, and 
+  is automatically updated as relevant assignments are marked as successful. </p>
+  
+  <p><i><b>2) By the learning support staff (tutors, resource centre staff 
+  etc.)</b></i> </p>
+  
+  <p>The student's support team monitors progress via </p>
+  <blockquote>- <span>direct</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>communication with the student (and each other) - e.g. 
+    via integrated e-mail. <br>- a window onto each student's progress and work 
+    in their own workspaces. This may, for example, provide an automatically 
+    updated <span>list</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of overdue assignments, allowing the tutor to home in 
+    immediately on problems as they <span>arise</span>, <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> and <span>respond</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and resolve the problem 
+    before the student become disillusioned, drops out etc. </blockquote>
+	
+<p>	Also, 
+  they may locate and add in resources to meet individual student's needs, using 
+  the capabilities described in (3) below. </p>
+  
+  <p><i><b>3) By course designers</b></i> </p>
+  <p>Location of appropriate materials, and linking them together to provide 
+  structured chunks of curriculum is <span>supported</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>by:</p> 
+  
+  <blockquote>- <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>wide <span>range</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>of <span>search</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>types, with access via date, subject 
+    headings, full text retrieval, curriculum area, author, etc.. <br>- 
+    Cross-referencing and browsing capabilities. <br>- Resource sharing via 
+    static and dynamic folders. <br>- Drag and drop authoring and structuring 
+    capabilities for developing the catalogue and authoring modules of 
+    curriculum. </blockquote>
+	
+<p>	<i><b>4) By resource / information managers</b></i> </p>
+  <p>The management of this information is <span>supported</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>online by the standard 
+  <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>one would expect in a library management system. Authority 
+  <span>controlled</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>subject headings, standard <span>classification</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>schemes, etc. can be used 
+  to manage and increase accessibility of information. </p>
+  <h2>Key Issues for the future</h2>
+  
+  <p>These are largely organisational and   cultural rather than technical, for example: </p>
+  <p>The sourcing, management and sharing of learning resources. Some things 
+  that may help are: </p>
+  
+  <blockquote>- Arrangements for sharing between institutions. <br>- Third 
+    Party Brokers. In many cases, libraries are ideally place to play this role. 
+    Another example is the Web Site Unit Exchange project - a QUILT initiative 
+    to make available Open College Federation accreditation <span>units</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>developed 
+    across U.K. colleges (13). <br>- <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>"component architecture" for resources to 
+    facilitate their re-use. <br>- <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>clear analysis of the economics of buying 
+    in materials versus developing them internally, the investment required and 
+    the potential returns. Clearly educational institutions may play the role of 
+    resource providers (publishers) as well as consumers, but a clear analysis 
+    of how this fits the institution's core <span>business</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>is required.</blockquote>
+	
+<p>	How 
+  to "migrate" new <span>approaches</span>  <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and technology into an institution. Some critical 
+  success factors may be: </p>
+  
+  <blockquote>- An effective high-level champion combined with nurturing for 
+    staff at the grass-roots. <br>- Catalyst team or staff member, with 
+    <span>sufficient</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>resources to support their role. <br>- Demonstration of early 
+    success in an area that is small enough to be achievable, but significant 
+    enough to excite enthusiasm. <br>- Buy-in from key stakeholders. <br>- 
+    Perception that it will make participants' jobs better in some way. <br>- 
+    Appropriate <span>focus</span>. <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> <br>- Defined migration paths from initial small-scale 
+    success to later widespread <span>achievements</span>. <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> <br>- Defined <span>mechanisms</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>for 
+    <span>taking</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>feedback and adapting the <span>introduction</span>  <span class="quanti" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>strategy based on successes 
+    and problems. <br>- <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>good fit with the institution's (evolving) culture. 
+    <br>- Technology that is <span>reliable</span>, <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> has a good user interface and evokes 
+    confidence. <br>- Good provision for staff training. </blockquote>
+	
+<p>	Forthcoming 
+  evaluation of the pilot use of the Learning Environment in colleges will 
+  provide further insights. </p>
+  
+  <h2>References</h2>
+  
+  <ol><li>Langenburg, D.N (1993) from New Technologies &amp; New 
+  Directions - Proceedings from the Symposium on Scholarly Communication; ed. 
+  Boynton &amp; Creth; Meckler, [pp 39-40]</li> 
+  <li>David Kay (1996) <b>'The Learning Environment Club: Year 1 Report'</b>: 
+  Fretwell Downing Informatics Internal Document<br> 
+  <li>The members of the club were Fretwell Downing Informatics along with 
+  Broxtowe College, Clarendon College, Doncaster College, Manchester College of 
+  Arts and Technology, Newark &amp; Sherwood College, Sheffield College, 
+  Solihull College, Thomas Rotherham College, Trowbridge College, West Cheshire 
+  College, Wirral Metropolitan College, together with some associates: The 
+  National Council for Educational Technology (NCET), South Yorkshire Open 
+  College Federation, Sheffield Hallam University. </li> 
+  <li>Cowham T. (1997) <b>'Information and Learning Technology: <span>A+</span>  <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span><span>Development</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>
+  <span>Handbook</span>' <span class="quali" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span></b> FE Matters 1(15) FEDA (Further Education <span>Development</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>Agency, 
+  Coombe Lodge, Blagdon, Bristol BS18 6RG, U.K. ) </li> 
+  <li>Donovan K. (1996) <b>'Student Tracking'</b> Developing FE 1(1). FEDA </li> 
+  <li>Fretwell Downing Informatics (1997) The OLIB Library Management System </li> 
+  <li>Banks <span>R++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> et.al. (1996) <b>'Support for co-operative work at the heart of 
+  the changing enterprise'</b> in "IT Support in the Productive Workplace" 
+  Chapman <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> (ed.). Stanley Thornes / UNICOM. </li> 
+  <li>FEU (1995) <b>'A <span>framework</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>for credit: a common <span>framework</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>for post-14 
+  <span>education</span>  <span class="conce" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and training for the 21st century. </b>FEU / FEDA </li> 
+  <li>Fforwm (1995) <b>'Student Tracking Project, 1995 Report'. </b>Ffforwm </li> 
+  <li>Gray <span>J++</span>. <span class="compus" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span> (1997) - Presentation at QUILT launch (FEDA, Feb., 1997) </li> 
+  <li>Hamalainen (1996) <b>'The Course Broker Model'</b> in 'The Road to the 
+  Information Society', European Union. </li> 
+  <li>Reports available from: Fretwell Downing Informatics, Brincliffe House, 
+  861 Ecclesall Rd., Sheffield S11 7AE, U.K. </li> 
+  <li>FEU (Now FEDA) (1994) <b>'Maximising Potential through Individual 
+  Action Planning'. </b>FEU / FEDA </li> 
+  <li>Web Site Unit Exchange Project. NEMAP, SE Derbyshire College, Long 
+  Eaton, Nottingham, NG10 4QN, U.K.</li>  </ol>
+  
+            <hr color=#ff00ff size=3>
+			<h5 align="left" style="">Paper presented at the <a href="http://netways.shef.ac.uk/rbase/2ndsym2.htm#programme">2nd  International Symposium on Networked Learner Support</a> 23rd-24th June 1997,  Sheffield, England<br><b>New services, <span>roles</span>  <span class="exper" style="width:1px;border-width:72px 24px 72px 24px;position:relative;">.</span>and partnerships for the on-line learning environment</b></h5>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Banks, Bob  (1997)&nbsp; &quot;Beyond the on-line library - the Learning Environment.&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>3</strong>(1) Available at: http://informationr.net/ir/3-1/paper27.html</p>
+<p style="text-align : center">&copy; the author, 1997. Updated 7th August 1999</p>
+<hr color=#ff00ff size=3>
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres31.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper27" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 28 December 2002</h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/3-1/paper27.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:38:06 GMT -->
+</html>

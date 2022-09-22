@@ -1,0 +1,1221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<!-- Mirrored from informationr.net/ir/14-4/paper422.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:35:29 GMT -->
+<head> 
+<title>Advantages of thesauri representation with the Simple Knowledge Organization System (SKOS) compared with other proposed alternatives for the design of a Web-based thesauri management system</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" /> 
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" /> 
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" /> 
+ 
+<!--Enter appropriate data in the content fields--> 
+<meta name="dc.title" content="Advantages of thesauri representation with the Simple Knowledge Organization System (SKOS) compared with other proposed alternatives for the design of a Web-based thesauri management system" /> 
+<meta name="dc.creator" content="J.A. Pastor, F.J. Martinez, J.V. Rodriguez" /> 
+<meta name="dc.subject" content="Using SKOS (Simple Knowledge Organization System) for thesauri representation" /> 
+<meta name="dc.description" content="Introduction. This paper presents an analysis of SKOS compared with other alternatives for thesaurus representation in the Semantic Web from the point of view of the evolving concept of thesaurus.  Method. Based on functional and structural changes of thesauri, provides an overview of the current context in which lexical paradigm is abandoned in favor of the conceptual paradigm. Likewise are described briefly various initiatives for the representation of thesauri using RDF vocabularies and hence for application to the Semantic Web, with particular attention to SKOS.  Analysis and Results. This brief comparison will allow us to know some highlights of these proposals to raise those transcendental aspects in a model representing thesauri. SKOS includes the main proposal of this model, which organizes the concepts into diagrams and libraries. The notions of descriptors and non-descriptors terms are replaced by the association to the concepts of preferred and alternative labels and may be defined hierarchical or associative relationships between concepts. SKOS also provides for the establishment of correspondence relations between concepts belonging to different conceptual schemes.  Conclusions. In accordance with the extent to which this series of requirements is fulfilled, we propose and defend the SKOS option as the best alternative for the development of multiple applications focusing on the use of thesauri in Web-based information services and systems, highlighting the advantages of this model over others proposed and in consideration of the user perspective in management, search and information query operations." /> 
+<meta name="dc.subject.keywords" content="SKOS, thesauri, representation" /> 
+ 
+<!--leave the following to be completed by the Editor--> 
+<meta name="robots" content="all" /> 
+<meta name="dc.publisher" content="Professor T.D. Wilson" /> 
+<meta name="dc.coverage.placename" content="global" /> 
+<meta name="dc.type" content="text" /> 
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" /> 
+<meta name="dc.identifier" scheme="URI" content="paper422.html" /> 
+<meta name="dc.relation.IsPartOf" content="infres144.html" /> 
+<meta name="dc.format" content="text/html" /> 
+<meta name="dc.language" content="en" /> 
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" /> 
+<meta name="dc.date.available" content="2009-12-15" /> 
+ 
+<script language="javascript" type="text/javascript"> 
+ 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script> 
+	
+<style type="text/css"> 
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+ 
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; --> 
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+ 
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+ 
+legend {
+    color: white;
+    background-color: #5E96FD;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+ 
+ 
+</style> 
+ 
+</head> 
+<body bgcolor="#ffffff"> 
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 14  no. 4, December 2009</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres144.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+	 
+<hr style="COLOR: #5E96FD" size="1" /> 
+<br />
+<h1>Advantages of thesaurus representation using the Simple Knowledge Organization System (SKOS) compared with proposed alternatives</h1>
+<div style="MARGIN-LEFT: 10%; MARGIN-RIGHT: 10%">
+<h4><a href="#authors">Juan-Antonio Pastor-Sanchez</a>,
+<a href="#authors">Francisco Javier Mart&iacute;nez Mendez</a> 
+and <a href="#authors">Jos&eacute; Vicente Rodr&iacute;guez-Mu&ntilde;oz</a>.<br />Department of Information and Documentation. 
+University of Murcia. Campus of Espinardo, Murcia, SPAIN. </h4>
+</div><br />
+
+<form action="#">
+<fieldset><legend>Abstract </legend>
+<blockquote>
+<strong>Introduction.</strong> This paper presents an analysis of the Simple Knowledge Organization System (SKOS) compared with other alternatives for thesaurus representation in the Semantic Web.<br /> 
+<strong>Method.</strong> Based on functional and structural changes of thesauri, provides an overview of the current context in which lexical paradigm is abandoned in favour of the conceptual paradigm. Likewise are described briefly various initiatives for the representation of thesauri using RDF vocabularies and hence for application to the Semantic Web, with particular attention to SKOS.<br />
+<strong>Analysis and Results.</strong> This brief comparison will allow us to know some highlights of these proposals to raise those transcendental aspects in a model representing thesauri. SKOS includes the main proposal of this model, which organizes the concepts into diagrams and libraries. The notions of descriptors and non-descriptors terms are replaced by the association to the concepts of preferred and alternative labels and may be defined hierarchical or associative relationships between concepts. SKOS also provides for the establishment of correspondence relations between concepts belonging to different conceptual schemes.<br />
+<strong>Conclusions.</strong> In accordance with the extent to which this series of requirements is fulfilled, we propose and defend the SKOS option as the best alternative for the development of multiple applications focusing on the use of thesauri in Web-based information services and systems, highlighting the advantages of this model over others proposed and in consideration of the user perspective in management, search and information query operations.
+</blockquote>
+</fieldset> 
+</form>
+<br /> 
+<div align="center"> 
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: #5E96FD;" onclick="doChangeFont()" /></div> 
+
+<br /> 
+
+<h2>Introduction</h2>
+
+<p>The concept of thesaurus has evolved from a list of conceptually interrelated words to today's controlled vocabularies, where terms form complex structures through semantic relationships. This term comes from the Latin and has turn been derived from the Greek &quot;&#952;&#951;&#963;&#945;&#965;&#961;&#8057;&#962;&quot;, which means <em>treasury</em> according to the Spanish Royal Academy, in whose dictionary it is also defined as: 'name given by its authors to certain dictionaries, catalogues and anthologies'. The increase in scientific communication and productivity made it essential to develop keyword indexing systems. At that time, Howerton spoke of controlled lists to refer to concepts that were heuristically or intuitively related. According to Roberts (<a href="#Roberts">1984</a>), Mooers was the first to relate thesauri to information retrieval systems; Taube established the foundations of post-coordination, while Luhn dealt, at a basic level, with the creation of thesauri using automatic techniques. Brownson (<a href="#Brownson">1957</a>) was the first to use the term to refer to the issue of translating concepts and their relationships expressed in documents into a more precise language free of ambiguities in order to facilitate information retrieval. The <em>ASTIA Thesaurus</em> was published in the early 1960s (<a href="#Curras">Curr&aacute;s, 2005</a>), already bearing the characteristics of today's thesauri and taking on the need for a tool to administer a controlled vocabulary in terms of indexing, thereby giving rise to the concept of documentary language.</p>
+
+<p>Gilchrist defined a thesaurus as: </p>
+
+<blockquote>
+...a lexical authority list, without notation, which differs from an alphabetical subject heading list in that its lexical units, being smaller and more amenable, are used in coordinate indexing' (<a href="#Gilchrist">Gilchrist 1971</a>: 11)
+</blockquote>
+
+<p>Almost simultaneously, another author, Wersig, gives another definition:</p>
+
+<blockquote>
+...lists of terms, previously prefixed, although extracted from the text of documents themselves and replicating concepts in simple units that are post-coordinated to avoid ambiguity. They are interrelated by hierarchical, associative and equivalence relationships. (<a href="#Wersig">Wersig 1971</a>: 79)
+</blockquote>
+
+<p>Both authors agree in affirming the simplicity of the thesaurus elements and their coordination after indexing, although Wersig in particular emphasises the existence of semantic relationships among these units. Standardisation efforts increased in the 1980s with the appearance of the second edition of the standard ISO 2788:1986 (<a href="#ISO1986">ISO, 1986</a>) on monolingual thesauri, which defines thesaurus as:</p>
+
+<blockquote>
+...the vocabulary of a controlled indexing language, formally organized with the aim of state explicitly the existing relationships between concepts. 
+</blockquote>
+
+<p>The following year, <a href="#Aitchinson">Aitchison and Gilchrist</a> (1987) specifically introduced the role of thesaurus in information retrieval processes. The review performed by Miller (<a href="#Millersolo">1997</a>) as to the nature of thesauri as opposed to classification schemes is particularly interesting. It demonstrates that their functional nature conditions to a great extent their origin and actual experiences of application, focusing their evolution in one direction or another and making it at times impossible to draw a distinction between thesauri and conceptual schemes, meaning that it is not possible in all cases to restrict the field of application of the thesaurus solely to information retrieval (leaving knowledge organization to classification schemes). This aspect becomes even more important when it comes to the semantic Web, because it combines statistical information recovery techniques and the representation of information using metadata (<a href="#Diaz">D&iacute;az Ortu&ntilde;o 2003</a>) that are organized into structures defined by conceptual schemes (<a href="#GarciaJimenez">Garc&iacute;a Jim&eacute;nez 2004</a>). Nor should we overlook Shiri<em>et al.</em> (<a href="#Shiri2002">2002</a>), whose study analyses the search strategies of different groups of users, demonstrating that the expansion of queries through thesauri and their integration in information retrieval is completely viable. </p>
+
+<p>From a functional perspective, the thesaurus is a documentary language that uses a controlled vocabulary in order to solve the ambiguity issues of natural language when it comes to indexing and information retrieval processes. Thesauri are based on essentially lexicographical instruments and evolve towards systems focusing on the organization of information and the representation of the content of a documentary corpus, normally used for term extraction. Thesaurus-preferred terms are used in indexing processes and in the selection of terms for information searches, thereby increasing the communication capacity between the user and the information retrieval system. They are a nexus of natural language and indexing. Usually, a general thesaurus offers a less specific domain knowledge representation than a specific thesaurus, where the focus is on the representation of the content of a particular documentary corpus  While exploring the thesaurus structure, the user may establish the search terms. This selection process is open to feedback, broadening, refining or expanding the constituent terms of the query.</p>
+
+<h2>Evolution of the thesaurus concept</h2>
+
+<p>Print editions of thesauri are no longer of use because of the increase in the volume of information in digital format, undermining the application of such static thesauri and making essential their adaptation to the Web environment. The process of integrating thesauri with information retrieval systems started in the early 1990s. The first projects dealt with the creation and maintenance of thesauri based on their representation using data models: the entity-relationship model (<a href="#RodriguezMunoz1990">Rodr&iacute;guez Mu&ntilde;oz 1990</a> and <a href="#RodriguezMunoz1992">1992</a>) and the relational scheme (<a href="#Jones">Jones 1993</a>). Subsequently they were included in distributions of bibliographic databases (ERIC, INSPEC and MEDLINE, among others) as an assistance tool in the selection of terms for search queries. The relationship between hypertext and the thesaurus was soon identified, with Rada (<a href="#Rada">1991</a>) proposing a system of information prepared collaboratively within a hypertext environment, creating a network of links based on concepts contained in documents. Pastor and Saor&iacute;n (<a href="#PastorSaorin1993">1993</a>) likewise had the productive idea of using hypertext as a framework for the development of applications to administer and query thesauri, subsequently proposing their '<em>documentary hypertext</em>' (<a href="#PastorSaorin1995a">Pastor and Saor&iacute;n 1995a</a> and <a href="#PastorSaorin1995b">1995b)</a>, with Rada's parallel structure taking the form of a semantic network represented by a thesaurus, within a working environment based on hypertext and subsequently expanded towards personal environments for the comprehensive management of information (<a href="#PastorSaorin1998">Pastor and Saor&iacute;n 1998</a>). </p>
+
+<p>J&auml;rvelin<em> et al.</em> (<a href="#Jarvelin">1996</a>) produced a deductive model for the expansion of queries based on concepts using three levels of abstraction: conceptual, linguistic and occurrences. Concepts and their relationships are positioned at the conceptual level, while the linguistic level represents concepts through natural language, the expressions of which may have various representations at the level of occurrences. We are here faced with a vision of the thesaurus in which conceptual aspects prevail over lexical, giving them greater flexibility and adaptation ability, in line with the thesis upheld by L&oacute;pez-Huertas (<a href="#LopezHuertas">1999</a>), for whom the thesaurus holds considerable potential for evolving from a mere lexical resource towards a powerful instrument for conceptual representation.</p>
+
+<p>The appearance of the Web dramatically impacts the application of thesauri. Before its emergence, thesauri were effective in controlled environments with clearly defined structures and pathways for accessing information. On the Web, the heterogeneity of formats and structures, combined with the huge growth of resources and content, makes it impossible to apply this working model. The access pathways leading to elements of information are not delimited or established in advance and the constant updating of content makes it practically impossible to apply thesauri directly to the Web. It is also important to remember the practical non-existence of tools to represent thesauri, along with their management, usage and integration, in a distributed manner. Initiatives such as Web page indexes or directories (for example, Yahoo!, DMOZ and the Open Directory Project) have been overwhelmed by the evidence that it is practically impossible to exert control by applying a thesaurus or other type of tool based on manual indexing. The finally adopted solution has been to reduce the structure of the directory or otherwise its transformation into a search engine (as Yahoo! did in 2004). While thesauri have adapted to their publication and consultation in digital environments, their effective exploitation on the Web still leaves much to be desired for, among others, the following reasons (<a href="#Shiri2000">Shiri and Revie 2000</a>), (<a href="#Greenberg">Greenberg 2004</a>), (<a href="#Roe">Roe and Thomas 2004</a>), (<a href="#LaguensGarcia">Laguens Garc&iacute;a 2006</a>):</p>
+
+<ul>
+<li>Limited development and delimitation of the conceptual orientation of thesauri, with their lexical vision prevailing. The application of lexical thesauri within a dynamic environment such as the Web did not provide adequate results in comparison to the efforts devoted to indexing processes. </li>
+
+<li>Initial absence of adequate standards and models to represent different levels of abstraction on the Web (such as XML (the Extensible Markup Language), RDF (the Resource Description Framework) or SKOS (the Simple Knowledge Organization System)) </li>
+
+<li>Access to Web development technologies (Java, PHP, MySQL) was sometimes costly or non-existent. Developments were confined to corporate environments with eminently pragmatic purposes, neglecting research, experimentation and the study of information retrieval dynamics using alternative tools. </li>
+
+<li>The initial and rapid success of search engines, which proved themselves effective by employing automatic Web crawling and index construction techniques, as a panacea which in many cases is difficult to criticise. </li>
+
+<li>The vision of the thesaurus as an obsolete tool or one of the limited usefulness, which need not necessarily have been the case. </li>
+</ul>
+
+<p>Shiri and Revie (<a href="#Shiri2000">2000</a>) advocate expanding the concept of the thesaurus, making it permeable to other tools and proposing new lines of work, such as the creation of navigation systems, and all this within an environment where the role of metadata will be essential for the re-use and exchange of thesauri. The function of thesauri within digital environments goes beyond a change of platforms, involving a genuine redefinition of the conceptual principles of such tools (<a href="#Arano">Arano and Codina 2004</a>). Tudhope (<a href="#Tudhope">2001</a>) suggested the possibility of enriching the specification and semantics of RT relationships (while maintaining compatibility with traditional thesauri) through a limited hierarchical extension of the associative and hierarchical relationships (expanding the information retrieval capabilities), in a solution closer to ontologies, which <a href="#Arano2005">Arano</a> (2005) sees as offering new possibilities for the redesign of documentarylanguages.</p>
+
+<p>The expansion of the types of relationship would allow more adaptable and reusable developments from the perspective of different knowledge domains and over time (<a href="#GarciaTorres">Garc&iacute;a Torres <em>et al.</em> 2008</a>), as ontologies have a greater expressive capacity for modelling information systems. Inevitably, the future of the thesaurus on the semantic Web necessarily involves permeability with other proposals (ontologies and topic maps) or their combined usage, in establishing a paradigm shift in the creation of thesauri, focusing on conceptual thesauri (<a href="#Matthews">Matthews <em>et al.</em> 2001</a>). They could also be applied in fields which appear alien to the idea of the thesaurus as a tool for terminological control (<i>folksonomies</i>), providing mechanisms for the creation of semi-controlled vocabularies the elements of which would be structured to facilitate query and usage in information retrieval tasks.</p>
+
+<h2>Background of thesaurus representation on the Web with the Resource Description Framwork (RDF)</h2>
+
+<p>There have been several projects aimed at representing thesauri and conceptual schemes in XML format to be applied in organizations and in specific contexts. Some of these (Zthes (a specification for thesaurus representation), MeSH (Medical Subject Headings) and <a href="http://www.isotopicmaps.org/tmrm/" target="_blank">Topic Maps</a>) have been long-lived. Nonetheless, the trend is to use the model proposed by RDF and its corresponding coding in XML for this purpose, as a logical evolution of the different study approaches for representing thesauri in the semantic Web. This shift is the result of the significant possibilities for integration, reuse and expansion offered by RDF and the Web Ontology Language (OWL) within the context of the semantic Web. An increasing number of initiatives are adopting RDF to represent information on the Web and using XML to code their information representation models (because a part of the potential of this model is based on the possibility of combining different specifications). The development of an RDF/XML vocabulary to represent thesauri means going beyond the model proposed by standards ISO 2788:1986 (<a href="#ISO1985">ISO,1985</a> and <a href="#ISO1986">1986</a>) and ANSI/NISO Z39.19 (<a href="#ANSI">ANSI 2005</a>) for the construction and maintenance of thesauri. These standards describe the thesaurus as a set of terms of various kinds, among which semantic relationships are established, whereas the Web requires a broader vision which goes beyond the idea of a term as the central element of the thesaurus and expands the number, type and meaning of existing relationships. Many initiatives have therefore focused on the definition of RDF vocabularies to represent thesauri (<a href="#mat01">Matthews and Miles 2001</a>), some of which preserve at their core the idea of the term, while others introduce the notion of a concept to which the corresponding terms are assigned. Below we give a brief descriptive summary of some of these initiatives.</p>
+
+<h3>Language Independent Metadata Browsing of European Resources (LIMBER)</h3>
+
+<p>LIMBER is a proposal developed by Miller and Matthews (<a href="#MillerMatthews">2001</a>). Its aim is the use of RDF to build a comprehensive information system employing a thesaurus manager to index resources. As RDF is present throughout the system's elements, an RDF vocabulary was also developed to represent thesauri. In LIMBER, the elements of a thesaurus are <em>concepts</em>, <em>terms</em> and <em>scope notes</em>. Semantic equivalence relationships can be established among concepts and lexical relationships between concepts and terms. The semantic relationships can be hierarchical, associative or can indicate where a concept represents the starting point of a hierarchy (for which there is therefore a sub-class of concept). The equivalence relationships allow indicating whether they are exact equivalences, inexact, partial or one to many. There are various types of scope notes and it is possible to develop multilingual thesauri by associating a language code both to concepts and to scope notes. The Institute for Learning &amp; Research Technology developed an RDF vocabulary in the year 2000 with the aim of building conceptual schemes to help maintain information networks for research. The elements of this vocabulary are <em>concepts</em>, <em>terms</em>, <em>scope notes</em> and <em>term usage type</em>. The relationships between concepts may be associative or generic (specific relationships are inferred by the application). The terms, which may be assigned a language code, are classified as preferred or non-preferred and associated with concepts.</p>
+
+<h3>California Environmental Resources Evaluation System</h3>
+
+<p> The California Environmental Resources Evaluation System (CERES) is an information system developed by the California Resources Agency for access to electronic resources on the Environment. In partnership with the NBII (National Biological Information Infrastructure) a thesaurus was drawn up, designing a RDF specification for its publication on the Web. This specification is a fairly faithful expression of the concept of thesaurus under the ISO and ANSI/NISO standards. The vocabulary identifies terms which are in turn divided into categories, descriptors and entry terms (non-descriptor). There are appropriate properties to represent the relationships of each term type. For example, for a descriptor the available properties are SN (for scope notes), BT (for generic relationships), RT (for associative relationships) and UF (for non-descriptor relationships).</p>
+
+<h3>The Gatway to Educational Materials (GEM)</h3> 
+
+<p>GEM is another RDF vocabulary, likewise based on the structure proposed by the ISO and ANSI/NISO standards, put forward by <a href="http://thegateway.org/" target="_blank">the GEM Consortium</a>. This vocabulary, created in 2001, limits itself to defining the different types of thesaurus relationship in the form of properties. There is no definition of any other type of element, leaving it open to the possible use of a complementary vocabulary. </p>
+
+<h3>Center for Army Lessons Learned (CALL) thesaurus ontology</h3>
+
+<p><a href="http://usacac.army.mil/cac2/call/thesaurus.asp" target="_blank">This vocabulary</a> was developed by Dynamics Research Corporation in 2002 within a project for the representation of a thesaurus of more than 18,000 terms for the Center for Army Lessons Learned, Fort Leavenworth, Kansas. This is a <a href="http://www.daml.org/" target="_blank">DARPA Agent Markup Language</a> (DAML) ontology, defined with RDF. The thesauri applying this vocabulary are structured in terms that are associated with properties representing semantic relationships. The semantic restrictions of the thesaurus are defined by making use of the DAML characteristics.</p>
+
+<h3>The Food and Agriculture Organization AGROVOC thesaurus</h3>
+
+<p>The KAON (KArlsruhe ONtology) model, developed by the <i><a href="http://theseus-programm.de/en-us/partners/research-center-for-information-technologies-fzi/default.aspx" target="_blank">University of Karlsruhe, Information Technologies Research Centre</a></i> in 2002, served as the basis for development of an application for the representation of the AGROVOC thesaurus developed by the Food and Agriculture Organization and the Commission of the European Communities. Each term is modelled as an RDF class (rdfs:Class), with hierarchical relationships represented with the RDF subclass property (rdfs:subClassOf). Properties are defined to represent associative relationships, preferred terms and equivalent terms. The label associated with each term is the other element of this model which includes properties to represent the label text string, the associated concept and the language used. </p>
+
+<h3><a href="http://etb.eun.org/etb/index.html" target="_blank">European Treasury Browser</a> Multilingual Educational Thesaurus (ETBT)</h3>
+
+<p>This is an RDF scheme based on the concept of labelled nodes, in other words both terms and relationships and the thesaurus itself, are nodes labelled differently to distinguish each individually. Although this is a multilingual thesaurus, in fact ETBT works with the sum of various monolingual thesauri. The types of node defined represent the thesaurus as a whole (Thes), each of the monolingual thesauri (Tmono), semantic fields (MT), term nodes (MTNode), nodes of equivalence between languages (ENode), non-preferred terms (UNode) and semantic relationships (RNode). Around each thesaurus node are organized the remaining nodes corresponding to each of the monolingual thesauri. Each monolingual thesaurus has associated a series of semantic field notes which in turn serve to structure the term and semantic relationship nodes.</p>
+
+<h2>Characteristics of a thesaurus representation model for the semantic Web</h2>
+
+<p>The RDF vocabularies proposed for representing thesauri provided various solutions to the same problem because of differences between the proposed conceptual models, being the main element a general predominance of term-based thesauri. However, this classical vision could not be entirely appropriate for the Semantic Web as this contingency involves a series of difficulties in thesaurus maintenance and document indexing processes. We will now develop on certain aspects that involve an evolution from the conceptual model of the thesaurus and offer a more novel approach that is more adaptable to the information retrieval possibilities offered by the Semantic Web.</p>
+
+<h3>Concept-based thesauri and term-based thesauri</h3>
+
+<p>This is perhaps the key aspect in the development of a thesaurus representation model and will be decisive in the corresponding development of the RDF/XML vocabulary. There are two approaches to the consideration of the central core of the thesaurus around which the remaining elements are structured. The first is to consider a thesaurus as a set of terms interconnected with a network of different types of semantic relationship. This is the classical representation given by ISO and ANSI/NISO standards, which describe a thesaurus as a set of terms related by different hierarchical relationships (generic term and generic term), associative relationships (related term) and equivalence relationships (equivalent term, preferred term). The second alternative conceives the thesaurus as a set of concepts related by semantic relationships similar to those of a term-based thesaurus. The concepts are tied to terms, in the form of lexical labels, which may or may not have lexical relationships established among them.</p>
+
+<div align="center"><img border="0" src="p422fig1.jpg" width="905" height="218" alt="Term-based thesaurus compared with concept-based thesaurus." /></div>
+
+<div align="center"><br /><strong>Figure 1: Term-based thesaurus compared with concept-based thesaurus.</strong></div>
+
+<p>In a term-based thesaurus the semantic relationships are established between the terms themselves. Meanwhile, in a concept-based thesaurus, certain semantic relationships are established between concepts and others between terms. The relationships between concepts generally include those which develop the hierarchical and associated structures, while the latter denote the relationships between terms associated with one single concept (abbreviations, common usage, technical language, etc.). A term-based thesaurus is thus structured at one single lexical-terminological level, whereas a concept-based thesaurus has a three-level structure: (a) conceptual level, where concepts are identified and their interrelationships established; (b) terminological correspondence level, where terms are associated (preferred or non-preferred) to their respective concepts and (c) lexical level where lexical relationships are defined to interconnect terms.</p>
+
+
+<div align="center"><img border="0" src="p422fig2.jpg" alt="organizational levels of a concept-based thesaurus" width="978" height="415" /></div>
+<div align="center"><br /><strong>Figure 2: organizational levels of a concept-based thesaurus.</strong></div>
+
+<p>Term-based thesauri enable the representation of more complex schemes close to the traditional model. Concept-based thesauri allow more precise descriptions of the information structures, although they are not initially as intuitively comprehensible. This paradigm shift involves a considerable effort, compensated for many times over through the optimisation of the processes of preparation, maintenance and products derived from application of the thesaurus in the indexing of documents. Term-based thesauri involve problems of application in indexing when performing operations to change preferred and non-preferred terms. Thus, if a descriptor which has been used to index a document becomes a non-descriptor, the indexes linking that descriptor to the documents must be reorganized. This does not occur in the case of conceptual thesauri because the indexing processes are independent of terminological changes to the thesaurus. In this case, the documents are associated with concepts, not with terms; changes involving preferred and non-preferred terms do not impact on indexing.</p>
+
+<h3>Grouping structures </h3>
+
+<p>Occasionally we may wish to create groups or collections of concepts to establish concept families and provide the thesaurus with a greater level of semantic content, or allow complementary organizational criteria to be defined. This grouping option enables the organization of concepts by thematic areas that also act as a point of access for consulting the thesaurus. Concept groups may be labelled with expressions denoting the meaning of these structures. Another possibility is that of grouping concepts into facets, allowing them to be characterised according to multiple criteria while maintaining independent associative and hierarchical structures. In any case, it must be remembered that these groupings do not constitute elements of sufficient individual entity in order to establish semantic relationships with concepts or with other group structures. This is because of the difference in the granularity of the two elements, meaning that the establishment of semantic relationships between them could introduce distortions into the thesaurus structure.</p>
+
+<h3>Lexical relationships between labels</h3>
+
+<p>Labels and the lexical relationships between them are the elements which shape the lexical level of a thesaurus. Although the classical vision of a thesaurus does not include lexical relationships, they are of great interest because of the value-added information they provide. The establishment of lexical relationships will allow for a more precise description of the knowledge to be represented regarding the thesaurus domain. This precision will allow certain operations to be performed automatically, such as for example the disambiguation of the terms entered by users in queries during search processes.</p>
+
+<h3>Relationships as arcs or as nodes </h3>
+
+<p>Semantic or lexical relationships can be represented as arcs or as nodes. The arc-based solution is much more compact and intuitive than the node-based alternative. Meanwhile, node-based relationships involve an added difficulty in the development and maintenance of this type of thesaurus, as the tasks of creating and interpreting trees based on this approach are generally complex and confusing. Nonetheless, the relations expressed in arcs have the advantage of being able to be referenced using URIs. This type of relationship can be applied to those established at either a conceptual or a lexical level. Some RDF thesaurus representation vocabularies apply relationships as nodes, as in the case of the European Treasury Browser thesaurus. </p>
+
+<div align="center"><img border="0" src="p422fig3.jpg" alt="Term-based thesaurus compared with concept-based thesaurus." width="498" height="254" /></div>
+<div align="center"><br /><strong>Figure 3: Term-based thesaurus compared with concept-based thesaurus.</strong></div>
+
+<h3>Multilingual structures</h3>
+
+<p>Bearing in mind the scope of application of RDF-expressed thesauri (the semantic Web), it is essential to give consideration to mechanisms enabling to express their multilingual reality. It is therefore perfectly feasible to associate one concept with different preferred labels for each language. Another advantage of concept-based thesauri is the possibility of establishing lexical relationships adapted to the terminological reality of each language.</p>
+
+<div><img border="0" src="p422fig4.jpg" alt="Independence of conceptual levels and adjustment of lexical levels to multilingual structures" width="925" height="393" /></div>
+<div align="center"><br /><strong>Figure 4: Independence of conceptual levels and adjustment of lexical levels to multilingual structures</strong></div>
+
+<h3>Semantic restrictions</h3>
+
+<p>Semantic restrictions control aspects connected with the structural coherence of the thesaurus. Some are optional, while others are essential in order to guarantee proper development of the thesaurus-building process. This type of restriction is associated with processes and tasks for the control of poly-hierarchical structures, integrity at terminological correspondence level, the influence of symmetrical and inverse properties, the control of cycles in hierarchical structures or the control of the disjunctive property between associative and hierarchical relationships.</p>
+
+<h3>Expansion of relationship types</h3>
+
+<p>One of the advantages of applying RDF in the representation of thesauri is the possibility of expanding relationship types with OWL or simply with RDF/RDFS (<a href="#Reynolds">Reynolds <em>et al.</em> 2005</a>). This would allow for the creation of a new relationship by defining some of its properties such as transitiveness, symmetry, inverse relationship or reflexivity, rigorously declaring the required semantic restrictions. This expansion would as well increase the likelihood of the successful application of thesauri for information retrieval on the Web. It furthermore represents a significant synergy in aspects related to the evolution and adaptation of the concept of thesaurus. The hierarchical and associative relationships can be expanded or their characteristics modified in the future, or customised for specific projects.</p>
+
+<h3>Equivalence among thesauri</h3>
+
+<p>It is highly desirable to be able to establish equivalences among concepts belonging to different thesauri. To do this we must define various types of equivalence, as the correspondence between concepts is not always precise, but may involve more specific or generic concepts. It is also possible to establish equivalences to associate certain aspects of the two concepts without necessarily meaning that one concept is more generic or specific than another. These relationships will be similar to those established between concepts belonging to a single thesaurus. This mapping allows the reuse or integration of external thesauri. The correspondence between concepts allows queries to be transformed from one system to another, or to be complemented, as one could consult information repositories indexed using a different conceptual scheme to that used at first instance by the user.</p>
+
+<h3>Definitions, explanations, scope notes and metadata in concepts and relationships</h3>
+
+<p>Classical scope notes are highly limited when it comes to express value-added information, which is particularly helpful in the use of thesauri on the Semantic Web. Such content may include definitions, notes of various kinds, information about changes in the thesaurus structure or the meaning of terms, usage examples, etc. This information, generally not included in printed thesauri, could be simply and agilely queried using a Web-based information system. Along with the types of content referred to earlier, we may wish to add metadata using Dublin Core (<a href="#DublinCore">2008</a>) to include data on authorship and edition associated with concepts, labels and relationships.</p>
+
+<h2>Simple Knowledge Organization System</h2>
+
+<p>The Simple Knowledge Organization System (SKOS) is a World Wide Web Consortium initiative in the form of an RDF application providing a model to represent the basic structure and content of conceptual schemes as header lists of subject matter, taxonomies, classification schemes, thesauri and any type of controlled vocabulary. The origins of the project date back to the preparation of a thesaurus of activities within the SWAD-Europe project:</p> 
+
+<blockquote>SKOS Core was developed as draft of an RDF Schema for thesauri compatible with relevant ISO standards. Further work extended it to multilingual thesauri and mappings between thesauri and developed some pilot tools (<a href="#Alistair">Alistair <em>et al.</em></a> 2005). </blockquote>
+
+<p>The first version of SKOS Core was presented in 2003. In the System, concepts are identified with Uniform Resource Indicator references; these concepts can be labelled in text strings in one or more languages, documented and then structured using various types of semantic relationship. The model is capable of mapping concepts of different schemes and defining ordered collections and concept groupings. It can also establish relationships between the labels related to the concepts. </p>
+
+<p>The use of RDF in developing SKOS allows it to provide documents in a format that is legible in computer applications, as well as their exchange and publication on the Web. SKOS was designed to create new organizational systems or to migrate those in existence to the semantic Web in a quick and easy manner. It provides a simple vocabulary and an intuitive model which can be used together with the Web Ontology Language (OWL) or independently. SKOS represents a mid-way step between the low level of structuring seen presently on the Web and the rigorous descriptive formalism of ontologies defined with OWL. The structure of SKOS is described in a series of documents including SKOS Primer (<a href="#W3C2008b">W3C 2008b</a>), SKOS Reference (<a href="#W3C2008a">W3C, 2008a</a>) and SKOS Use Cases and Requirements (<a href="#W3C2007">W3C 2007</a>). While SKOS is at an initial stage of development, the essential core work is already established, along with its basic vocabulary. </p>
+
+<h3>The SKOS data model</h3>
+
+<p>This model is an ontology defined with OWL Full. Being based on RDF, SKOS structures the data in the form of triples which can be coded in any syntax valid for RDF. SKOS can be used together with OWL to give formal expression to structures of knowledge regarding a specific domain, as SKOS cannot perform this function because it is not a language for formal knowledge representation (<a href="#Alistair">Alistair <em>et al.</em></a> 2005). Knowledge described explicitly as a formal ontology is expressed as a set of axioms and facts. However, a thesaurus or any type of classification scheme does not include this form of affirmation, but rather identifies and describes (with natural language or non-formal expressions) ideas or meanings which we refer to as concepts. These concepts can be organized into structures which lack formal semantics and cannot be considered as axioms or facts. In other words, a thesaurus only provides an intuitive map of how themes are organized within the processes of classification and the search for objects (generally documents) relevant to a specific domain.</p>
+
+<p>In order to convert a thesaurus into formal knowledge, it must be transformed into ontology (<a href="#VanAssem">Van Assem <em>et al.</em> 2006</a>), a highly costly process because ontology does not provide a data model which can easily be applied. This occurs because thesauri have been developed without formal semantics, essentially as tools to help in navigation or information retrieval processes. Nonetheless, OWL can be applied in building a data model (in our case SKOS) appropriate to the level of formalisation required by a thesaurus. Thus, the concepts of a thesaurus represent entities in the SKOS data model and the relationships between concepts are facts about those entities. </p>
+
+<p>For SKOS, a knowledge organization system is expressed in terms of concepts structured into relationships to shape concept schemes. Both the concepts and the concept schemes are identified using URIs. The concept can be labelled in any language. A concept can be related to multiple labels, but only one of these for each language can be related as a preferred label. The remaining labels related to the concept are referred to as alternative labels. Hidden labels can also be defined in order to assign to a concept labels which would only be applicable in the search and indexing processes, but which would not be visible to users. Concepts may be assigned to classification or identification codes within a specific conceptual scheme. These notations are not expressed in natural language, but using mnemonic or similar codes. Concepts can also be documented using different types of notes, such as definitions, scope notes or edition notes, among others. The SKOS model covers the establishment of links between concepts known as semantic relationships. These relationships may be hierarchical or associative, although this typology could also be expanded. Concepts can also be grouped into collections, which may in turn be labelled in order. SKOS is supplemented by the possibility of intermapping concepts from different schemes using hierarchical, associative or precise equivalence relationships.</p>
+
+<h3>Concepts and concept schemes</h3>
+
+<p>A concept represents an idea, a notion or a unit of thought. SKOS requires a degree of flexibility, given that it is intended to represent a semi-formal knowledge organization system. It is therefore clearly an abstract entity independent of the term or terms which may be used to label it. Concepts are linked to a URI or an RDF identifier for reuse and reference. Concepts may also be linked to conceptual schemes. A conceptual scheme is the aggregation of one or more SKOS concepts, generally used to represent and identify thesauri or classification schemes. A concept scheme may have one or more <em>top concepts</em>, which head the hierarchical structures within the concept scheme itself. These are usually the start points for search and navigation tasks for users.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Table 1: Classes and properties for concepts, schemes, associations with schemes and top concepts</strong></caption>
+<tbody>
+<tr>
+<th>Element</th>
+<th>Vocabulary</th>
+<th>Descriptive Definition</th></tr>
+<tr>
+<td>Concept </td>
+<td>skos:Concept </td>
+<td>Instance of owl:class </td>
+</tr>
+<tr>
+<td>Concept scheme </td>
+<td>skos:ConceptScheme </td>
+<td>Instance of owl:class <br />
+Disjoint with skos:Concept </td>
+</tr>
+<tr>
+<td>Inclusion into a concept scheme </td>
+<td>skos:inScheme </td>
+<td>Instance of owl:ObjectProperty <br />
+Domain: skos:Concept <br />
+Range: skos:ConceptScheme </td>
+</tr>
+<tr>
+<td>Top Concept </td>
+<td>skos:hasTopConcept </td>
+<td>Instance of owl:ObjectProperty <br />
+Domain: skos:ConceptScheme <br />
+Range: valores skos:Concept </td>
+</tr>
+</tbody></table>
+
+<p>Two examples are set out below. The first example illustrates a basic definition of various concepts and their link to concept schemes. The second example contains the definition of a concept scheme and its top concept.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Example 1: Definition of concepts and links to concept schemes. </strong></caption>
+<tbody>
+<tr>
+<td height="1" width="616">1. &lt;rdf:RDF xmlns:skos=&quot;http://www.w3.org/2004/02/skos/core&quot;&gt;
+<br />
+2. &lt;skos:Concept rdf:about=&quot;http://www.example.org/conceptos#america&quot;&gt; <br />
+3. &lt;skos:inScheme rdf:resource=&quot;http://www.example.org/esquema&quot;/&gt; <br />
+4. &lt;/skos:Concept&gt; <br />
+5. &lt;skos:Concept rdf:about=&quot;http://www.example.org/conceptos#asia&quot;&gt; <br />
+6. &lt;skos:inScheme rdf:resource=&quot;http://www.example.org/esquema&quot;/&gt; <br />
+7. &lt;/skos:Concept&gt; <br />
+8. &lt;skos:Concept rdf:about=&quot;http://www.example.org/conceptos#americanorte&quot;&gt;
+<br />
+9. &lt;skos:inScheme rdf:resource=&quot;http://www.example.org/esquema&quot;/&gt; <br />
+10. &lt;/skos:Concept&gt; <br />
+11. &lt;/rdf:RDF&gt; </td>
+</tr>
+</tbody></table>
+<br />
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Example 2: Definition of a concept scheme and top concepts.</strong></caption>
+<tbody>
+<tr>
+<td height="1" width="616">1. &lt;rdf:RDF xmlns:skos=&quot;http://www.w3.org/2004/02/skos/core&quot;&gt;
+<br />
+2. &lt;skos:ConceptScheme rdf:about=&quot;http://www.example.org/esquema&quot;&gt; <br />
+3. &lt;skos:hasTopConcept rdf:resource=&quot;http://www.example.org/conceptos#america&quot;/&gt;
+<br />
+4. &lt;skos:hasTopConcept rdf:resource=&quot;http://www.example.org/conceptos#asia&quot;/&gt;
+<br />
+5. &lt;/skos:ConceptScheme&gt; <br />
+6. &lt;/rdf:RDF&gt; </td>
+</tr>
+</tbody></table>
+
+<h3>Lexical labels </h3>
+
+<p>A lexical label is a string of characters representing a natural language expression. SKOS provides preferred, alternative and hidden labels. The preferred labels are associated with concepts to represent descriptor terms. Only one preferred label for each language can be related to a concept. The presence of identical lexical labels to represent different concepts is not recommended. Alternative labels can be used to assign multiple non-preferred expressions to a concept. This is helpful in representing equivalent terms, non-descriptors, synonyms and acronyms. These expressions enrich the vocabulary available within the system, offering a greater number of possible access routes to a concept and increasing the chances of success in indexing and search processes. The hidden labels are generally assigned to concepts, not to be accessible to users but to be processed by computer applications. One example would be the variant spelling errors for other labels, either preferred or alternative. In SKOS a preferred label can be assigned on an individual basis for each language using UNICODE characters, which would allow different writing systems to be used.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Table 2: Vocabulary and definitions of classes and properties for lexical labels</strong></caption>
+<tbody>
+<tr>
+<th>Element</th>
+<th>Vocabulary</th>
+<th>Descriptive Definition</th></tr>
+<tr>
+<td>Preferred label </td>
+<td>skos:prefLabel </td>
+<td>Instance of owl:DatatypeProperty <br />
+Range: rdf:PlainLiteral <br />
+Domain: Cualquier recurso <br />
+A resource has no more than one value of skos:prefLabel per language <br />
+Pairwise disjoint with skos:altLabel and skos:hiddenLabel </td>
+</tr>
+<tr>
+<td>Alternative label </td>
+<td>skos:altLabel </td>
+<td>Instance of owl:DatatypeProperty <br />
+Range: rdf:PlainLiteral <br />
+Domain: Cualquier recurso <br />
+Pairwise disjoint with skos:prefLabel and skos:hiddenLabel </td>
+</tr>
+<tr>
+<td>Hidden label </td>
+<td>skos:hiddenLabel </td>
+<td>Instance of owl:DatatypeProperty <br />
+Range: rdf:PlainLiteral <br />
+Domain: Cualquier recurso <br />
+Pairwise disjoint with skos:prefLabel and skos:altLabel </td>
+</tr>
+</tbody></table>
+<br />
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Example 3: Definition of concept and associated lexical labels</strong></caption>
+<tbody>
+<tr>
+<td>1. &lt;rdf:RDF xmlns:skos=&quot;http://www.w3.org/2004/02/skos/core&quot;&gt;
+<br />
+2. &lt;skos:Concept rdf:about=&quot;http://www.example.org/conceptos#americanorte&quot;&gt;
+<br />
+3. &lt;skos:prefLabel xml:lang=&quot;es&quot;&gt;Am&eacute;rica del Norte&lt;/skos:prefLabel&gt; <br />
+4. &lt;skos:altLabel xml:lang=&quot;es&quot;&gt;Norte Am&eacute;rica&lt;/skos:altLabel&gt; <br />
+5. &lt;skos:hiddenLabel xml:lang=&quot;es&quot;&gt;Am&eacute;rica Norte&lt;/skos:hiddenLabel&gt; <br />
+6. &lt;skos:prefLabel xml:lang=&quot;en&quot;&gt;North America&lt;/skos:prefLabel&gt; <br />
+7. &lt;/skos:Concept&gt; <br />
+8. &lt;/rdf:RDF&gt; </td>
+</tr>
+</tbody></table>
+
+<p>Types of relationship between labels can be defined using an extension known as SKOS-XL4 (<a href="#W3C2008c">W3C 2008c</a>), with the need to define labels as resources, as with concepts, schemes and collections. This defines a special type of lexical entity which is assigned a literal chain which can be repeated for various units.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Table 3: Classes and properties for concepts, schemes</strong></caption>
+<tbody>
+<tr>
+<th>Element</th>
+<th>Vocabulary</th>
+<th>Descriptive Definition</th></tr>
+<tr>
+<td>XL label </td>
+<td>skosxl:Label </td>
+<td>Instance of owl:Class <br />
+Cardinality exactly 1 with skosxl:literalForm <br />
+Class disjoint with skos:Collection, skos:Concept and skos:ConceptScheme </td>
+</tr>
+<tr>
+<td>Literal form</td>
+<td>skosxl:literalForm </td>
+<td>Instance of owl:DatatypeProperty <br />
+Domain: skosxl:Label <br />
+Range: literal string </td>
+</tr>
+<tr>
+<td>XL preferred label</td>
+<td>skosxl:prefLabel </td>
+<td>Instance of owl:DatatypeProperty <br />
+Range: rdf:PlainLiteral <br />
+Domain: Cualquier recurso <br />
+Pairwise disjoint with skos:prefLabel and skos:altLabel </td>
+</tr>
+<tr>
+<td>XL alternative label</td>
+<td>skosxl:altLabel</td>
+<td>Instancia de owl:ObjectProperty <br />
+Dominio skos:Concept <br />
+Rango de valores skosxl:Label <br />
+The property chain (skosxl:altLabel+skosxl:literalForm) is a sub-property of 
+skos:prefLabel </td>
+</tr>
+<tr>
+<td>XL hidden label</td>
+<td>skosxl:hiddenLabel</td>
+<td>Instance of owl:ObjectProperty <br />
+Domain: skos:Concept <br />
+Range: skosxl:Label <br />
+The property chain (skosxl:prefLabel+skosxl:literalForm) is a sub-property 
+of skos:prefLabel </td>
+</tr>
+<tr>
+<td>Relation between Labels</td>
+<td>skosxl:labelRelation</td>
+<td>Instance of owl:ObjectProperty y 
+owl:SymmetricProperty <br />
+Domain and range: skosxl:Label </td>
+</tr>
+</tbody></table>
+
+<p>Lexical units are defined as resources of the class skosxl:Label and associated with concepts with the corresponding properties of <em>skosxl:prefLabel</em>, <em>skosxl:altLabel</em> and <em>skosxl:hiddenLabel</em>. As resources defined with <em>skosxl:Label</em> always have associated a literal form with <em>skosxl:literalForm</em>, the combination of this property with any other of the types of <em>skosxl</em> lexical unit is defined as a sub-property of the corresponding type of SKOS lexical unit. For example, if the concept is related to a resource of the class <em>skosxl:Label</em> and this in turn with its literal form by means of <em>skosxl:prefLabel</em>, the existence of the property <em>skosxl:prefLabel</em> associated with that literal may be inferred. The relationships among lexical entities are applied using the property <em>skosxl:labelRelation</em>. This property can be used directly, but the most effective approach is to define a customised relationship type as a sub-property of <em>skosxl:labelRelation</em>. The example below illustrates the SKOS XL mechanism for expressing this type of relationship.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Example 4: Definition of of a relationship between lexical labels.</strong></caption>
+<tbody>
+<tr>
+<td height="16" width="616">1. &lt;!DOCTYPE rdf:RDF [ <br />
+2. &lt;!ENTITY rdf &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;&gt; <br />
+3. &lt;!ENTITY rdfs &quot;http://www.w3.org/2000/01/rdf-schema#&quot;&gt; <br />
+4. &lt;!ENTITY ex &quot;http://www.cine.org/&quot;&gt; <br />
+5. &lt;!ENTITY skos &quot;http://www.w3.org/2004/02/skos/core#&quot;&gt;]&gt; <br />
+6. &lt;!ENTITY skosxl &quot;http://www.w3.org/2008/05/skos-xl&quot;&gt;]&gt; <br />
+7. &lt;rdf:RDF xmlns:skos=&quot;&amp;skos;&quot; xmlns:rdf=&quot;&amp;rdf;&quot; xmlns:rdfs=&quot;&amp;rdfs;&quot; <br />
+xmlns:ex=&quot;&amp;ex;&quot; xmlns:skosxl=&quot;&amp;skos;&quot; xml:base=&quot;&amp;ex;&quot;&gt; <br />
+8. &lt;rdf:Property rdf:ID=&quot;fullForm&quot;/&gt; <br />
+9. &lt;rdfs:subPropertyOf rdf:resource=&quot;&amp;skosxl;labelRelation&quot;/&gt; <br />
+10. &lt;owl:inverseOf rdf:resource=&quot;#acronymForm&quot;/&gt; <br />
+11. &lt;/rdf:Property&gt; <br />
+12. &lt;rdf:Property rdf:ID=&quot;acronymForm&quot;/&gt; <br />
+13. &lt;rdfs:SubPropertyOf rdf:resource=&quot;&amp;skos;LabelRelated&quot;/&gt; <br />
+14. &lt;/rdf:Property&gt; <br />
+15. &lt;skosxl:Label rdf:ID=&quot;ONUFull&quot;&gt; <br />
+16. &lt;skosxl:literalForm xml:lang=&quot;es&quot;&gt;Organizaci&oacute;n Naciones Unidas&lt;/skos:literalForm 
+/&gt; <br />
+17. &lt;ex:acronymForm rdf:ID=&quot;ONUAbrev&quot; /&gt; <br />
+18. &lt;/skosxl:Label&gt; <br />
+19. &lt;skosxl:Label rdf:ID=&quot;ONUAbrev&quot;&gt; <br />
+20. &lt;skosxl:literalForm xml:lang=&quot;es&quot;&gt;ONU&lt;/skos:literalForm /&gt; <br />
+21. &lt;ex:fullForm rdf:ID=&quot;ONUFull&quot; /&gt; <br />
+22. &lt;/skosxl:Label&gt; <br />
+23. &lt;skos:Concept rdf:about=&quot;http://www.example.org/conceptos#onu&quot;&gt; <br />
+24. &lt;skosxl:prefLabel rdf:ID=&quot;ONUAbrev&quot; /&gt; <br />
+25. &lt;skosxl:altLabel rdf:ID=&quot;ONUFull&quot; /&gt; <br />
+26. &lt;/skos:Concept&gt; <br />
+27. &lt;/rdf:RDF&gt; </td>
+</tr>
+</tbody></table>
+
+<p>Two properties are defined: <em>ex:fullForm</em> and <em>ex:acronymForm</em>, in order subsequently to establish a relationship to indicate that one lexical unit is an acronym of another. They are additionally declared using OWL as inverse properties. We then create the <em>skosxl:Label</em> resources corresponding to the complete form and the acronym of a concept, defining its properties <em>skosxl:literalForm</em>. Lastly, the relationships between the two resources are established with labels <em>ex:fullForm</em> and <em>ex:acronymForm</em>, along with the relationships <em>skosxl:prefLabel</em> and <em>skosxl:altLabel</em> between the concept and the lexical units. The resulting tree is slightly more complex than that produced on the basis of a situation where there is no need to apply any type of relationship between lexical units, as illustrated in the figure below.</p>
+
+<div align="center"><img border="0" src="p422fig5.jpg" alt="Tree corresponding to the coding of the previous example using SKOS Excel and the corresponding tree with no relationships between lexical entities established" width="925" height="313" /></div>
+<div align="center"><br /><strong>Figure 5: Tree corresponding to the coding of the previous example using SKOS Excel and the corresponding tree with no relationships between lexical entities established</strong></div>
+
+
+<h3>Semantic relationships</h3>
+
+<p>Semantic relationships in SKOS are links between concepts inherent in their meaning. SKOS distinguishes between two basic types: hierarchical and associative A hierarchical relationship between two concepts indicates that one is more general than the other. Meanwhile, an associative relationship indicates that both concepts are connected in some manner, although neither is more generic or specific than the other. This type of relationship is almost identical to that applied in thesaurus building. In SKOS semantic relationships are essential in defining concepts beyond the associated lexical labels. In fact, the meaning of a concept is also complemented through its semantic relationships with other concepts. The basic hierarchical relationships are defined without the transitive property, simply to create declarations of concept structures. Transitive hierarchical relationships are also covered, in order to establish influences and implement expanded search algorithms in search applications. This is why higher classes of hierarchical relationship are defined, associated with the transitive property, with basic usage relationships, which do not include this property, as a sub-class of the former.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Table 4: Vocabulary and definitions of classes and properties for elements of semantic 
+relationships</strong></caption>
+<tbody>
+<tr>
+<th>Element</th>
+<th>Vocabulary</th>
+<th>Descriptive Definition</th></tr>
+<tr>
+<td>Semantic relationship</td>
+<td>skos:semanticRelation</td>
+<td>Instance of owl:ObjectProperty <br />
+Domain: skos:Concept <br />
+Range: skos:Concept </td>
+</tr>
+<tr>
+<td>Broader transitive</td>
+<td>skos:broaderTransitive</td>
+<td>Instance of owl:ObjectProperty <br />
+Instance of owl:TransitiveProperty and <br />
+Sub-property of skos:semanticRelation </td>
+</tr>
+<tr>
+<td>Narrower transitive</td>
+<td>skos:narrowerTransitive</td>
+<td>Instance of owl:ObjectProperty <br />
+Instance of owl:TransitiveProperty <br />
+Defined as owl:inverseOf de skos:broaderTransitive <br />
+Sub-property of skos:semanticRelation </td>
+</tr>
+<tr>
+<td>Generic broader</td>
+<td>skos:broader</td>
+<td>Instance of owl:ObjectProperty <br />
+Not instance of owl:TransitiveProperty <br />
+Sub-property of skos:broaderTransitive </td>
+</tr>
+<tr>
+<td>Generic narrower </td>
+<td>skos:narrower</td>
+<td>Instance of owl:ObjectProperty <br />
+Not instance of owl:TransitiveProperty <br />
+Defined as owl:inverseOf de skos:broader <br />
+Sub-property of skos:narrowerTransitive </td>
+</tr>
+<tr>
+<td>Related</td>
+<td>skos:related</td>
+<td>
+Instance of owl:ObjectProperty <br />
+Instance of owl:SymmetricProperty <br />
+Not instance of de owl:TransitiveProperty <br />
+Sub-property of skos:semanticRelation <br />
+Disjoint with skos:broaderTransitive </td>
+</tr>
+</tbody></table>
+
+<p>For its part, the associative relationship is defined with the symmetric property. In other words, if a concept A has an associative relationship with B, it is deduced that B has an associative relationship with A. Likewise, it should be pointed out that the associative relationship does not have the transitive property, meaning that if A has an associative relationship with B and B in turn with C, one cannot deduce that an associative relationship can be established between A and C.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Example 5: Definition of concepts and associated semantic relationships</strong></caption>
+<tbody>
+<tr>
+<td height="16" width="616">1. &lt;rdf:RDF xmlns:skos=&quot;http://www.w3.org/2004/02/skos/core&quot;&gt;
+<br />
+2. &lt;skos:Concept rdf:about=&quot;http://www.example.org/conceptos#america&quot;&gt; <br />
+3. &lt;skos:prefLabel xml:lang=&quot;es&quot;&gt;Am&eacute;rica&lt;/skos:prefLabel&gt; <br />
+4. &lt;skos:narrower rdf:resource=&quot;http://www.example.org/conceptos#americasur&quot;/&gt;
+<br />
+5. &lt;/skos:Concept&gt; <br />
+6. &lt;skos:Concept rdf:about=&quot;http://www.example.org/conceptos#americanorte&quot;&gt;
+<br />
+7. &lt;skos:prefLabel xml:lang=&quot;es&quot;&gt;Am&eacute;rica del Norte&lt;/skos:prefLabel&gt; <br />
+8. &lt;skos:broader rdf:resource=&quot;http://www.example.org/conceptos#america&quot;/&gt;
+<br />
+9. &lt;/skos:Concept&gt; <br />
+10. &lt;skos:Concept rdf:about=&quot;http://www.example.org/conceptos#americasur&quot;&gt;
+<br />
+11. &lt;skos:prefLabel xml:lang=&quot;es&quot;&gt;Am&eacute;rica del Sur&lt;/skos:prefLabel&gt; <br />
+12. &lt;skos:broader rdf:resource=&quot;http://www.example.org/conceptos#america&quot;/&gt;
+<br />
+13. &lt;skos:related rdf:resource=&quot;http://www.example.org/conceptos#cultivocafe&quot;/&gt;
+<br />
+14. &lt;/skos:Concept&gt; <br />
+15. &lt;skos:Concept rdf:about=&quot;http://www.example.org/conceptos#cultivocafe&quot;&gt;
+<br />
+16. &lt;skos:prefLabel xml:lang=&quot;es&quot;&gt;Cultivo de Caf&eacute;&lt;/skos:prefLabel&gt; <br />
+17. &lt;skos:related rdf:resource=&quot;http://www.example.org/conceptos#americasur&quot;/&gt;
+<br />
+18. &lt;/skos:Concept&gt; <br />
+19. &lt;/rdf:RDF&gt; </td>
+</tr>
+</tbody></table>
+
+<p>We will now look at an example based on the entry in the UNESCO thesaurus (<a href="#UNESCOthesaurus">2009</a>) for the descriptor <em>thesaurus</em>. This first includes a description of the entry we are using in this example.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Example 6: Entry for the descriptor <em>thesaurus</em> in the UNESCO thesaurus</strong></caption>
+<tbody>
+<tr>
+<td height="16" width="616"><b>Tesauro</b> <br />
+English term: Thesauri <br />
+Terme fran&ccedil;ais: Th&eacute;saurus <br />
+&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081; &#1090;&#1077;&#1088;&#1084;&#1080;&#1085; : &#1058;&#1077;&#1079;&#1072;&#1091;&#1088;&#1091;&#1089;&#1099; <br />
+NA Lenguaje documental controlado y din&aacute;mico que contiene t&eacute;rminos <br />
+relacionados sem&aacute;ntica y gen&eacute;ricamente que abarcan de manera <br />
+exhaustiva una esfera concreta del conocimiento. <br />
+MT 5.05 Ciencias de la informaci&oacute;n <br />
+UP Descriptores <br />
+UP Tesauro monoling&uacute;e <br />
+UP Tesauro multiling&uacute;e <br />
+UP Thesauro <br />
+TG Lenguaje de indexaci&oacute;n [32] <br />
+TE Compilaci&oacute;n de tesauro [70] <br />
+TR Control terminol&oacute;gico [19] <br />
+TR Encabezamiento por materia [185] <br />
+TR Material de referencia [123] <br />
+TR Terminolog&iacute;a [404] </td>
+</tr>
+</tbody></table>
+
+<p>We now detail the coding which SKOS would perform for this descriptor, without including the coding which would be used for the descriptors with which the semantic relationships are established.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Example 7: Coding with SKOS of the descriptor <em>thesaurus</em> according to the corresponding entry in the UNESCO thesaurus</strong></caption>
+<tbody>
+<tr>
+<td>1. &lt;rdf:RDF xmlns:skos=&quot;http://www.w3.org/2004/02/skos/core&quot;&gt;
+<br />
+2. &lt;skos:Concept rdf:about=&quot;http://www.example.org/conceptos#tesauro&quot;&gt; <br />
+3. &lt;skos:prefLabel xml:lang=&quot;es&quot;&gt;Tesauro&lt;/skos:prefLabel&gt; <br />
+4. &lt;skos:prefLabel xml:lang=&quot;en&quot;&gt;Thesauri&lt;/skos:prefLabel&gt; <br />
+5. &lt;skos:prefLabel xml:lang=&quot;fr&quot;&gt;Th&eacute;saurus&lt;/skos:prefLabel&gt; <br />
+6. &lt;skos:prefLabel xml:lang=&quot;ru&quot;&gt;&#1058;&#1077;&#1079;&#1072;&#1091;&#1088;&#1091;&#1089;&#1099;&lt;/skos:prefLabel&gt; <br />
+7. &lt;skos:scopeNote xml:lang=&quot;es&quot;&gt; Lenguaje documental controlado y din&aacute;mico
+<br />
+8. que contiene t&eacute;rminos relacionados sem&aacute;ntica y gen&eacute;ricamente que abarcan
+<br />
+9. de manera exhaustiva una esfera concreta del conocimiento. <br />
+10. &lt;/skos:scopeNote&gt; <br />
+11. &lt;skos:altLabel xml:lang=&quot;es&quot;&gt;Descriptores&lt;/skos:prefLabel&gt; <br />
+12. &lt;skos:altLabel xml:lang=&quot;es&quot;&gt;Tesauro monolingüe&lt;/skos:prefLabel&gt; <br />
+13. &lt;skos:altLabel xml:lang=&quot;es&quot;&gt;Tesauro multilingüe&lt;/skos:prefLabel&gt; <br />
+14. &lt;skos:altLabel xml:lang=&quot;es&quot;&gt;Thesauro&lt;/skos:prefLabel&gt; <br />
+15. &lt;skos:broader rdf:resource=&quot;http://www.example.org/conceptos#lengindex&quot;/&gt;
+<br />
+16. &lt;skos:narrower rdf:resource=&quot;http://www.example.org/conceptos#comptes&quot;/&gt;
+<br />
+17. &lt;skos:related rdf:resource=&quot;http://www.example.org/conceptos#controlterm&quot;/&gt;
+<br />
+18. &lt;skos:related rdf:resource=&quot;http://www.example.org/conceptos#encmateria&quot;/&gt;
+<br />
+19. &lt;skos:related rdf:resource=&quot;http://www.example.org/conceptos#matref&quot;/&gt;
+<br />
+20. &lt;skos:related rdf:resource=&quot;http://www.example.org/conceptos#terminologia&quot;/&gt;
+<br />
+21. &lt;/skos:Concept&gt; <br />
+22. &lt;/rdf:RDF&gt; </td>
+</tr>
+</tbody></table>
+
+<p>The above example can be represented graphically in the following manner:</p>
+
+<div align="center"><img border="0" src="p422fig6.jpg" width="1064" height="680" alt="Tree corresponding to the coding with SKOS of the descriptor thesaurus according to the corresponding entry in the UNESCO thesaurus" /></div>
+<div align="center"><br /><strong>Figure 6: Tree corresponding to the coding with SKOS of the descriptor <em>thesaurus</em> according to the corresponding entry in the UNESCO thesaurus</strong></div>
+
+<p>One of the characteristics of SKOS is its flexibility (<a href="#W3C2009">W3C 2009</a>) which is perhaps why semantic restrictions have not explicitly been defined, preventing the creation of cycles in the hierarchical structures or the establishment of associative relationships between concepts belonging to the same hierarchy. Nonetheless, the SKOS model does cover the semantic restriction involved in the disjunction between <em>skos:related</em> and <em>skos:narrowerTransitive</em>, which prevents the establishment of associative relationships between concepts structured within the same hierarchical line. The applications themselves will have the task of ensuring that these and other possible restrictions not previously mentioned (such as the reflexivity of semantic relationships) are applied correctly, at all times in accordance with the requirements of the conceptual scheme defined by the system users.</p>
+
+<h3>Notations </h3>
+
+<p>With SKOS a notation can be associated with a concept, allowing it to be tied to its corresponding entry within a thesaurus, classification or other organization system which identifies elements with decimal signatures, identification codes or similar. A concept is thus associated with the specific field of a conceptual scheme. The values associated with notations are generally defined as a typified literal, normally constructed on the basis of data types defined with an XML scheme. The value which can be associated with a notation is thus a combination of a typified literal and a URI defining the format of that literal. One single concept may be assigned various notations, although one notation should only be assigned to a single concept. This last point is a convention, but is not formally defined in the SKOS data model, meaning that there are no integrity conditions for this element. </p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<caption align="bottom"><br /><strong>Table 5: Vocabulary and definitions of classes and properties for notations</strong></caption>
+<tbody>
+<tr>
+<th>Element</th>
+<th>Vocabulary</th>
+<th>Descriptive Definition</th></tr>
+<tr>
+<td>Notation</td>
+<td>skos:notation</td>
+<td>Instance of owl:DatatypeProperty <br />
+Domain: skos:Concept <br />
+Range: Typed literal</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Documentation </h3>
+
+<p>Documentary elements allow for the inclusion of non-formal information concerning the meaning of relationships, concepts and labels, along with their evolution over time, publication notes, examples, usage scope notes and other types of data essentially addressing users. These elements allow certain aspects of the conceptual scheme to be documented. SKOS offers a typology allowing the type of documentation applied to be distinguished, meaning that such content can be formalised, up to a point. The typology of documentary elements covers a wide range of notes: scope, history, changes, definition, edition and example. </p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Table 6: Vocabulary and definitions of classes and properties for documentation elements</strong>
+</caption>
+<tbody>
+<tr>
+<th>Element</th>
+<th>Vocabulary</th>
+<th>Descriptive Definition</th></tr>
+<tr>
+<td>Note</td>
+<td>skos:note</td>
+<td>Instance of owl:ObjectProperty <br />
+Domain: rdfs:Resource </td>
+</tr>
+<tr>
+<td>Scope note</td>
+<td>skos:scopeNote</td>
+<td>Instance of owl:ObjectProperty <br />
+Sub-property of skos:note <br />
+Domain: rdfs:Resource </td>
+</tr>
+<tr>
+<td>History note</td>
+<td>skos:historyNote</td>
+<td>Instance of owl:ObjectProperty <br />
+Sub-property of skos:note <br />
+Domain: rdfs:Resource </td>
+</tr>
+<tr>
+<td>Change note</td>
+<td>skos:changeNote</td>
+<td>Instance of owl:ObjectProperty <br />
+Sub-property of skos:note <br />
+Domain: rdfs:Resource </td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>skos:definition</td>
+<td>Instance of owl:ObjectProperty <br />
+Sub-property of skos:note <br />
+Domain: rdfs:Resource </td>
+</tr>
+<tr>
+<td>Editorial note</td>
+<td>skos:editorialNote</td>
+<td>Instance of owl:ObjectProperty <br />
+Sub-property of skos:note <br />
+Domain: rdfs:Resource </td>
+</tr>
+<tr>
+<td>Example</td>
+<td>skos:example</td>
+<td>Instance of owl:ObjectProperty <br />
+Sub-property of skos:note <br />
+Domain: rdfs:Resource </td>
+</tr>
+</tbody></table>
+
+<p>Another advantage of SKOS is that it allows elements of other vocabularies, such as Dublin Core (<a href="#DublinCore">2008</a>), to be exploited. Example 9 includes an illustration of this in line 7, which makes use of the element &quot;source&quot;. The SKOS documentation elements can be employed without any type of restriction in documents where the main content uses another vocabulary.</p>
+
+<h3>Concept collections</h3>
+
+<p>Collections of concepts in SKOS allow groupings to be defined, thereby enriching the structure without going so far as to establish explicit semantic relationships which would distort the hierarchical or associative structures of the conceptual scheme. The concepts and concept collections are disjointed in SKOS, making it impossible to establish semantic relationships of any kind between the two. Collections can be linked to RDF resources identified by a URI, although it is more typical for them to be declared as empty nodes. Collections can be associated with lexical labels and as with RDF collections, can be ordered using lists of elements. The collection elements can likewise be inferred on the basis of the elements of an ordered collection. Collections can be included within other collections, as in the case of an additional element.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Table 7: Vocabulary and definitions of classes and properties for elements of collections</strong></caption>
+
+<tbody>
+<tr>
+<th>Element</th>
+<th>Vocabulary</th>
+<th>Descriptive Definition</th></tr>
+<tr>
+<td>Collection</td>
+<td>skos:Collection</td>
+<td>Instance of owl:Class <br />
+Disjoint with skos:Concept y skos:ConceptScheme </td>
+</tr>
+<tr>
+<td>Ordered collection</td>
+<td>skos:OrderedCollection</td>
+<td>Instance of owl:ObjectProperty <br />
+Instance of owl:FunctionalProperty <br />
+Domain: skos:OrderedCollection <br />
+Range: rdf:List <br />
+Allowed more than one value of skos:member </td>
+</tr>
+<tr>
+<td>Member of a collection</td>
+<td>skos:member</td>
+<td>Instance of owl:ObjectProperty <br />
+Instance of owl:FunctionalProperty <br />
+Domain: skos:OrderedCollection <br />
+Range: rdf:List <br />
+Allowed more than one value of skos:member </td>
+</tr>
+<tr>
+<td>Member of a list</td>
+<td>skos:memberList</td>
+<td>Instance of owl:ObjectProperty <br />
+Instance of owl:FunctionalProperty <br />
+Domain: skos:OrderedCollection <br />
+Range: rdf:List <br />
+Allowed more than one value of skos:member </td>
+</tr>
+</tbody>
+</table>
+
+<h3>Mapping properties </h3>
+
+<p>It is clearly possible to include concepts in various conceptual schemes, thereby allowing their reuse. Additionally, SKOS offers the functionality of mapping between concepts included in different conceptual schemes. This makes it possible to establish a correspondence between such concepts. It may occur that the correspondence between the two concepts is not precise, in which case SKOS distinguishes between different types of mapping. It can be declared that an exact correspondence exists between two concepts, that one is more generic or specific than the other, or otherwise an association correspondence may be established. The correspondence properties are sub-classes of their corresponding semantic relationships, as may be seen in the following figure.</p>
+
+
+<div align="center"><img border="0" src="p422fig7.jpg" width="531" height="481" alt="Organizational diagram of semantic and correspondence relationships" /></div>
+<div align="center"><br /><strong>Figure 7: Organizational diagram of semantic and correspondence relationships </strong></div>
+
+<p>The table below describes the elements, associate vocabulary and definitions of the classes and properties.</p>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+
+<caption align="bottom"><br /><strong>Table 8: Vocabulary and definitions of classes and properties for elements of collections</strong></caption>
+<tbody>
+<tr>
+<th>Element</th>
+<th>Vocabulary</th>
+<th>Descriptive Definition</th></tr>
+<tr>
+<td>Mapping relationship</td>
+<td>skos:mappingRelation</td>
+<td>Instance of owl:ObjectProperty<br />
+Domain: skos:Concept<br />
+Range: skos:Concept</td>
+</tr>
+<tr>
+<td>Exact match</td>
+<td>skos:exactMatch</td>
+<td>Instance of owl:ObjectProperty<br />
+Instance of owl:SymmetricProperty<br />
+Sub-property of skos:mappingRelation</td>
+</tr>
+<tr>
+<td>Broad match</td>
+<td>skos:broadMatch</td>
+<td>Instance of owl:ObjectProperty<br />
+Sub-property of skos:mappingRelation<br />
+Sub-property of skos:broader</td>
+</tr>
+<tr>
+<td>Narrower match</td>
+<td>skos:narrowerMatch</td>
+<td>Instance of owl:ObjectProperty<br />
+Sub-property of skos:mappingRelation<br />
+Sub-property of skos:narrower<br />
+Defined as owl:inverseOf de skos:broader //identical situation as for 
+skos:narrowerTransitive and skos:narrower//</td>
+</tr>
+</tbody></table>
+
+<h2>SKOS applications</h2>
+
+<p>The traditional problems of Information Retrieval (relevance of response, precision, comprehensiveness, etc.) combine with others inherent in the nature of the Web (<a href="#MartinezMendez">Mart&iacute;nez and Rodr&iacute;guez 2003</a>), progressively aggravated through the emergence of the Web 2.0, among other reasons, because the quality, structuring and originality of content have not evolved in parallel with the ease of Web publication. There are large numbers of duplicate pages, as many users prefer to copy content rather than to reference it using hypertext links. Many pages make improper use of HTML metadata and some include all kinds of terms in order to confuse indexing bots and it is impossible to distinguish the type of object retrieved in the search. On such a scenario, Web search engines are on occasion unable to offer useful results. The situation would improve with the use of standardised metadata models, such as Dublin Core (<a href="#DublinCore">2008</a>), along with the application of conceptual schemes. The indexing of Web pages with a thesaurus allows us to present queries without users having to perform a predictive selection of terms. Search possibilities are expanded as the user would be consulting a network of terms, which could be combined with a new query language. This is a search based on the exploration of a network of concepts which would guide the user in selecting the query terms, enabling an increase in effectiveness by establishing filters in accordance with the content of certain metadata.</p>
+
+<p>The first obvious application of SKOS is therefore the representation of conceptual thesauri in a manner which moulds itself perfectly to the requirements of the Semantic Web. Although this phase is still in development, many thesaurus management or document indexing applications already use this model (a compilation of these applications may be found <a href="http://esw.w3.org/topic/SkosDev/ToolShed">in the W3C Website</a>, given the fact that its essential properties and elements have been fully defined and represent a solid development core. SKOS may evolve, incorporating new types of relationship and adapting with RDF and OWL. Even so, the model for structuring concepts, labels and relationships will be maintained over time and therefore had therefore come into use even before W3C had drawn up a first definitive recommendation.</p>
+
+<p>The thesauri in particular and the conceptual schemes in general have been used in information retrieval and organization tasks, although only partial solutions have been devised, with a limited scope of operation. On the Web, most such initiatives have created XML or RDF/XML vocabularies to implement functional systems (<a href="#Greenberg">Greenberg 2004</a>). Nonetheless, until the emergence of SKOS, these developments were not coordinated, nor did they have a global vision of an application valid for any type of conceptual scheme. They likewise failed to share a common model, meaning that the exchange of data between systems required the application of mapping mechanisms, which on occasion could not operate completely.</p>
+
+<p>The interoperability of systems is another of the positive aspects involved in SKOS, in particular if one remembers that metadata represent the essential core of the Semantic Web. It is much more beneficial to define rules and restrictions regarding a system's information, outside the programming code and to represent these in documents drawn up in a standard language. This is what metadata and ontologies offer through RDF and OWL and is therefore a further contribution of SKOS.</p>
+
+<p>The exchange of conceptual schemes represented with a standard vocabulary and models such as SKOS offers a number of advantages tied to the incorporation and consequent reuse of external resources. One possible application would be to incorporate them as an element integrated into information systems, for organization and search processes. This is a technique similar to the syndication of Web content. The usefulness of conceptual schemes is not limited to information search processes, but could also be employed in Content Management Systems. The main difficulty of these systems is that of creating an information organization tool integrated with the automatic generation processes of the corresponding Website navigation systems. A thesaurus could be used to devise an organizational scheme, while an ontology could define the correspondence rules to create the navigation system dynamically. SKOS could be used to describe how the content of a Website is organized and that would be involved, using an ontology, in the design of Website navigation systems.</p>
+
+
+<div align="center"><img border="0" src="p422fig8.jpg" alt="SKOS applications in Information Systems, complemented by ontologies" width="539" height="346" /></div>
+<div align="center"><br /><strong>Figure 8: SKOS applications in Information Systems, complemented by ontologies </strong></div>
+
+<p>Given all the above, we believe that SKOS, in addition to its potential employment at a general level on the Web, could also be used initially within corporate information systems, associated with their operation over Intranets. The joint use of SKOS and OWL could allow the conceptualisation of an information system as a sphere of structured data, which could serve to define products and services in the form of specific views of the content managed by the system.</p>
+
+<h2>Conclusions</h2>
+
+<p>Over the course of this work we have presented various solutions focusing the resolution of one single problem: the representation of conceptual schemes, such as thesauri, in a manner appropriate to their use for information retrieval and the organization of knowledge on the Web and more specifically on the semantic Web. We have established how initiatives to represent thesauri using XML, RDF and even using alternatives with a different focus, such as Topic Maps, can work. Initiatives using XML, such as Zthes and MeSH, have not been developed on the basis of the common descriptive framework offered by RDF and RDF Schema. Their integration in the descriptive processes of the semantic Web must therefore take place through processes to convert the representation formats employed. Something similar occurs with the proposal made by Topic Maps, which provides the XML Topic Maps (XTM) specification, an XML vocabulary appropriate for the representation of this type of tool within information technology environments. It would, however, be reasonable to believe that the field of application of Topic Maps, more general than that of SKOS, could represent an advantage over the latter solution. Nonetheless, SKOS can be expanded and take part in the much more general logical processes of the Semantic Web, used jointly with OWL. This would then offer a high level of flexibility at the descriptive formalisation level. </p>
+
+<p>The alternatives employing RDF to represent thesauri, such as LIMBER and CERES, referred to earlier, involve their own developments which are not integrated within the W3C initiatives and which on occasion have lexical units as their central elements.  The adoption of SKOS as a common model to represent thesauri allows conceptual thesauri to be represented in a standardised manner. To an extent, OWL offers greater possibilities of representation and potential application than SKOS. OWL could be used directly to develop ontologies with which to represent thesauri. However, the direct use of ontologies raises the drawback of the complexity of thesaurus management tasks. This job is a simplified with SKOS, while maintaining and expanding the scope of application, as this is a specialised OWL ontology and can be expanded in the future. To an extent this guarantees the viability of SKOS and its evolution over time. SKOS is not therefore a closed development, but rather its very nature gives access to the mechanisms required for its adaptation.</p>
+
+<div align="center"><img border="0" src="p422fig9.jpg" alt="Figure 9: Advantages of SKOS over other alternatives" width="437" height="402" /></div>
+<div align="center"><br /><strong>Figure 9: Advantages of SKOS over other alternatives</strong></div>
+
+<p>From the user perspective, the use of thesauri developed with the SKOS model affects the managers of information services and systems, along with those who use them through query operations. For information managers. SKOS offers a closer approach to knowledge organization and management, complementing the automatic extraction of textual content from documents with its indexing through conceptual entities. Furthermore, thesauri can be mutually combined through correspondence relationships, enabling their reuse and a more effective use of the tasks of indexing and the construction of navigation systems for Web information services and systems.</p>
+
+<p>SKOS would allow us to devise multi-level information query and search tools. This would then give us a model of the Web structured on various levels: conceptual, navigational and documentary structure. Thesauri would organize the conceptual level, constituting the solution employed for information retrieval procedures. The navigability provided by hyperlinks on the Webpages consulted would be maintained. The documentary structure level could be integrated with other tools such as Topic Maps or ontologies which would allow one to design feedback processes for the structure of the thesaurus or thesauri employed.</p>
+
+<p>Thesauri could also allow searches to be expanded and redefined, or show references to documents with content related to that of those directly retrieved in the search, or suggest new search terms. One could even develop an interface in which the user is not required to enter keywords but instead navigates around a network of concepts, selecting those of interest to the search being performed. In this manner, the reuse of conceptual schemes would offer the end user a more coherent and integrated vision of information search systems and services.</p>
+
+<h2><a id="authors" name="authors"></a>About the authors</h2>
+
+<p>Juan-Antonio Pastor-Sanchez has a BA and PhD in Information Science from the University of Murcia. He has worked since 1994 as Web Manager in the University of Murcia and, currently, he is Senior Lecturer of Digital Information Services in the Department of Information and Documentation of the same university. His research has always been related to Thesauri and Information Technology. He is a member of the editorial board of the Spanish journal <em><a href="http://www.ibersid.eu/ojs/index.php/scire" target="_blank">Scire: Representaci&oacute;n y Organizaci&oacute;n del Conocimiento</a></em> and reviewer of papers in Spanish for <em>Information Research: an electronic journal.</em> He can be contacted at <a href="mailto:pastor@um.es">pastor@um.es</a></p>
+
+<p>Francisco Javier Martinez Mendez teaches information technology in the Department of Information and Documentation of the University of Murcia, of which he is currently Head. A Graduate and PhD in Information and Documentation. Professor of the UNITWIN Chair in 'Information Management in Organizations', sponsored by UNESCO. Member of the Information Technology Research Group of the University of Murcia. He is also the author of the blog, <a href="http://irsweb.es/" target="_blank">recuperaci&oacute;n de informaci&oacute;n en la web</a>. He can be contacted at <a href="mailto:javima@um.es">javima@um.es</a></p>
+
+<p>Jos&eacute; Vicente Rodr&iacute;guez-Mu&ntilde;oz is Professor in the Information and Documentation Department, Faculty of Information Science, University of Murcia, Spain. Graduate in Chemistry, PhD in Computing Science. Guest Professor in the University of La Habana, Cuba. Co-ordinator of the UNITWIN Chair in 'Information Management in Organizations', sponsored by UNESCO. Member of the 50th Committee, Documentation, of AENOR (Spanish Association of Normalization and Certification). Scientific Consultant to several projects of the Regional Government of Murcia. Chief of the Information Technology Research Group of the University of Murcia. His research area, projects and publications, covers information management, information retrieval and evaluation of Web searching. Currently Dean of the Faculty of Information Science. He can be contacted at <a href="mailto:jovi@um.es">jovi@um.es</a></p>
+
+<form action="#">
+<fieldset><legend 
+style="BORDER-RIGHT: navy 1px solid; PADDING-RIGHT: 0.5ex; PADDING-LEFT: 0.5ex; FONT-WEIGHT: bold; FONT-SIZE: medium; PADDING-BOTTOM: 0.1ex; COLOR: white; PADDING-TOP: 0.1ex; BORDER-BOTTOM: navy 1px solid; BACKGROUND-COLOR: #5e96fd">References</legend>
+<ul>
+<li>
+<a id="Aitchinson" name="Aitchinson"></a>Aitchinson, J. &amp; Gilchrist, A. (1987). <em>Thesaurus construction. A Practical manual</em>. 2nd edition. London: ASLIB.</li>
+
+<li><a id="Alistair" name="Alistair"></a>Alistair, M., Matthews, B., Beckett, D., Brickley, D., Wilson, M. &amp; Rogers, N. (2005). <a href="http://www.webcitation.org/5m2gMRJih">SKOS: a language to describe simple knowledge structures for the Web.</a> In <em>XTech 2005: XML, the Web and beyond.</em> Retrieved 14 December, 2009 from http://epubs.cclrc.ac.uk/bitstream/685/SKOS-XTech2005.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5m2gMRJih)</li>
+
+<li><a id="ANSI" name="ANSI">American National Standards Institute <em>and</em> National Information Standards Organization.</a> (2005). <a href="http://bit.ly/6VMJ9H">Z39.19-2005: Guidelines for the construction, format and management of monolingual controlled vocabularies.</a> New York, NY: National Information Standards Organization. Retrieved 14 December, 2009 from http://bit.ly/6VMJ9H</li>
+
+<li><a id="Arano" name="Arano"></a>Arano, S. &amp; Codina, L. (2004). <a href="http://www.webcitation.org/5m2hE8Mec">
+La estructura conceptual de los tesauros en el entorno digital: &iquest;Nuevas esperanzas para viejos problemas?</a> [The conceptual structure of thesauri in the digital environment: new hopes for old problems?] <em>Jornades Catalanes d'Informaci&oacute; i Documentaci&oacute;</em> (No. IX), 41-58. Retrieved 14 December, 2009 from http://www.lluiscodina.com/ontotesauros.doc (Archived by WebCite&reg; at http://www.webcitation.org/5m2hE8Mec)</li>
+
+<li><a id="Arano2005" name="Arano2005"></a>Arano, S. (2005). <a href="http://www.webcitation.org/5m2hu3Mn3">Los tesauros y las ontolog&iacute;as en la biblioteconom&iacute;a y la documentaci&oacute;n</a>. [Thesauri and ontologies in librarianship and documentation.] <em>Hipertext.net</em>, (No. 3). Retrieved 14 December, 2009 from http://www.hipertext.net/Web/pag260.htm (Archived by WebCite&reg; at http://www.webcitation.org/5m2hu3Mn3)</li>
+
+<li><a id="Brownson" name="Brownson"></a>Brownson, H. (1957). Current United States research on topics related to the
+conference. In <em>Proceedings of the International Study Conference on Classification for Information Retrieval 13-17 May 1957, Dorking, England.</em> (pp. 99-100). London: ASLIB.</li>
+
+<li><a id="Curras" name="Curras"></a>Curr&aacute;s, E. (2005). <em>Ontolog&iacute;a, taxonom&iacute;a y tesauros: manual de construcci&oacute;n y usos.</em> [Ontologies, taxonomies and thesauri: construction manual.] Gij&oacute;n, Spain: Trea.</li>
+
+<li><a id="Diaz" name="Diaz"></a>D&iacute;az Ortu&ntilde;o, P.M. (2003). <a href="http://www.webcitation.org/5m2jooEt4">Problem&aacute;tica y tendencias en la arquitectura de metadatos Web</a>. [Problems and trends in the architecture of Web metadata.] <em>Anales de Documentaci&oacute;n</em>, (No. 6), 35-58. Retrieved 14 December, 2009 from http://www.um.es/ojs/index.php/analesdoc/article/viewFile/2051/2041 (Archived by WebCite&reg; at http://www.webcitation.org/5m2jooEt4)</li>
+
+<li><a id="DublinCore" name="DublinCore"></a>Dublin Core Metadata Initiative. (2008). <em><a href="http://www.webcitation.org/5m2jyDQli">Metadata Element Set, Version 1.1</a></em>  Retrieved 11 September 2009 from http://dublincore.org/documents/dces/ (Archived by WebCite&reg; at http://www.webcitation.org/5m2jyDQli)</li>
+
+<li><a id="GarciaJimenez" name="GarciaJimenez"></a>Garc&iacute;a Jim&eacute;nez, A. (2004). <a href="http://www.webcitation.org/5m2kKQP8h">Instrumentos de representaci&oacute;n del conocimiento: tesauros versus ontolog&iacute;as</a>. [Tools of knowledge representation: thesauri versus ontologies.] <em>Anales de Documentaci&oacute;n,</em> (No. 7), 79-95. Retrieved 14 December, 2009 from http://www.um.es/ojs/index.php/analesdoc/article/viewFile/1691/1741  (Archived by WebCite&reg; at http://www.webcitation.org/5m2kKQP8h)</li>
+
+<li><a id="GarciaTorres" name="GarciaTorres"></a>Garc&iacute;a Torres, A., Pareja Lora, A. &amp; Pradana L&oacute;pez, D. (2008). Reutilizaci&oacute;n de tesauros: el documentalista frente al reto de la Web sem&aacute;ntica. [Reuse of thesauri: the documentalist and the challenge of the semantic Web.]  <em>El profesional de la informaci&oacute;n</em>, <strong>17</strong>(1), 8-21.</li>
+
+<li><a id="Gilchrist" name="Gilchrist"></a>Gilchrist, A. (1971). <em>The thesaurus in retrieval.</em> London: ASLIB.</li>
+
+<li><a id="Greenberg" name="Greenberg">Greenberg</a>, J. (2004). <a href="http://www.webcitation.org/5m2khE3NQ">User comprehension and searching with information retrieval thesauri.</a> <em>Cataloging &amp; Classification Quarterly</em>, <strong>37</strong>(3/4), 103-120. Retrieved 14 December, 2009 from http://ils.unc.edu/mrc/pdf/greenberg04user.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5m2khE3NQ)</li>
+
+<li><a id="ISO1985" name="ISO1985"></a>International Organization for Standardization. (1985). <em>ISO 5964:1986 Guidelines for the establishment and development of multilingual thesauri.</em> Geneve, International Organization for Standardization.</li>
+
+<li><a id="ISO1986" name="ISO1986"></a>International Organization for Standardization. (1986). <em>ISO 2788:1986 Guidelines for the establishment and development of monolingual thesauri</em>. Geneve, International Organization for Standardization.</li>
+
+<li><a id="Jarvelin" name="Jarvelin"></a>Jarvelin, K., Kristensen, J., Niemi, T., Sormunen, E. &amp; Keskustalo, H. (1996). <a href="http://www.webcitation.org/5m2kxJw2E">A deductive data model for query expansion.</a> In <em>Proceedings of the 19th Annual International ACM�SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 235-243). New York, NY: ACM Press. Retrieved 15 August 2008, from http://www.info.uta.fi/tutkimus/fire/archive/ExpansionTool_Sigir96.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5m2kxJw2E)</li>
+
+<li><a id="Jones" name="Jones"></a>Jones, S. (1993). A thesaurus data model for an intelligent retrieval system. <em>Journal of Information Science</em> <strong>19</strong>(3) 167-178.</li>
+
+<li><a id="LaguensGarcia" name="LaguensGarcia"></a>Laguens Garc&iacute;a, J.L. (2006). Tesauros y lenguajes controlados en Internet. 
+[Thesauri and controlled vocabularies in the Internet.] <em>Anales de Documentaci&oacute;n</em>, (No. 9), 105-121.</li>
+
+<li><a id="LopezHuertas" name="LopezHuertas"></a> L&oacute;pez-Huertas P&eacute;rez, M.J. (1999). Potencialidad evolutiva del tesauro: hacia una base de conocimiento experto. [The evolutionary potential of the thesaurus: building a base of expertise]. In <em>La Representaci&oacute;n y la Organizaci&oacute;n del Conocimiento en sus distintas perspectivas: su influencia en la Recuperaci&oacute;n de la Informaci&oacute;n, Actas del IV Congreso ISKO-Espa&ntilde;a EOCONSID'99, 22-24 April 1999</em> (pp. 133-140). Granada: ISKO, Facultad de Biblioteconom&iacute;a y Documentaci&oacute;n.</li>
+
+<li><a id="MartinezMendez" name="MartinezMendez"></a>Mart&iacute;nez M&eacute;ndez, F. J. &amp; Rodr&iacute;guez Mu&ntilde;oz, J.V. (2003). <a href="http://www.webcitation.org/5m2lIgKgk">S&iacute;ntesis y cr&iacute;tica de las evaluaciones de la efectividad de los motores de b&uacute;squeda en la Web.</a> [Synthesis and critique of the evaluation of effectiveness of Web search engines.] <em>Information Research,</em> <strong>8</strong>(2), paper no. 148 Retrieved 14 December, 2009 from http://InformationR.net/ir/8-2/paper148.html (Archived by WebCite&reg; at http://www.webcitation.org/5m2lIgKgk)</li>
+
+<li><a id="mat01" name="mat01"></a>Matthews, B. &amp; Miles, A. (2001). <em><a href="http://www.webcitation.org/5m2owkpNr">Review of RDF thesaurus work: a review and discussion of RDF schemes for thesauri.</a></em> (Workpackage 8 Deliverable 8.2 SWAD-Europe). Retrieved 14 December, 2009 from http://www.w3.org/2001/sw/Europe/reports/thes/8.2/ (Archived by WebCite&reg; at http://www.webcitation.org/5m2owkpNr)</li>
+
+<li><a id="Matthews" name="Matthews"></a>Matthews, B., Alistair, M. and Wilson, M. (2001). <em><a href="http://www.webcitation.org/5m2lmCyQY">Modelling thesauri for the semantic Web.</a></em> (Workpackage 8 Deliverable 8.1/8.2 SWAD-Europe). Retrieved 14 December, 2009 from http://www.w3c.rl.ac.uk/SWAD/thesaurus/tif/deliv81/final.html (Archived by WebCite&reg; at http://www.webcitation.org/5m2lmCyQY)</li>
+
+<li><a id="Millersolo" name="Millersolo"></a>Miller, U. (1997). Thesaurus construction: problems and their roots. 
+<em>Information Processing &amp; Management</em>, <strong>33</strong>(4), 481-493.</li>
+
+<li><a id="MillerMatthews" name="MillerMatthews"></a>Miller, K. &amp; Matthews, B. (2001). <a href="http://www.webcitation.org/5m2m5xfqV">Having the right connections: the LIMBER Project.</a> <em>Journal of Digital Information</em>, <strong>1</strong>(8), Article 37. Retrieved 14 December, 2009 from http://journals.tdl.org/jodi/article/view/34/35  (Archived by WebCite&reg; at http://www.webcitation.org/5m2m5xfqV)</li>
+
+<li><a id="PastorSaorin1993" name="PastorSaorin1993"></a>Pastor S&aacute;nchez, J.A. &amp; Saor&iacute;n P&eacute;rez, T. (1993). <a href="http://www.webcitation.org/5m2mNjDPO">Un interfaz hipertexto para un sistema de gesti&oacute;n de tesauros.</a> [A hypertext interface for a thesaurus management system.] <em>Scire: representaci&oacute;n y organizaci&oacute;n del conocimiento</em> <strong>2</strong>(1), 51-62. Retrieved 2 January 2009 from http://ibersid.eu/ojs/index.php/scire/article/view/1049/1031  (Archived by WebCite&reg; at http://www.webcitation.org/5m2mNjDPO)</li>
+
+<li><a id="PastorSaorin1995a" name="PastorSaorin1995a"></a>Pastor S&aacute;nchez, J.A. &amp; Saor&iacute;n P&eacute;rez, T. (1995a). <a href="http://www.webcitation.org/5m2mdwKnd">El hipertexto documental como soluci&oacute;n a la crisis conceptual del hipertexto. El reto de los documentos cooperativos en redes</a>. [The hypertext document as a solution to the conceptual crisis hypertext. The challenge of cooperative documents on networks.] <em>Cuadernos de Documentaci&oacute;n Multimedia</em>, (No. 4), 41-56. Retrieved 14 September, 2009 from http://www.ucm.es/info/multidoc/multidoc/revista/cuadern4/hiperdoc.htm  (Archived by WebCite&reg; at http://www.webcitation.org/5m2mdwKnd)</li>
+
+<li><a id="PastorSaorin1995b" name="PastorSaorin1995b"></a>Pastor S&aacute;nchez, J.A. &amp; Saor&iacute;n P&eacute;rez, T. (1995b). Exposici&oacute;n conceptual y aplicaci&oacute;n de un modelo para la organizaci&oacute;n del conocimiento en Internet: el hipertexto documental. [Conceptual exposition and application of a model for the organization of knowledge on the Internet: the hypertext document.] In <em>Organizaci&oacute;n del Conocimiento en Sistemas de Informaci&oacute;n y Documentaci&oacute;n: Actas del II Encuentro de ISKO-Espa&ntilde;a, Getafe 16 y 17 November 1995.</em> (pp. 247-269). Zaragoza, Spain: Universidad de Zaragoza.</li>
+
+<li><a id="PastorSaorin1998" name="PastorSaorin1998"></a>Pastor S&aacute;nchez, J.A. &amp; Saor&iacute;n P&eacute;rez, T. (1998). <a href="http://www.webcitation.org/5m2mlV0OK">La escritura hipermedia.</a> [Hypermedia writing.] <em>Cuadernos de Documentaci&oacute;n Hipermedia</em>, (No. 6-7), 221-238. Retrieved 14 December, 2009 from http://www.ucm.es/info/multidoc/multidoc/revista/cuad6-7/saorin.htm  (Archived by WebCite&reg; at http://www.webcitation.org/5m2mlV0OK)</li>
+
+<li><a id="Rada" name="Rada"></a>Rada, R., Zeb, A., You, G.-N., Michailidis, A. &amp; Mhashi, M. (1991). Collaborative hypertext and the MUCH system. <em>Journal of Information Science,</em> <strong>17</strong>(4), 191-196.</li>
+
+<li><a id="Reynolds" name="Reynolds"></a>Reynolds, D., Thompson, C., Mukerji, J. &amp; Coleman, D. (2005). <a href="http://www.webcitation.org/5m2nEoV2w"><em>An assessment of RDF/OWL modelling.</em></a> Bristol, UK: Hewlett Packard. Retrieved 12 September 2009 from http://www.hpl.hp.com/techreports/2005/HPL-2005-189.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5m2nEoV2w)</li>
+
+<li><a id="Roberts" name="Roberts"></a>Roberts, N. (1984). Historical studies in documentation. The pre-history of the information retrieval thesaurus. <em>Journal of documentation</em>, <strong>40</strong>(4), 271-285.</li>
+
+<li><a id="Roe" name="Roe"></a>Roe, Sandra K &amp; Alan R. Thomas, (Eds.) (2004). <em>The thesaurus: review, renaissance and revision.</em> New York, NY: Haworth Press.</li>
+
+<li><a id="RodriguezMunoz1990" name="RodriguezMunoz1990"></a>Rodr&iacute;guez Mu&ntilde;oz, J.V., Mart&iacute;nez M&eacute;ndez, F.J. &amp; D&iacute;az Ortu&ntilde;o, P. (1990). Los modelos de datos como alternativa en la construcci&oacute;n de tesauros. [Data models as alternatives to the construction of thesauri.] En Actas de las III Jornadas Espa&ntilde;olas de Documentaci&oacute;n Automatizada. Palma de Mallorca: FESABID.</li>
+
+<li><a id="RodriguezMunoz1992" name="RodriguezMunoz1992"></a>Rodr&iacute;guez Mu&ntilde;oz, J. V. (1992). <em>Construcci&oacute;n del esquema conceptual del tesauro mediante un modelo de datos.</em> [Construction of the conceptual scheme of the thesaurus via a data model.] Unpublished doctoral thesis, Universidad de Murcia, Murcia, Spain</li>
+
+<li><a id="Shiri2000" name="Shiri2000"></a>Shiri, A.A. &amp; Revie, C. (2000). Thesauri on the Web: current developments and trends. <em>Online Information Review</em>, <strong>24</strong>(4), 273-279. Retrieved 14 December, 2009 from http://dlist.sir.arizona.edu/archive/00000163/01/thesauri.pdf</li>
+
+<li><a id="Shiri2002" name="Shiri2002"></a>Shiri, A.A., Revie, C. &amp; Chowdhury, G. (2002). Thesaurus-assisted search term selection and query expansion: a review of user-centred studies. <em>Knowledge organization</em> <strong>29</strong>(1), 1-19.</li>
+
+<li><a id="Tudhope" name="Tudhope"></a>Tudhope, D., Harith, A. &amp; Jones, C. (2001). <a href="http://www.webcitation.org/5m2nn4dLN">Augmenting thesaurus relationships: possibilities for retrieval.</a> <em>Journal of Digital Information</em>, <strong>1</strong>(8), Article 41. Retrieved 14 December, 2009 from http://journals.tdl.org/jodi/article/view/181/160  (Archived by WebCite&reg; at http://www.webcitation.org/5m2nn4dLN)</li>
+
+<li><a id="UNESCOthesaurus" name="UNESCOthesaurus"></a>UNESCO. (2009). <em><a href="http://www.webcitation.org/5m2nyx9xG">
+UNESCO thesaurus</a></em>. Paris: Unesco. Retrieved 14 December, 2009 from http://databases.unesco.org/thesaurus/ (Archived by WebCite&reg; at http://www.webcitation.org/5m2nyx9xG)</li>
+
+<li><a id="VanAssem" name="VanAssem"></a>Van Assem, M., Malais&eacute;, V., Miles, A. &amp; Schreiber, G. (2006). <a href="http://www.webcitation.org/5m2oBIbhg">A method to convert thesauri to SKOS.</a> In <em>The Semantic Web: Research and Applications.</em> (pp. 95-109). Berlin: Springer.  Retrieved 11 September, 2009 from http://www.cs.vu.nl/~mark/papers/Assem06b.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5m2oBIbhg)</li>
+
+<li><a id="W3C2004" name="W3C2004"></a>World Wide Web Consortium (W3C). (2004). <em><a href="http://www.webcitation.org/5m2pEK5Qj">OWL Web Onthology Language guide. W3C Recommendation 10 Feb 2004</a>.</em> Edited by M.K. Smith, C.Welty and D.L. McGuinness. Retrieved 14 December, 2009 from http://www.w3.org/TR/owl-guide/ (Archived by WebCite&reg; at http://www.webcitation.org/5m2pEK5Qj)</li>
+
+<li><a id="W3C2007" name="W3C2007">World Wide Web Consortium (W3C). (2007)</a>. <em><a href="http://www.webcitation.org/5m2qW4Gfk">SKOS Use Cases and Requirements. W3C Working Draft 16 May 2007</a></em>. Edited by: Antoine Isaac, Jon Phipps and Daniel Rubin. Retrieved 15 June, 2008 from http://www.w3.org/TR/2007/WD-skos-ucr-20070516/  (Archived by WebCite&reg; at http://www.webcitation.org/5m2qW4Gfk)</li>
+
+<li><a id="W3C2008a" name="W3C2008a">World Wide Web Consortium (W3C). (2008a)</a>. <em><a href="http://www.webcitation.org/5m2qNGvya">SKOS Simple Knowledge Organization Syste reference. W3C Working Draft 29 August 2008.</a></em> Edited by Alistair Miles and Sean Bechhofer. Retrieved 1 September 2008 from http://www.w3.org/TR/2008/WD-skos-reference-20080829/  (Archived by WebCite&reg; at http://www.webcitation.org/5m2qNGvya)</li>
+
+<li><a id="W3C2008b" name="W3C2008b">World Wide Web Consortium (W3C). (2008b)</a>. <em><a href="http://www.webcitation.org/5m2qE1rS1">SKOS Simple Knowledge Organization System primer. W3C Working Draft 29 August 2008.</a></em> Edited by Antoine Isaac and Ed Summers. Retrieved 1 September 2008 from http://www.w3.org/TR/2008/WD-skos-primer-20080829/  (Archived by WebCite&reg; at http://www.webcitation.org/5m2qE1rS1)</li>
+
+<li><a id="W3C2008c" name="W3C2008c">World Wide Web Consortium (W3C). (2008c)</a>. <em><a href="http://www.webcitation.org/5m2q1XRaN">SKOS Simple Knowledge Organization System eXtension for Labels (XL) RDF schema 20th August 2008 'Last call' edition.</a></em> Edited by: Alistair Miles and Sean Bechhofer. Retrieved 29 September 2008 from http://www.w3.org/TR/2008/WD-skos-reference-20080829/skos-xl.html  (Archived by WebCite&reg; at http://www.webcitation.org/5m2q1XRaN)</li>
+
+<li><a id="W3C2009" name="W3C2009"></a>World Wide Web Consortium (W3C). (2009). <em><a href="http://www.webcitation.org/5m2phfs3S">SKOS Simple Knowledge Organization System reference. W3C proposed recommendation 15 June 2009</a></em> Edited by Alisair Miles and Sean Bechhofer. Retrieved on 14 December, 2009 from http://www.w3.org/TR/2009/PR-skos-reference-20090615/  (Archived by WebCite&reg; at http://www.webcitation.org/5m2phfs3S)</li>
+
+<li><a id="Wersig" name="Wersig">Wersig</a>, G. (1971). <em>Das Krankenhaus-Informationssystem (KIS): Uberlegungen zu Strukturen und Realisierungsmoglichkeiten Integrierter Krankenhaus-Informationssysteme.</em> [The hospital information system (HIS): considerations of structure and possibilities of realization of integrated hospital information systems.] Munich-Pullach, Germany: Verlag Dokumentation.</li>
+</ul>
+</fieldset> 
+</form>
+
+
+<br />
+
+<form action="#">
+<fieldset>
+<legend style="BORDER-RIGHT: navy 1px solid; PADDING-RIGHT: 0.5ex; PADDING-LEFT: 0.5ex; FONT-WEIGHT: bold; FONT-SIZE: medium; PADDING-BOTTOM: 0.1ex; COLOR: white; PADDING-TOP: 0.1ex; BORDER-BOTTOM: navy 1px solid; BACKGROUND-COLOR: #5e96fd">How to cite this paper</legend>
+<div><br />Pastor, J.A., Martinez, F.J. &amp; Rodriguez J.V. (2009). &quot;Advantages of thesaurus representation using the Simple Knowledge Organization System (SKOS) compared with proposed alternatives&quot; <em>Information Research</em>, <strong>14</strong>(4) paper 422. [Available at http://InformationR.net/ir/14-4/paper422.html]</div>
+</fieldset> 
+</form>
+
+
+<table cellspacing="10" align="center"> 
+	<tr> 
+		<td colspan="3" align="center" style="background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr> 
+	<tr> 
+		<td align="center" valign="top"> 
+ 
+<form method="get" action="http://scholar.google.com/scholar" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(thesaurus OR thesauri) (SKOS OR &quot;Simple Knowledge Organization System&quot;)"></input> <br /> 
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input> 
+<input type="hidden" name="num" value="100"></input> 
+					</td> 
+				</tr> 
+			</table> 
+ 
+</form> 
+		</td> 
+		<td align="center" valign="top"> 
+<!-- Search Google --> 
+ 
+<form method="get" action="http://www.google.com/custom" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(thesaurus OR thesauri) (SKOS OR &quot;Simple Knowledge Organization System&quot;)"></input><br /> 
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input> 
+<input type="hidden" name="client" value="pub-5081678983212084"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+ 
+<input type="hidden" name="ie" value="ISO-8859-1"></input> 
+<input type="hidden" name="oe" value="ISO-8859-1"></input> 
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input> 
+<input type="hidden" name="hl" value="en"></input> 
+					</td> 
+				</tr> 
+			</table> 
+</form> 
+</td> 
+<td align="center" valign="top"> 
+<form method="get" action="http://www.live.com/" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+ 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="(thesaurus OR thesauri) (SKOS OR &quot;Simple Knowledge Organization System&quot;)"></input> <br /> 
+<input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;"></input> 
+<input type="hidden" name="num" value="100"></input> 
+					</td> 
+				</tr> 
+			</table> 
+</form> 
+ 
+		</td> 
+	</tr> 
+</table> 
+ 
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> --> 
+<div align="center"> 
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo" /> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a> 
+</div> 
+<hr size="1" style="color: #5E96FD;" /> 
+
+<table align="center" cellpadding="10"> 
+<tr><td align="center" valign="top"><div>    <a href="http://www.digits.com/" target="_blank"><img src="http://counter.digits.com/?counter={2c9937a0-58d3-0934-059b-e4f2b04ae558}&amp;template=simple" 
+     alt="Hit Counter by Digits" border="0"  />
+  </a>
+</div></td> 
+ 
+<td align="center" valign="top"><div> 
+&copy; the authors, 2009. <br />Last updated: 14 December, 2009
+</div></td> 
+ 
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START--> 
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+--> 
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'> 
+<script type="text/javascript"> 
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper422.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+ 
+OneStat_Pageview();
+//--> 
+</script> 
+<noscript> 
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a> 
+</noscript> 
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div> 
+<!--ONESTAT SCRIPTCODE END--> 
+</td></tr> 
+</table> 
+<hr size="3" style="color: #5E96FD;" /> 
+ 
+<table align="center"><tr><td><div class="button"> 
+ 
+
+<ul>
+	<li><a href="infres144.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul> 
+
+</div></td></tr></table> 
+ 
+ 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
+</script> 
+<script type="text/javascript"> 
+_uacct = "UA-672528-1";
+urchinTracker();
+</script> 
+</body> 
+
+<!-- Mirrored from informationr.net/ir/14-4/paper422.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:35:29 GMT -->
+</html> 

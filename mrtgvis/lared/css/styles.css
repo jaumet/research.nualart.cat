@@ -1,0 +1,285 @@
+body {
+    background-color: : #ffffff;
+    color: #ff000;
+    font-family: Helvetica, Arial, sans-serif;
+
+/*    -moz-transform: scale(0.7, 0.7); /* Moz-browsers */
+/*    zoom: 0.7; /* Other non-webkit browsers */
+/*    zoom: 70%; /* Webkit browsers */
+
+}
+
+h1 {
+    font-size: 30px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.mapcontainer,
+.mapcontainer2 {
+    margin:0;
+    float:left;
+}
+.mapcontainer {
+    /*max-width: 50%;*/
+}
+.mapcontainer2 {
+    /*max-width: 700px;*/
+}
+p {
+    clear:both;
+}
+
+
+/* Specific mapael css class are below
+ * 'mapael' class is added by plugin
+*/
+
+.mapael .mapTooltip {
+    position: absolute;
+    background-color: #fff;
+    moz-opacity: 0.70;
+    opacity: 0.90;
+    filter: alpha(opacity=70);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    max-width: 150px;
+    display: none;
+    color: #343434;
+}
+
+/* For all zoom buttons */
+.mapael .zoomButton {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+    left: 10px;
+
+    -webkit-user-select: none;
+    -khtml-user-select : none;
+    -moz-user-select: none;
+    -o-user-select : none;
+    user-select: none;
+}
+
+/* Reset Zoom button first */
+.mapael .zoomReset {
+    top: 10px;
+}
+
+/* Then Zoom In button */
+.mapael .zoomIn {
+    top: 30px;
+}
+
+/* Then Zoom Out button */
+.mapael .zoomOut {
+    top: 50px;
+}
+
+.mapael .map {
+    background-color: transparent;
+    margin: 10px;
+    position: relative;
+}
+
+
+#div_setDate_and_barcharts {
+  opacity:0.8;
+}
+
+.marquee {
+  border:0 solid red;
+  z-index:20;
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 360px;
+  height: 120px;
+  width: 270px;
+  background-color: #ffffff;
+  opacity: 0.6;
+  padding:10px;
+  font-size:1em;
+}
+
+.marquee p {
+  font-size:.9em;
+  margin:3px;
+  margin-bottom:10px;
+}
+
+
+.div_map_left {
+  width: 280px;
+  z-index:10;
+  position: absolute;
+  margin-top: 100px;
+}
+.div_map_right {
+  width: 850px;
+  z-index:1;
+  margin-left: 160px;
+}
+
+.barchart_categories {
+  display:none;
+  border:0 solid red;
+  z-index:20;
+  position: absolute;
+  margin-left: 800px;
+  margin-top: -16px;
+  height: 250px;
+  width: 450px;
+  background-color: #ffffff;
+  opacity: 0.8;
+  padding:10px;
+}
+
+
+/*********************************************/
+
+.score {
+    font-size: 30pt;
+}
+.old_date {
+  display:none;
+}
+
+/* my bar chart 1 */
+
+.barchart tr td {
+  display: inline-block;
+  vertical-align:bottom;
+  padding:2px;
+  width: 80px;
+  font-size:1.4em;
+  text-align: center;
+}
+.barchart tr.years td {
+  padding:2px;
+}
+.barchart tr td div {
+  background: #ff0000;
+
+}
+.barchart tr.bars {
+  font-size:1em;
+  color: #c3c3c3;
+}
+
+td.myLegend  {
+  width:200px;
+  border-bottom:1px solid #000;
+}
+td.myLegend span {
+  font-size:.7em;
+  color:#c3c3c3;
+}
+
+
+
+.highlighted {
+    background: red;
+}
+
+/* my bar chart 2 **/
+
+.barchart tr.bars2 td {
+  width: 40px;
+  padding:1px;
+}
+
+tr.bars2 td {
+  width:80px;
+}
+
+tr.bars2 td:nth-child(2n) div {
+  background: #1724B5;
+
+}
+
+tr.bars2 td  {
+  height:100%;
+}
+
+/* tr.bars2 td:nth-child(4n+2), tr.bars2 td:nth-child(4n+1), tr.bars td:nth-child(2n+1) { */
+tr.bars2 td:nth-child(2n+2), tr.bars td, tr.years td {
+  border-right: 1px solid #000;
+}
+
+tr.bars2 td:first-child, tr.bars td:first-child, tr.years td:first-child {
+  border-left: 1px solid #000;
+}
+tr.bars2 td:first-child, tr.bars td:first-child, tr.years td:first-child {
+  border-left: 0 solid #000;
+}
+
+/* barchart_cat */
+
+.barchart_cat tr td {
+  width:30px;
+  display: inline-block;
+  vertical-align:bottom;
+  padding:2px;
+  font-size:1.4em;
+  text-align: center;
+}
+.barchart_cat tr td div {
+  background: #ff0000;
+}
+.barchart_cat tr.bars3 td {
+  font-size:1em;
+  color: #c3c3c3;
+}
+.barchart_cat tr.cat td {
+  -ms-transform: rotate(40deg); /* IE 9 */
+  -webkit-transform: rotate(40deg); /* Safari 3-8 */
+  transform: rotate(40deg);
+}
+
+/* jquery-ui draggable*/
+#div_marquee1, #div_barchart_by_topic, #div_setDate_and_barcharts, #div_map_world, #div_map_peru {
+  cursor: move;,
+}
+tr.years td:not(:first-child), circle {
+  cursor:pointer;
+}
+
+/* DEBUG */
+div {
+  border:0px solid red;
+}
+
+/*********D·js Networlk plots' styles *****************************/
+.link {
+  stroke: #000;
+}
+
+.node text {
+stroke:#333;
+cursos:pointer;
+}
+
+.node circle{
+stroke:#fff;
+stroke-width:3px;
+fill:#555;
+}
+.map {
+  border:0 solid red;
+  min-width:100px;
+  min-height:100px;

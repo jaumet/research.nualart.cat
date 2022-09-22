@@ -1,0 +1,425 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/3-3/paper41.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:20 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="<span>Microsoft</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>Word 97">
+<title>An Internet information system for GPs</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="Internet, Information <span>systems</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> General practitioners, GPs">
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> content="<span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>large organisation like the British National Health Service needs to use technology to improve its efficiency and efficacy. The Internet is a relatively new technology that may <span>prove</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to be useful. One application where this might be useful is in providing up to date information about hospital consultants to general practitioners. This would aid them in referring patients to the most appropriate specialist. We describe a <span>prototype</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>GP information system using Internet technologies that shows that such an application is feasible. The system is implemented in the <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>programming language, so making it easier for new versions of the <span>software</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to be distributed.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<link rel=schema.vw96 href="http://vancouver-webpages.com/META/VW96-schema.html">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="An Internet information system for GPs">
+<meta name="DC.Creator" content="M. P. Bradley, <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> S. Briggs">
+<meta name="DC.Subject" content="Internet, Information <span>systems</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> General practitioners, GPs">
+<meta name="DC.Description" content="<span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>large organisation like the British National Health Service needs to use technology to improve its efficiency and efficacy. The Internet is a relatively new technology that may <span>prove</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to be useful. One application where this might be useful is in providing up to date information about hospital consultants to general practitioners. This would aid them in referring patients to the most appropriate specialist. We describe a <span>prototype</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>GP information system using Internet technologies that shows that such an application is feasible. The system is implemented in the <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>programming language, so making it easier for new versions of the <span>software</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to be distributed.">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 3  No. 3, January 1998</h4></td></tr>
+  <tr> 
+    <td><a href="infres33.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<h1>An Internet information system for GPs</h1>
+    
+    <h4 align="center">M. P. Bradley &amp; <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> S. Briggs
+    <br> Department of Information Science, University of Portsmouth, UK</h4>
+    <br>
+	<div>Abstract</div>
+	
+	
+    <blockquote>    
+   <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>large organisation like the British National Health Service needs to use technology to improve its efficiency and efficacy. The Internet is a relatively new technology that may <span>prove</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to be useful. One application where this might be useful is in providing up to date information about hospital consultants to general practitioners. This would aid them in referring patients to the most appropriate specialist. We describe a <span>prototype</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>GP information system using Internet technologies that shows that such an application is feasible. The system is implemented in the <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>programming language, so making it easier for new versions of the <span>software</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to be distributed.</blockquote>
+    
+    <h2>Introduction</h2>
+    
+    <p>The efficiency and efficacy of an organisation as big as
+      the British National Health Service (NHS) rests heavily on the use of
+      appropriate technologies by its staff, both clinical and non-clinical.
+      <span>Computer</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>technology, in particular, can be used to do routine jobs that
+      would otherwise <span>require</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>more manpower and, as we illustrate here, make
+      information available more widely to the benefit of those who need to use
+      it. Of particular interest to us is how the Internet, the so-called
+      Information Super-highway that is now becoming prevalent in both the home
+      and workplace, could be used to benefit doctors and their patients.</p>
+    
+    <p>The NHS is based on a <span>primary</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>health care model.
+      Patients requiring treatment first visit their General Practitioner, a
+      clinician with a wide <span>range</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of expertise. If the GP feels unable to treat
+      the patient, he or she will refer the patient to a consultant specialising
+      in the relevant area of medicine. The normal <span>mechanism</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for doing this is
+      for the GP to write a <span>letter</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>(called a referral letter) to the consultant.
+      How does the GP choose the consultant?</p>
+    
+    <p>Firstly, there may be several consultants for any given
+      specialty at one hospital, or there may not be any at all. Frequently
+      within a specialty, individual consultants will have particular interests
+      or experience. For example, one orthopaedist might have particular
+      interest in hands while another is interested in feet. It would be
+      beneficial to both patient and consultant if an appropriate referral could
+      be made.</p>
+    
+    <p>Secondly, the funding structure of the NHS limits
+      spending by <span>limiting</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the supply of health care. Waiting lists build up for
+      non-emergency <span>treatments</span>, <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> particularly outpatient consultations with
+      consultants. These waiting lists can vary greatly from consultant to
+      consultant for the same treatment. While there is some debate over what a
+      short waiting <span>list</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>indicates, this is information that the GP might wish
+      to use in deciding which consultant to choose.</p>
+    
+    <p>Our work started from the hypothesis that GPs <i>would</i>
+      like more <span>accurate</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and more timely information about waiting lists when
+      referring patients to consultants, and that Internet technology might be a
+      <span>suitable</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>way of delivering that information. The latter is a realistic
+      <span>proposition</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>since virtually all GPs have some <span>sort</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of <span>computer</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>system in
+      their surgery and, while only a few are at present connected to the
+      Internet, the <span>equipment</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and <span>software</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>necessary to do so is relatively
+      cheap and easy to install. Our aim was to develop a <span>prototype</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of a system
+      to show the validity of the concept, after talking to GPs and hospitals to
+      <span>establish</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>what was feasible and what was required.</p>
+    
+    <h2>Information that GPs wanted from the system</h2>
+    
+    <p>A number of GPs located in the South of England were
+      interviewed in the summer of 1996 to find what they would like to see in
+      an information system that provided them with up-to-date information from
+      hospitals (<a href="#brad">Bradley, 1996</a>).
+      The process was one of eliciting requirements for the system rather than a
+      <span>statistical</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>study of referral patterns.</p>
+    
+    <p>The GPs described the factors that affected their
+      decision as to which consultant to refer a patient. The factors identified
+      were:</p>
+    <ul>
+      <li>locality to patient;</li>
+      <li>waiting time for treatment;</li>
+      <li>patient preference;</li>
+      <li>knowledge of the consultant;</li>
+      <li>the consultant&#146;s special interests;</li>
+      <li>the <span>performance</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of the consultant or unit; and</li>
+      <li>the cost of the treatment.</li>
+    </ul>
+    
+    <p>Each GP ranked the factors they had identified in order
+      of importance. The differences were <span>con0erable</span>. <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> For example, one ranked
+      <span>performance</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>indicators as being very important, another dismissed them as
+      being too crude to merit con0eration.</p>
+    
+    <p>All of the GPs agreed that they would like more
+      information that was more up to date than they presently receive.
+      Information about waiting <span>list</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>times came at best monthly by post, and was
+      out of date as soon as it was printed. <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of consultants and their
+      specialities was normally by personal contact or personal accumulation of
+      experience by the GP. There was no catalogue of consultants&#146;
+      particular interests so that patients could be <span>referred</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to the appropriate
+      <span>person</span>. <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> Consultants sometimes <span>publish</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>&quot;protocols&quot; - documents
+      describing the way that they like patients to be managed before they are
+      <span>referred</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to an outpatient clinic. One GP said that he would like an
+      information system to provide him with these protocol <span>documents</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>so that he
+      could manage patients in the way preferred by the particular consultant.
+      Consultants might be more enthusiastic about <span>writing</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the <span>documents</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>if they
+      knew that they would be <span>easily</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>available to (and used by) their target
+      audience</p>
+    
+    <p>The GPs were enthusiastic about a system that could
+      deliver up-to-date information about waiting lists, consultants&#146;
+      interests and other information to them as they made their referral
+      decisions.</p>
+    
+    <h2>Hospitals&#146; willingness and ability to provide
+    information</h2>
+    
+    <p>The IT managers of two hospital trusts on the south
+      coast of England were interviewed later in the summer of 1996. Both
+      hospitals welcomed the concept of providing GPs with more information
+      about the services they offer, particularly information about waiting list
+      times and the special interests of consultants.</p>
+    
+    <p>One IT manager described the proposed system as
+      providing an additional window onto the hospital&#146;s information. It
+      has an open link to its proprietary hospital information system that it
+      can use to create new <span>applications</span>, <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> including an application such as this.
+      The hospital already has most of the <span>hardware</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and <span>software</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>that it would
+      need for the application. The manager thought that it would not be too
+      difficult to implement the hospital end of the system.</p>
+    
+    <p>Between them, the hospitals identified a number of
+      issues that would need to be addressed before the system could be fully
+      implemented. Firstly, there are no standard measures for waiting list
+      times. Each hospital measures the time a patient must wait for an
+      appointment in a different way - the discrepancies normally arising from
+      different ways of calculating the start of the wait. This could be when
+      the GP writes the referral <span>letter</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>or when the patient is sent a letter
+      telling him or her about their appointment.</p>
+    
+    <p>The second problem arises from the definition of
+      urgency. The seriousness of a patient&#146;s <span>condition</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>will determine the
+      time the patient must wait for an appointment. Consultants manage their
+      diaries to accommodate this: they have different <span>slots</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for different
+      grades of urgency. Each consultant, however, will have different levels of
+      urgency - &quot;urgent&quot; might mean &quot;within 7 days&quot; to one, &quot;within
+      21 days&quot; to another. GPs need some standard way of comparing like
+      with like.</p>
+    
+    <h2>Functionality of the GP application</h2>
+    
+    <p>We <span>designed</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the GP application to query hospitals for
+      information and display the information they return to the user. The
+      <span>prototype</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>application is <span>limited</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to outpatient appointment information,
+      but could be <span>extended</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to provide other forms of query. The user specifies
+      the specialty - such as &quot;general medicine&quot; - and the urgency -
+      such as &quot;routine&quot;.</p>
+    
+<div>  <img src="p41f01.gif" width="576" height="162"></div>
+    
+    <div><br>Figure 1 - The query interface</div>
+    
+    <p>When the query command is invoked, the application
+      requests information from different hospitals and displays it
+      appropriately to the user. The <span>prototype</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>application displays the
+      information as a <span>table</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> each hospital having a number of consultants and
+      each consultant offering a number of clinics, etc. </p>
+    
+    <p>As the user moves the mouse over the rows for a
+      particular consultant, a box at the bottom of the screen gives a brief
+      <span>description</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of the consultant&#146;s interests. (In <span>Figure</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>2, Dr Virchov
+      is shown to have a special interest in cystic fibrosis.) Hospitals,
+      consultants and <span>treatments</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>can have World Wide Web (WWW) pages associated
+      with them, either in Hypertext Mark-up <span>Language</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>(HTML) format or
+      otherwise. The information returned by a hospital includes the Uniform
+      Resource Locator (URL) for it if one is available. If the user clicks on
+      any of these, the application launches a web browser showing the
+      appropriate page.</p>
+    
+    <p>The <span>presentation</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of the information in the prototype
+      application is basic. <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>more refined version might use tree views instead
+      of a <span>table</span>, <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> and allow the user to make comparisons between different
+      <span>treatments</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>at different hospitals.</p>
+    
+    <div><img src="p41f02.gif" width="564" height="429"></div>
+    
+    <div><br>Figure 2 - Results of the query</div>
+    
+    <h2>Architecture of the system</h2>
+    
+    <h3>Overall architecture</h3>
+    
+    <p>The system is <span>designed</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>with a client-server architecture
+      (Figure 3). Each user application (the client) makes its own network
+      <span>connections</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to hospital <span>servers</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to request information about <span>treatments</span>. <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>
+      Each hospital may operate a web server to provide WWW <span>documents</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to users
+      on its <span>network</span>. <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> The system integrates tightly with any such web pages that
+      may be available.</p>
+    
+    <div><a name="_926513688"></a><img src="p41f03.gif" width="555" height="284"></div>
+    
+    <div><a name="_Ref389642981"><br>Figure </a>3 - Architecture of the system</div>
+    
+    <p>Communication takes place via the TCP/IP group of
+      protocols. The aim of the <span>design</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>was to be as independent as possible of
+      the particular type of <span>computer</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the GP and hospital would be using, to
+      cater for the wide <span>range</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of <span>software</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and <span>hardware</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>used in the NHS.</p>
+    
+    <h3>Implementation</h3>
+    
+    <p>The <span>prototype</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>user application is a <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>applet (<a href="#arno">Arnold
+        &amp; Gosling, 1996</a>). <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>Java applet is a
+      small application that can run in0e a Java-enabled web browser such as
+      <b>Netscape Navigator</b> or <b>Internet Explorer</b>. <span>A+</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>special HTML
+      tag instructs the browser to download and execute the application. Thus
+      each time the user wishes to start the application, a new version of the
+      <span>software</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>is downloaded. Problems of installing the latest version of
+      <span>applications</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>on individual users&#146; workstations are all but
+      <span>eliminated</span>. <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span></p>
+    
+    <p>Writing the application in <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>brings other benefits
+      apart from being able to run the application as an applet. Web browsers
+      are able to run <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>applets by implementing a <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>virtual machine (as
+      defined by Sun Microsystems)(<a href="#lind">Lindholm
+        &amp; Yellin, 1996</a>). Wherever the Java
+      virtual machine is implemented, a <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>application will run. Java
+      <span>applications</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>are compiled to machine-independent bytecodes interpreted by
+      the virtual machine (Figure 4). The <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>virtual machine has been
+      implemented and is available on many platforms including Windows, OS/2,
+      many flavours of UNIX, AS400s and MVS. It is also possible to write
+      <span>compilers</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for <span>languages</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>other than <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>that compile to <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>bytecodes -
+      one such <span>compiler</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>has been written for Ada.</p>
+    
+    <div><a name="_Ref389627471"></a><img src="p41f04.gif" width="494" height="483"></div>
+    
+    <div><a name="_Ref389643124"><br>Figure </a>4 - <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>machine independence</div>
+    
+    <p>If a text based (rather than graphical) user interface
+      were written (<a href="#coll">Collins, 1995</a>),
+      the system could run on any machine that had a <span>Java</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>virtual machine
+      implementation. The application would be a <span>program</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>rather than an applet,
+      however, so the bytecode files would need to be available on local disk
+      <span>storage</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>rather than be dynamically downloaded via a web browser.</p>
+    
+    <h3>Format of data</h3>
+    
+    <p>In our system, hospitals return information to the GP
+      application in a format defined in Structured General Mark-up Language
+      (SGML)(<a href="#gold">Goldfarb, 1995</a>).
+      SGML is a platform-neutral <span>notation</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>for the specification of a data
+      structure. The definition of a data structure is <span>contained</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>in a Document
+      Type <span>Definition</span>. <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> Data is broken down into entities. Entities can have
+      child entities - in our case, hospitals have consultants, consultants have
+      <span>treatments</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and <span>treatments</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>have <span>performance</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>indicators.</p>
+    
+    <p>Data in SGML format is entirely text based, making it
+      particularly appropriate for an application that is seeking to avoid any
+      reliance on particular platforms. The SGML definition for the hospitals&#146;
+      data is relatively simple, so as to minimise the effort required
+      for a hospital to offer information to GPs in this way.</p>
+    
+    <h2>Issues not addressed</h2>
+    
+    <p>The GPs interviewed all thought that as well as getting
+      extra information about <span>treatments</span>, <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> they would like to be able to make a
+      booking on-line. The IT managers of the hospitals were not unreceptive to
+      this idea, but thought that the consultants working in the hospital might
+      resist the change from a consultant-led to a GP-led booking process. An
+      <span>intermediate</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>stage might be for the GP to be able to email the referral
+      <span>letter</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to the hospital, and for them to print it out and <span>deal</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>with it in
+      the conventional way. The <span>prototype</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>system does not at present allow GPs
+      to make online bookings.</p>
+    
+    <p>This work does not <span>con0er</span>  <span class="quali" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>the security of the system.
+      If the system is <span>limited</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>to providing information about <span>treatments</span>, <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>
+      patient confidentiality is not compromised. Hospitals might, however, wish
+      to restrict access to their information to authorised individuals. If this
+      were the case, some kind of authentication of users would be necessary. If
+      the system were expanded to any kind of booking functionality, patient
+      <span>details</span>  <span class="exper" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>would need to be kept secure. It is likely that an application of
+      this kind would run on the NHS&#146;s private <span>network</span>  <span class="conce" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>and use encryption
+      techniques, thereby reducing the risk of private individuals gaining
+      access to confidential information.</p>
+    
+    <p>It would be necessary to provide a web server from which
+      the applet could be downloaded by web browsers running on users&#146;
+      workstations. If desired, this web server could support many users:
+      perhaps all of the GPs in a city. The same machine might also provide the
+      service of specifying <span>suitable</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>hospitals for the applet to query. </p>
+    
+    <h2>Conclusions</h2>
+    
+    <p>This work has shown that GPs want more information and
+      that hospitals are broadly willing and able to provide it. We have shown
+      how Internet technology could provide a cheap, manageable and timely means
+      of delivering the information to the GP's surgery. That this provides a
+      higher level of service for the patient is for others to judge, but we
+      believe we have shown that the technology is there to make it possible.</p>
+    
+    <h2>Acknowledgements </h2>
+    
+    <p>The work was carried out in collaboration with
+      Integrated Media Systems, Southsea. We would like to record our
+      appreciation of the help given by GPs and hospital trusts towards the
+      success of this project. M P Bradley <span>held</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>an EPSRC studentship during the
+      <span>period</span>  <span class="quanti" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>of the work. He now works for The Object People. </p>
+    
+    <h2>References </h2>
+    
+    <ul>
+      <li><a name="arno"></a>Arnold, K. &amp; Gosling, <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> <i>The Java
+        <span>programming</span>  <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span>language.</i> Reading, MA: Addison-Wesley, 1996. </li>
+      <li><a name="brad"></a>Bradley, M.P. <i>GP Internet Booking System.</i>
+        (MSc Dissertation) Portsmouth: University of Portsmouth, 1996. </li>
+      <li><a name="coll"></a>Collins, D. <i>Designing object oriented user
+        interfaces.</i> Benjamin-Cummins, 1995. </li>
+      <li><a name="gold"></a>Goldfarb, C.F. <i>The SGML handbook.</i> Oxford:
+        Oxford University Press, 1995. </li>
+      <li><a name="lind"></a>Lindholm, T. &amp; Yellin, F. <i>The Java
+        virtual machine specification.</i> Reading, MA: Addison-Wesley, 1996.
+      </li>
+    </ul>
+	<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Bradley, M. P.  &amp; Briggs, <span>J++</span>. <span class="compus" style="width:1px;border-width:57px 19px 57px 19px;position:relative;">.</span> S.  (1998)&nbsp; &quot;An Internet information system for GPs&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>3</strong>(2) Available at: http://informationr.net/ir/3-3/paper41.html</p>
+<p style="text-align : center">&copy; the authors, 1998.</p>
+
+	<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres33.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper41" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 28 December 2002</h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/3-3/paper41.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:20 GMT -->
+</html>

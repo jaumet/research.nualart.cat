@@ -1,0 +1,267 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/4-4/paper62.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:25:24 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="keywords" content="information retrieval, IR, evaluation">
+<meta name="description" content="The contrast between the value placed on discriminatory power in discussions of indexing and classification and on the transformation of a query into a set of relevant records dominant in information retrieval research has not been fully explored.  Subsidiary concepts and measures (relevance and precision and recall) have been increasingly subjected to critiques.  An enhanced capacity for informed choice is advocated as an alternative principle for system evaluation and design.  This broadly corresponds to: the exploratory capability discussed in recent information retrieval research; the value of discriminatory power in classification and indexing; Giambattista Vico’s critique of the unproductivity of Aristotelian methods of categorisation as routes to new knowledge; and, most significantly, to ordinary discourse conceptions of the value of information retrieval systems.">
+<meta name="rating" content="General">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="The contrast between the value placed on discriminatory power in discussions of indexing and classification and on the transformation of a query into a set of relevant records dominant in information retrieval research has not been fully explored.  Subsidiary concepts and measures (relevance and precision and recall) have been increasingly subjected to critiques.  An enhanced capacity for informed choice is advocated as an alternative principle for system evaluation and design.  This broadly corresponds to: the exploratory capability discussed in recent information retrieval research; the value of discriminatory power in classification and indexing; Giambattista Vico’s critique of the unproductivity of Aristotelian methods of categorisation as routes to new knowledge; and, most significantly, to ordinary discourse conceptions of the value of information retrieval systems.">
+<meta name="DC.Creator" content="Julian Warner">
+<meta name="DC.Subject" content="Evaluation criteria for information retrieval systems.">
+<meta name="DC.Publisher" content="Professor Tom Wilson">
+<meta name="DC.Contributors" content="Julian Warner">
+<meta name="DC.Coverage.PlaceName" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 97">
+<title>Evaluation criteria for information retrieval systems.</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 4  No. 4, July 1999</h4></td></tr>
+  <tr> 
+    <td><a href="infres44.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<h1>"In the catalogue ye go for men": evaluation criteria for information retrieval systems.</h1>
+
+<h4 align="center"><a href="mailto:j.warner@qub.ac.uk">Julian Warner</a><br>
+School of Management, The Queen’s University of Belfast, Belfast,<br> 
+BT7 1NN, Northern Ireland</h4>
+
+
+<div>Abstract</div>
+
+<blockquote>The contrast between the value placed on discriminatory power in discussions of indexing and classification and on the transformation of a query into a set of relevant records dominant in information retrieval research has not been fully explored.  The value of delivering relevant records in response to a query has been assumed by information retrieval research paradigms otherwise differentiated (the cognitive and the physical).  Subsidiary concepts and measures (relevance and precision and recall) have been increasingly subjected to critiques.  The founding assumption of the value of delivering relevant records now needs to be questioned.  An enhanced capacity for informed choice is advocated as an alternative principle for system evaluation and design.  This broadly corresponds to: the exploratory capability discussed in recent information retrieval research; the value of discriminatory power in classification and indexing; Giambattista Vico’s critique of the unproductivity of Aristotelian methods of categorisation as routes to new knowledge; and, most significantly, to ordinary discourse conceptions of the value of information retrieval systems.  The criterion of enhanced choice has a liberating effect, restoring man as an artificer and enabling a continuing dialectic between theory and practice.  Techniques developed in classic information retrieval research can be adapted to the new purpose.  Finally, the substitution of the principle of enhanced choice exemplifies the development of a true science, in which previous paradigms are absorbed into new as special cases.</blockquote>
+<hr size="3" color="#ff00ff">
+
+<table align="center"><tr><td><p>Ay, in the catalogue ye go for men;<br>
+As hounds, and greyhounds, mongrels, spaniels, curs,<br>
+Shoughs, water-rugs, and demi-wolves, are clept<br>
+All by the name of dogs: the valu’d file<br>
+Distinguishes the swift, the slow, the subtle,<br>
+The housekeeper, the hunter, every one<br>
+According to the gift which bounteous Nature<br>
+Hath in him clos’d; whereby he does receive<br>
+Particular addition, from the bill<br>
+That writes them all alike;<br></p>
+
+<p>Shakespeare. <i>Macbeth</i>. c.1606.</p></td></tr></table>
+</dir>
+<hr size="3" color="#ff00ff">
+<br>
+<h2>Introduction</h2>
+
+<p>The epigraph indicates the value which has been historically attached to subtlety of distinctions in the language or lexicon of information retrieval systems.  In this respect, the passage anticipates the principle formulated in modern discussions of indexing and classification that the value of an index term lies in its discriminatory power.  In this principle, and in its historical anticipation, there is a strong, although largely unnoticed, contrast with the assumption of information retrieval research, particularly experimental information retrieval research, that the performance of an information retrieval system is to be measured by its capacity to deliver relevant records in response to deliberately articulated queries.</p>
+
+<p>The concern here is not, then, with the uses of classification in information retrieval but with the broader question of whether the central principle embodied in the practice and theory of classification and indexing can yield more satisfying design and evaluative criteria for information retrieval systems than those which have been characteristically assumed in information retrieval research.  Two paradigms have been distinguished in information retrieval research, the cognitive and the physical, but they share the assumption of the value of delivering relevant records (<a href="#ref">Ellis 1996</a>: 19; <a href="#ref">Belkin and Vickery 1985</a>: 114).  For the purposes of the discussion here, they can be considered as a single, if heterogeneous, paradigm, linked if not united, by this common assumption.</p>
+
+<p>The contrasting paradigm implicitly embodied in classification and indexing may finally be incommensurable with that of information retrieval research, with disputes not logically resolvable within either paradigm.  The approach taken in this paper will be suggest: </p>
+
+
+<ul>
+<li>that an alternative principle involving discriminatory power has been held, implicitly and explicitly, in a number of largely separate discourses;</li>
+<li>that the cumulative effect of recognising this is to indicate more viable and productive criteria for designing, using and evaluating information retrieval systems;</li>
+<li>and, finally, that the classical tradition of information retrieval research can itself be assimilated to the new model.</li>
+</ul>
+
+
+<p>In this final respect, the development proposed here is an exemplar of scientific development in which discarded paradigms are absorbed into developing ones, as special cases.</p>
+
+
+<p>The discourses in which an alternative principle for the design and evaluation of information retrieval systems can be discovered and which are to be covered here are:</p>
+
+
+<ul>
+<li>an emerging, although rather isolated and discontinuous, strand of information retrieval research;</li>
+<li>accepted discussions of the principles of classification and indexing;</li>
+<li>Giambattista Vico’s critique of Aristotelian principles and categories for classification;</li>
+<li>and, most crucially, ordinary language discussion of information systems.</li>
+</ul>
+
+
+<p>The paper will review information retrieval research, taking the liberty of conflating distinguishable aspects for the purposes of a higher level discussion, and then indicate that an alternative principle for evaluation can be found in the discourses identified.  The value of the alternative model developed will be explored.  In conclusion, it will be suggested that the alternative principle and criteria developed can have liberating effect, allowing theory and practice to interact, and that a productive transformation of the field has been indicated.</p>
+
+<h2>Alternative paradigms</h2>
+<h3>Information retrieval research</h3>
+ 
+<p>Information retrieval research, particularly in the experimental tradition emerging in the 1950s in Britain and North America, has taken as its founding assumption the principle that an ideal information system should deliver all (and possibly only all) the records relevant to a given information need.  In order to evaluate information systems in relation to this desired end, or variations on it, various steps were taken: relevance was stabilised and quantified, sometimes being reduced to a binary or dichotomous variable; and measures of precision and recall, which depend on the prior stabilisation of relevance, were developed.  More recent research has questioned the validity of aspects of this paradigm, although more frequently with reference to its subsidiary concepts (relevance and information need) and derived measures (precision and recall) than with regard to its founding assumption.</p>
+
+<p>The adequacy of the concept of relevance employed information retrieval research has been questioned.  Experiments substitute a measurable phenomenon, relevance as constructed under artificial conditions, for an unmeasurable one, relevance under operational conditions, but fail to demonstrate that there is an adequate correlation between the two.  Most disturbingly, it has been suggested that operational relevance is fluid, influenced by intention, context, and other documents seen or read, and simply not amenable to stabilisation or, further, quantification (<a href="#ref">Ellis 1984; 1996</a>).</p>
+
+<p>The classical measures of precision and recall are also rendered increasingly artificial by the high degree of interactivity enabled by recent information technology developments.  How, when searching a CD-ROM database, is the final set of records to be isolated except by a process whose very arbitrariness invalidates it as a component of a measure of system performance? (<a href="#ref">Warner, 1992</a>)  High interactivity, and unmediated searching, also reduce the need for a query to be fully articulated in advance of searching.  There has also been a realisation that a deliberately stated query (which can be distinguished from an information need or assertion of relevance) may be a methodological requirement for controlled experiment, but is not intrinsic to the information seeking situation (<a href="#ref">Heine, 1977</a>) and that it is possible to search without verbalising an information need.</p>
+
+<p>The classic information retrieval paradigm, and the concepts and measures associated with it, could be preserved but only at the cost of increasing its distance from more realistic information seeking situations.  It may be that not only are the classical concepts and measures both becoming and being recognised as increasingly artificial but that the founding assumption - that a system should deliver all (and only all) the relevant records should be re-examined.  What is required, then, is not questioning of concepts with the paradigm but of its founding assumption, turning what has been received as a given into an object of enquiry.</p>
+
+<p>To some extent, this has begun to occur within information retrieval research.  The subtlety and complexity of information retrieval has been recognised (Swanson 1988).  Most specifically, the principle of exploratory capability, the ability to explore and make discriminations between representations of objects, has been suggested as the fundamental design principle for information retrieval systems (<a href="#ref">Ellis 1984; 1996</a>).</p>
+
+<p>On a subjective level, this can be supported by introspection: that what I desire from an information retrieval systems is not a possibly mysterious transformation of a query into a set of records, but a means of enlarging my capacity for informed choice between the representation of objects within the given universe of discourse.  Such an enhanced capacity for informed choice broadly corresponds to exploratory capability.  It could also be regarded as analogous to a sense of cognitive control over, or ability to discriminate between, representations of objects.</p>
+
+<p>One example (which may be fictional in a double sense) can be given of the need for enhanced discriminatory power.  At one point in time, a researcher might wish to distinguish the private individual, Samuel Langhorne Clemens, from the author, Mark Twain, (perhaps out of interest in his copyright disputes or in his brother’s, Orion Clemens, activities as Secretary to Nevada Territory).  What would be valuable for this purpose would be a system which did not conflate these two distinguishable aspects of the individual but enabled them to be differentiated.  At a later point in time, the same researcher might be interested in information on Mark Twain and Samuel Clemens considered as single entity.  An information retrieval system should then be able to differentiate and to link together the occurrences of these different names, as required.</p>
+
+<p>In conclusion, the assumption that it is desirable to obtain all, and possibly only all, the records relevant to a given query can be rejected in favour of the alternative principle of exploratory capability or enhanced capacity for informed choice.  Introspection supported the value of exploratory capability.  Its appeal as an alternative to the established information retrieval paradigm could be strengthened if it could be found, even if only implicitly or in analogous forms, in other, independently developed, discourses.</p>
+
+<h3>Principle of indexing and classification</h3>
+
+<p>An acknowledged principle of indexing and classification is that the value of a term is its discriminatory power.  By discriminatory power is understood the ability to partition and select from the objects represented within the given universe of discourse.  What particular terms or methods of classification are appropriate will vary with the area of discourse and the focus of interest: most obviously, a factor which differentiates one set of objects from another will not serve to discriminate within either set of objects.  Discriminatory power is again analogous to exploratory capability, or, more accurately, a critical factor in enabling progressive and controlled exploration.</p>
+
+<h3>Vico’s critique of Aristotelian classification</h3>
+
+<p>A strong, and highly significant, analogue to exploratory capability can be found in Vico’s critique of Aristotle.  Aristotle’s philosophy, as well as being a direct and indirect source for subsequent understandings of genus, species, specific difference, synonymy and equivalence, involved, in some of its aspects, a systematic method of enquiry in order to classify an object.  An enquirer was required to ask a series of questions: Does the thing exist?  What is it?  How big is it? What is its quality? and the like.  This method of enquiry was subjected to an incisive critique by Vico:</p>
+
+<blockquote>Aristotle's <i>Categories</i> and <i>Topics</i> are completely useless if one wants to find something new in them.  One turns out to be a Llull or Kircher and becomes like a man who knows the alphabet, but cannot arrange the letters to read the great book of nature.  But if these tools were considered the indices and ABC's of inquiries about our problem [of certain knowledge] so that we might have it fully surveyed, nothing would be more fertile for research. (<a href="#ref">Vico 1988</a>: 100-101)</blockquote>
+
+<p>The last clause of that critique deserves emphasis, ‘nothing would be more fertile for research.’  The rigidity of the method is avoided, while some of its techniques are retained, and it is transformed into a systematic and effective means for enhancing knowledge of an object.  Analogously, while rejecting the rigid transformation of a query into a set of records assumed as desirable in information retrieval research, similar techniques can be used to explore the domain of discourse covered by the information retrieval system.</p>
+
+<p>A further supporting analogue can be found in the fictional rather than discursive treatment of rigid classifications in Dickens’ <i>Hard Times</i>.  The logical distinctions exemplified in Bitzer’s definition of a horse - ‘Quadruped.  Graminivorous. Forty teeth, namely twenty-four grinders, four eye-teeth, and twelve incisive ...  Age known by marks in mouth.’ (Dickens 1989: 6) - which does resemble 19th century taxonomies for the horse, themselves influenced by the Aristotelian method of definition by genus and species, are presented as harsh (<a href="#ref">Warner 1994</a>: 106-108).  Outside the restricting enclosure of the town, a different metaphor for knowledge is discernible:</p>
+
+<blockquote>They walked on across the fields and down the shady lanes, sometimes getting over a fragment of a fence so rotten that it dropped at a touch of the foot, sometimes passing near a wreck of bricks and beams overgrown with grass, marking the site of deserted works.  They followed paths and tracks, however slight. (<a href="#ref">Dickens 1989</a>: 353)</blockquote>
+
+<p>The value of an information system could then be the ability it offers discriminatingly to follow ‘paths and tracks, however slight’.  Classification schemes themselves (and their analogues in thesaural relations among indexing terms) can then be received not as fixed models of stable entities but as valuable exploratory devices.</p>
+
+<h3>Ordinary discourse</h3>
+
+<p>Ordinary, particularly informal spoken, discussion of information systems is simultaneously highly significant and difficult to produce as evidence.  Evaluative criteria may be implied rather than explicitly articulated.  Yet when a searcher complains that it is difficult to control the number of records retrieved, a principle of discriminatory power is being invoked.  More explicitly, one spoken response to an earlier version of this paper was: ‘that’s the basis [an enhanced capacity for informed choice] on which people use systems anyway’.</p>
+
+<h3>Summary</h3>
+
+<p>Similarities in themes and principles enunciated or implied have been revealed in largely separate discourses, emerging in information retrieval research, implied in discussions of principles of indexing and classification, made explicit in Vico’s critique of Aristotelian methods of investigation, and present, in partly unarticulated form, in ordinary discourse.  The mode of expression varies, but an enhanced capacity for informed choice, for effective discrimination, or for cognitive control was discovered to be valued in all the discourses adduced.  Independent agreement with an emerging and rather isolated theme in information retrieval research, of exploratory capability, offers supports for replacing the established emphasis on the delivery of relevant records with such a principle for the design and use of information systems.  In some respects, possibly through the influence of concepts of classification and of ordinary discourse understandings, working systems may offer exploratory capability and productive interaction.  In Vico’s terms, practical understanding has been in advance of theoretical articulation.</p>
+
+<h2>Evaluative model</h2>
+
+<p>Endorsing the principle of enhanced capacity for informed choice can have a liberating effect, revealing the intra-theoretic nature of many disputes within the classic tradition of information retrieval research: it offers the possibility of a deeper understanding of relevance; enables a mutually informing relation between practice and theory; restores man as artificer as a designer and user of information systems rather the cipher of information retrieval research; and can enable the development of more satisfying evaluative criteria.</p>
+
+<p>Disputes over the validity of constructs demanded for retrieval system evaluation in the classic tradition of information retrieval research, for instance whether deliberately contrived relevance judgements are adequately correlative with real world judgements, can now be regarded as intra-theoretic, connected with the theoretical framework imposed, not inherent in the process of information retrieval and not necessarily contributing to an understanding of those processes.  In some respects, the construction imposed by the research paradigm may even have inhibited development of understanding of its chosen domain of study.  For instance, the methodological need to reduced relevance to assessments, possibly open to quantification, and stable over time, may have inhibited exploration of its many possible dimensions.  Some dissenting discussions have insisted on its complex and multi-faceted nature (<a href="#ref">Wilson 1973</a>; <a href="#ref">Watson, <i>et al.</i>, 1973</a>).</p>
+
+<p>A mutually informing and productive relation between theory and practice can be developed.  For instance, the practical experience of those indexing procedures or retrieval algorithms which enhance exploratory capability in specified circumstances can inform theoretical development and system design and modification.  The divorce of information retrieval research from practice has been noted and sometimes regretted, although less often explained.  Now the practical understanding embodied in working systems can be recognised and theoretically developed.</p>
+
+<p>The further question then also arises as to whether accepting the principle of exploratory capability has practical implications in terms of the indexing procedures or algorithms for searching to be adopted.  An immediate response would be that it does not necessarily have unambiguous practical implications: That the particular indexing procedures and algorithms to be used will be critically dependent on the purpose and context of retrieval, including the cost of indexing and retrieval.  Crucially for continuity of systems development, techniques identical with or analogous to those currently developed may be used to different ends.  It should also be noted that the Boolean logic used in many retrieval systems, does, under conditions, have the advantage of relative transparency to the searcher.  The objection that it is an ineffective way of transforming an information need into a set of relevant records is no longer tenable.  It could still be objected that is some applications, for instance with heterogeneous textual material without humanly assigned index terms, it gives inadequate control over the representations within the universe of discourse.</p>
+
+<p>A deeper effect is to restore man as an artificer and to recognise the subtlety of the processes involved information retrieval.  Rather than being subjected to retrieval process beyond immediate control, the searcher is presented with an enhanced capacity for choice and for making recalled sets.  The new, and historically unprecedented, potential for enhanced forms of knowing of existing textual material can then productively explored.  For instance, the unrivalled opportunity offered by full text database for exploring the semantic mutability of written word forms with different contexts can be pursued.</p>
+
+<p>More detailed evaluative criteria could be developed from the central evaluative principle of enhanced choice, partly by drawing on the understandings already developed in discussions of classification.  Yet it should be recognised that quantitative comparative measures are unlikely to result.  Once the diversity of contexts for information retrieval is recognised, the idea of a single, generally applicable approach to system design, or a single comparative measure of system performance, becomes severely questionable.  The best outcome which can reasonably be expected from research and from reflection on practice is a better understanding of the process of information retrieval, which can then be used either to design better information systems or to maker more effective use of existing systems.</p>
+
+<h2>Conclusion</h2>
+
+<p>Replacing the emphasis on the delivery of relevant records with a stress on exploratory capability or cognitive control as a design and use principle for information retrieval can have a liberating effect.  It yields more satisfying evaluative criteria while preserving a strong continuity with previous work, particularly in recognising the utility of developed information retrieval techniques.  Theory and practice, rather than being separate or even antagonistic, are enabled to inform each other.  The discourses, of philosophy, classification and ordinary discussion, from which the new principle has been drawn, can be brought further to bear upon information retrieval, transforming it into a human science and recognising its subtlety and significance.  A minor, although significant, relief, is liberation from the obligation to read work in the classic information retrieval paradigm, except for the emerging signs of self-questioning.</p>
+
+<p>The transformation advocated in this paper resembles, in some respects, a mathematical revolution and can also be seen as an example of scientific progress.  Classically fundamental transformations of mathematics have preserved the form while modifying the interpretation (<a href="#ref">Ramsey 1990</a>); analogously, information retrieval techniques have been preserved but adapted to a new end.  More broadly, it has been argued that a discipline exhibits the history of a true science if its earlier stages can be seen as special cases, from the perspective of its subsequent development (<a href="#ref">Roberts 1982</a>): in this context, the automatic transformation of a query into a set of records can be seen as a possible support for informed choice, valuable in certain sets of circumstances.  Rather than, as <a href="#ref">Swanson</a> (1988) indicated, ‘Waiting for Godot [while failing] to grasp what is now within reach’, we can begin to explore the potential for improving human interaction with recorded knowledge.</p>
+
+<h2>References</h2>
+<a name="ref"></a>
+<li>Belkin. N.J. and Vickery, A. (1985).  <i>Interaction in information systems: a review of research from document retrieval to knowledge-based systems</i> (Library and Information Research Report 35). London: British Library, 1985.
+
+<li>Dickens, C. (1989).  <i>Hard Times</i>. Edited with an Introduction and Notes by Paul Schlicke. Oxford and New York: Oxford University Press, 1989.
+
+<li>Ellis, D. (1984).  Theory and explanation in information retrieval research. <i>Journal of Information Science</i>. 8, 1984, pp.25-38.
+
+<li>Ellis, D. (1996).  <i>Progress and problems in information retrieval</i>. London: Library Association, 1996.
+
+<li>Heine, M.H. (1977).  The ‘question’ as a fundamental variable in information science. In: O. Harbo and L. Kajberg <i>editors</i>. <i>Theory and application of information research</i> (Proceedings of the Second International Research Forum on Information Science, 3-6 August 1977, Royal School of Librarianship, Copenhagen). London: Mansell, 1980. pp.137-145.
+
+<li>Ramsey, F.P. (1990). The foundation of mathematics. In: D. H. Mellor <i>editor</i>. <i>Philosophical papers</i>. Cambridge etc.: Cambridge University Press, 1990. pp.164-224.
+
+<li>Roberts, N. (1982).  A search for information man. <i>Social science information studies</i>. 2, 1982, pp.93-104.
+
+<li>Swanson, D.R. (1988).  Historical note: information retrieval and the future of an illusion. <i>Journal of the American Society for Information Science</i>. 39, 2, 1988, pp.92-98.
+
+<li>Vico, G. (1988). <i>On the most ancient wisdom of the Italians: unearthed from the origins of the Latin language: including the disputation with the Giornale de' letterati d'Italia</i>. Ithaca and London: Cornell U.P., 1988.
+
+<li>Warner, J. (1992). Retrieval performance tests in relation to online bibliographic searching. In: Deborah Shaw <i>editor</i>. <i>ASIS '92: Celebrating change: information management on the move</i> (Proceedings of the 55th ASIS Annual Meeting, Pittsburgh, PA, 26-29 October 1992). Medford, NJ: Learned Information for the American Society for Information Science, 1992. pp.231-241.
+<li>Warner, J. (1994).  <i>From writing to computers</i>. London and New York: Routledge, 1994.
+<li>Watson. L.E. and others. (1973).  Sociology and information science. <i>Journal of librarianship</i>, 5, 1973, pp.270-283.
+<li>Wilson, P. (1973).  Situational relevance. <i>Information storage and retrieval</i>. 9, 8, 1973, pp.457-471.
+
+<h3>Acknowledgement</h3>
+
+<p>Another version of this paper is to be published as: "Can classification yield an evaluative principle for information retrieval systems?" In: Rita Marcella and Arthur Maltby <i>editors</i>. <i>The future of classification.</i> London: Gower, (in press).</p>
+
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Warner, Julian  (1999)&nbsp; &quot;"In the catalogue ye go for men": evaluation criteria for information retrieval systems.&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>4</strong>(4) Available at: http://informationr.net/ir/4-4/paper62.html</p>
+<p style="text-align : center">&copy; the author, 1999. Last updated: 24th June 1999</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:Zf552Qkf010J:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres44.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper62" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/4-4/paper62.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:25:24 GMT -->
+</html>

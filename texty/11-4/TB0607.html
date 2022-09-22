@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/11-4/TB0607.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:21 GMT -->
+<head>
+<title>Watch this: Ajax, YUI and Web 2.0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../IRstyle.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+<meta name="DC.Creator" content="Brooks, Terrence A.">
+<meta name="DC.Subject" content="Ajax, JavaScript, Web page design, YUI, Yahoo User Interface Library, Web page widgets">
+<meta name="DC.Description" content="Web pages gain the sophisticated widgets and rapid updating historically associated with desktop applications">
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="Professor T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="TB0607.html" />
+<meta name="dc.relation.IsPartOf" content="infres114.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2006-07-15" />
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+</style>
+
+</head>
+<body  bgcolor="#ffffff">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"> <img src="../mini_logo2.gif" width="336" height="45" alt="header" /><br />Vol. 11  No. 4, July 2006<br /><br /><div class="button">
+<ul>
+	<li><a href="infres114.html"> Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+
+</ul>
+</div></td></tr>
+  <tr> 
+    <td>&nbsp;</td>
+
+  </tr>
+</table>
+<hr size="1" style="color: maroon;" />
+
+<h1>Watch this: Ajax, YUI and Web 2.0</h1>
+
+
+<h4 align="center">
+<a href="mailto:tabrooks@u.washington.edu">Terrence A.Brooks</a> 
+<br>The Information School 
+<br>University of Washington 
+<br>Seattle, WA 98195
+</h4>
+
+<br>
+<br>
+
+<table cellspacing="5">
+  <tbody>
+  <tr>
+    <td valign="top">
+	
+<div style="font-size: 85%; text-align: left;">
+<em>Can't even understand the title of this column? Jargon check first!</em>
+<ul>
+<li><strong>Ajax</strong>: 'Asynchronous JavaScript and XML'.  Your Web browser uses a scripting language (i.e., JavaScript) to connect to a Web server and ask for more information.  This information may be received a moment or two later (i.e., asynchronously) and be packaged as Extensible Markup Language (i.e., XML).  For some applications, unpacking XML may be too laborious and a more light-weight information structure, JSON (i.e., JavaScript Simple Object Notation), is used.  What does this mean to you? <em>Web pages offer richer information experiences as only portions&mdash;not the whole page&mdash;are updated.</em> </li>
+
+<li><strong>YUI</strong>: 'Yahoo! User Interface Library'.  A JavaScript library that hides the ugly details of cross-browser scripting and permits anyone to build a Web page that uses Ajax and sophisticated user-interaction widgets. If you have a sense of Web-technology history then you recognize that this is (<em>finally!</em>) the arrival of DHTML (Dynamic Hypertext Markup Language).  What does this mean to you? <em>Web pages will feature the look and feel heretofore only seen on the desktop (e.g., slider widgets, calendar widgets, combo button widgets, etc.)</em></li>
+
+<li><strong>Web 2.0</strong>: Jargon that signals that the static Web pages of the first decade of the Web are pass&#233;. Alternatively, it is the new name of DHTML.</li>
+</ul>
+</div>
+	
+	
+<h1>Gist of this column: <br />Web pages gain functionality to rival desktop applications (<a href="http://web2.0awards.org/">Web 2.0 Awards</a>)</h1>
+
+ 
+<p><strong>A little history first</strong>:  Today's Web browsers trace their lineage back to the 1990s browser wars when major Web players attempted to dominate the Web by building browsers with idiosyncratic implementations of JavaScript, Cascading Style Sheets, the Document Object Model, etc.  One unintended consequence was the increase in complexity of cross-browser scripting.  It was tough to build a fancy Web page when different browsers (and different versions of the same browser) broke your Web page. <em>Interesting background reading:</em> "<a href="http://www.positioniseverything.net/ie-primer.html">Internet Explorer vs. the standards</a>". </p>
+
+<p>As we leave the age of DHTML behind us, cast a glance back at perhaps the last and best DHTML book: <em>DHTML utopia: modern Web design using JavaScript &amp; DOM</em> by Stuart Langridge.  Note how Langridge has to develop hacks to deal with cross-browser issues such as memory leaks and closures.  Most people who create Web content don't want to tangle with these subtleties.  Hence the utility of JavaScript libraries (i.e., YUI) written by experts that hide all the ugly cross-browser details so the rest of us can concentrate on our Web content.</p>
+
+<p><strong>Conceptual fork</strong>:  Note that there are two topics here.  One is making a server call for new content.  Then with the new content in hand, you need to reach down into the HTML structure of your Web page (i.e., its DOM - Document Object Model) and add/change/delete/modify, etc.  Ajax libraries cover both of these.  The first is relatively simple, but the second is much more messy.  Can you imagine writing JavaScript code to create a slider object that works on PCs and Macs, Internet Explorer, Firefox, Opera, etc.  <em>Tricky!</em></p>
+
+<h2>Ajax - Asynchronous JavaScript and XML</h2>
+
+<p>February 18, 2005 Jesse James Garrett wrote <a href="http://adaptivepath.com/publications/essays/archives/000385.php"><em>Ajax: a new approach to Web applications</em></a> and introduced the paradigm of a Web page making many small requests back to its Web server.  The classic pioneering Ajax application was <a href="http://www.google.com/maphp?hl=en&amp;tab=wl&amp;q=">Google Maps</a>, which seemingly presented a huge map that you could view through a draggable viewing port.  It really wasn't a huge map, but many small maps that were downloaded as you dragged the viewing port around.</p>
+
+<p>Writing your own Ajax JavaScript procedure is surprisingly easy.  The first three hacks in <em>Ajax hacks</em>" by Bruce Perry are (1) Detect the what type of client browser is going to run your script, (2) Create an XMLHttpRequest object with the URL of the server of origin, and (3) create a call-back procedure to handle the information package from the server.  By page 17 of his book, you've written your 30 or 40 lines of JavaScript code and, suddenly, you're the master of the XMLHttpRequest object.</p>  
+
+<p>Creating your own Google maps application turns out to be easy as well. <em>Pragmatic Ajax: a Web 2.0 primer</em>" by Justin Gehtland, Ben Galbraith and Dion Almaer walks you through the code in one chapter.</p>
+
+ <div style="border: solid medium black; padding: 20px"><p><strong>The XMLHttpRequest object from the point of view of Web readers and writers:</strong>
+ <br /><br />
+ Hypertext Transfer Protocol (HTTP) is the standard protocol for exchanging information between client and server and when combined with XML is referred to as XMLHttpRequest object.  By 2002 most browsers supported the XMLHttpRequest object. </p>
+
+ <p><em>Web writers</em> engineer Web pages to respond to user events by reaching back through XMLHttpRequest to the <em>server of origin</em> and asking for updating information.  JavaScript security limits XMLHttpRequests to the same server that gave you the Web page.  Without this safeguard, a Web page could collect your information and send it to an evil third party.</p>
+
+ <p><em>Web readers</em>, on the other hand, use the XMLHttpRequest object in <a href="../10-4/TB0507.html">Greasemonkey</a> to mash various Web pages together and can reach out to as many servers as they like.  Authoring your own mashups means no evil third party is going to get your information.</p>
+</div>
+ 
+ <p><em>Don't forget!</em>: It's easy to say that a Web browser will make a request to a server. This implies, however, that the target server has programs ready to receive these requests and respond appropriately. The complement of your client browser Ajax script is a server script written in CGI, PHP, ASPX, etc.</p>
+
+<h2>Did you know that 'ajaxian' is an adjective</h2>
+
+<p>The neologism 'ajaxian' describes a Web page experience beyond the static Web pages of the first decade of the Web.  <a href="http://del.icio.us/tag/Ajaxian">Del.icio.us</a> has a tag 'ajaxian', there is an <a href="http://ajaxian.com/">ajaxian</a> Website, and there are calls to conferences on the Ajax experience.  All this heralds the arrival of JavaScript toolkits that give us easy-to-deploy widgets that work regardless of the browser.</p>
+
+<p>My favorite is YUI: <a href="http://developer.yahoo.com/yui/index.html">Yahoo! User Interface Library</a>. I suggest the strategy of merely expropriating their examples, modify the example's contents and style and, <em>bingo!</em> you have a sophisticated widget that works cross-browser.  YUI has documentation and even cheat-sheet summaries of widget capabilities.  Best of all, there seems to be a sense of corporate responsibility in supporting the community of users of YUI.  The <a href="http://groups.yahoo.com/group/ydn-javascript/message/3017">e-mail</a> I received this morning is an example:</p> 
+
+<blockquote style="padding: 5px">
+Due to issues surfaced by the community after the 0.11 release last week, we've issued an update today and we recommend that everyone using 0.11 update to 0.11.1 (available on SourceForge).  This update resolves critical issues in the Animation Utility, the Dom Collection, and the Container Control.  A manifest of changes is available on SourceForge and the full changelog for each component can be found in its README file.
+<br /><br />
+Meanwhile, we continue to work on the popular YUI Cheat Sheets.  These were updated for all the Utilities when we released 0.11 last week, and we added Cheat Sheets for the Logger, Slider and TreeView controls at that time as well.  Along with today's update we've added a Cheat Sheet for the Calendar Control.
+<br /><br />
+Regards,
+<br />
+Eric
+</blockquote>
+
+<p>For the habitu&#233;s of the leading/bleeding edge this e-mail signals <em>somebody cares!</em></p>
+
+<p>The other compelling reason promoting YUI use is Yahoo's <a href="http://developer.yahoo.com/ypatterns/index.php">Design Pattern Library</a>.  Here are formats and strategies for the common interaction problems of Web pages.  In short, Yahoo is creating Web 2.0 by offering us both the tools and the strategies for their use.</p>
+
+ <p><strong>Some Ajax libraries</strong></p>
+ 
+<ul>
+<li><a href="http://developer.yahoo.com/yui/index.html">YUI</a>: Yahoo! User Interface Library has the advantage of a corporate sponsor that wants to develop a user community, solid documentation, cheat-sheets and an active development program.  <em>My first widget worked in minutes</em>.</li>
+
+<li><a href="http://dojotoolkit.org/">Dojo</a> is an active, open-source JavaScript project that is building a comprehensive set of JavaScript procedures.  Unfortunately it lacks adequate documentation.  It reminds me of a group of developers, all of whom are so busy developing new code that no one has written a ramp-up for the novice.  There are <a href="http://dojotoolkit.org/">nightly builds</a>, but the non-developer would have difficulty incorporating these into a Web page.  <em>Damn!  Two weeks of frustration and I still  can't get the combo button to work!  Why isn't there a simple example to follow?</em></li>
+
+<li><a href="http://prototype.conio.net/">Prototype</a> is heavily influenced by the <a href="http://www.rubyonrails.org/">Ruby on Rails</a> framework, which focuses on the Apache server. <a href="http://openrico.org/">Rico</a> and <a href="http://script.aculo.us/">Script.aculo.us</a> build on Prototype and offer relatively small libraries of widgets</li>
+
+<li><a href="http://code.google.com/Webtoolkit/">Google Web Toolkit</a> suggests that, to create a JavaScript, we should write some Java code and compile it. <em>What were they thinking?</em></li>
+<br />
+
+<li><a href="http://atlas.asp.net/Default.aspx?tabid=47">Atlas</a> is for Microsoft's ASP.Net community.</li>
+</ul>
+
+
+<p><em>Date: July 2006</em></p></td></tr>
+	  <tr><td style="font-size: 3px;" bgcolor="#800000">&nbsp;</td></tr>
+	 <tr>
+      <td bgcolor="#fbffdf" valign="top">
+	  <br />
+      <p style="color: #339900; font-size: xx-large;"><strong>For further reading:</strong></p>
+      <p>[Ranked according to my taste]</p>
+      <div style=" text-align: left;">
+	  
+<ul>
+  <li><strong>Ajax hacks</strong> by Bruce W. Perry.  O'Reilly, 2006.  Excellent!  Gives the code, and then gets out of the way. Examples include Prototype with Rico, Ruby on Rails and script.aculo.us libraries.  Doesn't cover Ajaxian widgets. The first chapter is must reading.</li>
+
+  <li><strong>Build your own Ajax Web applications</strong> by Matthew Eernisse.  Sitepoint, 2006.  Very good for folks who want to be talked through the code.  Builds a basic Ajax application and covers Web services and some Ajaxian widgets.  Perhaps the best book for the intelligent layman.</li>
+
+  <li><strong>Pragmatic Ajax</strong>: A Web 2.0 Primer by Justin Gehtland, Ben Galbraith and Dion Almaer.  The Pragmatic Bookshelf, 2006.  Good as an overview of many initiatives in the development community.  
+<br />
+Note that one of the authors is a prime mover of dojo. Quote: &quot;While we're on the subject of Dojo, have we mentioned how much we like it?  We think Dojo, of all the existing JavaScript toolkits, has the most potential to break away from the pack and become a dominant player in the space.  In fact, we feel so good about Dojo that we believe it will become obviously more popular than any other Ajax framework&quot; (p. 284).   <em>I respectfully disagree with this blurb.</em></li>	
+
+<li><strong>Head rush Ajax</strong> by Brett McLaughlin.  O'Reilly, 2006,  Written in the famous 'head rush' style.  <em>Cool! Righteous! Rad!</em>, but if you're interested in studying code then the comic book style can get in the way.</li>
+
+</ul>
+</div>	
+</td></tr>
+ <tr><td style="font-size: 3px;" bgcolor="#800000">&nbsp;</td></tr>
+ </tbody>
+ </table>
+<table align="center" cellspacing="10">
+<tbody><tr><td colspan="2" style="font-family: verdana; font-size: small; font-weight: bold;" align="center">Find other papers on this subject.<br></td></tr>
+<tr><td align="center" valign="top">
+<center>
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+<table bgcolor="#ffffff">
+<tbody><tr><td align="center" height="32" nowrap="nowrap" valign="top">
+<input name="q" size="31" maxlength="255" value="Ajax  (&quot;Yahoo! User Interface Library&quot; OR &quot;Web 2.0&quot;)"  type="hidden"> <br>
+<input name="sa" value="Scholar Search" style="font-family: Verdana; font-weight: bold;" type="submit">
+<input name="num" value="100" type="hidden">
+</td></tr></tbody></table></form>
+</center>
+</td><td align="center" valign="top">
+<!-- Search Google -->
+<center>
+<form method="get" action="http://www.google.com/custom" target="_top">
+<table bgcolor="#ffffff">
+<tbody><tr><td align="center" height="32" nowrap="nowrap" valign="top">
+<input name="q" size="31" maxlength="255" value="Ajax (&quot;Yahoo! User Interface Library&quot; OR &quot;Web 2.0&quot;)" type="hidden"><br>
+<input name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold;" type="submit">
+<input name="client" value="pub-5081678983212084" type="hidden">
+<input name="forid" value="1" type="hidden">
+<input name="ie" value="ISO-8859-1" type="hidden">
+<input name="oe" value="ISO-8859-1" type="hidden">
+<input name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" type="hidden">
+<input name="hl" value="en" type="hidden">
+</td></tr></tbody></table>
+</form>
+</center>
+<!-- Search Google -->
+</td></tr>
+</tbody></table>
+<hr style="color: rgb(0, 0, 128);" size="1">
+	
+<h4>How to cite this paper:
+</h4>Brooks, T.A.&nbsp;(2006). &quot;Watch this: Ajax, YUI and Web 2.0&quot; &nbsp; <em>Information Research</em>, <strong>11</strong>(4) paper TB0607 [Available 
+at http://InformationR.net/ir/11-4/TB0607.html]<br>&copy; the author, 2006 Updated: 
+20 July, 2006 </div>
+<hr color="#ff00ff" size="3">
+
+
+<table align="center" border="0" cellpadding="15" cellspacing="0">
+  <tbody>
+  <tr>
+    <td><h4>Contents</h4></td>
+    <td align="center" valign="top"><h5 align="center">
+	
+	<img src="http://counter.digits.com/wc/-d/4/TB0607" alt="counter" align="middle" border="0" height="20" hspace="4" vspace="2" width="60"><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html">
+      <h4>Home</h4></a></td></tr></tbody></table>
+<hr color="#ff00ff" size="3">
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+<!-- Mirrored from informationr.net/ir/11-4/TB0607.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:21 GMT -->
+</html>

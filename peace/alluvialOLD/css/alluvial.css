@@ -1,0 +1,78 @@
+/* Static & general: */
+html {
+    background-color:rgb(23, 23, 23);
+    color:#c1c1c1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+rect,text {
+    fill: #c1c1c1;
+    stroke:#c1c1c1;
+    width:30;
+}
+
+/* Mouseover highlights: */ 
+.mybranch  {
+    stroke:  rgb(56, 5, 5);
+    fill: rgb(212, 14, 14);
+    font-size:18px;
+}
+#features {
+    z-index:10;
+    background-color: transparent;
+    
+}
+
+/* Rest of the page & other: */
+#features span.actions {
+    border:1px solid rgb(142, 18, 190);
+    padding:5px;
+    background-color:rgb(23, 23, 23);
+    border-radius:9px;
+    font-weight:bold;
+}
+#features span.cat {
+    border:1px solid green;
+    padding:5px;
+    background-color:rgb(23, 23, 23);
+    border-radius:9px;
+    font-weight:bold;
+}
+#svgfile {
+    border:0 solid grey;
+    width:100%;
+    height:100%;
+
+}
+svg {
+    border:0 solid red;
+    width:100%;
+    height:100%;
+}
+
+span {
+    cursor:pointer;
+    line-height: 2em;
+
+}
+#features span.actions:hover, #features span.cat:hover { 
+    border:1px solid red;
+}
+
+div {
+    color:#c1c1c1;
+}
+#dialog {
+    background-color:rgb(23, 23, 23);
+    z-index: 10;
+    color:#c1c1c1;
+}
+#dialog {
+    display:none;
+}
+.ui-menu {
+    width: 300px;
+    position:absolute;
+    z-index:3px;
+    background-color: transparent;
+  }

@@ -1,0 +1,799 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/5-2/paper69.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:25:34 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 97">
+<title>Textual and chemical information processing: different domains but similar algorithms</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="information retrieval, chemical structures, text retrieval, screening systems, weighting, biological activity, textual retrieval, text databases">
+<meta name="description" content="This paper discusses the extent to which algorithms developed for the processing of textual databases are also applicable to the processing of chemical structure databases, and <I>vice</i> <i>versa</i>.  Applications discussed include: an algorithm for distribution sorting that has been applied to the design of screening systems for rapid chemical substructure searching; the use of measures of inter-molecular structural similarity for the analysis of hypertext graphs; a genetic algorithm for calculating term weights for relevance feedback searching for determining whether a molecule is likely to exhibit biological activity; and the use of data fusion to combine the results of different chemical similarity searches.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Textual and chemical information processing: different domains but similar algorithms">
+<meta name="DC.Creator" content="Peter Willett">
+<meta name="DC.Subject" content="information retrieval, chemical structures, text retrieval, screening systems, weighting, biological activity, textual retrieval, text databases">
+<meta name="DC.Description" content="This paper discusses the extent to which algorithms developed for the processing of textual databases are also applicable to the processing of chemical structure databases, and <I>vice</i> <i>versa</i>.  Applications discussed include: an algorithm for distribution sorting that has been applied to the design of screening systems for rapid chemical substructure searching; the use of measures of inter-molecular structural similarity for the analysis of hypertext graphs; a genetic algorithm for calculating term weights for relevance feedback searching for determining whether a molecule is likely to exhibit biological activity; and the use of data fusion to combine the results of different chemical similarity searches.">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 5  No. 2, January 2000</h4></td></tr>
+  <tr> 
+    <td><a href="infres52.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<h1>Textual and chemical information processing: different domains but similar algorithms</h1>
+<br>
+<h4><a href="mailto:p.willett@sheffield.ac.uk">Peter Willett</a><br>
+  Department of Information Studies and <br>
+  Krebs Institute for Biomolecular Research<br>
+University of Sheffield<br>
+Sheffield S10 2TN, UK</h4>
+<br><br>
+
+<div>Abstract</div>
+
+<blockquote>This paper discusses the extent to which algorithms developed for the processing of textual databases are also applicable to the processing of chemical structure databases, and <i>vice</i> <i>versa</i>.  Applications discussed include: an algorithm for distribution sorting that has been applied to the design of screening systems for rapid chemical substructure searching; the use of measures of inter-molecular structural similarity for the analysis of hypertext graphs; a genetic algorithm for calculating term weights for relevance feedback searching for determining whether a molecule is likely to exhibit biological activity; and the use of data fusion to combine the results of different chemical similarity searches.</blockquote>
+<br>
+<br>
+
+<h2>Introduction</h2>
+
+<p>Over the years, researchers in information retrieval (IR) have developed many different techniques for the processing of databases of textual information.  Established examples of such techniques include document clustering, relevance feedback, stemming algorithms and text compression, and there are many other emerging applications, such as categorisation, event detection and information filtering (Spark Jones and Willett, 1997).  One such application is multimedia retrieval, where there is much current interest in extending algorithms and data structures developed for processing textual databases, for the storage and retrieval of speech, image and video data (Maybury, 1997).  This paper argues that at least some of the algorithms that are used in textual information retrieval can also be applied to another type of data, <i>viz</i> the two-dimensional (2D) and three-dimensional (3D) chemical structure data that forms one of the principal components of chemical information systems (Ash <i>et al</i>., 1991).  These systems were first developed principally for archival purposes, but now play an important role in research programmes to discover novel bioactive molecules for the pharmaceutical and agrochemical industries (Martin and Willett, 1998).  </p>
+
+<p>The University of Sheffield has been involved in research on both chemical and textual information retrieval for many years (Lynch and Willett, 1986).  These studies have led us to believe that both areas have much to offer, with research in one providing a fertile source of ideas for research in the other.  In some cases, the relationship is obvious, with algorithms and data structures being transferable with little or no change from one application to another; while in other cases, the relationship is less direct, involving more a general view of the sorts of information processing techniques that are required, rather than a direct transfer of technology.  Here, we consider the former, more direct, type of relationship.</p>
+
+<p>There are clear similarities in the ways that chemical and textual database records are characterised.  The documents in a text database are each typically indexed by some small number of keywords, in just the same way as the 2D or 3D molecular representations in a chemical database are each characterised by some small number of substructural features chosen from a much larger number of potential attributes (as discussed further in the next section of this paper).  Moreover, both types of attribute follow a well-marked Zipfian distribution, with the skewed distributions that characterise the frequencies of occurrence of characters, character substrings and words in text databases being mirrored by the comparable distributions for the frequencies of chemical moieties.  Thus, the overwhelming majority of all of the many millions of molecules that have ever been made contain the element carbon but even the tenth most frequent element, iodine, occurs only about one thousandth as frequently, with the great majority of the elements having vanishingly small frequencies of occurrence; similar distributions are observed for other types of chemical substructure (Lynch, 1977).  These shared characteristics mean that the two types of database are amenable to efficient processing using the same type of file structure.  Thus one of the first examples of what would now be referred to as text signature searching (Barton <i>et al</i>., 1974) arose from previous studies of chemical bit-string processing (Adamson <i>et al</i>., 1973), and similar comments apply to the use of an inverted file for rapid database clustering (Willett, 1981, 1982).  Finally, in just the same way as a document either is, or is not, relevant to some particular user query, so a molecule is active, or is not active, in some particular biological test, thus allowing comparable performance measures to be used to assess search effectiveness in the two types of retrieval system (Edgar <i>et al</i>., 1999). </p>
+
+<p>These similarities mean that it is often possible to apply similar algorithms to the two different sorts of database, as we describe in some detail below.  That said, there are obvious differences, most obviously in the semantics of the representations that are used.  A 2D chemical structure diagram bears a much closer relationship to the molecule it describes than does the set of words comprising a textual document, and this relationship is still stronger when, as is increasingly the case, a 3D structure with XYZ atomic co-ordinate data is available for a molecule (Martin and Willett, 1998).  Both the structure diagram and the co-ordinates can be regarded as direct manifestations of the underlying wave equations that describe a molecule, and it has thus proved possible to develop powerful simulation techniques to predict the activities and properties of molecules from a knowledge of their 2D or 3D structure.  Many of these molecular modelling tools have no direct textual equivalent, as the use of natural language raises a host of linguistic problems that do not arise in the chemical context (although it should be noted that linguistic parsing and recognition techniques can be used to represent and search the generic chemical structures that occur in chemical patents (Barnard <i>et al</i>., 1984; Welford <i>et al</i>., 1981)).</p>
+
+<p>The remainder of this paper discusses several applications to support the belief that there may be at least some degree of overlap between the techniques used to process chemical and textual databases.  The first application, which is taken from a previous paper discussing a potential relationship between these two domains (Willett, 1997), is that of chemical substructure searching; this section also introduces the basic components of chemical information systems, thus providing some of the necessary background for the more recent applications discussed in the following sections.</p>
+
+
+<h2>Design of screening systems for chemical substructure searching</h2>
+
+<p>Chemical information systems have historically represented molecules by means of their 2D chemical structure diagrams: these are encoded as labelled graphs in which the nodes and edges of a graph encode the atoms and bonds of a molecule (Ash <i>et al</i>., 1991). Searches  for substances that contain a specific partial structure, such as a cephalosporin ring, can then be effected by graph-matching techniques that permit the identification of all occurrences of the user. s query substructure in each database structure (Barnard, 1993).  The time-consuming nature of these<i> subgraph isomorphism</i> searches means that an initial <i>screening</i> stage is required that can eliminate the great bulk of the database from subsequent processing (in just the same way as a text signature search is used to reduce the amount of pattern matching that is required in serial searches of text databases).  The question then arises as to what sorts of substructural characteristics should be used as indexing keys in the screening search.  </p>
+
+<p>The Zipfian distribution of the occurrences of the elements has been mentioned previously, this implying a vast divergence in the discriminatory powers of searches of chemical databases that are based on elemental type.  Work in Sheffield by Lynch and his co-workers in the early Seventies (see, <i>e.g</i>., Adamson <i>et al</i>., 1973) showed that improved discriminatory power could be obtained by the use of more sophisticated indexing keys that were based on variably-sized chemical <i>fragment substructures</i>, <i>i.e</i>., groups of atoms and bonds.  The fragments were chosen so as to occur with approximately equal frequencies of occurrence in the database that was to be searched, an idea that now forms the basis for many current systems for 2D substructure searching (Barnard, 1993).  </p>
+
+<p>It was soon realised that the concept of equifrequency was of great generality, and this led to an extended investigation of the application of equifrequency ideas to the searching and processing of text databases (Lynch, 1977): here, we consider the studies that were carried out on the approach to sorting normally refererd to as <i>distribution sorting</i> (Cooper <i>et al</i>., 1980; Cooper and Lynch, 1984).  The suggested approach involves sorting a very large file in two stages: first, an initial, approximate sorting stage that sub-divides the file into an ordered series of sub-files; and then an exact sort of each of the sub-files.  To those of us familiar with the old days when catalogue cards had to be sorted by hand, the initial stage is analogous to dividing the cards into the sub-files A to D, E to K, L to R and S to Z.  In the present context, each of these rough pigeonholes represents a separate sub-file on disk and each of the ranges is chosen to ensure that approximately equal numbers of records are allocated to each such sub-file, with the aim of maximising the efficiency of the final, in-core sorts of these sub-files.  </p>
+
+<p>The 3D structure of a molecule plays a vital role in determining its biological activity.  The "lock-and-key" theory suggests that a molecule may be able to act as a drug if it can fit into the active site of a protein in much the same way as a key fits into a lock (Martin and Willett, 1998), and there is thus great interest in being able to identify molecules that are appropriately "key-shaped".  This is done by searching for <i>pharmacophores</i>, <i>i.e</i>., the patterns of atoms in 3D space that are thought to be responsible for a molecule binding to an active site in a protein molecule.  When our studies of pharmacophore searching started in the mid-Eighties, it was soon realised that the graph-theoretic methods developed for 2D substructure searching were also applicable here, with a 3D molecule being described by a graph in which the nodes were the atoms and the edges were the inter-atomic distances (Willett, 1995).  However, the implementation of subgraph isomorphism matching on such 3D chemical graphs is still more demanding of computational resources than is 2D substructure searching, with a consequent need for the development of efficient methods of screening.  </p>
+
+<p>The graphs representing 2D chemical molecules are composed of atoms and bonds, and this is reflected in the compositions of the screens that are used for 2D substructure searching.  It thus seemed appropriate to investigate screens for 3D searching based on the information contained in 3D chemical graphs, <i>i.e</i>., atoms and inter-atomic distances, and we decided to evaluate screens consisting of a pair of atoms and an inter-atomic distance range.  Thus, a screen might represent the presence within a molecule of an oxygen atom and a nitrogen atom separated by a distance range, <i>e.g</i>., between 5 and 7 Ångstroms.  Initial experiments demonstrated the vastly skewed distributions of distances that characterise databases of typical 3D molecules and there was thus a need to identify such inter-atomic screens so that they occurred with approximately equal frequencies of occurrence (Jakes and Willett, 1986).  </p>
+
+<p>The approach adopted involved varying the width of the distance range associated with each pair of atoms, so that highly populated parts of the distance distribution were associated with very narrow ranges, while less populated parts of this distribution, or very infrequently occurring pairs of atoms, were associated with more extended ranges.  The algorithm that was finally developed was a simple modification of the distribution sorting algorithm described above with, in essence, the distance ranges here corresponding to the character ranges that underlie the text-sorting application (Cringean <i>et al</i>., 1990).  This proved to be both effective and efficient, and screens based on the distances between pairs of atoms now form the basis for nearly all existing systems for 3D substructure searching; indeed, the same basic methodology can be used to characterise the valence or dihedral angular relationships that exist between sets of three or four atoms, respectively, thus allowing database searches to be carried out that involve the specification of both distance and angular information.  More recently, we have demonstrated that analogous procedures can be used to search databases where account is taken of the fact that most 3D molecules are not completely rigid, but are actually in a state of constant flux (so that the "keys" referred to previously might be considered as being more akin to a jelly than to a piece of rigid metal) (Willett, 1995).  This further application demonstrates clearly the generality of equifrequency-based approaches for database processing. </p>
+
+
+<h2>Manipulation of hypertext graphs using measures of inter-molecular structural similarity.</h2>
+
+<p>Text retrieval systems were initially based upon the Boolean retrieval model, but the systems were soon extended to permit best match searching (in which the documents are ranked in decreasing order of similarity to the query) (Spark Jones and Willett, 1997).  A similar progression has occurred in chemical information systems, with the substructure searching systems described above increasingly being complemented with facilities for what is referred to as <i>similarity searching</i>.  This generally involves the specification of an entire query molecule, the <i>target structure</i>, rather than the partial structure that is required for substructure searching.  The target is characterised by one or more structural descriptors that are compared with the corresponding sets of descriptors for each of the molecules in the database to find those <i>nearest neighbour</i> molecules that are most similar to the target structure.  Two near-contemporaneous studies in the mid-Eighties demonstrated that counts of the numbers of fragment substructures common to a pair of molecules provided a computationally efficient, and surprisingly effective, basis for quantifying the degree of structural resemblance between the two molecules under consideration (Carhart <i>et al</i>, 1985; Willett <i>et al</i>., 1986).  Specifically, the use of a simple association coefficient (usually the Tanimoto coefficient) in conjunction with the lists of screens associated with the target structure and each of the database structures provided a simple way of investigating inter-molecular structural similarities.  Such fragment-based methods for similarity searching are now widely used as a complement to the established routines for substructure searching (Willett <i>et</i> <i>al</i>., 1998) and we have since demonstrated that these measures are also applicable to the comparison of textual, rather than chemical, graphs.  Specifically, as described below, we have used these measures to determine the degree of consistency with which hypertext documents are created; other relationships between textual and chemical similarity measures are discussed by Willett (1997).</p>
+
+<p>The creation of the intra-document links between the individual components of a hypertext document is a difficult, and time-consuming, task, but one in which human intervention has commonly been thought necessary if the semantic relationships that exist between the components of the document are to be made explicit.  A similar view has prevailed for many years with regard to the indexing of documents in IR systems, where the existence of well-established systems for automatic indexing has not prevented the widespread use of trained library and information specialists for indexing and classifying documents prior to their incorporation in an online database.  The importance of the indexing task in IR has led to many studies of <i>inter-indexer consistency</i>, <i>i.e</i>., of the extent to which agreement exists among different indexers on the sets of index terms to be assigned to individual documents.  These studies (as reviewed, <i>e.g</i>., by Markey (1984)) have consistently concluded that recorded levels of consistency vary markedly, and that high levels of consistency are rarely achieved; similar examples of manual inconsistency are provided by related tasks, such as query formulation and the assessment of document relevance (Salton, 1989).  The insertion of links in hypertext documents may be viewed as being analogous to the assignment of index terms to such documents, and we hence undertook a study to determine the extent to which different people produce similar link structures for the same hypertext documents (Ellis <i>et</i> <i>al</i>., 1994, 1996). </p>
+
+<p>The hypertext documents were generated from five printed full-text documents, each a thesis, journal article or book written by a member of the Department of Information Studies at the University of Sheffield.  Five copies were made of each of the chosen documents, and each of the twenty-five resulting copies was allocated to a different student volunteer from the Department.  The volunteers were instructed in the use of an interactive system that allowed them to create explicit representations of links between paragraphs whose contents they decided were related, and thus to create hypertext versions of the source documents.  These hypertexts were stored as graphs in which the nodes represented portions of a text (specifically paragraphs in our work but section-based or sentence-based portions could also have been used), with an edge linking a pair of nodes if the human linker had created a link between the corresponding paragraphs.  Pairs of these graphs (describing the same textual document but processed by different volunteers) were then compared using a range of similarity measures, most of which were based on those used for chemical similarity searching.  For example, a commonly used type of chemical fragment is the <i>augmented</i> <i>atom</i>, which consists of an atom and the atoms that are bonded to it, and it is possible to generate a comparable hypertext fragment consisting of a paragraph and those paragraphs that are linked to it.  A measure of the similarity between two hypertext graphs can then be calculated in terms of the number of such fragments that the hypertexts have in common, and the resulting similarity is taken as a measure of the degree of inter-linker consistency.</p>
+
+<p>Five hypertext versions were produced for each source document, giving a total of ten possible pairs of sets of hypertext links for that document (<i>i.e</i>., fifty possible pairs for the entire dataset). Similarity values were calculated using many different combinations of graph representation, fragment descriptor and similarity coefficient.  When this was done, it was possible to draw a simple, unequivocal conclusion: that levels of inter-linker consistency are generally low, but can also be quite variable.  It would hence seem that different people tend to have very different views of the semantic relationships that exist among the components of a full-text document, with the possibility that different people will tend to impose different hypertext link structures on the same source documents.  This lack of agreement leads one to question the effectiveness of manually-assigned links in supporting the browsing strategies of subsequent hypertext readers, since if inter-linker consistency is found to be low, then linker/reader<i> </i>consistency (<i>i.e</i>., the level of agreement as to the semantic relationships that exist between the components of the text, and that therefore should explicitly be represented by links that the reader then has the opportunity to follow) can also be expected to be low.  Indeed, our results provide some justification for the numerous and continuing efforts to develop techniques for the automatic generation of hypertext links (see, <i>e.g</i>., Crestani and Melucci, 1998) where the set of links created by a particular technique will be produced in a consistent manner, to which users might become accustomed as they browse and which might well be no worse than those created by human indxers.</p>
+
+<h2>A genetic algorithm for calculating relevance feedback and substructural analysis weights.</h2>
+
+<p>The calculation of weights that describe the importance of document and query terms is an important component of best-match text IR systems.  The most effective results are obtained from using relevance feedback information (Robertson and Sparck Jones, 1976; Salton and Buckley, 1990) but efforts continue to develop new weighting schemes that might further increase search effectiveness.  This striving for improved performance has raised the question of what is the <i>upperbound</i>, <i>i.e</i>., the maximum possible level, that can be achieved by a particular retrieval strategy.  We have hence developed a genetic algorithm (hereafter a GA) to investigate the upperbound that can be achieved by ranked-output retrieval systems that employ weighted query terms.  Indeed, the GA was developed not only for this purpose but also for calculating weights reflecting the extent to which particular types of molecular feature contribute to the biological activity of molecules (using the analogies between indexing terms and structural features, and between query relevance and biological activity that we have noted in the introduction to this paper).  We will illustrate the operation of this GA by discussing the textual application (Robertson and Willett, 1996) before proceeding to an account of the results obtained in our chemical experiments (Gillet <i>et al</i>., 1998). </p>
+
+<p>A GA operates on <i>chromosomes</i>, which are linearly-encoded representations of possible solutions to the problem under investigation, with each element of a chromosome describing some particular component of the encoded solution.  A <i>fitness</i> <i>function</i> is used to calculate a numeric score that measures how "good" a solution is represented by each chromosome.  The set of chromosomes at any particular stage of the processing is referred to as the current <i>population</i>, and the chromosomes in this generation are processed by <i>genetic</i> <i>operators</i> to yield the population that corresponds to the subsequent generation.  The two principal operators are <i>crossover</i>, which combines parts of the fittest chromosomes, and <i>mutation</i>, which introduces new information at random.  The chromosomes in the new generation are evaluated by means of the fitness function and the genetic operators invoked again, this process continuing until convergence is achieved<i>, i.e</i>, until there is no increase in the average fitness of each successive generation.</p>
+
+<p>Each chromosome in our text GA contains a set of elements, with one element for each of the terms comprising the query and with each such element containing a weight for one of these terms.  The weights for those query terms that occur in a particular document are summed, the documents are ranked in decreasing order of these sums of weights, and a cut-off is then applied to the ranking to retrieve some fixed number of the top-ranked documents.  Our experiments have used standard document test collections for which full relevance data is available, and it is hence possible to determine the recall of the search by noting the number of relevant documents that have been retrieved above the cut-off.  These recall values are used as the fitness function for the GA.  Once termination has occurred, <i>i.e</i>., the recall values have ceased to increase, the term weights are noted for the chromosome that has the largest fitness.  Thus, if the GA has successfully explored the full range of possible weights, then the final weights provide an upperbound to the retrieval performance obtainable for that query using relevance weighting of single terms.</p>
+
+<p>The experiments involved the following seven document test collections: Keen (800 documents and 63 queries), Cranfield (1400 documents and 225 queries), Harding (2472 documents and 65 queries), Evans (2542 documents and 39 queries), LISA (6004 documents and 35 queries), SMART (12694 documents and 77 queries) and UKCIS (27361 documents and 182 queries).  The GA was run for each query in each collection, and the final set of weights used to calculate recall values for the top-10, top-20 and top-50 documents.  The F4 retrospective relevance weights of Robertson and Spark Jones (1976) were used for comparison with the GA weights since the former have been found to provide a consistently high level of performance in previous studies of relevance feedback searching.</p>
+
+<p>Table 1 (below) summarises the results obtained when the top-20 documents were retrieved from a ranking; many other results are presented and discussed by Robertson and Willett (1996).  An inspection of this table shows that (as would be expected) the GA weights generally perform better than the F4 weights, in terms of both average recall and numbers of queries where one was superior to the other.  However, there are generally many searches where the two approaches give the same level of performance (to two decimal places in mean recall), and often at least a few queries (and a fair number in the case of the Harding collection) where the F4 search is better.  Where there are differences, in either direction, between the two weights, these are overwhelmingly due to one of the weights finding a single additional relevant document above the cut-off position in the ranking: thus, the two approaches give very similar levels of performance.  A study of those few queries where the F4 weights were (unexpectedly) superior suggested that these queries were ones in which at least some of the F4 weights were negative (this corresponding to terms that occur frequently in a collection but only infrequently in the relevant documents).  The initial version of the GA did not allow for the possibility of negative weights: when it was modified to allow for such occurrences, there was a substantial reduction in the (already small) number of queries where the F4 weights were more effective (Robertson and Willett, 1996).  In general then, the F4 weights gave a level of performance that was only marginally inferior to those provided by the GA weights, which had been obtained by a detailed exploration of the term-weight space defined by the query terms.  This being so, it seems reasonable to conclude that the F4 weights give a practicable upperbound to the performance that is achievable in relevance feedback searches of text databases.</p>
+
+
+<table align="center" border =1 cellspacing=1 cellpadding=7 width=498 bgcolor="#FFFFC4">
+              <tbody>
+<tr>
+<th width="16%" valign="top">Document</td>
+<th width="33%" valign="top" colspan=2>Mean Recall</td>
+<th width="51%" valign="top" colspan=3>Number Of Queries</td>
+</tr>
+
+<tr>
+<th width="16%" valign="top">Collection</td>
+<th align="middle" width="15%" valign="top">F4</td>
+<th align="middle" width="17%" valign="top">GA</td>
+<th align="middle" width="17%" valign="top">Same</td>
+<th align="middle" width="17%" valign="top">F4 Better</td>
+<th align="middle" width="17%" valign="top">GA Better</td>
+</tr>
+
+<tr>
+<td width="16%" valign="top">Keen</td>
+<td align="middle" width="15%" valign="top">0.55</td>
+<td align="middle" width="17%" valign="top">0.60</td>
+<td align="middle" width="17%" valign="top">31</td>
+<td align="middle" width="17%" valign="top">2</td>
+<td align="middle" width="17%" valign="top">30</td>
+</tr>
+
+<tr>
+<td width="16%" valign="top">Cranfield</td>
+<td align="middle" width="15%" valign="top">0.58</td>
+<td align="middle" width="17%" valign="top">0.65</td>
+<td align="middle" width="17%" valign="top">117</td>
+<td align="middle" width="17%" valign="top">6</td>
+<td align="middle" width="17%" valign="top">102</td>
+</tr>
+
+<tr>
+<td width="16%" valign="top">Harding</td>
+<td align="middle" width="15%" valign="top">0.34</td>
+<td align="middle" width="17%" valign="top">0.33</td>
+<td align="middle" width="17%" valign="top">33</td>
+<td align="middle" width="17%" valign="top">16</td>
+<td align="middle" width="17%" valign="top">16</td>
+</tr>
+
+<tr>
+<td width="16%" valign="top">Evans</td>
+<td align="middle" width="15%" valign="top">0.38</td>
+<td align="middle" width="17%" valign="top">0.42</td>
+<td align="middle" width="17%" valign="top">11</td>
+<td align="middle" width="17%" valign="top">7</td>
+<td align="middle" width="17%" valign="top">21</td>
+</tr>
+
+<tr>
+<td width="16%" valign="top">LISA</td>
+<td align="middle" width="15%" valign="top">0.61</td>
+<td align="middle" width="17%" valign="top">0.64</td>
+<td align="middle" width="17%" valign="top">13</td>
+<td align="middle" width="17%" valign="top">5</td>
+<td align="middle" width="17%" valign="top">17</td>
+</tr>
+
+<tr>
+<td width="16%" valign="top">SMART</td>
+<td align="middle" width="15%" valign="top">0.30</td>
+<td align="middle" width="17%" valign="top">0.34</td>
+<td align="middle" width="17%" valign="top">23</td>
+<td align="middle" width="17%" valign="top">10</td>
+<td align="middle" width="17%" valign="top">44</td>
+</tr>
+
+<tr>
+<td width="16%" valign="top">UKCIS</td>
+<td align="middle" width="15%" valign="top">0.18</td>
+<td align="middle" width="17%" valign="top">0.21</td>
+<td align="middle" width="17%" valign="top">105</td>
+<td align="middle" width="17%" valign="top">7</td>
+<td align="middle" width="17%" valign="top">70</td>
+</tr>
+</table>
+<p></p>
+
+<div align="center"><b><i>Table 1</i></b>.  Retrieval effectiveness in relevance feedback searches using F4 and GA weights.<br>  <font size="-1">[The Mean Recall portion of the table is the mean recall when averaged over all of the queries for a particular test collection using the two types of weight, while the right-hand portion shows the number of queries where the GA and F4 weights gave the same recall value (Same), and where either the F4 weights or the GA weights were better.]</font></div>
+
+<p>The GA that was used for these relevance feedback experiments was also designed to calculate weights for <i>substructural analysis</i>, (Cramer <i>et al</i>., 1974).  Here, weights are calculated that relate the presence of a molecular feature to the probability that that molecule is active in some biological test system (<i>cf</i> relating the presence of a specific index term in a document to the probability that that document is relevant to a particular query).  Given some training set of compounds for which the biological activities are available, the aim of substructural analysis is to develop weights that can then be used to select new compounds for biological testing.  Specifically the sum of weights is calculated for the fragment substructures present in a molecule, and then the compounds are ranked in order of decreasing sums-of-weights, so that chemical synthesis and biological assays can be focused on those compounds that have a high <i>a priori</i> probability of activity.  </p>
+
+<p>The use of substructural analysis methods with fragment substructures (such as those discussed in the second section of this paper) is well established, with many different types of weighting scheme having been described in the literature (Ormerod <i>et al</i>., 1989).  The project to be described here used a rather different level of molecular description, specifically high-level molecular characteristics suggested by medicinal chemists at GlaxoWellcome Research and Development (our collaborators in this project) as affecting the drug-like behaviour of molecules.  The features are the distribution of property values for the molecular weight, the ²<font face="Symbol">k</font> <font face="Symbol">a</font>  shape index (Kier, 1987), and the numbers of aromatic rings, rotatable bonds, hydrogen-bond donor atoms and hydrogen-bond acceptor atoms, in the molecules comprising a database.  Each property was allocated a total of 20 bins; for example, the first bin for the hydrogen-bond donor feature describes those molecules in a dataset that have no donor atoms, the second bin those that have one donor atom, and so in until the 20th and last, which represents those that have 19 or more donor atoms.  The molecular weight and shape index bins contained ranges of values, rather than specific integer counts, <i>e.g</i>., the first two bins for molecular weight described the molecules with weights in the range 0-74.99 and 75-149.99, <i>etc</i>. </p>
+
+<p>The GA described previously was used to calculate weights for each bin of each feature, with each such weight reflected the extent to which possession of that feature-value combination resulted in a molecule having some specific activity.  The fitness function was then based on the occurrences of these feature-value pairs in sets of molecules for which activity data are available.  For this purpose, we used sets of structures extracted from the <i>World Drugs Index</i> (or WDI, available from Derwent Information at URL http://www.derwent.co.uk) and <i>SPRESI</i> (available from Daylight Chemical Information Systems Inc. at http://www.daylight.com) databases: the former contains molecules for which biological activities have been established while the latter contains a large number of molecules that are assumed to be inactive.  As with the text application, the chromosome in the GA encodes possible weights (in this case for each of the feature-value bins), and then the score for a particular molecule is the sum of the weights for those feature values that are associated with it.  The fitness function of the GA is simply the number of top-ranked active molecules once the molecules have been ranked in decreasing order of these sums-of-weights.  </p>
+
+<p>Sets of 1000 molecules with some particular activity were chosen from the WDI and then combined with a set of 16,807 SPRESI structures.  The GA was used to calculate weights for this combined dataset, and a note made of the number of actives in the top 1000 positions once convergence had occurred.  The effectiveness of the weights is measured by the degree of <i>initial</i> <i>enhancement</i>, <i>i.e</i>., the ratio of the observed number of top-1000 actives to the number of actives that would be obtained by selecting 1000 compounds at random (Gillet <i>et al</i>., 1998).  These results are summarised in Table 2 and it will be seen that the GA weights give consistently better results than merely selecting compounds at random for testing, although the extent of the improvement is clearly dependent upon the specific activity under investigation.  Gillet <i>et al</i>. (1998) report comparable results from extended experiments using various forms of these weights on a range of datasets; these involved not only retrospective studies (as here) but also experiments where the weights were used in a predictive manner.  It was concluded that the GA provided a simple and effective way of ranking sets of compounds in order of decreasing probability of activity, thus enabling the prioritisation of compounds for synthesis and biological testing.</p>
+
+<table align="center" border =1 cellspacing=1 cellpadding=7 width=328 
+              style="HEIGHT: 370px; WIDTH: 353px" bgcolor="#FFFFC4">
+<tr>
+<th width="54%" valign="top">Drug 
+                  Activity</td>
+<th width="46%" valign="top">Initial 
+                  Enhancement</td>
+</tr>
+
+<tr>
+<td width="54%" valign="top">Hormones</td>
+<td align="middle" width="46%" valign="top">8.3</td>
+</tr>
+
+<tr>
+<td width="54%" valign="top">Anti-cancers</td>
+<td align="middle" width="46%" valign="top">7.6</td>
+</tr>
+
+<tr>
+<td width="54%" valign="top">Anti-microbials</td>
+<td align="middle" width="46%" valign="top">7.6</td>
+</tr>
+
+<tr>
+<td width="54%" valign="top">Anaesthetics</td>
+<td align="middle" width="46%" valign="top">4.1</td>
+</tr>
+
+<tr>
+<td width="54%" valign="top">Blood</td>
+<td align="middle" width="46%" valign="top">3.6</td>
+</tr>
+
+<tr>
+<td width="54%" valign="top">Central nervous system</td>
+<td align="middle" width="46%" valign="top">3.9</td>
+</tr>
+
+<tr><td width="54%" valign="top">Psychotropics</td>
+<td align="middle" width="46%" valign="top">2.5</td>
+</tr>
+</table>
+<p></p>
+
+<div align="center">Table 2.  Effectiveness of ranking active compounds using the GA-based substructural analysis weights.<br>  <font size="-1">[The Drug Activity listed is that contained in the keyword activity field for each of the compounds in the WDI database.]</font></div>
+
+
+<h2>Combination of chemical similarity measures using data fusion</h2>
+
+<p>The many types of similarity measures that are available for the measurement of molecular similarity has led to comparative studies in which researchers try to identify a single, "best" measure, using some quantitative performance criterion.  For example, Willett <i>et al</i>. (1986) discuss the merits of different association coefficient for chemical similarity searching and conclude by recommending the Tanimoto coefficient for this purpose.  Such comparisons, of which there are many in the chemical information literature, are limited in that they assume, normally implicitly, that there is some specific type of structural feature (similarity coefficient, weighting scheme or whatever it is that is being investigated) that is uniquely well suited to describing the type(s) of biological activity that are being sought for in a similarity search.  The assumption cannot be expected to be generally valid, given the multi-faceted nature of biological activities, and this has led us to consider chemical applications of <i>data</i> <i>fusion</i> (Hall, 1992).  </p>
+
+<p>Data fusion was developed to combine inputs from different sensors, with the expectation that using multiple information sources enables more effective decisions to be made than if just a single sensor was to be employed.  The methods are used in a wide range of military, surveillance, medical and production engineering applications (see, <i>e.g</i>., Arabnia and Zhu (1998)): our interest was aroused by a paper by Belkin <i>et al</i>. (1995), in which data fusion was used to combine the results of different searches of a text database, conducted in response to a single query but employing different indexing and searching strategies. A  query was processed using different strategies, each of which was used to ranking the database in order of decreasing similarity with the query. The  ranks for each of the documents were then combined using one of several different fusion rules, the output of the fusion rule was taken as the document. s new similarity score and the fused lists were then re-ranked in descending order of similarity.  </p>
+
+<p>Ginn <i>et al</i>. (1999) have described the application of these ideas in the context of matching a target structure against a database, using several different measures of chemical similarity as summarised in Figure 1.</p>
+
+<div style="background-color: Aqua;">
+<ol>
+
+<li>Execute a similarity search of a chemical database for some particular target structure using two, or more, 
+different measures of inter-molecular similarity.</li>
+    <p></p>          
+<li>Note the rank position, <i>r<sub>i</i></sub>, of each database structure in the ranking resulting from use of the <i>i</i>-th similarity measure.</li>
+   <p></p>        
+<li>Combine the various rankings using a fusion rule to give a new combined score for each database 
+structure</li>
+    <p></p>  
+<li>Rank the resulting combined scores, and then use this ranking to calculate a quantitative measure of the 
+ effectiveness of the search for the chosen target structure.</li></ol></div>
+
+
+<div align="center">Figure 1. Combination of similarity rankings using data fusion</div>
+
+<p>The fusion rules used were those identified by Belkin <i>et al</i>. (1995) and shown in Figure 2, and the combined scores output by the fusion rule are then used to re-order the database structures to give the final ranked output.  It will be seen from Figure 2 that the MIN and MAX rules represent the assignment of extreme ranks to database structures and it is thus hardly surprising that both can be highly sensitive to the presence of a single "poor" similarity measure amongst those that are being combined.  The SUM rule, where each database structure is assigned the sum of all the rank positions at which it occurs in the input lists, is expected to be more stable against the presence of a single poor or noisy input ranking, and this was generally found to be the rule of choice in our experiments (Ginn <i>et al</i>., 1999).</p>
+
+<table border =1 cellspacing=1 cellpadding=7 width=261 
+            align="CENTER" bgcolor="#FFFFC4">
+<tr>
+<td width="25%" valign="top"><p align="center">Name</p></td>
+<td width="75%" valign="top"><p align="center">Fusion<b> </b>Rule</p></td>
+</tr>
+
+<tr>
+<td width="25%" valign="top"><p align="center">MIN</p></td>
+<td width="75%" valign="top"><p>minimum (<i>r</i><sub>1</sub>, <i>r</i><sub>2</sub> 
+                  ,&amp;<i>r<sub>i </i></sub>&amp;<i>r<sub>n</i></sub>)</p></td>
+</tr>
+
+<tr>
+<td width="25%" valign="top"><p align="center">MAX</p></td>
+<td width="75%" valign="top"><p>maximum (<i>r</i><sub>1</sub>, <i>r</i><sub>2</sub>,&amp;<i>r<sub>i </i></sub>&amp;<i>r<sub>n</i></sub>)</p></td>
+</tr>
+
+<tr>
+<td width="25%" valign="top"><p align="center">SUM</p></td>
+<td width="75%" valign="top"><p align="center"><img height=30 src="p69fig1.gif" width=45></p></td>
+</tr>
+</table>
+
+            <p></p>
+
+
+<div align="CENTER">Figure 2:  Fusion rules for combining <i>n</i> ranked lists, where <i>r<sub>i</i></sub> denotes the rank position of a specific database structure in the <i>i</i>-th (1 <font face="Symbol">£</font>
+ <i>i</i> <font face="Symbol">£</font>
+ <i>n</i>) ranked list.</div>
+
+
+
+<p>Our experiments involved combining searches of several different datasets using several different similarity measures in each case.  The dataset considered here contained 75 compounds selected by Kahn (1998) in a discussion of various types of structural descriptor, with each of the compounds belonging to one of 14 well-defined biological activity classes (such as angiotensin-converting enzyme inhibitors and HIV-1 protease inhibitors).  Six different types of similarity measures were used in the experiments, as detailed by Ginn <i>et al</i>. (1999); for the present, we note merely that they encoded information about the steric, electrostatic and hydrophobic characteristics of molecules (similarity measures denoted by the symbols "F" and "J"), about the 3D arrangement of pharmacophore points in molecules (denoted by the symbols "3" or "T") and about the occurrences of chains of up to 7 non-hydrogen atoms (denoted by the symbols "2" or "N").  The SUM rule was used to generate all possible combinations of rankings from these six similarity measures.  Each of the members of the dataset was used as the target structure for a similarity search and Table 3 details the mean numbers of actives (<i>i.e</i>., molecules with the same activity as the target structure) found in the top-10 nearest neighbours when averaged over all 75 searches.  The values of <i>c</i> at the top of the table denote the number of similarity measures that were fused (so that, <i>e.g</i>., <i>c</i>=1 represents the original measures and <i>c</i>=2 represents the fusion of a pair of the original measures) and a shaded element indicates a fused combination that is better than the best original individual measure (which was one of the 3D pharmacophore measures).</p>
+
+<table bgcolor="#FFFFC4" align="center" border =1 cellspacing=1 cellpadding=7 width=612>
+<tr>
+<th align="center" width="14%" valign="top" colspan=2><i>c</i>=1</td>
+<th align="center" width="16%" valign="top" colspan=2><i>c</i>=2</td>
+<th align="center" width="16%" valign="top" colspan=2><i>c</i>=3</td>
+<th align="center" width="17%" valign="top" colspan=2><i>c</i>=4</td>
+<th align="center" width="18%" valign="top" colspan=2><i>c</i>=5</td>
+<th align="center" width="20%" valign="top" colspan=2><i>c</i>=6</td>
+</tr>
+
+<tr>
+<td width="6%" valign="top">2></td>
+<td align="center" width="8%" valign="top">0.80</td>
+<td width="8%" valign="top">23</td>
+<td align="center" width="8%" valign="top">1.10</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">23F</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.28</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">23FJ</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.52</td>
+<td bgcolor="#D1FFA4" width="11%" valign="top">23FJN</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.45</td>
+<td bgcolor="#D1FFA4" width="12%" valign="top">23FJNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.43</td>
+</tr>
+
+<tr><td width="6%" valign="top">3</td>
+<td align="center" width="8%" valign="top">1.12</td>
+<td width="8%" valign="top">2F</td>
+<td align="center" width="8%" valign="top">1.04</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">23J</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.39</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">23FN</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.23</td>
+<td bgcolor="#D1FFA4" width="11%" valign="top">23FJT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.69</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr><td width="6%" valign="top">F</td>
+<td align="center" width="8%" valign="top">0.89</td>
+<td width="8%" valign="top">2J</td>
+<td align="center" width="8%" valign="top">1.01</td>
+<td width="8%" valign="top">23N</td>
+<td align="center" width="8%" valign="top">1.04</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">23FT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.43</td>
+<td bgcolor="#D1FFA4" width="11%" valign="top">23FNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.36</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+
+<tr>
+<td width="6%" valign="top">J</td>
+<td align="center" width="8%" valign="top">1.08</td>
+<td width="8%" valign="top">2N</td>
+<td align="center" width="8%" valign="top">0.68</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">23T</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.24</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">23JN</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.31</td>
+<td bgcolor="#D1FFA4" width="11%" valign="top">23JNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.43</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr><td width="6%" valign="top">N</td>
+<td align="center" width="8%" valign="top">0.63</td>
+<td width="8%" valign="top">2T</td>
+<td align="center" width="8%" valign="top">0.95</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">2FJ</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.35</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">23JT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.45</td>
+<td bgcolor="#D1FFA4" width="11%" valign="top">2FJNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.43</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr><td width="6%" valign="top">T</td>
+<td align="center" width="8%" valign="top">0.69</td>
+<td width="8%" valign="top">3F</td>
+<td align="center" width="8%" valign="top">1.09</td>
+<td width="8%" valign="top">2FN</td>
+<td align="center" width="8%" valign="top">1.08</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">23NT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.25</td>
+<td bgcolor="#D1FFA4" width="11%" valign="top">3FJNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.51</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr><td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">3J</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.25</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">2FT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.28</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">2FJN</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.28</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr><td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">3N</td>
+<td align="center" width="8%" valign="top">1.00</td>
+<td width="8%" valign="top">2JN</td>
+<td align="center" width="8%" valign="top">1.03</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">2FJT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.53</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr><td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">3T</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.32</td>
+<td width="8%" valign="top">2JT</td>
+<td align="center" width="8%" valign="top">1.10</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">2FNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.28</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr>
+<td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">FJ</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.20</td>
+<td width="8%" valign="top">2NT</td>
+<td align="center" width="8%" valign="top">0.95</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">2JNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.17</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr>
+<td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">FN</td>
+<td align="center" width="8%" valign="top">0.91</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">3FJ</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.40</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">3FJN</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.35</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr>
+<td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">FT</td>
+<td align="center" width="8%" valign="top">1.11</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">3FN</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.19</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">3FJT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.55</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr>
+<td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">JN</td>
+<td align="center" width="8%" valign="top">0.89</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">3FT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.33</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">3FNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.41</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr><td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">JT</td>
+<td align="center" width="8%" valign="top">0.93</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">3JN</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.25</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">3JNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.36</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr><td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">NT</td>
+<td align="center" width="8%" valign="top">0.85</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">3JT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.45</td>
+<td bgcolor="#D1FFA4" width="9%" valign="top">FJNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.32</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr>
+<td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">3NT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.20</td>
+<td width="9%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr>
+<td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">FJN</td>
+<td align="center" width="8%" valign="top">1.11</td>
+<td width="9%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr>
+<td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">FJT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.21</td>
+<td width="9%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr>
+<td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">FNT</td>
+<td align="center" width="8%" valign="top">1.11</td>
+<td width="9%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+
+<tr>
+<td width="6%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td bgcolor="#D1FFA4" width="8%" valign="top">JNT</td>
+<td bgcolor="#D1FFA4" align="center" width="8%" valign="top">1.12</td>
+<td width="9%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="11%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+<td width="12%" valign="top">&nbsp;</td>
+<td width="8%" valign="top">&nbsp;</td>
+</tr>
+</table>
+<p></p>
+
+<div align="center">Table 3</b>.  Mean number of actives found in the top-10 positions for chemical similarity searches when combining various numbers, <i>c</i>, of different 
+            similarity measures.<br><font size="-1"> [The pale-green shading indicates a fused result at least 
+            as good as the best original similarity measure.]</font></div>
+
+<p>It will be seen that very many of the fused combinations in Figure 3 are shaded, thus supporting the idea that improvements in effectiveness can be achieved by using more than just a single similarity measure.  The table also shows that the fraction of the combinations that are shaded increases in line with <i>c</i>, so that all combinations with <i>c<font face="Symbol">³</font>
+</i> 4 perform at least as well as the best of the individual similarity measures.  That said, the best result overall was obtained with 23FJT (rather than with 23FJNT, the combination involving all of the individual measures): thus, while simply fusing as many individual measures as are available appears to work very well, superior results may be obtained (for this dataset at least) from fusing a subset of the individual measures.</p>
+
+<p>Other datasets studied by Ginn <i>et al</i>. (1999) were: 8178 molecules from the Starlist file (available from BioByte Corp. at URL http://clogp.pomona.edu) for which experimental values of the octanol/water partition coefficient, an important parameter in statistical methods for the prediction of biological activity, were available; several sets of 3,500 molecules from the WDI database for which biological activity data were available; and 136 biological dyes used to stain cells so as to visualise various organelles.  In all cases, it was found that use of a fusion rule such as SUM generally resulted in a level of performance (however quantified) that was at least as good as (and often noticeably better than) the best individual measure.  The best individual measure often varies from one target structure to another in an unpredictable manner, and the use of a fusion rule will thus generally provide a more consistent level of searching performance than will a single measure of chemical similarity.  With the increasing number of such measures available that can be implemented with a reasonable degree of efficiency (Willett <i>et al</i>., 1998), it would seem appropriate to consider the use of more than one of them for similarity searching of chemical structure databases.</p>
+
+<h2>Conclusions</h2>
+
+<p>This paper has presented several examples of algorithms and data structures that are applicable to the processing of both textual and chemical databases.  These examples suggest that each area has much to offer to the other, with the transfer of methodology occurring from chemical to textual applications, and <i>vice versa</i>.</p>
+
+<p>The substructure searching methods discussed in the second section provide an excellent example of this transfer of ideas.  Here, an approach that was first developed for chemical retrieval (specifically in the context of 2D substructure searching) was soon shown to be applicable to many applications in the general area of textual databases.  One such application, distribution sorting, resulted in an algorithm that was then adapted for use in a rather different area of chemical retrieval (3D substructure searching).  In fact, although not discussed here, the idea of using distance and angular information for database searching has now been extended to the computationally demanding task of searching for patterns in the 3D structures of proteins, where our search methods have led to the discovery of many previously unknown structural relationships between proteins (see, <i>e.g</i>., Artymiuk <i>et al</i>., 1996, 1997).  In the case of the hypertext-comparison project, the similarity measures discussed above were originally developed for calculating the similarities between pairs of 2D molecules, while the GA for the calculation of weights was designed from the start for use in both relevance feedback and substructural analysis.  Finally, our use of data fusion for combining chemical similarity measures was a simple application of work done by others in the textual domain.  Given the range of applications we have already been able to identify, we trust that other researchers will be encouraged to investigate the many similarities that exist between chemical and textual database processing. </p>
+
+<b><p>Acknowledgements</b>. I thank all of my colleagues, past and present, for their contributions to the 
+research that has been summarised here, and the many organisations that have provided financial support for my research over the years. The Krebs Institute for Biomolecular Research is a designated Biomolecular Sciences Centre of the Biotechnology and Biological Sciences Research Council.</p>
+
+
+<h2>References</h2>
+
+
+<ul>
+<li>Adamson, G.W., Cowell, J., Lynch, M.F., McLure, A.H.W., Town, W.G. and Yapp, A.M. (1973) "Strategic considerations in the design of screening systems for substructure searches of chemical structure files."  <i>Journal of Chemical Documentation</i>, <b>13</b>, 153-157. 
+              
+<li>Arabnia, H.R. and Zhu, D., editors (1998).  <i>Proceedings of the International Conference on Multisource-Multisensor Information Fusion, Fusion. 98</i>. CSREA Press. 
+              
+<li>Artymiuk, P.J., Poirrette, A.R., Rice, D.W. and Willett, P. (1996) "Biotin carboxylase comes into the fold."  <i>Nature Structural Biology</i>, <b>3</b>, 128-132. 
+              
+<li>Artymiuk, P.J., Poirrette, A.R., Rice, D.W. and Willett, P. (1997) "A polymerase I palm in adenylyl cyclase?"  <i>Nature</i>, <b>388</b>, 1997, 33-34. 
+              
+<li>Ash, J.E., Warr, W.A. and Willett, P., editors (1991) <i>Chemical Structure Systems</i>. Chichester: Ellis Horwood. 
+              
+<li>Barnard, J.M. (1993) "Substructure searching methods: old and new."  <i>Journal of Chemical Information and Computer Sciences</i>, <b>33</b>, 532 - 538. 
+              
+<li>Barnard, J.M., Lynch, M.F. and Welford, S.M. (1984) "Computer storage and retrieval of generic chemical structures in patents.  Part 6.  An interpreter program for the generic structure language GENSAL."  <i>Journal of Chemical  Information and Computer Sciences</i>, <b>24</b>, 66-70. 
+              
+<li>Barton, I.J., Creasey, S.E., Lynch, M.F. and Snell, M.J. (1974) "An information-theoretic approach to text-searching in direct-access systems."  <i>Communications of the Association for Computing Machinery</i>, <b>17</b>, 345-350. 
+              
+<li>Belkin, N.J., Kantor, P., Fox, E.A. and Shaw, J.B. (1995) "Combining the evidence of multiple query representations for information retrieval.<i>"  Information Processing and Management</i>, <b>31</b>, 431-448. 
+              
+<li>Carhart, R.E., Smith, D.H., Venkataraghavan, R. (1985) "Atom pairs as molecular features in structure-activity studies: definition and applications."  <i>Journal of Chemical  Information and Computer Sciences</i>, <i>25</i>, 64-73. 
+              
+<li>Cooper, D., Dicker, M.E. and Lynch, M.F. (1980) "Sorting of textual databases: a variety generation approach to distribution sorting."  <i>Information Processing and Management</i>, <b>16</b>, 49-56. 
+              
+<li>Cooper, D. and Lynch, M.F. (1984) "The use of binary search trees in external distribution sorting."  <i>Information Processing and Management</i>, <b>20</b>, 547-557. 
+              
+<li>Cramer, R.D., Redl, G. and Berkoff, C.E. (1974) "Substructural analysis.  A novel approach to the problem of drug design."  <i>Journal of Medicinal Chemistry</i>, <b>17</b>, 533-535. 
+              
+<li>Crestani, F. and Melucci, M. (1998) "A case study of automatic authoring: From a textbook to a hyper-textbook."  <i>Data and Knowledge Engineering</i>, <b>27</b>, 1-30. 
+              
+<li>Cringean, J.K., Pepperrell, C.A., Poirrette, A.R. and Willett, P. (1990) "Selection of screens for three-dimensional substructure searching."  <i>Tetrahedron Computer Methodology</i>, <b>3</b>, 37-46. 
+              
+<li>Edgar, S.J., Holliday, J.D. and Willett, 
+              P. (1999) "Effectiveness of retrieval in similarity searches of 
+              chemical databases: a review of performance measures." In 
+              preparation. 
+              
+<li>Ellis, D., Furner-Hines, J. and Willett, P. (1994) "On the creation of hypertext links in full-text documents: Measurement of inter-linker consistency."  <i>Journal of Documentation</i>, <b>50</b>, 67-98. 
+              
+<li>Ellis, D., Furner-Hines, J. and Willett, P. (1996) "On the creation of hypertext links in full-text documents: Measurement of retrieval effectiveness."  <i>Journal of the American Society for Information Science</i>, <b>47</b>, 287-300. 
+              
+<li>Gillet, V.J., Willett, P. &amp; Bradshaw, J. (1998) "Identification of biological activity profiles using substructural analysis and genetic algorithms."  <i>Journal of Chemical Information and Computer Sciences</i>, <b>38</b>, 165-179. 
+              
+<li>Ginn, C.M.R., Willett, P. and Bradshaw, J. (1999) "Combination of molecular similarity measures using data fusion."  <i>Perspectives in Drug Discovery and Design</i>, submitted for publication. 
+              
+<li>Hall, D.L. (1992) <i>Mathematical Techniques in Multisensor Data Fusion</i>. Northwood, MA: Artech House. 
+              
+<li>Jakes, S.E. and Willett, P. (1986) "Pharmacophoric pattern matching in files of 3-D chemical structures: selection of inter-atomic distance screens."  <i>Journal of Molecular Graphics</i>, <b>4</b>, 12-20. 
+              
+<li>Kahn, S.D. (1998) "Combinatorial libraries: structure activity analysis, in: Schleyer, P.v.R., Allinger, N.L., Clark, T., Gasteiger, J., Kollman, P.A., Schaefer III, H.F. and Schreiner, P.R., editors, <i>Encyclopedia of Computational Chemistry</i>. 
+              Chichester: John Wiley. Vol 1, pp. 417-425. 
+              
+<li>Kier, L.B. (1987) "Indexes of molecular shape from chemical graphs<i>."  Medicinal Research Reviews</i>, <b>7</b>, 417-440. 
+              
+<li>Lynch, M.F. (1977) "Variety generation - a re-interpretation of Shannon. s mathematical theory of communication and its implications for information science<i>.</i>"<i>  Journal of the American Society for Information Science</i>, <b>28</b>, 19-25. 
+              
+<li>Lynch, M.F. and Willett, P. (1987) "Information retrieval research in the Department of Information Studies, University of Sheffield."  <i>Journal of Information Science</i>, <b>13</b>, 
+              221-234. 
+              
+<li>Markey, K. (1984) "Inter-indexer consistency tests: A literature review and report of a test of consistency in indexing visual materials."  <i>Library and Information Science Research</i>, <b>6</b>, 155-177. 
+              
+<li>Martin. Y.C. and Willett, P., editors (1998)  <i>Designing Bioactive Molecules: Three-Dimensional Techniques and Applications</i>. Washington: 
+              American Chemical Society. 
+              
+<li>Maybury, M.T., editor (1997) <i>Intelligent Multimedia Information Retrieval</i>. Cambridge MA: MIT Press. 
+              
+<li>Ormerod, A., Willett, P. and Bawden, D. (1989) "Comparison of fragment weighting schemes for substructural analysis."<i> Quantitative Structure-Activity Relationships</i>, <b>8</b>, 115-129. 
+              
+<li>Robertson, A.M. and Willett, P. (1996) "An upperbound to the performance of ranked-output searching: optimal weighting of query terms using a genetic algorithm."  <i>Journal of Documentation</i>, <b>52</b>, 1996, 405-420. 
+              
+<li>Robertson, S.E. and Sparck Jones, K. (1976) "Relevance weighting of search terms."  <i>Journal of the American Society for Information Science</i>, <b>27</b>, 129-146. 
+              
+<li>Salton, G. (1989) <i>Automatic Text Processing</i>. Reading, MA: 
+              Addison-Wesley. 
+              
+<li>Salton, G. and Buckley, C. (1990) "Improving retrieval performance by relevance feedback."  <i>Journal of the American Society for Information Science</i>, <b>41</b>, 288-297. 
+              
+<li>Sparck Jones, K. and Willett, P., editors (1997) <i>Readings in Information Retrieval</i>. San Francisco: Morgan Kaufmann. 
+              
+<li>Welford, S.M., Lynch, M.F. and Barnard, J.M. (1981) "Computer storage and retrieval of generic chemical structures in patents.  Part 3.  Chemical structure grammars and their role in the manipulation of chemical structures."  <i>Journal of Chemical  Information and Computer Sciences</i>, <b>21</b>, 161-168. 
+              
+<li>Willett, P. (1981) "A fast procedure for the calculation of similarity coefficients in automatic classification."  <i>Information Processing and Management</i>, <b>17</b>, 53-60. 
+              
+<li>Willett, P. (1982) "The calculation of inter-molecular similarity coefficients using an inverted file algorithm."  <i>Analytica Chimica Acta</i>, <b>138</b>, 339-342. 
+              
+<li>Willett, P. (1995) "Searching for pharmacophoric patterns in databases of three-dimensional chemical structures."  <i>Journal of Molecular Recognition</i>, <b>8</b>, 290-303. 
+              
+<li>Willett, P. (1997) "Information retrieval research in the University of Sheffield", <i>ACM SIGIR Forum</i>, <b>31</b>(2), 7-13. 
+              
+<li>Willett, P., Barnard, J.M. and Downs, G.M. (1998) "Chemical similarity searching."  <i>Journal of Chemical  Information and Computer Sciences</i>, <b>38</b>, 983-996. 
+              
+<li>Willett, P., Winterman, V., Bawden, D. (1986) "Implementation of nearest neighbour searching in an online chemical structure search system <b>26</b>, 36-41.</li>
+</ul>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Willett, Peter  (2000)&nbsp; &quot;Textual and chemical information processing: different domains but similar algorithms&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>5</strong>(2) Available at: http://informationr.net/ir/5-2/paper69.html</p>
+<p style="text-align : center">&copy; the author, 2000. &nbsp; Last updated: 5th January 2000 </p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:ZZ7pZbFIsaYJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+ <table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres52.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper69" ALIGN=middle  WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+ 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/5-2/paper69.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:25:35 GMT -->
+</html>

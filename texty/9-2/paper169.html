@@ -1,0 +1,1735 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/9-2/paper169.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:22:05 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>The challenge of automated tutoring in Web-based learning environments for information retrieval instruction</title>
+<link href="../IRstyle.css" rel="stylesheet" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+<meta name="robots" content="all" />
+<meta name="dc.title" content="The challenge of automated tutoring in Web-based learning environments for information retrieval instruction" />
+<meta name="dc.creator" content="Sormunen, Eero; Pennanen, Sami" />
+<meta name="dc.subject" content="information literacy, World Wide Web, Web, learning environments,  information retrieval, Query Performance Analyser, query performance, searching skills, performance feedback, log analysis, Boolean, best-match, automated tutoring system" />
+<meta name="dc.description" content="The need to enhance information literacy education increases demand for effective Web-based learning environments for information retrieval instruction. The paper introduces the Query Performance Analyser, a unique instructional tool for information retrieval learning environments. On top of an information retrieval system and within a given search assignment, the Query Performance Analyser supports learning by instantly visualizing achieved query performance. Although the Query Performance Analyser is a useful tool in training searching skills, performance feedback is not enough for learners practicing alone in Web-based learning environments. The paper reports the findings of a log analysis on user problems in exercising Boolean and best-match queries. A blueprint of an automated tutoring system for IR instruction is presented." />
+<meta name="dc.publisher" content="Professor T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.subject.keywords" content="information literacy, World Wide Web, Web, learning environments,  information retrieval, Query Performance Analyser, query performance, searching skills, performance feedback, log analysis, Boolean, best-match, automated tutoring system" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.relation.IsPartOf" content="infres92.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+
+<style type="text/css">
+#button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+#button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+#button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+#button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+</style>
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+</style>
+</head>
+<body  bgcolor="#ffffff">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"> <img src="../mini_logo2.gif" width="336" height="45" alt="header" /><br />
+Vol. 9  No. 2, January 2004<br /><br /><div id="button">
+<ul>
+	<li><a href="infres93.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+
+</ul>
+</div></td></tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+<hr size="3" style="color:#000080 ;" />
+
+<h1>The challenge of automated tutoring in Web-based learning environments for information retrieval instruction</h1>
+
+<h4 align="center"><a href="mailto:eero.sormunen@uta.fi">Eero Sormunen</a> &amp; Sami Pennanen<br  />
+Department of Information Studies <br />
+University of Tampere <br />
+Finland </h4><br />
+    <div align="center">
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: Blue;" onclick="doChangeFont()" /></div>
+  <hr size="1" style="color:#000080 ;" />
+<div align="center"><b>Abstract</b></div>
+
+<blockquote>The need to enhance information literacy education increases demand for effective Web-based learning environments for information retrieval instruction. The paper introduces the Query Performance Analyser, a unique instructional tool for information retrieval learning environments. On top of an information retrieval system and within a given search assignment, the Query Performance Analyser supports learning by instantly visualizing achieved query performance. Although the Query Performance Analyser is a useful tool in training searching skills, performance feedback is not enough for learners practicing alone in Web-based learning environments. The paper reports the findings of a log analysis on user problems in exercising Boolean and best-match queries. A blueprint of an automated tutoring system for IR instruction is presented.</blockquote>
+  <hr size="1" style="color:#000080 ;" />
+<br />
+
+<h2>Introduction</h2>
+
+<p>The role of the Web as a major Internet service has been characterised by the explosion of information supply including freely accessible Web resources and digital library services. Information retrieval (IR) systems are used not only by information experts, but also by a growing number of other people as a daily routine. Libraries are actively developing programmes and courses to meet the increasing demand for information literacy education. A large share of that work has focused on Web-based learning environments (<a href="#dun02">Dunn 2002</a>, <a href="#orr01">Orr <em>et al.</em> 2001</a>).</p>
+
+<p>Query Performance Analyser (QPA) is a tool for the visualization of query effectiveness developed at the University of Tampere. Since 1998, the tool has been used routinely at the University to demonstrate information retrieval phenomena in the classroom and to create search exercises in searching the Web.  (<a href="#hal00">Halttunen and Sormunen 2000</a>, <a href="#sor02b">Sormunen <em>et al.</em> 2002</a>). In 2002, a new version of QPA in Java was launched, and a pilot study to apply the tool in training users of academic and polytechnic libraries was begun.</p>
+
+<p>One of the first lessons of the pilot study was that libraries were lacking resources needed to organize supervised, small group exercises for training students' practical skills in information retrieval. Libraries are forced to count on Web-based course materials and exercises used by students independently at their own pace. This raised a new challenge for the Query Performance Analyser. Our own classroom experience was that students not having the basic skills of searching needed tutoring in exercises to advance in the learning process. The question is: What type of tutoring do the users of QPA need in independently conducted search exercises, and what aspects of the user support could be managed by an automated tutoring system?</p>
+
+<p>The paper starts with a short description of the QPA system and its uses. Next, the results of a log analysis on user errors in search exercises are presented. The paper ends with a discussion on possibilities and forms of automated tutoring in a QPA-supported learning environment. </p>
+
+<h2>Query Performance Analyser and information retrieval learning environments </h2>
+
+<p>The Query Performance Analyser (QPA) was developed at the Department of Information Studies, University of Tampere, to serve as a tool for rapid query performance analysis, comparison and visualisation (<a href="#sor98">Sormunen <em>et al.</em> 1998</a>). On top of a standard test collection, it gives an instant visualisation of performance achieved by any user-generated query in an assigned search task. QPA has been applied both in IR instruction (<a href="#hal00">Halttunen &amp; Sormunen 2000</a>, 
+<a href="#hal03a">Halttunen 2003a</a>, <a href="#hal03b">2003b</a>) and in IR research (<a href="#sor00">Sormunen 2000</a>, <a href="#sor02">2002</a>, <a href="#sor02b">Sormunen <em>et al.</em>, 2002</a>). </p>
+
+<p>Figure 1  presents the general architecture of QPA (version 5.1). The application consists of two modules. The main application supports three basic functions (query formulation, viewing of results, logout) and six optional functions (change of system settings, performance visualisations, selection of queries and documents into a personal work space, viewing a personal search history, hall of fame, help pages). At present, QPA is interfaced to a traditional Boolean IR system (TRIP) and a probabilistic IR system (InQuery) providing access to the TREC collection and three Finnish test collections. </p>
+
+<div align="center"><img src="p169fig1.gif" width="642" height="445" alt="p169figure1" /></div>
+<br />
+<div align="center">Figure 1: General architecture of the Query Performance Analyser</div>
+
+<p>The Administration module is used to administrate three things: basic search topics, search assignments, and users. Basic search topics are created by composing a search topic description and feeding relevance data. Search assignments (exercises) are created by selecting a search topic, composing the actual assignment text displayed to the user and selecting functions and performance feedback forms available for the learner.</p>
+
+<p>QPA can be linked to any Web-based learning environment using a straightforward procedure. The teacher accesses the Administration module and creates a search assignment on top of a selected search topic. After the search assignment has been created, a link is added on the Web page of a learning environment. By activating the link, the authorised user of the learning environment may access all QPA functions and get all performance feedback that the teacher has selected for this particular exercise.</p>
+
+<p>Figure 2 illustrates the results viewing function of the QPA. In this case, the teacher has created a search assignment on a TREC topic dealing with the potential benefits of drug legalization. All functions and performance feedback are available for the user (not a typical case). The user may observe, for example, from the document bar how many relevant documents were found, and how they are located within the result set. From the recall pie, the user sees how large a share of relevant documents were retrieved (or not retrieved). If the user selects [Visualization], s/he may compare the performance of selected queries in the form of document bars or traditional precision recall curves. We do not discuss further the details of QPA functions here. </p>
+
+<div align="center"><img src="p169fig2.jpg" width="650" height="552" alt="p169figure2" /></div>
+<br />
+<div align="center">Figure 2: The QPA results viewing function</div>
+
+<h3>2.1&nbsp; QPA as a component of a learning environment</h3>
+
+<p>QPA can be used for different purposes: for the tutor in a classroom, QPA is a tool to show the overall effectiveness of any query. It is easy to demonstrate how any reformulation of a query, or any change in the retrieval system reflects on query performance. For the designer of a learning environment, QPA is a tool for creating Web-based searching exercises on which students may work at their own pace. For a  student, the analyser is an environment for learning by doing, for example, the query formulation tactics in Boolean or best-match retrieval systems. </p>
+
+<p>In Boolean queries, visualisation of search results with colour coding is an efficient tool to demonstrate the size and the content of the result set. For instance, in a database of news articles it is easy to illustrate how relevant articles occur in clusters in the chronologically ordered result set, sometimes quite far from the top. The observation that so many relevant documents are not retrieved although a query was carefully designed can be a shocking experience for a user who has worked only with traditional searching environments. </p>
+
+<p>In best-match queries, visualisation of search results is very useful when demonstrating the changes in the relevance ranking of documents from one query to another. It is much more difficult for the user to gain control over the search results in best-match systems than in the (exact-match) Boolean systems. Nor is there an established corpus of expertise in everyday best-match searching comparable to that of Boolean searching. Thus, QPA is also an excellent instrument for teachers (and for researchers) to learn, demonstrate, and develop searching strategies for best-match systems. </p>
+
+<h3>Empirical studies on the Query Performance Analyser</h3>
+
+<p>Halttunen conducted an experimental study on the use of QPA as a component of a learning environment (see <a href="#hal00">Halttunen &amp; Sormunen 2000</a>, <a href="#hal03a">Halttunen 2003a</a> and <a href="#hal03b">2003b</a>, <a href="#hal03">Halttunen &amp; J&auml;rvelin, in press</a>). From the viewpoint of automated tutoring, the study on scaffolding in information retrieval instruction  is especially interesting. </p>
+
+<p>Scaffolding is one of the instructional methods applied in modern learning environments together with modelling, coaching, articulation, reflection and exploration. As defined by Halttunen, scaffolding refers to: </p>
+
+<blockquote>...different kinds of supports that learners receive in their interaction with teachers, tutors and different kinds of tools within the learning environment as they develop new skills, concepts or levels of understanding. (<a href="#hal03a">Halttunen 2003a</a>: 377)</blockquote>
+
+<p>Scaffolding enables learners to perform activities they were unable to perform without this support. Fading is closely related to scaffolding and represents the idea of gradually removing support when learners can cope with the task independently.</p>
+
+<p>Various types of scaffolds can be applied in information retrieval instruction in both classrooms and instructional tools like QPA. QPA provides the following scaffolds (modified from <a href="#03a">Halttunen 2003a</a>):</p>
+
+<ul>
+  <li>Giving away parts of a solution: instant query performance feedback in the form of the document bar and recall pie chart.</li>
+  <li>Providing cues: give hint text, display an unretrieved, relevant document.  </li>
+  <li>Providing examples: best queries in the 'Hall of Fame'.</li>
+  <li>Providing comparison: comparison of precision:recall curves or document bars of the most recent or selected queries.</li>
+</ul>
+
+<p>In the classroom, the tutor may use other scaffolds:</p>
+<ul>
+  <li>Giving away parts of a solution: suggesting query terms. </li>
+  <li>Providing cues: suggesting operators, syntax, or query formulation. </li>
+  <li>Providing examples: modelling a search process or a search strategy. </li>
+  <li>Coaching comments: 'Why did this happen?' </li>
+  <li>Asking questions: 'How does that affect...?' </li>
+  <li>Providing a timeline: for example, a search process timeline. </li>
+</ul>
+
+<p>When comparing the scaffolds provided by the QPA software and by the human tutor, it is easy to recognize that they complement each other. The key support by QPA is focused on query performance. It is based on 'knowing relevant documents' and on exploiting relevance data in the analysis search results. For the human tutor this type of support is difficult if not impossible. On the other hand, the human tutor can very flexibly help in various types of problems; even in unexpected, occasional incidents. The human tutor may also use the various modes of communication appropriate in particular situations.</p>
+
+<p>Scaffolding and anchored instruction were studied in a quasi-experiment comparing a traditional and an  experimental instructional design in an introductory course on IR at the University of Tampere. The course included lectures, independently-made Web-exercises, tutored exercises and course feedback. The experimental group made tutored exercises differently using QPA while the other used operational search systems (<a href="#hal03a">Halttunen 2003a</a>).</p>
+
+<p>The main findings of the study were (<a href="#hal03a">Halttunen 2003a</a>):</p>
+
+<ul>
+  <li>Students in the experimental group paid more attention to the process approach and the interplay of theory and practice than students in the traditional group.</li>
+  <li>Students in the experimental group spent little less time in weekly exercises and evaluated their learning outcomes better.</li>
+  <li>The effectiveness of queries was better in the experimental group. </li>
+</ul>
+
+<p>These findings suggest that the appropriate use of QPA makes IR instruction both more efficient and more effective.  On the other hand, the instructional experiment illustrates the limits of scaffolds provided by QPA. If the human tutor is removed from an active role in the instructional setting, a lot of scaffolding functions have to be treated by other means; for example, by learning materials and software-based tutoring.</p>
+
+<h2>Methods and data </h2>
+
+<h3>General environment </h3>
+
+<p>We collected log data for this study in the tutored classroom exercises of  'Introduction to Information Retrieval',  an introductory course into practical skills of searching in the curriculum of information studies at the University of Tampere. About half of the students had information studies as their major subject and the other half came from other departments of the University. Although the course is an introduction to basic searching skills, some students are not really novices as searchers.</p>
+
+<p>About 120 students attended the course but since, typically, two students were sharing a PC, logs were available for 63 or 64 usernames per exercise. Two search systems were used: a traditional 
+Boolean system, TRIP, and a best-match system, InQuery. A database of some 150,000 news articles covering the years 1997-1999 and downloaded from the local newspaper <em>Aamulehti</em> was used in both retrieval systems. All queries were made through the Query Performance Analyser. </p>
+
+<p>Four of the search topics (fish recipes, lifting of a wreck, baseball scandal, and non-military service) provided with comprehensive relevance data available through QPA were used in three exercises for TRIP (fish recipes, lifting of a wreck, and baseball scandal) and in three exercises for InQuery (lifting of a wreck, baseball scandal, and non-military service). </p>
+
+<p>In total, 1,037 queries were recorded for TRIP and 388 for InQuery. We observed two of the seven exercise groups to get a general view of student behaviour and to get some background for the analysis of search logs. </p>
+
+<p>The main differences compared to a real search situation were:</p>
+
+<ul>
+  <li>the search topics were not based on personal needs but given as assignments; </li>
+  <li>students worked collaboratively in pairs; </li>
+  <li>automatic performance feedback was given by QPA; and  </li>
+  <li>a human tutor explained assignments and was available for help </li>
+</ul>
+
+<p>Thus, the results should not be generalized to real search situations, although they may reflect some of the problems novice searchers typically have.</p>
+
+<h3>Log data samples</h3>
+
+<p>We made two types of log analysis. The first data set consisted of low-performance queries not exceeding the level of 10% in average uninterpolated precision (<i>P<sub>ave</sub></i>). The sample helps to find errors which have a serious effect on search effectiveness. For this sample of queries, a single primary error for low performance was named applying the three layer model by <a href="#bor96">Borgman (1996)</a> as a framework (see the sub-section 'Error categories' below).</p>
+
+<p>The analysis of low-performance queries does not necessarily help much in revealing user problems in improving non-optimal, partially successful queries. To avoid this problem we made a log analysis in a sample of complete search sessions by two user groups extreme in terms of success. Six search sessions per search task were selected from successful sessions (users called 'high-flyers') and from unsuccessful sessions (users called 'losers') for both TRIP and InQuery. Unfortunately, one of the InQuery search tasks was so trivial that distinct performance differences did not occur, and only two of the best-match search tasks could be used.</p>
+
+<p>In total, 36 search sessions were analysed for TRIP and 24 for InQuery. The same framework by <a href="#bor96">Borgman (1996)</a> was also  used here for the analysis of errors but now all errors identified from a query were taken into account. The session-based data helped to identify errors that were solved or remained unsolved during search sessions, and also to find differences between successful and unsuccessful searchers. </p>
+
+<h3>Error categories</h3>
+
+<p>Borgman's framework contains three layers for the analysis of searcher errors. The layers characterize the level of knowledge with which errors are associated:</p>
+ 
+<blockquote><ul>
+  <li>Conceptual knowledge of the information retrieval process&mdash;translating an information need into a searchable query;</li>
+<li>Semantic knowledge of how to implement a query in a given system&mdash;the how and when to use system features;</li>
+<li>Technical skills in executing the query&mdash;basic computing skills and the syntax of entering queries as specific search statements.  (Borgman, 1996: 495)</li></ul></blockquote>
+
+
+<p>The framework gives a good general basis for a consistent analysis of log data. However, it has to be adapted for the search task and retrieval system at hand and error categories derived inductively from data (see e.g. <a href="#sit98">Sit 1998</a>). In our case, the database contained full-text, indexed news articles, and searching was usually based on plain text contents. In only one of the four search topics, could the user  obviously benefit by using field searching (limiting the search to one editorial section of the newspaper). </p>
+
+<p>Since well-specified topics were used in QPA exercises, we used an inclusive query planning procedure developed in an earlier study (<a href="#sor00">Sormunen 2000</a>) to fine-tune the framework. For each topic used in the course, we identified all searchable facets (concepts) defined as an exclusive aspect of a search topic. A facet was regarded as either primary or secondary. A primary facet is a major search concept without which a highly effective query can hardly be formulated. Secondary facets may be used to improve precision but bring in a clear risk of recall losses (in Boolean queries). </p>
+
+<p>For primary facets, we composed comprehensive lists of alternative query terms and tested by QPA which disjunctions ('OR'ed sets) of query terms guaranteed 100% recall. This analysis gave us a framework to analyse which facets or query terms the user might have missed. The opposite case, what facets or query terms used were inappropriate, was easier, since the effect of them could be tested easily by QPA.</p>
+
+<p>Inclusive query plans create a solid ground for error taxonomies, especially at the layer of conceptual knowledge. At the conceptual level, the art of effective searching is based on the searcher's ability to identify the most important aspects of an information need (search topic). Another important question is how the searcher finds appropriate query terms to represent a facet.</p>
+
+<p>We emphasized the analysis of conceptual knowledge errors because most search tasks were totally based on free-text searching. The set of available functions and query elements was small keeping the risk low for errors associated with technical skills and semantic knowledge. The conceptual layer is also more challenging from the viewpoint of automated tutoring.</p>
+
+<h2>Results and discussion</h2>
+
+<h3>Low-performance queries</h3>
+
+<p>The results of the error analysis for 334 low performance queries are presented in Table 1. The first,  obvious result was that users fail more often in Boolean than in best-match queries. In Boolean queries, 28% of queries (287 out of 1037) performed poorly while in best-match queries only 12% (47 out of 388) lead to drastic performance problems. The low error rate in best-match queries was not a surprise since best-match IR models have been developed to improve system robustness against minor  errors in the query fromulation (see e.g., <a href="#ing95">Ingwersen &amp; Willett, 1995</a>). </p>
+
+<a id="Table1" name="Table1" />
+<table width="716" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;" align="center">
+
+<caption align="bottom"><br /><strong>Table 1: Distribution of errors in low performance queries for which average uninterpolated precision was less than 10%. Boolean: 287 out of 1037 queries (28%); Best-match: 47 out of 388 queries (12%).</strong></caption>
+  <tr>
+    <th width="231" rowspan="2">Category</th><th width="151" colspan="2">Boolean queries</th><th width="170" colspan="2">Best-match queries</th><th width="159" colspan="2"><b>All queries</b></th>
+  </tr>
+  <tr><td width="78" align="center"><b>No.</b></td><td width="72" align="center"><b>%</b></td><td width="92" align="center"><b>No.</b></td><td width="77" align="center"><b>%</b></td><td width="79" align="center"><b>No.</b></td><td width="79" align="center"><b>%</b></td></tr>
+  <tr>
+    <td height="20" width="229"><strong>Technical skills errors</strong></td><td width="78" align="center"><strong>46</strong></td><td width="72" align="center"><strong>16</strong></td><td width="92" align="center"><strong>40</strong></td><td width="77" align="center"><strong>85</strong></td><td width="79" align="center"><strong>86</strong></td><td width="79" align="center"><strong>26</strong></td>
+  </tr>
+  <tr>
+    <td height="20" width="229">&nbsp;&nbsp;&nbsp;Common syntax error</td><td width="78" align="center">41</td><td width="72" align="center">14</td><td width="92" align="center">33</td><td width="77" align="center">70</td> <td width="79" align="center">74</td><td width="79" align="center">22</td>
+  </tr>
+  <tr><td height="20" width="229">&nbsp;&nbsp;&nbsp;Misspelling</td><td width="78" align="center">5</td>
+<td width="72" align="center">2</td><td width="92" align="center">7</td><td width="77" align="center">15</td>
+<td width="79" align="center">12</td><td width="79" align="center">4</td></tr>
+  <tr>
+    <td width="231"><b>Semantic knowledge errors</b></td><td width="78" align="center"><b>37</b></td>
+<td width="72" align="center"><b>13</b></td><td width="92" align="center"><b>7</b></td><td width="77" align="center"><b>15</b></td><td width="79" align="center"><b>44</b></td><td width="79" align="center"><b>13</b></td></tr>
+  <tr>
+    <td width="231">&nbsp;&nbsp;&nbsp;Field error</td>
+    <td width="78" align="center">9</td>
+    <td width="72" align="center">3</td>
+    <td width="92" align="center">0</td>
+    <td width="77" align="center">0</td>
+    <td width="79" align="center">9</td>
+    <td width="79" align="center">3</td>
+  </tr>
+  <tr>
+    <td width="231">&nbsp;&nbsp;&nbsp;Parenthesis error</td>
+    <td width="78" align="center">14</td>
+    <td width="72" align="center">5</td>
+    <td width="92" align="center">0</td>
+    <td width="77" align="center">0</td>
+    <td width="79" align="center">14</td>
+    <td width="79" align="center">4</td>
+  </tr>
+  <tr>
+    <td width="231">&nbsp;&nbsp;&nbsp;AND-operator error</td>
+    <td width="78" align="center">3</td>
+    <td width="72" align="center">1</td>
+    <td width="92" align="center">0</td>
+    <td width="77" align="center">0</td>
+    <td width="79" align="center">3</td>
+    <td width="79" align="center">1</td>
+  </tr>
+  <tr>
+    <td width="231">&nbsp;&nbsp;&nbsp;OR-operator error</td>
+    <td width="78" align="center">10</td>
+    <td width="72" align="center">3</td>
+    <td width="92" align="center">0</td>
+    <td width="77" align="center">0</td>
+    <td width="79" align="center">10</td>
+    <td width="79" align="center">3</td>
+  </tr>
+  <tr>
+    <td width="231">&nbsp;&nbsp;&nbsp;Proximity operator error</td>
+    <td width="78" align="center">1</td>
+    <td width="72" align="center">0</td>
+    <td width="92" align="center">7</td>
+    <td width="77" align="center">15</td>
+    <td width="79" align="center">8</td>
+    <td width="79" align="center">2</td>
+  </tr>
+  <tr>
+    <td width="231"><b>Conceptual knowledge errors</b></td>
+    <td width="78" align="center"><b>204</b></td>
+    <td width="72" align="center"><b>71 </b></td>
+    <td width="92" align="center"><b>0</b></td>
+    <td width="77" align="center"><b>0 </b></td>
+    <td width="79" align="center"><b>204</b></td>
+    <td width="79" align="center"><b>61 </b></td>
+  </tr>
+  <tr>
+    <td width="231">&nbsp;&nbsp;&nbsp;Important facet missed</td>
+    <td width="78" align="center">20</td>
+    <td width="72" align="center">7</td>
+    <td width="92" align="center">0</td>
+    <td width="77" align="center">0</td>
+    <td width="79" align="center">20</td>
+    <td width="79" align="center">6</td>
+  </tr>
+  <tr>
+    <td width="231">&nbsp;&nbsp;&nbsp;Special facet missed</td>
+    <td width="78" align="center">41</td>
+    <td width="72" align="center">14</td>
+    <td width="92" align="center">0</td>
+    <td width="77" align="center">0</td>
+    <td width="79" align="center">41</td>
+    <td width="79" align="center">12</td>
+  </tr>
+  <tr>
+    <td width="231">&nbsp;&nbsp;&nbsp;Weak facet applied</td>
+    <td width="78" align="center">105</td>
+    <td width="72" align="center">37</td>
+    <td width="92" align="center">0</td>
+    <td width="77" align="center">0</td>
+    <td width="79" align="center">105</td>
+    <td width="79" align="center">31</td>
+  </tr>
+  <tr>
+    <td width="231">&nbsp;&nbsp;&nbsp;Important terms missed</td>
+    <td width="78" align="center">17</td>
+    <td width="72" align="center">6</td>
+    <td width="92" align="center">0</td>
+    <td width="77" align="center">0</td>
+    <td width="79" align="center">17</td>
+    <td width="79" align="center">5</td>
+  </tr>
+  <tr>
+    <td width="231">&nbsp;&nbsp;&nbsp;Inappropriate terms used</td>
+    <td width="78" align="center">21</td>
+    <td width="72" align="center">7</td>
+    <td width="92" align="center">0</td>
+    <td width="77" align="center">0</td>
+    <td width="79" align="center">21</td>
+    <td width="79" align="center">6</td>
+  </tr>
+  <tr>
+    <td width="231"><b>Total</b></td>
+    <td width="78" align="center"><b>287</b></td>
+    <td width="72" align="center"><b>100 </b></td>
+    <td width="92" align="center"><b>47</b></td>
+    <td width="77" align="center"><b>100 </b></td>
+    <td width="79" align="center"><b>334</b></td>
+    <td width="79" align="center"><b>100 </b></td>
+  </tr>
+</table>
+
+<p>In best-match queries, most errors were technical, and associated with a special feature of the normalized database index. Best-match queries failed badly also when the user misspelled query terms or applied too restricting proximity operators. (InQuery also supports Boolean and proximity operators contrary to most best-match systems, but their use is not obligatory.) An important result is that conceptual knowledge errors were never the most obvious reason for low effectiveness in best-match queries.</p>
+
+<p>In low-performance Boolean queries, about 70% of errors related to conceptual knowledge. Users applied often weak secondary or inappropriate facets (37% of errors) to limit the size of a result set. On the other hand, users did not always recognize primary facets which led to low precision (primary facets missed 21%). Missed or inappropriately selected query terms were less important but notable categories of errors (13% in total).</p>
+
+<p>Only 13% of errors related to semantic knowledge. Problems were typically associated with the formulation of logically valid query statements. The share of technical errors was slightly higher (16%): these arose mainly from statements lacking operators or having incorrect truncation characters.</p>
+
+<p>The low rate of semantic and technical errors may be explained by the fact that most search tasks required only queries in full-text indexes. However, the high rate of conceptual errors support the earlier findings that Boolean queries are very sensitive to the user's decision on query facets used (see 
+<a href="#bla85">Blair &amp; Maron 1985</a>, <a href="#sor01">Sormunen 2001</a> and 
+<a href="#sor02">2002</a>).  Any single facet (as a conjunctive block of a Boolean query) may collapse 
+the number of relevant documents retrieved. Either the facet is not explicitly expressed in all relevant documents or the searcher does not discover all terms by which the facet has been referred.</p>
+
+<h3>Analysis of search sessions</h3>
+
+<h4>Performance</h4>
+
+<p><a href="#Table2">Table 2</a> characterizes queries made by high-flyers and losers in their search sessions. On average, learners formulated 4.9 Boolean queries and 5.4 best-match queries per session. High-flyers stopped earlier than losers (4.4 vs. 5.4 Boolean queries and 5.1 vs. 5.8 best-match queries per session). </p>
+ 
+ <table width="605" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;" align="center">
+<caption align="bottom"><br /><strong>Table 2: The number of queries by performance category in search sessions.</strong></caption>
+   <tr>
+    <th width="198">Query</th>
+    <th colspan="2" width="145">High-flyers</th>
+    <th colspan="2" width="130">Losers</th>
+    <th colspan="2" width="130">All</th>
+  </tr>
+  <tr>
+    <th>Category</th>
+    <th width="65">No.</th>
+    <th width="65">%</th>
+    <th width="65">No.</th>
+    <th width="65">%</th>
+    <th width="65">No.</th>
+    <th width="65">%</th>
+  </tr>
+  <tr>
+    <td colspan="7"><strong>a) Boolean queries by 18 high-flyer and 18 losers.</strong></td>
+  </tr>
+  <tr>
+    <td>Performance OK</td>
+    <td align="center">59</td>
+    <td align="center">74</td>
+    <td align="center">8</td>
+    <td align="center">8</td>
+    <td align="center">67</td>
+    <td align="center">38</td>
+  </tr>
+  <tr>
+    <td>Recall problems</td>
+    <td align="center">15</td>
+    <td align="center">19</td>
+    <td align="center">32</td>
+    <td align="center">33</td>
+    <td align="center">47</td>
+    <td align="center">26</td>
+  </tr>
+  <tr>
+    <td>Precision problems</td>
+    <td align="center">6</td>
+    <td align="center">8</td>
+    <td align="center">47</td>
+    <td align="center">48</td>
+    <td align="center">53</td>
+    <td align="center">30</td>
+  </tr>
+  <tr>
+    <td>Zero hits</td>
+    <td align="center">0</td>
+    <td align="center">0</td>
+    <td align="center">11</td>
+    <td align="center">11</td>
+    <td align="center">11</td>
+    <td align="center">6</td>
+  </tr>
+  <tr>
+    <td>Total number of queries</td>
+    <td align="center">80</td>
+    <td align="center">100</td>
+    <td align="center">98</td>
+    <td align="center">100</td>
+    <td align="center">178</td>
+    <td align="center">100</td>
+  </tr>
+  <tr>
+    <td>Queries per session</td>
+    <td align="center">4.4</td>
+    <td>&nbsp;</td>
+    <td align="center">5.4</td>
+    <td>&nbsp;</td>
+    <td align="center">4.9</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="7"> <strong>a) Best-match queries by 8 high-flyers and 8 losers.</strong></td>
+  </tr>
+  <tr>
+    <td>Performance OK</td>
+    <td align="center">27</td>
+    <td align="center">66</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">29</td>
+    <td align="center">33</td>
+  </tr>
+  <tr>
+    <td>Recall problems</td>
+    <td align="center">5</td>
+    <td align="center">12</td>
+    <td align="center">6</td>
+    <td align="center">13</td>
+    <td align="center">11</td>
+    <td align="center">13</td>
+  </tr>
+  <tr>
+    <td>Precision problems</td>
+    <td align="center">9</td>
+    <td align="center">22</td>
+    <td align="center">33</td>
+    <td align="center">72</td>
+    <td align="center">42</td>
+    <td align="center">48</td>
+  </tr>
+  <tr>
+    <td>Zero hits</td>
+    <td align="center">0</td>
+    <td align="center">0</td>
+    <td align="center">5</td>
+    <td align="center">11</td>
+    <td align="center">5</td>
+    <td align="center">6</td>
+  </tr>
+  <tr>
+    <td>Total number of queries</td>
+    <td align="center">41</td>
+    <td align="center">100</td>
+    <td align="center">46</td>
+    <td align="center">100</td>
+    <td align="center">87</td>
+    <td align="center">100</td>
+  </tr>
+  <tr>
+    <td>Queries per session</td>
+    <td align="center"> 5.1</td>
+    <td>&nbsp;</td>
+    <td align="center">5.8</td>
+    <td>&nbsp;</td>
+    <td align="center"> 5.4</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+<p>In the group of 'high-flyers', 74% of Boolean queries and 66% of best-match queries were effective (average uninterpolated precision <i>P<sub>ave</sub></i> close to the best query known). In the group of 'losers', only 8% (Boolean) and 4% (best-match) of queries, respectively, achieved a good level of performance.</p>
+
+<p>'High-flyers' faced more recall than precision problems (19% vs. 8%) in Boolean queries but the situation was the opposite in best-match queries. They did not suffer from the problem of zero hits in either of the systems. The 'loser' group suffered from high rates of precision problems in both systems (48% and 76%). In some cases, they could not find a single document (11% of queries in both systems). </p>
+
+<p>In both systems, more than one half of sessions in the 'losers' group contained multiple types of performance problems (recall/precision/zero hits). The results suggest that 'losers' had serious difficulties in formulating balanced query statements. Performance tended to swing between low recall and low precision.</p>
+
+<h4><a name="errors" id="errors"></a>Errors</h4>
+
+<p>The results of the session-based error analysis are presented in <a href="#Appendix1">Appendix 1</a> (Boolean) and <a href="#Appendix2">Appendix 2</a> (best-match). The total number of 198 errors could be identified from Boolean queries entered in 36 search sessions (about 1.1 errors per query and 5.5 per session). The total number of errors in best-match queries was 109 in 24 sessions (1.3 errors per query and 6.8 per session). Overall differences in error rates were quite small between the IR systems.</p>
+
+<p>Identified errors were categorized into three groups:</p>
+
+<ol type="A">
+  <li><b><i>Unsolved errors.</i></b> Errors had a distinct effect on query performance and the users could not solve them during the session. The share of unsolved errors was 26% for Boolean and 17% for best-match queries.   </li>
+
+  <li><i><b>Solved errors</b>.</i> Errors had a distinct effect on query performance but the users could solve them consciously or accidentally during the session. The share of solved errors was 40% for Boolean and 24% for best-match queries.   </li>
+
+  <li><i><b>Errors not really affecting performance.</b></i> These errors were or were not solved but, in any event,  did not have a distinct effect on query performance. Thirty-four percent in Boolean and nearly 60% in best-match queries belonged to this category.   </li>
+</ol>
+
+<p>In Boolean queries, the distribution between the technical and semantic errors and the conceptual errors is similar to that found in the analysis of separate low performance queries (see <a href="#Appendix1">Appendix 1</a> and <a href="#Table1">Table 1</a>). Especially, the similarity of results is obvious in categories A and B having real effect on query performance. The rate of solved and unsolved conceptual knowledge errors is high for Boolean queries. A clear distribution difference can be seen within conceptual knowledge errors when multiple errors per query are taken into account. The role of missed or inappropriately selected query terms becomes more remarkable. The even distribution of conceptual errors into four sub-categories underlines the importance of them all.</p>
+
+<p>In best-match queries (see <a href="#Appendix2">Appendix 2</a>), a major result was that a very large share of errors (59%) did not have a substantial effect on performance, and this is especially typical for conceptual errors. This is in line with our earlier result that technical and semantic errors are the best single explanation for low performance in best-match queries (see <a href="#Table1">Table 1</a>). However, not all errors dealing with conceptual knowledge are insignificant, on the contrary: the frequency of conceptual errors is well above the level of technical and semantic errors also in categories A and B. </p>
+
+<p>Table 3 shows a summary of how users were able to solve significant errors made during search sessions. In general, 60% of errors in Boolean queries and 68% in best-match queries were solved. Some errors were solved more likely than others. In both query types, technical errors were solved at a high level of probability (82%-88%). </p>
+
+<a id="Table3" name="Table3" />
+<table width="645" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;" align="center">
+ <caption align="bottom"><br /><strong>Table 3: The number and percentage of errors made and solved during search sessions.</strong></caption>
+  <tr>
+    <td>&nbsp;</td>
+    <th colspan="3" width="136">High-flyers</th>
+    <th colspan="3" width="140">Losers</th>
+    <th colspan="3" width="143">All</th>
+    </tr>
+  <tr>
+    <th>Category</th>
+    <th width="38">All</th>
+    <th width="40">OK</th>
+    <th width="52">OK%</th>
+    <th width="42">All</th>
+    <th width="43">OK</th>
+    <th width="51">OK%</th>
+    <th width="42">All</th>
+    <th width="40">OK</th>
+    <th width="59">OK%</th>
+  </tr>
+  <tr>
+    <td colspan="10"><strong>a) Boolean queries: 18 high-flyer and 18 loser searchers (see <a href="No.Appendix%201">Appendix 1</a>).</strong></td>
+  </tr>
+  <tr>
+    <td width="207">Technical skills errors</td>
+    <td align="center" width="38">2</td>
+    <td align="center" width="40">2</td>
+    <td align="center" width="52">100 </td>
+    <td align="center" width="42">15</td>
+    <td align="center" width="43">12</td>
+    <td align="center" width="51">80 </td>
+    <td align="center" width="42">17</td>
+    <td align="center" width="40">14</td>
+    <td align="center" width="59">82 </td>
+  </tr>
+  <tr>
+    <td width="207">Semantic knowledge errors</td>
+    <td align="center" width="38">2</td>
+    <td align="center" width="40">2</td>
+    <td align="center" width="52">100 </td>
+    <td align="center" width="42">16</td>
+    <td align="center" width="43">8</td>
+    <td align="center" width="51">50 </td>
+    <td align="center" width="42">18</td>
+    <td align="center" width="40">10</td>
+    <td align="center" width="59">56 </td>
+  </tr>
+  <tr>
+    <td width="207">Conceptual knowledge errors</td>
+    <td align="center" width="38">30</td>
+    <td align="center" width="40">16</td>
+    <td align="center" width="52">53 </td>
+    <td align="center" width="42">66</td>
+    <td align="center" width="43">39</td>
+    <td align="center" width="51">59 </td>
+    <td align="center" width="42">96</td>
+    <td align="center" width="40">55</td>
+    <td align="center" width="59">57 </td>
+  </tr>
+  <tr>
+    <td width="196">Important facet missed</td>
+    <td align="center" width="38">6</td>
+    <td align="center" width="40">2</td>
+    <td align="center" width="52">33 </td>
+    <td align="center" width="42">18</td>
+    <td align="center" width="43">12</td>
+    <td align="center" width="51">67 </td>
+    <td align="center" width="42">24</td>
+    <td align="center" width="40">14</td>
+    <td align="center" width="59">58 </td>
+  </tr>
+  <tr>
+    <td width="196">Weak facet applied</td>
+    <td align="center" width="38">11</td>
+    <td align="center" width="40">7</td>
+    <td align="center" width="52">64 </td>
+    <td align="center" width="42">20</td>
+    <td align="center" width="43">15</td>
+    <td align="center" width="51">75 </td>
+    <td align="center" width="42">31</td>
+    <td align="center" width="40">22</td>
+    <td align="center" width="59">71 </td>
+  </tr>
+  <tr>
+    <td width="196">Important terms missed</td>
+    <td align="center" width="38">9</td>
+    <td align="center" width="40">6</td>
+    <td align="center" width="52">67 </td>
+    <td align="center" width="42">18</td>
+    <td align="center" width="43">8</td>
+    <td align="center" width="51">44 </td>
+    <td align="center" width="42">27</td>
+    <td align="center" width="40">14</td>
+    <td align="center" width="59">52 </td>
+  </tr>
+  <tr>
+    <td width="196">Inappropriate terms used</td>
+    <td align="center" width="38">4</td>
+    <td align="center" width="40">1</td>
+    <td align="center" width="52">25 </td>
+    <td align="center" width="42">10</td>
+    <td align="center" width="43">4</td>
+    <td align="center" width="51">40 </td>
+    <td align="center" width="42">14</td>
+    <td align="center" width="40">5</td>
+    <td align="center" width="59">36 </td>
+  </tr>
+  <tr>
+    <td height="22"  width="207"><strong>Total</strong></td>
+    <td align="center" width="38"><strong>34</strong></td>
+    <td align="center" width="40"><strong>20</strong></td>
+    <td align="center" width="52"><strong>59</strong> </td>
+    <td align="center" width="42"><strong>97</strong></td>
+    <td align="center" width="43"><strong>59</strong></td>
+    <td align="center" width="51"><strong>61</strong> </td>
+    <td align="center" width="42"><strong>131</strong></td>
+    <td align="center" width="40"><strong>79</strong></td>
+    <td align="center" width="59"><strong>60</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="10"><strong>b) Best-match queries: 8 high-flyer and 8 loser searchers (see  <a href="No.Appendix%202">Appendix 2</a>).</strong></td>
+  </tr>
+  <tr>
+    <td width="207">Technical skills errors</td>
+    <td align="center" width="38">0</td>
+    <td align="center" width="40">0</td>
+    <td align="center" width="52">-</td>
+    <td align="center" width="42">2</td>
+    <td align="center" width="43">0</td>
+    <td align="center" width="51">0 </td>
+    <td align="center" width="42">2</td>
+    <td align="center" width="40">0</td>
+    <td align="center" width="59">0 </td>
+  </tr>
+  <tr>
+    <td width="207">Semantic knowledge errors</td>
+    <td align="center" width="38">0</td>
+    <td align="center" width="40">0</td>
+    <td align="center" width="52">-</td>
+    <td align="center" width="42">14</td>
+    <td align="center" width="43">6</td>
+    <td align="center" width="51">43 </td>
+    <td align="center" width="42">14</td>
+    <td align="center" width="40">6</td>
+    <td align="center" width="59">43 </td>
+  </tr>
+  <tr>
+    <td width="207">Conceptual knowledge errors</td>
+    <td align="center" width="38">11</td>
+    <td align="center" width="40">11</td>
+    <td align="center" width="52">100 </td>
+    <td align="center" width="42">18</td>
+    <td align="center" width="43">9</td>
+    <td align="center" width="51">50 </td>
+    <td align="center" width="42">29</td>
+    <td align="center" width="40">20</td>
+    <td align="center" width="59">69 </td>
+  </tr>
+  <tr>
+    <td width="196">Important facet missed</td>
+    <td align="center" width="38">7</td>
+    <td align="center" width="40">7</td>
+    <td align="center" width="52">100 </td>
+    <td align="center" width="42">9</td>
+    <td align="center" width="43">4</td>
+    <td align="center" width="51">44 </td>
+    <td align="center" width="42">16</td>
+    <td align="center" width="40">11</td>
+    <td align="center" width="59">69 </td>
+  </tr>
+  <tr>
+    <td width="196">Weak facet applied</td>
+    <td align="center" width="38">0</td>
+    <td align="center" width="40">0</td>
+    <td align="center" width="52">-</td>
+    <td align="center" width="42">3</td>
+    <td align="center" width="43">2</td>
+    <td align="center" width="51">67 </td>
+    <td align="center" width="42">3</td>
+    <td align="center" width="40">2</td>
+    <td align="center"  width="59">67 </td>
+  </tr>
+  <tr>
+    <td width="196">Important terms missed</td>
+    <td align="center" width="38">4</td>
+    <td align="center" width="40">4</td>
+    <td align="center" width="52">100 </td>
+    <td align="center" width="42">4</td>
+    <td align="center" width="43">2</td>
+    <td align="center" width="51">50 </td>
+    <td align="center" width="42">8</td>
+    <td align="center" width="40">6</td>
+    <td align="center" width="59">75 </td>
+  </tr>
+  <tr>
+    <td width="196">Inappropriate terms used</td>
+    <td align="center" width="38">0</td>
+    <td align="center" width="40">0</td>
+    <td align="center" width="52">-</td>
+    <td align="center" width="42">2</td>
+    <td align="center" width="43">1</td>
+    <td align="center" width="51">50 </td>
+    <td align="center"  width="42">2</td>
+    <td align="center" width="40">1</td>
+    <td align="center" width="59">50 </td>
+  </tr>
+  <tr>
+    <td width="207"><strong>Total</strong></td>
+    <td align="center" width="38"><strong>11</strong></td>
+    <td align="center"  width="40"><strong>11</strong></td>
+    <td align="center"  width="52"><strong>100</strong> </td>
+    <td align="center"  width="42"><strong>34</strong></td>
+    <td align="center"  width="43"><strong>15</strong></td>
+    <td align="center" width="51"><strong>44</strong> </td>
+    <td align="center" width="42"><strong>45</strong></td>
+    <td align="center"  width="40"><strong>26</strong></td>
+    <td align="center" width="59"><strong>58</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="10">
+    All = number of errors made (category A and B); Ok = number of solved errors 
+    (category B).</td>
+  </tr>
+</table>
+
+<p>A surprising result is that, in best-match queries, more technical and semantic errors were made (in proportional sense), and a smaller share of them was solved than in Boolean queries. One might think that the user does not very likely fail in formulating a bag-of-words query.  The anomaly was caused by some members of the 'loser'  group who tried to apply operators in the InQuery system but failed. InQuery supports multiple operators but their syntax is tortuous. Users were not asked to apply operators but for one reason or another they picked them from the online help linked to QPA's query formulation page. This incident exemplifies how small details of the learning environment may affect the type of errors users tend to make.</p>
+
+<p>In both systems, 'high-flyer' searchers made very few technical and semantic errors that had clear effect on performance and could recover from all of them. The group of 'losers' made quite many technical (14 to 15) and semantic errors  (14 to 16). They could solve 80-86% of the technical but only 43-50% of the semantic errors. </p>
+
+<p>'High-flyers' solved about one half of conceptual errors in Boolean queries but all of them in best-match searching. This is an interesting result since it suggests that conceptual errors are more difficult to solve in Boolean than in best-match queries. A potential explanation is that formulating a Boolean query is like walking a tightrope. The searcher has to make a complex decision of including and excluding facets and query terms to balance between recall and precision.</p>
+
+<p>In best-match queries, it is usually advantageous to apply all facets of a topic (not exclude any of them) and then select at least some key query terms for each facet. For empirical findings on optimal Boolean and best-match queries, see (<a href="#sor02">Sormunen 2002</a>). Also <a href="#Table 3">Table 3</a> supports this view. In best-match queries made by 'high-flyers',  all conceptual knowledge errors were related to missed facet and terms. The &eacute;lite of best-match searchers could recover from all conceptual knowledge errors but the best Boolean searchers could solve no more than one half of respective errors .</p>
+
+<h3>Discussion</h3>
+
+<p>Technical errors (e.g., spelling errors and syntax errors) were quite common but their role seemed to be predominant only for a very small group of users. Unfortunately, this group of users seemed to have problems at all levels of searching knowledge and is obviously a challenge for instruction. In general, technical errors were not critical. Most of the technical errors either did not have a notable influence on performance or could be solved in the course of a search session.</p>
+
+<p>A very typical technical error is that users apply symbols and formulations that are common in Web search engines, for example, the wild-card character ('*') to truncate words. Users also were mixed with two search languages available in the learning environment (Boolean and best-match). Some immaterial database features may have serious consequences in a particular search topic and increase dramatically the risk of technical 
+errors and confuse learners. Exercises should be tested carefully in advance. </p>
+
+<p>Our data on technical errors in best-match queries was biased by one immaterial feature of the database index. Most technical errors were an outgrowth of the word normalization procedure used in the index. All words not in the dictionary of the normalizer are given a special prefix. Searchers were not aware of the feature and suffered from very low performance, since the key query term for that particular topic did not match the same term in the database index. The risk of technical errors is usually associated with the exact-match and complex operators of Boolean search systems. In our data, the unforeseeable behaviour of a single query term exaggerates the role of technical errors in best-match searching.</p>
+
+<p>Semantic errors (typically dealing with the Boolean structure of queries) were a common reason for low performance but in most cases users could manage them. In our case, the semantic environment was not complex since users were mainly making free-text searching in a homogeneous news article database. As with technical errors, advanced searchers made very few and could fix all semantic errors. On the other hand, some users did not have a clear idea how to construct a sound Boolean query. Half of the errors remained unsolved in the group of 'losers'.</p>
+
+<p>Conceptual knowledge errors were dominating in both data sets (low-performance queries versus low or high performance search sessions). Both 'high-flyer's and 'losers' suffered from conceptual errors in Boolean queries but advanced users could solve them in best-match searching. It seems that all users need support at the conceptual level. The challenge is that conceptual decisions are sensitive to subjective judgment and may be based on different search strategies. </p>
+
+<p>The findings seem to be in line with earlier studies on searching errors of novice users. The role of errors associated with conceptual knowledge is typical for various types of information retrieval systems (<a href="#bor96">Borgman 1996</a>, <a href="#che90">Chen &amp; Dhar 1990</a>, <a href="#sit98">Sit 1998</a>, <a href="#sut00">Sutcliffe <em>et al.</em> 2000</a>, <a href="#ten97">Tenopir 1997</a>). The special contribution of our error analysis is that we could use the conceptual structure of inclusive query plans to systematise the analysis of errors. This step is necessarily required in creating an operational framework for an automated tutoring system. Another contribution was that Boolean and best-match queries could be analysed in the same framework.</p>
+
+<h2>Towards automated tutoring systems in IR instruction</h2>
+
+<p>At the beginning of the paper, we raised two questions:</p>
+
+<ol>
+  <li>What type of tutoring do the users of QPA need in independently conducted search exercises?</li>
+  <li>What aspects of user support could be managed by an automated tutoring system?</li>
+</ol>
+
+<p>We described first the basic characteristics of the QPA tool and the findings of the scaffolding study by 
+Halttunen (<a href="#hal03b">2003b</a>). Then we reported the results of the log analysis on user errors in tutored search exercises. In this section, we try to outline answers to the original questions.</p>
+
+<h3>The role and limits of automated tutoring</h3>
+
+<p>If we consider tutoring as a form of scaffolding, the unique feature of QPA is that it helps the user to perceive how different moves taken or methods applied in a search session affect retrieval performance. Hints, examples or models can be used in the form of static textual scaffolds also as in any Web-based resource. In learning environments using QPA as a special service in exercises, general and initial support should mainly be given by the learning environment itself. The division of tutorial functions between QPA and the 'mastering' learning environment is an important design issue.</p>
+
+<p>To expand the support provided by the QPA tool, the chances to adopt scaffolds typical for the human tutor have to be considered. Some parts of human support require common-sense knowledge (external to the search exercise) and are out of the scope of automatic tutoring.  The analysis of errors made by users <a href="#errors">presented above</a> shows that users have difficulties at all levels of searching knowledge: conceptual, semantic and technical skills. However, from the learning viewpoint semantic and especially conceptual knowledge is in the heart of tutoring.</p>
+
+<p>The advantage of QPA is that the learner's training situation is limited by the given search assignment and the underlying search topic. It is possible to build a comprehensive representation of the search domain. Building 'intelligent' user help in operational search systems is a much more complex task since searching is based on users' own information needs. (See <a href="#bat90">Bates 1990</a>, <a href="#bra02">Brajnik <em>et al</em>., 2002</a>, <a href="#fid95">Fidel &amp; Efthimiadis 1995</a>, <a href="#oak98">Oakes &amp; Taylor 1998</a>, <a href="#shu93">Shute &amp; Smith 1993</a>, <a href="#sor89">Sormunen 1989</a>). QPA does not treat other access methods than queries in a given database and this reduces also the complexity of the tutoring task. The task is by no means a trivial one but can be regarded as manageable.</p>
+
+<h3>Intelligent tutoring systems as a model</h3>
+
+<p>Intelligent tutoring systems (ITS) are a traditional knowledge engineering approach applicable here. ITS are intended to give feedback and guidance to a learner in a way similar to a human tutor  (<a href="#hum96">Hume <em>et al.</em>, 1996</a>, <a href="#khu96">Khuwaja &amp; Patel 1996</a>, <a href="#shu96">Shute &amp; Psotka, 1996</a>). Three main components of a typical ITS implementation are: </p>
+
+<ul>
+  <li>The domain model (or curriculum). This model represents the domain of knowledge that the student is studying. 
+  </li>
+  <li>The student model. The system attempts to assess what the student already knows. 
+  </li>
+  <li>The tutor (or teaching strategy). The module is planning which curriculum element ought to be instructed next and how it should be presented to the learner. 
+  </li>
+</ul>
+
+<p>The domain model of in the QPA tutoring system could be, for instance, a rule-base representing general query formulation heuristics relevant in the IR setting used and a table of facts about the search topic used. Some heuristics are general (for example, the user needs to identify at least the key facets of a topic and at least some of the query terms for each facet), some are dependent on the system used (the user applies only key facets in 
+Boolean queries but most, if not all, facets in best-match queries) and some are search task dependent (the user applies special facets, e.g. author names).  By topic dependent facts we mean, for example, lists of primary and secondary facets and corresponding query term candidates. Descriptive data may be assigned both to facets and query terms.</p>
+
+<p>By applying searching heuristics and topic-related facts, the errors and weaknesses of any query can be identified and let the user know them. Unfortunately, this is not enough since mechanical reporting of faults and giving direct advice to solve those does not necessarily lead to desired learning outcomes. The role of the tutor (in the ITS model) is to select an instructional strategy and generate an appropriate response to the user. This is not a trivial task since QPA is sharing the responsibility for scaffolding with the 'mastering' learning environment. A pragmatic strategy is that QPA provides a defined set of scaffolds and the designer of the learning environment generates complementary support for the user (for example, initial scaffolds). </p>
+
+<p>The ultimate goal of the student model is to build and update a representation of the student's current conception of the domain. Research on ITS has not managed to develop student models which work well in practice (<a href="#shu96">Shute &amp; Psotka, 1996</a>). In the case of QPA, it might be more productive to focus more on the analysis of user errors made in the search session or across search sessions. The analysis of query logs gave us examples of the types of errors the so-called 'loser'  group tended to make. The error profile of the user can be used in selecting the appropriate level in giving hints or other scaffolds to the user. </p>
+
+<h3>A tentative blueprint for an automated tutoring system</h3>
+
+<p>We have started to work on a prototype of an automated tutoring system for the QPA tool. Our main ideas are the following:</p>
+
+<ol>
+  <li>To begin with, we focus on errors at the level of conceptual knowledge (but do not neglect the levels of semantic knowledge and technical skills). The basic conceptions of information retrieval are associated with the conceptual level. Conceptual knowledge of searching is generic and can be applied in different retrieval environments.</li>
+
+  <li>A comprehensive model of the search topic based on an inclusive query plan is in the core of the tutoring system. Without this model of the topic (actually data in the form of a table) situation-dependent user support is not possible at the conceptual level.</li>
+
+  <li>General searching heuristics (e.g., in the form of rules) exploit data on the search topic and on queries made by the user to identify all potential errors and weigh their significance.</li>
+
+  <li>A separate problem is to develop a procedure how and in what form user feedback is given. The user error profile has here a key role. Also the designer of the learning environment should have a chance to pre-set what options of user feedback are applied.</li>
+</ol>
+
+<p>At the time of writing (December 2003) the first prototype has been completed and the first laboratory tests are underway. The next step is to correct main bugs and functional deficiencies. User tests are scheduled for the 
+second and third quarter of 2004.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>The work on the automated tutoring system for QPA has been supported by the University of Tampere and by the Ministry of Education. The authors thank Kai Halttunen for his valuable advice and cooperation in the course of this project. We are grateful to the editors for their help in improving the final text.</p>
+
+<p>The InQuery search engine was provided by the Center for Intelligent Information Retrieval at the University of Massachusetts and the TRIP search engine by TietoEnator, Inc., Finland.</p>
+
+<h2>References</h2>
+
+<ul>
+<li><a name="bat90" id="bat90" />Bates, M.J. (1990). Where should the person stop and the information search interface start? <i>Information Processing &amp; Management</i> <strong>26</strong>(5), 575-591.</li>
+
+<li><a name="bla85" id="bla85" />Blair, D.C. &amp; Maron, M.E. (1985). An evaluation of retrieval effectiveness for a full-text document retrieval system. <i>Communications of the ACM</i> <strong>28</strong>(3), 289-299.</li>
+
+<li><a name="bor96" id="bor96" />Borgman, C.L. (1996). Why are online catalogues still hard to use? <i>Journal of the American Society for Information Science</i>, <strong>47</strong>(7), 493-503.</li>
+
+<li><a name="bra02" id="bra02" />Brajnik, G., Mizzaro, S. &amp; Tasso, C. (2002). Strategic help in user interfaces for information retrieval. <i>Journal of the American Society for Information Science and Technology</i> <strong>53</strong>(5), 343-358.</li>
+
+<li><a name="che90" id="che90" />Chen, H. &amp; Dhar, V. (1990). User misconceptions of information retrieval systems. <i>International Journal of Man-Machine Studies</i> <strong>32</strong>(6), 673-692.</li>
+
+<li><a name="dun02" id="dun02" />Dunn, K. (2002). Assessing information literacy skills in the California State University: a progress report. <i>The Journal of Academic Librarianship</i> <strong>28</strong>(1), 26-35.</li>
+
+<li><a name="fid95" id="fid95" />Fidel, R. &amp; Efthimiadis, E.N. (1995). Terminological knowledge structure for intermediary expert systems. <i>Information Processing &amp; Management</i> <strong>31</strong>(1), 15-27.
+</li>
+<li><a name="hal03a" id="hal03a" />Halttunen, K. (2003a). Scaffolding performance in IR instruction : exploring learning experiences and performance in two learning environments. <i>Journal of Information Science</i> <strong>29</strong>(5), 375-390. </li>
+
+<li><a name="hal03b" id="hal03b" />Halttunen, K. (2003b). Students' conceptions of information retrieval : implications for design of learning environments. <i>Library and Information Science Research</i> <strong>25</strong>(3), 307-332.</li>
+
+<li><a name="hal03" id="hal03" />Halttunen, K. &amp; J&auml;rvelin, K. (in press). Assessing learning outcomes in two information retrieval learning environments: a design experiment. Submitted for publication in 
+<i>Information Processing &amp; Management</i>.</li>
+
+<li><a name="hal00" id="hal00" />Halttunen, K. &amp; Sormunen, E. (2000). 
+<a href="http://www.info.uta.fi/tutkimus/fire/archive/EfI1820004.pdf">Learning information retrieval through an educational game.</a>  <i>Education for Information</i> <strong>18</strong>(4), 289-311. Retrieved 4 July, 2003 from http://www.info.uta.fi/tutkimus/ fire/archive/EfI1820004.pdf</li>
+
+<li><a name="hum96" id="hum96" />Hume, G., Michael, J., Rovick, A. &amp; Evens, M. (1996). <a href="http://www.valpo.edu/home/faculty/ghume/icls.ps">The use of hints and computer tutors: the consequences of the tutoring protocol.</a> In  <i>Proceedings of the 2nd International Conference on the Learning Sciences</i>, (pp. 135-142). Evanston, IL, Northwestern University. Retrieved 4 July, 2003 from http://www.valpo.edu/home/faculty/ghume/icls.ps</li>
+
+<li><a name="ing95" id="ing95" />Ingwersen, P. &amp; Willett, P. (1995). An introduction to algorithmic and cognitive approaches for information retrieval. <i>Libri</i> <strong>45</strong>(3/4), 160-177.</li>
+
+<li><a name="khu96" id="khu96" />Khuwaja, R. &amp; Patel, V. (1996). A model of tutoring based on the behaviour of effective human tutors. In Claude Frasson, Gilles Gauthier, Alan Lesgold (Eds.). <i>Proceedings of the Intelligent Tutoring Systems Conference (ITS '96).</i> (pp. 130-138). Heidelberg: Springer-Verlag. (Lecture Notes in Computer Science 1086) </li>
+
+<li><a name="oak98" id="oak98" />Oakes, M.P. &amp; Taylor, M.J. (1998). Automated assistance in formulation of search statements for bibliographic databases. <i>Information Processing &amp; Management</i> <strong>34</strong>(6), 645-668.</li>
+
+<li><a name="orr01" id="orr01" />Orr, D., Appleton, M. &amp; Wallin, M. (2001). Information literacy and flexible delivery: creating a conceptual framework and model. <i>The Journal of Academic Librarianship</i>, <strong>27</strong>(6), 457-463.</li>
+
+<li><a name="shu96" id="shu96" />Shute, V.J. &amp; Psotka, J. (1996). Intelligent tutoring systems: past, present, and future.  In David Jonassen (Ed.), <i>The Handbook of Research for Educational Communications and Technology</i>. (pp. 570-600). New York: Macmillan.</li>
+
+<li><a name="shu93" id="shu93" />Shute, S.J. &amp; Smith, P.J. (1993). Knowledge-based search tactics. 
+<i>Information Processing &amp; Management</i> <strong>29</strong>(1), 29-45.</li>
+
+<li><a name="sit98" id="sit98" />Sit, R.A. (1998). Online library catalog search performance by older adult users. <i>Library &amp; Information Science Research</i> <strong>20</strong>(2), 115-131.</li>
+
+<li><a name="sor89" id="sor89" />Sormunen, E. (1989). A knowledge base for the search profile analysis and user guidance. In <i>Proceedings of the 13th International Online Information Meeting</i>, London 12-14 December 1989. (pp. 435-446).  Oxford: Learned Information.</li>
+
+<li><a name="sor00" id="sor00" />Sormunen, E. (2000). <a target="_blank" href="http://acta.uta.fi/pdf/951-44-4732-8.pdf"><i>A method for measuring wide range performance of Boolean queries in full-text databases</i></a>. Doctoral Thesis. Tampere: University of Tampere. (Acta Electronica Universitatis Tamperensis 748). Retrieved 4 July, 2003 from http://acta.uta.fi/pdf/951-44-4732-8.pdf</li>
+
+<li><a name="sor01" id="sor01" />Sormunen, E. (2001). <a href="http://www.info.uta.fi/tutkimus/fire/archive/INRT87-JKwithFigs1.pdf">Extensions to the STAIRS study - empirical evidence for the hypothesised ineffectiveness of Boolean queries in large full-text databases.</a> <i>Information Retrieval</i>, <strong>4</strong>(3/4), 257-274. Retrieved 4 July, 2003 from http://www.info.uta.fi/tutkimus/fire/archive/INRT87-JKwithFigs1.pdf</li>
+
+<li><a name="sor02" id="sor02" />Sormunen, E. (2002). <a href="http://www.info.uta.fi/tutkimus/fire/archive/ES_ecir.pdf">A retrospective evaluation method for exact-match and best-match queries applying an interactive query performance analyser.</a> 
+In Fabio Crestani, Mark Girolami, C.J. van Rijsbergen (Eds.), <em>Advances in Information Retrieval, 24th BCS-IRSG European Colloquium on IR Research Glasgow, UK, March 25-27, 2002 Proceedings.</em> (pp. 334-352). Heidelberg: Springer-Verlag. (Lecture Notes in Computer Science 2291)  Retrieved 4 July, 2003 from http://www.info.uta.fi/tutkimus/fire/archive/ES_ecir.pdf</li>
+
+<li><a name="sor02b" id="sor02b" />Sormunen, E., Halttunen, K. and Keskustalo, H. (2002). 
+<i><a target="_blank" href="http://www.info.uta.fi/julkaisut/pdf/qparn1.pdf">Query performance analyser - a tool for bridging information retrieval research and education.</a></i> Tampere:  University of Tampere, Department of Information Studies. (Research Notes 2002-1).  Retrieved 4 July, 2003 from http://www.info.uta.fi/julkaisut/pdf/qparn1.pdf</li>
+
+<li><a name="sor98" id="sor98" />Sormunen E., Laaksonen J., Keskustalo H., Kek&auml;l&auml;inen J., Kemppainen H., Laitinen H., Pirkola, A. and J&auml;rvelin K. (1998). The IR game - a tool for rapid query analysis in cross-language IR experiments. In <i>PRICAI '98 Workshop on Cross Language Issues in Artificial Intelligence</i>. Singapore, Nov 22-24 November, 1998. (pp. 22-32). Singapore:  Pacific Rim International Conference on Artificial Intelligence.</li>
+
+<li><a name="sut00" id="sut00" />Sutcliffe, A.G., Ennis, M. &amp; Watkinson, S.J. (2000). Empirical studies of end-user information searching. <i>Journal of the American Society for Information Science and Technology</i> <strong>51</strong>(13), 1211-1231.</li>
+
+<li><a name="ten97" id="ten97" />Tenopir, C. (1997). Common end user errors. <i>Library Journal</i>, <strong>122</strong>(8), 31-32.</li>
+</ul>
+<br />
+<hr size="3" style="COLOR: #000080" />
+<br />
+<h2><a id="Appendix1" name="Appendix1">Appendix 1</a>. </h2>
+
+<h2>Errors made and solved by 'high-flyers' and 'losers'  in Boolean queries. Log analysis of 18 search sessions per group. </h2>
+
+<table width="674" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;" align="center">
+  <tr><td>&nbsp;</td>
+    <th colspan="2">High-flyers</th>
+    <th colspan="2">'Losers'</th>
+    <th colspan="2">All</th></tr>
+  <tr><th width="210">Category</th>
+    <th width="79">No.</th>
+    <th>%</th>
+    <th>No.</th>
+    <th>%</th>
+    <th>No.</th>
+    <th>%</th>
+  </tr>
+  <tr>
+    <td colspan="7"><strong><em>A) Errors unsolved</em></strong></td>
+  </tr>
+  <tr>
+    <td width="210">Technical skills errors</td>
+    <td align="center" width="79">0</td>
+    <td align="center">0 </td>
+    <td align="center">3</td>
+    <td align="center">8 </td>
+    <td align="center">3</td>
+    <td align="center">6 </td>
+  </tr>
+  <tr>
+    <td width="210">Semantic knowledge errors</td>
+    <td align="center" width="79">0</td>
+    <td align="center">0 </td>
+    <td align="center">8</td>
+    <td align="center">21 </td>
+    <td align="center">8</td>
+    <td align="center">15 </td>
+  </tr>
+  <tr>
+    <td width="210">Conceptual knowledge errors</td>
+    <td align="center" width="79">14</td>
+    <td align="center">100 </td>
+    <td align="center">27</td>
+    <td align="center">71 </td>
+    <td align="center">41</td>
+    <td align="center">79 </td>
+  </tr>
+  <tr>
+    <td width="210">Important facet missed</td>
+    <td align="center" width="79">4</td>
+    <td align="center">29 </td>
+    <td align="center">6</td>
+    <td align="center">16 </td>
+    <td align="center">10</td>
+    <td align="center">19 </td>
+  </tr>
+  <tr>
+    <td width="210">Weak facet applied</td>
+    <td align="center" width="79">4</td>
+    <td align="center">29 </td>
+    <td align="center">5</td>
+    <td align="center">13 </td>
+    <td align="center">9</td>
+    <td align="center">17 </td>
+  </tr>
+  <tr >
+    <td width="210">Important terms missed</td>
+    <td align="center" width="79">3</td>
+    <td align="center">21 </td>
+    <td align="center">10</td>
+    <td align="center">26 </td>
+    <td align="center">13</td>
+    <td align="center">25 </td>
+  </tr>
+  <tr >
+    <td width="210">Inappropriate terms used</td>
+    <td align="center" width="79">3</td>
+    <td align="center">21 </td>
+    <td align="center">6</td>
+    <td align="center">16 </td>
+    <td align="center">9</td>
+    <td align="center">17 </td>
+  </tr>
+  <tr>
+    <td width="210"><em>Total (unsolved)</em></td>
+    <td align="center" width="79"><em>14</em></td>
+    <td align="center"><em>100</em> </td>
+    <td align="center"><em>38</em></td>
+    <td align="center"><em>100</em> </td>
+    <td align="center"><em>52</em></td>
+    <td align="center"><em>100</em> </td>
+  </tr>
+  <tr>
+    <td width="210"><em>Percentage of grand total</em></td>
+    <td width="79">&nbsp;</td>
+    <td align="center"><em>23</em> </td>
+    <td>&nbsp;</td>
+    <td align="center"><em>28</em> </td>
+    <td>&nbsp;</td>
+    <td align="center"><em>26</em> </td>
+  </tr>
+  <tr>
+    <td colspan="7"><strong><em>B) Errors solved</em></strong></td>
+    </tr>
+  <tr>
+    <td width="210">Technical skills errors</td>
+    <td align="center" width="79">2</td>
+    <td align="center">10 </td>
+    <td align="center">12</td>
+    <td align="center">20 </td>
+    <td align="center">14</td>
+    <td align="center">18 </td>
+  </tr>
+  <tr>
+    <td width="210">Semantic knowledge errors</td>
+    <td align="center" width="79">2</td>
+    <td align="center">10 </td>
+    <td align="center">8</td>
+    <td align="center">14 </td>
+    <td align="center">10</td>
+    <td align="center">13 </td>
+  </tr>
+  <tr>
+    <td width="210">Conceptual knowledge errors</td>
+    <td align="center" width="79">16</td>
+    <td align="center">80 </td>
+    <td align="center">39</td>
+    <td align="center">66 </td>
+    <td align="center">55</td>
+    <td align="center">70 </td>
+  </tr>
+  <tr>
+    <td width="210">Important facet missed</td>
+    <td align="center" width="79">2</td>
+    <td align="center">10 </td>
+    <td align="center">12</td>
+    <td align="center">20 </td>
+    <td align="center">14</td>
+    <td align="center">18 </td>
+  </tr>
+  <tr >
+    <td width="210">Weak facet applied</td>
+    <td align="center" width="79">7</td>
+    <td align="center">35 </td>
+    <td align="center">15</td>
+    <td align="center">25 </td>
+    <td align="center">22</td>
+    <td align="center">28 </td>
+  </tr>
+  <tr >
+    <td width="210">Important terms missed</td>
+    <td align="center" width="79">6</td>
+    <td align="center">30 </td>
+    <td align="center">8</td>
+    <td align="center">14 </td>
+    <td align="center">14</td>
+    <td align="center">18 </td>
+  </tr>
+  <tr >
+    <td width="210">Inappropriate terms used</td>
+    <td align="center" width="79">1</td>
+    <td align="center">5 </td>
+    <td align="center">4</td>
+    <td align="center">7 </td>
+    <td align="center">5</td>
+    <td align="center">6 </td>
+  </tr>
+  <tr>
+    <td width="210"><em>Total (solved)</em></td>
+    <td align="center" width="79"><em>20</em></td>
+    <td align="center"><em>100</em> </td>
+    <td align="center"><em>59</em></td>
+    <td align="center"><em>100</em> </td>
+    <td align="center"><em>79</em></td>
+    <td align="center"><em>100</em> </td>
+  </tr>
+  <tr>
+    <td width="210"><em>Percentage of grand total</em></td>
+    <td width="79">&nbsp;</td>
+    <td align="center"><em>33</em> </td>
+    <td>&nbsp;</td>
+    <td align="center"><em>43</em> </td>
+    <td>&nbsp;</td>
+    <td align="center"><em>40</em> </td>
+  </tr>
+  <tr>
+    <td colspan="7"><strong><em>C) Errors not really affecting performance</em></strong></td>
+  </tr>
+  <tr>
+    <td width="210">Technical skills errors</td>
+    <td align="center" width="79">8</td>
+    <td align="center">31 </td>
+    <td align="center">28</td>
+    <td align="center">68 </td>
+    <td align="center">36</td>
+    <td align="center">54 </td>
+  </tr>
+  <tr>
+    <td width="210">Semantic knowledge errors</td>
+    <td align="center" width="79">6</td>
+    <td align="center">23 </td>
+    <td align="center">3</td>
+    <td align="center">7 </td>
+    <td align="center">9</td>
+    <td align="center">13 </td>
+  </tr>
+  <tr>
+    <td width="210">Conceptual knowledge errors</td>
+    <td align="center" width="79">12</td>
+    <td align="center">46 </td>
+    <td align="center">10</td>
+    <td align="center">24 </td>
+    <td align="center">22</td>
+    <td align="center">33 </td>
+  </tr>
+  <tr >
+    <td width="210">Important facet missed</td>
+    <td align="center" width="79">0</td>
+    <td align="center">0 </td>
+    <td align="center">0</td>
+    <td align="center">0 </td>
+    <td align="center">0</td>
+    <td align="center">0 </td>
+  </tr>
+  <tr >
+    <td width="210">Weak facet applied</td>
+    <td align="center" width="79">2</td>
+    <td align="center">8 </td>
+    <td align="center">2</td>
+    <td align="center">5 </td>
+    <td align="center">4</td>
+    <td align="center">6 </td>
+  </tr>
+  <tr >
+    <td width="210">Important terms missed</td>
+    <td align="center" width="79">10</td>
+    <td align="center">38 </td>
+    <td align="center">7</td>
+    <td align="center">17 </td>
+    <td align="center">17</td>
+    <td align="center">25 </td>
+  </tr>
+  <tr >
+    <td width="210">Inappropriate terms used</td>
+    <td align="center" width="79">0</td>
+    <td align="center">0 </td>
+    <td align="center">1</td>
+    <td align="center">2 </td>
+    <td align="center">1</td>
+    <td align="center">1 </td>
+  </tr>
+  <tr>
+    <td width="210">Total (no effect)</td>
+    <td align="center"  width="79">26</td>
+    <td align="center">100 </td>
+    <td align="center">41</td>
+    <td align="center">100 </td>
+    <td align="center">67</td>
+    <td align="center">100 </td>
+  </tr>
+  <tr>
+    <td width="210">Percentage of grand total</td>
+    <td width="79">&nbsp;</td>
+    <td align="center">43 </td>
+    <td>&nbsp;</td>
+    <td align="center">30 </td>
+    <td>&nbsp;</td>
+    <td align="center">34 </td>
+  </tr>
+  <tr>
+    <td colspan="7" width="210"><strong>All errors</strong></td>
+    </tr>
+  <tr>
+    <td width="210">Technical skills errors</td>
+    <td align="center" width="79">10</td>
+    <td align="center">17 </td>
+    <td align="center">43</td>
+    <td align="center">31 </td>
+    <td align="center">53</td>
+    <td align="center">27 </td>
+  </tr>
+  <tr>
+    <td width="210">Semantic knowledge errors</td>
+    <td align="center" width="79">8</td>
+    <td align="center">13 </td>
+    <td align="center">19</td>
+    <td align="center">14 </td>
+    <td align="center">27</td>
+    <td align="center">14 </td>
+  </tr>
+  <tr>
+    <td width="210">Conceptual knowledge errors</td>
+    <td align="center" width="79">42</td>
+    <td align="center">70 </td>
+    <td align="center">76</td>
+    <td align="center">55 </td>
+    <td align="center">118</td>
+    <td align="center">60 </td>
+  </tr>
+  <tr >
+    <td width="210">Important facet missed</td>
+    <td align="center" width="79">6</td>
+    <td align="center">10 </td>
+    <td align="center">18</td>
+    <td align="center">13 </td>
+    <td align="center">24</td>
+    <td align="center">12 </td>
+  </tr>
+  <tr >
+    <td width="210">Weak facet applied</td>
+    <td align="center" width="79">13</td>
+    <td align="center">22 </td>
+    <td align="center">22</td>
+    <td align="center">16 </td>
+    <td align="center">35</td>
+    <td align="center">18 </td>
+  </tr>
+  <tr >
+    <td width="210">Important terms missed</td>
+    <td align="center" width="79">19</td>
+    <td align="center">32 </td>
+    <td align="center">25</td>
+	<td align="center">18 </td>
+    <td align="center">44</td>
+    <td align="center">22 </td>
+  </tr>
+  <tr >
+    <td width="210">Inappropriate terms used</td>
+    <td align="center" width="79">4</td>
+    <td align="center">7</td>
+    <td align="center">11</td>
+    <td align="center">8</td>
+    <td align="center">15</td>
+    <td align="center">8</td>
+  </tr>
+  <tr>
+    <td width="210">Grand total</td>
+    <td align="center" width="79">60</td>
+    <td align="center">100</td>
+    <td align="center">138</td>
+    <td align="center">100</td>
+    <td align="center">198</td>
+    <td align="center">100 </td>
+  </tr>
+</table>
+<br />
+<hr size="3" style="COLOR: #000080" />
+<br />
+<h2><a name="Appendix2" id="Appendix2">Appendix 2</a>. </h2>
+<h2>Errors made and solved by 'high-flyer' and 'losers' in best-match queries. Log analysis of 18 search sessions per group.</h2>
+
+<table width="639" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;" align="center">
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2" width="148">'High-flyers' (18)</td>
+    <td colspan="2" width="128">'Losers' (18)</td>
+    <td width="75">All (36)</td>
+    <td width="85">&nbsp;</td>
+  </tr>
+  <tr>
+    <th width="221">Category</th>
+    <th width="76">No.</th>
+    <th width="69">%</th>
+    <th width="61">No.</th>
+    <th width="64">%</th>
+    <th width="74">No.</th>
+    <th width="85">%</th>
+  </tr>
+  <tr>
+    <td colspan="7" width="187"><strong><em>A) Errors unsolved</em></strong></td>
+  </tr>
+  <tr>
+    <td width="221">Technical skills errors</td>
+    <td align="center" width="76">0</td>
+    <td align="center" width="69">-</td>
+    <td align="center" width="61">2</td>
+    <td align="center" width="64">11 </td>
+    <td align="center" width="74">2</td>
+    <td align="center" width="85">11 </td>
+  </tr>
+  <tr>
+    <td width="221">Semantic knowledge errors</td>
+    <td align="center" width="76">0</td>
+    <td align="center"  width="69">-</td>
+    <td align="center" width="61">8</td>
+    <td align="center" width="64">42 </td>
+    <td align="center" width="74">8</td>
+    <td align="center" width="85">42 </td>
+  </tr>
+  <tr>
+    <td width="221">Conceptual knowledge errors</td>
+    <td align="center" width="76">0</td>
+    <td align="center"  width="69">-</td>
+    <td align="center" width="61">9</td>
+    <td align="center" width="64">47 </td>
+    <td align="center" width="74">9</td>
+    <td align="center" width="85">47 </td>
+  </tr>
+  <tr>
+    <td width="210">Important facet missed</td>
+    <td align="center" width="76">0</td>
+    <td align="center"  width="69">-</td>
+	<td align="center" width="61">5</td>
+    <td align="center" width="64">26 </td>
+    <td align="center" width="74">5</td>
+    <td align="center" width="85">26 </td>
+  </tr>
+  <tr>
+    <td width="210">Weak facet applied</td>
+    <td align="center" width="76">0</td>
+    <td align="center"  width="69">-</td>
+    <td align="center" width="61">1</td>
+    <td align="center" width="64">5 </td>
+    <td align="center" width="74">1</td>
+    <td align="center" width="85">5 </td>
+  </tr>
+  <tr>
+    <td width="210">Important terms missed</td>
+    <td align="center" width="76">0</td>
+    <td align="center"  width="69">-</td>
+    <td align="center" width="61">2</td>
+    <td align="center" width="64">11 </td>
+    <td align="center" width="74">2</td>
+    <td align="center" width="85">11 </td>
+  </tr>
+  <tr>
+    <td width="210">Inappropriate terms used</td>
+    <td align="center" width="76">0</td>
+    <td align="center"  width="69">-</td>
+    <td align="center" width="61">1</td>
+    <td align="center" width="64">5 </td>
+    <td align="center" width="74">1</td>
+    <td align="center" width="85">5 </td>
+  </tr>
+  <tr>
+    <td width="221"><em>Total (unsolved)</em></td>
+    <td align="center" width="76"><em>0</em></td>
+    <td align="center"  width="69"><em>-</em></td>
+    <td align="center" width="61"><em>19</em></td>
+    <td align="center" width="64"><em>100 </em></td>
+    <td align="center" width="74"><em>19</em></td>
+    <td align="center" width="85"><em>100</em> </td>
+  </tr>
+  <tr>
+    <td width="221"><em>Percentage of grand total</em></td>
+    <td align="center" width="76">&nbsp;</td>
+    <td align="center" width="69"><em>0</em> </td>
+    <td align="center" width="61">&nbsp;</td>
+    <td align="center" width="64"><em>31</em> </td>
+    <td align="center"  width="74">&nbsp;</td>
+    <td align="center" width="85"><em>17</em> </td>
+  </tr>
+  <tr>
+    <td colspan="7" width="187"><strong><em>B) Errors solved</em></strong></td>
+  </tr>
+  <tr>
+    <td width="221">Technical skills errors</td>
+    <td align="center" width="76">0</td>
+    <td align="center" width="69">0 </td>
+    <td align="center" width="61">0</td>
+    <td align="center" width="64">0 </td>
+    <td align="center" width="74">0</td>
+    <td align="center" width="85">0 </td>
+  </tr>
+  <tr>
+    <td width="221">Semantic knowledge errors</td>
+    <td align="center" width="76">0</td>
+    <td align="center" width="69">0 </td>
+    <td align="center" width="61">6</td>
+    <td align="center" width="64">40 </td>
+    <td align="center" width="74">6</td>
+    <td align="center" width="85">23 </td>
+  </tr>
+  <tr>
+    <td width="221">Conceptual knowledge errors</td>
+    <td align="center" width="76">11</td>
+    <td align="center" width="69">100 </td>
+    <td align="center" width="61">9</td>
+    <td align="center" width="64">60 </td>
+    <td align="center" width="74">20</td>
+    <td align="center" width="85">77 </td>
+  </tr>
+  <tr>
+    <td width="210">Important facet missed</td>
+    <td align="center" width="76">7</td>
+    <td align="center" width="69">64 </td>
+    <td align="center" width="61">4</td>
+    <td align="center" width="64">27 </td>
+    <td align="center" width="74">11</td>
+    <td align="center" width="85">42 </td>
+  </tr>
+  <tr>
+    <td width="210">Weak facet applied</td>
+    <td align="center" width="76">0</td>
+    <td align="center" width="69">0 </td>
+    <td align="center" width="61">2</td>
+    <td align="center" width="64">13 </td>
+    <td align="center" width="74">2</td>
+    <td align="center" width="85">8 </td>
+  </tr>
+  <tr>
+    <td width="210">Important terms missed</td>
+    <td align="center" width="76">4</td>
+    <td align="center" width="69">36 </td>
+    <td align="center" width="61">2</td>
+    <td align="center" width="64">13 </td>
+    <td align="center" width="74">6</td>
+    <td align="center" width="85">23 </td>
+  </tr>
+  <tr>
+    <td width="210">Inappropriate terms used</td>
+    <td align="center" width="76">0</td>
+    <td align="center" width="69">0 </td>
+    <td align="center" width="61">1</td>
+    <td align="center" width="64">7 </td>
+    <td align="center" width="74">1</td>
+    <td align="center" width="85">4 </td>
+  </tr>
+  <tr>
+    <td width="221"><em>Total (solved)</em></td>
+    <td align="center" width="76"><em>11</em></td>
+    <td align="center" width="69"><em>100</em> </td>
+    <td align="center" width="61"><em>15</em></td>
+    <td align="center" width="64"><em>100</em> </td>
+    <td align="center" width="74"><em>26</em></td>
+    <td align="center" width="85"><em>100</em> </td>
+  </tr>
+  <tr>
+    <td width="221"><em>Percentage of grand total</em></td>
+    <td align="center" width="76">&nbsp;</td>
+    <td align="center" width="69"><em>23</em> </td>
+    <td align="center" width="61">&nbsp;</td>
+    <td align="center" width="64"><em>25 </em></td>
+    <td align="center" width="74">&nbsp;</td>
+    <td align="center" width="85"><em>24</em> </td>
+  </tr>
+  <tr>
+    <td colspan="7"><em><strong>C) Errors not really affecting performance</strong></em></td>
+  </tr>
+  <tr>
+    <td width="221">Technical skills errors</td>
+    <td align="center" width="76">0</td>
+    <td align="center" width="69">0 </td>
+    <td align="center" width="61">2</td>
+    <td align="center" width="64">7 </td>
+    <td align="center" width="74">2</td>
+    <td align="center" width="85">3 </td>
+  </tr>
+  <tr>
+    <td width="221">Semantic knowledge errors</td>
+    <td align="center" width="76">6</td>
+    <td align="center" width="69">16 </td>
+    <td align="center" width="61">0</td>
+    <td align="center" width="64">0 </td>
+    <td align="center" width="74">6</td>
+    <td align="center" width="85">9 </td>
+  </tr>
+  <tr>
+    <td width="221">Conceptual knowledge errors</td>
+    <td align="center" width="76">31</td>
+    <td align="center" width="69">84 </td>
+    <td align="center" width="61">25</td>
+    <td align="center" width="64">93 </td>
+    <td align="center" width="74">56</td>
+    <td align="center" width="85">88 </td>
+  </tr>
+  <tr>
+    <td width="210">Important facet missed</td>
+    <td align="center" width="76">8</td>
+    <td align="center" width="69">22 </td>
+    <td align="center" width="61">12</td>
+    <td align="center" width="64">44 </td>
+    <td align="center" width="74">20</td>
+    <td align="center" width="85">31 </td>
+  </tr>
+  <tr>
+    <td width="210">Weak facet applied</td>
+    <td align="center" width="76">8</td>
+    <td align="center" width="69">22 </td>
+    <td align="center" width="61">1</td>
+    <td align="center" width="64">4 </td>
+    <td align="center" width="74">9</td>
+    <td align="center" width="85">14 </td>
+  </tr>
+  <tr>
+    <td width="210">Important terms missed</td>
+    <td align="center" width="76">15</td>
+    <td align="center" width="69">41 </td>
+    <td align="center" width="61">12</td>
+    <td align="center" width="64">44 </td>
+    <td align="center" width="74">27</td>
+    <td align="center" width="85">42 </td>
+  </tr>
+  <tr>
+    <td width="210">Inappropriate terms used</td>
+    <td align="center" width="76">0</td>
+    <td align="center" width="69">0 </td>
+    <td align="center" width="61">0</td>
+    <td align="center" width="64">0 </td>
+    <td align="center" width="74">0</td>
+    <td align="center" width="85">0 </td>
+  </tr>
+  <tr>
+    <td width="221"><em>Total (no effect)</em></td>
+    <td align="center" width="76"><em>37</em></td>
+    <td align="center" width="69"><em>100</em> </td>
+    <td align="center" width="61"><em>27</em></td>
+    <td align="center" width="64"><em>100</em> </td>
+    <td align="center" width="74"><em>64</em></td>
+    <td align="center" width="85"><em>100</em> </td>
+  </tr>
+  <tr>
+    <td width="221"><em>Percentage of grand total</em></td>
+    <td width="76">&nbsp;</td>
+    <td align="center" width="69"><em>77</em> </td>
+    <td width="61">&nbsp;</td>
+    <td align="center" width="64"><em>44</em> </td>
+    <td width="74">&nbsp;</td>
+    <td align="center" width="85"><em>59</em> </td>
+  </tr>
+  <tr>
+    <td colspan="7" width="187"><strong><em>All errors</em></strong></td>
+    </tr>
+  <tr>
+    <td width="221">Technical skills errors</td>
+    <td align="center" width="76">0</td>
+    <td align="center" width="69">0 </td>
+    <td align="center" width="61">4</td>
+    <td align="center" width="64">7 </td>
+    <td align="center" width="74">4</td>
+    <td align="center" width="85">4 </td>
+  </tr>
+  <tr>
+    <td width="221">Semantic knowledge errors</td>
+    <td align="center" width="76">6</td>
+    <td align="center" width="69">13 </td>
+    <td align="center" width="61">14</td>
+    <td align="center" width="64">23 </td>
+    <td align="center" width="74">20</td>
+    <td align="center" width="85">18 </td>
+  </tr>
+  <tr>
+    <td width="221">Conceptual knowledge errors</td>
+    <td align="center" width="76">42</td>
+    <td align="center" width="69">88 </td>
+    <td align="center" width="61">43</td>
+    <td align="center" width="64">70 </td>
+    <td align="center" width="74">85</td>
+    <td align="center" width="85">78 </td>
+  </tr>
+  <tr>
+    <td width="210">Important facet missed</td>
+    <td align="center" width="76">15</td>
+    <td align="center" width="69">31 </td>
+    <td align="center" width="61">21</td>
+    <td align="center" width="64">34 </td>
+    <td align="center" width="74">36</td>
+    <td align="center" width="85">33 </td>
+  </tr>
+  <tr>
+    <td width="210">Weak facet applied</td>
+    <td align="center" width="76">8</td>
+    <td align="center" width="69">17 </td>
+    <td align="center" width="61">4</td>
+    <td align="center" width="64">7 </td>
+    <td align="center" width="74">12</td>
+    <td align="center" width="85">11 </td>
+  </tr>
+  <tr>
+    <td width="210">Important terms missed</td>
+    <td align="center" width="76">19</td>
+    <td align="center" width="69">40 </td>
+    <td align="center" width="61">16</td>
+    <td align="center" width="64">26 </td>
+    <td align="center" width="74">35</td>
+    <td align="center" width="85">32 </td>
+  </tr>
+  <tr>
+    <td width="210">Inappropriate terms used</td>
+    <td align="center" width="76">0</td>
+    <td align="center" width="69">0 </td>
+    <td align="center" width="61">2</td>
+    <td align="center" width="64">3 </td>
+    <td align="center" width="74">2</td>
+    <td align="center" width="85">2 </td>
+  </tr>
+  <tr>
+    <td width="221"><em>Grand total</em></td>
+    <td align="center" width="76"><em>48</em></td>
+    <td align="center" width="69"><em>100</em> </td>
+    <td align="center" width="61"><em>61</em></td>
+    <td align="center" width="64"><em>100</em> </td>
+    <td align="center" width="74"><em>109</em></td>
+    <td align="center" width="85"><em>100</em> </td>
+  </tr>
+</table>
+
+<hr style="COLOR: #000080" size="1" />
+<table cellspacing="10" align="center">
+<tr><td align="center" valign="top">
+<center>
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="&quot;automated tutoring&quot;  &quot;Web-based&quot; &quot;learning environments&quot; &quot;information retrieval&quot;"></input> <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-family: Verdana; font-size: small; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+</td></tr></table></form>
+<td colspan="2" align="center" style="font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject.</td>
+</center>
+<td align="center" valign="top">
+<!-- Search Google -->
+<center>
+<form method="get" action="http://www.google.com/custom" target="_top">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="&quot;automated tutoring&quot;  &quot;Web-based&quot; &quot;learning environments&quot; &quot;information retrieval&quot;"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-size: small; font-weight: bold;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+</td></tr></table>
+</form>
+</center>
+<!-- Search Google -->
+</td></tr>
+</table>
+
+<hr style="COLOR: #000080" size="1" />
+<div align="center">
+<h4>How to cite this paper:</h4>
+Sormunen, E &amp; Pennanen, S. (2004)  The challenge 
+of automated tutoring in Web-based learning environments for IR instruction. 
+&nbsp; <em>Information Research</em>, <strong>9</strong>(2) paper 169 [Available 
+at http://InformationR.net/ir/9-2/paper169.html]</div><br />
+
+<hr size="1" style="color:#000080 ;" />
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper169" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the author, 2004. <br />Last updated: 11 December, 2003
+</div></td>
+
+<td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" />
+</td></tr>
+</table>
+<hr size="1" style="color:#000080 ;" />
+
+<table align="center"><tr><td><div id="button">
+<ul>
+	<li><a href="infres92.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+</div></td></tr></table>
+<hr size="3" style="color: #000080" />
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/9-2/paper169.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:22:05 GMT -->
+</html>

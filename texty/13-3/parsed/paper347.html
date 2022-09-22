@@ -1,0 +1,815 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from informationr.net/ir/13-3/paper347.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:22:23 GMT -->
+<head><title>Extracting
+variant forms of <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>for information retrieval.</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+<meta name="dc.title" content="Extracting variant forms of <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>for information retrieval" />
+<meta name="dc.creator" content="Ari Pirkola" />
+<meta name="dc.subject" content="<span>Methods</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>to address <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name <span>variation</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in information retrieval" />
+<meta name="dc.<span>description</span>" <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> content="Introduction. Chemical <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names are typically long and complex and thereby prone to <span>variation</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> In this study, we <span>investigate</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the retrieval effects of the <span>variation</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> <span>Method</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> The <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of the study was a subset of the Medline <span>collection</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>large set of acronyms and associated text parts was extracted from the <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and used to construct a full name - acronym index. <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>longest common subsequence and statistics based <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(named FNV-Finder) was <span>devised</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>to identify MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>variants from the full name - acronym index for use as query terms in <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name searching. The average number of variants per a MeSH <span>term</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> the <span>performance</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of the FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and retrieval <span>performance</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>were evaluated. Results. The results showed that the average number of unique variants per a MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>denoting a <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>is 2.82. The FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>achieved 95.0% recall and 97.1% precision. The retrieval experiments showed that the <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>contains a substantial number of <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that contain only variant forms of the MeSH terms (and do not contain the MeSH terms or CAS registry numbers). Conclusions. The results <span>suggest</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that the <span>selection</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of variant forms for queries from a <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>would be very useful or even necessary in <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name searching. Variant forms can be selected readily from the full name - acronym index either manually or automatically using the FNV-Finder <span>technique</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>" /> 
+<meta name="dc.subject.keywords" content="acronyms, <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name searching, <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name variants, information retrieval" /><!--leave the following to be completed by the Editor-->
+
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="paper247.html" />
+<meta name="dc.relation.IsPartOf" content="infres133.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2008-09-15" />
+
+  <script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+  <style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted #5E96FD;;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: #5E96FD;;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>navy;
+    border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>navy;
+    font-weight: bold;
+}
+
+</style><link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+
+<body bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 13  no. 3, September, 2008</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres133.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index-2.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+<hr style="color: #5E96FD;" size="1" />
+
+
+<h1> Extracting variant forms of <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>for information retrieval</h1>
+<br />
+<div style="margin-left: 10%; margin-right: 10%;">
+<h4 align="center"><a href="mailto:pirkola@cc.jyu.fi">Ari Pirkola</a><br />
+Department of Information Studies, University of Tampere, 33014 Tampere, Finland</h4>
+</div>
+<br />
+<form action="http://informationr.net/ir/13-3/none">
+  <fieldset><legend>Abstract</legend>
+  <blockquote><strong>Introduction.</strong> Chemical <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names are long, complex and prone to <span>variation</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> This study  investigates the retrieval effects of the <span>variation</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>  <br />
+    <strong>Method.</strong> <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>large set of acronyms and associated text parts was extracted from a subset of the Medline <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and used to construct a full name - acronym index. <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>longest common subsequence and statistics based <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(named FNV-Finder) was <span>devised</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>to identify MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>variants from the full name - acronym index for use as query terms in searching. The average number of variants for each MeSH <span>term</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> the <span>performance</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of the FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and retrieval <span>performance</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>were evaluated.<br />
+    <strong>Results.</strong> The average number of unique variants for each MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>denoting a <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>is 2.82. The FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>achieved 95.0% recall and 97.1% precision. The retrieval experiments showed that the <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>contains a substantial number of <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that contain only variant forms of the MeSH terms (and do not contain the MeSH terms or CAS registry numbers).  <br />
+    <strong>Conclusions.</strong> The <span>selection</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of variant forms for queries from a <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>would be very useful or even necessary in <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name searching. Variant forms can be selected readily from the full name - acronym index either manually or automatically using the FNV-Finder <span>technique</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> </blockquote>
+  </fieldset>
+</form>
+
+<br />
+<div align="center">
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: #5E96FD;" onclick="doChangeFont()" /></div>
+<br />
+
+<h2>Introduction</h2>
+
+<p>We <span>investigate</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the <span>variation</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of <em>chemical <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names</em> and the retrieval effects of the <span>variation</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> Chemical <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>pose a special challenge in information retrieval since they typically are long and complex <span>expressions</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> being thus prone to <span>variation</span>, <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> which in turn may <span>cause</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>a decrease in retrieval <span>performance</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>due to a mismatch between query terms and index terms.</p>
+
+<p>A new <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>named <em>FNV-Finder</em> (where FNV stands for Full Name Variant) was developed to automatically identify the variant forms. Articles discussing a given <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>often use a canonical pattern where a full name is <span>followed</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>by an acronym in parentheses, e.g., <em>N-methyl pyrrolidone (NMP)</em>. The FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>is based on the fact that different variant forms of the same full name share the same acronym. The acronym is used as a pivot to find the variants of the same name. We extracted all the canonical patterns from a subset of the Medline <span>collection</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> i.e., TREC 2003 Genomics Track <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>containing some 525, 000 <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(<a href="#hersh">Hersh and Bhupatiraju 2004</a>). We constructed a full name-acronym index which contains the extracted acronyms and associated text parts and where the acronyms are arranged in an alphabetical order. The index allows an efficient means of identifying the full <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of acronyms both manually and automatically. The FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>uses a similarity measure (longest common subsequence, LCS) between an acronym and string sequences associated with it in the full name-acronym  index and <span>statistical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>data <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in the full name-acronym index to identify the full <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of acronyms and the variant forms of the same full name.</p>
+
+<p>As <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>data we used a set of <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>acronyms and their MeSH (Medical Subject Headings) terms, for which variant forms were identified from the full name-acronym  index manually and automatically using the FNV-Finder <span>technique</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> Using these data we <span>investigate</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the following research problems:</p>
+
+<ol>
+  <li>What is the average number of variants for a MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>denoting a <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>substance? </li>
+  <li>How to effectively identify automatically different variant forms of a MeSH term? For this research problem we <span>devised</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the LCS and statistics based FNV-Finder <span>technique</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> which identifies the variants from the   full name-acronym  index for use as query terms in <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name searching.</li> 
+  <li>What are the recall and precision of the proposed FNV-Finder technique?</li> 
+  <li>Does <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name searching benefit from using variant forms in queries?</li>
+</ol>
+
+<p>The <span>main</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>contributions</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of this paper are: to present a <span>novel</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>technique (FNV-Finder) to identify <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name variants from a <span>collection</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> and to present evaluation results for the approach;  to demonstrate how to effectively organize the  full name-acronym  patterns <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in the <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(the construction of the full name-acronym  index); and to report the effects of <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name <span>variation</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in information retrieval.</p>
+
+<h2>Methods and data</h2>
+
+<h3>Test <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>words</h3>
+
+<p>The <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>used in the study was the TREC 2003 Genomics Track <span>collection</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> which is a subset of the Medline <span>collection</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> The <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>contains some 525,000 article abstracts, which were indexed between January 2002 and January 2003. Medline's <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>are indexed with the National Library of Medicine's <a href="http://www.nlm.nih.gov/mesh/">Medical Subject Headings (MeSH)</a>. Chemical <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>are also indexed with <a href="http://www.cas.org/expertise/cascontent/registry/regsys.html">Chemical Abstract Service registry numbers</a>.</p>
+
+<p>A Medline record consists of several fields of which the fields TI (title), AB (abstract), MH (MeSH terms), and RN (Chemical Abstract Service Registry Number) were indexed for the retrieval experiments conducted in this study.</p>
+
+<p>The full <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>acronyms in the <a href="#fna">full name-acronym index</a> are often terms that are <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in the Medical Subject Headings vocabulary: they are either MeSH terms or <span>so-called</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names, or the full <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in the full name-acronym  index are their variants. In this study, <span>variation</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>is con0ered from the viewpoint of the MeSH terms and the <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names. <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>or <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name is regarded as a standard full name of an acronym while the full <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that denote the same <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>as the MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>or <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name and that are similar to it but written differently are regarded as variant forms. For example, <em>hydroxyethyl methacrylate</em> is a <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name and <em>hydroxyethylmethacrylate</em> and <em>2-hydroxyethyl methacrylate</em> are its variant forms. As can be seen, the latter two <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>are similar, but not <span>identical</span>, <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> to <em>hydroxyethyl methacrylate</em>. Below are more examples of  variant forms. (For simplicity, in this paper <em>MeSH term</em> <span>refers</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>both to the <span>actual</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>MeSH terms and the <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in the MeSH.)</p>
+
+<p>From the viewpoint of the research problems examined in this study we differentiate between three types of <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that denote a <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>substance: a MeSH <span>term</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> its variant forms, and an acronym that <span>refers</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>to the MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and the variant forms. We do not study orthographic <span>variation</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(see below) but <em>lexical variation</em>. Here <span>lexical</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>variation means that the MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and a variant form denote the same <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and are similar, but there are differences in components, letters, or numbers. We can <span>distinguish</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>several types of variant cases: the MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and its variant form have one or more common components but differ from each other in the number or the order of the components (e.g.,  MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>inosine monophosphate</em> and a variant form <em>inosine 5 monophosphate</em>); the components are written together (i.e., as a compound word) vs. the components are written separately (i.e., as a phrase) (e.g.,  MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>carboxymethylcellulose</em> and a variant form <em>carboxymethyl cellulose</em>); the corresponding components in the MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and a variant form differ (typically) in one or two characters (e.g.,  MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>1 methyl 2 pyrrolidinone</em> and a variant form <em>1 methyl 2 pyrrolidone</em>); a component that appears in a variant may be an abbreviation of a component that appears in the MeSH <span>term</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> or the other way around (e.g.,  MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>methyl tert butyl ether</em> and a variant form <em>methyl t butyl ether</em>). All these cases affect information retrieval. For example, it is obvious that query terms <em>carboxymethylcellulose</em> (compound) and <em>carboxymethyl cellulose</em> (phrase) give different retrieval results.</p>
+
+<p>Since we examine <span>lexical</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>variation rather than orthographic <span>variation</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>we performed orthographic normalisation in <span>documents</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> queries, and in the full name-acronym index: other characters than letters and numbers were replaced with spaces; case was normalised into lower case. As an example of orthographic normalisation, the <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name <em>N-Formylmethionine Leucyl-Phenylalanine</em> was converted into a normalised form of <em>n formylmethionine leucyl phenylalanine</em>. In a retrieval phase, phrasal <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>were searched for using the ordered window proximity operator of the InQuery retrieval system (<a href="#allan">Allan <em>et al</em>. 2000</a>) which was used as a <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>system in the retrieval experiments. The benefits of orthographic normalisation in information retrieval are obvious and it is commonly used in retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>even though it may create ambiguity. However, in this study orthographic normalisation did not affect <span>performance</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(the issue of <span>wrong</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>identifications by FNV-Finder is discussed in the Findings section).</p>
+
+<p>We used a training set of fifty acronyms (see <a href="#app">
+<span>Appendix</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>1</a>) to devise the FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and to set the thresholds to get the best possible results. The <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>acronyms were taken randomly from the full name-acronym  index; every Nth acronym was selected iteratively until fifty <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name acronyms for which there were both MeSH terms and Registry Numbers were obtained. From the original set of 55 acronyms five were removed since there were no MeSH terms or Registry Numbers for them. In the case of ambiguous <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>acronyms having more than one MeSH <span>term</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> the first <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>was selected for the <span>tests</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span></p>
+
+<p>The number of the <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>acronyms is relatively small because of the time-consuming manual identification of variants and <a  href="#relevance">document relevance assessments</a> , which are necessary for <span>reliable</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>results. It should be noted, however, that using this <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>data we are able to report statistically significant results in retrieval experiments.</p>
+
+<p>As an aid in manual name identification we used printed <span>reference</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>books in <span>chemistry</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and the National Library of Medicine's  <a href="http://chem2.sis.nlm.nih.gov/chemidplus/chemidlite.jsp">ChemIDplus Lite</a> Web service. In some (rare) cases it was not possible determine which string <span>sequence</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in the full name-acronym  index was acronym's full name. In these cases we looked at the document from where the text part was extracted and used document's text to determine the correct full name.</p>
+
+<h3>Identification of full name variants</h3>
+
+<a name="fna"></a><h4>Constructing the full name-acronym  index</h4>
+
+<p>	The full name-acronym  index was constructed by extracting from the Medline <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>all strings that <span>consisted</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of letters, numbers or both letters and numbers and that were located in parentheses. For each such string a text part of the <span>length</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of up to nine strings prior to it was also extracted. Strings in0e parentheses <span>containing</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>other characters than letters or numbers were not included in the full name-acronym  index. The first version of the index was cleaned: strings within parentheses that only <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>numbers and associated text parts were removed. </p>
+
+<p>To take an example of the extraction phase, <span>con0er</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>a Medline record <span>containing</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the following phrases: <em>end-stage renal disease (ESRD) were glomerulonephritis (26%)</em>, and, <em>with antithymocyte globulin (ATG) or orthoclone thymocyte 3 (OKT3)</em>. The strings <em>ESRD</em>, <em>ATG</em>, and <em>OKT3</em> were included in the full name-acronym  index while the string &quot;26%&quot;, which does not contain letters and which contains a percentage sign was not included.</p>
+
+<p>The index was arranged in an alphabetical order. The final index contains 479,882 <span>lines</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> Most of the strings in0e parentheses are not acronyms but noise in the context of this study. However, such strings do not play any role in variant identification and thus do not have any effects on the FNV-Finder effectiveness or retrieval results.</p>
+
+<p>An <em>index entry</em> contains all the extracted instances of an acronym <em>Ai</em> (with <em>Ai</em> denoting any acronym in the index) and the associated text parts. Let us take an example of an index entry. For the acronym MTBE part of the entry is as follows (here we only present <span>seven</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>lines</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> the full entry includes fifty-one lines):</p>
+
+<blockquote>
+<strong>entry: mtbe<br /></strong>
+etbe t butyl alcohol tba methyl t butyl ether mtbe<br />
+mtbe from soil <span>samples</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>ab methyl tert butyl ether mtbe<br />
+9 isopropyl alcohol ipa in methyl tert butyl ether mtbe<br />
+a procedure for determination of methyl tert butyl ether mtbe<br />
+an increase in levels of methyl tertiary butyl ether mtbe<br />
+and in bus exposures to methyl tertiary butyl ether mtbe<br />
+butyl ether in <span>water</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>ab methyl tert butyl ether mtbe</blockquote>
+
+<p>The string <span>positions</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in a <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>l</em> are numbered from 
+<em>s<sub>1</sub>(A<sub>i</sub>(l))</em> (the first position) to
+<em>s<sub>n</sub>(A<sub>i</sub>(l))</em> (the last position immediately left
+to the acronym).</p>
+
+<p>For the fifty <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>acronyms, the number of <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in <span>entries</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>ranged from 1 to 214. Overall, the fifty <span>entries</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>contained 1,595 <span>lines</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> Manual identification of variants was done using all 1,595 <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(the first step of FNV-Finder also used all 1,595 lines).</p>
+
+<h4>FNV-Finder algorithm</h4>
+
+<p>FNV-Finder-based identification of acronyms' full name variants has six steps. Next we describe the FNV-Finder <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>which is presented in <a href="#appendix">Appendix 2</a>. It is important to note that in steps one to five no difference is made between MeSH terms and variant forms. Only in the last step variant forms are separated from the MeSH terms.</p>
+
+<p>In the <em>first step</em>, all <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in an entry that do not contain any of the components of a phrasal MeSH <span>term</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> either as a <span>separate</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>string or as a string embedded in a compound word, are filtered out. Single word and compound word MeSH terms (e.g., <em>resiniferatoxin</em>) are <span>divided</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>into non-overlapping 6-grams (with the exception of the last n-gram which may contain more than 6 characters), which are used as a filter as in the case of phrasal MeSH terms. The experiments showed that this step removed most of the <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that did not contain a MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>or a variant form.</p>
+
+<p>The <em>second step</em> is based on the observation that <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names only very rarely contain function words and other <span>so-called</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>stop words. Therefore, the rightmost stop word in each <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and all strings to the left of the rightmost stop word are removed from an index entry. Also the acronyms are removed at this stage. The stop word <span>list</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>used was that of the retrieval system. As single letters are found in <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>names</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> they were removed from the <span>list</span>. <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> The <span>list</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>was supplemented with the <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>specific abbreviations <em>ti</em> and <em>ab</em> (<em>ti</em> <span>refers</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>to title and <em>ab</em> to abstract).</p>
+
+<p>In the <em>third step</em>, the <em>longest common subsequence (LCS)</em> <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(see for example <a href="#pirkola">Pirkola <em>et al</em>. 2002</a>) is used to identify probable full <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>which we call <em>full name candidates</em>. The <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>scans strings from right to left in each <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>to find a string that starts with the same <span>letter</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>as the acronym. If such string is found, it is marked as a <em>temporary first component (TFC)</em> of a full name. Next LCS is computed for the acronym and the string <span>sequence</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>starting with the TFC and ending with <em>s<sub>n</sub>(A<sub>i</sub>(l))</em>. If LCS = |the number of characters in the acronym| the string <span>sequence</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>is marked as a full name candidate and is passed to the fifth step. The <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>where full name candidates are not found are passed to the fourth step.</p>
+
+<p>Numbers 0-100 as well as the strings <em>alpha, beta, gamma, tert, nalpha, d, l, n, p, r, s</em>, are often found as left components in <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names (e.g., <em>1 6 diphenyl 1 3 5 hexatriene</em>), and if such string or a <span>combination</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of such strings appears immediately left to the TFC it is included in the full name candidate.</p>
+
+<p>In the experiments, the <span>third</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>step correctly identified most of the full <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(note, at this stage they are still candidates). Below is an example of the second and <span>third</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>steps. The <span>sample</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>entry shown above is presented. The hyphen shows the location from which the left part of the entry was removed in the second step. The remaining part (called as a post-second-step entry in the following text) was processed in the <span>third</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>step. The asterisk indicates the TFC. As the example shows the LCS method identifies the full <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>methyl tert butyl ether</em> (MeSH term), <em>methyl t butyl ether</em> and <em>methyl tertiary butyl ether</em> (variant forms).</p>
+
+<blockquote> 
+<strong>entry: mtbe<br /></strong>
+etbe t butyl alcohol tba *methyl t butyl ether [LCS=4]<br />
+mtbe from soil <span>samples</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>ab- *methyl tert butyl ether [LCS=4]<br />
+9 isopropyl alcohol ipa in- *methyl tert butyl ether [LCS=4]<br />
+a procedure for determination of- *methyl tert butyl ether [LCS=4]<br />
+an increase in levels of- *methyl tertiary butyl ether [LCS=4]<br />
+and in bus exposures to- *methyl tertiary butyl ether [LCS=4]<br />
+butyl ether in <span>water</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>ab- *methyl tert butyl ether [LCS=4]</blockquote>
+
+<p>The <em>fourth step</em> handles the <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>which the <span>third</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>step could not <span>solve</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>frequency-based <em>FNV indicator</em> value is computed for each string in a post-second-step entry using a <em>FNV-Finder <span>computation</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>scheme</em>. The idea is that the string that appears <span>frequently</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in an entry and that is the leftmost string among the frequent strings in a <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>is likely to be a start component of a full name.</p>
+
+<p>The FNV-Finder <span>computation</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>scheme computes a FNV indicator value for
+the string <em>s<sub>k</sub>(A<sub>i</sub></em>) as follows:</p>
+
+			<div align="center">
+Fr(s<sub>k</sub>(A<sub>i</sub>)) / ln(N(A<sub>i</sub>))
+</div>
+
+<p>Fr(s<sub>k</sub>(A<sub>i</sub>)) = frequency of the string s<sub>k</sub> in the entry of an acronym A<sub>i</sub>.<br /> N(A<sub>i</sub>) = total number of strings in the entry of an acronym A<sub>i</sub>.</p>
+
+<p>The frequency of <em>s<sub>k</sub></em> is <span>divided</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>by the total number of strings N in an entry to get <span>figures</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that are in proper proportion between different <span>entries</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> Similarly the natural logarithm (ln) in a denominator equalizes <span>figures</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>between different <span>entries</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span></p>
+
+<p>FNV indicator <span>values</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>are computed for each string in a post-second-step entry. The leftmost string whose value is above a set threshold (the value of 0.50 was used based on the training tests) is marked as a TFC. As in the <span>third</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>step, the whole string <span>sequence</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>from the TFC to the <em>s<sub>n</sub>(A<sub>i</sub>(l))</em> is marked as a full name candidate. Similarly to the <span>third</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>step, numbers 0-100 and the strings <em>alpha, beta, gamma, tert, nalpha, d, l, n, p, r, s</em>, and combinations of them are included in the full name candidates (also in cases where the indicator value of such string is =&lt; 0.50). The <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>which the fourth step does not <span>solve</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>are rejected.</p>
+
+<p>To take an example of full name identification based on the FNV-Finder <span>computation</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>scheme, <span>con0er</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the post-second-step entry of the acronym NMP:</p>
+
+<blockquote>              
+<strong>entry: nmp<br /></strong>
+n methyl 2 pyrrolidone [LCS=3]<br />
+1 methyl 2 pyrrolidinone<br />
+n methyl pyrrolidone [LCS=3]<br />
+1 methyl 2 pyrrolidone<br /></blockquote>
+
+<p>The LCS method of the <span>third</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>step found the <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>n methyl 2 pyrrolidone</em> and <em>n methyl pyrrolidone</em> (which are variant forms) in <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>1 and 3. But it did not find the <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>1 methyl 2 pyrrolidinone</em> (MeSH term) in the second <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>nor <em>1 methyl 2 pyrrolidone</em> (a variant form) in the fourth <span>line</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> whereas the FNV-Finder <span>computation</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>scheme did so based on the indicator value of 0.74 (&gt; 0.50) of the string <em>1</em>.</p>
+
+<p>The <em>fifth step</em> checks if there is a contradiction between the endings of the full name candidate and the MeSH <span>term</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> In other words, this step checks whether they designate different types of <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substances</span>. <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> The <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>types are identified by means of a suffix <span>list</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>built in the study on the basis of a set of <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names extracted from the full name-acronym  index. The <span>list</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>contains core word endings (n=21) <span>typical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of different types of <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names. The end parts of the MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and the candidate are matched against the suffix <span>list</span>. <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> If the end parts match different suffixes in the <span>list</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(e.g., one is <em>amide</em> and matches <em>-ide</em>, and the other is <em>amine</em> and matches <em>-ine</em>), the candidate is rejected. Otherwise, the candidate is passed to the sixth step.</p>
+
+<p>In the <em>sixth step</em>, the candidates are mapped to the MeSH terms to see if they are MeSH terms or variants. <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>full match indicates a MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>while a mismatch indicates a variant form.</p>
+
+<h2>Evaluation</h2>
+
+<p>FNV-Finder effectiveness (research problem three) was evaluated using the measures of <em>recall</em> and <em>precision</em>. In both cases we <span>con0er</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>unique</em> variants (as <span>opposed</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>to variant occurrences). Recall is defined as the proportion of variants FNV-Finder identified correctly from the full name-acronym index to intellectually identified variants from the full name-acronym  index. Recall:</p>
+
+<blockquote> 
+|Correct variants identified by FNV-Finder| / |Intellectually identified (correct) variants|</blockquote>
+
+<p>The intellectually identified variants thus constitute a recall base for variants identified by FNV-Finder. <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>full match between a FNV-Finder variant and an intellectually identified variant is con0ered a correct identification. <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>partial</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>match and a mismatch are con0ered <span>wrong</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>identifications.</p>
+
+<p>Precision is defined as the proportion of correctly identified variants by FNV-Finder among all entities FNV-Finder identified as variants. Precision:</p>
+
+<blockquote> 
+|Correct variants identified by FNV-Finder| / |All entities identified by FNV-Finder|</blockquote>
+
+<p>In this study, a <em>relevant document</em> is defined as a document that contains at least one of the following items that denote the <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in question: the MeSH <span>term</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> the Chemical Abstracts Service registry number, a variant form. In retrieval experiments (research problem four) we ran the following three queries:</p>
+
+<blockquote>
+<em>MeSH+Registry Number (hereafter, RN)</em>. Baseline. These queries (n=50) <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the MeSH terms and registry numbers, and they serve as baseline for the following <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>queries. For each acronym, they retrieved <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>or the registry number (or both of these). By definition, all the <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>retrieved by MeSH+RN queries are relevant <span>documents</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><br /><br />
+
+<em>MeSH+RN+manual-variant</em>. These queries (n=50) <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the MeSH terms, registry numbers, and the manually identified variants. For each acronym, they retrieved <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>at least one of the following items: the MeSH <span>term</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> the registry number, at least one of the manually identified variants of the MeSH <span>term</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> The <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names selected manually from the full name-acronym  index were all correct <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>and these queries were <span>expected</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>to retrieve only relevant <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(see below for relevance assessments).<br /><br />
+
+<em>MeSH+RN+automatic-variant</em>. These queries (n=50) <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the MeSH terms, registry numbers, and the variant forms identified by the FNV-Finder <span>technique</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> For each acronym, they retrieved <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>at least one of the following items: the MeSH <span>term</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> the registry number, at least one of the automatically identified variants of the MeSH <span>term</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> Due to the automatically identified variant forms these queries retrieved also irrelevant <span>documents</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span></blockquote>
+
+<p>We computed recall for MeSH+RN, MeSH+RN+manual-variant and MeSH+RN+automatic-variant queries, and precision for MeSH+RN+automatic-variant queries. These measures provide an answer to the research question whether, and to what extent, <span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name searching benefits from using variant forms.</p>
+
+<p><a name="relevance">The relevance</a> of the <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>containing only variant forms was assessed, firstly, to ensure that the manually identified variants retrieved only relevant <span>documents</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> so that <span>reliable</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>recall <span>values</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>are obtained for MeSH+RN+manual-variant queries, and secondly, to compute recall and precision for MeSH+RN+automatic-variant queries.</p>
+
+<p>The <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>retrieved by the MeSH+RN+manual-variant queries constitute a recall base for the 50 queries. We are aware that the recall base is not complete, in particular due to the synonyms of MeSH terms. Therefore, we measure <em>relative recall</em>, in other words, recall relative to the set of known relevant <span>documents</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> i.e., <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>retrieved by MeSH+RN+manual-variant queries. (By the <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>synonym</em> we mean a <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that designates the same <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>as the MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>but is dissimilar to it.)</p>
+
+<p>A <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name may be embedded in another, longer name. Therefore prior to the runs we <span>checked</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the MeSH and ChemIDplus Lite databases to see which MeSH terms and variants in our data <span>appeared</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in longer <span>names</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> For such terms and variants we constructed a <span>Boolean</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>negation-based (InQuery's #bandnot-operator) query which excluded <span>wrong</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names from the results. It should be noted that this type of query modification is not a <span>feature</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of FNV-Finder based retrieval, but to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>good results, modification is necessary in many cases. <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>drawback of this approach that some relevant <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>may be <span>lost</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> However, we analysed a <span>sample</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>set of such <span>documents</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> and the analysis results <span>suggest</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that only a fraction of relevant <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>are <span>lost</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span></p>
+
+<h2>Findings</h2>
+
+<p>Table 1 presents the results of the first research problem, i.e., the frequency of variant forms. It can be seen that the average number of unique variants per a MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>is 2.82.</p>
+
+<p>Table 2 shows the <span>distribution</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of the variants between the 50 MeSH terms. The MeSH terms were <span>divided</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>into groups on the basis of the number of variants for each <span>term</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> The left column shows the cardinality of a MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>group, and the right column the number of variants in a group. Table 2 shows that out of the 50 MeSH terms 39 have variants. 32 terms have 1-4 variants. One <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>has 10, one has 13, and one (<em>n formylmethionine leucyl phenylalanine</em>) has even 18 variants. These three terms with many variants were long terms. Of the 11 terms that did not have variants 10 were single words, compound words, or phrases with only two components. Thus, the results <span>suggest</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>a general trend: the longer a MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>is the more variant forms it has.</p>
+
+<p>Table 3 reports the results of the FNV-Finder effectiveness experiments. It can be seen that FNV-Finder performed very well - it <span>achieved</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>95.0% recall and 97.1% precision. These <span>figures</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>indicate that there were only a few variant forms that FNV-Finder could not identify, and only a few <span>wrong</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>identifications.</p>
+
+<p>Table 4 reports the results of the retrieval experiments. As shown, MeSH+RN queries retrieved 4,110 <span>documents</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> MeSH+RN+manual-variant queries retrieved 4,468 <span>documents</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> and MeSH+RN+automatic-variant queries retrieved 4,456 <em>relevant</em> <span>documents</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> For MeSH+RN+manual-variant queries the difference (third column) is 358 <span>documents</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> This means that - for the 50 queries - the <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>contains 358 <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that contain only variant forms (and do not contain the MeSH terms or RNs). For MeSH+RN+automatic-variant queries the difference is 346 <span>documents</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> For MeSH+RN+manual-variant queries we selected only correct variants, and all the retrieved <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>were relevant.</p>
+
+<p>Both for MeSH+RN+manual-variant and MeSH+RN+automatic-variant queries recall was improved (with respect to MeSH+RN queries) for 29 queries out of the 50 queries. The <span>statistical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>significance was analysed by one-tailed non-parametric Wilcoxon signed rank <span>test</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> For both query types the results were statistically significant at the level of p &lt; 0.0001.</p>
+
+<p>MeSH+RN+automatic-variant queries yield a high precision, i.e., 99.8%. They retrieved 4,467 <span>documents</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> of which 11 were irrelevant <span>documents</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> In the case of an ambiguous acronym GDP (<em>guanosine diphosphate</em> in our data) FNV-Finder gave a <span>wrong</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name <em>geranyl diphosphate</em>, and all the irrelevant <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>dealt with this <span>substance</span>. <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> Other <span>wrong</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>identifications by FNV-Finder were too short and too long sequences, but they did not affect retrieval results. In particular short sequences may be useful query terms though sometimes their use may decrease precision.</p>
+<br />
+
+<table style="border: <span>medium</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>solid</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" align="center" border="1" cellpadding="5" cellspacing="0" width="60%">
+<caption align="bottom"><br /><strong>Table 1. The frequency of variants.</strong></caption>
+<tbody>
+<tr>      <th>Condition</th>
+	  <th>Number/Average Number</th></tr>
+    <tr>
+      <td align="left">Number of MeSH terms</td>
+      <td align="center">50</td>
+    </tr>
+    <tr>
+      <td align="left">Number of unique variants</td>
+      <td align="center">141</td>
+    </tr>
+    <tr>
+      <td align="left">Number of unique variants per a MeSH term</td>
+	  <td align="center">2.82</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<br />
+
+<table style="border: <span>medium</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>solid</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" align="center" border="1" cellpadding="5" cellspacing="0" width="60%">
+<caption align="bottom"><br /><strong>Table 2. Distribution of variants between MeSH terms.</strong></caption>
+<tbody>
+<tr>      <th>Number of MeSH terms in a group</th>
+      <th>Number of variants</th></tr>
+    <tr>
+      <td align="center">11</td>
+      <td align="center">0</td>
+    </tr>
+    <tr>
+      <td align="center">11</td>
+      <td align="center">1</td>
+    </tr>
+    <tr>
+      <td align="center">8</td>
+      <td align="center">2</td>
+    </tr>
+    <tr>
+      <td align="center">6</td>
+      <td align="center">3</td>
+    </tr>
+    <tr>
+      <td align="center">7</td>
+      <td align="center">4</td>
+    </tr>
+    <tr>
+      <td align="center">2</td>
+      <td align="center">5</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">8</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">9</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">10</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">13</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">18</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<br />
+
+<table style="border: <span>medium</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>solid</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" align="center" border="1" cellpadding="10" cellspacing="0" width="60%">
+<caption align="bottom"><br /><strong>Table 3. FNV-Finder effectiveness.</strong></caption>
+<tbody>
+    <tr>
+      <th>Recall/Number of instances</th>
+      <th>Recall%</th>
+    </tr>
+    <tr>
+      <td align="center">134/141</td>
+      <td align="center">95.0</td>
+    </tr>
+    <tr>
+      <th>Precision/Number of instances</th>
+      <th>Precision%</th>
+    </tr>	
+    <tr>
+      <td align="center">134/138 </td>
+      <td align="center">97.1</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<br />
+
+<table style="border: <span>medium</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>solid</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" align="center" border="1" cellpadding="10" cellspacing="0" width="80%">
+<caption align="bottom"><br /><strong>Table 4.  Retrieval <span>performance</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of <span>test</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>queries.</strong></caption>
+<tbody>
+<tr>      <th>Query type n=50</th>
+      <th>Relevant Retrieved</th>
+      <th>2-1 / 3-1</th>
+      <th>Recall%</th>
+      <th>All Docs. Retrieved</th>
+      <th>Precision%</th></tr>
+    <tr>
+      <td align="left">1.MeSH+RN, baseline</td>
+      <td align="center">4110</td>
+      <td align="center">-</td>
+      <td align="center">92.0</td>
+      <td align="center">4110</td>
+      <td align="center">(100)</td>
+  </tr>
+
+    <tr>
+      <td align="left">2.MeSH+RN+manual-variant</td>
+      <td align="center">4468</td>
+      <td align="center">358</td>
+      <td align="center">100.0</td>
+      <td align="center">4468</td>
+      <td align="center">(100)</td>
+  </tr>
+
+    <tr>
+      <td align="left">3.MeSH+RN+automatic-variant</td>
+      <td align="center">4456</td>
+      <td align="center">	346</td>
+      <td align="center">99.7</td>
+      <td align="center">4467</td>
+      <td align="center">99.8</td>
+  </tr>
+  </tbody>
+</table>
+<br />
+
+<h2>Related work</h2>
+
+<p>Larkey <em>et al</em>. (<a href="#larkey">2000</a>) extracted from the Web a large <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of acronyms and their expansions (full <span>names</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> definitions). They developed and evaluated several methods to extract acronyms' expansions. The corpus of the acronyms and expansions built on the basis of the best method was comparable to a high-quality hand-crafted Web site providing acronyms and expansions. Other pattern matching methods for extracting the full <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of acronyms are presented in (<a href="#schwartz">Schwartz and Hearst 2003</a>; <a href="#terada">Terada <em>et al</em>. 2004</a>; and <a href="#yu">Yu <em>et al</em>. 2002</a>).</p>
+
+<p>Liu and Friedman (<a href="#liu">2003</a>) developed a statistics-based method that <span>associates</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>abbreviations with their expansions. For example, the acronym ER is linked to the <span>expansion</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>estrogen receptor</em> in a text <span>containing</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>a parenthetical <span>expression</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>estrogen receptor (ER)</em>. Text parts <span>containing</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>parenthetical <span>expressions</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>were first extracted from <span>documents</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> Potential collocations were then generated and their frequencies were computed. The method uses the number of elements in a potential collocation and the <span>ratios</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of the frequencies of potential collocations to eliminate words co-occurring by chance. For example, for <em>include pneumonia</em> versus <em>pneumonia</em> the frequency ratio is low, and <em>include pneumonia</em> is <span>eliminated</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> The method <span>achieved</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>96.3% precision and 88.5% recall.</p>
+
+<p>The FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>proposed in this paper <span>differs</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>from the above studies in that it identifies variant forms of the same name. The above studies focused on the question of the demarcation of the full name (expansion) boundaries in text.</p>
+
+<p>It seems that <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>structure and substructure searching (e.g., <a href="#willett">Willett 2000</a>) has been studied more than <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name searching which seems to be a relatively unexplored area. Research on <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name processing started several decades ago (see for example,  <a href="#vander">Vander Stouw <em>et al.</em> 1976)</a>. However, there are few studies that have looked at how different techniques and factors affect retrieval <span>performance</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> <a href="#wren">Wren (2006)</a> used a first-order Markov Model to evaluate its ability to recognize <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>terms and reject non-chemical terms. The method <span>achieved</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>93% recall and 99% precision. Based on the results of a small scale information retrieval <span>experiment</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the researcher <span>concluded</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name <span>variation</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>affects information retrieval. This is in agreement with the results of this study.</p>
+
+<p>Luque Ruiz <em>et al</em>. (<a href="#luque">1996</a> )developed an <span>approximate</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>string matching <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>for repairing <span>lexical</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>errors in inorganic <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>names</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> The National Library of Medicine has several powerful <span>tools</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>to process biological texts (<a href="#aronson">Aronson 1994</a>; <a href="#wilbur">Wilbur <em>et al.</em> 1999</a>). Lexical Variant Generator and MetaMap generate <span>lexical</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>variants for words appearing in texts. Wilbur <em>et al</em>. (<a href="#wilbur">1999</a>) explored the problem of recognizing <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>terms and tested three methods: a <span>lexical</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>method where <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>terms were analysed into their constituent <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>morphemes, and two <span>statistical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>methods based on the <span>Bayesian</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>classifier. The evaluation results showed that one of the <span>statistical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>methods <span>achieved</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>the best results, an overall <span>classification</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>accuracy of 97%.</p>
+
+<h2>Discussion and conclusions</h2>
+
+<p>We found in this study that the average number of unique variants for a <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>is 2.82. The retrieval experiments showed that the <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>contains a substantial number of <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that contain only MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>variants (and do not contain the MeSH terms or RNs). The FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>effectively identified variant forms, and it <span>achieved</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>a high recall and precision. The <span>findings</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of the retrieval experiments are in agreement with the FNV-Finder effectiveness experiments. The use of the variant forms identified by the FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>improved the recall of queries with respect to the recall of queries that only <span>contained</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>MeSH terms and RNs, and only slightly decreased precision.</p>
+
+<p>MeSH and the Chemical Abstracts Service registry number system are the <span>main</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>terminological</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>resources in <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>name searching. However, in exhaustive retrieval where the aim is to retrieve a large set of <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>discussing a given <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>substance</span>, <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> as well as some other retrieval situations, the <span>selection</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of additional <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(variant forms) for queries either manually from a full name-acronym  index constructed from a <span>collection</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>or automatically using the FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>would be very useful or even necessary.</p>
+
+<p>	It seems that the proposed FNV-Finder <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>could be used effectively for name variant identification in any <span>domain</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>where <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>are expressed using the full name - acronym pattern. Naturally, the domain-specific components of the <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>(e.g.,  suffix lists) need to be constructed according to the selected <span>domain</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> The proposed <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>could also be used in other areas than information retrieval (e.g.,  in information extraction), and for other <span>languages</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>than <span>English</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> The next step in the FNV-Finder research will be the application of the <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in the Web <span>environment</span>. <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> We have crawled large amount of data from the Web which will be used to construct Web based full name-acronym  indexes. In addition to <span>English</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> we plan to construct Web based full name-acronym  indexes for French, German, and Spanish. These will be used to identify the full <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>acronyms in Web pages, and also other domains will be <span>investigated</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> We would also like to <span>investigate</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>whether the <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>could be applied in the area of converting <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>into structures.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>This research was funded by the Academy of Finland (project <span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><em>NLP-based information retrieval <span>systems</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>for the biological literature</em> and <em> Focused retrieval of Web <span>documents</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span></em>).</p>
+
+<p>The InQuery <span>search</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>engine was provided by the Center for Intelligent
+Information Retrieval at the University of Massachusetts.</p>
+
+<form action="#">
+<fieldset>
+<legend style="border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>navy; border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>navy; padding: 0.1ex 0.5ex; color: white; background-color: #5E96FD;; font-size: medium; font-weight: bold;">References</legend>
+
+<ul>
+<li><a id="allan" name="allan"></a>Allan, <span>J++</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>, Connell, M.E., Croft, W.B., Feng, F.-F, Fisher, D. &amp; Li, <span>X++</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> (2000). <a href="http://www.webcitation.org/5a2pwybjy">InQuery and TREC-9</a>. In <em>Proceedings of the Ninth Text REtrieval Conference (TREC-9)</em>. (pp. 551-600). Gaithersburg, MD: National Institute of Standards and Technology. (NIST Special Publication 500-249) <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>13 August, 2008 from http://trec.nist.gov/pubs/trec9/papers/umass-trec9.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5a2pwybjy)</li> 
+ 
+<li><a id="aronson" name="aronson"></a>Aronson, <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>R. (1994). <a href="http://www.webcitation.org/5a2qR12a7"><em>Comparison of LVG and MetaMap functionality</em></a>.  Bethesda, MD: Lister Hill National Center for Biomedical Communications. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>13 August, 2008 from http://skr.nlm.nih.gov/papers/references/LVG-MetaMap.<span>comparison</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>pdf (Archived by WebCite&reg; at http://www.webcitation.org/5a2qR12a7)</li>
+
+<li><a id="hersh" name="hersh"></a>Hersh, W. &amp; Bhupatiraju, <span>R++</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>T. (2004). <a href="http://www.webcitation.org/5a2qzVCvD">TREC genomics track overview</a>. In <em>Proceedings of the Twelfth Text Retrieval Conference (TREC-2003)</em>, (pp. 14-23). Gaithersburg, MD: National Institute of Standards and Technology. (NIST Special Publication 500-255) <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>13 August, 2008 from http://trec.nist.gov/pubs/trec12/papers/GENOMICS.OVERVIEW3.pdf   (Archived by WebCite&reg; at http://www.webcitation.org/5a2qzVCvD)</li> 
+  
+<li><a id="larkey" name="larkey"></a>Larkey, L., Ogilvie, P., Price, <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> &amp; Tamilio, B. (2000). Acrophile: an automated acronym extractor and server. In <em>Proceedings of the ACM <span>Fifth</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>International Conference on Digital Libraries, DL ’00, Dallas TX.</em> (pp. 205-214). New York, NY: ACM Press.</li>
+
+<li><a id="liu" name="liu"></a>Liu, H. &amp; Friedman, C. (2003). Mining <span>terminological</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>knowledge in large biomedical corpora. In Russ B Altman, <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>Keith Dunker, Lawrence Hunter, Tiffany <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>Jung &amp; Teri E Klein (Eds.). <em>Proceedings of the 8th Pacific Symposium on Biocomputing (PSB 2003), Lihue, Hawaii.</em>  (pp. 415-426). Singapore: World Scientific Publishing Co.</li>
+
+<li><a id="luque" name="luque"></a>Luque Ruiz, I., Cruz Soto, <span>J++</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> L. &amp; Gómez-Nieto, M. <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> (1996). Error detection, recovery, and repair in the translation of inorganic nomenclatures. 2: a proposed strategy. <em>Journal of Chemical Information and <span>Computer</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>Sciences</em>, <strong>36</strong>(1), 16-24.</li>  
+  
+<li><a id="pirkola" name="pirkola"></a>Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>, Keskustalo, H., Leppänen, E. , K&auml;ns&auml;l&auml;, <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>-P. &amp; J&auml;rvelin, K. (2002). <a href="../7-2/paper126.html">Targeted s-gram matching: a <span>novel</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>n-gram matching <span>technique</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>for cross- and monolingual word form variants</a>. <em>Information Research</em>, <strong>7</strong>(2), paper 126. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>13 August, 2008 from http://informationr.net/ir/7-2/paper126.html  (Archived by WebCite&reg; at http://www.webcitation.org/5a2sJHoaw)</li>
+
+<li><a id="schwartz" name="schwartz"></a>Schwartz, <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> &amp; Hearst, M. (2003). <a href="http://www.webcitation.org/5a2slmvxP">A simple <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>for identifying abbrevation <span>definitions</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in biomedical texts</a>. In Russ B Altman, <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>Keith Dunker, Lawrence Hunter, Tiffany <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>Jung &amp; Teri E Klein (Eds.). <em>Proceedings of the 8th Pacific Symposium on Biocomputing (PSB 2003), Lihue, Hawaii.</em>  Singapore: World Scientific Publishing Co. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>13 August, 2008 from http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2481&amp;rep=rep1&amp;type=pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5a2slmvxP)</li>
+
+<li><a id="terada" name="terada"></a>Terada, <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>, Tokunaga, T. &amp; Tanaka, H. (2004). Automatic <span>expansion</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of abbrevations by using context and character information. <em>Information Processing and Management</em>, <strong>40</strong>(1), 31-45.</li> 
+
+<li><a id="vander" name="vander"></a>Vander Stouw, G.G., Gustafson, C., Rule, <span>J++</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>D. &amp; <span>Watson</span>, <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> C.E. (1976). The Chemical Abstracts Service <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>registry system. IV: use of the registry system to support the preparation of index nomenclature. <em>Journal of Chemical Information and <span>Computer</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>Sciences</em>, <strong>16</strong>(4), 213-218.</li>  
+
+<li><a id="wilbur" name="wilbur"></a>Wilbur, W.<span>J++</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>, Hazard, G.F., Divita, G., Mork, <span>J++</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>G., Aronson, <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>R. &amp; Browne, <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>C. (1999). <a href="http://www.webcitation.org/5a2t0w0BE">Analysis of biomedical text for <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>names: a <span>comparison</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of three methods</a>. <em>Proceedings of the AMIA Annual Symposium</em>, (pp. 176-180). Bethesda, MD: American Medical Informatics Association. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>13 August, 2008 from http://skr.nlm.nih.gov/papers/references/chemicals.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/5a2t0w0BE)</li>
+  
+<li><a id="willett" name="willett"></a>Willett, P. (2000). <a href="../5-2/paper69.html">Textual and <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>information processing: different domains but similar algorithms</a>. <em>Information Research</em>, <strong>5</strong>(2), paper 69.  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>25 July, 2007 from http://informationr.net/ir/5-2/paper69.html  (Archived by WebCite&reg; at http://www.webcitation.org/5a2tL872j)</li>
+
+<li><a id="wren" name="wren"></a>Wren, <span>J++</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>D. (2006). <span>A+</span>  <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>scalable machine-learning approach to recognize <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>within large text databases.<em> BMC Bioinformatics</em>, <strong>7</strong>(Suppl 2): S3.</li>  
+
+<li><a id="yu" name="yu"></a>Yu, H., Hatzivassiloglou, V., Rzhetsky, <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> &amp; Wilbur, W.<span>J++</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> (2002). Automatically identifying gene/protein terms in MEDLINE abstracts. <em>Journal of Biomedical Informatics</em>, <strong>35</strong>, 322-330. </li>
+</ul>
+</fieldset>
+</form>
+
+<form action="#">
+<fieldset>
+<legend style="border-right: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>navy; border-bottom: 1px <span>solid</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>navy; padding: 0.1ex 0.5ex; color: white; background-color: #5E96FD;; font-size: medium; font-weight: bold;">How to cite this paper</legend>
+<div><br />
+Pirkola, <span>A+</span>. <span class="compus" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> (2008). &quot;Extracting variant forms of <span>chemical</span>  <span class="exper" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span><span>names</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>for information retrieval.&quot; <em>Information Research</em>, <strong>13</strong>(3) paper 347. [Available at http://InformationR.net/ir/13-3/paper347.html from 13 August, 2008]</div>
+</fieldset>
+</form>
+
+<table align="center" cellspacing="10">
+	<tbody><tr>
+		<td colspan="3" style="background-color: #5E96FD;; color: white; font-family: verdana; font-size: small; font-weight: bold;" align="center">Find other papers on this subject</td></tr>
+	<tr>
+		<td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+			<table bgcolor="#ffffff">
+
+				<tbody><tr>
+					<td align="center" height="32" nowrap="nowrap" valign="top"><input name="q" size="31" maxlength="255" value="&quot;chemical names&quot; &quot;information retrieval&quot; extraction" type="hidden"></input> <br />
+<input name="sa" value="Scholar Search" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit"></input>
+<input name="num" value="100" type="hidden"></input>
+					</td>
+				</tr>
+			</tbody></table>
+
+</form>
+		</td>
+
+		<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+			<table bgcolor="#ffffff">
+				<tbody><tr>
+					<td align="center" height="32" nowrap="nowrap" valign="top"><input name="q" size="31" maxlength="255" value="&quot;chemical names&quot; &quot;information retrieval&quot; extraction" type="hidden"></input><br />
+<input name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" type="submit"></input>
+<input name="client" value="pub-5081678983212084" type="hidden"></input>
+<input name="forid" value="1" type="hidden"></input>
+
+<input name="ie" value="ISO-8859-1" type="hidden"></input>
+<input name="oe" value="ISO-8859-1" type="hidden"></input>
+
+<input name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" type="hidden"></input>
+<input name="hl" value="en" type="hidden"></input>
+					</td>
+				</tr>
+			</tbody></table>
+</form>
+</td>
+<td align="center" valign="top">
+<form method="get" action="http://www.live.com/" target="_blank">
+			<table bgcolor="#ffffff">
+				<tbody><tr>
+
+					<td align="center" height="32" nowrap="nowrap" valign="top"><input name="q" size="31" maxlength="255" value="&quot;chemical names&quot; &quot;information retrieval&quot; extraction" type="hidden"></input> <br />
+<input name="sa" value="Windows Academic" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit"></input>
+<input name="num" value="100" type="hidden"></input>
+					</td>
+				</tr>
+			</tbody></table>
+</form>
+
+		</td>
+	</tr>
+</tbody></table>
+
+<hr style="color: #5E96FD;" size="1" />
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+<div align="center">
+<img alt="logo" src="http://static.delicious.com/img/delicious.small.gif" /> <a href="http://del.icio.us/post" onclick="window.open('http://delicious.com/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a>
+</div>
+<hr style="color: #5E96FD;" size="1" />
+<br />
+<h2><a id="app" name="app"></a>Appendix 1 - Training data for FNV-Finder</h2>
+<br />
+<table width="90%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd">
+<tr><th>Acronym</th><th>MeSH term/<br />Substance name</th><th>Variant forms<br /> in the FN-A index</th></tr>
+<tr><td valign="top">adomet</td><td valign="top">s adenosylmethionine</td><td valign="top">adenosyl methionine;<br />s adenosyl l methionine</td></tr>
+<tr><td valign="top">adpr</td><td valign="top">adenosine diphosphate ribose</td><td valign="top">adenosine 5 diphosphoribose;<br />  
+adp ribose </td></tr>
+<tr><td valign="top">aibn</td><td valign="top">azobis isobutyronitrile</td><td valign="top">2 2 azobis isobutyronitrile;<br />
+2 2 azobisisobutyronitrile</td></tr>
+<tr><td valign="top">alum</td><td valign="top">aluminum hydroxide</td><td valign="top">aluminium hydroxide </td></tr>
+<tr><td valign="top">ampt</td><td valign="top">alpha methyltyrosine </td><td valign="top">alpha methyl p tyrosine;<br /> 
+alpha methyl para tyrosine;<br />  
+alpha methylpara tyrosine </td></tr>
+<tr><td valign="top">ap4a</td><td valign="top">diadenosine tetraphosphate</td><td valign="top">p 1 p 4 di adenosine 5 tetraphosphate</td></tr>
+<tr><td valign="top">azttp</td><td valign="top">3 azido 3 deoxythymidine 5 triphosphate </td><td valign="top">azt triphosphate</td></tr>
+<tr><td valign="top">bbp</td><td valign="top">butylbenzyl phthalate </td><td valign="top">benzyl butyl phthalate; <br />
+benzylbutyl phthalate; <br />
+butyl benzyl phthalate; <br />
+butylbenzylphthalate </td></tr>
+<tr><td valign="top">bche</td><td valign="top">butyrylcholinesterase </td><td valign="top">butyrylcholine esterase</td></tr>
+<tr><td valign="top">cccp</td><td valign="top">carbonyl cyanide m chlorophenyl hydrazone</td><td valign="top">carbonyl cyanide 3 chlorophenylhydrazone; <br />
+carbonyl cyanide m chlorophenylhydrazone; <br />
+carbonyl cyanide m cholorophenyl hydrazone; <br />
+carbonylcyanide m chlorophenyl hydrazone; <br />
+carbonylcyanide m chlorophenylhydrazone </td></tr>
+<tr><td valign="top">dcc</td><td valign="top">dicyclohexylcarbodiimide</td><td valign="top">dicyclohexyl carbodiimide;<br />
+n n dicyclohexylcarbodiimide </td></tr>
+<tr><td valign="top">dep</td><td valign="top">diethyl phthalate</td><td valign="top">diethylphthalate</td></tr>
+<tr><td valign="top">dmn</td><td valign="top">dimethylnitrosamine</td><td valign="top">n nitrosodimethylamine</td></tr>
+<tr><td valign="top">dmpo</td><td valign="top">5 5 dimethyl 1 pyrroline 1 oxide</td><td valign="top">5 5 dimethyl 1 pyrroline n oxide; <br />
+5 5 dimethyl pyrroline n oxide; <br />
+5 5 dimethylpryrroline n oxide; <br />
+dimethyl pyrroline n oxide </td></tr>
+<tr><td valign="top">emate</td><td valign="top">estrone 3 o sulfamate</td><td valign="top">oestrone 3 sulphamate</td></tr>
+<tr><td valign="top">galn</td><td valign="top">galactosamine </td><td valign="top">d galactosamine</td></tr>
+<tr><td valign="top">gsno</td><td valign="top">s nitrosoglutathione </td><td valign="top">nitrosoglutathione; <br />
+s nitroso glutathione; <br />
+s nitroso l glutathione </td></tr>
+<tr><td valign="top">hba</td><td valign="top">4 hydroxybenzoic acid</td><td valign="top">p hydroxybenzoate; <br />
+p hydroxybenzoic acid </td></tr>
+<tr><td valign="top">hdi</td><td valign="top">1 6 hexamethylene diisocyanate</td><td valign="top">hexamethylene diisocyanate; <br />
+hexane diisocyanate </td></tr>
+<tr><td valign="top">iptg</td><td valign="top">isopropyl thiogalacto0e</td><td valign="top">isopropyl beta d thiogalactopyrano0e; <br />
+isopropyl beta d thiogalacto0e; <br />
+isopropylthiogalacto0e </td></tr>
+<tr><td valign="top">kic</td><td valign="top">alpha ketoisocaproic acid </td><td valign="top">2 ketoisocaproic acid; <br />
+alpha ketoisocaproate </td></tr>
+<tr><td valign="top">kyna</td><td valign="top">kynurenic acid</td><td valign="top">kynurenate </td></tr>
+<tr><td valign="top">m6g</td><td valign="top">morphine 6 glucuronide</td><td valign="top">morphine 6 beta glucuronide</td></tr>
+<tr><td valign="top">mat</td><td valign="top">methionine adenosyltransferase</td><td valign="top">methionine adenosyl transferase</td></tr>
+<tr><td valign="top">mcpa</td><td valign="top">2 methyl 4 chlorophenoxyacetic acid</td><td valign="top">4 chloro 2 methyl phenoxyacetic acid; <br />
+4 chloro 2 methylphenoxy acetic acid; <br />
+4 chloro 2 methylphenoxyacetic acid </td></tr>
+<tr><td valign="top">mdp</td><td valign="top">acetylmuramyl alanyl isoglutamine</td><td valign="top">muramyl dipeptide: <br />
+muramyldipeptide </td></tr>
+<tr><td valign="top">mlsb</td><td valign="top">streptogramin b</td><td valign="top">streptograminb</td></tr>
+<tr><td valign="top">mstfa</td><td valign="top">n methyl n trimethylsilyl trifluoroacetamide </td><td valign="top">n methyl n trimethylsilyltrifluoroacetamide </td></tr>
+<tr><td valign="top">naag</td><td valign="top">n acetyl 1 aspartylglutamic acid</td><td valign="top">n acetylaspartylglutamate</td></tr>
+<tr><td valign="top">nata</td><td valign="top">n acetyltryptophanamide </td><td valign="top">n acetyl tryptophan amide;<br /> 
+n acetyl l tryptophanamide </td></tr>
+<tr><td valign="top">neuac</td><td valign="top">n acetylneuraminic acid</td><td valign="top">n acetyl neuraminic acid</td></tr>
+<tr><td valign="top">nmm</td><td valign="top">omega n methylarginine</td><td valign="top">n g monomethyl l arginine;<br /> 
+ng monomethyl l arginine </td></tr>
+<tr><td valign="top">npa</td><td valign="top">alpha naphthylphthalamic acid</td><td valign="top">1 n naphthylphthalamic acid;<br /> 
+n 1 naphthylphthalamic acid; <br />
+naphtylphtalamic acid </td></tr>
+<tr><td valign="top">npe6</td><td valign="top">monoaspartyl chlorin e 6</td><td valign="top">mono l aspartyl chlorin e 6;<br /> 
+n aspartyl chlorin e 6</td></tr>
+<tr><td valign="top">nppb</td><td valign="top">5 nitro 2 3 phenylpropylamino benzoic acid </td><td valign="top">5 nitro 2 3 phenylpropyl amino benzoate;<br /> 
+5 nitro 2 3 phenylpropylamino benzoate </td></tr>
+<tr><td valign="top">oag</td><td valign="top">1 oleoyl 2 acetylglycerol</td><td valign="top">1 oleoyl 2 acetyl sn glycerol;<br /> 
+1 oleoyl acetyl sn glycerol;<br /> 
+oleoyl acetyl glycerol </td></tr>
+<tr><td valign="top">ocdd</td><td valign="top">octachlorodibenzo 4 dioxin </td><td valign="top">octachlorinated dibenzo p dioxin;<br /> 
+octachlorinated dibenzodioxin; <br /> 
+octachlorodibenzo p dioxin; <br /> 
+octachlorodibenzodioxin </td></tr>
+<tr><td valign="top">otz</td><td valign="top">2 oxothiazolidine 4 carboxylic acid </td><td valign="top">2 oxothiazolidine 4 carboxylate</td></tr>
+<tr><td valign="top">pam</td><td valign="top">peptidylglycine monooxygenase</td><td valign="top">peptidyl glycine alpha amidating monooxygenase; <br />  
+peptidyl glycine alpha amidating mono oxygenase;  <br /> 
+peptidylglycine alpha amidating monooxygenase </td></tr>
+<tr><td valign="top">pcmb</td><td valign="top">p chloromercuribenzoic acid </td><td valign="top">para chloromercuribenzoate </td></tr>
+<tr><td valign="top">pcmbs</td><td valign="top">4 chloromercuribenzenesulfonate</td><td valign="top">4 chloromercuri benzene sulfonic acid;<br /> 
+p chloromercuribenzene sulfonate;<br /> 
+p chloromercuribenzenesulphonic acid;<br /> 
+p chloromercurybenzenesulfonate </td></tr>
+<tr><td valign="top">prpp</td><td valign="top">phosphoribosyl pyrophosphate</td><td valign="top">phosphoribosylpyrophosphate</td></tr>
+<tr><td valign="top">rubp</td><td valign="top">ribulose 1 5 diphosphate</td><td valign="top">ribulose 1 5 bisphosphate</td></tr>
+<tr><td valign="top">sdma</td><td valign="top">n n dimethylarginine</td><td valign="top">symmetric dimethylarginine;<br /> 
+symmetric n g n g dimethyl l arginine;<br /> 
+symmetric ng ng dimethyl l arginine </td></tr>
+<tr><td valign="top">so2</td><td valign="top">sulfur dioxide</td><td valign="top">sulphur dioxide</td></tr>
+<tr><td valign="top">tbh</td><td valign="top">tert butylhydroperoxide</td><td valign="top">t butylhydroperoxide;<br /> 
+tert butyl hydroperoxide;<br />  
+tertiary butyl hydroperoxide</td></tr>
+<tr><td valign="top">tcne</td><td valign="top">tetracyanoethylene</td><td valign="top">tetracyano ethylene</td></tr>
+<tr><td valign="top">tpmt</td><td valign="top">thiopurine methyltransferase</td><td valign="top">thio purine methyl transferase;<br /> 
+thiopurine methyl transferase;<br /> 
+thiopurine s methyltransferase</td></tr>
+<tr><td valign="top">utp</td><td valign="top">uridine triphosphate </td><td valign="top">uridine 5 triphosphate</td></tr>
+<tr><td valign="top">vpa</td><td valign="top">valproic acid</td><td valign="top">valproate</td></tr>
+</table>
+<br />
+<hr style="color: #5E96FD;" size="1" />
+<br />
+<h2><a name="appendix" id="appendix">Appendix 2</a> - FNV-Finder algorithm</h2>
+<p><strong>Step 1</strong>. Input: an index entry; components extracted from a phrasal MeSH <span>term</span>, <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> or 6-grams extracted from a single word or compound word MeSH <span>term</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span></p>
+<p>Remove from an index entry all <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that do not contain a MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>component or a 6-gram. #Such <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>do not contain acronym's MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>or its variant.</p>
+<p><strong>Step 2</strong>. Input: output file from step 1; a stop word <span>list</span>. <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span></p>
+<p>For each <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>in an entry, match strings in a <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>against a stop word <span>list</span>. <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> If there is a match then print the end of the <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>located between the rightmost stop word and the acronym. Else print the whole <span>line</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> excluding the acronym.</p>
+<p><strong>Step 3</strong>. Input: post-second-step-entry; a prefix string <span>list</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>containing strings 0-100, alpha, beta, gamma, tert, nalpha, d, l, n, p, r, s; acronym.</p>
+<p>For each <span>line</span>, <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> start from the right to find a string whose first <span>letter</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>is <span>identical</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>to the first <span>letter</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>of the acronym. If such string is found then mark it as a temporary first component (TFC). Else go to step 4.</p>
+<p>Compute LCS for the acronym and the string <span>sequence</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>right to and including the TFC. If LCS = |the number of characters in the acronym| mark the string <span>sequence</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>as a full name candidate. Else go to step 4.</p>
+<p>Match the <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>containing the full name candidate against a prefix string <span>list</span>. <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> If there is a prefix string that appears immediately left to the full name candidate, include it and all consecutive prefix strings to the left of it in the full name candidate, and go to step 5. Else print the full name candidate and go to step 5.</p>
+<p><strong>Step 4</strong>. Input: <span>lines</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>that were not resolved in step 3; post-second-step-entry; a prefix string <span>list</span>  <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>containing strings 0-100, alpha, beta, gamma, tert, nalpha, d, l, n, p, r, s.</p>
+<p>Compute a FNV indicator value for each string in the post-second-step-entry. If a <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>contains one string with FNV indicator > 0.50, mark it as a TFC. If a <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>contains more than one string with FNV indicator > 0.50, mark the leftmost string as a TFC. Mark the string <span>sequence</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>right to and including the TFC as a full name candidate. Else, if a <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>does not contain a string with FNV indicator > 0.50, reject the <span>line</span>. <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span></p>
+<p>Match the <span>line</span>  <span class="quanti" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>containing the full name candidate against a prefix string <span>list</span>. <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> If there is a prefix string that appears immediately left to the full name candidate, include it and all consecutive prefix strings to the left of it in the full name candidate, and go to step 5. Else print the full name candidate and go to step 5.</p>
+<p><strong>Step 5</strong>. Input: output files from steps 3 and 4; a suffix list; MeSH <span>term</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span></p>
+<p>Match the end of the full name candidate against a suffix <span>list</span>. <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> Match the end of the MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>against a suffix <span>list</span>. <span class="quali" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> If the full name candidate and the MeSH <span>term</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>match different suffixes, reject the candidate. Else go to step 6.</p>
+<p><strong>Step 6</strong>. Input: output file from step  5; MeSH <span>term</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span></p>
+<p>Match the full name candidate against the MeSH <span>term</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span> If there is a match, mark the full name candidate as a MeSH <span>term</span>. <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>  Else mark the full name candidate as a variant form. Print the variant form.</p>
+
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+<hr style="color: #5E96FD;;" size="1" />
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div><!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=3946032; 
+var sc_invisible=0; 
+var sc_partition=46; 
+var sc_click_stat=1; 
+var sc_security="80455ec9"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div class="statcounter"><a class="statcounter" href="http://www.statcounter.com/free_web_stats.html"><img class="statcounter" src="http://c.statcounter.com/3946032/0/80455ec9/0/" alt="website stat" /></a></div></noscript>
+<!-- End of StatCounter Code --><br /><a href="http://my.statcounter.com/project/standard/stats.php?project_id=3946032&amp;guest=1">View My Stats</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the authors, 2008. <br />Last updated: 12 August, 2008</div></td>
+
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var 0="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper347.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&0="+0;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?0='+0+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own <span>free</span>  <span class="conce" style="width:1px;border-width:102px 34px 102px 34px;position:relative;">.</span>site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;0=281971&amp;js=No&amp;" alt="online web site analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+</table>
+<hr size="3" style="color: #5E96FD;" />
+
+<table align="center"><tr><td><div class="button">
+
+
+<ul>
+	<li><a href="infres133.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul> 
+
+</div></td></tr></table>
+<br />
+<hr size="3" style="color: #5E96FD;" />
+<br />
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/13-3/paper347.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:22:23 GMT -->
+</html>
+

@@ -1,0 +1,838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from informationr.net/ir/11-3/paper258.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:13:39 GMT -->
+<head>
+<title>Metodolog&iacute;as para el desarrollo de Interfaces Visuales de Recuperaci&oacute;n de Informaci&oacute;n: an&aacute;lisis y comparaci&oacute;n</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../IRstyle.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+
+<!--Enter appropriate data in the content fields-->
+<meta name="dc.title" content="Methodologies for developing Visual Interfaces for Information Retrieval: analysis and comparative review" />
+<meta name="dc.creator" content="V&iacute;ctor Herrero-Solana, Yusef Hassan" />
+<meta name="dc.subject" content="Information visualization for information retrieval" />
+<meta name="dc.<span>description</span>" <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> content="Introduction. In recent years the <span>volume</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>of electronic information has grown exponentially. This <span>phenomenon</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>improves data exchange and communication but introduces new troubles in relation to information access and searching. Aim. This paper proposes an exhaustive review of the different models, methods and <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>that can be used to develop Visual Interfaces for Information Retrieval. The methods are classified on the basis of the stage of the process in which they take part: data analysis and transformation, application of <span>classification</span>  <span class="quali" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>and <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>distribution</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>algorithms</span>, <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> and application of <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>transformation techniques.  Methodology. Based on the analysis, we compare the different methods that can be used in each stage of the production process. We also determine which combinations of methods and <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> are most <span>suitable</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>at different stages.  Results. In the first section, data analysis and transformation, we analyse content mining, structure mining and use mining. In the second section, <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>classification</span>  <span class="quali" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>algorithm, we shown the hierarchical, <span>network</span>, <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> scattering and <span>map</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>representations</span>. <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> In the last section, <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>transformation techniques, we present the distortion (Focus+Context) and non-distortion techniques. Conclusion. The results aim to become useful <span>tools</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>for other researchers when choosing a methodological <span>combination</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>for the development of specific proposals for <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>interfaces for information retrieval, as well as <span>suggest</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>implications to be con0ered on the research of new <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>transformation techniques." /> 
+<meta name="dc.subject.keywords" content="Information Visualization, Information Retrieval, Data Mining, MultiDimensional Scaling, Clustering, Pathfinder" />
+
+<!--leave the following to be completed by the Editor-->
+
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="paper258.html" />
+<meta name="dc.relation.IsPartOf" content="infres113.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2006-04-15" />
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+
+</style>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body  bgcolor="#ffffff">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"> <img src="../mini_logo2.gif" width="336" height="45" alt="header" /><br />
+Vol. 11  No. 3, April 2006<br /><br /><div class="button">
+<ul>
+	<li><a href="infres113.html"> Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+
+</ul>
+</div></td></tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<hr size="1" style="color: maroon;" />
+
+<h1>Metodolog&iacute;as para el desarrollo de interfaces visuales de recuperaci&oacute;n de informaci&oacute;n: an&aacute;lisis y comparaci&oacute;n</h1>
+<h4 align="center"><a href="mailto:victorhs@ugr.es">V&iacute;ctor Herrero-Solana</a> y <a href="mailto:yusef@nosolousabilidad.com">Yusef Hassan</a><br /> 
+  Grupo <a href="http://www.scimago.es/">SCImago</a>, Univer0ad de Granada<br />
+  Facultad de Biblioteconom&iacute;a y Documentaci&oacute;n<br />
+Colegio M&aacute;ximo de Cartuja s.n., 18071  Granada, Espa&ntilde;a.</h4>
+<br />
+<div align="center">
+<input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: Blue;" onclick="doChangeFont()" /></div>
+<hr style="color: rgb(0, 0, 128);" size="1" />
+
+<div align="center"><b>Resumen</b></div>
+
+<blockquote>
+<strong>Introducci&oacute;n</strong>. Con el advenimiento de la web a principios de los a&ntilde;os 90, el volumen de informaci&oacute;n electr&oacute;nica ha experimentado un crecimiento exponencial <span>sin</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>precedentes. Este fen&oacute;meno introdujo muchas ventajas en relaci&oacute;n con la posibilidad de intercambio, difusi&oacute;n y transferencia de datos pero, <span>sin</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>embargo, acarre&oacute; igualmente muchos problemas en relaci&oacute;n con el acceso, b&uacute;squeda, localizaci&oacute;n y recuperaci&oacute;n de la informaci&oacute;n relevante dentro de grandes vol&uacute;menes de datos.<br />
+<strong>Objetivo</strong>. El presente trabajo realiza una revisi&oacute;n exhaustiva de los diferentes modelos, m&eacute;todos y algoritmos existentes para la generaci&oacute;n de Interfaces Visuales de Recuperaci&oacute;n de Informaci&oacute;n (VIRIs, Visual Interfaces for Information Retrieval), clasificados seg&uacute;n la etapa del proceso en la que intervienen: an&aacute;lisis y transformaci&oacute;n de los datos, aplicaci&oacute;n de los algoritmos de clasificaci&oacute;n y distribuci&oacute;n <span>visual</span>, <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> y aplicaci&oacute;n de t&eacute;cnicas de transformaci&oacute;n <span>visual</span>. <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><br />
+<strong>Metodolog&iacute;a</strong>. En base a su an&aacute;lisis, se comparan los diferentes m&eacute;todos a emplear en cada etapa del proceso de producci&oacute;n, as&iacute; como se determinan qu&eacute; combinaciones entre m&eacute;todos y algoritmos de diferentes etapas resultan m&aacute;s adecuadas.<br />
+<strong>Resultados</strong>.  En la primer secci&oacute;n, an&aacute;lisis y transformaci&oacute;n de datos, se analiza la miner&iacute;a de contenidos, de estructura y de uso. En la segunda secci&oacute;n, algoritmos de clasificaci&oacute;n y distribuci&oacute;n <span>visual</span>, <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> se muestran las representaciones jer&aacute;rquicas, de redes, de dispersi&oacute;n y mapas. Finalmente, entre las t&eacute;cnicas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>se presentan las t&eacute;cnicas no orientadas a la distorsi&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>y las orientadas a la distorsi&oacute;n (Focus+Context).<br />
+<strong>Conclusiones</strong>. Los resultados pretenden servir a otros investigadores como herramienta para la elecci&oacute;n de una u otra combinaci&oacute;n metodol&oacute;gica en el desarrollo de propuestas espec&iacute;ficas de VIRIs, adem&aacute;s de sugerir implicaciones a tener en cuenta en la necesaria investigaci&oacute;n sobre nuevas t&eacute;cnicas de transformaci&oacute;n <span>visual</span>. <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><br />
+</blockquote>
+<br />
+
+<div align="center"><b><a href="#abs">Abstract in English</a></b></div>
+
+<hr style="COLOR: #000080" size="1" />
+<br />
+
+<h2>Introducci&oacute;n</h2>
+
+<p>Con el advenimiento de la World Wide Web a principios de los a&ntilde;os 90, el volumen de informaci&oacute;n electr&oacute;nica ha experimentado un crecimiento exponencial <span>sin</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>precedentes. Este fen&oacute;meno introdujo muchas ventajas en relaci&oacute;n con la posibilidad de intercambio, difusi&oacute;n y transferencia de datos pero, <span>sin</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>embargo, acarre&oacute; igualmente muchos problemas en relaci&oacute;n con el acceso, b&uacute;squeda, localizaci&oacute;n y recuperaci&oacute;n de la informaci&oacute;n relevante dentro de grandes vol&uacute;menes de datos. </p>
+
+<p>La investigaci&oacute;n en t&eacute;cnicas de recuperaci&oacute;n de informaci&oacute;n ha abordado esta problem&aacute;tica dividi&eacute;ndola para su estudio en dos grandes estrategias: el <em>querying </em> (interrogaci&oacute;n) y el <em>browsing </em> (exploraci&oacute;n). </p>
+
+<p>En las estrategias de b&uacute;squeda basadas en <em>querying </em>, el usuario introduce una serie de palabras clave que expresen sus nece0ades de informaci&oacute;n, con lo que el sistema tras realizar una equiparaci&oacute;n entre consulta y espacio documental, devolver&aacute; al usuario una lista de resultados pertinentes para la consulta introducida. Se trata por tanto de una estrategia de b&uacute;squeda consciente, que requiere del usuario una formalizaci&oacute;n previa de sus nece0ades de informaci&oacute;n. </p>
+
+<p>Es los sistemas basados en <em>querying </em>, se debe distinguir entre sistemas de recuperaci&oacute;n de datos y recuperaci&oacute;n de informaci&oacute;n (<a href="#rijsbergen">Rijsbergen</a> 1975).  Esta diferenciaci&oacute;n est&aacute; motivada principalmente por la t&eacute;cnica que emplean para la equiparaci&oacute;n entre consulta y espacio documental, denominadas equiparaci&oacute;n exacta y equiparaci&oacute;n parcial respectivamente. </p>
+
+<p>La equiparaci&oacute;n exacta es un m&eacute;todo determinista de comparaci&oacute;n entre consulta y conjunto documental, en el que &uacute;nicamente se resuelven como resultados v&aacute;lidos aquellos documentos que cumplen completamente con las nece0ades expresadas en la consulta. En otras palabras, s&oacute;lo se devolver&iacute;an como resultados aquellos documentos donde aparecieran todos y cada uno de los t&eacute;rminos introducidos en la consulta, aparici&oacute;n que es contabilizada de forma binaria (presencia o ausencia). </p>
+
+<p>En cambio, la equiparaci&oacute;n parcial es un m&eacute;todo que posibilita tanto la obtenci&oacute;n de resultados parcialmente v&aacute;lidos o pertinentes, como la ordenaci&oacute;n de estos resultados en funci&oacute;n de su grado de relevancia para la consulta introducida. Para ello, el sistema deber&iacute;a hacer uso de alg&uacute;n modelo que proporcione: </p>
+
+<ul>
+<li>Un m&eacute;todo para transformar los documentos textuales a representaciones num&eacute;ricas y computables. </li>
+<li> Un m&eacute;todo que, sobre esta representaci&oacute;n de los datos, realice una ponderaci&oacute;n autom&aacute;tica de los t&eacute;rminos que conforman cada documento. </li>
+<li> Un m&eacute;todo de equiparaci&oacute;n entre consulta y documento que determine en qu&eacute; grado el documento es relevante para la consulta, en base al peso de cada uno de los t&eacute;rminos en el documento. </li>
+</ul>
+
+<p>Entre los diferentes modelos propuestos que cumplen con estos requisitos podemos se&ntilde;alar: Modelo del espacio vectorial, Modelo probabil&iacute;stico y Modelo de conjuntos difusos. </p>
+
+<p>De estos modelos, el Modelo del espacio vectorial, originalmente propuesto por Salton (<a href="#salton">1989</a>), es el que ha tenido un mayor &eacute;xito. Como indica Moya-Aneg&oacute;n (<a href="#moya">1994</a>), el probabil&iacute;stico tiene unos fundamentos muy similares pero una implementaci&oacute;n m&aacute;s compleja, y el de conjuntos difusos a&uacute;n se encuentra poco desarrollado. </p>
+
+<p>En el Modelo de espacio vectorial, la representaci&oacute;n de los datos se obtiene mediante la vectorizaci&oacute;n del conjunto documental: cada documento <em>d </em> se representa por un vector <em>V </em> de t&eacute;rminos <em>t</em>, generando una matriz – o espacio - multidimensional con tantas columnas como t&eacute;rminos, y filas como documentos. </p>
+
+<p>Partiendo de la premisa de que los t&eacute;rminos de un documento representan su contenido (<a href="#luhn">Luhn</a> 1958), la ponderaci&oacute;n de cada uno de sus t&eacute;rminos se realiza a trav&eacute;s de la funci&oacute;n <em>tf &middot; idf</em>, donde la frecuencia del t&eacute;rmino (<em>tf </em>= <em>term frequency</em>) determina la capacidad de representaci&oacute;n de un t&eacute;rmino para un documento dado, y la inversa de la frecuencia del t&eacute;rmino en todo el conjunto documental (<em>idf </em>= <em>inverse document frequency</em>) determina su capacidad de discriminaci&oacute;n. </p>
+
+<p>Como vemos, este m&eacute;todo de ponderaci&oacute;n permite detectar los t&eacute;rminos m&aacute;s significativos para cada documento, un paso necesario para realizar la indizaci&oacute;n autom&aacute;tica del contenido del documento. </p>
+
+<p>Una vez representado num&eacute;ricamente el conjunto documental y ponderado de forma autom&aacute;tica cada uno de los t&eacute;rminos de cada documento, la equiparaci&oacute;n parcial se obtiene comparando, mediante el uso de funciones de similaridad, la representaci&oacute;n vectorizada de la consulta con las de los documentos. </p>
+
+<p>Las funciones de similaridad, como indica Moya-Aneg&oacute;n (<a href="#moya">1994</a>), son aportaciones que en el campo de la matem&aacute;tica aplicada se hab&iacute;an hecho anteriormente, y que han 0o aplicadas al campo de la recuperaci&oacute;n de informaci&oacute;n. Funciones de similaridad hay muchas, pero las que mejores resultados ofrecen son las que se basan en el producto escalar: la del coseno (tambi&eacute;n llamada de Salton), la de Dice y la de Jaccard. </p>
+
+<p>Estas funciones, aplicadas sobre dos vectores, devuelven como resultado un valor que indica en qu&eacute; grado se parecen dichos vectores. Por tanto, al ser aplicadas sobre el vector de la consulta y el de cada uno de los documentos, podemos obtener una medida del grado de relevancia que para esa consulta tienen cada uno de los documentos en un repositorio documental determinado. </p>
+
+<p>Como vemos, la mayor ventaja que implica el empleo de t&eacute;cnicas de equiparaci&oacute;n parcial, y por tanto el modelo de espacio vectorial, es que posibilitan la ordenaci&oacute;n de los resultados en funci&oacute;n del grado de certidumbre de que sean relevantes para las nece0ades del usuario. Por el contrario, la equiparaci&oacute;n exacta &uacute;nicamente puede determinar si un resultado es v&aacute;lido para una consulta dada, pero no en qu&eacute; grado, imposibilitando la ordenaci&oacute;n de resultados por relevancia. Como suced&aacute;neo la ordenaci&oacute;n podr&iacute;a hacerse, no obstante, en base a atributos menos &uacute;tiles como podr&iacute;a ser la fecha de creaci&oacute;n, nombre del autor, etc. </p>
+
+<p>Aunque el <em>querying </em> es la estrategia de acceso a la informaci&oacute;n actualmente m&aacute;s extendida en la Web y m&aacute;s estudiada en la literatura cient&iacute;fica, no siempre resulta suficiente para satisfacer las nece0ades del usuario. Cuando el usuario no tiene completamente claro qu&eacute; est&aacute; buscando o cuando es incapaz o tiene dificultades para formalizar sus nece0ades de informaci&oacute;n a trav&eacute;s del lenguaje de consulta, se requiere de un modelo alternativo o complementario que posibilite al usuario otra v&iacute;a de acceso a la informaci&oacute;n. </p>
+
+<p>En la estrategia de b&uacute;squeda por <em>bowsing </em>, en oposici&oacute;n al <em>querying </em>, el usuario explora o inspecciona el conjunto documental, <span>sin</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>nece0ad de tener que expresar de forma previa cu&aacute;les son sus nece0ades de informaci&oacute;n. Esta es una estrategia que usamos en numerosas situaciones de nuestra vida cotidiana (como cuando exploramos las estanter&iacute;as de una biblioteca o librer&iacute;a en busca de un libro), pero si nos circunscribimos al medio digital, el mejor ejemplo de b&uacute;squeda por browsing es la actividad de navegaci&oacute;n hipertextual, donde el usuario explora <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>y 'espacialmente' el conjunto hiperdocumental con el objetivo de encontrar o localizar informaci&oacute;n de su inter&eacute;s. </p>
+
+<p>Entre los sistemas de recuperaci&oacute;n de informaci&oacute;n que ofrecen la posibilidad de b&uacute;squeda por <em>browsing </em>, cabe destacar aquellos que proveen de un medio espec&iacute;fico para realizar <em>browsing </em> gr&aacute;fico, en forma de representaciones visuales e interactivas resultado de la abstracci&oacute;n gr&aacute;fica del conjunto documental. </p>
+
+<p>En la tipolog&iacute;a de estas representaciones gr&aacute;ficas o visuales, una primera diferenciaci&oacute;n que podemos realizar tiene como base el m&eacute;todo utilizado para generarlas, distinguiendo as&iacute; entre representaciones basadas en t&eacute;cnicas artesanales o manuales, y las basadas en t&eacute;cnicas autom&aacute;ticas. Las primeras presentan varios problemas, ya que no reflejan la estructura real de los datos a representar sino una visi&oacute;n subjetiva que de &eacute;stos tiene una determinada persona o grupo de personas. Adem&aacute;s, presentan problemas relacionados con su escalabilidad y coste de realizaci&oacute;n. Por estas razones, en este trabajo solo se tendr&aacute;n en cuenta aquellas generadas de forma autom&aacute;tica. </p>
+
+<p>Una de las &aacute;reas de investigaci&oacute;n m&aacute;s prometedoras basadas en este modelo de <em>browsing </em> gr&aacute;fico es aquella representada por los estudios en Visualizaci&oacute;n de Informaci&oacute;n o Visualizaci&oacute;n Cient&iacute;fica, distinci&oacute;n terminol&oacute;gica condicionada a la naturaleza de los datos a representar (<a href="#polanco">Polanco &amp; Zartl</a> 2002), m&aacute;s concretamente los estudios enfocados al dise&ntilde;o de Interfaces Visuales para la recuperaci&oacute;n de informaci&oacute;n o VIRIs (Visual Interfaces for Information Retrieval). </p>
+
+<p>El concepto de visualizaci&oacute;n, seg&uacute;n el diccionario de la <a href="http://www.rae.es/">Real Academia de la Lengua</a>, hace referencia a la acci&oacute;n y efecto tanto de formar en la mente una imagen <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de un concepto abstracto, como de representar mediante im&aacute;genes &oacute;pticas fen&oacute;menos de otro car&aacute;cter. Aplicado al contexto de la Visualizaci&oacute;n de Informaci&oacute;n (VI), el t&eacute;rmino describir&iacute;a tanto el hecho de generar una representaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de un conjunto complejo de datos, como el fen&oacute;meno de percepci&oacute;n y comprensi&oacute;n de dicha representaci&oacute;n por el usuario final. En palabras de D&uuml;rsteler (<a href="#Dursteler">2002</a>), la VI es un <em> proceso de interiorizaci&oacute;n del conocimiento mediante la percepci&oacute;n de informaci&oacute;n,  construcci&oacute;n <span>mental</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>que va m&aacute;s all&aacute; de la simple percepci&oacute;n sensorial</em>. </p>
+
+<p>Una definici&oacute;n de VI aplicada al dise&ntilde;o de 'Visual Interfaces for Information Retrieval' nos la ofrece Eick (<a href="#eick">2001</a>), al afirmar que la  es 'el &aacute;rea de investigaci&oacute;n enfocada a la creaci&oacute;n de interfaces visualmente ricas para ayudar al usuario a comprender y navegar a trav&eacute;s de espacios de informaci&oacute;n complejos'. </p>
+
+<p>En base a esta definici&oacute;n podemos distinguir claramente dos funciones de cualquier VIRI: </p>
+
+<ul>
+<li> Ayudar al usuario a comprender, proporcion&aacute;ndole una 'gran imagen general' de todo el conjunto documental. </li>
+<li> Ayudar al usuario a navegar, posibilit&aacute;ndole localizar y recuperar aquellos documentos que satisfagan sus nece0ades de informaci&oacute;n a trav&eacute;s de la exploraci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>y la interacci&oacute;n con la interfaz. </li>
+</ul>
+
+<p>Aunque el <em>browsing </em> como estrategia de acceso a la informaci&oacute;n presenta algunos inconvenientes, entre otros la posibilidad de ocasionar en el usuario distracci&oacute;n respecto a su objetivo inicial (<a href="#marchionini">Marchionini 1995</a>), como indica Herrero-Solana (<a href="#herrero">2000</a>)  los sistemas basados en <em>browsing </em> no parecen ser sustituibles por otro tipo de t&eacute;cnicas basadas en el <em>querying </em>. </p>
+
+<p>Esto es debido a que, al mismo tiempo, presentan ventajas para la recuperaci&oacute;n de informaci&oacute;n exclusivas en estas interfaces (<a href="#lin">Lin 1997</a>): </p>
+
+<ul>
+<li> La posibilidad de representar una gran cantidad de informaci&oacute;n en un espacio (visual) limitado </li>
+<li> La capacidad de revelar relaciones sem&aacute;nticas entre documentos y t&eacute;rminos </li>
+<li> La facilitaci&oacute;n de la exploraci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>y la inferencia perceptiva de la interfaz </li>
+</ul>
+
+<p>Adem&aacute;s de estas ventajas, como sugiere Marcos-Mora (<a href="#marcos">2004</a>), el browsing resulta c&oacute;modo de usar porque es natural y similar a la forma de buscar objetos en el mundo f&iacute;sico, y porque tambi&eacute;n propicia el hallazgo de informaci&oacute;n de inter&eacute;s de manera fortuita. </p>
+
+<h2>Objetivos y trabajos relacionados</h2>
+
+<p>En el trabajo de B&ouml;rner, <em>et al.</em> (<a href="#borner">2003</a>),  los autores realizan una revisi&oacute;n exhaustiva de las diferentes etapas, t&eacute;cnicas y algoritmos para la producci&oacute;n de 'Visual Interfaces for Information Retrieval', sentando unas bases te&oacute;ricas y metodol&oacute;gicas de amplia aceptaci&oacute;n por parte de la comunidad cient&iacute;fica dedicada a la VI. Igualmente, tanto Herrero-Solana (<a href="#herrero">2000</a>) como Marcos-Mora (<a href="#marcos">2004</a>)  han llevado a cabo revisiones metodol&oacute;gicas similares, realizando un recorrido anal&iacute;tico de los diferentes 'Visual Interfaces for Information Retrieval' propuestos en la literatura cient&iacute;fica, as&iacute; como de las metodolog&iacute;as empleadas para su desarrollo. </p>
+
+<p>El objetivo propuesto en el presente trabajo consiste en indagar en los m&eacute;todos, t&eacute;cnicas y algoritmos recogidos en la literatura cient&iacute;fica para la producci&oacute;n y desarrollo de 'Visual Interfaces for Information Retrieval'. Se pretende, en base a su an&aacute;lisis, comparar las diferentes t&eacute;cnicas a emplear en cada etapa del proceso de producci&oacute;n, as&iacute; como las combinaciones m&aacute;s adecuadas entre t&eacute;cnicas de diferentes etapas. <span>A+</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>diferencia de otros trabajos similares, se indagar&aacute; m&aacute;s exhaustivamente en las t&eacute;cnicas de transformaci&oacute;n y distorsi&oacute;n <span>visual</span>, <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> que hasta la fecha no han recibido la atenci&oacute;n que se merecen en la literatura sobre producci&oacute;n de 'Visual Interfaces for Information Retrieval'. </p>
+
+<p>Este trabajo se ha estructurado en tres secciones correspondientes a las tres etapas o fases principales que conforman la mayor&iacute;a de esquemas metodol&oacute;gicos propuestos para la producci&oacute;n automatizada de 'Visual Interfaces for Information Retrieval' (<a href="#chung">Chung, <em>et al.</em> 2003</a>; <a href="#polanco">Polanco &amp; Zartl 2002</a>; <a href="#turetken">Turetken &amp; Sharda 2003</a> y <a href="#borner">B&ouml;rner <em>et al.</em> 2003</a>): </p>
+
+<ul>
+  <li>An&aacute;lisis y transformaci&oacute;n de los datos </li>
+  <li>Aplicaci&oacute;n de los algoritmos de clasificaci&oacute;n y distribuci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span></li>
+  <li>Aplicaci&oacute;n de t&eacute;cnicas de transformaci&oacute;n visual</li>
+</ul>
+<h2>An&aacute;lisis y transformaci&oacute;n de los datos</h2>
+
+<p>El primer paso para visualizar espacios complejos de informaci&oacute;n es la indizaci&oacute;n autom&aacute;tica del conjunto de documentos electr&oacute;nicos, que al igual que en sistemas basados en <em>querying </em> normalmente se realiza en base al modelo de espacio vectorial originalmente propuesto por Salton (<a href="#salton">1989</a>) . </p>
+
+<p>Si por un lado el objetivo de este modelo de representaci&oacute;n de datos en sistemas basados en <em>querying </em> consiste en posibilitar la equiparaci&oacute;n parcial entre consulta y conjunto documental; en los sistemas basados en <em>browsing </em> gr&aacute;fico el objetivo es posibilitar tanto la clasificaci&oacute;n autom&aacute;tica del conjunto documental como el descubrimiento de relaciones estructurales subyacentes. </p>
+
+<p>Cuando los documentos electr&oacute;nicos a indizar contienen informaci&oacute;n complementaria, como hiperenlaces o etiquetas de marcado que estructuren su contenido, &eacute;sta tambi&eacute;n puede ser vectorizada para su posterior aprovechamiento. </p>
+
+<p>Una vez vectorizado el conjunto documental, sobre este espacio vectorial se pueden llevar a cabo una serie de an&aacute;lisis con el objetivo de descubrir relaciones sem&aacute;nticas entre documentos, as&iacute; como entre t&eacute;rminos. Se obtiene de esta forma una matriz de distancias N x N, siendo N el n&uacute;mero de documentos o de t&eacute;rminos. </p>
+
+<p>Estas t&eacute;cnicas pueden ser englobadas bajo la categor&iacute;a de Miner&iacute;a de Datos, que es definido como un proceso de descubrimiento de conocimiento (a priori desconocido) sobre repositorios de datos complejos, mediante la extracci&oacute;n de informaci&oacute;n 'oculta' y potencialmente &uacute;til en forma de patrones globales y relaciones estructurales impl&iacute;citas entre datos (<a href="#kopanakis">Kopanakis &amp; Theodoulidis 2003</a>). </p>
+
+<p>Dentro de las t&eacute;cnicas de Miner&iacute;a de Datos encontramos tres tipos distintos: miner&iacute;a de contenido, miner&iacute;a de estructura y miner&iacute;a de uso (<a href="#berendt">Berendt <em>et al.</em> 2002</a>; <a href="#baeza">Baeza-Yates 2004</a>). </p>
+
+<h3>Miner&iacute;a de contenido</h3>
+
+<p>Si partimos de la premisa de que los t&eacute;rminos de un documento representan su contenido, la co-ocurrencia de un mismo t&eacute;rmino en dos documentos diferentes establecer&iacute;a una relaci&oacute;n sem&aacute;ntica entre &eacute;stos. Si asumimos este hecho es posible calcular la similaridad entre dos documentos comparando los vectores de cada documento mediante – c&oacute;mo coment&aacute;bamos en la introducci&oacute;n - funciones de similaridad. Igualmente es posible calcular la similaridad entre t&eacute;rminos, teniendo en cuenta que la aparici&oacute;n de dos t&eacute;rminos en un mismo documento implicar&iacute;a una relaci&oacute;n sem&aacute;ntica entre &eacute;stos. </p>
+
+<p>Para asegurar la fiabilidad y consistencia de la indizaci&oacute;n autom&aacute;tica de textos en lenguaje natural y reducir el n&uacute;mero de t&eacute;rminos diferentes, antes de contabilizar frecuencias de co-ocurrencia, en muchas ocasiones es prerrequisito llevar a cabo un control terminol&oacute;gico. Entre las t&eacute;cnicas a aplicar podemos se&ntilde;alar: </p>
+
+<ul>
+<li> Eliminaci&oacute;n sobre el conjunto de t&eacute;rminos a indizar de aquellos de uso com&uacute;n, mediante su comparaci&oacute;n con una lista de palabras vac&iacute;as previamente definida. </li>
+<li> Uso de procedimientos de <em>stemming </em> para reducir el conjunto de t&eacute;rminos a indizar a su raiz, eliminando de esta forma tambi&eacute;n duplicados, variantes de g&eacute;nero, n&uacute;mero, etc. </li>
+<li> Eliminaci&oacute;n sobre el conjunto de t&eacute;rminos a indizar de aquellos con frecuencias muy altas o excesivamente bajas. </li>
+</ul>
+
+<h3>Miner&iacute;a de estructura </h3>
+
+<p>La miner&iacute;a de estructura no se refiere a la estructura propia de cada documento de forma aislada, sino a la estructura del espacio documental definida por los hiperenlaces entre sus documentos. </p>
+
+<p>Cuando un documento hipervincula a otro documento, este enlace expresa una relaci&oacute;n estructural expl&iacute;cita entre los dos documentos. Pero a trav&eacute;s del an&aacute;lisis de estos hiperenlaces, tambi&eacute;n es posible descubrir estructuras impl&iacute;citas y subyacentes de relaci&oacute;n sem&aacute;ntica entre documentos. </p>
+
+<p>Este es el caso del an&aacute;lisis de la <em>co-sitaci&oacute;n, </em>t&eacute;rmino que se refiere a la co-citaci&oacute;n aplicada a los hiperenlaces o '<em>sitas</em>' entre <em>web sites.</em> En este an&aacute;lisis  que desde un mismo documento se enlace una pareja de documentos conjuntamente establece una relaci&oacute;n sem&aacute;ntica entre los documentos <em>co-sitados</em>.</p>
+
+<div align="center"><img src="p258fig1.gif" width="229" height="231" /></div>
+<div align="center"><br /><strong>Figura 1: Esquema <em>cositaci&oacute;n</em> entre documentos</strong></div>
+
+<p> Igualmente, se podr&iacute;a aplicar el an&aacute;lisis de los enlaces comunes (que en Bibliometr&iacute;a se suele denominar <em>bibliographic coupling</em>) para descubrir estructuras de similaridad subyacentes, en el que el hecho de que dos documentos enlacen a un mismo tercer documento establece una relaci&oacute;n sem&aacute;ntica impl&iacute;cita entre los documentos <em>sitantes.</em></p>
+
+<div align="center"><img src="p258fig2.gif" width="245" height="220" /></div>
+<div align="center"><br /><strong>Figura 2: Esquema enlaces comunes (<em>bibliographic coupling</em>) entre documentos</strong> </div>
+
+<h3>Miner&iacute;a de uso</h3>
+
+<p>Cuando el espacio documental se encuentra accesible al p&uacute;blico y visitado diariamente, la informaci&oacute;n recogida por el servidor en forma de ficheros de sesi&oacute;n (<em>log files</em>) puede aportarnos informaci&oacute;n adicional acerca de las relaciones sem&aacute;nticas entre el conjunto de documentos. </p>
+
+<p>Por ejemplo, que un mismo usuario co-visite o co-acceda a dos documentos diferentes, establece una relaci&oacute;n sem&aacute;ntica entre los documentos, mayor cuanto mayor sea la frecuencia de este patr&oacute;n de uso. As&iacute; mismo se podr&iacute;an llevar a cabo an&aacute;lisis m&aacute;s complejos, teniendo en cuenta en qu&eacute; orden secuencial son visitados los documentos.</p>
+
+<div align="center"><img src="p258fig3.gif" width="189" height="254" /></div>
+  <div align="center"><br /><strong>Figura 3: Esquema co-acceso entre documentos</strong>
+</div>
+
+<p>Este an&aacute;lisis nos puede ofrecer informaci&oacute;n imposible de descubrir a trav&eacute;s de la miner&iacute;a de contenido y de estructura, ya que dos documentos frecuentemente co-visitados puede que no se enlacen entre ellos, que no <em>co-siten </em> ni sean <em>co-sitados</em>, e incluso que no presenten co-ocurrencias de t&eacute;rminos con una frecuencia relevante.</p>
+
+<h3>Comparaci&oacute;n de los m&eacute;todos</h3>
+
+<p>Los diferentes tipos de an&aacute;lisis indicados nos ofrecen una herramienta para revelar las relaciones sem&aacute;nticas de similaridad entre documentos, incluso entre t&eacute;rminos, en base a nuestro espacio documental vectorizado. La informaci&oacute;n que ofrecen es complementaria, ya que como indic&aacute;bamos, con un tipo de an&aacute;lisis es posible revelar informaci&oacute;n sem&aacute;ntica que no hubiera podido ser descubierta mediante la &uacute;nica utilizaci&oacute;n del resto. </p>
+
+<p>Por ello, aunque estos an&aacute;lisis pueden ser utilizados independientemente, su utilizaci&oacute;n conjunta aumentar&iacute;a su capacidad para revelar informaci&oacute;n 'oculta'. En este sentido, Chen (<a href="#chen">1997, 1998</a>)  propone un modelo gen&eacute;rico para estructurar y visualizar espacios de informaci&oacute;n hipertextuales, denominado GSA (Generalised Similarity An&aacute;lisis). Este modelo ofrece un esquema metodol&oacute;gico para la extracci&oacute;n de las relaciones sem&aacute;nticas entre documentos en base a tres tipos de medidas de similaridad - enlaces hipertextuales, similaridad de contenido y patrones de uso – unificadas bajo una &uacute;nica funci&oacute;n, que el autor denomina de meta-similaridad. </p>
+
+
+<h2>Aplicaci&oacute;n de los algoritmos de clasificaci&oacute;n y distribuci&oacute;n visual</h2>
+
+<p>En su tesis doctoral, Herrero-Solana (<a href="#herrero">2000</a>)  propone una clasificaci&oacute;n de los diferentes 'Visual Interfaces for Information Retrieval' en funci&oacute;n de la estructura expl&iacute;cita de los datos a representar: jer&aacute;rquicas, en red, de b&uacute;squeda, en l&iacute;neas de tiempo y multidimensionales. </p>
+
+<p>Cuando el 'Visual Interface for Information Retrieval'destinado a generar utilizar&aacute; una met&aacute;fora <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>fiel reflejo de la propia estructura de los datos, no resulta necesaria la aplicaci&oacute;n de t&eacute;cnicas de clasificaci&oacute;n y distribuci&oacute;n <span>visual</span>, <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> ni por tanto el paso metodol&oacute;gico que describimos a continuaci&oacute;n. </p>
+
+<p>&Uacute;nicamente en 'Visual Interfaces for Information Retrieval' basados en estructuras de datos multidimensionales ser&aacute; imprescindible el empleo de &eacute;stas t&eacute;cnicas, que de forma autom&aacute;tica produzcan una abstracci&oacute;n gr&aacute;fica resultado de la reducci&oacute;n de este espacio <em>n </em>-dimensional a un n&uacute;mero de dimensiones comprensibles y perceptibles por el ojo humano (1D, 2D &oacute; 3D). </p>
+
+<p>En este trabajo la clasificaci&oacute;n de los diferentes tipos de t&eacute;cnicas y algoritmos se har&aacute; en funci&oacute;n de la met&aacute;fora <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>perseguida, y no de la propia estructura de los datos, ya que se entiende que siempre ser&aacute;n estructuras multidimensionales que necesitan ser reducidas o simplificadas. </p>
+<p>Siguiendo el esquema propuesto por Lin (<a href="#lin">1997</a>), podemos diferenciar entre los siguientes tipos de met&aacute;foras visuales: jer&aacute;rquicas, de redes, de dispersi&oacute;n y mapas. </p>
+<h3>Representaciones jer&aacute;rquicas</h3>
+
+<p>Este tipo de representaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>- donde los elementos se presentan en diferentes niveles, ramas o agrupaciones, que descienden de un nodo ra&iacute;z - es la m&aacute;s com&uacute;n cuando la propia naturaleza del conjunto de datos a visualizar es jer&aacute;rquica, como por ejemplo en la visualizaci&oacute;n de estructuras complejas de directorios y ficheros de sistemas inform&aacute;ticos. </p>
+
+<p>En el caso de la visualizaci&oacute;n de estructuras de datos multidimensionales, donde no est&aacute;n definidas de forma expl&iacute;cita las relaciones jer&aacute;rquicas entre estos, este tipo de visualizaci&oacute;n es consecuencia de la aplicaci&oacute;n de t&eacute;cnicas de clasificaci&oacute;n o agrupaci&oacute;n. </p>
+<p>Este es el caso de las t&eacute;cnicas estad&iacute;sticas de <em>clustering </em> o an&aacute;lisis de conglomerados, que a trav&eacute;s de un proceso iterativo van agrupando los diferentes elementos en funci&oacute;n de su similaridad, as&iacute; como agrupando los diferentes grupos en ramas o niveles jer&aacute;rquicos. </p>
+
+<p>Entre las t&eacute;cnicas de <em>clustering </em> podemos diferenciar alrededor de 150 tipos diferentes en base a las reglas de aglomeraci&oacute;n utilizadas. Dentro de las reglas de aglomeraci&oacute;n m&aacute;s comunes encontramos: encadenamiento simple (<em>single link</em>), tambi&eacute;n denominado m&eacute;todo del vecino m&aacute;s cercano; encadenamiento completo (<em>complete link</em>), o m&eacute;todo del vecino m&aacute;s lejano; encadenamiento promedio; y el m&eacute;todo de Ward o m&eacute;todo de la suma de cuadrados (<a href="#herrero">Herrero-Solana 2000</a>).</p>
+
+<div align="center"><img src="p258fig4.gif" width="514" height="342" /> </div>
+<div align="center"><br /><strong>Figura 4: Dendrograma basado en el m&eacute;todo de Ward (<a href="#herrero">Herrero-Solana, Moya-Aneg&oacute;n</a> 1999)</strong> </div>
+
+<p>El resultado gr&aacute;fico de la aplicaci&oacute;n de estas t&eacute;cnicas suele ser en forma de dendograma como el de la figura 4 (representaci&oacute;n que usa la met&aacute;fora <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de &aacute;rbol jer&aacute;rquico), donde se pueden apreciar visualmente los diferentes grupos y subgrupos generados. Para su uso en la producci&oacute;n de 'Visual Interfaces for Information Retrieval' se podr&iacute;an representar mediante met&aacute;foras jer&aacute;rquicas alternativas como las jerarqu&iacute;as hiperb&oacute;licas (<a href="#lamping">Lamping, <em>et al.</em> 1995</a>), o como los <em>treemaps </em>– representaci&oacute;n plana de una jerarqu&iacute;a en un espacio bi-dimensional - (<a href="#schneiderman">Shneiderman 1992</a>; <a href="#kobourov">Kobourov &amp; Yusufov 2005</a>). Hay que se&ntilde;alar que los <em>treemaps </em> pueden ser con0erados una met&aacute;fora <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>h&iacute;brida entre representaci&oacute;n jer&aacute;rquica y mapa. </p>
+
+<p>El mayor problema que presentan las t&eacute;cnicas de <em>clustering </em> es que no posibilitan el etiquetado o rotulado autom&aacute;tico de cada uno de los grupos y subgrupos creados, por lo que el usuario s&oacute;lo podr&iacute;a identificar la clase o grupo a trav&eacute;s de la exploraci&oacute;n de sus elementos contenidos.</p>
+
+<h3>Representaciones de redes</h3>
+
+<p>Las representaciones de redes son aquellas donde los diferentes elementos – documentos, t&eacute;rminos... – son presentados en forma de nodos o v&eacute;rtices, mientras que la estructura sem&aacute;ntica se encuentra definida por los enlaces o arcos que conectan dichos nodos. </p>
+
+<p>Por ejemplo, en base a una matriz de similaridad N x N (donde N indica el n&uacute;mero de documentos), se podr&iacute;a representar cada documento como un nodo, y cada grado de similaridad entre dos documentos como un enlace o arco. El problema de representar estructuras de datos multidimensionales de esta forma es que el n&uacute;mero de arcos ser&iacute;a tal que impedir&iacute;a la comprensi&oacute;n del grafo resultante, ya que el n&uacute;mero de enlaces salientes por cada nodo podr&iacute;a llegar a ser igual a N-1. </p>
+
+<p>Por tanto, es necesario el empleo de alguna t&eacute;cnica de 'poda' o reducci&oacute;n de enlaces con el fin de que el grafo resultante sea comprensible y por tanto &uacute;til para la visualizaci&oacute;n, <span>sin</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>perder ni distorsionar en la medida de lo posible la realidad estructural de la red. </p>
+
+<p>Una de estas t&eacute;cnicas de 'poda' es el m&eacute;todo de escalamiento de red <em>Pathfinder </em>(<a href="#schvaneveldt">Schvaneveldt 1990</a>),  con el que se obtiene como resultado lo que se denominan redes <em>Pathfinder </em> o PFNETs. Esta t&eacute;cnica se basa en la eliminaci&oacute;n de todos aquellos arcos de la red que no cumplan el criterio conocido como la 'condici&oacute;n de la inigualdad del tri&aacute;ngulo', es decir, que no formen parte del camino m&aacute;s corto entre cada par de nodos. </p>
+
+<p>La topolog&iacute;a de la red resultante de la aplicaci&oacute;n del m&eacute;todo de <em>Pathfinder </em> estar&aacute; condicionada por dos par&aacute;metros. Por un lado la m&eacute;trica <em>r </em> de Minkowski, que determina c&oacute;mo calcular la distancia entre dos nodos no enlazados directamente, par&aacute;metro que puede tomar tres valores: cuando r=0 la distancia es igual a la suma de los pesos de los enlaces que conectan los dos nodos; cuando r=1 la distancia es igual a la distancia eucl&iacute;dea entre los dos nodos; cuando r=8 la distancia es igual al mayor de los pesos de aquellos enlaces que conectan dos nodos. Por otro lado el par&aacute;metro <em>q </em> indica la longitud m&aacute;xima (contabilizada en n&uacute;mero de enlaces) del camino entre dos nodos en la que no podr&aacute; violarse la 'condici&oacute;n de la inigualdad del tri&aacute;ngulo'. </p>
+
+<p>Una vez realizada la poda de enlaces, para la representaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de la red, es necesario aplicar alg&uacute;n algoritmo de posicionamiento de los nodos. Si bien t&eacute;cnicas de reducci&oacute;n de la dimensi&oacute;n como el MDS (de la que hablaremos en el siguiente apartado) podr&iacute;an ser &uacute;tiles, tienen el problema de que al no tener en con0eraci&oacute;n la estructura de enlaces resultado de aplicaci&oacute;n del m&eacute;todo de <em>Pathfinder </em>, el posicionamiento final de los nodos provocar&iacute;a cruces entre los enlaces que oscurecer&iacute;an la visualizaci&oacute;n del grafo (<a href="#fowler">Fowler <em>et al.</em> 1992</a>).</p>
+
+<div align="center"><img src="p258fig5.gif" width="446" height="404" /></div> 
+<div align="center"><br /><strong>Figura 5: PFNET de un conjunto documental (<a href="#chen">Chen</a> 1997)</strong></div>
+
+<p>Por ello, este posicionamiento de nodos se realiza normalmente mediante algoritmos basados en 'spring models', como el desarrollado por Kamada y Kawai (<a href="#kamada">1989</a>). Estos algoritmos con0eran que los nodos de la red se encuentran conectados por 'muelles virtuales', cuya fuerza es igual a la suma de los enlaces existentes entre los nodos. El algoritmo intenta reducir la tensi&oacute;n global del conjunto de muelles mediante un proceso iterativo de reposicionamiento de los nodos, hasta lograr la posici&oacute;n &oacute;ptima de todos ellos. </p>
+
+<h3>Representaciones de dispersi&oacute;n</h3>
+
+<p>Una forma alternativa de representar visualmente estructuras de datos multidimensionales es en forma de nubes de puntos o nubes de dispersi&oacute;n. Estos puntos – que visualmente no tienen por qu&eacute; tener dicha forma, ya que podr&iacute;an ser presentados como iconos o como r&oacute;tulos de texto - estar&iacute;an distribuidos en un espacio <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>bidimensional o tridimensional, y distanciados unos de otros en funci&oacute;n de las disimilaridades o distancias originales especificadas en la matriz de similaridad. </p>
+
+<p>Para poder presentar estas distancias en dimensiones comprensibles por el ser humano, es necesaria la utilizaci&oacute;n de t&eacute;cnicas de reducci&oacute;n de la dimensi&oacute;n. Este es el caso de la t&eacute;cnica de estad&iacute;stica multivariante denominada Escalamiento Multidimensional o MDS (Multidimensional Scaling). </p>
+
+<p>Este m&eacute;todo consiste en un proceso iterativo en el que se van recolocando o re-posicionando los diferentes elementos (documentos, t&eacute;rminos, etc.) hasta conseguir que disten entre s&iacute; lo m&aacute;s acercadamente a como lo hacen en la matriz original de distancias. Inevitablemente, existe una p&eacute;rdida de informaci&oacute;n, mayor cuanta m&aacute;s diferencia exista entre el n&uacute;mero de dimensiones del espacio multidimensional original y el n&uacute;mero de dimensiones al que pretende ser reducido. </p>
+
+<div align="center"><img src="p258fig6.gif" width="697" height="409" /></div>
+<div align="center"><br /><strong>Figura 6: Representaci&oacute;n MDS de los grandes grupos tem&aacute;ticos de la CDU (<a href="#moya">Moya-Aneg&oacute;n, Herrero-Solana</a> 1999).</strong></div>
+
+<p>Esta p&eacute;rdida de informaci&oacute;n o distorsi&oacute;n de las distancias originales entre elementos suele ser medida a trav&eacute;s de la m&eacute;trica de <em>stress </em> propuesta por Kruskal (<a href="#kruskal">1964</a>) (originalmente el autor la denomin&oacute; STRESS, acr&oacute;nimo de <em>STandardized Re0ual Error Sum of Squares</em>). En la aplicaci&oacute;n de los algoritmos de MDS, como paso previo, se suele establecer un umbral de <em>stress </em> aceptable, con el objetivo de reducir el tiempo de procesamiento.</p>
+
+<h3>Mapas</h3>
+
+<p>Las representaciones visuales basadas en mapas se fundamentan en la idea de utilizar la met&aacute;fora de mapa geogr&aacute;fico para la visualizaci&oacute;n de espacios de informaci&oacute;n. Por lo general, el objetivo de la utilizaci&oacute;n de cualquier tipo de met&aacute;fora <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>en el dise&ntilde;o de interfaces es hacer visible para el usuario la estructura y relaciones en un conjunto determinado datos. Por tanto, la idea de utilizar estas met&aacute;foras para la visualizaci&oacute;n de espacios de informaci&oacute;n complejos y abstractos parece tener bastante sentido, ya que brindan una visi&oacute;n diferente del conjunto que en la mayor&iacute;a de los casos enriquecer&aacute; la imagen <span>mental</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>previa que el usuario tenga de &eacute;l. </p>
+
+<p>De entre todas las t&eacute;cnicas posibles para generar este tipo de mapas, resaltamos el modelo de mapas auto-organizativos o SOM (<em>Self-Organizing Map</em>) (<a href="#kohonen">Kohonen 1989</a>)  - aplicaci&oacute;n de las Redes Neuronales Artificiales (RNA) para la organizaci&oacute;n y clasificaci&oacute;n autom&aacute;tica de informaci&oacute;n. </p>
+
+<p>El funcionamiento de este modelo es sencillo, pues se basa en establecer una correspondencia entre la informaci&oacute;n de entrada y un espacio de salida de dos dimensiones. De esta manera, los datos de entrada con caracter&iacute;sticas comunes activar&aacute;n zonas pr&oacute;ximas del mapa. Este modelo de red se representa con sus neuronas de salida dispuestas de manera bidimensional. Cuando se ingresa un vector de datos a la red, &eacute;sta reacciona de forma tal que solo una neurona de la capa de salida resulta activada. <span>A+</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>esta neurona se la denomina vencedora (<em>winner-take-all unit</em>) y determina un punto en el mapa bidimensional.</p>
+
+<div align="center"><img src="p258fig7.gif" width="400" height="532" /></div>
+<div align="center"><br /><strong>Figura 7: WebSOM, an&aacute;lisis de co-ocurrencia de t&eacute;rminos sobre grupos de discusi&oacute;n Usenet. Helsinki University of Technology. (<a href="http://websom.hut.fi/websom/">http://websom.hut.fi/websom/</a>)</strong></div>
+
+<p>Lo que realmente esta haciendo la red es clasificar la informaci&oacute;n de entrada, ya que la neurona ganadora representa la clase a la que pertenece la entrada, adem&aacute;s de que ante entradas similares se activar&aacute; siempre la misma neurona. Por tanto, la red es v&aacute;lida para establecer relaciones, desconocidas previamente, entre un conjunto determinado de datos. </p>
+
+<p>Como vemos, se trata de un proceso auto-organizativo, donde la clasificaci&oacute;n u organizaci&oacute;n resultante se encuentra condicionada por la propia naturaleza de los datos introducidos. </p>
+
+<p>Un ejemplo de 'Visual Interface for Information Retrieval'con forma de mapa SOM es el que se muestra en la figura 7. En este, los r&oacute;tulos o etiquetas describen la tem&aacute;tica, y el coloreado representa la den0ad documental de la zona del mapa.</p>
+
+<h3>Comparaci&oacute;n de los m&eacute;todos</h3>
+
+<p>Los diferentes m&eacute;todos descritos, clasificados en este trabajo en funci&oacute;n del tipo de representaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>resultado de su aplicaci&oacute;n, pueden ser con0erados complementarios ya que ofrecen diferentes soluciones para un mismo problema (<a href="#herrero">Herrero-Solana 2000</a>).  Aunque con funcionamiento y procedimientos diferentes, todos comparten el objetivo de la reducci&oacute;n de estructuras de datos multidimensionales a formas 'visualizables' en 2 y/o 3 dimensiones. </p>
+
+<p>En cualquier reducci&oacute;n, simplificaci&oacute;n o resumen de conjuntos complejos de datos, se produce una p&eacute;rdida de informaci&oacute;n respecto a la realidad estructural de los datos originales. Es precisamente en funci&oacute;n de aquella informaci&oacute;n estructural m&aacute;s fielmente preservada, que se fundamenta uno de los criterios a trav&eacute;s del cual pueden ser caracterizados y comparados los m&eacute;todos descritos. </p>
+
+<p>Como afirma Kaski (<a href="#kaski">1997</a>), tras una exhaustiva comparaci&oacute;n entre los m&eacute;todos de MDS y SOM, mientras que el primero se orienta a la preservaci&oacute;n de su estructura a trav&eacute;s de las distancias entre elementos, los mapas auto-organizativos intentan preservar su topolog&iacute;a o relaciones de vecindad. </p>
+
+<p>Por otro lado, las t&eacute;cnicas de escalamiento <em>Pathfinder </em> generan representaciones en forma de grafos, donde lo que se preserva y enfatiza son las relaciones locales entre elementos, representadas mediante arcos o enlaces entre nodos (<a href="#chen">Chen 1998</a>). </p>
+
+<p>La informaci&oacute;n preservada mediante las t&eacute;cnicas de <em>clustering </em> es aquella representada por las relaciones de grupo entre elementos. Aunque se han demostrado muy &uacute;tiles como t&eacute;cnicas de clasificaci&oacute;n y visualizaci&oacute;n de informaci&oacute;n, las t&eacute;cnicas de <em>clustering </em> no son tan utilizadas como las anteriores en la producci&oacute;n de interfaces visuales. Esto es debido, en parte, por la imposibilidad para etiquetar o rotular autom&aacute;ticamente cada uno de los grupos y subgrupos creados, por lo que el usuario solo podr&iacute;a identificar la clase o grupo a trav&eacute;s de la exploraci&oacute;n de sus elementos contenidos, y la met&aacute;fora jer&aacute;rquica perder&iacute;a utilidad. Por estas razones, las t&eacute;cnicas de <em>clustering, </em> en el contexto de la producci&oacute;n de 'Visual Interfaces for Information Retrieval', son m&aacute;s &uacute;tiles como complemento al resto (MDS, SOM y <em>Pathfinder</em>) que como soluci&oacute;n <em>per se</em>.</p>
+
+<table width="550" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;" align="center">
+<caption align="bottom"><br /><strong>Tabla 1</strong></caption>
+<tr>
+  <th width="150">T&eacute;cnica</th>
+  <th width="400">Elementos que preserva de la estructura </th>
+</tr>
+<tr><td width="150">MDS</td>
+<td width="400">Distancia entre elementos</td></tr>
+<tr><td width="150">Clustering</td>
+<td width="400">Relaciones de agrupaci&oacute;n</td></tr>
+<tr>
+  <td width="150">Pathfinder</td>
+  <td width="400">Relaciones locales m&aacute;s fuertes.</td>
+</tr>
+<tr>
+  <td width="150">SOM</td>
+  <td width="400">Relaciones de vecindad.</td></tr>
+</table>
+
+<p>La preservaci&oacute;n de un determinado elemento estructural (y por tanto la p&eacute;rdida de otra informaci&oacute;n), condicionar&aacute; la expresividad de la interfaz resultante, es decir, el grado de fidelidad con el que los datos originales se ven representados por la estructura <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de la interfaz. Al mismo tiempo, la elecci&oacute;n de una u otra t&eacute;cnica condicionar&aacute; la efectividad de la interfaz, la facilidad de interpretaci&oacute;n y comprensi&oacute;n de &eacute;sta por el usuario. </p>
+
+<p>Existen trabajos que ponderan estas t&eacute;cnicas, como es el caso de la tesis doctoral de Buzydlowski (<a href="#buzydlowski">2003</a>)  donde el autor compara SOM y <em>Pathfinder </em>, pero el grado de expresividad de cada t&eacute;cnica est&aacute; fuertemente influenciado por la naturaleza de los datos, por lo que no es posible afirmar que ninguna de ellas sea superior en todos los contextos. </p>
+
+<p>En cambio, la efectividad y facilidad de interpretaci&oacute;n de la met&aacute;fora <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>resultante s&iacute; puede ser determinada independientemente de la naturaleza de los datos. La met&aacute;fora de grafo propia de <em>Pathfinder </em> resulta de mayor familiaridad para el usuario, por lo que es previsible que interfaces creadas con esta t&eacute;cnica resulten m&aacute;s usables que las creadas con MDS o SOM. Las interfaces basadas en MDS y SOM pueden resultar igual de ins&oacute;litas para el usuario, aunque el orden <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de los elementos en interfaces SOM puede ser una ventaja frente al aparente caos o desorden de elementos en dispersi&oacute;n en interfaces MDS. </p>
+
+<p>La comparaci&oacute;n entre estos m&eacute;todos se puede realizar en base a otras variables igualmente importantes, como: escalabilidad, carga computacional, posibilidad de interpretaci&oacute;n de dimensiones, distribuci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>(est&aacute;tica o din&aacute;mica), y escala (global o local) en la que pueden ser aplicados de forma &oacute;ptima (<a href="#borner">B&ouml;rner <em>et al.</em> 2003</a>).  Algunas de estas variables son de vital importancia, como es el caso de la carga computacional del algoritmo, lo que suele conllevar descartar algoritmos pesados como MDS cuando la generaci&oacute;n de la interfaz se deba producir en tiempo real (<a href="#buzydlowski">Buzydlowski <em>et al.</em 2001></a>).</p>
+
+<h2>Aplicaci&oacute;n de las t&eacute;cnicas de transformaci&oacute;n visual</h2>
+
+<p>Aunque las t&eacute;cnicas de clasificaci&oacute;n y distribuci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>descritas hasta el momento tienen el objetivo de hacer visible para el usuario el espacio documental en su conjunto, reduciendo todas sus relaciones de similaridad y estructura a un simple 'pantallazo', estas representaciones gr&aacute;ficas no siempre son f&aacute;ciles de explorar visualmente debido a su tama&ntilde;o y complejidad, provocando lo que ha venido a denominarse como 'sobrecarga <span>visual</span>' <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>. </p>
+
+<p>En estos casos es necesario proveer a la interfaz de mecanismos din&aacute;micos e interactivos que faciliten su visualizaci&oacute;n por el usuario y que reduzca esta sobrecarga. </p>
+
+<p>Estas t&eacute;cnicas podemos denominarlas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>interactiva, y su investigaci&oacute;n es anterior a los estudios sobre VI, ya que son necesarias desde el mismo momento en que surge el problema de tener que presentar en una reducida pantalla de ordenador m&aacute;s informaci&oacute;n de la que puede mostrar de forma simult&aacute;nea. </p>
+
+<p>Gutwin y Fedak (<a href="#gutwin">2004</a>)  clasifican estos mecanismos en cuatro grupos diferentes: <em>panning</em>, <em>zooming</em>, m&uacute;ltimes vistas y <em>focus+context</em>. Los tres primeros grupos podr&iacute;an ser con0erados como t&eacute;cnicas no orientadas a la distorsi&oacute;n, mientras que el grupo de <em>focus+context </em> englobar&iacute;a aquellas orientadas a la distorsi&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>(<a href="#leung">Leung &amp; Apperley 1994</a>).</p>
+
+<table width="726" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;" align="center">
+<caption align="bottom"><br />
+<strong>Tabla 2 </strong>
+</caption>
+<tr>
+  <th colspan="3">T&eacute;cnicas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>interactiva </th>
+  </tr>
+<tr>
+  <td width="308" rowspan="3"><div align="right">No orientadas a la distorsi&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>-&gt; </div></td>
+  <td width="129"><div align="center"><strong>Panning</strong></div></td>
+<td width="257" rowspan="2"><div align="left">&lt;- Vista parcial</div></td></tr>
+<tr>
+  <td width="129"><div align="center"><strong>Zooming</strong></div></td>
+</tr>
+<tr>
+  <td width="129"><div align="center"><strong>M&uacute;ltiples vistas</strong> </div></td>
+  <td width="257" rowspan="2"><div align="left">&lt;- Vista detalle + vista global</div></td>
+</tr>
+<tr>
+  <td width="308"><div align="right">Orientadas a la distorsi&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>-&gt; </div></td>
+  <td width="129"><div align="center"><strong>Focus+Context</strong></div></td>
+  </tr>
+</table>
+
+<h3> T&eacute;cnicas no orientadas a la distorsi&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> </h3>
+
+<p>Las t&eacute;cnicas de <em>panning </em> consisten en ofrecer al usuario un mecanismo para paginar o hacer 'scroll' en la interfaz, mientras que las de <em>zooming </em> ofrecen la opci&oacute;n de agrandar o ver en detalle una parte de la interfaz. Estas t&eacute;cnicas, que pueden ser utilizadas conjuntamente, comparten el problema de que por s&iacute; solas pueden resultar desorientadoras para el usuario, ya que s&oacute;lo permiten visualizar simult&aacute;neamente una parte de la interfaz <span>sin</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>tener una visi&oacute;n global de &eacute;sta (<a href="#storey">Storey <em>et al.</em> 1999</a>). </p>
+
+<p>Una posible soluci&oacute;n para este problema es el empleo de t&eacute;cnicas de 'm&uacute;ltiples vistas' o <em>Detail+Overview </em>, que se basan en ofrecer desde la interfaz diferentes vistas de la misma representaci&oacute;n <span>visual</span>. <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> Al mismo tiempo se ofrece una visi&oacute;n global de la representaci&oacute;n para orientar al usuario, y por otro una vista para su exploraci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>en detalle. Igualmente se proporcionan mecanismos interactivos para especificar el nivel de detalle (<em>zoom</em>), as&iacute; como para seleccionar qu&eacute; parte de la representaci&oacute;n se quiere observar en detalle. </p>
+
+<p>Como ejemplo de su aplicaci&oacute;n en la producci&oacute;n de 'Visual Interfaces for Information Retrieval', podemos observar su uso para la visualizaci&oacute;n de representaciones complejas de categor&iacute;as mediante redes <em>Pathfinder </em> en la figura 8.</p>
+
+<div align="center"><img src="p258fig8.gif" width="757" height="499" /></div>
+<div align="center"><br /><strong>Figura 8: Aplicaci&oacute;n de la t&eacute;cnica detail+overview en el proyecto <a href="http://www.atlasofscience.net/">Atlas of Science</a> sobre un mapa de categor&iacute;as tem&aacute;ticas ISI para el dominio geogr&aacute;fico de Espa&ntilde;a</strong></div>
+
+<h3>T&eacute;cnicas orientadas a la Distorsi&oacute;n o Focus+Context</h3>
+
+<p>Las t&eacute;cnicas <em>Focus+Context </em> pueden ser utilizadas como alternativa a las t&eacute;cnicas <em>Detail+Overview </em>, e incluso, en algunos contextos, como complemento a &eacute;stas (<a href="#hayama">Hayama <em>et al.</em> 2003</a>). </p>
+
+<p>La idea consiste en ofrecer al usuario, a trav&eacute;s de una &uacute;nica vista, tanto una visi&oacute;n en detalle de la representaci&oacute;n <span>visual</span>, <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> como una visi&oacute;n global. Las premisas de las que parte esta t&eacute;cnica son las siguientes (<a href="#polanco">Polanco &amp; Zartl 2002</a>): </p>
+
+<ul>
+<li> El usuario necesita visualizar tanto la informaci&oacute;n global (contexto) como la informaci&oacute;n en detalle (el foco de su visualizaci&oacute;n) de forma simult&aacute;nea. </li>
+<li> La informaci&oacute;n que necesita visualizar en detalle es diferente a la que necesita para contextualizarla. </li>
+<li> Esos dos tipos de informaci&oacute;n deben ser combinados en una &uacute;nica vista. </li>
+</ul>
+
+<p>De acuerdo a estas premisas, el funcionamiento de las t&eacute;cnicas de <em>Focus+Context </em> consiste en distorsionar la representaci&oacute;n <span>visual</span>, <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> haciendo m&aacute;s visible el foco y minimizando el contexto. Para realizar esta distorsi&oacute;n, las t&eacute;cnicas de <em>Focus+Context </em> pueden hacer uso de dos procedimientos: </p>
+
+<ul>
+<li> Filtrado o elisi&oacute;n de informaci&oacute;n visual: ocultamiento o elisi&oacute;n de aquellas partes de la estructura <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de la representaci&oacute;n de menor inter&eacute;s, hasta que necesiten ser visualizadas. </li>
+<li> Distorsi&oacute;n o deformaci&oacute;n de informaci&oacute;n visual: alteraci&oacute;n de las posiciones, formas y tama&ntilde;os de los elementos visuales. </li>
+</ul>
+
+<p>Aunque variando en las funciones de magnificaci&oacute;n que emplean para realizar esta distorsi&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> (<a href="#leung">Leung &amp; Apperley 1994</a>), podemos afirmar que las t&eacute;cnicas <em>Focus+Context </em> conceptualmente tienen en com&uacute;n el efecto <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>que persiguen, denominado gen&eacute;ricamente de ojo de pez (<em>Fisheye</em>), en el que se magnifica el foco de atenci&oacute;n y se minimiza la zona <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>contextual o perif&eacute;rica. </p>
+
+<p>&nbsp;A pesar de que existen propuestas previas conceptualmente similares como la vista bifocal (<a href="#spence">Spence &amp; Apperley 1982</a>)  posteriormente extendida por Mackinlay <em>et al.</em> (<a href="#mackinlay">1991</a>); fue Furnas (<a href="#furnas">1986</a>)  quien formaliz&oacute; el concepto de ojo de pez como tal, a trav&eacute;s de su funci&oacute;n de Grado de Inter&eacute;s o DOI (<em>Degree Of Interest</em>), que asigna a cada elemento <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>un valor que representa el inter&eacute;s del usuario en visualizarlo. </p>
+
+<div align="center"><img src="p258fig11.gif" width="286" height="32" /></div><br />
+<div align="center"><br /><strong>F&oacute;rmula 1: Degree Of Interest (DOI)</strong> </div>
+
+<p>DOI(<em>x</em>, <em>y</em>) es el grado de inter&eacute;s que para el usuario tiene el elemento <em>x</em>, cuando el elemento foco que se est&aacute; visualizando es <em>y</em>. API (<em>x</em>) es el valor global de la Importancia <span>A+</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Priori (A Priori Importance) que tiene el elemento <em>x</em>, y D(<em>x</em>, <em>y</em>) la distancia existente entre el elemento <em>x </em> y el elemento focal <em>y </em>. </p>
+
+<p>En su trabajo, Furnas aplica dicha funci&oacute;n a estructuras textuales jer&aacute;rquicas, asignando el valor de API en funci&oacute;n del nivel jer&aacute;rquico en el que se encuentre el nodo, y calculando el valor de la distancia en funci&oacute;n del camino que habr&iacute;a que recorrer a trav&eacute;s del &aacute;rbol jer&aacute;rquico para llegar de un nodo a otro. Por tanto, no ofrece ning&uacute;n modelo matem&aacute;tico para su aplicaci&oacute;n en otros contextos, como por ejemplo en las representaciones gr&aacute;ficas. </p>
+
+<p>Existen multitud de aplicaciones basadas en el concepto de ojo de pez, que no s&oacute;lo difieren en el contexto de aplicaci&oacute;n, sino tambi&eacute;n en la forma y m&eacute;todo. De hecho, como afirma Noik (<a href="#noik">1993</a>), mientras que la propuesta original de Furnas estaba enfocada principalmente a la utilizaci&oacute;n de procedimientos de filtrado o elisi&oacute;n, muchas de las posteriores aplicaciones est&aacute;n basadas en procedimientos exclusivamente de distorsi&oacute;n o deformaci&oacute;n <span>visual</span>. <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> </p>
+
+<p>Algunas de las &aacute;reas de aplicaci&oacute;n del modelo de ojo de pez han 0o: men&uacute;s de interfaces gr&aacute;ficas de usuario (<a href="#bederson">Bederson 2000</a>); documentos textuales de estructura jer&aacute;rquica (<a href="#hayama">Hayama <em>et al.</em> 2003</a>)  (<a href="#horn">Hornb&aelig;k &amp; Fr&oslash;kj&aelig;r 2003</a>); y jerarqu&iacute;as complejas (<a href="#lamping">Lamping <em>et al.</em> 1995</a>). </p>
+
+<p>En el contexto de las representaciones gr&aacute;ficas, Sarkar y Brown (<a href="#sarkar">1992</a>)  proponen un modelo matem&aacute;tico para la aplicaci&oacute;n del efecto de ojo de pez en redes en forma de grafo, introduciendo dos posibles m&eacute;todos de distorsi&oacute;n visual: por transformaci&oacute;n cartesiana y polar. Para su aplicaci&oacute;n en grafos, los autores introducen variaciones sobre la funci&oacute;n DOI original, midiendo la distancia entre dos nodos D(<em>x</em>, <em>y</em>) a trav&eacute;s del c&aacute;lculo de la distancia eucl&iacute;dea entre estos dos v&eacute;rtices en la red. </p>
+
+<div align="center"><img src="p258fig9.gif" width="750" height="300" /></div>
+<div align="center"> <br /> <strong>Figura 9: (a) grafo <span>sin</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>distorsi&oacute;n, (b) distorsi&oacute;n cartesiana y (c) distorsi&oacute;n polar (<a href="#sarkar">Sarkar, Brown</a> 1992)</strong></div>
+
+<p>Un aspecto importante en la aplicaci&oacute;n de estas t&eacute;cnicas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>en representaciones complejas, es la nece0ad de preservaci&oacute;n del mapa <span>mental</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>que el usuario adquiere en la visualizaci&oacute;n previa a la distorsi&oacute;n. Para preservar este mapa <span>mental</span>, <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> una vez que se aplique el efecto de distorsi&oacute;n, el usuario deber&iacute;a poder equiparar mentalmente la representaci&oacute;n distorsionada con aquella que visualizaba antes de la distorsi&oacute;n. </p>
+
+<p>Para ello se deber&iacute;an conservar propiedades del grafo como la direcci&oacute;n de las l&iacute;neas, la topolog&iacute;a, la ortogonalidad y las distancias entre elementos. L&oacute;gicamente, preservar todas estas propiedades es imposible desde el momento en que lo que se est&aacute; realizando es precisamente una distorsi&oacute;n <span>visual</span>. <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> Una posible soluci&oacute;n la ofrecen Storey <em>et al.</em> (<a href="#storey">1997, 1999</a>), quienes proponen un algoritmo para la aplicaci&oacute;n del efecto ojo de pez en grafos, adaptable seg&uacute;n las propiedades del grafo que quieran ser conservadas tras la distorsi&oacute;n, con el objetivo de preservar el mapa <span>mental</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>del usuario. </p>
+
+<p>M&aacute;s concretamente, en el &aacute;rea de la visualizaci&oacute;n de informaci&oacute;n la t&eacute;cnica de ojo de pez ha 0o utilizada con &eacute;xito en varias propuestas de 'Visual Interfaces for Information Retrieval' (<a href="#fowler">Fowler <em>et al.</em> 1992</a>; <a href="#orimo">Orimo &amp; Koike 1999</a>; <a href="#rennison">Rennison 1994</a>; <a href="#chen">Chen 1998</a>; <a href="#turetken">Turetken &amp; Sharda 2003</a> y <a href="#yang">Yang, <em>et al.</em> 2003</a>).</p>
+
+<div align="center"><img src="p258fig10.jpg" width="850" height="356" /></div>
+<div align="center"><br /><strong>Figura 10: mapa SOM (a) con distorsi&oacute;n polar de ojo de pez y (b) con filtrado basado en fractales (<a href="#yang">Yang, Chen, Hong</a> 2003</strong>)</div>
+
+<h3>Comparaci&oacute;n de los m&eacute;todos</h3>
+
+<p>Como ya indic&aacute;bamos, las t&eacute;cnicas de <em>panning </em> y <em>zooming</em>, aunque &uacute;tiles en ciertos contextos, al no proporcionar una visi&oacute;n global de la representaci&oacute;n no resultan del todo apropiadas para representaciones visuales complejas. De hecho, como se demuestra en varios trabajos (<a href="#schaffer">Schaffer <em>et al.</em> 1996</a>) (<a href="#north">North &amp; Shneiderman 2000</a>) (<a href="#gutwin">Gutwin &amp; Fedak 2004</a>), las t&eacute;cnicas de <em>Overview+Detail </em> as&iacute; como <em>Focus+Context</em>, presentan una mayor efectividad demostrada en este tipo de interfaces visuales. </p>
+
+<p>Por otro lado, la t&eacute;cnica <em>Overview+Detail</em>, aunque es ampliamente utilizada en multitud de contextos, presenta algunos problemas como es la desconexi&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>entre la vista en detalle y la vista global (<a href="#parker">Parker <em>et al.</em> 1998</a>) (<a href="#storey">Storey <em>et al.</em> 1999</a>), que pueden ocasionar dificultades para apreciar de forma precisa la relaci&oacute;n entre la zona visualizada en detalle y su contexto. Otro problema es que requiere por parte del usuario la integraci&oacute;n <span>mental</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de ambas vistas (<a href="#schaffer">Schaffer 1996</a>; <a href="#yang">Yang, <em>et al.</em> 2003</a>), lo que podr&iacute;a repercutir en una 'sobrecarga cognitiva'. Por estos motivos en determinados contextos la aplicaci&oacute;n de t&eacute;cnicas de <em>panning </em> y <em>zooming </em> por s&iacute; solas, ofrecen incluso mejores resultados que la de <em>Overview+Detail </em> en cuanto a eficiencia en la consecuci&oacute;n de tareas por el usuario (<a href="#horn">Hornb&aelig;k <em>et al.</em> 2002</a>). </p>
+
+<p>Aunque en base a esto podr&iacute;amos concluir que las t&eacute;cnicas <em>Focus+Context </em> ser&iacute;an las m&aacute;s adecuadas para su empleo en 'Visual Interfaces for Information Retrieval' complejos, coincidimos con Storey, <em>et al.</em> (<a href="#storey">1999</a>)  cuando afirman que existe una preocupante carencia de estudios de an&aacute;lisis y evaluaci&oacute;n que determinen la validez de estas t&eacute;cnicas de distorsi&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de forma emp&iacute;rica. </p>
+
+<p>Una notable excepci&oacute;n es el trabajo de Yang, <em>et al.</em> (<a href="#yang">2003</a>), donde sobre un 'Visual Interface for Information Retrieval'con forma de mapa de categor&iacute;as y generado mediante el modelo de mapas auto-organizativos (SOM), aplican diferentes t&eacute;cnicas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>para comparar su rendimiento. </p>
+
+<p>Tras evaluar el 'Visual Interface for Information Retrieval'a trav&eacute;s de un <span>test</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de usuarios, los autores concluyen que tanto la t&eacute;cnica de ojo de pez (basada en procedimientos de distorsi&oacute;n de informaci&oacute;n visual), como la t&eacute;cnica de fractales (<a href="#koike">Koike 1995</a>)  (basada en procedimientos de filtrado de informaci&oacute;n visual), incrementan la eficacia en la visualizaci&oacute;n de grandes mapas de categor&iacute;as frente a la no utilizaci&oacute;n de ninguna de ellas. La t&eacute;cnica de filtrado seg&uacute;n sus resultados, en este tipo de mapas, parece ofrecer cierta ventaja frente a la de distorsi&oacute;n; mientras que entre los m&eacute;todos de distorsi&oacute;n aplicables en la t&eacute;cnica de ojo de pez, el m&eacute;todo de transformaci&oacute;n cartesiana es preferida por los usuarios frente al m&eacute;todo de transformaci&oacute;n polar. </p>
+
+<h2>Discusi&oacute;n</h2>
+
+<p>A lo largo de este trabajo se han descrito, analizado y comparado entre s&iacute; las posibles t&eacute;cnicas y m&eacute;todos a emplear por cada una de las etapas de la producci&oacute;n de un VIRI, pero a&uacute;n cabe cuestionarse qu&eacute; posibles combinaciones entre t&eacute;cnicas de diferentes etapas ofrecen resultados m&aacute;s adecuados. </p>
+
+<p>Obviando la etapa de an&aacute;lisis y transformaci&oacute;n de los datos, donde concluimos que las diferentes t&eacute;cnicas de miner&iacute;a de datos eran complementarias entre s&iacute; e idealmente se deb&iacute;an usar conjuntamente en forma de an&aacute;lisis de meta-similaridad; es necesario determinar la <em>compatibilidad </em> entre las t&eacute;cnicas de la etapa de clasificaci&oacute;n y distribuci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>y la etapa de transformaci&oacute;n <span>visual</span>. <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> </p>
+
+<p>Las t&eacute;cnicas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>son necesarias cuando la representaci&oacute;n gr&aacute;fica producto de la etapa anterior resultaba compleja y de dif&iacute;cil visualizaci&oacute;n. Este hecho no s&oacute;lo depende de la cantidad de datos a resumir y representar en la interfaz, sino tambi&eacute;n del algoritmo o t&eacute;cnica de clasificaci&oacute;n y distribuci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>empleados. </p>
+
+<p>Mientras que hay algoritmos de distribuci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>que aprovechan de forma &oacute;ptima el espacio <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de la representaci&oacute;n resultante, otros en cambio tienden a desaprovechar y aglomerar los elementos, repercutiendo negativamente en la facilidad de visualizaci&oacute;n. Este es el caso de la t&eacute;cnica de MDS, en cuyas representaciones es muy frecuente la aglomeraci&oacute;n y solapamiento de elementos, lo que aumenta la nece0ad de emplear t&eacute;cnicas interactivas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>que faciliten la exploraci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de la interfaz. </p>
+
+<p>En redes PFNETs, en cambio, la aglomeraci&oacute;n de elementos es menor, debido al propio funcionamiento de los algoritmos de posicionamiento <em>spring models </em>, por lo que el empleo de t&eacute;cnicas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>normalmente s&oacute;lo resulta necesario cuando el n&uacute;mero de nodos y/o arcos a representar es muy elevado. </p>
+
+<p>Por &uacute;ltimo el algoritmo SOM es el que mejor aprovecha el espacio <span>visual</span>, <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> ya que en su representaci&oacute;n gr&aacute;fica no existen zonas 'en blanco'. Esto significa que la aplicaci&oacute;n de t&eacute;cnicas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>suele ser en la mayor&iacute;a de casos innecesaria. </p>
+<p>Adem&aacute;s del hecho de que la t&eacute;cnica empleada en la etapa de distribuci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>influir&aacute; en la nece0ad de emplear o no t&eacute;cnicas de transformaci&oacute;n, tambi&eacute;n se debe tener en cuenta que no todas las t&eacute;cnicas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>son igualmente adecuadas y <em>compatibles </em> con todas las de distribuci&oacute;n <span>visual</span>. <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> </p>
+
+<table width="713" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;" align="center">
+<caption align="bottom"><br />
+<strong>Tabla 3. Leyenda: </strong>
+&radic; Combinaci&oacute;n adecuada, - Adecuada pero con reservas, &times; Combinaci&oacute;n inadecuada
+</caption>
+<tr>
+  <th>&nbsp;</th>
+  <th>MDS</th>
+  <th>SOM</th>
+  <th>PFNETS</th>
+</tr>
+<tr>
+  <td width="149"><div align="right"><strong>Focus+Context</strong></div></td>
+  <td width="174"><div align="center">-</div></td>
+  <td width="176"><div align="center">&radic;</div></td>
+  <td width="174"><div align="center">-</div></td></tr>
+<tr>
+  <td width="149"><div align="right"><strong>Detail+Overview</strong></div></td>
+  <td width="174"><div align="center">x</div></td>
+  <td width="176"><div align="center">-</div></td>
+  <td width="174"><div align="center">&radic;</div></td></tr>
+<tr>
+  <td width="149"><div align="right"><strong>Zoom and Panning</strong> </div></td>
+  <td width="174"><div align="center">&radic;</div></td>
+  <td width="176"><div align="center">&radic;</div></td>
+  <td width="174"><div align="center">&radic;</div></td>
+</tr>
+</table>
+
+<p>Las t&eacute;cnicas de <em>zoom and panning </em>, por su simplicidad y al no tratarse de t&eacute;cnicas de distorsi&oacute;n, pueden ser utilizadas sobre representaciones generadas con cualquiera de los m&eacute;todos de distribuci&oacute;n y clasificaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>sin</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>problemas. </p>
+
+<p>Por otro lado, las de 'vistas m&uacute;ltiples' o <em>Detail+Overview </em> no son aconsejables sobre representaciones de dispersi&oacute;n generadas por MDS. Estas representaciones, al contrario que las redes en forma de grafos, no poseen una estructura global clara y reconocible, por lo que la vista global u <em>Overview </em> no ofrecer&aacute; valor orientativo durante la visualizaci&oacute;n de la interfaz por el usuario. En cambio, las representaciones en forma de grafos generadas mediante t&eacute;cnicas <em>Pathfinder </em>, s&iacute; poseen una estructura global reconocible modelada por los arcos entre nodos, resultando en este caso de valor el empleo de t&eacute;cnicas <em>Detail+Overview </em>. </p>
+
+<p>La combinaci&oacute;n de t&eacute;cnicas <em>Detail+Overview </em> y SOM no es por definici&oacute;n inadecuada, aunque su grado de adecuaci&oacute;n depender&aacute; directamente de la forma del mapa obtenida y c&oacute;mo de reconocible resulta su estructura global. </p>
+
+<p>Por otro lado, la naturaleza distorsionadora de las t&eacute;cnicas <em>Focus+Context </em>, si bien es la que les confiere su mayor potencial como t&eacute;cnicas de transformaci&oacute;n interactiva, tambi&eacute;n es causa de problemas en su combinaci&oacute;n con MDS y PFNETs. </p>
+
+<p>La aplicaci&oacute;n del efecto 'ojo de pez' sobre representaciones MDS ofrece problemas desde el momento que se realiza mediante procedimientos de deformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>sobre las posiciones de los elementos. Como se ha comentado, las t&eacute;cnicas MDS se caracterizan porque la informaci&oacute;n estructural preservada de los datos originales es la relacionada con las distancias entre elementos, informaci&oacute;n que finalmente se perder&iacute;a cada vez que se aplicase este efecto de transformaci&oacute;n sobre las posiciones de los elementos. Es previsible que m&eacute;todos como el de transformaci&oacute;n cartesiana minimizar&aacute;n este problema frente a m&eacute;todos como el de transformaci&oacute;n polar. </p>
+
+<p>En redes PFNETs la transformaci&oacute;n de las posiciones de los nodos, aunque tambi&eacute;n influye en la expresividad de la representaci&oacute;n, no implica la misma problem&aacute;tica, puesto que la informaci&oacute;n preservada mediante t&eacute;cnicas <em>pathfinder </em> es la de las relaciones locales m&aacute;s fuertes entre nodos, informaci&oacute;n que no se pierde con la aplicaci&oacute;n del 'ojo de pez'. </p>
+
+<p>Finalmente, los mapas SOM parecen ser especialmente adecuados para este efecto <span>visual</span>, <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> puesto que la informaci&oacute;n de las relaciones de vecindad de elementos no se ver&iacute;a modificada por la aplicaci&oacute;n del efecto de 'ojo de pez', adem&aacute;s de que existen trabajos (<a href="#yang">Yang, <em>et al.</em> 2003</a>)  en los que ya ha 0o probada su efectividad.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Es l&oacute;gico que dada la cantidad de posibles combinaciones de t&eacute;cnicas, algoritmos y tipos de an&aacute;lisis en la generaci&oacute;n de interfaces visuales para la recuperaci&oacute;n de informaci&oacute;n, no todas las combinaciones hayan 0o exploradas o investigadas. </p>
+
+<p>Debido a que el objetivo de este trabajo es precisamente servir a otros investigadores como herramienta para la elecci&oacute;n de una u otra combinaci&oacute;n de t&eacute;cnicas en el desarrollo de propuestas espec&iacute;ficas de 'Visual Interfaces for Information Retrieval'; se ha puesto especial &eacute;nfasis en las t&eacute;cnicas de transformaci&oacute;n <span>visual</span>, <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> ya que con0eramos que han 0o menos estudiadas y aplicadas en la producci&oacute;n de 'Visual Interfaces for Information Retrieval'. </p>
+
+<p>Al igual que las t&eacute;cnicas de clasificaci&oacute;n y distribuci&oacute;n, las de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>tienen por objetivo simplificar espacios complejos de informaci&oacute;n, en este caso de la informaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>que conforma la interfaz final. Esta simplificaci&oacute;n no s&oacute;lo se encuentra motivada para posibilitar la comprensi&oacute;n de grandes vol&uacute;menes de informaci&oacute;n que de otra forma no podr&iacute;an ser interpretados por el usuario, sino tambi&eacute;n para facilitar esta visualizaci&oacute;n e interacci&oacute;n entre usuario e interfaz. </p>
+
+<p>En este sentido creemos necesaria la investigaci&oacute;n sobre nuevas t&eacute;cnicas de transformaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>interactiva o sobre nuevos modelos de aplicaci&oacute;n de las existentes. Como hemos visto, aquellas t&eacute;cnicas de distribuci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>que dan como resultado representaciones m&aacute;s complejas de visualizar, son precisamente las menos compatibles con las descritas t&eacute;cnicas de transformaci&oacute;n interactiva. E igualmente, las t&eacute;cnicas de transformaci&oacute;n interactiva que m&aacute;s compatibilidad ofrecen con las de distribuci&oacute;n, resultan ser las que menos ventajas ofrecen en su tarea de facilitar la exploraci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de la interfaz. </p>
+
+<p>No debemos olvidar que la divulgaci&oacute;n y aceptaci&oacute;n de este tipo de interfaces visuales por el p&uacute;blico general no se encuentra frenada por su utilidad o no como herramientas de recuperaci&oacute;n de informaci&oacute;n, sino por la dificultad de aprendizaje y uso que presentan para el usuario final. </p>
+<p>La reducci&oacute;n de la carga <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de la interfaz, y por tanto de la carga cognitiva del usuario en la interacci&oacute;n con dicha interfaz, supone actualmente el m&aacute;s importante reto a superar en la investigaci&oacute;n cient&iacute;fica sobre producci&oacute;n de interfaces visuales para la recuperaci&oacute;n de informaci&oacute;n. </p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a name="baeza" id="baeza"></a> Baeza-Yates, <span>R++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> (2004). Excavando la web. <em>El profesional de la informaci&oacute;n</em>, <strong>13</strong>(1), 4-10.</li>
+
+<li><a name="bederson" id="bederson"></a>Bederson, B.B. (2000). Fisheye menus. In Mark Ackerman &amp; K. Edwards, (Eds.), <em>Proceedings of ACM Conference on User Interface Software and Technology (UIST 2000)</em>, (pp. 217-226).  New York, NY: ACM Press. </li>
+
+<li><a name="berendt" id="berendt"></a>Berendt, B., Hotho, <span>A+</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>, &amp; Stumme, G. (2002). Towards <span>semantic</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Web mining. In Ian Horrocks &amp; James <span>A+</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> Hendler (Eds.), Proceedings of the First International <span>Semantic</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Web Conference on The <span>Semantic</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Web,  (pp.264-278), London: Springer-Verlag. (Lecture Notes In <span>Computer</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Science, 2342) </li>
+
+<li><a name="borner" id="borner"></a>B&ouml;rner, K., Chen, C., &amp; Boyak, K.W. (2003).Visualizing <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Domains. <em>Annual Review of Information Science and Technology</em>, <strong>37</strong>,  179-255. </li>
+
+<li><a name="buzydlowski" id="buzydlowski"></a>Buzydlowski, <span>J++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>W., White, H.D., &amp; Lin, <span>X++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> (2001). <a href="http://vw.indiana.edu/visual01/buzydlowski-et-al.pdf" target="_blank">Term co-occurrence analysis as an interface for digital libraries</a>. In  Katy B&ouml;rner &amp; Chaomei Chen (Eds.),
+<em>Visual interfaces to digital libraries</em> [JCDL 2002 Workshop] (pp. 133-144), London: Springer-Verlag. (Lecture Notes In <span>Computer</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Science, 2539) <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>19 March, 2006 from http://vw.indiana.edu/visual01/buzydlowski-et-al.pdf</li>
+
+<li> Buzydlowski, <span>J++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>W. (2003). <a href="http://dspace.library.drexel.edu/retrieve/503/Thesis.PDF">A <span>comparison</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>of self-organizing <span>maps</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>and pathfinder networks for the <span>mapping</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>of co-cited authors</a>. Unpublished Ph.D. thesis, Drexel University, Philadelphia, USA. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>15 August, 2005 from  http://dspace.library.drexel.edu/retrieve/503/Thesis.PDF</li>
+
+<li><a name="chen" id="chen"></a>Chen, C. (1997). Structuring and visualising the WWW by generalised similarity analysis. In  Mark Bernstein,  Kasper &Oslash;sterbye &amp; Leslie Carr (Eds.) Conference on Hypertext and Hypermedia, Proceedings of the eighth ACM conference on Hypertext. Southampton, United Kingdom, April 06 - 11, 1997 (pp. 177 - 186). New York, NY: ACM Press.</li>
+
+<li>Chen, C. (1998). Generalised similarity analysis and pathfinder <span>network</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>scaling.  <em>Interacting with Computers</em>, <strong>10</strong>(2), 107-128. </li>
+
+<li>Chen, C., &amp; Czerwinski, M.P. (2000). <a href="http://www.pages.drexel.edu/~cc345/papers/ijhcs2000a.pdf" target="_blank">Empirical evaluation of information visualizations: an <span>introduction</span>. <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span></a>  <em>International Journal of Human-Computer Studies</em>, <strong>53</strong>(5), 631-635. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>19 March, 2006 from http://www.pages.drexel.edu/~cc345/papers/ijhcs2000a.pdf</li>
+
+<li><a name="chung" id="chung"></a>Chung, W., Chen, H., &amp; Nunamaker, <span>J++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>F. (2003). <a href="http://csdl.<span>computer</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>org/comp/proceedings/hicss/2003/1874/01/187410010b.pdf" target="_blank">
+Business intelligence explorer: a knowledge <span>map</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>framework</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>for discovering <span>business</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>intelligence on the Web.
+</a> In Proceedings of the 36th Hawaii International Conference on System Sciences (HICSS’03) - Track1 - Volume 1, January 6-9, 2003, (pp. 10.2). Washinton, DC: IEEE.  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>19 March, 2006 from http://csdl.<span>computer</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>org/comp/proceedings/hicss/2003/1874/01/187410010b.pdf</li>
+
+<li><a name="Dursteler" id="Dursteler"></a> D&uuml;rsteler, <span>J++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>C. (2002). <a href="http://www.infovis.net/printMag.php?num=100&amp;lang=2">Information visualisation, what is it all about?</a>.  <em>Inf@Vis! The digital magazine of InfoVis.net</em>, (100). <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>22 November, 2005 from 
+  http://www.infovis.net/printMag.php?num=100&amp;lang=2</li>
+  
+<li><a name="eick" id="eick"></a>Eick, S.G. (2001).  Visualizing on-line activity. <em>Communication of the ACM</em>, <strong>44</strong>(8), 45-52. </li>
+
+<li><a name="fowler" id="fowler"></a> Fowler, <span>R++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>H., Wilson, B.<span>A+</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>, &amp; Fowler, W.<span>A+</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>L. (1992). <a href="http://www.cs.panam.edu/research/information_navigator.pdf"><em>Information Navigator: an information system using associative networks for display and retrieval</em></a>. Edinburg, TX: University of Texas-Pan American, Department of <span>Computer</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Science. (Technical Report NAG9-551, No. 92-1). <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>19 March, 2005 from http://www.cs.panam.edu/research/information_navigator.pdf</li>
+
+<li><a name="furnas" id="furnas"></a>Furnas, G.W. (1986).<a href="http://www.si.umich.edu/~furnas/Papers/FisheyeCHI86.pdf" target="_blank"> Generalized fisheye views.
+</a> In Marilyn Mantei &amp;  Peter Orbeton (Eds.). <em>Proceedings of the SIGCHI conference on human factors in computing <span>systems</span>, <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> Boston, Massachusetts, United States, April 13-17, 1986</em>, (pp. 16-23). New York, NY: ACM Press.  <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>19 March, 2006 from http://www.si.umich.edu/~furnas/Papers/FisheyeCHI86.pdf</li>
+
+<li><a name="gutwin" id="gutwin"></a>Gutwin, C.; &amp; Fedak, C. (2004). <a href="http://hci.usask.ca/publications/2004/bigui-gi04.pdf." target="_blank">Interacting with big interfaces on small screens: a <span>comparison</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>of fisheye, zoom, and panning techniques</a>. In Proceedings of the 2004 conference on graphics interface. London, Ontario, Canada, May 17-19, 2004. (pp. 145-152). London, ON, Canada: University of Waterloo, Canadian Human-Computer Communications Society. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>19 March, 2006 from http://hci.usask.ca/publications/2004/bigui-gi04.pdf</li>
+
+<li><a name="hayama" id="hayama"></a>Hayama, T., Kanai, T., &amp; Kunifuji, S. (2003).  Personalized <span>environment</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>for skimming <span>documents</span>. <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>  <em>Lecture Notes in <span>Computer</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Science</em>, <strong>2774</strong>(2),  771-778. </li>
+
+<li><a name="herrero" id="herrero"></a> Herrero-Solana, V., &amp; Moya-Aneg&oacute;n, F. (1999). Science in America Latina: a <span>comparison</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>of bibliometric and scientific-technical indicators. <em>Scientometrics</em>, 1999, <strong>46</strong>(2),  299-320. </li>
+
+<li> Herrero-Solana, V. (2000). <em>Modelos de representaci&oacute;n <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>de la informaci&oacute;n bibliogr&aacute;fica: aproximaciones multivariantes y conexionistas.</em> [Models of <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>representation</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>of bibliographic information: multivariate approximations and <span>connections</span>. <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>] Unpublished Ph.D. thesis, University of Granada, Granada, Spain.</li>
+
+<li><a name="horn" id="horn"></a> Hornb&aelig;k, K., Bederson, B.B., &amp; Plainsant, C. (2002). Navigation patterns and usability of zoomable user interfaces with and without an overview. <em>ACM Transactions on Computer-Human Interaction</em>, <strong>9</strong>(4),  362-389.</li>
+
+<li>Hornb&aelig;k, K., &amp; Fr&oslash;kj&aelig;r, E. (2003). Reading patterns and usability in visualizations of electronic <span>documents</span>. <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> <em>ACM Transactions on Computer-Human Interaction</em>,  <strong>10</strong>(2),  119-149. </li>
+
+<li><a name="kamada" id="kamada"></a>Kamada, T., &amp; Kawai, S. (1989). An <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>for drawing general undirected graphs. <em>Information processing letters</em>, <strong>31</strong>(1), 7-15. </li>
+
+<li><a name="kaski" id="kaski"></a>Kaski, S. (1997). <a href="http://www.cis.hut.fi/~sami/thesis/"><em>Data exploration using self-organizing maps</em></a>. Espoo, Finland: Finnish Academy of Sciences. (Acta Polytechnica Scandinavica, <span>Mathematics</span>, <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> <span>Computing</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>and Management in Engineering Series No. 82). <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>13 August, 2005 from http://www.cis.hut.fi/~sami/thesis/ </li>
+
+<li><a name="kobourov" id="kobourov"></a>Kobourov, S. G., &amp; Yusufov, <span>R++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> (2005). <a href="http://www.cs.arizona.edu/people/kobourov/cfv-gd04.pdf">Visualizing large graphs with compound-fisheye views and treemaps</a>. <em>Lecture Notes in <span>Computer</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Science</em>, <strong>3383</strong>, 431-441. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>13 June, 2005 from http://www.cs.arizona.edu/people/kobourov/cfv-gd04.pdf</li>
+
+<li><a name="kohonen" id="kohonen"></a>Kohonen, T. (1989). <em>Self-organization and associative memory</em>. (3rd ed.). <span>Berlin</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>: Springer-Verlag.</li>
+
+<li><a name="koike" id="koike"></a>Koike, H. (1995). Fractal views: a fractal-based method for controlling information display. <em>ACM Transactions on Information Systems</em>, <strong>13</strong>(3),  305-323. </li>
+
+<li><a name="kopanakis" id="kopanakis"></a>Kopanakis, I., &amp; Theodoulidis, B. (2003). Visual data mining modeling techniques for the visualization of mining outcomes. <em>Journal of Visual Languages and Computing</em>, <strong>14</strong>(6),  543-589. </li>
+
+<li><a name="kruskal" id="kruskal"></a>Kruskal, <span>J++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>B. (1964). Nonmetric multidimensional scaling: a <span>numerical</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>method. <em>Psychometrika</em>,  <strong>29</strong>(2),  115-129. </li>
+
+<li><a name="lamping" id="lamping"></a>Lamping, <span>J++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>, Rao, <span>R++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>, &amp; Pirolli, P. (1995). <span>A+</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>focus+context <span>technique</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>based on <span>hyperbolic</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>geometry for visualizing large hierarchies. In Irvin <span>R++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> Katz, Robert Mack, Linn Marks,  Mary Beth Rosson &amp;  <span>Jakob</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Nielsen (Eds.). <em>Proceedings of the ACM SIGCHI conference on <span>Human</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>factors in computing <span>systems</span>, <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> Denver, Colorado, United States, May 1995</em> (pp. 401-408). New York, NY: ACM Press. </li>
+
+<li><a name="leung" id="leung"></a>Leung, Y.K., &amp; Apperley, M.D. (1994). Review and taxonomy of distortion-oriented <span>presentation</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>techniques. <em>ACM Transactions on Computer-Human Interaction</em>,  <strong>1</strong>(2), 126-160.</li>
+
+<li><a name="lin" id="lin"></a>Lin, <span>X++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> (1997) . Map displays for information retrieval. <em>Journal of the American Society for Information Science</em>,  <strong>48</strong>(1), 40-54.</li>
+
+<li><a name="luhn" id="luhn"></a>Luhn, H.P. (1958). The automatic creation of literature abstracts. <em> <span>IBM</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Journal of Research and Development</em>,  <strong>2</strong>(2),  159-165.</li>
+
+<li><a name="mackinlay" id="mackinlay"></a>Mackinlay, <span>J++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> D., Robertson, G. G., &amp; Card, S. K. (1991). The <span>perspective</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>wall: detail and context smoothly integrated. In Scott P. Robertson, Gary M. Olson &amp; Judith S. Olson (Eds.). <em>Proceedings of the SIGCHI conference on <span>Human</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>factors in computing systems: reaching through technology. New Orleans, Louisiana, United States, April 27-May 2, 1991</em> (pp. 173-176). New York, NY: ACM Press. </li>
+
+<li><a name="marchionini" id="marchionini"></a>Marchionini, G. (1995). <em>Information seeking in electronic environments</em>. New York, NY: Cambridge University Press. </li>
+
+<li><a name="marcos" id="marcos"></a>Marcos-Mora, M.C. (2004). <em>Interacci&oacute;n en interfaces de recuperaci&oacute;n de informaci&oacute;n: conceptos, met&aacute;foras y visualizaci&oacute;n</em>. [Interaction in information retrieval interfaces: concepts, metaphors and visualization.] Gij&oacute;n: Ediciones TREA.</li>
+
+<li><a name="moya" id="moya"></a>Moya-Aneg&oacute;n, F. (1994). <em>Los sistemas integrados de gesti&oacute;n bibliotecaria: estructuras de datos y recuperaci&oacute;n de informaci&oacute;n</em>. [Integrated library management systems: data structures and information retrieval.] Madrid: ANABAD.</li>
+
+<li> Moya-Aneg&oacute;n, F., &amp; Herrero-Solana, V. (1999). <a href="http://www.ucm.es/info/multidoc/multidoc/revista/num8/moya.html">Investigaciones en curso sobre interfaces gr&aacute;ficos en dos y tres dimensiones para el acceso a la informaci&oacute;n electr&oacute;nica</a>. <em>Cuadernos de Documentaci&oacute;n Multimedia</em>,  (8). <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>15 August, 2005 from http://www.ucm.es/info/multidoc/multidoc/revista/num8/moya.html</li>
+  
+<li><a name="noik" id="noik"></a>Noik, E.G. (1993). Layout-independent fisheye views of nested graphs. In <em>Proceedings of the 1993 IEEE Workshop on Visual Languages, August 24-27, 1993, Bergen, Norway</em>. (pp. 336-341). Washington, DC: IEEE <span>Computer</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Society. </li> 
+
+<li><a name="north" id="north"></a>North, C., &amp; Shneiderman, B. (2000).  Snap-together visualization: can users construct and operate coordinated visualizations? <em>International Journal of Human-Computer Studies</em>, <strong> 53</strong>(5),  715-739. </li>
+
+<li><a name="orimo" id="orimo"></a>Orimo, E., &amp; Koike, H. (1999). ZASH: a browsing system for multi-dimensional data. In <em>Proceedings of the IEEE Symposium on Visual Languages, Washington, DC, USA, September 13 - 16, 1999</em>, (pp. 266-286). Washington: IEEE <span>Computer</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Society. </li>
+
+<li><a name="parker" id="parker"></a>Parker, G., Franck, G., &amp; Ware, C. (1998). Visualization of large nested graphs in 3D: navigation and <span>interaction</span>. <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> <em>Journal of Visual Languages and Computing</em>, <strong>9</strong>(3),  299-317. </li>
+
+<li><a name="polanco" id="polanco"></a>Polanco, <span>X++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>, &amp; Zartl, <span>A+</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> (2002). <a href="http://eicstes.inist.fr/public/D1.4_Visualization_WP9.pdf">Information visualization</a>. EICSTES Project. Deliverable 1.4. State of the <span>art</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>part c: WP9. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>12 April, 2005 from http://eicstes.inist.fr/public/D1.4_Visualization_WP9.pdf </li>
+
+<li><a name="rennison" id="rennison"></a>Rennison, E. (1994). Galaxy of news: an approach to visualizing and understanding expansive news landscapes. In <em>UIST 94, ACM Symposium on User Interface Software and Technology</em>. (pp.3-12). New York, NY: ACM Press </li>
+
+<li><a name="rijsbergen" id="rijsbergen"></a>Rijsbergen, C.<span>J++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> (1975). <a href="http://www.dcs.gla.ac.uk/Keith/Preface.html"><em>Information retrieval</em></a>. London: Butterworths, 1975. <span>Retrieved</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>14 May, 2005 from http://www.dcs.gla.ac.uk/Keith/Preface.html </li>
+
+<li><a name="salton" id="salton"></a>Salton, G. (1989). <em>Automatic text processing: the transformation, analysis and retrieval of information by computer</em>. Reading, MA: Addison Wesley. </li>
+
+<li><a name="sarkar" id="sarkar"></a>Sarkar, M., &amp; Brown, M.H. (1992). Graphical fisheye view of graphs. In    Penny Bauersfeld, John Bennett &amp;  Gene Lynch (Eds.). <em>Proceedings of the SIGCHI conference on <span>Human</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>factors in computing <span>systems</span>. <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> Monterey, California, United States, May 03 - 07, 1992</em>. (pp. 83-91). New York, NY: ACM Press. </li>
+
+<li><a name="schaffer" id="schaffer"></a>Schaffer, D. et al. (1996) . Navigating hierarchically clustered networks through fisheye and full-zoom methods. <em>ACM Transactions on Computer-Human Interaction</em>,  <strong>3</strong>(2), 162-188.</li>
+
+<li><a name="schvaneveldt" id="schvaneveldt"></a>Schvaneveldt, <span>R++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> (Ed.) (1990). <em>Pathfinder associative networks: studies in knowledge organization</em>. Norwood, NJ : Ablex. </li>
+
+<li><a name="schneiderman" id="schneiderman"></a>Shneiderman, B. (1992). Tree visualization with tree-maps: 2-d space-filling approach. <em>ACM Transactions on Graphics</em>,  <strong>11</strong>(1),  92-99. </li>
+
+<li><a name="spence" id="spence"></a>Spence, <span>R++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>, &amp; Apperley, M. (1982). Data base navigation: an office <span>environment</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>for the professional. <em>Behaviour and Information Technology</em>,  <strong>1</strong>(1),  43-54. </li>
+
+<li><a name="storey" id="storey"></a>Storey, M-A.D., Wong, K., Fracchia, F.D. &amp; M&uuml;ller, H.<span>A+</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>  (1997). On integrating visualization techniques for effective <span>software</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>exploration. In <em>Proceedings of the 1997 IEEE Symposium on Information Visualization, October 18-25, 1997</em> (pp. 38-45). Washington: IEEE <span>Computer</span>  <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>Society.  </li>
+
+<li> Storey, MA. D., Fracchia, F.D., &amp; M&uuml;ller, H.<span>A+</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> (1999). Customizing a fisheye view <span>algorithm</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>to preserve the <span>mental</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>map. <em>Journal of Visual Languages and Computing</em>,  <strong>10</strong>(3),  245-267. </li>
+
+<li><a name="turetken" id="turetken"></a>Turetken, O., &amp; Sharda, <span>R++</span>. <span class="compus" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> (2004). <span>Development</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>of a fisheye-based information <span>search</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>processing aid (FISPA) for managing information overload in the web <span>environment</span>. <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> <em>Decision Support Systems</em>, <strong>37</strong>(3),  1-20. </li>
+
+<li><a name="yang" id="yang"></a>Yang, C., Chen, H., &amp; Hong, K. (2003). Visualization of large category <span>map</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>for Internet browsing. <em>Decision Support System</em>, <em>35</em>(1),  89-102.</li>
+</ul>
+
+<hr size="1" style="color:#000080 ;" />
+
+<div align="center"><b><a name="abs">Abstract</a></b></div>
+
+<blockquote>
+<strong>Introduction</strong>. In recent years the <span>volume</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>of electronic information has grown exponentially. This <span>phenomenon</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>improves data exchange and communication but introduces new troubles in relation to information access and searching.<br />
+<strong>Aim</strong>. This paper proposes an exhaustive review of the different models, methods and <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>that can be used to develop Visual Interfaces for Information Retrieval. The methods are classified on the basis of the stage of the process in which they take part: data analysis and transformation, application of <span>classification</span>  <span class="quali" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>and <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>distribution</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>algorithms</span>, <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> and application of <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>transformation techniques.<br />
+<strong>Methodology</strong>. Based on the analysis, we compare the different methods that can be used in each stage of the production process. We also determine which combinations of methods and <span>algorithms</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> are most <span>suitable</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>at different stages.   <br />
+<strong>Results</strong>. In the first section, data analysis and transformation, we analyse content mining, structure mining and use mining. In the second section, <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>classification</span>  <span class="quali" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>algorithm, we shown the hierarchical, <span>network</span>, <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> scattering and <span>map</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span><span>representations</span>. <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span> In the last section, <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>transformation techniques, we present the distortion (Focus+Context) and non-distortion techniques. <br />
+<strong>Conclusion</strong>. The results aim to become useful <span>tools</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>for other researchers when choosing a methodological <span>combination</span>  <span class="quanti" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>for the development of specific proposals for <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>interfaces for information retrieval, as well as <span>suggest</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>implications to be con0ered on the research of new <span>visual</span>  <span class="exper" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>transformation techniques.
+</blockquote>
+
+<hr size="1" style="color:#000080 ;" />
+
+<table cellspacing="10" align="center">
+
+<tr><td align="center" valign="top">
+
+<form method="get" action="http://scholar.google.com/scholar" target="_blank">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="(&quot;information visualization&quot; AND &quot;information retrieval&quot;")></input> <br />
+<input type="submit" name="sa" value="Scholar Search"  style="font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="num" value="100"></input>
+</td></tr></table></form>
+<td colspan="2" align="center" style="font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject.<br /></td>
+<td align="center" valign="top">
+<!-- Search Google -->
+
+<form method="get" action="http://www.google.com/custom" target="_top">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="(&quot;information visualization&quot; AND &quot;information retrieval&quot;")"></input><br />
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold;"></input>
+<input type="hidden" name="client" value="pub-5081678983212084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+</td></tr></table>
+</form>
+
+<!-- Search Google -->
+</td></tr>
+</table>
+<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;cites=3489518370116500200" target="_blank">according to Google Scholar</a></div>
+<br />
+<div align="center">
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="delicious post" /> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a>
+</div>
+
+<hr size="1" style="color:#000080 ;" />
+
+<div align="center">
+<h4>How to cite this paper:</h4>
+Herrero-Solana, V. &amp; Hassan, Y. (2005). &quot;Metodolog&iacute;as para el desarrollo de Interfaces Visuales de recuperaci&oacute;n de informaci&oacute;n: an&aacute;lisis y comparaci&oacute;n&quot; &nbsp; <em>Information Research</em>, <strong>11</strong>(3) paper 258 [Available at http://InformationR.net/ir/11-3/paper258.html]</div>
+<br />
+<hr size="1" style="color:#000080 ;" />
+
+<table align="center" cellpadding="10">
+<tr><td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper258" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+
+<td align="center" valign="top"><div>
+&copy; the authors, 2006. <br />Last updated: 14 March, 2006
+</div></td>
+
+<td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" />
+<!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var 0="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('paper258.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&0="+0;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?0='+0+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own <span>free</span>  <span class="conce" style="width:1px;border-width:126px 42px 126px 42px;position:relative;">.</span>site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;0=281971&amp;js=No&amp;" ALT="online web site analytics"></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</td></tr>
+</table>
+<hr size="1" style="color:#000080 ;" />
+
+<table align="center"><tr><td><div class="button">
+<ul>
+	<li><a href="infres113.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index-2.html">Home</a></li>
+</ul>
+</div></td></tr></table>
+
+<hr size="3" style="color:#000080 ;" />
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/11-3/paper258.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:13:40 GMT -->
+</html>

@@ -1,0 +1,563 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/4-4/paper60.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:17:03 GMT -->
+<head>
+<title>Digital libraries and World Wide Web sites and page persistence</title>
+<link rel="stylesheet" href="../IRstyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="keywords" content="Digital libraries, World Wide Web, page persistence, hybrid libraries">
+<meta name="description" content="We begin with the assumption that Web pages and Web sites can be collected and categorized.  The paper explores the proposition that the WWW constitutes a library. We conclude that the Web is not a digital library. However, its component parts can be aggregated and included as parts of digital library collections. These, in turn, can be incorporated into "hybrid libraries."  These are libraries with both traditional and digital collections. Material on the Web can be organized and managed. This paper examines how Web documents can be efficiently and effectively incorporated into library collections. This paper focuses on Web document lifecycles: persistence, attrition, and intermittence. While the frequency of content change has been reported (Koehler, 1999a), the degree to which those changes effect meaning and therefore the integrity of bibliographic representation is yet not fully understood. The dynamics of change sets Web libraries apart from the traditional library as well as many digital libraries. ">
+<meta name="rating" content="General">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Digital libraries and World Wide Web sites and page persistence.">
+<meta name="DC.Creator" content="Wallace Koehler">
+<meta name="DC.Subject" content="Digital libraries and World Wide Web sites and page persistence.">
+<meta name="DC.Description" content="We begin with the assumption that Web pages and Web sites can be collected and categorized.  The paper explores the proposition that the WWW constitutes a library. We conclude that the Web is not a digital library. However, its component parts can be aggregated and included as parts of digital library collections. These, in turn, can be incorporated into "hybrid libraries."  These are libraries with both traditional and digital collections. Material on the Web can be organized and managed. This paper examines how Web documents can be efficiently and effectively incorporated into library collections. This paper focuses on Web document lifecycles: persistence, attrition, and intermittence. While the frequency of content change has been reported (Koehler, 1999a), the degree to which those changes effect meaning and therefore the integrity of bibliographic representation is yet not fully understood. The dynamics of change sets Web libraries apart from the traditional library as well as many digital libraries. ">
+<meta name="DC.Publisher" content="Professor Tom Wilson">
+<meta name="DC.Contributors" content="Wallace Koehler">
+<meta name="DC.Coverage.PlaceName" content="USA">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 97">
+<title>Digital libraries and World Wide Web sites and page persistence.</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 4  No. 4, July 1999</h4></td></tr>
+  <tr> 
+    <td><a href="infres44.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<h1>Digital libraries and World Wide Web sites and page persistence.</h1>
+<h4 align="center"><a href="mailto:wkoehler@valdosta.edu">Wallace Koehler</a><br>
+School of Library and Information Studies<br>
+University of Oklahoma<br>Norman, OK, USA</h4>
+<br><br>
+<div>Abstract</div>
+
+
+<blockquote>Web pages and Web sites, some argue, can either be collected as elements of digital or hybrid libraries, or, as others would have it, the WWW is itself a library.  We begin with the assumption that Web pages and Web sites can be collected and categorized.  The paper explores the proposition that the WWW constitutes a library. We conclude that the Web is not a digital library. However, its component parts can be aggregated and included as parts of digital library collections. These, in turn, can be incorporated into "hybrid libraries."  These are libraries with both traditional and digital collections. Material on the Web can be organized and managed. Native documents can be collected <i>in situ, </i>disseminated, distributed, catalogueed, indexed, controlled, in traditional library fashion. The Web therefore is not a library, but material for library collections is selected from the Web. That said, the Web and its component parts are dynamic.  Web documents undergo two kinds of change. The first type, the type addressed in this paper, is &quot;persistence&quot; or the existence or disappearance of Web pages and sites, or in a word the lifecycle of Web documents. &quot;Intermittence&quot; is a variant of persistence, and is defined as the disappearance but reappearance of Web documents. At any given time, about five percent of Web pages are intermittent, which is to say they are gone but will return. Over time a Web collection erodes. Based on a 120-week longitudinal study of a sample of Web documents, it appears that the half-life of a Web page is somewhat less than two years and the half-life of a Web site is somewhat more than two years. That is to say, an unweeded Web document collection created two years ago would contain the same number of URLs, but only half of those URLs point to content.  The second type of change Web documents experience is change in Web page or Web site content. Again based on the Web document samples, very nearly all Web pages and sites undergo some form of content within the period of a year. Some change content very rapidly while others do so infrequently (Koehler, 1999a). This paper examines how Web documents can be efficiently and effectively incorporated into library collections. This paper focuses on Web document lifecycles: persistence, attrition, and intermittence. While the frequency of content change has been reported (Koehler, 1999a), the degree to which those changes effect meaning and therefore the integrity of bibliographic representation is yet not fully understood. The dynamics of change sets Web libraries apart from the traditional library as well as many digital libraries. This paper seeks then to further our understanding of the Web page and Web site lifecycle. These patterns challenge the integrity and the usefulness of libraries with Web content. However, if these dynamics are understood, they can be controlled for or managed.</blockquote>
+<br><br>
+
+<h2>Introduction</h2>
+
+<p>The World Wide Web offers a challenge unlike traditional media to those who seek to manage it and to categorize it (<a href="#ref2">Johnston, 1998</a>). The Web is different. I have argued elsewhere that prior to the advent of the Internet, information was managed in essentially two ways. The first is ephemeral, centrally owned and controlled, and unrecorded. Oral traditions, the spoken word, and even live unrecorded broadcasts are examples. The second is the written or recorded tradition. These materials are more permanent not only because they are stored in some format, but also because their ownership tends to be diffuse. Web content lies somewhere between these two traditional information storage and dissemination strategies. Web content may be centrally owned but universally accessible. At the same time, edited Web material replaces its antecedent, usually leaving no trace of the previous document/edition. Once a Web document is permanently removed from the WWW it ceases to exist (<a href="#ref3">Koehler, 1997</a>). Our understanding of Web dynamics is further complicated by the proliferation of digital libraries of varying quality, complexity, and scope (<a href="#ref3">Lesk, 1996</a>) and a definitional confusion between digital libraries and the Web. </p>
+
+<p>We begin with the assumption that Web pages and Web sites can be collected and categorized.  The paper explores the proposition that the Web constitutes a library. We conclude that the Web is not a digital library. However, its component parts can be aggregated and included as parts of digital library collections. These, in turn, can be incorporated into "hybrid libraries."  These are libraries with both traditional and digital collections (<a href="#ref4">Pinfield, <i>et al.</i>, 1998</a>). Material on the Web can be organized and managed. Native documents can be collected <i>in situ</i>, disseminated, distributed, catalogueed, indexed, controlled, in traditional library fashion. The Web therefore is not a library but library material can be selected from the Web.</p>
+
+<p>This paper seeks then to further our understanding of the dynamics of Web page and Web site lifecycles. These patterns challenge the integrity and the usefulness of libraries with Web content. This paper focuses on individual Web page and site attrition rather than the Web as a whole. Web pages and Web sites can be collected and categorized. They can be aggregated and included as parts of library collections. These libraries can take one of two forms.  Web libraries can consist of native documents linked to the library, which provides access to the document but do not exercise control or ownership over the document. Web libraries can also "collect" Web documents through caching or archiving, thus creating a local electronic record on an historical Web document. </p>
+
+<h3>The Web as Library</h3>
+<p>Is the Web a library? Is it a digital library? Digital libraries, including Web-based collections, are redefining both the role of electronic information storage and retrieval as well as the role of traditional libraries. As <a href="#ref1">Ching-chih Chen</a> (1998) has argued, no cohesive or comprehensive theory of digital libraries has yet to be fully developed. Digital libraries include collections of books, journal articles, graphics, newspapers, and other material in digital format; in sum, collections of digitized content. To be a library, that collection should be organized according to some standard (<a href="#ref1">Chen, 1998</a>).</p>
+
+<p>There are many examples of digital libraries (Digital Library Information and Resources 1999). These include <a href="http://www.webcitation.org/5RYcxIGs8">Project Gutenberg</a>, the <a href="http://www.webcitation.org/5RYcxIGsb">US Library of Congress National Digital Library Program</a>, online journal collections, and so on. These libraries, like traditional libraries, vary in their collections and their complexity (Bailey, 1999). The Digital Library Federation offers one <a href="http://www.clir.org/diglib/dldefinition.htm">definition</a> of digital libraries:</p>
+
+<blockquote>Digital libraries are organizations that provide the resources, including the specialized staff, to select, structure, offer intellectual access to, interpret, distribute, preserve the integrity of, and ensure the persistence over time of collections of digital works so that they are readily and economically available for use by a defined community or set of communities.</blockquote>
+
+<p>Because we sometimes try to treat information on the Web similarly to the way we organize information in a library, does that necessarily mean that the Web is a library? On one level, the Web can be seen as an extension of and as a tool for libraries. If the Web is a tool, it is a complex tool serving to modify the information management and retrieval functions of both librarians and libraries (<a href="#ref1">Arnold, 1994</a>; <a href="#ref4">Prescott, n.d.</a>; <a href="#ref1">Abramson 1998</a>). The Web can, for example, be employed as a transfer and distribution mechanism for the digital and digitized collections of libraries (Lesk 1996). The Web as communications medium has become an interface, if not the major interface to any number of database vendors including Dialog, Lexis/Nexis, Thomson and Thomson, and FirstSearch. Many academic and public libraries provide Web access to their OPACs. Document delivery can be accomplished over the Web, and may include both native Web documents as well as digitized print material (as the search engine and document delivery service <a href="http://www.webcitation.org/5RYcxIGsw">Northern Light</a> illustrates). Some, like the <a href="http://www.webcitation.org/5RYcxIGt7">US Library of Congress</a>, are beginning to provide Web access to their digitized collections.</p>
+
+<p>The Web is a complex construct for both information transfer and as a repository of information content. Because the Web represents an information source, is it necessarily a library of those information resources? There are a number of projects, OCLC's NetFirst (<a href="#ref3">Koehler &amp; Mincey, 1996</a>) and the <a href="#ref2">Dublin Core Metadata Initiative</a> (1999), among them, that treat Web content as "library content" by either catalogueing native documents or by providing automated metadata templates. There many other initiatives to bring some kind of order to the information chaos that the Web represents (<a href="#ref3">Oder, 1998</a>).  </p>
+
+<p>Web users can organize Web documents into document "clusters" that can be managed, searched, and accessed.  These clusters or libraries have taken many forms. The vast majority of these attempt an <i>in situ</i> organization and categorization of Web content. Perhaps the most common are the "jumppages," or Web page collections of hypertext links that point to other Web pages or Web sites with a defined content. NetFirst, a part of OCLC's FirstSearch family of databases, employs a MARC format, catalogues Web pages, abstracts and indexes them, and applies a Dewey Decimal Classification for the document. Yahoo! and other Web-based directories index subsets of the Web. The robot indexed search engines, like Alta Vista, Excite, HotBot, Lycos, WebCrawler, and others have created indexes of fulltext and/or metatag keywords or other elements to provide search and retrieval services.  There are also a growing number of limited area search engines (LASE) that are restricted to development of indexes for Web documents with specific content.  These include <i><a href="http://argos.evansville.edu/">Argos</a>, the Limited Area Search of the Ancient and Medieval Internet </i>LASE, the <i><a href="http://www.webcitation.org/5RYcxIGtP">Ananzi</a> </i>LASE providing access to material from or about South Africa, or the directory of LASEs provided by <i><a href="http://www.webcitation.org/5RYcxIGtc">Internet Sleuth</a></i>. </p>
+
+<p>Is the Web something more than a complex access interface for digital libraries? There are those who argue that the Web is more than a library door or catalogue, it is, in fact, a library (e.g., <a href="#ref4">Travica &amp; Olson, 1998</a>). In Reno v ACLU (1997), the US Supreme Court suggested: "The Web is thus comparable, from the readers' viewpoint, to both a vast library including millions of readily available and indexed publications and a sprawling mall offering goods and services." </p>
+
+<p>It might also represent a precursor to ideas developed by <a href="#ref4">H.G. Wells</a> in his collection of essays published as <i>World Brain</i>in 1938<i>. </i><a href="#ref3">Michael Lesk</a> (1997) suggests that digital libraries share three common traits: (1) they can all be searched, (2) they can all be accessed from anywhere, and (3) they can all be copied using electronic means without error. The Web meets that three-trait test. It can be searched, accessed, and copied. </p>
+
+<p>The Web differs from the more  "traditional" information media in several substantial ways. The Web as a whole may not be organized to the degree that Chen might want it to meet the standard of a library, but neither is the entire corpus of print or electronic media so organized either. Part of the problem lies in part in our definition of the Web: sometimes process and sometimes content. </p>
+
+<p><a href="#ref2">Jos&eacute;-Marie Griffiths</a> (1998) offers a four-point argument against the Web as library: </p>
+
+<ul>
+<li>despite appearances to the contrary, the Web does not offer access to all information; </li>
+<li>the Web lacks authority and quality control; </li>
+<li> the Web is inadequately catalogueed; </li>
+<li>Web search interfaces and other tools are ineffective and simplistic. </li>
+</ul>
+
+
+<p>The Web lacks authority and quality control, but so do many "print" publications. Much of the Web is reminiscent of the political and religious pamphleteering so prevalent in Europe and North America over the past 200 years. The Web can resemble that archetypal forgery in print <i>The Protocols of the Elders of Zion </i>raised to some major order of magnitude. It can be an intentional or unintentional vehicle for poor or wrong information. It is a conduit for pornography. It can also provide effective and timely access to useful and accurate information. </p>
+
+<p>One difficulty with the Web is that it is today far more difficult for third parties to assess quality and authority using methods developed for more traditional publications. <a href="#ref1">T. Matthew Ciolek</a> (1996) describes six approaches to bring quality control to the Web. These are the programming, procedural, structuring, bibliographical, evaluative or indexed, and organizational approaches. Variations and additions to these approaches have been offered as well. Bibliometric or "Webometric" (a term coined by <a href="#ref1">Almind &amp; Ingwersen, 1997</a>) approaches may provide additional quality control. These include citation analysis, link following (<a href="#ref1">Chu, 1997</a>; <a href="#ref1">Baron, <i>et al.</i>, 1996</a>) and word counts (<a href="#ref1">Almind &amp; Ingwersen 1997</a>). Others have adopted bibliometric approaches by following hypertext link trails to "authoritative" or substantive sites (<a href="#ref3">Khan &amp; Locatis, 1998</a>). Recent work suggests that following link trails to clusters of clusters (<a href="#ref3">Kaiser, 1998</a>) can identify authoritative Web sites. </p>
+
+<p>The dean of Web quality evaluation, Hope Tilman (1998) suggests a more traditional library approach to quality and authority.  She describes time tested criteria, including timeliness, authority, reviews and ratings, and ease of use. She also suggests that format and the "stability of information" are important new criteria. By applying both qualitative and quantitative rigor, progress is being made on quality and authority issues (<a href="#ref1">Auer, 1998</a> for a bibliography on resource evaluation).  There is no doubt that the indexes of the major search engines and directories are inadequate (<a href="#ref4">Tomaivolo &amp; Packer, 1996</a>; <a href="#ref1">Brake, 1997</a>; <a href="#ref3">Lawrence &amp; Giles, 1998</a>). The fact is we do not even know how big the Web is much less how to define "big." The Web contains many documents, pages, sites, and objects. Sizing the Web has proven to be a complex and uncertain enterprise.  One Web snapshot (<a href="#ref1">Bray, 1996</a>) put it at approximately 50 million pages in November 1995. <a href="#ref3">Koehler</a> (1998) suggests a count of some 600 million Web pages for late 1996. <a href="#ref3">Lawrence and Giles</a> (1998) offer a 1997 estimate of some 300 million. It may be that the "actual number" may never be countable for a variety of technical and definitional reasons. In addition, it may be that a reasonable approximation will suffice. </p>
+
+<p>There is no agreement as whether the Web can be effectively catalogueed or not (<a href="#ref3">Oder, 1998</a>) or what to catalogue. In an eloquent defense of Web catalogueing, <a href="#ref2">Jul, Childress, and Miller</a> (1997) describe and dispel what are for them the three most persuasive arguments against the practice. These are: (1) Web content is trash, (2) Web content is too ephemeral, and (3) catalogueing technologies were designed for print and are not applicable to the Web.  <a href="#ref2">Jul, <i>et al.</i></a>, (1997) are correct. Some Web resources are trash as is some print. But even trash (a highly subjective subject) needs at times to be classified or catalogueed. Their other two observations are more telling. Others recognize that Web document changes are important to their bibliographic control (<a href="#ref2">Hsieh-Yee, 1996</a>) and still others have found it necessary to modify practice in response to those changes (<a href="#ref3">McDonnell, <i>et al.</i>, 1999</a>).  </p>
+
+<p>Much attention has been paid to Web size and growth, as defined by server and host counts (NetWizards, NetCraft), packet traffic (MIDS) and other indicators. While we recognize both functions, we tend to concentrate more attention on the informatics of the transfer function rather than on the growth and change of the information content of the medium. That said, we are reasonably certain of at least two things: the Web is a "big place" and that it is ever-changing and ever-growing. There have been a number of approaches and proposals to categorize, index, and catalogue the Web (<a href="#ref2">Dillon, <i>et al.</a></i>, 1993; <a href="#ref1">Caplan</a>, 1994; <a href="#ref2">Forrester</a>, 1995; <a href="#ref4">Pattie &amp; Cox</a>, 1996; <a href="#ref3">Olson</a>, 1997; <a href="#ref2">Ellis, <i>et al.</a></i>, 1998; <a href="#ref3">McDonnell, <i>et al</a>.</i>, 1999; <a href="#ref2">Hsieh-Yee</a>, 1996). One of the more important is Dublin Core, a major and comprehensive effort to describe Web resources (<a href="#ref2">Desai,</a> 1997). Dublin Core (<a href="#ref2">Dublin Core Metadata</a>, 1997) is perhaps the most important to date of the schema developed to capture WWW metadata. The Dublin Core elements list and semantic headers represent a loosely constructed thesaurus in which index terms are author supplied. Dublin Core has been widely adopted and adapted to manage a wide variety of Internet resources in an equally diverse set of geographic and subject environments (<a href="#ref4">Shvartsman</a>, 1998; <a href="#ref3">Nordic</a>, 1998; <a href="#ref4">UKOLN</a>, 1998).</p>
+
+<p><a href="#ref3">McDonnell, <i>et al.</a></i> (1999) describe one effort to develop a Web catalogue of area studies material, management of the ephemeral character of the collections, and their efforts to apply <i>AACR2</i> standards to create records using the MARC template. Because of the ephemeral nature of Web material and the relative durability of Web sites and Web pages located on directory structures closest to the server address, they recommend that individual catalogue entries be general and describe overall content vectors rather than the content of specific Web pages. In a similar vein, <a href="#ref4">Tennant</a> (1998) recommends "digital bibliography" over digital catalogueing where digital bibliography extracts the essence in very general terms of an entire work while digital catalogueing is far more detailed, captures specific metadata, and therefore far more subject to be influenced by change. <a href="#ref4">Woodruff, <i>et al.</i></a> (1996) have categorized documents by: document size, tag/size ratio, tag usage, attribute usage, browser-specific extension usage, port usage, protocols used in child URLs, file types used in child URLs, number of in-links, readability, and syntax errors. In their conclusions they note that the WWW changes rapidly and that therefore document properties often undergo significant changes as well.  Koehler (1999b) suggests that URL characteristics (top-level through server-level domain names, ports, file structures), Web site and Web page metrics (size, object counts, object proportions), as well as change characteristics captured over time can be used to categorize Web pages and sites.</p>
+
+<p>Let us concede that the Web is not and is not meant to be a library any more than the authoring, publication, production, distribution, and marketing of "traditional" media constitute libraries. Libraries are collections of these information products, organized in some useful fashion, and made available to the appropriate client or patron pool. Will then the Web become a library if and when it meets Griffiths' tests? Perhaps not or perhaps it does not matter, for libraries can be libraries if their collections either are not universally comprehensive or if their collections do not address all points of view concerning a specific issue. In fact, no library can ever fully meet the  "access to all information" test. It can also be argued that in time the Web may more likely provide access to all points of view than print because of the very ease of publication to the Web. Like other information streams, the Web can be organized, collected, and managed. Libraries, necessarily digital libraries, can be and are constructed from Web resources.</p>
+
+<h3>The Web as a River</h3>
+
+<p>The Internet is a moving target in two ways. First, there is a constant stream of technical change and computing upgrades and improvements. New capabilities, concepts and terminology challenge the practitioner, but these are manageable (<a href="#ref3">Olson, 1997</a>). The other change is, from the perspective of managing Web content, far more profound. Web pages and Web sites undergo constant modification. These changes take two general forms. The first is existence. Both Web pages and Web sites exhibit varied longevity patterns (<a href="#ref3">Koehler, 1999a</a>). The second is content modification. Koehler also found, for example, that over a period of a year, more than 99 percent of Web pages still extant undergo some degree of change but with varying degrees of frequency.</p>
+
+<p>Efforts to organize, categorize, index, or catalogue the Web all contain one inherent and fatal flaw. Before one can successfully organize Web content, one must recognize and compensate for the dynamic nature of the Web. Like Heraclitus' River, the Web is a constantly flowing and changing river of information. That river differs from its more "traditional" counterparts in some very important ways. Just as the Web is much easier to publish to than the traditional media is; it is also much easier to "unpublish to," and to edit and modify than those same "traditional" media (<a href="#ref3">Koehler, 1999a</a>) are. Not only (first) does the Web undergo frequent content change, (second) it also undergoes frequent death or "comatoseness." These phenomena can be measured, documented, and reported (<a href="#ref3">Koehler, 1999a</a>). </p>
+
+<h2>Research problem</h2>
+<p>Nothing is forever.  Some things last longer than others do.  If we accept the proposition that Web documents can be incorporated into library collections, we must also address the differences between traditional and Web documents. Traditional material, once published is distributed and multiple owners hold the ownership of at least the physical entity and sometimes the intellectual content. Web documents reside on single servers and sometimes on a limited number of mirrors. Their continued existence can be decided by Web authors or Webmasters. Once a Web site is removed from its server, unless it is cached or archived it is gone.  </p>
+
+<p>It is true that the media that traditional materials are produced on deteriorate over time. It is also possible for societies to seek to eliminate whole bodies of literature either from neglect or active eradication. The loss of the collection from the Library at Alexandria is an example of both, but perhaps as Ray Bradbury’s novel <i>Fahrenheit 451 </i>illustrates, we are reluctant to tolerate the loss of an intellectual heritage. Conceivably, Web documents are not subject to physical deterioration but they are subject to the technological. </p>
+
+<p>There is an even more important difference between Web documents and traditional ones. As we have seen, once an author or publisher ceases to support a traditional publication, so long as copies are maintained in libraries, the document continues to exist and more often than not continues to be available for use. This is not so with the Web. Moreover, when a Web document is edited or updated, the edited version replaces and erases the earlier &quot;edition.&quot; New traditional editions may update older ones but they do not erase them.  </p>
+
+<p>Creating Web document archives and caches can solve some of these issues. A Web cache may be considered a very short term Web archive. In caching, Web documents are stored then accessed at some location "closer to" or faster for the end user than the original host is. Caching creates ethical, legal, as well as timeliness concerns (Tewkesbury, 1998). Archiving raises additional problems including what to archive and how often should the archive be updated. Storage and retrieval can quickly become a major problem. For more on Web archives see Kahle (1997) and on digital collections in general the <i>Report of the Task Force on Archiving of Digital Information</i> (<a href="#ref1">Commission on Preservation and Access and The Research Libraries Group, Inc. 1996</a>). </p>
+
+<p>We are concerned here with the library of native documents rather than with the library of cached documents. The literature suggests for example that change and attrition effect information retrieval. Changing pages are the more frequently visited pages. Based on a limited sample, <i>Douglis, <i>et al.</i></i> (1997) have addressed caching efficacies and have explored re-access patterns to previously accessed Web material. Among their conclusions are: "…the most frequently accessed resources have the shortest intervals between modification." In a similar vein, <a href="#ref4">Tauscher and Greenberg</a>  (1997) find that "… 58% of an individual's [page browsing habits] are revisits, and that users continually add new web pages into their repertoire of visited pages. People tend to revisit pages just visited, access only a few pages frequently, browse in very small clusters of related pages, and generate only short sequences of repeated URL paths."  </p>
+
+<p>The organization of Web sites may help predict document longevity. <a href="#ref3">Koehler</a> (1999a) has shown that Web pages located lower (level two plus) on the server file structures are more than twice as likely to go comatose but are less than twice as likely to change than are documents at higher levels (levels zero and one). Web pages located at the server-level domain (http://aaa.bbb.ccc) are zero level pages, those one file removed (http://aaa.bbb.ccc/nnn) are at the first level, and so on. This is not particularly surprising in that many zero and first level pages are navigational and will necessarily change as the Web site as a whole changes, while those pages located deeper on the file structure are more likely to be "content" in nature.</p>
+
+<p>Web sites and Web pages undergo content change and attrition. While content and structural changes can and have been measured (<a href="#ref3">Koehler, 1999a</a>), this paper limits its focus to Web site and Web page persistence, or what the <a href="#ref4">University of Waterloo's Scholarly Societies Project</a> has defined as URL stability (1999). Persistence is the most fundamental form of change. Either a document exists or it does not. Moreover, in paraphrase of Hamlet's exquisite query, not only is it a question of being and of not being, it is also a question of being again. No library, digital or traditional, can adequately manage its collection if the very existence of that collection is either in flux or in question. </p>
+
+<h2>Research design</h2>
+<h3>Data Collection</h3>
+<p>It has been argued that Web site persistence defines Web site stability (<a href="#ref4">University of Waterloo 1999</a>). The data presented in this paper were first collected in December 1996. Web page data are collected on a weekly basis using FlashSite 1.01. Web page data were also collected beginning in December 1996 and are reported here through January 21, 1999, or 106 weeks.  FlashSite is automated Web page maintenance software that captures data on Web page response and if present, the size of the Web page in kilobytes (byte-weight), and additions or deletions of hypertext links to other Web objects. The sample is a randomly selected group of 361 then viable Web pages generated from the WebCrawler random URL generator. The WebCrawler program is no longer available. The sample was stratified according to the distribution of top-level domains as reported by NetCraft for December 1996. </p>
+
+<h3>Web Site Sample</h3>
+<p>The Web site sample was derived from the Web page sample. Saving Web page URLs to the site home or index page created the 344 Web site sample. The Web site was then mapped using WebAnalyzer 2.0, a Web site analytic and diagnostic program. WebAnalyzer data include number and types of Web objects, the number of hypertext link levels on the site, and the total byte-weight of text and graphic objects.  The original sample consisted of 344 Web sites; reduced from 361 because of attrition or because of various barriers to full accesses to the site. Web site data have been collected three additional times: in July 1997, February 1998, and October 1998. Both programs used in this study, WebAnalyzer and FlashSite are products of <a href="http://www.incontext.com/">InContext</a>. </p>
+
+<h3>Definition of Terms</h3>
+<p>This study is &quot;about&quot; Web page and site persistence and their implications for libraries of Web material. Persistence can be assessed not only by the continuing existence of Web pages and Web sites. Both Web pages and sites manifest one of three forms of persistence behavior. They may persist of a given period of time – which is to say each time the URL is queried, the specific page addressed is accessed, it &quot;responds.&quot; The Web page may fail to respond.  For purposes of this research, any Web page that fails to respond, but subsequently responds after one of two additional queries in a forty-eight hour period is considered "present.&quot; Web page data are collected on a weekly basis. A Web page is defined here as "comatose" if on the sixth and subsequent weekly queries including the most recent when data were taken, that Web page failed to resolve. The term "comatose" is chosen purposefully, for as the data which follow demonstrate, once a Web page goes comatose, this in itself is no guarantee that a Web page will not return at some time to the same URL. If a Web page were to return after the sixth collection period or five weeks, it would no longer be counted in subsequent assessments as comatose. Web pages that fail but return are labeled &quot;intermittent.&quot; The longest consecutive period for the sample a Web page was comatose but returned is 84 weeks. About 8.3 percent of the sample present at the January 21, 1999 collection was comatose over more than half of the two year period, although not always consecutively. Web pages that " go and come again" are said to be intermittent. After 106 weeks, each of the 361 Web pages in the sample were present, on average, 74.2 percent of the time.</p>
+
+<h2>Results</h2>
+<p>The data that follow describe the persistence lifecycles of Web sites and Web pages. Additional and more extensive work is required to more fully understand the dynamics of Web content change and demise, particularly as Internet and subject domains, publisher, content type, Web site type, longevity, change frequency, object mix, subject matter, and other Web site characteristics. The list might also include frequently accessed material by subject area (e.g., <a href="#ref4">Spink, <i>et al.,</i> 1998</a>); the extent of Web linkage patterns to include the number, type, and level of hypertext interconnection; language patterns (e.g., <a href="#ref3">Koehler, 1996</a>); and taxonomies (e.g., <a href="#ref2">DeRose, 1989</a>; <a href="#ref2">Haas &amp; Grams, 1998</a>).</p>
+
+<h3>Web Sites</h3>
+<p>Table 1 provides data for a randomly collected sample of 344 Web sites first identified in December 1996. </p>
+
+<table align="center" border cellspacing=3 cellpadding=2 width=290 bgcolor="yellow">
+<caption align="bottom">Table 1. WebSite Attrition-Intermittence Distributions. December 1996 to October 1998</caption>
+<tr>
+<td valign="TOP" colspan=2 height=16 align="center">
+Non-Intermittent Web Sites Comatose After Indicated Date (In Percent, n=344)</td>
+</tr>
+<tr>
+<td width="38%" valign="TOP" height=16 align="center">
+Dec-96</td>
+<td width="62%" valign="TOP" height=16 align="center">
+7.8</td>
+</tr>
+<tr><td width="38%" valign="TOP" height=16 align="center">
+Jul-97</td>
+<td width="62%" valign="TOP" height=16 align="center">
+2.6</td>
+</tr>
+<tr>
+<td width="38%" valign="TOP" height=16 align="center">
+Feb-98</td>
+<td width="62%" valign="TOP" height=16 align="center">
+11.3</td>
+</tr>
+<tr><td width="38%" valign="TOP" height=16 align="center">
+Total in Oct-98</td>
+<td width="62%" valign="TOP" height=16 align="center">
+21.7</td>
+</tr>
+<tr><td valign="TOP" colspan=2 height=16 align="center">
+Intermittent Web Sites: Date(s) Not Present</td>
+</tr>
+<tr><td width="38%" valign="TOP" height=16 align="center">
+Jul-97</td>
+<td width="62%" valign="TOP" height=16 align="center">
+3.2</td>
+</tr>
+<tr><td width="38%" valign="TOP" height=16 align="center">
+Jul 97/Feb 98</td>
+<td width="62%" valign="TOP" height=16 align="center">
+1.5</td>
+</tr>
+<tr><td width="38%" valign="TOP" height=16 align="center">
+Feb-98</td>
+<td width="62%" valign="TOP" height=16 align="center">
+6.7</td>
+</tr>
+<tr><td width="38%" valign="TOP" height=16 align="center">
+Jul 97/Oct 98</td>
+<td width="62%" valign="TOP" height=16 align="center">
+0.9</td>
+</tr>
+<tr><td width="38%" valign="TOP" height=16 align="center">
+Total</td>
+<td width="62%" valign="TOP" height=16 align="center">
+12.3</td>
+</tr>
+<tr><td valign="TOP" colspan=2 height=16 align="center">
+Always Present All Collection Dates</font></td>
+</tr>
+<tr><td width="38%" valign="TOP" height=16 align="center">&nbsp;</td>
+<td width="62%" valign="TOP" height=16 align="center">
+66.0</td>
+</tr>
+</table>
+<br><br>
+
+<table border cellspacing=2 cellpadding=2 width=452 align="center" bgcolor="yellow">
+<caption align="bottom">Table 2. Web Site Persistence, Attrition, and Intermittence. Total and by TLD, December 1996 to October 1998</caption>
+<tr><td width="15%" valign="TOP" height=16 align="center"></td>
+<td width="51%" valign="TOP" colspan=4 height=16 align="center">
+Total Sample (In Percent, n=344)</td>
+<td width="34%" valign="TOP" colspan=2 height=16 align="center">
+Goners Only</td>
+</tr>
+<tr><td width="33%" valign="TOP" colspan=2 height=16 align="center">
+Ever Present</td>
+<td width="33%" valign="TOP" colspan=3 height=16 align="center">
+Comatose &amp; Intermittent</td>
+<td width="34%" valign="TOP" colspan=2 height=16 align="center"></td>
+</tr>
+<tr><td width="15%" valign="TOP" height=16 align="center"></td>
+<td width="18%" valign="TOP" colspan=2 height=16 align="center"></td>
+<td width="17%" valign="TOP" height=16 align="center">
+Comatose</td>
+<td width="17%" valign="TOP" height=16 align="center">
+Intermittent</td>
+<td width="18%" valign="TOP" height=16 align="center">
+Comatose</td>
+<td width="16%" valign="TOP" height=16 align="center">
+Intermittent</td>
+</tr>
+<tr><td width="15%" valign="TOP" height=16 align="center">
+Total</td>
+<td width="18%" valign="TOP" colspan=2 height=16 align="center">
+66.0</td>
+<td width="17%" valign="TOP" height=16 align="center">
+21.8</td>
+<td width="17%" valign="TOP" height=16 align="center">
+12.3</td>
+<td width="18%" valign="TOP" height=16 align="center">
+64.1</td>
+<td width="16%" valign="TOP" height=16 align="center">
+35.9</td>
+</tr>
+<tr><td width="15%" valign="TOP" height=16 align="center">
+Commercial</td>
+<td width="18%" valign="TOP" colspan=2 height=16 align="center">
+59.3</td>
+<td width="17%" valign="TOP" height=16 align="center">
+28.6</td>
+<td width="17%" valign="TOP" height=16 align="center">
+12.1</td>
+<td width="18%" valign="TOP" height=16 align="center">
+70.3</td>
+<td width="16%" valign="TOP" height=16 align="center">
+29.7</td>
+</tr>
+<tr><td width="15%" valign="TOP" height=16 align="center">
+Educational</td>
+<td width="18%" valign="TOP" colspan=2 height=16 align="center">
+61.2</td>
+<td width="17%" valign="TOP" height=16 align="center">
+20.9</td>
+<td width="17%" valign="TOP" height=16 align="center">
+17.9</td>
+<td width="18%" valign="TOP" height=16 align="center">
+53.8</td>
+<td width="16%" valign="TOP" height=16 align="center">
+46.2</td>
+</tr>
+<tr><td width="15%" valign="TOP" height=16 align="center">
+ISO</td>
+<td width="18%" valign="TOP" colspan=2 height=16 align="center">
+73.6</td>
+<td width="17%" valign="TOP" height=16 align="center">
+16.0</td>
+<td width="17%" valign="TOP" height=16 align="center">
+10.4</td>
+<td width="18%" valign="TOP" height=16 align="center">
+60.6</td>
+<td width="16%" valign="TOP" height=16 align="center">
+39.4</td>
+</tr>
+<tr><td width="15%" valign="TOP" height=16 align="center">
+Gov-Mil</td>
+<td width="18%" valign="TOP" colspan=2 height=16 align="center">
+76.2</td>
+<td width="17%" valign="TOP" height=16 align="center">
+19.0</td>
+<td width="17%" valign="TOP" height=16 align="center">
+4.8</td>
+<td width="18%" valign="TOP" height=16 align="center">
+80.0</td>
+<td width="16%" valign="TOP" height=16 align="center">
+20.0</td>
+</tr>
+<tr><td width="15%" valign="TOP" height=16 align="center">
+Net-Org</td>
+<td width="18%" valign="TOP" colspan=2 height=16 align="center">
+60.0</td>
+<td width="17%" valign="TOP" height=16 align="center">
+27.5</td>
+<td width="17%" valign="TOP" height=16 align="center">
+12.5</td>
+<td width="18%" valign="TOP" height=16 align="center">
+68.8</td>
+<td width="16%" valign="TOP" height=16 align="center">
+31.3</td>
+</tr>
+</table>
+
+<p>Based on the data presented in Tables 1 and 2, nearly twenty-two percent of the sample was "unstable" over a twenty-two month period, while another 12.3 percent were "partially unstable."  It is clear that some Web site classes are more unstable than others are. For example, as shown in Table 2, commercial, educational, and network and organizational sites have a higher "instability" rate than the ISO or government and military sites. How these sites are "unstable" also varies. Educational sites are more intermittent than the overall norm but are less "comatose." Commercial sites, on the other hand, are much more likely to go comatose than to be intermittent. The University of Waterloo Scholarly Societies Project (1999) reports that Web site stability is related not only to the "canonical" form of the URL name, but also to the location of the Web site on the server-level domain (SLD). The closer the Web site index page address to the SLD, the more stable it is.  Their study is largely limited to Web sites on the org TLD. Similar results for Web sites on all TLDs have also been reported (<a href="#ref3">Koehler, 1999a</a>). Thus persistence or stability is the first order question. </p>
+
+<p>Over the almost two year period, almost two-thirds of the Web site sample responded in each of the four periods when queried. Between December 1996 and July 1997, 7.8 percent of the sample failed to respond and continued to not respond in subsequent periods. By October 1998, just more than one-fifth of the sample was considered comatose in that once a Web site failed it continued to fail.  By October 1998, an additional eighth of the sample was defined as "intermittent" because they would fail but reappear at a later time. These data are presented in the second row of Table 1. For example, 3.2 percent of the total sample failed to respond in July 1997, but returned for subsequent queries. At the same time, 0.9 percent failed in July 1997 and again in October 1998.</p>
+
+<p>As I have shown elsewhere (<a href="#ref3">Koehler, 1999a,bk</a>), Web sites can be categorized according to a variety of general and Web-specific criteria. Table 2 illustrates Web site attrition and intermittence behavior for the sample by top-level domains. Gov-Mil and Net-Org are combined on the Table because first they individually comprise a small proportion of the sample and second because to date they have manifested similar behavior. The term &quot;goner&quot; is used to describe Web sites that have failed to respond at least once. The column labeled &quot;comatose&quot; refers to those Web sites &quot;gone&quot; in October 1998. The &quot;intermittent&quot; column refers to those &quot;back&quot; in October 1998 but that had been gone during earlier collections.</p>
+
+<p>There are, for the present, two classes of top-level domains (TLD): functional and geographic or gTLDs (generic TLDs) and ccTLDs (country code TLDs). Functional TLDs describe the corporate or institutional type of Web site publisher. Individual isodomains include com for commercial, edu for educational, org for organization, net for network, gov for government, and mil for military. A rarer form is int for international organization. The geographic indicate the country location of the publisher. Cc-isodomain examples include au for Australia, ca for Canada, fr for France, pe for Peru, and za for South Africa. These ccTLDs are based upon the two-character International Standards Organization standard 3166 (ISO 3166).  </p>
+
+<p>Table 2 documents attrition-intermittence behavior for TLD groups over a twenty-two month period beginning in December 1996. The column labeled "Total Sample" provides data for Web sites that persisted over the entire sample period as well intermittent and comatose sites. The second column, "Goners Only" provides the ratio by TLD for the intermittent-comatose portion of each sub-sample.</p>
+
+<h3>Web Pages</h3>
+
+</u><p>Web pages also exhibit attrition and intermittence behavior. However, when these data were calculated by TLD, Web pages manifested variations: Network (68.4 percent) and ccTLD (71.2 percent) Web pages were present, on average, less often than the sample mean; while commercial (74.8 percent) and educational (75.4 percent) approximated the sample mean; and government (78.1 percent), military (78.4 percent) and organizational (81.3 percent) Web pages were present more frequently than the average.  During the same period, 42 percent of the sample met the comatoseness test. Of the 58 percent "present," 68 percent had never been comatose – or &quot;gone&quot; for six or more consecutive collection periods. However, of those which had never been comatose, just less than half (47 percent) had been intermittent (or &quot;gone&quot; less than six consecutive periods) at least once over the two year period. In the end, only 21 percent of the Web page sample resolved each and every week. </p>
+
+<p>Web pages present on January 21, 1999, were comatose or missing at least six consecutive periods, an average 9.5 periods. If those Web pages present that have never been comatose are excluded, the average present Web page that has ever been comatose has been gone 29.6 periods. Figures 1 and 2 illustrate the great variability in Web page comatoseness over time. </p>
+
+<p>The solid trace in Figure 1 plots the rate at which Web pages cease to respond to weekly queries beginning in December 1996. The dashed trace plots the same data averaged over the "six-data point comatoseness" period done to smooth sample based weekly data anomalies. This represents two related phenomena. Web authors frequently update and edit their Web sites. They may prune Web pages from the site and this results in one form of comatoseness. Web sites, as a whole, may also cease to respond for any number of reasons. The term comatose page is preferred because, as is shown in Figure 2, any given time about five percent of the sample is intermittent and will return. </p>
+
+<p align="CENTER"><img src="p60fig1.gif" width=600 height=326></p>
+
+<p>Web pages (and Web sites) are sometimes resurrected, and the same Internet address or URL is used to present sometimes similar and sometimes very different information.  As is shown in Figure 1, significant resurrection activity took place from week 82 to week 87 (early August to mid September 1998). By August 1998 nearly half the sample failed to resolve during the week 82 collection and as is shown in Figure 2 nearly as many were defined as comatose. However, by mid-September, nearly ten percent of the "missing" sample had returned. </p>
+
+
+<p align="CENTER"><img src="p60fig2.gif" width=672 height=326></p>
+
+<h2>Attrition and digital libraries</h2>
+
+<p>Two forces effect library collection development from the Web. In order to provide patrons with both broad and exhaustive resources libraries will necessarily have to turn to digital and Web resources to expand and augment their collections. In the end, digital and hybrid libraries, I believe, will have to incorporate native Web documents into their collections to a degree far greater than is now the practice.</p>
+
+<p>The Web and for that matter traditional publishing are in constant flux. New Web documents are constantly being added to the available resource pool, just as new print and digital materials are. This offers no original challenge to libraries. The original challenge to libraries brought by the Web lies in its ephemeral nature. Both Web pages and Web sites undergo metamorphosis, attrition, and return. Any library that seeks to incorporate Web materials into its collection must take into account this dynamic or the quality of the bibliographic representation as well as of the collection itself will rapidly erode. If indeed the half lives of Web sites and Web pages are about two years, information managers must pay attention to the process. For by the end of two years, half of the original collection will have gone, and by the end of ten years, only 3.125 percent of the collection may remain. </p>
+
+<p>The good news is that these numbers probably represent a worst case scenario. Collection developers can follow the model offered by the Scholarly Societies Project at the University of Waterloo or as this paper suggests and collect only those Web sites meeting certain criteria, including probable longevity. Nevertheless and no matter how rigid the selection policy, Web-derived collections are far less persistent than any other kind. Not only must collection developers identify new Web material, they must also cull dead links and catalogue entries and replace them with equivalent resources and new catalogueing.</p>
+
+<p>A second alternative is to further our understanding of the lifecycle of Web documents and to use that understanding to better control for the impacts and vicissitudes inherent in that cycle. It is possible to predict which pages and sites are likely to disappear or to be intermittent. This information itself can be incorporated as part of the bibliographic record (<a href="#ref3">Koehler, 1999b</a>).</p>
+
+<p>Document death is never trivial, for in the absence of an archive, the information contained in that document is lost. Comatoseness is not necessarily as tragic as document death in that some documents are intermittent and do return. This may not be unique to the Web, for as <a href="#ref4">Weinberg</a> (1999) argues, librarians have had extensive experience managing changing technology, changing media, and controlling for document demise. The document lifecycle is far more prevalent on the Web than for print; it is in fact an accepted norm. If this lifecycle is both ubiquitous and normal, those who seek to manage Web content must develop new systems and adapt old standards that specifically address it. </p>
+
+<p>To manage the lifecycle, the digital library community has begun to address the dynamic and the impact that change has on the quality of collections; indexing, search, and retrieval algorithms, end user and intermediary behavior; document storage, caching, and archiving; and other related issues. I have suggested that lifecycle data can be captured for individual Web sites and pages and used to advantage for automated indexing and catalogueing (<a href="#ref3">Koehler, 1999b</a>). We have, however, just begun to identify the advantages and disadvantages inherent in Web document metamorphoses. </p>
+
+
+<h2><a name="ref1"></a>References</h2>
+<ul>
+<li>Abramson, A. (1998). Monitoring and evaluating use of the World Wide Web in an academic library.  Information Access in the Global Information Economy<i>. Proceedings of the 61<sup>st</sup> Annual Meeting of the American Society for Information Science 35</i>, Pittsburgh, PA, October 25-29. Medford, NJ: Information Today, Inc.: 315-326.
+
+<li>Almind, T. & Ingwersen, P. (1997). Informatic analyses on the World Wide Web: methodological approaches to "Webometrics." <i>Journal of Documentation</i> <b>53</b>, 404-26.
+
+<li>Arnold, K. (1994). <a href="http://www.webcitation.org/5RYcxIGtw">The Electronic Librarian Is a Verb/The Electronic Library Is Not a Sentence</a>. A Lecture Delivered at the New York Public Library. The Gilbert A. Cam Memorial Lecture Series October 14, 1994.  <i>Biblion</i>.
+
+<li>Auer, N. (1998). <a href="http://www.webcitation.org/5RYeku2D6">Bibliography on evaluating Internet resources</a>. Last updated: October 16, 1998.
+
+<li>Bailey, C.W.  (1999). <i><a href="http://www.webcitation.org/5RYcxIGuI">Scholarly Electronic Publishing Bibliography</a></i>. Version 24: 4/1/99. 
+
+<li>Banerjee, K. (1997). Describing remote electronic documents in the online catalogue: Current issues. <i>Cataloguing &amp; Classification Quarterly</i> <b>25</b> (1).
+
+<li>Baron, L., Tague-Sutcliffe, J. &amp; Kinnucan, M. (1996). Labeled, typed links as cue when reading hypertext documents<i>. Journal of the American Society for Information Science</i> <b>47</b>, 896-908.
+
+<li>Borenstein, N. (1991). <i>Programming as if people mattered: friendly programs, software engineering, and other noble delusions</i>. Princeton: Princeton University Press.
+
+<li>Brake, D. (1997). Lost in cyberspace. <i>New Scientist</i> <b>154</b> (2008): 12-3.
+
+<li>Bray, T. (1996). <a href="http://www.webcitation.org/5RYevfWQ5">Measuring the Web</a>. <i>Fifth International World Wide Web Conference</i>. May 6-10, 1996, Paris, France. 
+
+<li>Caplan, P. (1994). Controlling E-Journals: the Internet Resources Project, catalogueing guidelines, and USMARC. <i>The Serials Librarian</i> <b>24</b>, 103–111.
+
+<li>Chen, C-c. (1998). Global digital library: Can the technology havenots claim a place in cyberspace? In Ching-chih Chen, ed<i>., Proceedings NIT '98: 10<sup>th</sup> International Conference New Information Technology</i>, Hanoi, Vietnam, March 24-26, 1998. West Newton, MA: MicroUse Information, 1998: 9-18.
+
+<li>Chu, H. (1997). Hyperlinks: How well do they represent the intellectual content of digital collections? <i>Proceedings of the 60<sup>th</sup> Annual Meeting of the American Society for Information Science, vol. 34. Digital Collections: Implications for Users, Funders, Developers and Maintainers. </i>Washington, DC, November 1-6, 1997. Medford, NJ: Information Today, 361-69.
+
+<li>Ciolek, T.M. (1996). The six quests for the electronic grail: Current approaches to information quality in WWW resources. <i>Revue Informatique et Statistique dans les Sciences Humaines</i> (1-4), 45-71.
+
+<li>Commission on Preservation and Access and The Research Libraries Group, Inc. (1996). <i><a href="http://www.webcitation.org/5RYcxIGua">Preserving Digital Information</a>.</i>  Report of the Task Force on Archiving of Digital Information.
+
+<li><a name="ref2"></a>DeRose, S. (1989). Expanding the notion of links. <i>Proceedings of Hypertext '89</i>. ACM: 249-57.
+
+<li>Desai, B. (1997). Supporting discovery in virtual libraries. <i>Journal of the American Society for Information Science </i><b>48</b>, 190-204.
+
+<li><a href="http://www.webcitation.org/5RYmStGXJ">Digital Library Information and Resources</a> (1999). 
+
+<li>Dillon, M., Jul, E., Burge, M. &amp; Hickey, C. (1993). <i>Assessing information on the Internet: Toward providing library services for computer-mediated communication</i>. Dublin, OH: OCLC Office of Research.
+
+<li>Douglis, F. (n.d.). <a href="http://www.research.att.com/~douglis/aide/">Internet difference engine research</a>. 
+
+<li>Douglis, F., Ball, T., Chen, Y-F. &amp; Koutsofios, E. (1996). <a href="http://www.webcitation.org/5RYmgz9PG">WebGUIDE: Querying and Navigating Changes in Web Repositories</a>. <i>Fifth International World Wide Web Conference</i>. May 6-10, 1996 - Paris, France.
+
+<li>Douglis, F., Feldmann, A., Krishnamurthy, B. &amp; Mogul, J. (1997). <a href="http://www.webcitation.org/5RYmoPJsM">Rate of change and other metrics: A live study of the World Wide Web</a>. <i>USENIX Symposium on Internet Technologies and Systems</i>, December 1997: 147-158. 
+
+<li><a href="http://www.webcitation.org/5RYcxIGwz">Dublin Core Metadata</a> (Last updated November 2, 1997).  
+
+<li><a href="http://www.webcitation.org/5RYcxIGvW">Dublin Core Metadata Initiative</a> (Last updated May 16, 1999). 
+
+<li>Ellis, D., Ford, N. &amp; Furner, J. (1998). In search of the unknown user: Indexing, hypertext and the World Wide Web<i>. Journal of Documentation</i> <b>54</b>, 28-47. 
+
+<li>Forrester, M. (1995). Indexing in hypertext environments: the role of user models. <i>The Indexer</i> <b>19</b>, 249-256.
+
+<li>Griffiths, J-M. (1998). Why the Web is not a library. B.L. Hawkins and P. Battin, eds. <i>The Mirage of Continuity: Reconfiguring Academic Information Resources for the Twenty-First Century</i>. Washington, DC: Council on Library and Information Resources.
+
+<li>Haas, S. &amp; Grams, E. (1998). A link taxonomy for Web pages. Information Access in the Global Information Economy<i>. Proceedings of the 61<sup>st</sup> Annual Meeting of the American Society for Information Science 35</i>, Pittsburgh, PA, October 25-29. Medford, NJ: Information Today, Inc.: 485-95.
+
+<li>Hsieh-Yee, I. ([1996]). <a href="http://www.webcitation.org/5RYcxIGvi">Modifying catalogueing practice and OCLC infrastructure for effective organization of Internet resources</a>. OCLC Internet catalogueing Project Colloquium Position Paper.
+
+<li>Johnston, C. (1998). Electronic Technology and Its Impact on Libraries. <i>Journal of Librarianship and Information Science</i> 30 (1): 7-24.`
+
+<li>Jul, E., Childress, E. &amp; Miller, E. (1997). <a href="http://jic.libraries.psu.edu/jic1nr3-42.html">42: Don’t Panic, It’s a Common Disaster and 42: Now That We Know the Answer, What are the Questions?</a> <i>Journal of Internet catalogueing</i> <b>1</b> (3).
+
+<li><a name="ref3"></a>Kahle, B. (1997). Preserving the Internet. <i>Scientific American</i> <b>276</b> (3), 82-83.
+
+<li>Kaiser, J., ed., (1998). New search strategy untangles the Web. <i>Science</i> <b>280</b> (5364), 647
+
+<li>Khan, K. &amp; Craig Locatis, C. (1998). Searching through cyberspace: The effects of link display and link density on information retrieval from hypertext on the World Wide Web. <i>Journal of the American Society for Information Science</i> <b>49</b>, 176-82.
+
+<li>Koehler, W. (1996). A descriptive analysis of Web documents and demographics. <i>Proceedings NIT '96: 9<sup>th</sup> International Conference New Information Technology</i>, Pretoria, South Africa, November 11-14, 1996. West Newton, MA: MicroUse Information: 159-170.
+
+<li>Koehler, W. (1998). The librarianship of the Web: Options and opportunities managing transitory materials. In Ching-chi Chen, ed<i>., Proceedings NIT '98: 10<sup>th</sup> International Conference New Information Technology</i>, Hanoi, Vietnam, March 24-26, 1998. West Newton, MA: MicroUse Information, 1998: 97-106.
+
+<li>Koehler, W. (1999a). An analysis of Web page and Web site constancy and permanence. Forthcoming <i>Journal of the American Society for Information Science.</i>
+
+<li>Koehler, W. (1999b). Classifying Websites and Webpages: The use of metrics and URL characteristics as markers. Forthcoming <i>Journal of Librarianship and Information Science.</i>
+
+<li>Koehler, W. &amp; Mincey, D. (1996). FirstSearch and NetFirst Web and Dialup Access: Plus &Ccedil;a Change, Plus C'est La M&ecirc;me Chose,<i> Searcher</i> <b>4</b>, (6), 24-8.
+ 
+<li>Lawrence, S. &amp; Giles, C.L. (1998). Searching the World Wide Web. <i>Science</i> <b>280 </b>(5360), 98-100.
+
+<li>Lesk, M. (1996). <a href="http://www.lesk.com/mlesk/liww/liww.html">Libraries and the Web: 1995.</a> <i>Libraries and Information World Wide</i>. 
+
+<li>Lesk, M. (1997). <i>Practical digital libraries: Books, bytes, and bucks</i>. San Francisco: Morgan, Kaufman.
+
+<li>McDonnell, J., Koehler, W. &amp; Carroll, B. (1997). Automating the dynamic development and maintenance of a distributed digital collection: The Area Studies Digital Library (ASDL), <i>Proceedings of the 60<sup>th</sup> Annual Meeting of the American Society for Information Science, vol. 34. Digital Collections: Implications for Users, Funders, Developers and Maintainers. </i>Washington, DC, November 1-6, 1997. Medford, NJ: Information Today: 244-61.
+
+<li>McDonnell, J., Koehler, W. &amp; Carroll, B. (1999). Cataloging challenges in an area studies virtual library catalog (ASVLC): Results of a case study. Forthcoming in <i>Journal of Internet Cataloging</i>, <strong>2</strong>(2), 15-42.
+
+<li><a href="http://www.webcitation.org/5RYp2uWaM">Nordic Metadata Projects</a> (updated 25 June 1998).
+
+<li>Oder, N. (1998). catalogueing the Net: Can we do it? <i>Library Journal</i> (October 1, 1998): 47-51.
+
+<li>Olson, N., ed. (1997<i>). <a href="http://www.webcitation.org/5RYcxIGwI">Cataloging Internet resources. A manual and practical guide</a>.</i> 2ed. 
+
+<li><a name="ref4"></a>Pattie, L-Y. &amp; Cox, B.J., eds.  (1996). <i>Electronic resources: selection and bibliographic control</i>. NY: Hayworth Press.
+
+<li>Pinfield, S., Eaton, J., Edwards, C., Russell, R. &amp; Wissenburg, A. (1998). <a href="http://www.webcitation.org/5RYoxXJpO">Realizing the hybrid library</a>. <i>D-Lib Magazine </i>(October).
+
+<li>Prescott, Andrew (n.d.) <a href="http://www.webcitation.org/5RYojp6Oi">The Digital Library in theory and practice: A historian's view.</a>  
+
+<li>Janet Reno, Attorney General of the United States, et al., Appellants v. American Civil Liberties Union et al. No. 96-511, Supreme Court of the United States, 117 S. Ct. 2329; 1997 U.S. Lexis 4037.
+
+<li>Shvartsman, M. (1998). Creation of systematic cataloguing of Russian resources on the Internet. <i>Libraries and Associations in the Transient World: New Technologies and New Forms of Cooperation, Proceedings "Crimea98" International Conference,</i> Sudak, Ukraine, June 6-14, 1998. [Moscow]: NPLS&amp;T, v. 1, 238-9.
+
+<li>Spink, A., Bateman, J. &amp; Jansen, B. (1998). <a href="http://www.webcitation.org/5RYcxIGwQ">Searching heterogeneous collections on the Web: behavior of Excite users</a>. <i>Information Research</i> <b>4</b> (2).
+
+<li>Tauscher, L. &amp; Greenberg, S.  (1997) <a href="http://www.webcitation.org/5RYcxIGwY">Revisitation patterns in World Wide Web navigation</a>. <i>Proceedings CHI 97 Conference on Human Factors in Computing Systems</i> Atlanta, Georgia, March 22-27, 1997. 
+
+<li>Tennant, R. (1998). <a href="http://www.webcitation.org/5RYoM5LQw">The art and science of digital bibliography</a>. <i>Library Journal digital</i> (October 15, 1998). 
+
+<li>Tewkesbury, R. (1998). Is the Internet heading for a cache crunch? <i>On the Internet</i> <b>4</b>(1), 17-22.
+
+<li>Tilman, Hope. (1998). <a href="http://www.webcitation.org/5RYcxIGwr">Evaluating quality on the Net</a>. 
+
+<li>Tomaivolo, N. &amp; Packer, J. (1996). An analysis of Internet search engines: Assessment of over 200 search queries. <i>Computers in Libraries</i> <b>16</b> (6): 58-62.
+
+<li>Travica, B. &amp; Olson, R. Web as global virtual library: Usability of business sites in East and Central Europe. . Information Access in the Global Information Economy<i>. Proceedings of the 61<sup>st</sup> Annual Meeting of the American Society for Information Science 35</i>, Pittsburgh, PA, October 25-29. Medford, NJ: Information Today, Inc.: 227-42.
+
+<li><a href="http://www.webcitation.org/5RYo6fh42">UKOLN Metadata Dublin Core registries</a> (Last updated November 27, 1997).
+
+<li>University of Waterloo, <a href="http://www.webcitation.org/5RYo08R2v">Scholarly Societies Project</a> (Last updated January 27, 1999). 
+
+<li>Weinberg, B. (1999). Improved Internet access: Guidance from research on indexing and classification. <i>Bulletin of the American Society for Information Science</i> <b>25</b> (2): 26-9.
+
+<li>Wells, H.G. (1938). <i>World brain</i>. Garden City, NY: Doubleday, Doran, and Co.
+
+<li>Woodruff, A., Aoki, P., Brewer, E., Gauthier, P. &amp; Rowe, L. (1996). <a href="http://www.webcitation.org/5RYnwTcJm">An Investigation of Documents from the World Wide Web<i></a>. Fifth International World Wide Web Conference </i>May 6-10, 1996, Paris, France.
+</ul>
+
+<hr size="3" color="#ff00ff">
+
+<h2>Note</h2>
+
+<p>Since its publication in <i>Information Research</i> this paper has been translated into Chinese and published in <i>New Technology of Library and Information Service</i>, <b>no. 6</b>, 2000, 75-79</p>
+
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Koehler, Wallace  (1999)&nbsp; &quot;Digital libraries and World Wide Web sites and page persistence.&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>4</strong>(4) Available at: http://informationr.net/ir/4-4/paper60.html</p>
+<p style="text-align : center">&copy; the author, 1999.</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:T1ewyvosi7kJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres44.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper60" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+ <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/4-4/paper60.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:17:03 GMT -->
+</html>

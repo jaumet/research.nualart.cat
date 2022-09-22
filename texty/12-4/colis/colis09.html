@@ -1,0 +1,687 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from informationr.net/ir/12-4/colis/colis09.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:16:07 GMT -->
+<head><title>Tracking Government WebSites for Information Integration</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../IRstyle2.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../../IRstylesans.css" />
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+<!--Enter appropriate data in the content fields-->
+
+
+<meta name="dc.title" content="Tracking Government WebSites for Information Integration"/>
+<meta name="dc.creator" content="Yang Sok Kim, Byeong Ho Kang"/>
+<meta name="dc.subject" content="This paper propose a Web monitoring system to resolve Web information integration problem of the government Websites. It has been utilized for Australian and Tasmanian government Web information integration for the State Library of Tasmania since July 2005. "/>
+<meta name="dc.description" content="Introduction.Nowadays government policies, laws, and other valuable information are published via the web. However, it is very difficult to ensure the comprehensiveness, accuracy and currency of all Webpublications manually, because there are too many Websites that are usually maintained by different departments and agencies. Method. We proposed a Web monitoring system based Web information integration method to resolve this problem. It has been utilized for Australian and Tasmanian government Web information integration for the State Library of Tasmania since July 2005. We have been monitoring 249 federal, state and local government Websites for the Web information integration since July 2005. Monitoring Websites consist of federal government homepages (21 sites, 8%), federal government media release pages (108 sites, 44%), Tasmanian government homepages (73 sites, 30%), Tasmanian government media release pages (16 sites, 6%), and Tasmanian local government homepages (31, 12%) Analysis. We analysed overall, monthly, weekly and daily monitoring trends and usage of the monitoring results. Results. In total, the Web monitoring system collected 30,279 documents during the monitoring period. The most prolific domain is federal media release pages (16,075 documents, 51%). This is followed by Tasmanian government homepages (6,288 documents, 20%), Tasmanian government media release pages (4,673 documents, 15%), federal government homepages (3,243 documents, 10%), and local council homepages (1,493 documents, 5%). These monitoring results are used to modify the current Web information (62%), to add new information(22%), and to delete current Web information (16%)of two Tasmanian government information portal. Conclusions. Our reseach shows that Web monitoring based approach is very useful, because it supports Web information integration without requiring any changes in the current system."/> 
+<meta name="dc.subject.keywords" content="information management, Internet information systems, electronic information, knowledge management, information provision strategy"/><!--leave the following to be completed by the Editor-->
+
+
+<meta name="robots" content="all" />
+<meta name="dc.publisher" content="Professor T.D. Wilson" />
+<meta name="dc.coverage.placename" content="global" />
+<meta name="dc.type" content="text" />
+<meta name="dc.identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="colis09.html" />
+<meta name="dc.relation.IsPartOf" content="colis.html" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="en" />
+<meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2007-10-15" />
+
+<script language="javascript" type="text/javascript">
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+	
+<style type="text/css">
+.button {
+	width: 45em;
+	padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;  
+	background-color: #ffffff;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	}
+		
+
+.button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		display: inline;
+		}
+		
+.button li {
+		margin: 0;
+		font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+	    font-size: small;
+	    font-weight: bold;  
+		background-color: #fff000<!-- #2175bc; -->
+		color: #000000;
+		text-decoration: none;
+		display: inline;
+		}
+
+.button li a:hover {
+		background-color: azure;
+		color: #ff0000;
+		width: auto;
+		}
+		
+fieldset {
+    padding: .5em;
+    background: white;
+    border: 1px dotted maroon;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: .5em;
+	}
+
+legend {
+    color: white;
+    background-color: maroon;
+    font-size: medium;
+    padding: .1ex .5ex;
+    border-right: 1px solid navy;
+    border-bottom: 1px solid navy;
+    font-weight: bold;
+}
+
+
+</style></head><body bgcolor="#ffffff">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+  <tr>
+    <td colspan="5" align="center" height="30"><img alt="header" src="../../mini_logo2.gif" height="45" width="336"/><br/><div>Vol. 12  No. 4, October, 2007</div><br/>
+      <div class="button">
+      <ul>
+        <li><a href="colis.html">Contents</a> |  </li>
+        <li><a href="../../iraindex.html">Author index</a> |  </li>
+        <li><a href="../../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../../search.html">Search</a> |  </li>
+        <li><a href="../infres124.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+<hr style="color: maroon;" size="1"/>
+
+<h2 style="text-align: center;">Proceedings of the Sixth International Conference on Conceptions<br /> of Library and Information Science&mdash;&quot;Featuring the Future&quot;</h2>
+
+<h1 align="center">Tracking government Websites for information integration</h1>
+<br/>
+<div style="margin-left: 10%; margin-right: 10%;">
+<h4 align="center"><a href="mailto:yangsokk@utas.edu.au">Yang Sok Kim</a> and <a href="mailto:bhkang@utas.edu.au">Byeong Ho Kang</a>  <br/>
+School of Computing, University of Tasmania, Private Bag 100 Hobart TAS 7001 Australia
+
+</h4>
+</div>
+<br/>
+<form action="#">
+<fieldset>
+<legend>Abstract </legend>
+<blockquote>
+<strong>Introduction.</strong> Nowadays government policies, laws, and other valuable information are published via the web. However, it is very difficult to ensure the comprehensiveness, accuracy and currency of all Webpublications manually, because there are too many Websites that are usually maintained by different departments and agencies.<br/>  
+<strong>Method.</strong> We proposed a Web monitoring system based Web information integration method to resolve this problem. It has been utilized for Australian and Tasmanian government Web information integration for the State Library of Tasmania since July 2005.We have been monitoring 249 federal, state and local government Websites for the Web information integration since July 2005. Monitoring Websites consist of federal government homepages (21 sites, 8%), federal government media release pages (108 sites, 44%), Tasmanian government homepages (73 sites, 30%), Tasmanian government media release pages (16 sites, 6%), and Tasmanian local government homepages (31, 12%)<br/>  
+<strong>Analysis.</strong> We analysed overall, monthly, weekly and daily monitoring trends and usage of the monitoring results.<br/>  
+<strong>Results.</strong> In total, the Web monitoring system collected 30,279 documents during the monitoring period. The most prolific domain is federal media release pages (16,075 documents, 51%). This is followed by Tasmanian government homepages (6,288 documents, 20%), Tasmanian government media release pages (4,673 documents, 15%), federal government homepages (3,243 documents, 10%), and local council homepages (1,493 documents, 5%). These monitoring results are used to modify the current Web information (62%), to add new information(22%), and to delete current Web information (16%)of two Tasmanian government information portal.<br/> 
+<strong>Conclusions.</strong> Our reseach shows that Web monitoring based approach is very useful, because it supports Web information integration without requiring any changes in the current system.</blockquote>
+</fieldset>
+
+</form>
+
+<br/>
+<div align="center">
+<input value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: maroon;" onclick="doChangeFont()" type="button"/></div>
+
+<br/>
+ 
+<h2>Introduction</h2>
+
+<p>
+Electronic government (e-Government), which refers to governments' use of information and communication technology to exchange information and services with citizens, businesses, and other arms of government, is often regarded as the new way forward for the public sector. According to the UN report on global e-Government readiness, "An increasing number of e-Government initiatives are being employed to improve the delivery of public services to the people, and to tap the potential synergy from the interaction between new technologies, an educated population and an enabling environment for the attainment of knowledge-based economies.( <a href="#un04">UN,2004</a>). e-Government may be applied by the legislature, judiciary, or bureaucracy, in order to improve internal efficiency, the delivery of public services, or processes of democratic governance. Even though there are various service opportunities in e-Government, information publication via the Webis one of the main services, which enables people to access high quality information that was not accessible in the past. West (<a href="#wes04">2004</a>) reported that 89 percent of websites in 2004 provided access to publications and 62 percent had links to databases.</p>
+<p>
+However, it is very difficult to ensure the accuracy and currency of all Webpublications manually because the Webuses a passive information delivery mechanism, called pull technology. In this case, people should visit the publication Websites to acquire new information, but this is a time consuming and uncertain process because there are too many Websites that are usually maintained by different departments and agencies. Nowadays Websites can send new information to subscribed users by using e-mail or more sophisticated methods such as RSS (Really Simple Syndication), but this is not provided by all Websites because of financial or technical limits. 
+</p>
+<p>
+This project was motivated by the Web information integration of federal, state and local government Websites. The State Library of Tasmania (SLT) operates two Websites to provide integrated government information. Tasmania Online (www.tas.gov.au) is a portal of Tasmania business, community and government Websites. The aim of Service Tasmania Online (<a href="www.service.tas.gov.au" target='new_win'>www.service.tas.gov.au</a>) is to provide flexible access to a wide range of resources on the Webprimarily for the state government, but also for federal and local government. Additional information on Service Tasmania Online is available at <a href="http://www.service.tas.gov.au/ stabout/stabout.asp" target='new_win'>http://www.service.tas.gov.au/ stabout/stabout.asp</a>. 
+</p>
+<p>
+We proposed a monitoring system that continuously monitors new and changed content on selected federal, state and local government Web pages. The system provides two key services, one monitoring home pages and the other media release pages. This complements the indexing and description of those sites on Service Tasmania Online and Tasmania Online as the SLT must continuously monitor the Websites to ensure the accuracy and currency of the information provided. This process - conducted manually before we proposed this project - was a time consuming repetitive and routine task. SLT cataloguers were also required prior knowledge of the content of the monitored Websites. The Web monitoring system both saves staff time and removes a large component of a repetitive and routine task, and ensures the timely delivery of new and changed Webcontent in one access point to the SLT cataloguers.
+</p>
+<p>
+This paper consists of the following contents: Section 2 summarizes related research on government Web information integration. Section 3 explains our Web monitoring system implementation details. Section 4 summarizes basic workflow and benefits. Section 5 summarizes Web monitoring and usage results. Conclusions and further studies are discussed in Section 6.
+</p>
+<h2>Related work</h2>
+<h3>Government information on the Web</h3>
+<p>
+Providing access to government information is the most common e-Government initiative. Many governments have tried to vastly increase the number of interactions and to provide large amounts of online information for efficiency, better services to citizens and improved governmental processes. There are many benefits both for the public and for government of this kind of service: reducing distribution costs for government agencies, ensuring 24/7 access to information, removing the delay between production of and access to information, and more timely update of material.(<a href="#par00">Pardo,2000</a>) A significant proportion of total Web information comes from governments because they provide large amounts of information via their Websites to exploit the above benefits  (<a href="#wag06">Wagner <em>et al.</em></a>). 
+</p>
+<p>
+Integration of government Web information is a significant problem, because it is created by different departments and agencies, and people cannot access all Websites to find relevant information from the government Websites. Governments have used several technologies to provide useful information to citizens through the web, such as portals(<a href="#wim01">Wimer,2001</a>), content management systems, e-mail broadcasting and list serves or discussion forums. All these solutions can help to disseminate and exchange information, but each has its own strengths and weaknesses. However these approaches are limited in their ability to provide an automatic timely and integrated information service. In fact, The realization of the full potential of e-Government depends on the same goals that government agencies have been pursuing for many years: true horizontal and vertical integration of services" ( <a href="#wim01">Pardo,2000</a>). 
+</p>
+<h3>Information integration with the semantic Web</h3>
+<p>
+Some researchers used Semantic Webtechnology to integrate government Web information in the semantic level (<a href="#wag06">Wagner <em>et al.</em>, 2006</a>, <a href="#wag06">Drumm, 2006</a>, <a href="#gug05">Gugliotta, 2005</a>). The Semantic Webaims to facilitate semantic interoperability and integration by using XML based machine-processible information (<a href="#mci01">McIlraith, 2001</a>). Although the Semantic Webis regarded as the future of the current web, there are some limitations because large parts of legacy systems do not support a Semantic Webservice. It is not easy to transform legacy information into Semantic Webserviceable information even though some middleware can help legacy systems to provide a Semantic Webservice. We did not use Semantic Webtechnology for this project because our aim is to provide Web information integration without changing legacy systems or information or adding any additional middleware to the existing systems. 
+</p>
+<h3>Timely information integration with Web monitoring</h3>
+<p>
+Timely Web information integration can be accomplished by the Web monitoring technique. Web monitoring systems/services collect new information from selected Websites by continually revisiting these sites. By doing this they can obtain new information in real-time. There are other systems that support real-time information dissemination. Nowadays XML based RSS services are prevalently used to serve real-time information provision (<a href="#pow05">Powers,2005</a>). People can get new information by registering RSS service URLs, called feeds, to the RSS aggregator systems. However, these systems/services have limitations because they only work when the service Websites provide XML based RSS services. In comparison with an XML based RSS service, the most significant benefit of the Web monitoring method is that we can obtain information in real-time without changing current Webcontents. 
+The Web monitoring system has been researched since the beginning of the Web (<a href="#pan04">Pandy <em>et al.</em>, 2004</a>, <a href="#liu00">Liu <em>et al.</em>, 2000</a>, <a href="#tan02">Tan, 2002</a>) and nowadays the following Web monitoring systems or services are available:
+</p>
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" align="center" border="1" cellpadding="3" cellspacing="0" width="80%">
+<caption align="bottom"><br/><strong>Table 1: Web monitoring System</strong><br/></caption>
+<tbody>
+<tr><th valign="middle">Service/Product Name</th><th>URL</th></tr>
+<tr>
+	<td align="center">WatchThatPage</td>
+	<td align="center"><a href="http://www.watchthatpage.com/" target="new_win">http://www.watchthatpage.com</a>
+	</td>
+</tr>
+<tr>
+	<td align="center">Wisdomchange</td>
+	<td align="center"><a href="http://www.wisdomchange.com/" target="new_win">http://www.wisdomchange.com</a>
+	</td>
+</tr>
+<tr>
+	<td align="center">ChangeDetection</td>
+	<td align="center"><a href="http://www.changedetection.com/" target="new_win">http://www.changedetection.com</a>
+	</td>
+</tr>
+<tr>
+	<td align="center">ChangeDetect</td>
+	<td align="center"><a href="http://www.changedetect.com/" target="new_win">http://www.changedetect.com</a>
+	</td>
+</tr>
+<tr>
+	<td align="center">Track Engine</td>
+	<td align="center"><a href="http://www.trackengine.com/" target="new_win">http://www.trackengine.com</a>
+	</td>
+</tr>
+<tr>
+	<td align="center">Copernic Tracker</td>
+	<td align="center"><a href="http://www.copernic.comen/products/tracker" target="new_win">http://www.copernic.comen/products/tracker</a>
+	</td>
+</tr>
+<tr>
+	<td align="center">WebsiteWatcher</td>
+	<td align="center"><a href="http://aignes.com/" target="new_win">http://aignes.com</a>
+	</td>
+</tr>
+</tbody>
+</table>
+<p>
+Although these systems and services are available, there is no significant large scale research that focuses on the Web information integration of government Websites. In this research, we focus on this issue and report operation results of 248 Websites over 1.5 years.
+</p>
+<h2>Web information monitoring system</h2>
+<p>
+We developed a Web information monitoring system to collect newly uploaded publications from selected Web pages. The system monitors specific Web pages that consist of various objects such as text, hyperlink, and images. Hyperlinks are the most important object among them, because they are usually linked to the specific Web document. A hyperlink consists of link text that is located between &lt;a&gt; and &lt;/a&gt; tag and a URL that indicates the location of a specific document (linked content).
+</p>
+<p>
+The system works as follows. The system sends an HTTP request message to the Web server of the registered Web page according to the fixed revisit time (T<sub>revisit</sub>). The revisiting time (Trevisit) is affected by the publication frequency of the source pages and the user's need for information. If the publication frequency is high, Trevisit should decrease otherwise increase. If the user wants to get information as soon as possible, Trevisit should decrease otherwise increase. As we had no prior information about the publication patterns of the selected domains, we employed a single fixed scheduling strategy. We set the revisit time (T<sub>revisit</sub>) as 2 hours for all the Web information source pages.</p>
+<p>
+When the system receives an HTTP response message from the server, the system extracts URLs and their link texts from the HTTP response body (H<sub>c</sub>) and compares them with those of the last HTTP response body (H<sub>p</sub>). 
+</p>
+<p>
+H<sub>c</sub> and H<sub>p</sub> are defined as follows
+</p>
+<p>
+Hc = {(U<sub>i</sub>,T<sub>i</sub>)}
+, where H<sub>c</sub> is a set of URLs and link texts of the current HTTP response message body. (U<sub>i</sub>,T<sub>i</sub>) is the ith pair of hyperlink and link text of a hyperlink.
+</p>
+<p>
+Hp = {(U<sub>j</sub>,T<sub>j</sub>)}
+, where Hp is a set of URLs and link texts of the last HTTP response message body. (U<sub>j</sub>,T<sub>j</sub>) is the jth pair of URL and link text of a hyperlink.
+</p>
+<p>
+Newly updated information is
+	I<sub>n</sub> = H<sub>c</sub> - H<sub>p</sub> 
+</p>
+<p>
+For more clarity, we would like to indicate the following things. Firstly, according to this definition, if the URL or link text is changed, it is regarded as new information. However, this approach cannot detect new information when the URL and the link text are not changed, but the linked content has changed. Although this limitation may cause under-detecting of new information, we employed this approach to save cost. Secondly, we excluded URLs that contain session id in the URL path. When a URL contains session id, it is detected as new information whenever the monitoring system requests the Web pages, because session id is created on the fly and therefore the URL is continually changed. Thirdly, we eliminated some URLs from the new URLs by registering filtering URLs. For example, advertising URLs are collected as new information, but our URL filter (H<sub>f</sub>) eliminates these URLs before they are recorded in the database. Lastly, we excluded URLs that were already recorded in the database. Some URLs may have been harvested already before the last session (H<sub>e</sub>). For example, a URL is collected during the first monitoring session and disappears in the second session, and reappears in the third session. In this case the URL is regarded as new information at the third session according to the above definition. Therefore, the system checks if a new URL already exists in the database, and it is only recorded in the database if it is not already listed there. New information is redefined as follows:
+</p>
+<p>
+	I<sub>n</sub> = H<sub>c</sub> - H<sub>p</sub> - H<sub>f</sub>- H<sub>e</sub>
+</p>
+<p>
+We did not use data that was collected from the first session, because they included the navigational information as well as old information that was published before monitoring was started.
+</p>
+
+<h2>Workflows and benefits</h2>
+<p>
+Government Web information integration workflow with a Web monitoring system is summarized in Figure 1. The system automatically identifies new information on the selected federal, state and local government Web pages, and they are reported to the SLT cataloguers via the Webbased change reporting system, which reports new information in real time. The cataloguers need to review the records in the tracking reporting service and identify which records need follow up and adding to the Service Tasmania Online and Tasmania Online Websites. Public users can access new information from these two Websites. </p>
+
+<div align="center"><img src="colis09fig1.JPG" width="730" height="474" alt="workflow" /></div>
+<div align="center"><strong>Figure 1: Government Web information Integration Workflow</strong></div>
+
+
+<p>
+The SLT reported the following benefits of using our system and applying the new workflow. </p>
+<ul>
+  <li>Savings in staff time.</li>
+  <li> Elimination of a significant component of a repetitive and routine task. 
+  </li>
+  <li> Increased staff satisfaction as they no longer navigate to a site only 
+    to find there is no new content. </li>
+  <li> A more comprehensive and timely scan for new and changed content is now 
+    possible. Certain key Websites were previously checked daily (e.g., http://www.premier.tas.gov.au, 
+    http://www.dhhs.tas.gov.au, and http://www.australia.gov.au). Other major 
+    state departments were checked weekly, with other agencies - especially commonwealth 
+    and local government agencies checked on a monthly or irregular basis. Much 
+    new content was not identified or was dated by the time it was identified. 
+  </li>
+  <li> State wide coverage is improved significantly with daily monitoring of 
+    council sites.</li>
+  <li> Inexperienced staff can monitor sites as no prior knowledge of the site 
+    content is required. They are assessing only new resources on the change reporting 
+    system. The previous manual process meant that it was difficult to assess 
+    new content unless staffs were very familiar with the content of agency Web
+    sites. </li>
+  <li> The appearance of many new Web pages from one agency on the change reporting 
+    system can alert cataloguers to a major change in that agency's Website. 
+    The cataloguers will then undertake a review of all URLS for that agency listed 
+    on Service Tasmania Online. A major agency recently changed its Website and 
+    cataloguers were alerted on the day of the change. In the past they may have 
+    waited for three days until the resources appeared in a broken URL report. 
+    If redirects had been put in place, a number of months until the change was 
+    identified in a regular quality assurance check.</li>
+  <li> New Web pages mentioned on the change reporting system may lead the cataloguers 
+    to related content that they decide to index. For example, they did not index 
+    a media release on grants to Greening Australia (http://www.deh.gov.au/minister/env/2005/mr01 
+    nov2005.html), but investigation of this media release led them to identify 
+    a site for the Tasmanian page for Greening Australia (http://www.greeningautralia.org.au/GA/TAS/). 
+    This site was then indexed on Tasmania Online. </li>
+</ul>
+<h2>Results</h2>
+<p> We have been monitoring 249 federal, state and local government Websites 
+  for the Web information integration since July 2005. Monitoring Websites consist 
+  of federal government homepages (21 sites, 8%), federal government media release 
+  pages (108 sites, 44%), Tasmanian government homepages (73 sites, 30%), Tasmanian 
+  government media release pages (16 sites, 6%), and Tasmanian local government 
+  homepages (31, 12%) as illustrated in Figure 2 (a). At first we started with 
+  112 Websites, but we gradually added additional Websites as requested by the 
+  SLT (Figure 2 (b)). </p>
+  
+<div align="center"><img src="colis09fig2-a.JPG" alt="Monitoring Sites by Domain" width="487" height="317" /> 
+    <br/><br />
+    (a) Monitoring sites by domains <br/><br />
+    <img src="colis09fig2-b.JPG" alt="Monitoring Sites by Domain" width="514" height="340" /> 
+    <br/><br />
+    (b) Monitoring site registration <br/><br />
+    <strong>Figure 2: Monitoring sites</strong></div>
+
+	
+<h3>Overall results</h3>
+
+<p> Figure 3 summarizes overall monitoring results from July 2005 to January 2007. 
+  As seen in Figure 3 (a), the most prolific domain is federal media release pages 
+  (16,075 documents, 51%). This is followed by Tasmanian government homepages 
+  (6,288 documents, 20%), Tasmanian government media release pages (4,673 documents, 
+  15%), federal government homepages (3,243 documents, 10%), and local council 
+  homepages (1,493 documents, 5%). </p>
+<p> Figure 3 (b) illustrates distribution of Web pages by monitoring result frequencies. 
+  The horizontal axis represents the level of collected documents of each Web
+  page, the left vertical axis shows the number of monitoring sites of each domain 
+  in each publication level, and the right vertical axis represents the total 
+  number of collected documents in each level. Though the federal media release 
+  pages and Tasmanian government homepages are more prolific than Tasmanian government 
+  homepages (see Figure 3(a)), they have more monitoring results in the 100 publication 
+  level compared to that of the Tasmanian government media release pages. For 
+  this reason, the Tasmanian government media release pages, the third most prolific 
+  domain, shows the highest number in average documents per Web pages. </p>
+<p> Figure 3(b) illustrates another fact. Even though the number of monitoring 
+  sites in the level of over 500 publication (500~) is smaller than that of other 
+  sites, they contribute large parts of the overall monitoring documents. That 
+  is, only a small number of Web pages contribute large parts of the total collected 
+  documents. This result means that we need to reconsider the monitoring scheduling 
+  strategy, because it implies that some new information checking sessions of 
+  the monitoring system is unnecessary. The scheduling time should be effectively 
+  changed according to the publication characteristics of the monitoring Websites 
+  to minimize the monitoring costs. </p>
+  
+<div align="center"> 
+
+    <img src="colis09fig3-a.JPG" alt="Monitoring Sites by Domain" width="544" height="367" /> 
+    <br/>
+    (a) Monitoring Results by Domains <br/><br />
+    <img src="colis09fig3-b.JPG" alt="Monitoring Sites by Domain" width="542" height="364" /> 
+    <br/>
+    (b) Distribution of Monitoring Results <br/><br />
+    <strong>Figure 3. Monitoring Results</strong></div>
+
+<h3>Monthly trends</h3>
+
+<p> Figure 4 (a) illustrates monthly monitoring results by domains over the operation 
+  period. We need to consider the trends from September, 2005 since we added most 
+  Websites from September, 2005. First of all, we can see that the total of collected 
+  documents from May to December is greater than those from January to April. 
+  However, though there are significant drops in January, 2007, we can not conclude 
+  that this trend is stable, because we only reviewed about 1.5 years. This trend 
+  requires further investigation, although given the nature of government activity 
+  during the summer holiday period it is probable this trend will continue. The 
+  trend of the total monitoring results is similar to those of each domain. Especially 
+  the trend of the federal media releases represents high similarity. Figure 4 
+  (b) illustrates monthly monitoring results by the collected documents frequency 
+  level. The result shows that the overall trend is closely related to that of 
+  the 500 ~ publication level. </p>
+  
+<div align="center"><img src="colis09fig4-a.JPG" alt="Monitoring Sites by Domain" width="613" height="413" /> 
+    <br/>
+    (a) Monthly Trends <br/><br />
+    <img src="colis09fig4-b.JPG" alt="Monitoring Sites by Domain" width="554" height="370" /> 
+    <br/>
+    (b) Monthly Trends By Publication Level <br/><br />
+    <strong>Figure 4: Monthly Monitoring Results</strong> 
+</div>
+
+<h3>Weekly trends</h3>
+
+<p> Figure 5. illustrates the weekly trend of the collected documents. Figure 
+  5 (a) shows weekly trends by domains and Figure 5 (b) shows weekly trends by 
+  publication level. Not surprisingly, more documents are collected during working 
+  days, Monday to Friday. There are no significant differences among domains and 
+  different publication levels except the documents from the 500~ publication 
+  level indicates that they published more new information on Saturdays and Sundays 
+  than other level Websites. This result implies that we wasted computing resources 
+  to process unnecessary monitoring sessions in the current fixed monitoring scheduling 
+  strategy and we may use weekly variations to create a more dynamic scheduling 
+  strategy. </p>
+  
+<div align="center"><img src="colis09fig5-a.JPG" alt="Monitoring Sites by Domain" width="542" height="381" /> 
+    <br/><br />
+    (a) Weekly trends <br/><br />
+    <img src="colis09fig5-b.JPG" alt="Monitoring Sites by Domain" width="534" height="375" /> 
+    <br/><br />
+    (b) Weekly trends by publication level <br/><br />
+    <strong>Figure 5. Weekly monitoring results</strong></div>
+
+<h3>Daily trends</h3>
+<p> Figure 6 illustrates the daily trend of the collected documents. Figure 6 
+  (a) compares daily trend by domains and Figure 6 (b) by publication levels. 
+  The results show that most documents were collected around working hours, from 
+  9 am to 8 pm. There is no significant difference among domains and publication 
+  levels. Daily trend results also propose a further research on the scheduling 
+  strategy of our monitoring system because we wasted some resources for unnecessary 
+  monitoring sessions in a day and we may minimize monitoring cost by employing 
+  an appropriate scheduling strategy. </p>
+
+<div align="center">  <img src="colis09fig6-a.JPG" alt="Monitoring Sites by Domain" width="530" height="382" /> 
+    <br/><br />
+    (a) Daily Trends <br/><br />
+    <img src="colis09fig6-b.JPG" alt="Monitoring Sites by Domain" width="534" height="381" /> 
+    <br/><br />
+    (b) Daily Trends By Publication Level <br/><br />
+    <strong>Figure 6: Daily monitoring results</strong> 
+</div>
+
+<h3>Usage results</h3>
+
+<p> Figure 7 illustrates overall usage results and monthly trend, which is are 
+  reported by the SLT. According to their report, they used other sources such 
+  as newspapers and internal reports on Web pages changes to change Web information 
+  on the Service Tasmania Online and Tasmania Government Online. Therefore, the 
+  report on usage trends not exactly match with the total usages of monitoring 
+  results. However, we can draw trends of monitored document usage result under 
+  this assumption. Figure 7 (a) shows the overall usage statistics. Modification 
+  of the current Web information (62%) is the largest part of usage, which is 
+  followed by 'Addition' (22%) and 'Deletion* (16%). Figure 7(b) shows usage trend 
+  sin July, 2005. The result shows that overall usage trends very closely related 
+  to the monitoring results trends. </p>
+<p> However, the SLT cataloguers reported that the number of documents from the 
+  monitoring system indexed directly on Tasmania Online and Service Tasmania Online 
+  is very small compared to the total number of monitored pages. This is not necessarily 
+  a problem for the SLT cataloguers as they wish to be alerted to new and changed 
+  content even though this content may not always be appropriate to be added to 
+  the Tasmania Online and Service Tasmania Online Websites. The cataloguers assess 
+  the monitored pages and make a professional judgement as to whether resources 
+  need to be added or updated on Tasmania Online and Service Tasmania Online. 
+  The SLT cataloguers continually review the URL seed list to remove redundant 
+  or unhelpful URLS. Some technical refinements may require investigation to improve 
+  the performance of the monitoring service. Possible refinements include the 
+  removal of duplicated resources and the elimination of noise with certain categories 
+  of updated information being excluded from monitoring. For example updated weather 
+  reports from monitored pages could be excluded. </p>
+  
+<div align="center">
+    <img src="colis09fig7-a.JPG" alt="Monitoring Sites by Domain" width="447" height="363" /> 
+    <br/><br />
+    (a) Overall results <br/><br />
+    <img src="colis09fig7-b.JPG" alt="Monitoring Sites by Domain" width="527" height="359" /> 
+    <br/><br />
+    (b) Usage trends <br/><br />
+    <strong>Figure 7: Monitoring service usage results</strong><br/>
+</div>
+
+<h2>Conclusions and further work</h2>
+
+<p>Government Web information integration is an important issue in e-Government implementation. 
+In this paper, we proposed a monitoring system based Web information integration 
+method and reported 1.5 years operation results. This approach is very useful 
+because it supports Web information integration without requiring any changes 
+in the current system. Although our system successfully supported the Web information 
+integration for the SLT, the following significant challenging issues were raised 
+during the project. These issues will be the basis for further research. Firstly, 
+we need to extend our scheduling system to minimize monitoring costs. We found 
+that there were yearly, monthly, weekly, and daily variation patterns in the past 
+data set. These patterns can be used to establish improved scheduling strategies. 
+Secondly, we need to provide recommendation system that helps the SLT cataloguers. 
+The current system only display the newly updated information from the target 
+Websites and the cataloguers manually add, delete, or modify Web information 
+on the Service Tasmania Online and the Tasmania Government Online. The further 
+system should provide further recommendations such as addition, deletion, and 
+modification with the monitored results. </p>
+
+<h2>Acknowledgements</h2>
+
+<p>This work was supported by the Asian Office of Aerospace Research and Development 
+  (AOARD) (AOARD-06-4006)</p>
+<form action="#">
+  <fieldset>
+  <legend style="border-right: 1px solid navy; border-bottom: 1px solid navy; padding: 0.1ex 0.5ex; color: white; background-color: maroon; font-size: medium; font-weight: bold;">References</legend>
+  <ul>
+    <li><a id="dru06" name="dru06"></a>Drumm, C. (2006). <em>Integrating eGovernment 
+      Services using Semantic WebTechnologies</em>. Paper presented at the The 
+      Semantic Webmeets eGovernment (2006 AAAI Spring Symposium), Calif., USA.</li>
+    <li><a id="gug05" name="gug05"></a>Gugliotta, A., Cabral, L., Domingue, J., 
+      Roberto, V., Rowlatt, M., &amp; Davies, R. (2005). <em>A Semantic WebService-based 
+      Architecture for the Interoperability of E-government Services</em>. Paper 
+      presented at the ICWE 2005 - 5th International Conference on WebEngineering, 
+      Sydney, Australia.</li>
+    <li><a id="liu00" name="liu00"></a>Liu, L., Pu, C., &amp; Tang, W. (2000, 
+      Nov. 7-10, 2000). <em>WebCQ: Detecting and Delivering Information Changes 
+      on the Web</em>. Paper presented at the International Conference on Information 
+      and Knowledge Management (CIKM), Washington D.C.</li>
+    <li><a id="mci01" name="mci01"></a>McIlraith, S. A., Son, T. C., &amp; Zeng, 
+      H. (2001). Semantic Webservices. <em>Intelligent Systems, IEEE</em>, <strong>16</strong>(2), 
+      46- 53.</li>
+    <li><a id="pan04" name="pan04"></a>Pandey, S., Dhamdhere, K., &amp; Olston, 
+      C. (2004). <em>WIC: A General-Purpose Algorithm for Monitoring Web information 
+      Sources</em>. Paper presented at the 30th VLDB Conference, Toronto, Canada.</li>
+    <li><a id="par00" name="par00"></a>Pardo, T. A. (2000). Realizing the Promise 
+      of Digital Government: It's More than Building a WebSite. <em>Information 
+      Impact Magazine</em>, 2000</li>
+    <li><a id="pow05" name="pow05"></a>Powers, S. (2005). <em>What Are Syndication 
+      Feeds. </em>Cambridge: O'Reilly.</li>
+    <li><a id="tan02" name="tan02"></a>Tan, B., Foo, S., &amp; Hui, S. C. (2002). 
+      Web information monitoring for competitive intelligence. <em>Cybernetics 
+      and Systems</em>, <strong>33</strong>(3), 225-251.</li>
+    <li><a id="un04" name="un04"></a>UN. (2004). <em>Global E-Government Readiness 
+      Report 2004: Towards Access for Opportunity</em>. (No. UNPAN/2004/11)New 
+      York: UNPAN.</li>
+    <li><a id="wag06" name="wag06"></a>Wagner, C., Cheung, K. S. K., Ip, R. K. 
+      F., &amp; Bottcher, S. (2006). Building Semantic Webs for e-government with 
+      Wiki technology. <em>Electronic Government, an International Journal</em>, 
+      <strong>3</strong>(1), 36 - 55.</li>
+    <li><a id="wes04" name="wes04"></a>West, D. M. (2004). <em>Global E-Government</em>. 
+      Providence, RI: Brown University.</li>
+    <li><a id="wim01" name="wim01"></a>Wimmer, M. A. (2001).<em> European Development 
+      towards Online One-stop Government: The "eGOV" Project</em>. Paper presented 
+      at the ICEC2001 Conference, Vienna.</li>
+  </ul>
+  </fieldset>
+</form>
+<form action="#">
+  <fieldset>
+  <legend style="border-right: 1px solid navy; border-bottom: 1px solid navy; padding: 0.1ex 0.5ex; color: white; background-color: maroon; font-size: medium; font-weight: bold;">How 
+  to cite this paper</legend>
+  <div><br/>
+    Kim, Y. S., Kang, B.H. (2007). "Tracking Government WebSites for Information 
+    Integration" <em>Information Research</em>, <strong>12</strong>(4) paper colis09. 
+    [Available at http://InformationR.net/ir/12-4/colis/colis09.html]</div>
+  </fieldset>
+</form>
+<table align="center" cellspacing="10">
+  <tbody>
+    <tr> 
+      <td colspan="3" style="background-color: maroon; color: white; font-family: verdana; font-size: small; font-weight: bold;" align="center">Find 
+        other papers on this subject</td>
+    </tr>
+    <tr> 
+      <td align="center" valign="top"> <form method="get" action="http://scholar.google.com/scholar" target="_blank">
+          <table bgcolor="#ffffff">
+            <tbody>
+              <tr> 
+                <td align="center" height="32" nowrap="nowrap" valign="top"><input name="q" size="31" maxlength="255" value="&quot;information management&quot; or &quot;Internet information systems&quot; or &quot;electronic information&quot; or &quot;knowledge management&quot; or &quot;information provision strategy&quot;" type="hidden"/> 
+                  <br/> <input name="sa" value="Scholar Search" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit"/> 
+                  <input name="num" value="100" type="hidden"/> </td>
+              </tr>
+            </tbody>
+          </table>
+        </form></td>
+      <td align="center" valign="top"> 
+        <!-- Search Google -->
+        <form method="get" action="http://www.google.com/custom" target="_top">
+          <table bgcolor="#ffffff">
+            <tbody>
+              <tr> 
+                <td align="center" height="32" nowrap="nowrap" valign="top"><input name="q" size="31" maxlength="255" value="&quot;information management&quot; or &quot;Internet information systems&quot; or &quot;electronic information&quot; or &quot;knowledge management&quot; or &quot;information provision strategy&quot;" type="hidden"/>
+                  <br/> <input name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" type="submit"/> 
+                  <input name="client" value="pub-5081678983212084" type="hidden"/> 
+                  <input name="forid" value="1" type="hidden"/> <input name="ie" value="ISO-8859-1" type="hidden"/> 
+                  <input name="oe" value="ISO-8859-1" type="hidden"/> <input name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" type="hidden"/> 
+                  <input name="hl" value="en" type="hidden"/> </td>
+              </tr>
+            </tbody>
+          </table>
+        </form></td>
+      <td align="center" valign="top"> 
+	  <form method="get" action="http://www.live.com/" target="_blank">
+          <table bgcolor="#ffffff">
+            <tbody>
+              <tr> 
+                <td align="center" height="32" nowrap="nowrap" valign="top"><input name="q" size="31" maxlength="255" value="&quot;information management&quot; or &quot;Internet information systems&quot; or &quot;electronic information&quot; or &quot;knowledge management&quot; or &quot;information provision strategy&quot;" type="hidden"/> 
+                  <br/> <input name="sa" value="Windows Academic" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit"/> 
+                  <input name="num" value="100" type="hidden"/> </td>
+              </tr>
+            </tbody>
+          </table>
+        </form></td>
+    </tr>
+  </tbody>
+</table>
+<!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+<hr style="color: maroon;" size="1"/>
+<table align="center" cellpadding="10">
+  <tbody>
+    <tr>
+      <td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/colis09" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+      <td align="center" valign="top"><div> &copy; the authors, 2007. <br/>
+          Last updated: 18 August, 2007 </div></td>
+      <td align="center" valign="middle"><img src="../../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44"/>
+        <!--ONESTAT SCRIPTCODE START-->
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('colis09.html')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestatfree.com/"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com/" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr style="color: maroon;" size="3"/>
+<table align="center">
+  <tbody>
+    <tr>
+      <td><div class="button"> 
+      <ul>
+        <li><a href="colis.html">Contents</a> |  </li>
+        <li><a href="../../iraindex.html">Author index</a> |  </li>
+        <li><a href="../../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../../search.html">Search</a> |  </li>
+        <li><a href="../infres124.html">Home</a>  </li>
+   </ul>
+        </div></td>
+    </tr>
+  </tbody>
+</table>
+<hr style="color: maroon;" size="3"/>
+</body>
+<!-- Mirrored from informationr.net/ir/12-4/colis/colis09.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:16:07 GMT -->
+</html>

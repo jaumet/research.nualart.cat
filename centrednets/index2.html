@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"> 
+    <title>CentredNets</title> 
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <script src="./js/raphael-1.5.2.min.js"></script> 
+    <script src="./js/jquery-1.5.min.js"></script> 
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.3/themes/base/jquery-ui.css" type="text/css"/>
+  </head>
+  <body>
+    <div id="main"></div>
+    <div id="slider" data-wjs-element="main"></div>
+        <div id="name"></div>
+  </body>
+  
+  <script src="./data/gen3.js"></script> 
+  <script>
+    $(document).ready(function(){
+    		// 0- CONFIG
+    		var radius = 10;
+    		
+		// 2- MAP
+		// Creating canvas 320 × 200 at 10, 50
+		var paper = Raphael(1, 1, 900, 900);		
+		
+		// Creating array-like with all the nodes
+		var st = paper.set();
+		
+		function donode(myid, posx, posy, radius, fill) {
+			c = paper.circle(posx, posy, radius)
+				.attr("fill", fill);
+			c.id = myid;
+			c[0].onmouseover =  function () {
+				$("#name").css('position','absolute')
+					.css('left',node[myid][0]+10)
+					.css('top',node[myid][1]-30)
+					.append(node[myid][3])
+					.show();
+			}
+			c[0].onmouseout =  function () {
+				$("#name").empty()
+					.hide();
+			}
+			st.push(c);
+		}
+		
+		for (var i = 0; i < node.length; i++) {
+			donode(i, node[i][0], node[i][1], radius, node[i][2]);
+		}		
+		
+		// 3- INTERACTION/TRANSFORMATION
+		st.click(function () {
+			for (var i = 0; i < st.length; i++) {
+				//st[i].attr({"r": i*10+10});
+				// Hardcoded example for clic on node 2: 		
+				if (i!=this.id)	{	
+					st[i].attr({"r": s[this.id][i]}); 
+					st[i].attr({fill: node[i][2]});
+					st[i].attr({"fill-opacity": 0.4});
+					//alert(" | Node id ->"+this.id+" | Similarity: ["+[this.id]+"]["+[i]+"] ->"+s[this.id][i]); 
+				} else {
+					st[i].attr({"fill": "black"});
+					st[i].attr({"r": 10});
+					st[i].attr({"fill-opacity": 1});
+					st[i].onmouseover =  function () {
+						$("#name").append("<h1>name: "+node[i][3]+"</h1>");
+					}
+				}
+			}
+		});
+			//Step 1: set up the slider with some options. The valid values for opacity are 0 to 1
+			//Step 2: Bind an event so when you slide the slider and stop, the following function gets called
+			$('#slider').slider({ 
+			min: 0, 
+			max: 1, 
+			step: 0.01, 
+			value: 0,
+			orientation: "horizontal",
+			     slide: function(e,ui){
+				     $('#main').css('opacity', ui.value)
+			     }                
+			})
+   });
+  </script>
+</html>

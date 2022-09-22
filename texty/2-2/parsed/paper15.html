@@ -1,0 +1,592 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/2-2/paper15.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:04 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<title>Developing educational hypermedia applications: a methodological approach</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="hypermedia, development methodology, instructional <span>design</span>, <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>experts, programmers">
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> content="This paper proposes an hypermedia development methodology with the aim of integrating the work of both educators, who will be primarily responsible for the instructional <span>design</span>, <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> with that of <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>experts, responsible for the <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span><span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and development.  Hence, it is proposed that the educators and programmers should interact in an integrated and systematic manner following a methodological approach.">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Developing educational hypermedia applications: a methodological approach">
+<meta name="DC.Creator" content="Jose Miguel Nunes, Susan P. Fowell">
+<meta name="DC.Subject" content="hypermedia, development methodology, instructional <span>design</span>, <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>experts, programmers">
+<meta name="DC.Description" content="This paper proposes an hypermedia development methodology with the aim of integrating the work of both educators, who will be primarily responsible for the instructional <span>design</span>, <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> with that of <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>experts, responsible for the <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span><span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and development.  Hence, it is proposed that the educators and programmers should interact in an integrated and systematic manner following a methodological approach.">
+<meta name="DC.Publisher" content="<span>Professor</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>T.D. Wilson">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 2  No. 2, October 1996</h4></td></tr>
+  <tr> 
+    <td><a href="infres22.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<p>
+<h1>Developing educational hypermedia applications: a methodological approach</h1>
+
+<h4><a href="mailto:J.M.Nunes@sheffield.ac.uk">Jos&eacute; Miguel Nunes</a> and <a href="mailto:Susan.Fowell@uts.edu.au">Susan P. Fowell</a><br>Department of Information Studies<br>University of Sheffield, Sheffield, UK</h4>
+<br>
+<hr color=#ff00ff size=3>
+<br>
+<h2>Introduction</h2>
+
+<p>Hypertext has played a role in <span>teaching</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and learning since the
+mid 1980's when the first versions of HyperCard <span>appeared</span>. <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  This
+extremely popular <span>environment</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and authoring tool presented hypermedia
+as a technology capable of resolving some of the needs of learners
+and educators using instructional technologies.  Drawing on work
+from <span>computer</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>science, educational studies and <span>psychology</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> hypertext
+and hypermedia designers have since then endeavoured, with varying
+degrees of success, to <span>establish</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>hypermedia as a credible educational
+technology.</p>
+
+<p>Hypertext <span>systems</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>have been described as providing a number of
+benefits for the learner, including: self paced, self selective
+learning; private learning allowing experimentation in a 'safe'
+environment; <span>accommodation</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of different ability levels and types
+of learner; open access to information; reduced <span>teaching</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>costs;
+provision of <span>reliable</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and timely help information; and reduced
+publication costs.  However, despite its potential and some successful
+cases of its implementation (such as those presented by <a href="#ambr90">Ambron
+and Hooper, 1990</a>), hypermedia technology is not being extensively
+used by <span>schools</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and <span>universities</span>. <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  The question that immediately
+arises is: why <span>isn't</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>hypermedia being used more widely, given
+the vast amount of interest and discussion about its perceived
+benefits? </p>
+
+<p>In answering this question, researchers and champions of hypermedia
+may <span>attribute</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>lack of widespread usage to the inertia of educators
+and educational organisations.  Focusing on the case of higher
+<span>education</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>(HE), hypertext <span>failure</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>could additionally be attributed
+to the <span>secondary</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>importance attached to <span>teaching</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>in comparison
+to research activities by the majority of academics (<a href="#darb92">Darby, 1992</a>) or to
+the <i>Not Invented Here </i>syndrome pointed out by <a href="#laur93">Laurillard
+<i>et al. </i>(1993)</a>.  This syndrome reflects the fact that academics
+are just about prepared to recommend a colleague's <span>textbook</span>, <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> but
+would not take on video or computer-based <span>teaching</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>material developed
+elsewhere, as the <span>teaching</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>philosophy would be unlikely to match
+their own.  This is an important point and should not be dismissed
+as being simply the protectiveness of teachers to their own <span>teaching</span>. <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>
+ In spite of large <span>amounts</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of funding being directed towards national
+hypermedia projects, there are only a few examples where the resulting
+products have been widely adopted.  The role of hypermedia seems
+to be restricted to hypertextbook type <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and to emerging
+forms of hypermedia now <span>supported</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>by the World-Wide Web.  The
+predominant model for hypermedia <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>continues to focus
+on the production of information resources and much less on the
+learning activities that the student/learner participates in.</p>
+
+<p>The current <span>situation</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>shows an extraordinary discrepancy between
+educators' <span>perceptions</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of the high value and potential of hypermedia
+as an educational technology and its real use.  Such discrepancy
+cannot be <span>justified</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>exclusively by the factors described above.
+ There are other more fundamental application <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>issues which
+need addressing.  The <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of hypermedia <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>should
+begin with the production of a <i>conceptual model</i>, which
+represents the various aspects of the subject matter at different
+levels of <span>abstraction</span>. <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  Additionally, such a <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>should follow
+a <i>software development methodology,</i> integrating the perspectives
+of the <span>main</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>agents involved in the development process: educators
+and <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>developers.  Such a methodology must <span>establish</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>the
+educational requirements for the particular subject matter in
+the preliminary stage, and then, in <span>subsequent</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>stages develop
+the application in <span>response</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>to the requirements of the conceptual
+model and the educational specifications.</p>
+
+<p>Failure to <span>establish</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>an appropriate conceptual model and use a
+<span>suitable</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>software development methodology, results in poor and
+ineffective <span>applications</span>. <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  McKendree uses an analogy with the
+camcorder to characterise the current situation:</p> 
+
+<blockquote><i>&quot;It lets
+amateurs make movies about themselves which they and their immediate
+family and friends can enjoy.  However, it is unlikely that you
+or I will want to rent it from the video-store and watch it. 
+The professionals are much better able to <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and make something,
+for a wider audience.  [...]  It is fine if some lecturers want
+to take time to hack together some on-line material for themselves
+and their <span>students</span>. <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  They will <span>probably</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>have the pride and commitment
+to get them to use it.  However, the material they produce will
+possibly not be as flexible or as widely applicable as something
+crafted professionally.&quot;</i> (<a href="#mcke94">McKendree, 1994</a>)</blockquote>
+
+<p>The prevailing conceptual model for educational hypertext applications
+is the hypertextbook model.  This approach supports the traditional
+<span>textbook</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>approach and enhances its traditional use by offering
+a link structure to provide elaborations of key concepts.  However,
+while providing some useful learning resources this use of hypermedia
+does not capture the real power of the technology.  Therefore,
+new conceptual models must be developed to take advantage of the
+hypermedia philosophy and <span>characteristics</span>, <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> as discussed by <a href="#nune96">Nunes
+and Fowell (1996)</a>.</p>
+
+<p>This paper proposes an hypermedia development methodology with
+the aim of integrating the work of both educators, who will be
+primarily responsible for the instructional <span>design</span>, <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> with that
+of <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>experts, responsible for the <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span><span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and development.
+ Hence, it is proposed that the educators and programmers should
+interact in an integrated and systematic manner following a methodological
+approach.</p>
+
+<h2>Educational hypermedia development methodology</h2>
+
+<p>Hypermedia is particularly appropriate for the production of interactive
+and exploratory educational <span>applications</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> where large numbers
+of <span>links</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and cross-references are provided and the learner can
+explore her/his own interests according to previous experience,
+background and <span>perspective</span>. <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  To be effective, hypermedia applications
+need to be tailored to suit the particular learning tasks planned.</p>
+
+<p>In order to do this, the learning process itself must first be
+analysed and <span>understood</span>. <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  Learning is a complex process involving
+a large <span>range</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of activities, some active, some passive, some creative,
+some reactive, some directed, some exploratory (<a href="#hamm92">Hammond,1992</a>).  <span>Furthermore</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>
+as proposed by <a href="#nune96">Nunes and Fowell (1996)</a>, academic learning should
+also be seen as the process of construction of knowledge and the
+development of reflexive awareness, where the individual is an
+active processor of information.  This type of learning occurs
+through <span>interaction</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>with rich learning environments, and results
+from engaging in authentic activities, and by social interaction
+and negotiation.</p>
+
+<p>This complexity of the learning process suggests the need for
+situated learning, social negotiation and multiple perspectives
+on the different aspects of the subject matter, the implication
+being that a number of different learning <span>strategies</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>must be adopted
+to assist the learner in the construction of knowledge.  The adoption
+of these different <span>strategies</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>creates learning environments that
+<a href="#grab95">Grabinger and Dunlap (1995)</a> <span>term</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span><i>Rich Environments for Active Learning
+</i>(or <i>REALs</i>) [7]<i>.  </i>REALs promote learning within
+authentic <span>contexts</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> and encourage the <span>growth</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of learner responsibility,
+initiative, decision-making, intentional learning and ownership
+over the <span>acquired</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>knowledge.  Additionally, REALs should provide
+an atmosphere which encourages the formation of  knowledge building
+learning communities that assist collaborative social negotiation
+of meanings and understandings among the members of the community
+(peers, tutors, and subject matter experts).</p>
+
+<p>In <span>sum</span>, <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> the REAL must <span>essentially</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>support <span>interactions</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>between
+the tutor, the learner and her/his peers, subject matter specialists
+and the learning materials.  All these <span>interactions</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>may, or may
+not, be <span>computer</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>mediated.  <span>Furthermore</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> and as defined by <a href="#nune96">Nunes
+and Fowell (1996)</a>, an educational hypermedia application is a software
+application specifically produced for a particular educational
+use, built using the hypermedia philosophy.  They are developed
+to resolve a particular educational purpose or learning need,
+and are thus <span>limited</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>to the solution of the problems arising from
+that need.  This means that although they might be linked with
+other hypermedia <span>applications</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> other <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span><span>applications</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> databases
+or even <span>computer</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>mediated communications facilities, they have
+clearly <span>established</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>boundaries.  In this sense, an hypermedia
+application is one component of a much broader learning universe
+- the REAL in which they are embedded.</p>
+
+<p>REALs can be seen as instructional <span>systems</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> in the sense put forward
+by <a href="#nerv90">Nervig (1990)</a>: as sets of interacting, interrelated, structured
+experiences that are <span>designed</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>to achieve specific educational
+objectives, but organised into a unified dynamic whole.  The design
+of an hypermedia application, as with any other of the other components,
+should hence result from the <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>specifications for the overall
+REAL.  In turn, the <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of the REAL results from the process
+of analysing curricular problems.  To <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and implement the
+overall REAL, instructional <span>systems</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>design (ISD) should be used.
+ The importance of this overall ISD rests in assuring that the
+whole REAL is implemented using the same learning theory.  In
+fact, if not carefully planned, the REAL could result in a mix
+of <span>eventually</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>conflicting techniques from different theoretical
+perspectives.</p>
+
+<p>Accordingly, <a href="#bedn92">Bednar <i>et al. </i>(1992)</a> defend the notion that effective
+instructional <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and development is only possible if it emerges
+from deliberate application of a particular theory of learning.
+ <span>Furthermore</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> the developers must have <span>acquired</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>reflexive awareness
+of the theoretical basis <span>underlying</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>the <span>design</span>. <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  This will ensure
+that instruction <span>design</span>, <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> hypermedia <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and development, and
+the hypermedia conceptual models selected are compatible and all
+use the same learning theory philosophy.</p>
+
+<p>This paper addresses the <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and development of hypermedia
+for higher <span>education</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>(HE).  Academic learning is here defined
+as an active process in which meaning is developed on the basis
+of experience, in accordance with the constructivist theoretical
+frame (<a href="#nune96">Nunes & Fowell, 1996</a>).  So, to develop hypermedia <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>in keeping with a constructivist approach, it is important to have an understanding
+of the kind of specifications that will result from constructivist
+instructional <span>design</span>. <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span></p>
+
+<h2>Constructivist instructional design</h2>
+
+<p>Traditionally, ISD is seen as a process approached from a systems
+strategy, based on the purpose of the system, using a systematic,
+data-based process for analysing curricular and instructional
+problems in order to develop tested, feasible <span>solutions</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>(<a href="#nerv90">Nervig, 1990</a>). 
+Conversely, constructivist ISD focuses on the learner and on the
+learning process rather than solely on the subject matter.  Since
+knowledge is constructed, the learning of a concept must be embedded
+in the use of the concept.  In the traditional ISD, the designer
+<span>analyses</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>the conditions which bear on the instructional system
+in preparation for the specification of <span>intended</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>learning outcomes
+(<a href="#bedn92">Bednar <i>et al. </i>, 1992)</a>.  Content, learner and instructional <span>setting</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>are analysed and the instruction is <span>designed</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>using the concepts of learning
+objectives and specification of goal outcomes.  Constructivist
+ISD <span>requires</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>the separation of method and content, instructional
+designers develop learning environments rather then packaged instruction
+(<a href="#kemb91">Kember, 1991</a>).</p>
+
+<p>According to <a href="#lebo93">Lebow (1993)</a>, this constructivist ISD should be carried
+out while bearing in mind the <span>seven</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span><span>primary</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>constructivist values:
+collaboration, personal autonomy, generativity, reflectivity,
+active engagement, personal relevance and pluralism.  From these
+principles Lebow draws a set of general <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>principles to be
+used in the ISD process:</p>
+
+<blockquote><i> make instruction relevant to the learner by providing a context
+for learning that supports both autonomy and relatedness;
+<br><br>
+ <span>balance</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>the tendency to control the learning <span>situation</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>with the
+desire to promote personal autonomy;
+<br><br>
+ support self-regulation through the promotion of skills and attitudes
+that enable the learner to <span>assume</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>increasing responsibility for
+the developmental restructuring process;
+<br><br>
+ increase <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>on the affective <span>domain</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of learning, treating
+learning and motivation as part of a unified whole process;
+<br><br>
+ strengthen the learner's tendency to engage in intentional learning
+processes, especially by encouraging the strategic exploration
+of errors.</i>  ( <a href="#lebo93">Lebow, 1993</a>)</blockquote>
+
+<p>Although using a traditional ISD model, as shown in Fig. 1, these
+<span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>principles lead to a development based on the constructivist
+philosophy.  Since knowledge domains are not readily separated
+in the world, according to this philosophy, information from many
+sources bears on the analysis of any particular subject matter
+and it is not possible to isolate <span>units</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of information.  <span>A+</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span><i>central
+core body of information</i> must thus be defined in the <i>analysis
+phase</i>, but boundaries of what may be relevant should not be
+imposed.  Instead of dividing the subject matter into logical
+analysis of dependencies, the constructivist approach turns toward
+a con0eration of what users of that knowledge <span>domain</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>do in real
+life <span>contexts</span>. <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  The ultimate goal of this approach is to move
+the learner into thinking in the knowledge <span>domain</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>as if they were
+an expert user of that <span>domain</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>(<a href="#bedn92">Bednar <i>et al.,</i>1992</a> ).  Hence, designers should <span>instead</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>identify the variety of experts on the subject matter and the
+<i>tasks</i> they do.  The designer should than define simplified
+but still authentic tasks to be experienced by the learner.  The goal is to portray authentic tasks, not to define the structure of learning to achieve the tasks, since it is the
+process of constructing a <span>perspective</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>or understanding that is
+important and no meaningful construction is possible if all relevant
+information is prespecified (<a href="#bedn92">Bednar <i>et al.,</i>1992</a> ).</p>
+
+<div align="center"><img src="Image54.gif" width=260 height=401></div>
+
+<p>Once identified in the analysis phase, tasks must be designed
+so that they are situated in real world <span>contexts</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> are authentic,
+and provide multiple perspectives on the subject matter.  Additionally,
+some <span>degree</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of <i>coaching</i> or guidance must be provided, by
+including meaningful examples and the different perspectives of
+experts and peers.  <span>A+</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span><span>central</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>strategy for achieving this is to
+create collaborative learning environments where both face-to-face
+and <span>computer</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>mediated communication are available.  Access to
+extra information sources must also be provided to allow different
+learner's needs to be satisfied whenever needed.</p>
+
+<p>It is in the <i>development phase</i> that all the components
+of the learning <span>environment</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>are implemented according to the specifications
+coming from the <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>phase.  Since different types of educational
+technologies may be needed, to implement all the planned tasks,
+examples and communication channels, different development methodologies
+may then be applied.  If hypermedia <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> are needed for
+a particular instructional task, then a specific hypermedia development
+methodology must be used, where the specifications are established
+during the <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>phase of the ISD.  However, no task is isolated,
+but rather in a REAL it forms part of a <span>larger</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>context.  Hence
+the <span>testing</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and evaluation of all components of the learning environment
+must be done in an integrated manner.  The hypermedia application
+must be system tested and field trialled as an embedded component
+in the overall learning <span>environment</span>. <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span></p>  
+
+<p>In summary, in a constructivist approach, the analysis phase of
+the ISD establishes a core body of information <span>crucial</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>for the
+subject matter, identifies the type of experts that use it and
+the tasks they perform.  The <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>phase specifies a comprehensive
+set of authentic tasks and the coaching and support to be given
+to the learner.  It also must specify the educational <span>tools</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>required
+and the function of each one of these <span>tools</span>. <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  Therefore, if an
+hypermedia application is needed, its specifications <span>arise</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>from
+the <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>phase.  During the development phase, the different
+educational <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and <span>tools</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>are developed in <span>parallel</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and
+then system tested and field trialled together.</p>
+
+<p>Only educators, instructional designers and educational psychologists
+are involved until the <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>phase.  In the development phase
+<span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>specialists may be required.  Thus, the development of
+these hypermedia <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>requires <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>engineering methodologies
+that allow real co-operation between the two types of agents involved:
+the educators and the <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>experts.  <span>A+</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>software engineering
+<span>discipline</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>is emerging (<a href="#node92">Nodenot, 1992</a>), called <i>Educational Software Engineering </i>(<i>ESE</i>), which uses methods mainly applied by educators
+with an educational point of view but which also encompasses principles
+of good <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>engineering.  This paper proposes such a methodology
+specifically for hypermedia application development.</p>
+
+<h2>Hypermedia development methodology</h2>
+
+<p>The production of educational hypermedia involves collaboration
+between subject matter and <span>education</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>experts involved in the ISD,
+and hypermedia development experts involved in the application
+implementation.  Hence, the communication between these agents
+becomes paramount.  These groups usually <span>speak</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>different &quot;languages&quot;
+and do not readily understand the problems of the other (<a href="#moon86">Moonen, 1986</a>).
+ An efficient educational methodology must thus integrate and
+support the dialogue between these different groups.</p>
+
+<p>The <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>development methodology that best supports this requirement
+is the rapid prototyping approach.  <span>A+</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>rapid <span>prototype</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>is a simplified
+and untested equivalent of the <span>actual</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>application, performing
+all the basic functions specified for the final product (<a href="#howe92">Howell, 1992</a>).
+ As shown in Fig 2, by implementing a <span>prototype</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>first, the hypermedia
+designers are able to put forward a fully functioning application
+presenting all the basic <span>features</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of the final product such as
+user-interface, link structure and coaching facilities.  This
+is not a diagrammatic approximation or <span>representation</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> which tends
+to be looked at as an <span>abstract</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>thing, but an <span>actual</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>implementation
+of the specifications for the application.  These prototypes can
+be realistically tested and assessed and rapidly changed in an
+iterative manner until consensus is <span>reached</span>. <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  Evaluation and testing
+of these prototypes must be done by instructional designers and
+ideally include pilot <span>tests</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>using target learners.</p>
+
+<p>Furthermore, hypermedia <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>are inherently different
+from other <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span><span>applications</span>. <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  The <span>volume</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of <span>actual</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>code produced
+in scripts is relatively low and <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>is put in user-interface
+<span>design</span>, <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> link structure <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and definition of contents entry
+as the different multimedia components.  These characteristics
+along with widespread availability of authoring <span>tools</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> make it
+possible for rapid development and <span>testing</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of prototypes.</p>
+
+<p>The <i>Rapid Prototyping Software <span>Development</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>Cycle</i> presented
+in Fig.  2, reflects the traditional rapid prototyping philosophy.
+ The <i>Specifications</i> are <span>established</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>during the overall
+ISD process for the REAL where the application should be integrated.
+ Consequently, as discussed above, the <i>System Test</i> must
+be done along with the <span>testing</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>all other components of the REAL
+and as part of its ISD cycle.</p>
+
+<p>After the acceptance of the <span>prototype</span>, <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> a thorough <i>Design</i>
+of the user-interface, link structure and multimedia integration
+must be undertaken and documented.  To assure that the design
+is done using the constructivist approach, and therefore is in
+accordance with the overall philosophy chosen for the REAL, a
+constructivist conceptual model for hypermedia <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>must
+be adopted.  <a href="#nune96">Nunes and Fowell (1996)</a> <span>discuss</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>such a model.</p>
+
+<div align="center"><img src="Image55.gif" width=553 height=422></div>
+
+<p>The <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>phase is <span>followed</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>by <i>Implementation</i> using appropriate
+authoring and multimedia development <span>tools</span>. <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  The implementation
+must then be subjected to a comprehensive <i>Test.  </i>This testing
+must of two kinds: technical and instructional.  The technical
+<span>test</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>aims at detecting and correcting technical problems, insufficiencies
+or inadequate use of the different media.  It should be performed
+mainly by technical experts.  The instructional-oriented test
+must <span>establish</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>if the developed application complies both with
+the educational philosophy adopted and the initial specifications.
+ It should be performed by the subject matter experts and instructional
+designers.</p>
+
+<p>Finally a release version of the application must be produced
+and handed over to the ISD for further system <span>testing</span>. <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  This final
+version should be <span>accompanied</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>by complete documentation both on-line
+and paper-based, including user manuals if necessary.  If any
+problems are found, new prototypes are built and the process repeated.</p>
+ 
+<p>Like any other <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>methodology, the life-cycle of an educational
+hypermedia application should not stop after the implementation
+and hand-over.  It should be maintained and continually improved.
+ As suggested by Thomas, problems reported should be acted on
+at the earliest opportunity and feedback should be actively sought
+from learners and teachers (<a href="#thom94">Thomas, 1994</a>).
+</p>
+
+<h2>Conclusions</h2>
+
+<p>Implementing hypermedia educational <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>means much more
+than just designing a few screens and specifying their <span>sequence</span>. <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>
+ Today, such an approach is not <span>sufficient</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>to support effectively
+support the learning processes envisaged in constructivist, collaborative
+or experiential learning philosophies.  This paper proposes instruction
+as the act of supporting the construction of knowledge on a particular
+subject matter, by improving the learner's ability to use the
+content <span>domain</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>to carry out authentic tasks, and by providing
+these tasks with the <span>tools</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>needed to develop the skills of constructing
+an informed <span>response</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and for evaluating alternative responses.
+ Hypermedia <span>applications</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>are one such tool available to the instructional designer, which can be used to support constructivist, collaborative and experiential learning.</p>
+
+<p>Understanding hypermedia as an educational technology, and its
+role within educational practice, is the key to the development
+of successful learning environments.  Moreover, the way to prevent
+a backlash against the use of this educational technology lies
+in recognising both the technical and pedagogic components of
+instructional <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and integrating them in a methodologically
+coherent manner.  Rapid prototyping is an ideal approach which
+facilitates the <span>integration</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of the different agents in educational
+<span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>development, the subject matter experts,  the instructional
+designers and the <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>developers.</p>
+
+<p>However, the gap between expert/professional and non-expert/non-professional
+developers is narrowing, due to the increasingly more comprehensive
+and easy-to-use authoring facilities of the <span>modern</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>hypermedia
+authoring <span>tools</span>. <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  Current authoring <span>tools</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>aim to support both
+professional <span>quality</span>  <span class="quali" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and do-it-yourself endeavours, so that the
+developer of an hypermedia educational application is now often
+the educator her/himself.  <span>Nevertheless</span>, <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> the need for an adequate
+conceptual model and a comprehensive <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>process should always
+be present.</p>
+
+<h2>References</h2>
+
+
+<ul><li><a name="ambr90">Ambron, S</a>. &amp; Hooper, K. <i> Learning with Interactive
+Multimedia: Developing and Using Multimedia Tools in Education</i>.
+ Washington: <span>Microsoft</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>Press, 1990.</li>
+
+<li><a name="bedn92">Bednar <span>A+</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>,</a> Cunningham, D., Duffy, T. &amp; Perry, <span>J++</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  Theory
+into practice: how do we link?  <u>In</u> Duffy, T. &amp; Jonassen,
+D. (Eds.) <i>Constructivism and the Technology of Instruction:
+<span>A+</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>Conversation</i>.  New Jersey, USA: Lawrence Erlbaum Associates,
+Inc, 1992, pp. 17-34.</li>
+
+<li><a name="crof93">Croft, <span>R++</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> </a> Adapting <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span><span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>methodologies for instructional
+<span>design</span>. <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  <i>Educational Technology</i>, August 1993, 24-32.</li>
+
+<li><a name="darb92">Darby, <span>J++</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span></a>  The <span>future</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>of computers in <span>teaching</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>and learning.
+ <i>Computers in Education</i>, <b>19</b>(1/2), 1992, 193-197.</li>
+
+<li><a name="grab95">Grabinger, R</a>. &amp; Dunlap, C.  Rich environments for active
+learning.  <i>Association for Learning Technology Journal</i>,
+<b>3</b>(2), 1995, 5-34.</li>
+
+<li><a name="hamm92">Hammond, N. </a>(1992) Tailoring hypertext for the learner. 
+<u>In:</u><b> </b>Kommers, P.; Jonassen, D. &amp; Mayes, <span>J++</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> (Eds.)<b>
+ </b><i>Cognitive Tools for Learning</i>.<b>  </b>Berlin: Springer
+Verlag, 1992, pp. 149-160.</li>
+
+<li><a name="howe92">Howell, G. </a> <i>Building Hypermedia Applications: <span>A+</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>Software
+<span>Development</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>Guide.</i>  New York: McGraw-Hill, Inc., 1992.</li>
+
+<li><a name="kemb91">Kember, D.</a>  Instructional <span>design</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>for meaningful learning.<i>
+ Instructional Science</i>, <b>20</b>, 1991, 289-310.</li>
+
+<li><a name="laur93">Laurillard, D.,</a> Swift, B. &amp; Darby, <span>J++</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  Academics' use
+of courseware materials: a <span>survey</span>. <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> <i>Association for Learning
+Technology Journal</i>, <b>1</b>(1), 1993, 4-14.</li>
+
+<li><a name="lebo93">Lebow, D</a>.  Constructivist <span>values</span>  <span class="quanti" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>for instructional systems
+design: five principles toward a new mindset.  <i>Educational
+Technology Research and Development</i>, <b>41</b>(3), 1993, 4-16.</li>
+
+<li><a name="mcke94">McKendree, <span>J++</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span></a>  Design: more than meets the eye?  <i>Association
+for Learning Technology Newsletter</i>, <b>5</b>, 1994, 2.</li>
+
+<li><a name="moon86">Moonen, <span>J++</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span></a>  Toward an <span>industrial</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>approach to educational
+<span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>development.  <u>In</u>: Bork, <span>A+</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span> and Weinstock, H. (Eds.)
+<i>Designing Computer-Based Materials</i>. Berlin: Springer Verlag,
+1986, pp. 119-151.</li>
+
+<li><a name="nerv90">Nervig, N.</a>  Instructional <span>systems</span>  <span class="conce" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>development: a reconstructed
+ISD model.  <i>Educational Technology</i>, November 1990, 40-46.</li>
+
+<li><a name="node92">Nodenot, T. </a> Educational <span>software</span>  <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>engineering: a methodology
+based on cooperative developments.  <u>In</u>: Tomek, I. (Ed.)
+<i>Computer Assisted Learning: Proceedings of 4th International
+Conference, ICCAL'92</i>. Berlin: Springer-Verlag, 1992, pp. 529-541.</li>
+
+<li><a name="nune96">Nunes, <span>J++</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span></a> &amp; Fowell, S.P.  <a href="#paper12.html">Hypermedia as an <span>experimental</span>  <span class="exper" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>learning tool: a theoretical model.  <i>Information Research New</i>,
+<b>6</b>(4), 1996, 15-27</a>.</li>
+
+<li><a name="thom94">Thomas, R</a>.  Durable, low-cost, educational <span>software</span>. <span class="compus" style="width:1px;border-width:69px 23px 69px 23px;position:relative;">.</span>  <i>Computers
+and Education</i>, <b>22</b>(1/2), 1994, 65-72.</li></ul>
+
+
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Nunes, José Miguel Baptista &amp; Fowell, Susan P.   (1996)&nbsp; &quot;Developing educational hypermedia applications: a methodological approach&quot;&nbsp;<em>Information Research</em>, <strong>1</strong>(1) Available at: http://informationr.net/ir/2-2/paper15.html</p>
+<p style="text-align : center">&copy; the authors, 1996.</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:FaUZSYxSohAJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres22.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper15" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a><br>Counting only since 13 December 2002</h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/2-2/paper15.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:12:04 GMT -->
+</html>

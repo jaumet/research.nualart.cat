@@ -1,0 +1,126 @@
+
+///////////////////////////////////////////////////////////////////
+// AREA CONFIGURATION
+//
+	var MAX_DISTINC = 30;
+	var AREAX = 920;
+	var AREAY = 600;
+	var COLORS_APPROACH = "fix"; // fix, random, gradient
+	var PARAM1 = "AlleleSeqDist";
+	var PARAM2 = "AlleleSeqDist";
+	var AREA_TITLE = "SNPs wheat geneticID reference samples example data";
+
+///////////////////////////////////////////////////////////////////
+// FIELDS CONFIGURATIONS:
+//
+// -> the index are the machine-names for each field (only alphanumeric characters)/ Also used in var DATA
+// -> human : human name for the field
+// -> filter: 0 no eligible for filtering | 1 eligible for filtering
+//
+
+	
+// NOTE: could be interesting when data is big, to use short index names, f.e. 0, 1, 2, 3, 4...
+
+///////////////////////////////////////////////////////////////////
+// DATA
+//
+
+
+var FIELDS = [
+	{
+	"Phantom": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Tjilkuri": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "AvgCountRef": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "SPITFIRE": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "EGA Gregory": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "CallRate": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Ellison": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "ClusterSize": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Tennant_": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "EGA Wylie": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Yallaroi": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Kalka_": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "GBA Combat": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "CRUSADER": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "EGA Blanco": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "AlleleID": 
+			{ human: "", areafilter: "0", type:"text", exclude: "0"},
+    "Datatine": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "AlleleSequence": 
+			{ human: "", areafilter: "0", type:"text", exclude: "0"},
+    "RatioAvgCountRefAvgCountSnp": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Longreach Envoy" : 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Mace": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Sunstate": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Frelon": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "04LR00525": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Lang": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Cunningham": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Suntop": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "RepAvg": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "SUNBROOK": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "CloneID": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "AlleleSeqDist": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "MACE": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Livingston": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Camm" : 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Sunvale": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "AGT KATANA": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "GBA Hunter": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Sunco": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "GBA Ruby2006": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Frame": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "AvgCountSnp": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "SnpPosition": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Longreach Catalina": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Cascades": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "LPB06-1209": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Longreach Bullet": 
+			{ human: "", areafilter: "0", type:"number", exclude: "0"},
+    "Kord CL plus":
+			{ human: "", areafilter: "0", type:"number", exclude: "0"}
+	}
+];

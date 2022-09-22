@@ -1,0 +1,6 @@
+var DATA =
+[{"paperid": 509, "lang": "English", "title": ["Degree of Internet corporate reporting: a research framework"], "numref": 47, "issueurl": "http://informationr.net/ir/17-1/infres171.html", "citation": " Poon, P-L. &amp; Yu, Y.T. (2012). Degree of Internet corporate reporting: a research framework. Information Research, 17(1) paper 509. [Available at http://InformationR.net/ir/17-1/paper509.html]", "volume": 17, "authors": ["Pak-Lok Poon School of Accounting and Finance,The Hong Kong Polytechnic University, Hung Hom, Hong Kong Yuen Tak Yu Department of Computer Science,City University of Hong Kong,Kowloon Tong, Hong Kong"], "link": "http://informationr.net/ir/17-1/paper509.html", "year": 2012, "issue": 1, "numrefgrp": "40-50", "subject": "['online company reports']"}]
+
+[
+  {}
+]

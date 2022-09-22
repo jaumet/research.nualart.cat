@@ -1,0 +1,757 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/7-2/paper125.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:13 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 97">
+<title>Task based design of a digital work environment (DWE) for an academic community</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="task-based design, software, interface,  Digital Work Environment, faculty, students, interviews, focus groups, digital library">
+<meta name="description" content="Task based design is considered one of the effective ways of designing functional software. It is generally accepted that tasks play an important role in system and user interface design. Identifying the user's tasks enables the designer to construct user interfaces reflecting the tasks' properties, including efficient usage patterns, easy-to-use interaction sequences, and powerful assistance features. In this paper, we present a prototype of a Digital Work Environment (DWE) to support a task-oriented design to information access in a typical community of academic users. The resources in DWE are organized according to specific tasks performed by the research students and staff in the Division of Information Studies of Nanyang Technological University, Singapore. The tasks and resources were elicited based on the needs of faculty and students through interviews and focus groups. Examples of these tasks include preparation of a new course outline, setting of examination papers, preparation of reading lists and assignments, conducting literature reviews and writing dissertations. This paper discusses the problems of digital library users in an academic environment, highlights task oriented projects and focuses on the task of preparing and writing a Master dissertation. It highlights the importance of task based design in assisting and helping students and instructors from the time of selecting the research project to the time of submitting the final bound copies of the dissertation.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Task based design of a digital work environment (DWE) for an academic community">
+<meta name="DC.Creator" content="Narayanan Meyyappan, Suliman Al-Hawamdeh, Schubert Foo">
+<meta name="DC.Subject" content="task-based design, software, interface,  Digital Work Environment, faculty, students, interviews, focus groups, digital library">
+
+<meta name="DC.Description" content="Task based design is considered one of the effective ways of designing functional software. It is generally accepted that tasks play an important role in system and user interface design. Identifying the user's tasks enables the designer to construct user interfaces reflecting the tasks' properties, including efficient usage patterns, easy-to-use interaction sequences, and powerful assistance features. In this paper, we present a prototype of a Digital Work Environment (DWE) to support a task-oriented design to information access in a typical community of academic users. The resources in DWE are organized according to specific tasks performed by the research students and staff in the Division of Information Studies of Nanyang Technological University, Singapore. The tasks and resources were elicited based on the needs of faculty and students through interviews and focus groups. Examples of these tasks include preparation of a new course outline, setting of examination papers, preparation of reading lists and assignments, conducting literature reviews and writing dissertations. This paper discusses the problems of digital library users in an academic environment, highlights task oriented projects and focuses on the task of preparing and writing a Master dissertation. It highlights the importance of task based design in assisting and helping students and instructors from the time of selecting the research project to the time of submitting the final bound copies of the dissertation">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+
+<script language="JavaScript"> 
+
+function openNewWindow(url) 
+
+{
+    window.open(url,"",'toolbar=no,resizable=yes,location=no,scrollbars=no,width=1025,height=750');
+}
+</script>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center" colspan="5"><h4>Information Research, Vol. 7 No. 2, January 2002,</h4></td></tr>
+  <tr> 
+    <td><a href="infres72.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<h1>Task based design of a digital work environment (DWE) for an academic community</h1>
+
+
+
+<h4>Narayanan Meyyappan, <a href="mailto:assuliman@ntu.edu.sg">Suliman Al-Hawamdeh</a> and <a href="mailto:assfoo@ntu.edu.sg">Schubert Foo</a><br>
+
+Division of Information Studies, <br>
+Nanyang Technological University <br>
+Singapore 639798 <br>
+</h4>
+<br>
+<div align="center"><b>Abstract</b></div>
+<br>
+<blockquote>Task based design is considered one of the effective ways of
+designing functional software. It is generally accepted that tasks play an
+important role in system and user interface design. Identifying the user's
+tasks enables the designer to construct user interfaces reflecting the tasks'
+properties, including efficient usage patterns, easy-to-use interaction
+sequences, and powerful assistance features. In this paper, we present a
+prototype of a Digital Work Environment (DWE) to support a task-oriented design
+to information access in a typical community of academic users. The resources
+in DWE are organized according to specific tasks performed by the research
+students and staff in the Division of Information Studies of Nanyang
+Technological University, Singapore. The tasks and resources were elicited based on the needs of faculty and students through interviews and focus groups. Examples of these tasks include
+preparation of a new course outline, setting of examination papers, preparation
+of reading lists and assignments, conducting literature reviews and writing
+dissertations. This paper discusses the problems of digital library users in an
+academic environment, highlights task oriented projects and focuses on the task
+of preparing and writing a Master dissertation. It highlights the importance of
+task-based design in assisting and helping students and instructors from the
+time of selecting the research project to the time of submitting the final
+bound copies of the dissertation. </blockquote>
+
+<h2>Introduction</h2>
+
+<p>Task based design and analysis is accepted within the Human
+Computer Interface community as an important tool in designing interactive
+applications. It has been recognized as an important factor in user interface
+design (<a href="#gou85">Gould &amp; Lewis, 1985</a>, <a href="#lew93">Lewis &amp; Rieman, 1993</a>). While task based design
+form the basis for software and system development, it is only recently, that
+we have seen methods which offer a tighter integration of task analysis
+activities with subsequent design activities, thereby supporting greater use of
+task information in creating user interface designs Task-based user interface
+design emphasise the importance of users and their tasks at the starting point
+of the design process. It emphasises the importance of designers developing an
+understanding of user' existing work tasks, the requirements of changing those
+tasks, and the consequences that new designs may have on tasks (<a href="#wil96">Wilson &amp;
+Johnson, 1996</a>). </p>
+
+<p>One of the important aspects of task based design is understanding users'
+needs. This is normally done through observations, user studies, and interviews
+and from working experience with systems and people. The majority of today's
+systems use an interactive and event-driven paradigm. Events are messages the
+user, or the system, sends to the program. A keystroke is an event. So is a
+mouse-click. Interactive task based design systems place more emphasis on
+people and their needs to achieve a specific task. This allows people to work
+in the actual task domain rather than the computer domain (<a href="#fis98">Fischer &amp; Lemke,
+1998</a>). </p>
+
+<p>The advent of the digital economy has seen a flurry of activities in the development and utilisation of digital libraries (DL). &nbsp;  This paper provides a brief introduction to digital libraries, highlights different task-oriented digital library projects, and discusses the particular problems faced by digital library users in an academic environment.&nbsp; It subsequently describes the design of the task-based Digital Work Environment (DWE) that is developed in the Division of Information Studies, Nanyang Technological University, Singapore.&nbsp; DWE aims to eradicate a number of problems faced by digital library users and to provide them with an integrated environment to locate and access information resources to complete their tasks.&nbsp; The simple architecture of the system, its various functions and facilities (basic architecture, user interface, task inquiry, personal space), and&nbsp; focus group study conducted to elicit users need are discussed.&nbsp; This is done in the framework of using the graduate students&#8217; dissertation task as a representative task that is performed by users of the system.&nbsp; </p>
+
+<h3>Digital Libraries</h3>
+
+<p>Digital libraries play an important role for the academic community in performing day-to-day activities of students, faculty members and&nbsp;research scholars. The nature of work of each category of users varies. Users&#8217; information needs also vary according to their tasks. The traditional approach to libraries as a collection of material no longer holds true as a result of evolving technologies such as multimedia, voice recognition, intelligent agents and knowledge management practices. In the last few years, digital library (DL) research has drawn much attention not only in the developed countries but also in developing countries. Improvements in information technology and increased funding towards information infrastructure have led to the development of a wide range of DL collections and services. Some DL research projects are carried out in collaboration with academic and international organizations. For example, the <i>Digital Library Initiative</i> (DLI) projects in the US (<a href="#dli01">Digital Library Initiative, 2001</a>; <a href="#fox99">Fox, 1999</a>) and the eLib projects in UK (<a href="#eli01">eLib, 2001</a>) have played a key role in DL development. The <a href="#ncs01">Networked Computer Science Technical Reports Library</a> (2001) and <a href="#ndl01">Networked Digital Library of Thesis and Dissertations</a> (2001), contain collections of theses, dissertations and technical reports from various members&#8217; servers in different parts of the world. In addition, many DL projects are currently underway in Australia (<a href="#dig01">DIGILIB, 2001</a>), Asia (<a href="#ige01">iGEMS, 2001</a>), Europe, Africa and Latin America. While some of them have their own funding, others are funded under DL-specific funding initiatives. </p>
+
+<p>Many definitions of digital libraries are available in the literature.
+According to Oppenheim, a digital library is an organized and managed
+collection of information in a variety of media (text, still image, video,
+audio, 3D models or a combination of these) all in a digital form (<a href="#opp99">Oppenheim,
+1999</a>). The <a href="#dlf00">Digital Libraries Federation</a> (2000) defines digital library from
+a librarian's point of view noting that &quot;digital libraries are
+organisations that provide the resources, including the specialized staff, to
+select, structure, offer intellectual access to, interpret, distribute,
+preserve the integrity of and ensure the persistence over time of collections
+of digital works so that they are readily and economically available for use by
+a defined community or a set of communities&quot;. </p>
+
+<p>Borgman examined the various definitions of digital libraries proposed by
+the various research groups, and stated that &quot;a digital library is a
+service, an architecture, information resources, databases, text, numbers,
+graphics, sound, video, etc. and a set of tools and capabilities to locate,
+retrieve and utilize the information resources available&quot; (<a href="#bor99">Borgman, 1999</a>).
+
+</p>
+
+<p>Digital libraries have been categorized differently by researchers.
+Oppenheim&nbsp;has identified four types of libraries on a continuum of
+traditional, automated, hybrid and digital form (<a href="#opp99">Oppenheim, 1999</a>). A hybrid
+library, according to Oppenheim, is a library having a range of different
+information sources, printed or electronic, local or remote to various
+locations of library resources in different parts of the world. Meyyappan, et
+al. studied 20 working digital libraries on a number of parameters that include
+the type of library, parent organization, the collection, information access,
+information storage and retrieval including the search and output features
+(<a href="#mey00">Meyyappan, et al., 2000</a>). The same paper provided an idea of what digital
+libraries are, what are their objectives, what do they cover, what are the
+search features, accessibility options, display format, and so on. </p>
+
+<p>In terms of DL, the academic community is possibly the largest and the most
+important group of users. User requirements from a digital library are
+influenced by their nature of work, affiliation, educational background,
+accessibility to technology, and so on.&nbsp;
+The nature of work of faculty, staff, student and researcher vary
+according to their tasks in an academic setting. In order to perform these
+tasks, access and use of information from a variety of sources in both print
+and electronic forms, such as journals, CD-ROM databases, on-line databases,
+multimedia databases, Web pages will be required. In addition to that, other
+resources include course calendars, university statutes, various course
+offering, course registration, thesis and dissertation guidelines, style
+guides, laboratory facilities, availability of software, hardware, equipment,
+course materials, resource book/handout collections, local publication
+databases, locally produced theses and dissertations and so on. Almost all of
+the current digital libraries do not manage or provide access to these diverse
+buy yet extremely useful collections of information. </p>
+
+<p>The problems faced by the users of a DL are many. First of all, they may not
+know which information source may be appropriate to accomplish a particular
+task or to resolve a particular problem. Secondly, even if users are aware of
+the existence of a particular information source, they may not know where and
+how to locate it, and finally how to retrieve the information. Current digital
+libraries along with systems on the World Wide Web, expect users to know what
+they want precisely and also expect them to formulate a query to represent
+their information needs, or to map their query onto the often unknown knowledge
+structure (subject directory). One of the biggest problems faced by students
+and faculty members in the academic community is that the needed resources are
+not organized efficiently and effectively. Rather, they are mostly scattered
+all over the place. The other problem is the number of resources is growing
+everyday at an astonishing rate, making it difficult to identify the needed
+resource. Building a DL environment using a task-based design provides one
+appropriate means to organize and group these resources according to the tasks
+and subtasks needed to accomplish different types of jobs. In other words, a
+task-based design can help the user to locate the relevant resources at the
+right time by selecting the relevant task to be accomplished. The proposed
+Digital Work Environment (DWE) is aimed at assisting the academic users in
+carrying out various tasks, thereby eliminating some of the aforementioned
+problems. </p>
+
+<h2>Task oriented research in digital libraries</h2>
+
+<p><a href="#mic00">Michelle and Wang</a>, (2000) designed a user interface
+(SenseMaker) for information exploration in a heterogeneous digital library.
+SenseMaker facilitates both the contextual evolution of a user's interests and
+the moves between browsing and searching via structure-based searching and
+structure-based filtering. MyLibrary is a Cornell University Library initiative
+to provide personalized library services to their students, faculty, and staff
+on the basis of a focus group study to gauge the feedback of library users
+(<a href="#coh00">Cohen, <em>et al.</em>, 2000</a>). The MyLibrary project has two components, MyLink and
+MyUpdate. MyLink is used to facilitate their patrons to save useful information
+resource links that they found themselves or ones suggested by the librarians
+via a targeted notification in their personal space. Users can access this
+personal space from any place. MyUpdate periodically queries the on-line
+catalog and notifies the users when matches to the predefined needs of users
+are detected. </p>
+
+<p>HeadLine is one of the eLib programme's Phase 3 projects, developing a
+hybrid library system known as the HeadLine Personal Information Environment
+(PIE) (<a href="#gam00">Gambles, 2000</a>). This PIE uses portal-type technology to present an information
+environment that is personalized to the users' needs and support users'
+customization. PIE presents users with pages of resources relevant to their
+courses/department as well as an &quot;All resources&quot; page that contains
+all of the resources to which their library provides access. Both the MyLibrary
+and HeadLine projects are designed to provide users with direct links to
+information resources. Users can add the required information resources to
+their list and use the resources from any place, any time. However, in both of
+these systems, the users are still expected to browse through a lengthy list of
+resources and pick up the relevant ones, and organise them in such a way
+themselves in order to facilitate easy access in future. </p>
+
+<p>In addition, a few other task oriented projects have been reported in the
+literature. The CORE project (involving the American Chemical Society and
+Chemical Abstracts Service, as well as Bellcore, Cornell, and OCLC) that deals
+with the chemical literature uses a task-oriented approach to access
+information (<a href="#les91">Lesk, 1991</a>). This project was designed to access the chemical
+literature supporting the research, referencing and writing activities of staff
+in a university chemistry department. </p>
+
+<p>Fox and his colleagues designed a digital library, Envison, based on user needs (<a href="#fox93">Fox,
+<em>et al.</em>, 1993</a>). This project was built on nine principles as a &quot;user
+centered databases from the computer science literature&quot;, using the
+publications of the Association of Computing Machinery (ACM). One of the principles
+is task-oriented access to electronic archives. This project has an interface
+designed on the basis of interview with users, experts in library, information
+and computer science. They conducted a usability evaluation of the developed
+interface and discussed various user needs on the basis of the interview and
+suggested for a task based digital library. </p>
+
+<p>Cousins developed the Digital Library Integrated Task Environment (DLITE) as
+part of the Stanford Digital Library project (<a href="#cou96">Cousins, 1996</a>). This DLITE
+project is based on the concept of a workcenter, a place on the user interface
+that provides all the components necessary for the completion of a specific
+task. This interface is based on scenarios and published studies of library
+use. An important aspect of DLITE is its use of direct manipulation, and drag
+and drop style of interface. </p>
+
+<p>The user needs explained earlier in this paper has been solved to some
+extent using profiles in digital library projects such as the PIE and MyLibrary
+projects. However, none of these projects have adequately resolved the users'
+problem of the need to have a one-stop environment that serves to aid the user
+to locate, access and use information directly, and to meet their information
+needs according to their tasks in totality. The proposed DWE aims to address
+this gap to provide a useful environment for the academic community. </p>
+
+<h2>Digital Work Environment</h2>
+
+<p>DWE is designed with the main objective of providing a
+one-stop access point to local and remote digital library collections,
+traditional in-house libraries, and most importantly, to the vast array of
+information resources that exists in the academic community's Intranet.
+Additionally, it uses the task-based model to provide an efficient means of
+organising and facilitating access to these resources. Many different tasks are
+accomplished by the three main user groups of faculty, students and staff in an
+academic community. </p>
+
+<p>As an example, some of the tasks accomplished by graduate students in a
+Masters degree programme include those of course registration, course
+participation, examination, dissertation and other activities such as social,
+cultural and sports activities. Tasks accomplished by the corresponding faculty
+include preparing and delivering lectures, tutorials, research work, supervision
+of student dissertations, consultancy work, short courses, management
+activities and other activities such as social, cultural, and sports
+activities. Each of the main tasks can be broken down into a series of sub
+tasks, and sub-sub tasks as necessary until unit tasks can be specified
+uniquely. Differing resources and information are, therefore,&nbsp;required at
+these varying levels for task accomplishment. </p>
+
+<p>Many of these tasks, such as exam paper preparation, are in fact common
+between different departments and schools. However, due to the differing nature
+of disciplines within the academic environment, the process of writing a
+dissertation might vary from one school to another. However, one of the
+important issues here is that these tasks remain fairly stable and do not
+change that fast. After some time, a set of Best Practices will emerge to
+dictate how best to accomplish them and what are the corresponding information
+resources that are required for them. At the present day, most of the
+information related to guidelines, policies and procedures are generally
+available in the department or university's web-sites. Other information
+resources, such as databases, online public access catalogs, CD-ROMs, virtual
+and digital libraries are also available on the Web. </p>
+
+<p>The DWE prototype focuses on the Dissertation task to illustrate the
+task-oriented concept for information access. The design is based on an
+underlying user needs study conducted at Division of Information Studies (DIS),
+School of Computer Engineering at Nanyang Technological University (NTU),
+Singapore. The Division conducts the Master of Science in Information Studies
+programme by coursework. It operates on a two-semester academic year system
+where each semester is divided equally into six months. The new academic year
+commences in the middle of July. The Division has an annual enrollment of
+approximately 90 students (both part-time and full-time) for its Master
+programme. The full time students typically require two semesters (1 year) to
+complete the programme while the part time students typically require four
+semesters (2 years). Apart from that, the Division has a small number of
+postgraduate students enrolled for research programmes leading to the Master of
+Applied Science and Doctor of Philosophy. The DWE prototype is developed in a
+web environment using the Tango Enterprises (<a href="#eve99">EveryWare Development Inc., 1999</a>)
+application software that is coupled to the MS Access database. </p>
+
+<h3>Basic Architecture of the System</h3>
+
+<p>Figure 1 shows the basic architecture of the DWE. The system
+consists of a User Interface module that is linked to the User Authentication
+&amp; Management module, Resource Maintenance module, Task/Sub-task module and
+Information Resource Organisation module. The environment is used by three main
+groups of users, namely, the Information Resource Administrator, User Manager
+and the General Academic Users. </p>
+
+<div align="center"><img src="p125fig1.gif" width="642" height="664" border="0" alt=""></div> 
+<div align="center"> <strong>Figure 1: Basic architecture of DWE</strong></div> 
+
+
+<p>The Information Resource Administrator is responsible for
+collecting information about sub-tasks, information resources that are required
+to accomplish the task, creation and maintenance of the resource database. </p>
+
+<p>The User Manager, as the name implies, manages the overall collection of
+user-related information, creation of user accounts, maintenance of the User
+database and users personal space data in the personal database. </p>
+
+<p>The General Academic Users are the end users of the DWE. They include
+faculty, students and staff who uses the system to access the information
+resources to meet their information needs while accomplishing some tasks at
+hand. </p>
+
+<p>The systems is composed of four main modules as follow: The User
+Authentication and Management Module is used to identify a user during a user
+login process to ascertain the type of user by interacting with the user
+category database. With this information, it subsequently displays the
+corresponding lists of tasks that are related to that category of user. This
+module is used by the User Manager to append or update the respective user and
+category databases. </p>
+
+<p>The Task/Sub-task Module is used by the Resource Administrator to update the
+respective tasks and sub-tasks in the tasks database. This is used to define
+the relationships between main task, sub-task and sub-sub-tasks, thereby forming
+the hierarchy of parent-child tasks relationships. </p>
+
+<p>The Resource Maintenance Module is maintained by the Resource Administrator
+for update of URL, resources password in resource database through the
+interface. </p>
+
+<p>The Information Resources Organiser Module responses to the users requests
+through the user interface and interacts with servers in the Intranet, library
+home page, databases, folders and Internet resources, and so on, to bring back
+the needed information resources to the users. </p>
+
+<h3>User Interface/Control Panel</h3>
+
+<p>The DWE interface is frame-based as shown in Figure 2. The
+interface shows the different types of tasks and subtasks that are performed in
+the Division by students. Some of these tasks are generic and similar to those
+performed in other divisions in the school. The interface is divided into three
+frames: Welcome, Navigation tree, and Display. In the Navigation tree frame,
+various tasks associated with each category of users in the DWE are organized
+in the form of a hierarchical tree structure starting with the general task and
+ending with the specific lowest level of sub-task. &nbsp;</p>
+
+<div align="center"><button onclick="window.open('p125fig2.gif','toolbar=no,resizable=yes,location=no,scrollbars=yes,width=1023,height=750')"
+style="background-color: #FFFFCc; font-family: sans-serif; font-size: medium; font-style: italic; font-weight: bold;">Figure 2: The DWE interface</button></div>
+
+<div align="center"><strong>Close window after viewing to return to paper</strong></div>
+<p>The tree structure of DWE enables users to locate specific
+sub-tasks, sub-sub-tasks easily. It is to important to reiterate that this tree
+structure changes according to user categories since it is tailored to support
+different users of the system. Once the specific task is identified another
+level will be displayed in the tree structure to show the sub-tasks, and the
+next level shows the sub-sub-tasks and finally. The individual leaf of the tree
+structure shows the resource descriptor name, link and tools needed to perform
+the selected sub-task. Upon selecting an appropriate resource, the Display
+frame displays the content of the selected information resource. Users can
+expand and collapse the nodes in the tree structure to move to other resources.
+</p>
+
+<p>As shown in the Navigation tree frame of Figure 2, the Dissertation task
+consists of a number of sub-tasks. These sub-tasks were identified based on a
+needs study of student and faculty users, the university and division policies
+and best practices derived in the past few years. The DWE is therefore serves
+as a gateway to digital resources, policies, guidelines and best practices of
+DIS. The DWE is not merely a collection of resources or a set of Web Links, but
+rather an intelligent platform that incorporates reference services such as
+questions and answers, search strategies, best practices and past experiences
+that can be captured and used to facilitate performing various tasks. </p>
+
+<p>The use of DWE is simple and straightforward. A user enters the DWE URL on
+the web browser to be prompted to enter the user identification and password.
+Upon successful authentication, a personalised greeting message is displayed to
+the user. The user will navigate and activate the various frames of the DWE
+interface to select sub-tasks, sub-sub-tasks and information resources. The
+interface takes user information from the database and displays the appropriate
+navigation frame depending on the user category. For the Dissertation task,
+there may be some additional sub-task for faculty members that are not needed
+for students so that the navigation frame's tree nodes/sub-nodes are different
+for different categories of users. </p>
+
+<h3>Choosing a Representative Task</h3>
+
+<p>The Dissertation task that encompass the process of
+preparing and writing a dissertation is selected as a representative task in
+this prototype development due to the importance of the task, and knowledge of
+the well-established process that spans from selecting a research topic to the
+submission of the hard bound copies of the dissertation. The selected
+representative design will also be used to demonstrate the concept used in
+designing the DWE. </p>
+
+<p>In task based system design, priorities are normally given to the tasks that
+are viewed important and critical to the users and organization activities. In
+an academic environment, there are many tasks that are viewed by faculty and
+students as important. Carrying out an independent research project and writing
+a dissertation is considered an important task in the course. </p>
+
+<p>The techniques of user studies were used to define the associated tasks and
+information resources that are used in the Dissertation task. Faculty and
+student needs were elicited as well as best practices of the Division in
+accomplishing the task. As part of this, a workflow analysis was first carried
+out to determine the major tasks of a graduate student undertaking the
+programme. They are identified and grouped into four main group of tasks,
+namely, registration, coursework, dissertation and other activities (such as
+sports and games, social and cultural activities).&nbsp; As we have taken up
+dissertation as a representative task, a job analysis for the dissertation task
+was done. </p>
+
+<p>In conjunction with the job analysis, students using the Information Studies
+(IS) laboratory to carry out their dissertation work were approached and
+interviewed randomly to collect scenarios of the various aspects of the
+dissertation tasks.  This was used
+to derive a task list and task sequence. 
+Thus, the various sub-tasks, sub-sub-tasks (task hierarchies) of the
+representative tasks were identified. &nbsp;&nbsp;Following this, discussions and interviews were
+conducted with three professors, three research students, and a few graduate
+students to identify the information resources that were needed to perform
+these identified sub tasks. On the basis of this, a first-cut simple prototype DWE
+was designed.&nbsp; </p>
+
+<p>A focus group study was subsequently conducted to demonstrate the first
+version of the prototype and to further elicit user needs, requirements and
+feedback. All 10 faculty members of the IS Division and three research students
+took part in the study. Participants were briefed on the design of DWE, the structure
+of the various tasks and sub-tasks, and information resources needed for each
+sub-tasks.  They were invited
+to comment on the task hierarchy, the appropriateness of the information
+resources, and to highlight further improvements to the system.</p>
+
+<p>The participants suggested some improvements in the presentation aspects of
+information resources such as provision of help facilities, information about
+each resources, grouping of information resources according to students'
+individual projects, searching capability within a document, reaching a
+particular section of a document and re-arrangement of certain sub-tasks.  These inputs from the participants formed
+the basis for finalizing the task-hierarchy and information resources that are
+subsequently stored in the resources database. </p>
+
+<p>At the time of writing, the Division has accumulated over 400 dissertations,
+most of which are available in softcopy form. Students of this Division
+frequently refer to these dissertations for their dissertation work. Full time
+students normally start their project work at the end of the first semester and
+are expected to finish the dissertation by the end of the second semester. Part
+time students start their project at the beginning of the first semester of
+their second year and normally take two semesters to complete the project. The
+resources that are available in the DWE are therefore actively utilised during
+the whole course of the project. The system is expected to be augmented other
+additional tasks in future to create a fully functional DWE for the NTU
+academic community. </p>
+
+<h3>The Tasks of Writing a Master Dissertation</h3>
+
+<p>Students in the Division are required to undertake a
+research project and write a dissertation. This normally starts with selecting
+and deciding on a research project and a supervisor. Students normally are
+given the faculty profile and their research areas to facilitate the process of
+supervisor selection. The complete task of preparing for a dissertation can be
+broken into a number of sub-tasks that include: </p>
+
+<ul>
+ <li>Familiarity with rules and regulations</li>
+ <li>Familiarity with the guidelines to carry out the project</li>
+ <li>Selecting a topic</li>
+ <li>Finding faculty information and identifying potential supervisors</li>
+
+ <li>Deciding on the supervisor</li>
+ <li>Collecting information about necessary resources (e.g. computer and other equipment)</li>
+ <li>Writing a short research proposal</li>
+ <li>Submitting the topic and research proposal for approval</li>
+ <li>Preparing and writing a literature review</li>
+ <li>Deciding on the research methodology</li>
+
+ <li>Presenting the proposal</li>
+ <li>Data collection</li>
+ <li>Data analysis</li>
+ <li>Experiment or system development</li>
+ <li>Familiarity of the style guide and standards for writing dissertation</li>
+ <li>Preparing dissertation chapters</li>
+
+ <li>Preparing a bibliography</li>
+ <li>Submission of dissertation for examination</li>
+ <li>Binding of amended dissertation</li>
+ <li>Final submission</li>
+</ul>
+
+<p>At each sub-task, students will require different types of
+information and resources. Some of these might involve resource discovery and
+access to digital libraries and resources over the Internet. For example,
+selecting a topic for dissertation involves many sub-tasks, such as knowing the
+specialisation of faculty members, knowing completed dissertations, on-going
+dissertations, equipment or facility available, number of students working
+under each faculty member in the division, and so on. Sometimes students may
+need help from other division faculty members for their projects. In that case,
+students will need information about other division's faculty specialisation
+and their availability. Such tasks will form the basis of the various sub tasks
+for the different aspect of the Dissertation task. The prototype designed
+therefore provides such a structure of tasks and sub-tasks, and the information
+resources that are appropriate for these different sub-tasks. </p>
+
+<p>Taking another example, in preparing a literature review chapter, students
+need to tap into a wealth of resources to find similar studies and information
+related to their topic. These resources are not organized in any form and most
+of the time students find it hard to locate the right resources. Grouping these
+resources in one place for a specific task will facilitate the search process
+and shorten the time normally student spends in locating relevant resources.
+Providing merely links to resources might not be that effective in meeting the
+students needs. Therefore, providing additional tools such as intelligent
+agents, better search strategies, text and data mining will enable students to
+locate relevant resources and information in a more effective and efficient
+way. </p>
+
+<p>Figure 2 shows some of the resources that students could use in locating
+relevant information to their project. The first part lists recommended
+resources such as the ACM digital library, Electronic Thesis and Dissertations
+(ETD), IEEE digital library, Networked Digital Library of Thesis and
+Dissertations (NDLTD) and NTU GEMS library. The second part is e-journals,
+third part is OPACs, the fourth part is CD-ROM/Online databases and the fifth
+part is web search engines. Beside that student could use the search engine to
+look up information on the Internet in the Welcome frame.</p>
+
+<div align="center"><button onclick="window.open('p125fig3.gif','toolbar=no,resizable=yes,location=no,scrollbars=yes,width=1023,height=750')"
+style="background-color: #FFFFCc; font-family: sans-serif; font-size:
+medium; font-style: italic; font-weight: bold;">Figure 3: Task/sub-task inquiry interface
+interface</button></div>
+<div align="center"><strong>Close window after viewing to return to paper</strong></div>
+<p>The important aspect of the task-based design in DWE is that
+users are not bombarded with information, but rather presented with information
+as and when this information is needed. One of the biggest DL challenges today
+lies with organizing large number of documents and digital resources in a way
+that does not clutter the screen and yet provide an efficient and effective way
+of locating these resources. Figure 3 shows the interface in which the user can
+query the DWE stating the type of task or subtask they require information or
+help. Based on user keywords, the system will attempt to find the closest match
+and displays a list of tasks for user selection. </p>
+
+<div align="center"><button onclick="window.open('p125fig4.gif','toolbar=no,resizable=yes,location=no,scrollbars=yes,width=1023,height=750')"
+style="background-color: #FFFFCc; font-family: sans-serif; font-size:
+medium; font-style: italic; font-weight: bold;">Figure 4: Research methodology
+interface</button></div>
+<div align="center"><strong>Close window after viewing to return to paper</strong></div>
+
+<p>Figure 4 shows an example of a typical Intranet resource
+that could be identified by the user when selecting the relevant task in the
+task inquiry interface. In this instance, the page comes from the Division web
+site that is dedicated to Research Methodology, and contains a list of
+presentations that are used as part of the annual seminar series for students. </p>
+
+<div align="center"><button onclick="window.open('p125fig5.gif','toolbar=no,resizable=yes,location=no,scrollbars=yes,width=1023,height=750')"
+style="background-color: #FFFFCc; font-family: sans-serif; font-size:
+medium; font-style: italic; font-weight: bold;">Figure 5: Electronic thesis and dissertation display
+interface</button></div>
+<div align="center"><strong>Close window after viewing to return to paper</strong></div>
+<p>Figure 5 shows the display of dissertations from the
+Electronic Thesis and Dissertations (ETD) database for a phrase search
+&quot;Information Technology&quot;. The dissertation database is made available
+to users directly from DWE. Some of the facilities available for search
+include: phrase search, natural language search, phonic search, fuzzy search,
+and stemming search. </p>
+
+<p>In addition to accessing the information resources through a task-based
+approach, users are also given the option to list and select all the
+information resources that are available from the resources database. Figure 6
+shows an example of such a listing. Users can select and append these URLs
+directly into their personal space for reference and subsequent access. </p>
+
+<div align="center"><button onclick="window.open('p125fig6.gif','toolbar=no,resizable=yes,location=no,scrollbars=yes,width=1023,height=750')"
+style="background-color: #FFFFCc; font-family: sans-serif; font-size:
+medium; font-style: italic; font-weight: bold;">Figure 6: All resources display
+interface</button></div>
+
+<div align="center"><strong>Close window after viewing to return to paper</strong></div><div align="center"><strong>Close window after viewing to return to paper</strong></div>
+<h3>Personal space</h3>
+
+<p>A personal space facility is provided and displayed as a
+first folder in the tree structure. The rest of the folders vary according to
+user categories. Personal space folder leaves provide hyperlinks to add/search
+favourite links, references/publications and notes. It also has links to
+display user information such as category of users, last visited date, year of
+study and so on. A personal space therefore contains references, URLs and notes
+added directly by users. The system also facilitates users to add his/her
+favourite or frequently visited information resource. Users can store/save
+references/publications with hyperlink in their personal space for future
+reference. If a user come across some important quotes or notes he/she can record
+those information in his/her personal space. The use of personal space is
+restricted to his/her personal account so that it is unavailable to other
+users. </p>
+
+<h2>Conclusion</h2>
+
+<p>The proposed DWE provides a means by which digital resources
+and critical information can be organized and presented to the users. The main
+advantage of this approach is in its ability to present information and
+resources according to the users needs. Most of the digital resources gateways
+tend to list resources according to subject headings or categories of
+information. While this approach is acceptable when we deal with generic
+application, the task-based design provides an effective approach in a specific
+domain. Likewise, designing a digital work environment using the concept of a
+long list of resources or links implies that the user must browse, judge and
+select the most appropriate resource for their use. Often, most users do not
+see the value of the listed resources unless they require them to perform a
+specific task. The DWE system provides needed information resources by
+filtering out unwanted or unrelated information resources. The system has
+facility to support searching of all its resources/task/sub-task though the
+inquiry interface. In addition, the all-resources option facilitates users to
+browse a complete listing of resources given in alphabetical order. Finally,
+DWE provides a personal space for each user to record and store frequently used
+information resources, references to information and personal notes. </p>
+
+<p>The DWE prototype has been designed by using dissertation as a
+representative task. Other tasks will be incorporated into the system in a
+similar fashion. With a sufficient amount of populated data in DWE, the next
+stage of research will involve the evaluation of the prototype. </p>
+
+<h2>References</h2>
+
+<ul type=disc>
+ <li><a name="gam00"></a>Gambles, Anne. (2000)  &quot;<a href="http://www.dlib.org/dlib/april00/04inbrief.html#GAMBLES">Put Yourself in the PIE - The HeadLine Personal Information Environment.</a>&quot; <i>D-Lib magazine,</i> <b>6</b>,(4). Available at http://www.dlib.org/dlib/april00/04inbrief.html#GAMBLES  [Accessed 17th December 2001]</li><br>
+
+ <li><a name="bor99"></a>Borgman, C.L. (1999) <i>in: Source Book on Digital Libraries: Report for the National Science Foundation (TR-93-35-(439))</i> edited by Fox, E A. Blacksburg (VA): VPI and SU Computer Science Department. Available at:      http://fox.cs.vt.edu/DLSB.html.</li><br>
+
+ <li><a name="coh00"></a>Cohen, Suzane, Fereira, John, Horne, Angela, Kibbee, Bob, Mistlebauer, Holly and Smith Adam.  (2000) &quot;<a href="http://www.dlib.org/dlib/april00/mistlebauer/04mistlebauer.html">MyLibrary: personalised electronic services in the Cornell University Library</a>.&quot; <i>D-Lib Magazine, </i><b>6</b>( 4).&nbsp; Available at: http://www.dlib.org/dlib/april00/mistlebauer/04mistlebauer.html  [Accessed 18th December 2001]</li><br>
+
+ <li><a name="cou96"></a>Cousins, S. (1996) &quot;<a href="http://www-diglib.stanford.edu/diglib/WP/PUBLIC/DOC44.html">A task-oriented interface to a digital library</a>.&quot; <i>Proceedings of the CHI '96 Conference Companion on Human Factors in Computing Systems: Common Ground </i>pp. 103-104. Available at: http://www-diglib.stanford.edu/diglib/WP/PUBLIC/DOC44.html &nbsp;[Accessed 18th December 2001]</li><br>
+
+ <li><a name="dig01"></a>DIGILIB. (2001). Available at: <a href="http://www.architect.uq.edu.au/digilib/index.html">http://www.architect.uq.edu.au/digilib/index.html</a>     [Accessed 20 March 2001].</li><br>
+
+ <li><a name="dlf00"></a><a href="http://www.clir.org/diglib/dlfhomepage.htm">Digital Library Federation</a> (2000). Available at: http://www.clir.org/diglib/dlfhomepage.htm &nbsp;[Accessed 19th December 2001]</li><br>
+ 
+ <li><a name="dli01"></a><a href="http://www.dli2.nsf.gov/dlione/">Digital Libraries Initiative</a>. (2001). Available at: http://www.dli2.nsf.gov/dlione/   [Accessed 7 August 2001].</li><br>
+
+ <li><a name="eli01"></a><a href="http://www.ukoln.ac.uk/services/elib/">eLib: Electronic Libraries Programme</a>. (2001) Available at: http://www.ukoln.ac.uk/services/elib/</a>  [Accessed 7 August 2001]</li><br>
+	 
+ <li><a name="eve99"></a>EveryWare Development Inc.  (1999) &quot;Tango Enterprises 3:User's Guide.&quot;  Austin, TX: Pervasive Software.  [Note: EveryWare Development Inc. was acquired by Pervasive Software in 1998] </li><br>
+ 
+ <li><a name="fis98"></a>Fischer, G. and Lemke, A. (1998) &quot;Construction Kits and Design Environments: Steps Toward Human Problem-domain Communication.&quot; <i>Human Computer Interaction,</i><b>3</b>,(3), 179-222.</li><br>
+
+	 
+ <li><a name="fox99"></a>Fox, E.A. (1999) &quot;The Digital Libraries Initiative: Update and Discussion.&quot; <i>Bulletin of the American Society for Information Science</i>, 7-11.</li><br>
+	 
+ <li><a name="fox93"></a>Fox, E.A., Hix, D., Nowell, L.T., Brunei, D.J., Wake, W.C., Heath, L.S. and Rao, D. (1993) &quot;Users, User Interfaces, and Objects: Envison, a Digital Library.&quot; <i>Journal of the American Society for Information Science,</i><b>44</b>(8), 480-91.</li><br>
+	 
+ <li><a name="gou85"></a>Gould, J. and Lewis, C.(1985) &quot;Designing for Usability: Key Principles and What Designers Think.&quot; <i>Communications of the ACM,</i> <b>28</b>, (3), 300-311.</li><br>
+
+	 
+ <li><a name="ige01"></a>iGEMS. ( 2001). Available at: <a href="http://gemsweb.ntu.edu.sg/iGems/public.htm"> http://gemsweb.ntu.edu.sg/iGems/public.htm</a> [Accessed 7 August 2001].</li><br>
+	 
+ <li><a name="les91"></a>Lesk, M. (1991) &quot;The CORE Electronic Chemistry Library.&quot; <i>14th Annual International ACM/SIGIR Conference on R&amp;D in Information Retrieval,</i> Chicago, IL. pp. 92-112.</li><br>
+	 
+ <li><a name="lew93"></a>Lewis, C. and Rieman J. (1993) &quot;Task-centered User Interface Design - A Practical Introduction.&quot; <i>University of Colorado:</i> Boulder.</li><br>
+
+	 
+ <li><a name="mey00"></a>Meyyappan, N., Chowdhury, G. and Foo, S. (2000) &quot;A Review of the Status of 20 Working Digital Libraries.&quot; <i>Journal of Information Science,</i><b>26</b>, (5), 337-55.</li><br>
+	 
+ <li><a name="mic00"></a>Michelle, Q. and Wang, B.(2000) &quot;A User-Centered Interface for Information Exploration in a      Heterogeneous Digital Library.&quot; <i>Journal of the American Society for Information Science,</i> <b>51</b>,(3), 297-310.</li><br>
+
+	 
+ <li><a name="ncs01"></a><a href="http://www.ncstrl.org/">Networked Computer Science Technical Reference Library</a>. (2001). Available at:  http://www.ncstrl.org [Accessed 20 March 2001].</li><br>
+	 
+ <li><a name="ndl01"></a><a href="http://www.theses.org/">Networked Digital Library of Theses and Dissertations</a>. (2001). Available at: http://www.theses.org [Accessed 20 March 2001].</li><br>
+	 
+ <li><a name="opp99"></a>Oppenheim, C. (1999) &quot;What is the Hybrid Library?&quot; <i>Journal of Information Science,</i>      <b>25</b>,(2), 97-112.</li><br>
+
+	 
+<li>Wilson, S. and Johnson, P. (1996) &quot;Bridging the Generation Gap: From Work Tasks to User Interface Design.&quot;<i> in: Computer-Aided Design of User Interfaces,</i> edited by J. Vanderdonckt. Namur: Presses Universitaires de Manur.</li><br>
+</ul>
+<hr color="#ff00ff" size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper</p>
+		<p style="text-align : left; color : black;">Meyyappan, Narayanan,  Al-Hawamdeh, Suliman and Foo, Schubert  &nbsp;(2002)  &quot;Task based design of a digital work environment (DWE) for an academic community&quot; &nbsp; <em> Information Research</em>, <strong>7</strong>(2)  [Available at http://InformationR.net/ir/7-2/paper125.html] </p>
+<div align="center">&copy; the authors, 2001. <br>Last updated: 17th December 2001</div>
+
+<hr color="#ff00ff" size=3>
+	<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres72.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper125" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/7-2/paper125.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:13 GMT -->
+</html>

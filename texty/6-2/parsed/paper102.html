@@ -1,0 +1,713 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/6-2/paper102.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:24:42 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="<span>Microsoft</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>Word 97">
+<title>Bridging information requirements and information needs assessment: do
+scenarios and vignettes provide a link?</title>
+<link rev=made href="mailto:t.d.wilson@shef.ac.uk">
+<meta name="keywords" content="vignettes, critical incident <span>technique</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> information behaviour, research, methodology, object oriented analysis, use case scenarios, CRC  cards, storyline, scripts, information requirements, data <span>collection</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>engineering">
+<meta name="<span>description</span>" <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> content="The aim of the paper is to compare the philosophies of the vignette and critical incident techniques in information behaviour research, with the methodologies used in object oriented analysis such as use case scenarios and CRC (class, responsibility, collaboration) cards. The principles of object oriented analysis are outlined, noting the <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>on obtaining the &quot;storyline&quot; or &quot;scripts&quot; for information requirements analysis through use cases and CRC cards.&nbsp; The critical incident <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and vignettes are used to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>valid <span>interpretations</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of users&quot; information behaviour, using a storyline approach for data <span>collection</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(and analysis) which is similar to that of object oriented analysis. Some examples illustrate how techniques developed in object oriented analysis could be used for data display in information behaviour studies. Concludes that the methods developed by <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>engineering could be adapted usefully for information behaviour research.">
+<meta name="rating" content="Mature">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Bridging information requirements and information needs assessment: do scenarios and vignettes provide a link?">
+<meta name="DC.Creator" content="Christine Urquhart">
+<meta name="DC.Subject" content="vignettes, critical incident <span>technique</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> information behaviour, research, methodology, object oriented analysis, use case scenarios, CRC  cards, storyline, scripts, information requirements, data <span>collection</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>engineering">
+<meta name="DC.Description" content="The aim of the paper is to compare the philosophies of the vignette and critical incident techniques in information behaviour research, with the methodologies used in object oriented analysis such as use case scenarios and CRC (class, responsibility, collaboration) cards. The principles of object oriented analysis are outlined, noting the <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>on obtaining the &quot;storyline&quot; or &quot;scripts&quot; for information requirements analysis through use cases and CRC cards.&nbsp; The critical incident <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and vignettes are used to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>valid <span>interpretations</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of users&quot; information behaviour, using a storyline approach for data <span>collection</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(and analysis) which is similar to that of object oriented analysis. Some examples illustrate how techniques developed in object oriented analysis could be used for data display in information behaviour studies. Concludes that the methods developed by <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>engineering could be adapted usefully for information behaviour research.">
+<meta name="DC.Publisher" content="Information Research">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="<span>JavaScript</span>" <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.<span>length</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.<span>length</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+
+
+<link href="http://localhost/TEXTY/css/parser.css" rel="stylesheet" type="text/css" /></head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 6 No. 2, January 2001</h4></td></tr>
+  <tr> 
+    <td><a href="infres62.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="<span>search</span>" <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+<h1>Bridging information requirements and information needs assessment: do
+scenarios and vignettes provide a link?</h1>
+
+<h4 align="center"><a href="mailto:cju@aber.ac.uk">Christine Urquhart</a><br>
+Department of Information and Library Studies<br>
+University of Wales<br>
+Aberystwyth</h4>
+
+
+<div align="center"><b>Abstract</b></div>
+
+<blockquote>The aim of the paper is to compare the philosophies of the vignette and critical incident techniques in information behaviour research, with the methodologies used in object oriented analysis such as use case scenarios and CRC (class, responsibility, collaboration) cards. The principles of object oriented analysis are outlined, noting the <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>on obtaining the &quot;storyline&quot; or &quot;scripts&quot; for information requirements analysis through use cases and CRC cards.&nbsp; The critical incident <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and vignettes are used to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>valid <span>interpretations</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of users&quot; information behaviour, using a storyline approach for data <span>collection</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(and analysis) which is similar to that of object oriented analysis. Some examples illustrate how techniques developed in object oriented analysis could be used for data display in information behaviour studies. Concludes that the methods developed by <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>engineering could be adapted usefully for information behaviour research.</blockquote>
+
+<br>
+
+<h2>Introduction</h2>
+
+<p>With the <span>growing</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>emphasis</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>on <span>qualitative</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>research in studies of information
+behaviour, any relationship between information behaviour analysis and
+the structured approach to information requirements analysis of conventional
+<span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>analysis seems remote. Information behaviour research is concerned
+with a deeper understanding of information needs and use, through sense
+making as proposed by Dervin (1986) or, for example, <span>features</span>, <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> as proposed
+by <a href="#ref2">Ellis</a> (1989).<span>A+</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>later <span>integration</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by <a href="#ref5">Wilson</a> (1999) of the research in the field proposes a problem <span>solving</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>model which con0ers uncertainty,
+though in a slightly different manner from the phenomenological viewpoint
+of <a href="#ref2">Kulhthau&quot;s</a> view of uncertainty (1991). Conventional <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>analysis
+of the hard structured type (for example SSADM, Structured Systems Analysis
+and <span>Design</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>Methodology) <span>approaches</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>information requirements analysis with
+the aim of providing three views of the data. There is a formal role for
+the &quot;user&quot; in SSADM, but this &quot;user involvement&quot; may in fact be <span>limited</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+Structured methodologies can be criticised for their <span>failure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to involve
+the &quot;user&quot;, or fully comprehend their possible role. Inevitably, possibly
+the &quot;user&quot; role is often that of a nominal user representative. It might
+appear that these apparently very different <span>schools</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of thought have very
+little to learn from each other in the methods that are used to <span>investigate</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+analyse and &quot;display&quot; (<a href="#ref3">Miles &amp; Huberman, 1994</a>) the data collected in
+their investigations of user behaviour. New developments in object oriented
+analysis methods have similarities to the methods that might be used to
+<span>investigate</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>information needs and use in information behaviour studies.
+For example, object oriented techniques such as use case analysis and the
+development of use case scenarios are similar to the &quot;critical incidents&quot;
+and vignettes used in studies of information behaviour (<a href="#ref4">Urquhart &amp;
+Hepworth, 1995</a>) (<a href="#ref2">Davies <i>et al</i>, 1997</a>) (<a href="#ref4">Urquhart, 1999</a>). The <span>underlying</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>philosophy is similar though the physical manifestation may be different. For those using the techniques there may be opportunities to learn from the other
+<span>school</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of thought, particularly in the way the analysis of the data can
+be displayed - sometimes a <span>difficulty</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>for <span>qualitative</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>researchers when
+attempting to explain their analysis convincingly to those who are more
+attracted to quick <span>visual</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>overview rather than <span>reading</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>a long textual account.
+The <span>quality</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of <span>qualitative</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>research is often <span>judged</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>on the extent to which
+the results are credible. Enough raw data should be provided to give
+that evidence but the number of words produced in most <span>qualitative</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>research
+means that data should be condensed in a way which makes sense to
+those <span>reading</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the research reports. Charts and diagrams often help to focus
+a reader on the <span>main</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>themes which emerge from the data.</p>
+<br>
+<h2>Information <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and human activity systems</h2>
+
+<p>Object oriented analysis aims to overcome some of the problems of the structured
+methodologies (such as SSADM), which can become a rigid straitjacket on
+<span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>development. Efforts to reduce problems and redesign often appear
+to have the effect of discouraging the re-investigation of changing user
+needs. Soft <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>methodology, as developed by <a href="#ref1">Checkland</a> (1981) provides
+a general approach to the real, and messy problems of management in many
+organisations. <a href="#ref1">Checkland &amp; Holwell</a> (1998) argue that information systems
+are more than &quot;data manipulation&quot; <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and that the study of the human
+activity <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>is vital to an understanding of what an effective information
+system might look like.</p>
+
+
+<p>For <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>developers, communication between analyst and the system users
+is important and &quot;sharing a language&quot; (<a href="#ref1">Crowe <i>et al.</i>, 1996</a>) more than just a common understanding of the meaning of technical terms within the organisational
+<span>domain</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> There are subtleties of meaning and <span>interpretations</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of situations
+which need to be con0ered, and there are likely to be many differences
+between the &quot;formal rules&quot;, and what people <span>actually</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>do, and between what
+they think they are <span>expected</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to do, and what they would prefer to do. A
+study (<a href="#ref2">Davies <i>et al.</i>, 1992</a>) of an academic library illustrated the tensions
+that governed communication. Information <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>designers who ignore these
+disparities do so at their peril.</p>
+
+&nbsp;
+<h2>Development of use case scenarios and CRC cards</h2>
+
+<p>Understanding the &quot;stories&quot; that are told within the human activity <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>is thus an important part of <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>analysis though the extent to which this analysts
+<span>formally</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>document this varies. Often the possible &quot;scenarios&quot; are treated
+informally rather than <span>formally</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>as more effort is put into formal data
+analysis.</p>
+
+
+<p>One approach to object oriented analysis uses the concepts of <span>roles</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and <span>interactions</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Object Requirements Capture and Analysis, ORCA, (<a href="#ref3">McLean <i>et al.</i>. 1994</a>) is
+based on much the same premise as <a href="#ref1">Checkland&quot;s</a> Soft Systems Methodology
+(1981) in that analysis should not be based on a statement of initial requirements.
+The specifications <span>require</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>an understanding of the Old World, identification
+of problems and their causes, before proceeding to proposing justifiable
+changes for a New World.</p>
+
+<p><a href="#ref2">Jacobson</a> (1992) developed a more formal approach to scenarios with his Objectory
+method for object oriented technology. In this, the &quot;use case&quot; is introduced
+as a more formal method for requirements capture and initial planning.
+Use cases are usually associated with use case diagrams, and use case scenarios
+(and almost inevitably there are some variations in the ways these terms
+are interpreted and applied in practice). Fundamentally, they provide a
+way of depicting and structuring the <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of a real world Actor
+(person, organisation or external system) with the application being studied.
+The Actors are users of the system, and they have goals, or what could
+be viewed as &quot;things that must be done&quot;. For a retail system the goals
+or use cases <span>concern</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the &quot;ordering of goods&quot;, &quot;delivery of goods&quot; and &quot;payment
+for goods&quot;. The scenarios can be <span>divided</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>into the success scenarios, when
+all goes according to plan, and the extensions <span>deal</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>with use cases where
+there is a problem. The company may be out of stock, or the customer may
+wish to return the goods, or the payment method may be different. Sometimes
+it is important to <span>distinguish</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>between system <span>interactions</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and <span>actual</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>user
+goals, and <span>deal</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>with goals first, as suggested by <a href="#ref2">Fowler</a> (1997). For information
+service users the goal may be to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>a document: the system interaction
+may <span>concern</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the inter-library loan procedures. There should be a sequence
+of <span>interactions</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>in a compound system <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(and requesting an inter-library
+loan would be a compound interaction) and that <span>sequence</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>would be the basis
+of a scenario. For <a href="#ref1">Cockburn</a> (1997) the key <span>feature</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of a scenario is the
+absence of alternatives, and this definition of a scenario appears to relate
+closely to the Object Behaviour Analysis &quot;script&quot; as described by <a href="#ref3">Rubin
+&amp; Goldberg</a> (1992).</p>
+
+<p>One similar structured approach to user involvement in the process of object-oriented development is the use of CRC cards - Class, Responsibility and Collaboration cards. The <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>uses small teams, including users who are &quot;domain
+experts&quot;, with the aim of discovering the objects, the <span>classes</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that the
+system comprises, their responsibilities (what they do) and their collaboration,
+how they interact with other objects in the system. The <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>is aimed
+at a better, deeper understanding of the problem <span>situation</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>so that the
+information system developed provides a proper solution. Brainstorming
+is used to <span>derive</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>provisional <span>classes</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and behaviour and role-playing is
+then used to work through some scenarios, &quot;living the system&quot; according
+to <a href="#ref1">Bellin &amp; Simone</a> (1997). The use case methods have been developed
+in various other ways, e.g. task scripts, by <a href="#ref2">Graham</a> (1996), textual use
+case specifications in natural language as formulated by <a href="#ref3">Rolland &amp;
+Ben Achour</a> (1998) and flowgraphs to illustrate control flow <span>semantics</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+proposed by <a href="#ref4">Van den Berg &amp; Simon</a> (1999).</p>
+
+<p>What all these ideas on object oriented technology share is an <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>on the
+storyline - seeing the information system in terms of the events and <span>interactions</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+and the sequences which tell a meaningful story to the system users. There
+is an <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>also on identifying, and discovering what happens, or should
+happen when co-operations are faulty or the use cases are &quot;extended&quot; or
+become &quot;abuse cases&quot;.</p>
+
+<br>
+<h2>Scripts and stereotypes in information retrieval</h2>
+
+<p>There is an <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>on object oriented analysis on what <a href="#ref4">Schank &amp; Abelson</a>
+(1977) <span>term</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>&quot;scripts&quot;, usual patterns of <span>interaction</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and <a href="#ref2">Graham</a> (1996)
+has developed the idea of task scripts (for completion of goals) and 0e
+scripts (the stereotypical exceptions). Information retrieval research
+has also used the &quot;script&quot; concept in development of the user interface.
+In the model of information retrieval <span>design</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>proposed by <a href="#ref1">Belkin <i>et al.</a></i> (1995)scripts are proposed as prototypical <span>interactions</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> The scripts are construed
+as a pattern of moves, or &quot;abstract&quot; dialogues, the purpose of this research
+being the production of a better interactive information retrieval system
+which will <span>respond</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>appropriately to the stage the user is at in the <span>search</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+There are four proposed dimensions to any information seeking strategy:
+method of <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(scanning/searching), goal of <span>interaction</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(learning/selecting),
+<span>mode</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of retrieval (recognition/specification) and resource con0ered (information/meta-information). Information seeking <span>strategies</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>are then <span>represented</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>as example scripts, a series of moves required to achieve desired results, and for each strategy there will be a arrangement of goals which organise the set of moves. The problem, of course, is to predict the likely <span>combination</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of scripts which
+will correspond to the switches made by real users from one information
+seeking strategy to another.</p>
+
+<h2>Potential and <span>actual</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>information system use</h2>
+
+<p>Much of information <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>analysis in organisations is based on the premise
+that users will routinely be using the information system in their work,
+and that these <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>will be &quot;operative&quot; rather than &quot;supportive&quot; as
+defined by <a href="#ref3">Malmsjo</a> (1999). Many information <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of interest to library
+and information science professionals are &quot;supportive&quot; for users rather
+then &quot;operative&quot; and this distinction affects the <span>approaches</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that have
+to be taken to understanding user behaviour. We choose whether or not to
+use such &quot;supportive&quot; <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and often we choose whether or not to make
+use of the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>results obtained, for example. Actual system use may
+thus be a small proportion of potential use, and the <span>emphasis</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>in information
+behaviour research may be on the patterns of information need and use and
+the perceived preferences for certain information sources as <span>opposed</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to
+others. Similarly, we may <span>obtain</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>information, in the form of the output
+of a database <span>search</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> but the <span>actual</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>impact or use in practice may be hard
+to assess, as the <span>actual</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>use may be some time in the <span>future</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></p>
+
+<h3>Assessing patterns of <span>actual</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>use of information retrieved</h3>
+
+<p>Mapping possible patterns of use is difficult with so many variables affecting
+use or potential use. <a href="#ref4">Smithson</a> (1989) examined the contribution of cited
+references in students&quot; dissertations of an online <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>found that a
+small (and individually variable) percentage of <span>documents</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>retrieved actually
+contributed to the students&quot; dissertations. Some of the problems concerned
+the users&quot; inability to find the <span>documents</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to make a final judgment. <a href="#ref5">Wang</a>
+(1996) obtained similar <span>findings</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>in a study of research <span>students</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and faculty
+working on a research project, and suggests that subtle changes in information
+needs while working on a project can be mapped by changes in cognitive
+structures. Needs and estimations of relevance alter in some way and the
+success of a <span>search</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> whether done by an intermediary or by the user, will
+be hard to judge in terms of the contribution made to a <span>list</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of references.
+On the other hand, such objective evidence of effective system use (or
+ineffective system use) may be an indicator of the success (or not) of
+a training programme, and more meaningful when training is delivered informally,
+rather than in formal classroom settings. In that case it may be necessary
+to track trends in time and <span>con0er</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the behaviour of a cohort, rather
+than the behaviour of individuals within a cohort. One aim of the GIVTS
+project (1999) was the evaluation of the effectiveness of Internet training
+on evidence-based sources through analysis of the references cited in audit
+project reports, which form part of the summative assessment required for
+general (family) practitioner trainees in the UK. It <span>proved</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>impossible
+to evaluate the training itself, but <span>investigation</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the data provided
+(titles of projects plus references) did show variations in the emphasis
+placed on <span>quality</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>sources of information. There are many factors involved
+- the formulation of questions around the clinical problem <span>topic</span>, <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> the emphasis
+placed on the need for a systematic review of the literature, accessibility
+of databases, development of an appropriate <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>strategy, skills for
+searching, and critical appraisal skills. It is somewhat paradoxical that
+<span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>which are &quot;supportive&quot; may be anything but supportive in practice
+for the inexperienced and infrequent user. If the system is supportive,
+and all the external conditions are right, then the user can negotiate
+an effective route for information seeking, assessment and use. The problem
+is that of co-ordination and <a href="#ref4">Spink</a> (2000) emphasises the importance of
+the information feedback loop as the basis of human information co-ordinating
+behaviour.</p>
+
+
+<p>Studying feedback implies that studies of information behaviour should include longitudinal studies, such as the &quot;Uncertainty&quot; project (<a href="#ref5">Wilson, 1999</a>).The problem for
+longitudinal studies is the time required, and, related to that, the risks
+of a high drop-out rate. For example, of 34 video-recorded (with concomitant
+field observations) users of OPAC machines in one study, only four of the
+subjects for the recorded cases took part in the longitudinal study (<a href="#ref5">Zeitlyn
+<i>et al.</i>, 1999</a>).</p>
+
+<br>
+<h2>Identifying general patterns of information use</h2>
+
+<p>Identifying the longitudinal development of information seeking behaviour is not, apparently, an easy task, though there have been some studies which track the behaviour of an individual (e.g. a case study by <a href="#ref3">Kuhlthau</a> (1997) of an individual,
+starting from <span>secondary</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>school, through university and to work as a securities
+analyst). Those developing and funding information services would like
+to predict with more <span>accuracy</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the likely take-up of new services, the barriers
+which might have to be overcome to make the service truly supportive and
+the opportunities which the users perceive, and learn to perceive, from
+their <span>perspective</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> of the services. From the marketing point of view, information
+managers need to assess the likely segments of the market for services.</p>
+
+
+<p>In view of the <span>difficulty</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of studying information behaviour over a long period
+of time, or what might be termed the whole story, other techniques have
+been used to capture brief <span>episodes</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>in the story. This section discusses
+some examples of these techniques and their <span>applications</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> showing some
+similarities between the general philosophy of this approach and the use
+case scenario ideas of object oriented analysis.</p>
+
+<h3>Critical incident technique</h3>
+
+<p>One <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>which may be used to help identify patterns of use or potential
+use, is the critical incident <span>technique</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> which examines a brief, but memorable
+information seeking <span>episode</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> It is therefore useful for examination of
+the occasional, or at any rate non-compulsory, use of &quot;supportive&quot; information
+<span>systems</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Often the incident is explored through an interview, but it is
+possible to use a questionnaire format. In the Value project (<a href="#ref4">Urquhart
+&amp; Hepworth, 1995</a>) the <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>was used to examine the patterns of
+information seeking behaviour among groups of doctors. <span>A+</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>critical incident
+questionnaire was sent once a week for four weeks to the <span>sample</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(just under
+300 medical staff (hospital staff and general practitioners) at 11 sites)
+asking, for one incident in the previous week, the <span>purposes</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>for which information
+was <span>sought</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> the sources used, and the <span>degree</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of success obtained. <span>A+</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>similar
+<span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>was used in the EVINCE project (<a href="#ref2">Davies <i>et al.</i>, 1997</a>) to analyse
+the patterns of information behaviour among nursing, midwifery and health
+visiting staff. The type of questions which could be answered through this
+application of the critical incident <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>were:</p>
+
+<p>What are the <span>purposes</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>associated with use of colleagues (informal sources of
+information)?</p>
+
+<p>Results for medical staff indicated clearly that personal <span>education</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and updating
+was often associated with the need for information on a rare condition
+or specific patient problem. Nursing staff <span>appeared</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>to use colleagues as
+information sources more than the doctors did, with informal updating linked
+in this case more usually to drug therapy queries. The nurses&quot; pattern
+was more complex than that of the doctors, reflecting their needs for information
+for <span>teaching</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and mentoring colleagues, patient <span>education</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and patient care
+administration.</p>
+
+<p>The results could thus be analysed to show the patterns of <span>purposes</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>associated with particular sources of information, and, similarly the patterns of sources
+associated with particular <span>purposes</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of information need. Both surveys demonstrated
+convincingly that the library use was closely associated with formal and
+informal continuing <span>education</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>needs, and research, rather than patient
+care problems on their own. For doctors, use of a database such as MEDLINE
+was primarily associated with personal research needs, while for nurses
+<span>computer</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>based resources such as the CINAHL database was primarily for
+formal course work.</p>
+
+<p>The critical incident <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>may also be used to profile groups of users,
+as was possible with the Value project results. For EVINCE, various groupings
+were <span>attempted</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>but there were few significant differences between the groups,
+suggesting either that the <span>sample</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>sizes were too small to show an effect
+(possible) or that differences in information behaviour among nursing staff
+are likely to be at the individual level, not at group level. One could
+not therefore predict the likely patterns of information behaviour on the
+basis of the assigned task role and place of work (hospital versus <span>community</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+for example).</p>
+
+<p>Critical incidents, to some extent, <span>represent</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>information use &quot;stories&quot; which are
+complete or near complete. Replication of the techniques in other setting
+provides a means of tracking changes in information behaviour of the groups
+in general. <a href="#ref1">Bradshaw</a> (1997), for example, adapted the Value and EVINCE
+methodology for a study of networked <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>services in one hospital <span>setting</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+and <span>extended</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the methodology to cover social workers, and clinical psychologists.
+The <span>findings</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>suggested, for example, that networking did affect the patterns
+of use, but that the motivation for use (education (course work for nurses)
+and research) remained similar to the Value and EVINCE results.</p>
+
+<h3>Vignettes</h3>
+
+<p>Vignettes are short scenarios presented to subjects, who are then asked to describe their possible actions in those circumstances (or else to describe how
+they think others would react in the circumstances). Vignettes have been
+used to prompt information users into revealing their information seeking
+<span>strategies</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and <span>choice</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of information sources (<a href="#ref4">Urquhart, 1999</a>), when direct
+questioning might be less productive. <a href="#ref4">Van de Wijngaert</a> (1999) has used
+a similar <span>technique</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> policy capture analysis, to examine media choices
+among <span>students</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> The aim of vignettes used in this way is to present a realistic
+<span>situation</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>with which the subjects can identify. Similar aims appear to
+have led to the inclusion of a simulated work task <span>situation</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>as one of
+the sub-components <span>investigated</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>for an interactive information retrieval
+<span>framework</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>by <a href="#ref1">Borlund</a> (2000). The effectiveness of the simulated work task
+<span>situation</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>was compared with the simple indicative request and the subjects&quot;
+own information needs. Results <span>suggest</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that the simulated work task situation
+<span>produces</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the same behaviour as the real information needs, although subjects
+spent longer on their own needs. In comparing the simulated work task situations
+with the indicative requests, a more mixed picture emerges, and this reflects
+the observations that some EVINCE vignettes worked better than others,
+generally when the subjects had some experience of the <span>situation</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> or the
+<span>topic</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>was of <span>universal</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>interest (<a href="#ref4">Urquhart, 1999</a>), a <span>finding</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>which Borlund
+confirmed for their evaluation <span>setting</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></p>
+
+<br>
+<h3>Vignettes in data analysis and presentation</h3>
+
+<p>Vignettes may also be used to present data analysis, an example in the information
+studies field being the narrative &quot;week in the life of&quot; a social services
+department in Project INISS (<a href="#ref5">Wilson &amp; Streatfield, 1980</a>).The aim is
+to condense the mass of textual information into a meaningful display which
+should fulfil several functions, but notably one of allowing the reader
+an insight into how the data was analysed in a particular research context.
+Vignettes may be used iteratively to help the researcher and subject agree
+on a common understanding of the <span>situation</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(e.g., <a href="#ref2">Greenhalgh <i>et al.</i>, 1998</a>)
+and for use cases in <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>development that common understanding is the
+aim. To develop an information system, however, the interest is not simply
+in the &quot;average&quot; or &quot;representative behaviour as might be expressed in
+the <span>primary</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of &quot;happy day&quot; scenario but also in the <span>secondary</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>or alternative
+scenarios which <span>deal</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>with the exceptions to the <span>primary</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>scenario. Use case
+diagrams have rules for how to display the extensions to the <span>primary</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>use
+case, and in some complex conditions it may be better to draw the secondary
+scenario separately (see <a href="#ref3">Schneider &amp; Winters, 1998</a>, for example).</p>
+
+<br>
+<h2>Applications of scenarios in information behaviour studies</h2>
+
+<p>Formal scenario <span>writing</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> with the amount of detail required to document the flow
+of events, is possibly not a <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that can be used in its entirety
+in studies of information behaviour but there are ideas that might be borrowed
+and <span>extended</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>in a different way. Documenting and displaying information
+seeking pathways in use case type diagrams, showing optional sequences
+of events, can help debate these issues. Too often users&quot; information seeking
+problems are seen solely in terms of &quot;access to resources&quot; but users&quot; reasons
+for seeking new information (or not), and their <span>estimation</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the benefits
+to be obtained are often far more complex (<a href="#ref4">Urquhart, 1999</a>). Where there
+are choices to be made, with a plethora of electronic information sources
+available, influencing events and optional sequences can be mapped using
+use case diagram ideas, and some of the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>strategies</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>used by students
+in the JUSTEIS project, First Cycle (2000, Section 6.6)</p>
+
+
+<p>The <span>figures</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(Figures 1, 2, 3) illustrate some of the alternative and supplementary
+routes chosen by <span>students</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>when their <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>route demands that. In Figure
+1 &quot;update using NASA web site&quot; is a <span>regular</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>search scenario which supplements
+the <span>primary</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>scenario of <span>finding</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>course notes on the Web to complete a laboratory
+report. The student also uses the library for background <span>reading</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and books,
+to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>alternative references that may be unique (that other students
+would not obtain).</p>
+
+<div align="center"><img src="p102fig1.gif" width="560" height="312" border="0" alt=""></div> 
+<div align="center">Figure 1: Finding course notes scenario</div>
+
+<p>Figure 2 illustrates that the process of searching for
+recent journal <span>reference</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> using BIDS ISI was prompted by an IT course given
+to the student on BIDS. The student scans, and reviews the results of the
+<span>search</span>, <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and if the selected journals are not available, repeats the search
+by scanning using different keywords. Occasionally a <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of electronic
+journals (full-text) contributes to the review stage.</p> 
+
+<div align="center"><img src="p102fig2.gif" width="564" height="412" border="0" alt=""></div> 
+<div align="center">Figure 2: Searching for recent journal references for <span>laboratory</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>write-up</div>
+
+<p>In <span>Figure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>3, the <span>failure</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of a link led the student to revert to emailing personal contacts.</p>
+
+<div align="center"><img src="p102fig3.gif" width="511" height="323" border="0" alt=""></div> 
+<div align="center">Figure 3: Locating information on a sports team</div>
+
+<p>These Figures <span>represent</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>preliminary work on the data display, and would
+be refined in the light of further data analysis and discussion.&nbsp;
+Such diagrams can be used to illustrate graphically to those involved in
+training in use of electronic information services just what <span>students</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>do
+in the process of searching, the ways in which they might revise their
+searching <span>strategies</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(JUSTEIS 2000, Section 6.2.3),&nbsp; and the way in
+which advice from academic staff and LIS staff is <span>sought</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and acted on,
+in the process of the <span>search</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>&nbsp; Diagrams which show by the &quot;extend&quot;
+<span>notation</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>which other 'scripts' are used in the searching process help to
+make sense of a vast mass of textual data from interview transcripts.&nbsp;
+Such real-life examples provide a valuable feedback into training needs
+analysis for library and information services, as well as showing graphically
+the <span>actual</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>search <span>strategies</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that <span>students</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>adopt.&nbsp; It is a more informative
+way of representing <span>findings</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>than merely reporting the relative popularity
+of various sources.&nbsp; There are some limitations, of course, in that
+some <span>students</span>' <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> searching <span>strategies</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>are (apparently) rather muddled and
+constraints on their time <span>limit</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the alternative routes they are willing
+to try.&nbsp; Even so, the <span>strategies</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>are worthy of some more formal analysis.</p>
+
+<br>
+<h2>CRC cards and <span>focus</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>groups</h2>
+
+<p>Focus groups are now <span>frequently</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>used in LIS research, often with the aim of encouraging participation and stimulating thought to providing unexpected insights
+and <span>contributions</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>that might be less easy to <span>obtain</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>in a one-to-one interview
+(<a href="#ref2">Goulding, 1997</a>). One <span>assumption</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of <span>focus</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>groups is that the group effect
+will produce more <span>details</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>about information behaviour than might be obtained
+from one-to-one interviewing. Similarly, the brainstorming used in the
+CRC card <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>is used on the basis of the benefits of group problem
+<span>solving</span>. <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> It is debatable whether brainstorming does in fact produce more
+ideas about a problem than might be obtained from the group working individually
+(<a href="#ref1">Buchanan &amp; Huczynski, 1997</a>) but for the <span>purposes</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of information needs
+or information requirements <span>discussions</span>, <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> CRC cards or <span>focus</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>groups may
+encourage a shared understanding of the concepts, the events and procedures
+that may be involved in an information system or <span>situation</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Using a modified
+CRC card <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>may help, for example, in structuring <span>focus</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>group data
+to illustrate the responsibilities and <span>roles</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of the stakeholders in an
+information seeking <span>situation</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> The CRC <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>is aimed, of course, at
+system development and therefore make use of documentation that states
+system requirements, reports generated, as well as interviews with users.
+The <span>main</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>function of CRC <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>is to examine the system behaviour and
+ensure that the developers do discover and define the right <span>classes</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>required
+for <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>development. The <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>makes <span>extensive</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>use of brainstorming
+and role play.&nbsp; One aim of the role play is to find the <span>false</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>assumptions,
+the bits of the system that do not work together in quite the way some
+people might <span>assume</span>. <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> At this stage of the JUSTEIS (2000) work one can only
+make speculate what the results of the second cycle will add to the first
+cycle <span>findings</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> but there are indications from the data that there is some
+<span>degree</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of mismatch between expectations of patterns of service use and
+<span>actual</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>use of information services.&nbsp; The structured role play that
+CRC involves could be adapted to the training <span>situation</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> so that focus
+groups could first <span>investigate</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>the <span>situation</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>generally, and then in a second
+round of <span>focus</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>groups analyse <span>exactly</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>what might be happening (or not happening)
+through structured role play.</p>
+
+<br>
+<h2>Conclusion</h2>
+
+<p>Techniques such as the critical incident <span>technique</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and vignettes are used at various
+stages in the data <span>collection</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and analysis of information behaviour. Such
+techniques share, to a greater or lesser extent, the idea of a &quot;story&quot;
+or &quot;sense-making&quot; storyline, which is useful in either eliciting details
+about information behaviour from users or displaying data meaningfully.
+Asking users for <span>details</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of their experience in an information seeking
+incident, or presenting them with a realistic scenario, seems more likely
+to elicit a more <span>valid</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>interpretation of information behaviour than might
+be obtained from transaction logging or asking about frequency of information
+<span>source</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>use. Similarly, analysing <span>observational</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>data using the vignette
+provides a meaningful method of data display which can be discussed with
+users and then refined if necessary.</p>
+
+
+<p>More recent developments in information requirements analysis in <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>development in object oriented technology are working on <span>parallel</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span><span>lines</span>, <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> though there
+is little sign of any cross-fertilisation between ideas and techniques
+used by researchers working in information behaviour and and those used
+by <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>analysts. This paper has shown the similarities in the <span>approaches</span>, <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>
+despite the differing provenance (software engineering and information
+science). The CRC card techniques, and the use case diagram techniques
+used in object oriented analysis may be useful in helping to structure
+and present data in information behaviour studies, and may help communication
+with the research subjects. Such structured techniques from the field of
+<span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>analysis might help overcome some of the problems of data display
+for <span>qualitative</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>research in information seeking and use.</p>
+
+<h2><a name="ref1"></a>References</h2>
+<ul>
+<li>Belkin, N. <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>, Cool, C., Stein, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and Thiel, U. (1995) “Cases, scripts, and information-seeking strategies: on the <span>design</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of interactive information retrieval <span>systems</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>“ <i>Expert Systems with Applications,</i> <b>9</b>, 379-395.</li>
+
+<li>Bellin,D. and Simone, S. S. (1997) <i>The CRC card book.</i> Reading, MA: Addison-Wesley.</li>
+
+<li>Borlund, P. (2000) “Experimental components for the evaluation of interactive information retrieval <span>systems</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>” <i>Journal of Documentation,</i> <b>56</b>, 71-90.</li>
+
+<li>Bradshaw, C. M.(1997) <i>An evaluation of the contribution of networked <span>CD-ROM</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>information services to reflective practice and clinical decision making at Ashworth
+Hospital Authority. </i>MSc dissertation. Manchester, UK: Manchester Metropolitan
+University.</li>
+
+<li>Buchanan, D. and Huczynski, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1997) <i>Organizational behaviour: an introductory text. 3rd</i> edition. London: Prentice-Hall. pp.276-280.</li>
+
+<li>Checkland, P. and Holwell, S.(1998) <i>Information, <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and information systems: making sense of the field.</i> Chichester: Wiley.</li>
+
+<li>Checkland, P. B.(1981) <i>Systems thinking, <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>practice.</i> Chichester: John Wiley.</li>
+
+<li>Cockburn, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1997) “Goals and use cases.” “Using goal-based use cases.” (series
+of two articles) <i>Journal of Object Oriented Programming</i>, 35-40 and 56-64 (also available online at http://members.aol.com/acockburn/papers/usecases.htm [Accessed 20 August 1999]</li>
+
+<li>Crowe, M., Beeby, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and Gammack, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1996) <i>Constructing <span>systems</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and information: a process view.</i> Maidenhead: McGraw-Hill. pp.98-108.</li>
+
+<li><a name="ref2"></a>Davies, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>, Kirkpatrick, I. and Oliver, N. (1992)&nbsp; "The organisational culture of an academic library: implications for library strategy .”<i>British
+Journal of Academic Librarianship,</i> <b>7</b>, 69-89.</li>
+
+<li>Davies, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>, Urquhart, C.<span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>, <span>Smith</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>, Massiter, C. and Hepworth, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>B.(1997)
+<i>Establishing the value of information to nursing continuing education:
+report of the EVINCE project.</i>  Boston Spa: BLDSC. (British Library RIC report 44)</li>
+
+<li>Dervin, B. and Nilan, M. (1986) “Information needs and uses.” <i>Annual Review
+of Information Science and Technology,</i> <b>21</b>, 3-33.</li>
+
+<li>Ellis, D. (1989) “A behavioural approach to information retrieval <span>design</span>. <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>” <i>Journal of Documentation,</i> <b>45</b>, 171-212.</li>
+
+<li>Fowler, M.(1997)&nbsp;UML distilled: applying the standard object modeling language.Reading, MA: Addison Wesley. p.44.</li>
+
+<li>Goulding, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1997) “Joking, being aggressive and shutting people up: the use of
+<span>focus</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>groups in LIS research.” <i>Education for Information,</i> <b>15</b>,
+331-341.</li>
+
+<li>Graham, I.(1996) “Task scripts, use cases and scenarios in object oriented analysis.”<i>Object Oriented Systems</i>, <b>3</b>, 123-142.</li>
+
+<li>Greenhalgh, T., Helman, C. and Chowdury, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> M. (1998) “Health <span>beliefs</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>and folk models of diabetes in British Bangladeshis: a <span>qualitative</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>study.” <i>British Medical Journal,</i> <b>316</b>, 978-983.</li>
+
+<li>Jacobson, I., Christersen, M., Jonsson, P. and Overgaard, G. (1992) <i>Object-oriented <span>software</span>  <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>engineering: a use case driven approach</i>. Reading, MA: Addison-Wesley.</li>
+
+<li>JUSTEIS (2000)&nbsp; JISC Usage Surveys: Trends in Electronic Information Services.(First cycle report) Online. [Available: http://www.dil.aber.ac.uk/dils/Research/Justeis/JISCTop.htm.]</li>
+
+<li>Kuhlthau, C.C. (1991) “In0e the <span>search</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>process: information seeking from the user’s <span>perspective</span>. <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>” <i>Journal of the American Society for Information Science,
+</i> <b>42</b>, 361-371.</li>
+
+<li><a name="ref3"></a>Kuhlthau, C.C. (1997) “The influence of uncertainty on the information seeking behaviour of a securities analyst,” in: <i>Information seeking in context: proceedings of an international conference on research in information needs, seekingand use in different <span>contexts</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></i> 14-16 August 1996, Tampere, Finland, edited by P. Vakkari, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Savolainen, B. Dervin. London: Taylor Graham. pp. 268-274.</li>
+
+<li>Malmsjo, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(1999).“ Conditions for designing different <span>kinds</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of information <span>systems</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>” in: <i>Exploring the <span>contexts</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of information behaviour, proceedings of
+the second international conference on research in information needs, seeking
+and use in different <span>contexts</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> </i>13-15 August 1998, Sheffield, UK, edited
+by T. D. Wilson and D. K. Allen. London: Taylor Graham. pp. 609-625.</li>
+
+<li>McLean, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>, Stepney, S., <span>Smith</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> S., Tordoff, N., Gradwell, D., Hoverd, T. and Katz, S. (1994) <i>Analysing systems: determining requirements of object-oriented
+development</i>. London: Prentice Hall.</li>
+
+<li>Miles, M.B., and Huberman, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>M.(1994) <i>Qualitative data analysis</i>. 2nd
+edition. London: <span>Sage</span>. <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></li>
+
+<li>Rolland, C., and Ben Achour, C. (1998) “Guiding the construction of textual use case specifications.” <i>Data &amp; <span>Knowledge</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>Engineering,</i> <b>25</b>, 125-160.</li>
+
+<li>Rubin, K. and Goldberg, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1992)&nbsp; “Object behavior analysis.” <i>Communications of the ACM</i>, <b>35</b>, 48-62.</li>
+
+<li>Schank, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>C. and Abelson, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(1977) <i>Scripts, plans, goals and understanding.&nbsp;</i>Boston, MA: Lawrence Erlbaum.</li>
+
+<li>Schneider, G. and Winters, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>P. (1998) <i>Applying use cases: a <span>practical</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>guide.</i> Reading, MA: Addison Wesley.</li>
+
+<li>Smithson, S.(1989) “The evaluation of information retrieval systems: a case study
+approach,” in: <i>Prospects for intelligent retrieval: Informatics 10,
+</i>proceedings of a conference jointly sponsored by Aslib, Aslib Informatics
+Group and the BCS Information Retrieval Specialist Group, 21-23 March 1989,
+Cambridge. London: Aslib.</li>
+
+<li><a name="ref4"></a>Spink, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (2000)“ Toward a theoretical <span>framework</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>for information science.” <i>Informing Science&nbsp; <b>3</b>, 73-75. [Available online at http://www.inform.nu/Articles/Vol3/inedxv3n2.htm Accessed 14 February 2000]</li>
+
+<li>Urquhart, C.<span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>(1999)&nbsp; <i>Models of information value based on reliability and risk for clinical decision making</i>. Aberystwyth: University of Wales Aberystwyth, PhD thesis, Chapter 5.</li>
+
+<li>Urquhart, C.<span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1999)&nbsp; “Using vignettes to diagnose information seeking strategies: opportunities and possible problems for information use studies of health professionals”, in: <i>Exploring the <span>contexts</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of information behaviour: proceedings of the 2nd international conference on research in information needs, seeking and use in different contexts</i>, 13-15 August 1998, Sheffield, UK, edited by T.D. Wilson
+and D.K. Allen. London: Taylor Graham, pp. 277-289.</li>
+
+<li>Urquhart, C.<span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and Hepworth, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>B.(1995) <i>The value to clinical decision making of information supplied by NHS library and information services.</i>  Boston Spa: BLDSC. (British Library R&amp;D Report 6205.)</li>
+
+<li>Urquhart, C., Massiter, C., Thomas, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>, <span>Smith</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> and Sharp, S. (1999) <i>Getting information to vocational trainees: report of the GIVTS project.</i>. London: LIC. (Library and Information Commission Research Report 26) [Also available at http://www.dil.aber.ac.uk/dils/Research/RFocus5/5sub/Resource/GIVTS0.htm]</li>
+
+<li>Van de Wijngaert, L. (1999) “A policy capturing study of media choice: the effect
+information of needs and user <span>characteristics</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>on media <span>choice</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>” in: <i>Exploring
+the <span>contexts</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of information behaviour: proceedings of the 2nd international
+conference on research in information needs, seeking and use in different
+contexts</i>, 13-15 August 1998, Sheffield, edited by T.D. Wilson and
+D.K. Allen. London: Taylor Graham. pp.463-478.</li>
+
+<li>Van den Berg, K.G., and Simon, <span>A+</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>J.H. (1999) “Control-flow <span>semantics</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of
+use case in UML.”<i>Information and Software Technology,</i> <b>41</b>, 651-659.</li>
+
+<li><a name="ref5"></a>Wang, P. (1997) “Users’ information needs at different stages of a research project: a <span>cognitive</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>view,” in: <i>Information seeking in context: proceedings of
+an international conference on research in information needs, seeking and
+use in different <span>contexts</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span></i> 14-16 August 1996, Tampere, Finland, edited
+by P. Vakkari, <span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> Savolainen, B. Dervin. London: Taylor Graham. pp. 307-318.</li>
+
+<li>Wilson, T.D. (1999) “Exploring models of information behaviour: the “Uncertainty”
+project,” in:. <i>Exploring the <span>contexts</span>  <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>of information behaviour, </i>proceedings
+of the second international conference on research in information needs,
+seeking and use in different <span>contexts</span>, <span class="conce" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> 13-15 August 1998, Sheffield, UK,
+edited by T.D. Wilson and D.K. Allen. London: Taylor Graham. pp.55-65.</li>
+
+<li>Wilson, T.D.(1999) “Models in information behaviour research.” <i>Journal of Documentation,</i> <b>55</b>, 249-270.</li>
+
+<li>Wilson, T.D., and Streatfield, D.<span>R++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1980) <i><a href="http://informationr.net/tdw/publ/INISS">You can <span>observe</span>  <span class="exper" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>a lot…A study of information use in local authority social service departments</a></i>. Sheffield:
+University of Sheffield Postgraduate School of Librarianship and Information
+Science. (Occasional <span>Publications</span>  <span class="quali" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>no. 12) [Retrieved 12 August 2003 from http://InformationR.net/tdw/publ/INISS]</li>
+
+<li>Zeitlyn, D., David, M., Bex, <span>J++</span>. <span class="compus" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span> (1999) <i>Knowledge <span>lost</span>  <span class="quanti" style="width:1px;border-width:87px 29px 87px 29px;position:relative;">.</span>in information: patterns
+of use and non-use of networked bibliographic resources.</i> London: King’s College, (BLRIC report RIC/G/313) (Office for Humanities Communication, Publication no.11) </li>
+</ul>
+
+<hr color="#ff00ff" size="3">
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+
+<p style="text-align : left; color : black;">Urquhart, Christine  (2001) &nbsp; &quot;Bridging information requirements and information needs assessment: do scenarios and vignettes provide a link?&quot;. &nbsp;Information Research, <strong>6</strong>(2)  Available at: http://InformationR.net/ir/6-2/paper102.html</p>
+
+<p style="text-align : center">&copy; the author, 2001.  Updated: 19th December 2000</div>
+
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;q=link:qRkEE9XJp6sJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres62.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><h5 align="center"><img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper102" align=middle  width=60 height=20 border=0 hspace=4 vspace=2><br><a href="http://www.digits.com/">Web Counter</a></h5></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>		
+<hr color=#ff00ff size=3>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/6-2/paper102.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:24:42 GMT -->
+</html>

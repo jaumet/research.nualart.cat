@@ -1,0 +1,345 @@
+<html>
+
+<!-- Mirrored from informationr.net/ir/4-3/paper58.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:22 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<title>Back door entries, invisible ink, and false drops on the Web</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="VW96.objecttype" content="Document">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="Back door entries, invisible ink, and false drops on the Web">
+<meta name="DC.Creator" content="">
+<meta name="DC.Subject" content="">
+<meta name="DC.Description" content="">
+<meta name="DC.Publisher" content="Professor T.D. Wilson">
+<meta name="DC.Coverage.PlaceName" content="Global">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 4  No. 3, February 1999</h4></td></tr>
+  <tr> 
+    <td><a href="infres43.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+
+
+<h1>Back door entries, invisible ink, and false drops on the Web: an interim research note</h1>
+<br>
+<h4><a href="mailto:clb24@buffalo.edu ">Christopher Brown-Syed</a><br>
+Visiting Assistant Professor<br>
+Library &amp; Information Studies Department<br>
+University at Buffalo, State University of New York<br>
+Buffalo, New York 14260</h4>
+
+
+<p>This note concerns two phenomena which are the subject 
+of ongoing research at Wayne State University in Detroit, Michigan, USA.
+The overall aim of the current investigation is to 
+identify header and text elements which will assist researchers in 
+determining quickly the relevance, authenticity, and value of 
+digital artifacts, as well as information about the credentials of
+their creators. Specifically, we note two trends in Web access 
+and design which would appear to have ramifications - one primarily 
+for Web designers and another 
+for information intermediaries, such as librarians and archivists.
+We contend that the absence of editorial control, coupled with the 
+alarming tendency toward deliberate skewing of Web search results
+by profiteers, will stress network bandwidth resources, contribute to a crisis of confidence in the 
+Internet, and if unchecked, may potentially have far reaching consequences for 
+the growth of scientific and scholarly knowledge, and for its dissemination to the public..
+We began this line of research with an analysis of Listserv&#174 traffic,
+conducted in 1996 (<a href="#brow">Brown-Syed & Witzke, 1997</a>), and are currently 
+investigating Usenet News postings and Web pages created by academics.</p>
+<p>
+Web designers spend a great deal of effort creating attractive and
+useful home pages. However, preliminary analysis of server statistics
+suggests that many users never see these pages, having arrived at 
+individual documents on the server through other means.</p>
+<p>
+The two main ways in which people appear to arrive at individual
+documents on Web sites are: 1) hot links from other Web pages,
+and 2) through search engines. The topics of documents are 
+more likely to be of importance than the site's Web page 
+hierarchy. Almost no one comes in through the "front door", that
+is by accessing the site's main menu and then following links to
+individual pages. This should not surprise librarians or archivists.
+People looking for print or AV material on particular topics rarely
+know that topical directories of academic, public, and special library 
+contents exist. However, given the lack of editorial control on the 
+Net, where authors act as their own publishers, the consequences of 
+arriving at specific items are more far reaching. While one can 
+indeed tell much about 
+a book by its cover and title page, or a film by its credits, 
+Net authors' credentials, and hence the reliability 
+of their utterances, must be determined by other means.</p>
+<p>
+If asked to locate information on Soft Systems Methodology, only someone
+acquainted with its history would think of going to the University of 
+Lancaster first. Instead, the user would probably try a subject keyword
+search for that term.</p>
+<p>
+This phenomenon causes some unexpected results, both for users and 
+for providers of information. For instance, in 1997, we discovered that 
+the server at Wayne State University's medical library was most popular
+for its alternative medicine pages. </p>
+<p>
+On a server in the Library and Information Science Program at Wayne,
+we found that relatively few visitors were interested in LIS.
+An article on the New World Information and Communications Order, 
+written for the electronic journal <cite><a href="#libr">LIBRES</a></cite> in 1993, was mounted on 
+the author's server in 1995. It receives several hundred hits a month,
+and this situation has remained constant for at least a year. The 
+material in the document is quite dated. What could account for its
+popularity? </p>
+<p>
+Hot links to this page may be found at a journalism school in 
+the United States, where the article appears on a course reading list.
+A student page on obtaining cheap airline tickets was the most popular page
+on the LIS server during 1997. It was hot-linked from a page at a 
+medical faculty in Sweden.</p>
+<p>
+However, hot links account for far fewer hits than do search engines. 
+Removing internal requests (those from IP numbers within the Wayne subdomains),
+and backtracking requests to their sources, we find users arriving at the
+server from around the globe, but few appear to be looking for information
+about the Program and its courses.</p>
+<p>
+Within a 24-hour period in December, 1998, the <cite>LIBRES</cite> page was accessed by users
+as far apart as Goteborgs Universitet in Sweden, a JANET subnetwork in Kent 
+England, and the campus network at the University of Toronto in Canada.</p>
+<p>
+The article is academic, dated, somewhat pedantic, and concerns a topic of 
+interest primarily in international development and communications studies.
+In the case of items with broader appeal, the pattern of "back door" 
+access is even more pronounced and demonstrable. For example, the author's 
+server contains a page entitled "King Arthur" which was mounted
+as an example of HTML coding for an Internet class in 1996. The material had 
+originally been written as mere filler in order to 
+demonstrate the use of certain HTML commands. </p>
+<p>
+Since then, it has consistently 
+received hundreds of hits each month. Between December 2nd and 
+December 7th, 1998, only 30 people visited the server's index page, 
+and just 26 accessed pages about specific LIS courses. Meanwhile the King 
+Arthur page was requested 118 times - despite
+the fact that it contains little concrete information about that monarch. 
+In fact, concerned with the number of hits, we modified the page to 
+contain more relevant information during the summer of 1997. </p>
+<p>
+<img src="p58.gif" border=0 align=right hspace=4 
+vspace=4 alt="AltaVista's answer to spamming">
+Recently, search engine services such as AltaVista, have attempted to 
+clamp down upon 
+ the practice of "spamming" the Web by loading pages with misleading 
+or repititious keywords. (<a href="#alta">AltaVista, 1999</a>). The service now includes a warning (photo) in its 
+pages which allow submission of specific URLs to the index. However, since 
+network spiders or robots periodically call at each Web site to update 
+indexes automatically, it is possible, indeed probable, that some Web designers will not 
+see nor heed warnings of this nature. </p>
+<p>
+In information retrieval theory (IR theory), successful searching is considered 
+the result of 
+balancing the <cite>recall</cite> of a retrieval set with its <cite>precision</cite>.
+Recall is a measure of the number of items retrieved, and precision is a measure of 
+the number of retrieved items which the searcher considers to be "in context". A "false drop" 
+is an instance of the search term in the retrieval set,  which is "out of context", given 
+the searcher's intentions.</p>
+<p>
+Librarians point to metadata as the cure for high recall and false drops
+resulting from Web searches, but metadata alone will not prevent the recall of
+spurious items or information of dubious content and quality. In fact, 
+designers anxious to promote their clients' products are becoming quite
+adept at loading the keyword fields with repetitions of certain words.
+Much as small companies take names like "AAAA Towing" so as to have 
+their names first in telephone directories, designers repeat keywords 
+literally hundreds of times within the headers of documents. As well, some designers 
+fill the bodies of their documents with hundreds of repeated words,
+written in text which is the same color as the document's background. 
+Words written in black against a black background are invisible to users,
+but are indexed by search engines. It is the digital equivalent to writing 
+in "invisible ink". To view the "secret" writing, all you need is a mouse, 
+or knowledge of your browser's "View Document Source" option. </p>
+<p>
+The  page you are now reading contains text "invisible" to users but indexed by search engines. To view the hidden message, place your mouse directly below the words "Figure A", depress your left mouse button, and drag the mouse across the blank area which appears between the two horizontal lines.</p>
+<p><hr><p>
+Figure A:<br> 
+<font color="#ffffff">
+information studies information studies information studies information studies
+information studies information studies information studies information studies
+information studies information studies information studies information studies
+information studies information studies information studies information studies
+information studies information studies information studies information studies
+information studies information studies information studies information studies
+information studies information studies information studies information studies
+information studies information studies information studies information studies
+information studies information studies information studies information studies
+information studies information studies information studies information studies
+</font>
+<p><hr><p>
+We reported the use of this technique at the CAIS '98 conference in Ottawa (<a href="#brow2">Brown-Syed, 1998</a>).
+It is now evidently in widespread use. While search engine robot programs
+could "unique" the keyword field, indexing only one occurrance of each 
+word, it would be difficult to apply a similar process to texts of documents 
+themselves - to do so would defeat the assessment of document relevance,
+ which is based upon the number of times a word appears in the body of 
+the text, as well as in the document header. Words 
+which appear legitimately in a document would be "uniqued away" along 
+with the intentionally misleading repetitious ones.</p>
+<p>
+In a singular example of bad "netiquette", one site in the Netherlands
+offering a <cite>Beginner's Guide to Internet</cite> opens with a page
+containing 18 lines of explanatory notes (including HTML markup), followed by the words,
+"The rest of this page is for the search engines", followed by 
+some blank space, and 104 lines  of
+repetitive keywords. These words appear in the same colour as the 
+text - white, against a grey background. The designer would appear either 
+to be 
+unaware of the techniques for concealing keywords described above, or 
+ to be encouraging the practice deliberately. The page
+is signed only with the alias, "webmaster", rather than the with creator's
+real name. </p>
+<p>
+Aside from constituting an incredible waste of bandwidth, the practice
+skews users' searches, sometimes in unpredictable ways. 
+One site distributing erotic pictures of entertainers has created an 
+first page aptly entitled "words.htm". Of the 302 lines, and 19,692 bytes 
+in this particular page, only 
+one line is visible. It contains exactly 6 words, or 40 bytes of 
+useful text.</p>
+<p>
+The rest of the page consists of hundreds of repetitions of concealed 
+keywords.
+The word "supermodel" occurs 155 times in the header and text, along 
+with 169 combined occurances of the words "nude" and "naked", 
+79 of the word "celebrity", 85 of the word "gay", and so forth. The 
+names of several noted performers are also concealed in the 
+header or against the background of the message body.</p>
+<p>
+Users seeking more conventional information about entertainers, 
+will arrive at this site first, as its designers have intentionally skewed
+its relevance ranking by including words like "celebrity". On some engines, 
+even a search on a term as innocuous as "Canadian singer" or "Shania Twain" 
+may point users first to sites containing risque photos. 
+While this may be welcome news to 
+people looking for erotica, it is annoying at best to researchers in a 
+hurry to find information about world personalities.
+Surprisingly, a recent search for another Canadian band, <cite>Barenaked Ladies</cite>, yielded
+better results - most search engines consulted in December 1998 correctly retrieved 
+information about the rock band, provided that the string "barenaked" was entered without
+an internal space. In June 1998, the context had been almost universally misinterpreted, regardless 
+of spacing.</p>
+<p>
+As with more conventional print and audio visual material, a knowledge of
+the sources is invaluable for users of the Net. Experience teaches that
+"sony.com" is a likely place to search for that production company's 
+films and TV programs, and that the <cite>Internet Movie Database</cite> is a good 
+source of filmoraphies. This sort of knowledge is more typically
+the province of librarians and archivists than of members of the public
+or, for that matter, of anyone searching for items outside their customary field of interest.
+Until search engine software is developed to defeat the ethically 
+questionable practice of "loading", false drops and high recall would 
+appear to be inevitable on the Net.</p>
+
+<h2>References</h2>
+<ul>
+<li><a name="alta"></a>AltaVista. (1999) Adding Pages or URLs to the Index Online: <a href="http://www.altavista.com/av/content/addurl.htm">http://www.altavista.com/av/content/addurl.htm</a></li>
+
+<li><a name="brow2"></a>Brown-Syed, C.  (1998) SOS Calls, Breaking Stories, Network Disinformation, and the Process of 
+Scholarly Communication: Implications for Information Intermediaries. In: CAIS/ACSI '98: Information Science at the Dawn of the Next Millenium. Toronto: Canadian Association for Information Science, 1998. p.429-45.</li>
+
+<li><a name="brow"></a>Brown-Syed, C. & Witzke, K. (1997) Email for Development: How Librarians Use a LISTSERV to Support Unesco's CDS/ISIS Software.  In: ISSS, IEEE [Toronto Chapter], Soka Gakkai International, Science for Peace: The Development of World Order, Oakham House, Ryerson Polytechnic University, June 1997.</li>
+
+<li><a name="libr"></a>The New World Order and the Geopolitics of Information (1992) LIBRES, February. Online: 
+<a href="http://valinor.purdy.wayne.edu/csyed_libres3.html">http://valinor.purdy.wayne.edu/csyed_libres3.html"</a></li>
+</ul>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Brown-Syed, Christopher  (1999)&nbsp; &quot;Back door entries, invisible ink, and false drops on the Web: an interim research note.&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>4</strong>(3) Available at: http://informationr.net/ir/4-3/paper58.html</p>
+<p style="text-align : center">&copy; the author, 1999. Last updated: 29th January1999</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:Hb67tno00TUJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres43.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper58" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/4-3/paper58.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:22 GMT -->
+</html>

@@ -1,0 +1,245 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<html>
+
+<!-- Mirrored from informationr.net/ir/4-3/paper55.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:18 GMT -->
+<head>
+<link rel="stylesheet" href="../IRstyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 97">
+<meta name="keywords" content="database design, databases, integrity, expert systems, validation, verification, integrity, workshop">
+<meta name="description" content="International Workshop on Validation, Verification and Integrity Issues of Expert and Database Systems">
+<meta name="rating" content="General">
+<meta name="VW96.objecttype" content="Document">
+<link rel=schema.vw96 href="http://vancouver-webpages.com/META/VW96-schema.html">
+<meta name="ROBOTS" content="ALL">
+<meta name="DC.Title" content="International Workshop on Validation, Verification and Integrity Issues of Expert and Database Systems">
+<meta name="DC.Creator" content="T. Bench-Capon, et al.">
+<meta name="DC.Subject" content="database design, databases, integrity, expert systems, validation, verification, integrity, workshop">
+<meta name="DC.Description" content="database design, databases, integrity, expert systems, validation, verification, integrity, workshop">
+<meta name="DC.Publisher" content="Professor Tom Wilson">
+<meta name="DC.Contributors" content="T. Bench-Capon, et al.">
+<meta name="DC.Coverage.PlaceName" content="Europe">
+
+<title>Report on the 1st International Workshop on Validation, Verification and Integrity Issues of Expert and Database Systems</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../figs/iauthori1.gif','../figs/isubji1.gif','../figs/isearch1.gif','../figs/ihome1.gif','../figs/contents1.gif')">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="30" align="center" colspan="5"><h4>Information Research, Vol. 4  No. 2, October 1998</h4></td></tr>
+  <tr> 
+    <td><a href="infres43.html" target="_top" onClick="MM_nbGroup('down','group1','contents','',1)" onMouseOver="MM_nbGroup('over','contents','../figs/contents1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="contents" src="../figs/contents.gif" border="0" alt="" onLoad=""></a></td>
+    <td><a href="../iraindex.html" target="_top" onClick="MM_nbGroup('down','group1','authorindex','',1)" onMouseOver="MM_nbGroup('over','authorindex','../figs/iauthori1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/iauthori.gif" alt="" name="authorindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../irsindex.html" target="_top" onClick="MM_nbGroup('down','group1','subjindex','',1)" onMouseOver="MM_nbGroup('over','subjindex','../figs/isubji1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isubji.gif" alt="" name="subjindex" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../search.html" target="_top" onClick="MM_nbGroup('down','group1','search','',1)" onMouseOver="MM_nbGroup('over','search','../figs/isearch1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="../figs/isearch.gif" alt="" name="search" width="120" height="20" border="0" onload=""></a></td>
+    <td><a href="../index.html" target="_top" onClick="MM_nbGroup('down','group1','home','',1)" onMouseOver="MM_nbGroup('over','home','../figs/ihome1.gif','',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="../figs/ihome.gif" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<h1>Report on the 1st International Workshop on Validation, Verification and Integrity Issues of Expert and Database Systems</h1>
+
+<h4>T. Bench-Capon<sup>1</sup>, D. Castelli<sup>2</sup>, F. Coenen<sup>1</sup>, L. Devendeville-Brisoux<sup>3</sup>, B. Eaglestone<sup>4</sup>, N. Fiddian<sup>5</sup>, A. Gray<sup>5</sup>, A. Ligeza<sup>6</sup> and A. Vermesan<sup>7</sup><br><br>
+
+<sup>1</sup> Department of Computer Science, University of Liverpool, UK<br>
+<sup>2</sup> Istituto di Elaborazione dell'Informazione, Consiglio Nazionale delle Ricerche, Pisa, Italy<br>
+<sup>3</sup> Centre de Recherche en Informatique de Lens, Universit&eacute; d'Artois, France<br>
+<sup>4</sup> Department of Information Studies, University of Sheffield, UK<br>
+<sup>5</sup> Department of Computer Science, Cardiff University, UK<br>
+<sup>6</sup> Institute of Automatics, Krakow, Poland<br>
+<sup>7</sup> 
+                        Department for Strategic Research, Det Norske Veritas, Olso, Norway</h4>
+<br>
+<hr align="center" color="fuchsia">
+
+<div>Abstract</div>
+
+<blockquote>In August 1998 an international workshop on validation, verification and integrity issues of expert and database systems was held in Vienna in conjunction with the Ninth Conference on Database and Expert Systems Applications (DEXA'98). This paper reports on the results of this workshop and summarises the issues identified for future research in this area. Details of the presented papers and some additional information can be found at <a href="http://www.csc.liv.ac.uk/~frans/CurrentResearch/VandV/dexaWorkshop.html">the workshop WWW site</a>.</blockquote>
+
+<h2>Introduction</h2>
+
+<p>Validation, verification and integrity (VV&amp;I) respectively concern the truthfulness of a system  with respect to its problem domain, the correctness of its construction, and maintaining the  validity of the evolving system throughout its life. This distinction, akin to the differences in  traditional software engineering, between these three terms is neatly captured in Bohem's  definitions of validation and verification (<a href="#refs">Bohem, 1981</a>) and the additional definition  of integrity  by Eaglestone and Ridley (<a href="#refs2">Eaglestone and Ridley, 1998</a>)):</p>
+
+<ul><li>Validation: Are we building the right product?</li>
+<li>Verification: Are we building the product right?</li>
+<li>integrity: Are we keeping (maintaining) the product right?</li>       </ul>
+
+
+<p>In practice, integrity mechanisms fall short of this, since they ensure only self-consistency  and therefore maintain plausibility rather than truthfulness. </p>
+
+<p>Verification and validation have long been a focus for research within the expert systems  community (<a href="#refs">Coenen, 1998</a>). Although the technology of Rule-Based Systems has become more and more &quot;common  place&quot;, the technology is still not well-accepted by industrial engineers. Further, its &quot;correct&quot; usage requires much intuition and domain experience, and knowledge acquisition still constitutes a bottleneck for many potential applications. A serious problem consists in the fact that verification of theoretical properties remains problematic. Hence, research toward more formal design and verification of rule based systems constitutes an important issue for assuring their correctness, reliability and safety. Research work on Expert Systems V&amp;V  is also stimulated (<a href="#refs2">Vermesan, 1998</a>), by the practical application of theoretical  results to provide the tools and techniques for certification of knowledge-based software.</p>
+
+<p>In contrast, the terms &quot;validation&quot; and &quot;verification&quot; are rarely used in the  database literature (<a href="#refs2">Eaglestone and Ridley, 1998</a>). Instead, researchers have focused on the dynamic nature of database systems and the problem of maintaining database integrity.  (However, it is noted that V\&amp;V of computer systems in the broader sense, involving testing of  their database component, is an active area in the software engineering community.) </p>
+
+<p>In addition and contrary to expert systems, data base systems (and especially relational DB systems) are a matured data manipulation technology employing a widely accepted intuitive knowledge representation in tabular form. It seems advantageous to make use of elements of this technology for simplifying certain operations concerning rule based expert systems. Note that from a practical point of view any row of a relational DB table can be considered as a rule, provided that at least one attribute has been selected as an output (and there is a so-called &quot;functional dependency&quot; allowing for determination of the value of this attribute on the base of some other attributes). Thus, it seems that merging elements of the two technologies can constitute an interesting research area of potential practical importance.                                           </p>
+<p>&quot;Integrity&quot; is of course a database issue, however, if the meaning of the term is widened, as suggested by Eaglestone and Ridley, to include maintenance then this becomes an issue for both KBS and databases systems. The maintenance of KBS, an issue that has long been researched by <a href="#refs">Bench-Capon &amp; Coenen</a> (1993), in many cases encompases a subset of the operations required for more general V&amp;V of expert systems. When maintaining/updating the &quot;fact base&quot; associated with a KB, there is a much closer correspondence with the term &quot;integrity&quot; as used in the database context.</p>
+
+<p>The aim  of the workshop was therefore to review the state of the art with respect to validation, verification and integrity (VV&amp;I) issues in both communities with the objective of  identifying overlap and areas where transfer of results between communities can be mutually  beneficial. The proceedings of the workshop are available in (<a href="#refs2">Wagner, 1998</a>). The  workshop reflected both the database and expert systems views of VV&amp;I, and covered the  following topics:</p>
+
+<p>The expert systems view (overviewed in (<a href="#refs">Coenen, 1998</a>)):</p>
+
+<ul>
+<li>Industrial use of validation and verification; </li>
+<li>Verification and validation of rule-based systems; </li>
+<li>Verification of multi agent knowledge systems; </li>
+<li>Ontology-based support for validation and verification.</li></ul>
+
+<p>The database systems view (overviewed in (<a href="#refs2">Eaglestone &amp; Ridley 1998</a>)):</p>
+
+<ul>
+<li>Integrity constraints in distributed database systems; </li>
+<li>Integrity constraints on automatically classified data objects;</li> 
+<li>Verification of database schema transformations.</li></ul>
+
+<h2>The expert-systems view</h2>
+
+<p>Expert-systems related work presented addressed the practical application of V&amp;V results and theoretical work using different knowledge-based system paradigms.</p>
+
+<p>Vermesan reviewed work on the practical use of V&amp;V results for  certification of expert systems (<a href="#refs2">Vermesan, 1998</a>). She identified this  application as probably the most advanced use of V&amp;V methods,  techniques and knowledge so far developed. Knowledge base (KB)  certification uses a number of different V&amp;V methods such as static analysis, testing, inspection, and modeling to assess the quality of the KB component. Although these methods are currently used in expert system development, it is not yet clear how they would be applied by an independent certification organization to arrive at a pass/fail decision. Her paper identifies application areas directly connected with industrial needs and discusses the V&amp;V as component of KB certification, advocating a combination of static and dynamic testing; the former to remove anomalies and errors prior to dynamic testing.</p>
+
+<p>Ligeza's presentation concerned V&amp;V of  tabular rule-based systems (<a href="#refs2">Ligeza, 1998</a>).  Ligeza noted that a tabular rule-based system  has a uniform structure not unlike a relational database table; thus it was argued that the paper investigated rule base V&amp;V issues using a relation DB algebraic knowledge representation. The main difference from pure relational DB systems consists in perceiving the particular records as rules rather than static data records. This is done by distinguishing in each rule-record the precondition part and the decision part; further, not all the values of attributes have to be specified by a single value. Ligeza also presented a taxonomy of issues concerning formal verification, and demonstrated that several theoretical properties can be analysed through simple algebraic operations  instead of logical inference. Ligeza then went on to suggest that algebraic notation, on the lines of the relational DB model, was both simpler and more intuitive than pure logic, and therefore more acceptable to practitioners.</p>
+
+<p>V&amp;V of multiple agent knowledge-based systems was addressed in (<a href="#refs2">O'Leary, 1998</a>). This work described extensions to verification tests to systems with multiple autonomous agent knowledge bases. The techniques were primarily to detect unique inter-agent anomalies generated as a system moves from a single agent to multiple agents.</p>
+
+<p>Original work on stochastic search for the validation of first-order knowledge-based systems was reported in (<a href="#refs">Brisoux, Gr&eacute;goire &amp; Sais, 1998</a>). It allows for both logical consistency and inconsistency constraints to be checked in large first-order knowledge bases. It is based on powerful heuristics about the trace of local search methods when they fail to prove the consistency of large propositional knowledge bases. A partial instantiation schema is proposed that avoids the combinatorial explosion that could occur when a full instantiation of a first-order knowledge base into a flat corresponding propositional counterpart is undertaken.  Accordingly, a depth-limited consistency and inconsistency checking procedure is proposed and successfully experimented.</p>
+
+<p><a href="#refs">Bench-Capon</a> (1998) discussed the ways in which ontologies which conceptualise the problem domain can be used to support V\&amp;V of knowledge-based systems. Bench-Capon observed that the added coherence of an explicit domain conceptualisation gives a more motivated and foccussed role for experts who are &quot;signing off&quot; a KB, reduces the scope for subjective interpretation which can mask errors, and provides the possibility of a test harness.</p>
+
+<h2>The Database View</h2>
+
+<p>The database-related work concerned integrity issues and verification of schema transformations/database design.</p>
+
+<p><a href="#refs2">Ibrahim <i>et al.</i></a>, (1998) described a technique for determining an optimal set of constraints for validating a distributed database created by fragmenting a centralised database.  Their presentation covered integrity checking in a centralised database in order to maintain the consistency of the database. They then showed that if such a database is distributed by fragmentation it is normally no longer efficient to use the same integrity constraints.  They then showed how knowledge about the fragmentation used on the data can be used to create a new set of integrity constraints that can be distributed to the sites of distributed system and improve the integrity checking in the distributed system as they reflect the data held at the site.</p>
+
+<p>Millns and Eaglestone's work concerned the use of neural networks embedded in database systems as automatic classifiers. They identified the necessity to bound the percentage of misclassified objects in certain critical applications and described an integrity constraint to enforce this bounding. The constraint was based on deducing a relationship between probabilities returned by probabilistic neural networks and the likely percentage of misclassification.</p>
+
+<p>Finally, Castelli and Pisani presented a formal approach based on schema transformations for ensuring the correctness of database schema design. Each transformation has associated conditions which, if verified, guarantee the correctness of the design. In constrast to similar approaches, in this proposal the set of possible transformations is not fixed, but can be enlarged dynamically to best fit the application design needs.</p>
+
+<h2>Results</h2>
+
+<p>In seeking the overlap and possible transference of results, the workshop identified the  following (fuzzy) correspondences between database and expert systems architectures (Figure  1).</p>
+
+<p>The following observations were made regarding this overlap:</p>
+
+<ul>
+<li>The ontology component is &quot;an explicit conceptualisation of the domain&quot; (<a href="#refs">Bench-Capon, 1998</a>). However, though an ontology is at present not usually defined for either type of system, some delegates identified considerable advantages in doing so for both database and expert systems. Specifically, an ontology provides an agreed representation of the Universe of Discourse and hence support for validation and verification based upon real world semantics. 
+                            
+<li>Correspondence between schema/database and rule base is most apparent for relational databases, since they share a common theoretical foundation with expert systems, i.e. clausal form. This has been exploited, for example in deductive databases where relational DBMSs provide back-end fact storage. However, this correspondence has not been exploited practically to any extent for V&amp;V of database systems or for integrity maintenance of evolving expert systems. </li>
+                            
+<li>The emerging database technology, i.e. object and object-relational, has resulted in a divergence, since the new technology lacks the rigorous formal foundations shared by relational and expert systems. </li>
+                            
+
+<li>Validation and verification  of the DBMS and Inference engine is distinct from but a necessary prerequisite to validation and verification of the (design of a) database or expert system. The current assumption made by system developers that this has taken place may well be ill founded in many cases. </li>
+                            
+
+<li>The overlap between the two technologies is blurred by the existence of hybrid technologies which borrow from both. These include deductive databases, constraint databases and active databases, all of which are supported by significant rule sets of a similar nature to that found in expert system rule bases. In theory, such hybrid products should be attractive because they derive benefits from both database and expert systems technologies, but in practice they remain largely &quot;academic toys&quot;. </li>
+                            
+
+<li>It may also be a point that Case-Based Reasoning systems may constitute and intermediate link integrating RDBS and RBS methodologies into perhaps more sophisticated models of knowledge.</li></ul>
+
+
+<p align="center">Figure 1: Correspondences between expert and database systems}</p>
+
+<h2>Conclusions</h2>
+
+<p>The <i>1st International Workshop on Validation, Verification and Integrity Issues</i> as a whole was  considered to be a great success in that it succeeded in bringing representatives from the two communities together and facilitated the interchange of ideas between the two groups. Clear areas of overlap  were identified between expert and database systems technologies and also a shared practical need for VV &amp; I tools and techniques. </p>
+
+<p>It was also observed (<a href="#refs2">Ligeza, 1998</a>) that relational DBs have a well established model and matured design methodology, while in the case of knowledge-based systems no such well established model exists, e.g. a widely accepted knowledge representation standard and inference engine on the lines of (say) SQL. Further, it was noted that this was especially the case with respect to rule base design and verification procedures. Consequently the database systems community might have a lot to offer the developers of Expert Systems.</p>
+
+<p>Despite the above it was apparent that there is currently little common research effort or shared results. It was thus the broad view of the workshop delegates that dialogue and collaborations between the two communities was long overdue and that the DEXA'98 Workshop was the start of  this &quot;long overdue&quot; liaison. To further facilitate the desired dialogue it was acknowledged that (1) the remit of the well established V&amp;V &quot;special  interest group&quot; within the Expert Systems community should be broadened to include database systems issues and (2) that the database practitioners would attempt to identify and integrate relevant results in the database systems area. With respect to (1) this is already being addressed in that the CFP for EUROVAV'99 (The principal international expert system V&amp;V biannual symposium) includes database integrity, and database and expert systems integration V&amp;V issues, in its &quot;papers are invited (but not restricted to) the following topics:&quot; list. Consideration is also currently being directed to (2). What ever the case it is intended to hold the 2nd International Workshop on Validation, Verification and Integrity Issues at DEXA'2000.</p>
+
+
+<a name="refs"></a><h2>References</h2>
+
+<p><i>Proceedings DEXA 98 Ninth International Workshop on Database and Expert Systems Applications</i> (1998) August 260-28, 1988, Vienna, Austria, Ed. R.R. Wagner, IEEE Computer Society, 1998.</p>
+<p>Bench-Capon, T.J.M. (1998) <i>The Role of Ontologies in the Verification and Validation of Knowledge Based Systems</i>, in (1).</p>
+<p>Brisoux, L., Gregoire, E. and Sais, L. (1998) <i>Validation of Knowledge-Based Systems by Means of Stochastic Search</i>, in (1).</p>
+<p>Castelli, D. and Pisani, S. (1998) <i>Ensuring Correctness of Personalized Schema Refinement Transformations</i>, in (1).</p>
+<p>Coenen, F. (1998) <i>Verification and Validation Issues in Expert and Database Systems: The Expert Systems Perspective</i>, in (1).</p>
+<p>Coenen, F.P. and Bench-Capon, T.J.M. (1993). <i>Maintenance of Knowledge Based Systems: Theory, Tools and Techniques</i>. Academic Press, London. </p>
+<a name="refs2"></a><p>Eaglestone, B. and  Ridley, M. (1998) <i>Verification, Validation and Integrity</p>
+<p>Issues in Expert and Database 
+                        Systems: The Database Perspective</i>, in (1).</p>
+<p>Ibrahim, H., Gray, W. A., and Fiddian, N.J. (1998) <i>Optimizing Fragment Constraints</i>, in (1).</p>
+<p>Ligeza, A. (1998) <i>Towards Logical Analysis of Tabular Rule-Based Systems</i>, in (1).</p>
+<p>Millns, I. and  Eaglestone, B. (1998) <i>An Integrity Constraint for Database Systems Containing Embedded Neural Networks</i>, in (1).</p>
+<p>Vermesan, A.I. (1998), <i>Software Certification for Industry - Verification and Validation Issues in Expert Systems</i>, in (1).    </p>
+<hr color=#ff00ff size=3>
+<p style="text-align : center; color : Red; font-weight : bold;">How to cite this paper:</i></p>
+<p style="text-align : left; color : black;">Bench-Capon, T., Castelli, D., Coenen, F., Devendeville-Brisoux, L., Eaglestone, B., Fiddian, N., Gray, A., Ligeza, A. &amp; Vermesan, A.   (1999)&nbsp; &quot;Report on the 1st International Workshop on Validation, Verification and Integrity Issues of Expert and Database Systems.&quot;&nbsp;&nbsp;<em>Information Research</em>, <strong>4</strong>(3) Available at: http://informationr.net/ir/4-3/paper55.html</p>
+<p style="text-align : center">&copy; the authors, 1999.</p>
+<hr color="#ff00ff" size="1">
+								<div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=link:t7TeCDS2owUJ:scholar.google.com/" target="_blank">according to Google Scholar</a></div>
+								 <hr color="#ff00ff" size="1">
+<table border="0" cellpadding="15" cellspacing="0" align="center">
+<tr> 
+    <td><a href="infres43.html"><h4>Contents</h4></a></td>
+   <td align="center" valign="top"><div>
+<img src="http://counter.digits.com/wc/-d/-z/6/-b/FF0033/paper55" align="middle"  width="60" height="20" border="0" hspace="4" vspace="2" alt="counter" /><br /><a href="http://www.digits.com/">Web Counter</a>
+</div></td>
+    <td><a href="../index.html"><h4>Home</h4></a></td>
+  </tr>
+</table>
+<hr color=#ff00ff size=3>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-672528-1";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from informationr.net/ir/4-3/paper55.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 25 Dec 2010 19:11:18 GMT -->
+</html>
