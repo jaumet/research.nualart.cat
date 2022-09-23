@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Authorized Users Only."
-AuthUserFile /home/www/HTPASSW/research.nualart.cat-visference
-Require user jmlr

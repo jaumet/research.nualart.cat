@@ -1,2 +1,0 @@
-scrapy crawl ir
-scrapy crawl spidername -o items.json -t json
