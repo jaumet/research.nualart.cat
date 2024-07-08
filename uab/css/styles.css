@@ -1,0 +1,124 @@
+  /* Apply dark mode */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  a:link {
+    color: blue; /* Standard blue for unvisited links */
+  }
+
+  a:visited {
+    color: #ADD8E6; /* Very light blue for visited links */
+  }
+  
+  div {
+    font-size: large;
+  } 
+
+  /* Style the top bar */
+  .top-bar {
+    position: sticky;
+    top: 0;
+    background-color: #333; /* Darker shade for the bar */
+    color: white;
+    padding: 20px 0; /* Original padding */
+    z-index: 1000;
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease; /* Smooth transition for height and padding */
+  }
+
+ /* Adjusted styles for .step and .dia */
+.step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50vh; /* Reduced from 100vh to reduce vertical spacing */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dia {
+  width: 70%;
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 2s ease-in-out; /* Smooth transition for visibility */
+}
+
+.step.is-active .dia {
+  opacity: 1; /* Full visibility when the step is active */
+}
+
+  .text {
+    width: 20%;
+    color: #e0e0e0; /* Ensure text is visible in dark mode */
+  }
+
+ 
+  .last_step {
+    text-align: center;
+    margin: 50px 0; /* Adjust margin as needed */
+    font-size: 1.2em; /* Adjust font size as needed */
+    color: #FFFFFF; /* Adjust color as needed */
+  }
+
+  .last_step a {
+    color: #4CAF50; /* Adjust link color as needed */
+    text-decoration: none; /* Optional: removes underline from links */
+    font-weight: bold; /* Makes the link text bold */
+  }
+
+  .last_step a:hover {
+    text-decoration: underline; /* Adds underline on hover for better visibility */
+  }
+
+  .last_step a:active {
+    color: #3E8E41; /* Darker shade of green when link is clicked */
+  }
+
+  #imageOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Ensure the overlay is hidden initially */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Ensure it's above everything */
+  }
+
+  #overlayImage {
+    width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* This will ensure the image is fully visible */
+  }
+ 
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .superbig {
+    font-size: 100px;
+    animation: blinker 1s linear infinite;
+  }
