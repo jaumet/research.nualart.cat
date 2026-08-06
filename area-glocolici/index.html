@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Comparativa mundial entre gentilicis i glotònims en català.">
+  <title>Glotolici · Atles de gentilicis i glotònims</title>
+  <link rel="stylesheet" href="css/area.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow" data-i18n="eyebrow">Glotolici · comparativa mundial</p>
+      <h1 data-i18n="heading">Quan un poble i una llengua comparteixen nom?</h1>
+      <p class="lede" data-i18n="lede">Explora les relacions entre gentilicis, glotònims, territoris i llengües. Cada quadrat és un cas documentat.</p>
+    </div>
+    <div class="hero-actions">
+      <label><span data-i18n="language">Llengua</span><select id="language"><option value="ca">Català</option><option value="en">English</option></select></label>
+      <button id="about-open" class="text-button" type="button" data-i18n="aboutButton">Sobre les dades</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="summary" class="summary" aria-label="Resum del conjunt de dades"></section>
+
+    <section class="controls" aria-label="Controls de visualització">
+      <label><span data-i18n="groupBy">Agrupa per</span><select id="group-by"></select></label>
+      <div class="color-control">
+        <label><span data-i18n="colorBy">Color per</span><select id="color-by"></select></label>
+        <label class="check-control"><input id="sort-by-color" type="checkbox"> <span data-i18n="sortByColor">Ordena els ítems per color</span></label>
+      </div>
+      <label class="search"><span data-i18n="search">Cerca</span><input id="search" type="search"></label>
+      <label><span data-i18n="continent">Continent</span><select id="continent"></select></label>
+      <label><span data-i18n="match">Coincidència</span><select id="match"></select></label>
+      <label><span data-i18n="certainty">Certesa</span><select id="certainty"></select></label>
+      <button id="reset" type="button" data-i18n="reset">Neteja</button>
+    </section>
+
+    <section class="results-bar">
+      <p id="result-count" aria-live="polite"></p>
+      <div id="legend" class="legend" aria-label="Llegenda de colors"></div>
+    </section>
+
+    <section id="area" class="area" aria-label="Visualització dels casos"></section>
+    <p id="empty" class="empty" hidden data-i18n="empty">No hi ha casos que compleixin aquests filtres.</p>
+  </main>
+
+  <dialog id="detail"><button class="close" type="button" aria-label="Tanca">×</button><div id="detail-content"></div></dialog>
+  <dialog id="about"><button class="close" type="button" aria-label="Tanca">×</button><h2 data-i18n="aboutTitle">Sobre les dades</h2><p data-i18n-html="aboutP1">El conjunt és una primera versió exploratòria. Les etiquetes <strong>[DUBTOS]</strong> i <strong>[PENDENT]</strong> identifiquen dades que encara requereixen revisió o una font específica.</p><p data-i18n="aboutP2">La unitat de la visualització és una relació territori–llengua, no necessàriament un estat. Per això també s’hi inclouen territoris autònoms, regions i pobles.</p></dialog>
+
+  <script src="data/glotolici-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
