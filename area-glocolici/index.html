@@ -43,6 +43,23 @@
 
     <section id="area" class="area" aria-label="Visualització dels casos"></section>
     <p id="empty" class="empty" hidden data-i18n="empty">No hi ha casos que compleixin aquests filtres.</p>
+
+    <section id="story" class="story" aria-labelledby="story-title">
+      <header class="story-header">
+        <p class="eyebrow" data-i18n="storyEyebrow">Deu lectures de les dades</p>
+        <h2 id="story-title" data-i18n="storyTitle">Què ens explica la relació entre els noms dels pobles i de les llengües?</h2>
+        <p data-i18n="storyIntro">Desplaça’t pels deu casos. Cada lectura conserva la configuració exacta de la visualització i pren el cas territori–llengua com a unitat d’anàlisi.</p>
+      </header>
+      <div class="story-layout">
+        <div id="story-steps" class="story-steps"></div>
+        <figure class="story-visual" aria-live="polite">
+          <a id="story-link" href="#" target="_blank" rel="noopener">
+            <img id="story-image" src="images/story/01-continents.png" alt="" width="1440" height="900">
+          </a>
+          <figcaption id="story-caption"></figcaption>
+        </figure>
+      </div>
+    </section>
   </main>
 
   <dialog id="detail"><button class="close" type="button" aria-label="Tanca">×</button><div id="detail-content"></div></dialog>

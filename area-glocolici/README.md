@@ -4,7 +4,7 @@ Visualització exploratòria mundial de les relacions entre gentilicis, glotòni
 
 La interfície és disponible en català i anglès. Detecta les preferències lingüístiques del navegador: mostra català quan hi troba una llengua `ca`; altrament, mostra anglès. El selector de la capçalera permet canviar-la manualment.
 
-Cada visualització és reproduïble mitjançant l’URL. Els paràmetres `lang`, `group`, `color`, `sort`, `q`, `continent`, `match` i `certainty` es mantenen sincronitzats amb els controls i permeten compartir una configuració exacta.
+Cada visualització és reproduïble mitjançant l’URL. Els paràmetres `lang`, `group`, `color`, `sort`, `q`, `continent`, `match` i `certainty` es mantenen sincronitzats amb els controls i permeten compartir una configuració exacta. L’URL només inclou els valors diferents de la configuració per defecte; la portada, per tant, no genera una cadena de consulta innecessària.
 
 ## Dades
 
