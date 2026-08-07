@@ -2,6 +2,7 @@
   'use strict';
 
   const data = window.GLOTOLICI_DATA || [];
+  const embedMode = new URLSearchParams(location.search).get('embed') === '1';
   const $ = (selector) => document.querySelector(selector);
   const fields = ['continent','subregió_geogràfica','coincidència_gentilici_glotònim','relacio_formal','oficialitat','llengua_endògena_del_territori','llengua_introduïda_per_colonització','estat_postcolonial','unitat_poble_territori_llengua','grau_de_certesa'];
   const detailFields = [
@@ -23,7 +24,6 @@
   };
   const storyCases = [
     {
-      image:'images/story/01-continents.png',
       url:'https://research.nualart.cat/area-glocolici/?lang=ca&group=continent&color=coincid%C3%A8ncia_gentilici_glot%C3%B2nim',
       ca:{title:'La coincidència és sobretot europea, no universal', paragraphs:[
         'Només 123 dels 428 casos presenten coincidència entre gentilici i glotònim: un 28,7%. Europa arriba a 57 coincidències de 97 casos —58,8%—, seguida d’Àsia amb 35 de 90 —38,9%— i Oceania amb 11 de 35 —31,4%.',
@@ -35,7 +35,6 @@
       ]}
     },
     {
-      image:'images/story/02-subregions.png',
       url:'https://research.nualart.cat/area-glocolici/?lang=ca&group=subregi%C3%B3_geogr%C3%A0fica&color=coincid%C3%A8ncia_gentilici_glot%C3%B2nim',
       ca:{title:'Europa oriental i meridional formen el principal nucli de coincidència', paragraphs:[
         'L’escala subregional revela contrastos amagats per la divisió continental. Europa oriental presenta 14 coincidències de 17 casos —82,4%— i Europa meridional, 22 de 31 —71%—. També destaca l’Àsia oriental, amb 6 de 9 casos.',
@@ -47,7 +46,6 @@
       ]}
     },
     {
-      image:'images/story/03-formal-relationship.png',
       url:'https://research.nualart.cat/area-glocolici/?lang=ca&group=relacio_formal&color=coincid%C3%A8ncia_gentilici_glot%C3%B2nim',
       ca:{title:'La classificació binària exclou divuit coincidències d’arrel', paragraphs:[
         'Els 123 casos coincidents es divideixen entre «coincidència exacta» —62— i «forma idèntica» —61—. En canvi, 18 casos que comparteixen una arrel o una derivació transparent es classifiquen com a no-coincidents, com <em>rom–romaní</em>, <em>dom–domari</em>, <em>kongo–kikongo</em> i <em>nahua–nàhuatl</em>.',
@@ -59,7 +57,6 @@
       ]}
     },
     {
-      image:'images/story/04-endogeneity.png',
       url:'https://research.nualart.cat/area-glocolici/?lang=ca&group=llengua_end%C3%B2gena_del_territori&color=coincid%C3%A8ncia_gentilici_glot%C3%B2nim',
       ca:{title:'L’endogeneïtat és gairebé necessària, però no suficient', paragraphs:[
         'Cap dels 124 casos amb llengua no endògena presenta coincidència. Entre els 25 casos mixtos només n’hi ha un. Pràcticament totes les coincidències —122 de 123— corresponen a llengües considerades endògenes del territori.',
@@ -71,7 +68,6 @@
       ]}
     },
     {
-      image:'images/story/05-colonial-introduction.png',
       url:'https://research.nualart.cat/area-glocolici/?lang=ca&group=llengua_introdu%C3%AFda_per_colonitzaci%C3%B3&color=coincid%C3%A8ncia_gentilici_glot%C3%B2nim',
       ca:{title:'Cap llengua plenament introduïda per colonització no coincideix', paragraphs:[
         'Els 117 casos classificats com a llengua introduïda per colonització són tots no-coincidents. Entre els 35 casos d’introducció parcial només n’hi ha un de coincident; entre els set casos mixtos, també només un. Entre les llengües no introduïdes hi ha 121 coincidències de 269 casos —45%.',
@@ -83,7 +79,6 @@
       ]}
     },
     {
-      image:'images/story/06-postcolonial-state.png',
       url:'https://research.nualart.cat/area-glocolici/?lang=ca&group=estat_postcolonial&color=coincid%C3%A8ncia_gentilici_glot%C3%B2nim',
       ca:{title:'L’estat postcolonial és l’entorn principal del desacoblament', paragraphs:[
         'Entre els 254 casos d’estats postcolonials només 25 coincideixen —9,8%—. En els estats no postcolonials la proporció puja a 37 de 75 —49,3%— i, en les unitats no sobiranes, a 61 de 99 —61,6%.',
@@ -95,7 +90,6 @@
       ]}
     },
     {
-      image:'images/story/07-people-territory-language.png',
       url:'https://research.nualart.cat/area-glocolici/?lang=ca&group=unitat_poble_territori_llengua&color=coincid%C3%A8ncia_gentilici_glot%C3%B2nim',
       ca:{title:'La «unitat poble–territori–llengua» reprodueix gairebé exactament la coincidència', paragraphs:[
         'Els 102 casos amb unitat alta coincideixen tots. Els 176 casos amb unitat baixa no coincideixen en cap cas. La categoria parcial queda entremig: 21 coincidències entre 150 casos —14%.',
@@ -107,7 +101,6 @@
       ]}
     },
     {
-      image:'images/story/08-europe-official-status.png',
       url:'https://research.nualart.cat/area-glocolici/?lang=ca&group=oficialitat&color=coincid%C3%A8ncia_gentilici_glot%C3%B2nim&continent=Europa',
       ca:{title:'A Europa, les llengües territorials coincideixen més que les cooficials estatals', paragraphs:[
         'Les llengües «reconegudes o protegides» coincideixen en 15 de 19 casos —78,9%— i les cooficials regionals, en 5 de 6 —83,3%—. L’excepció regional són les Illes Balears: <em>balear</em> no coincideix amb <em>català</em>.',
@@ -119,7 +112,6 @@
       ]}
     },
     {
-      image:'images/story/09-africa-colonization.png',
       url:'https://research.nualart.cat/area-glocolici/?lang=ca&group=llengua_introdu%C3%AFda_per_colonitzaci%C3%B3&color=coincid%C3%A8ncia_gentilici_glot%C3%B2nim&continent=%C3%80frica',
       ca:{title:'A l’Àfrica, el colonialisme és determinant, però no ho explica tot', paragraphs:[
         'Cap dels 53 casos africans amb llengua introduïda colonialment presenta coincidència. Entre els 18 casos d’introducció parcial només n’hi ha un. Això explica una part important de les només 12 coincidències africanes entre 135 casos.',
@@ -131,7 +123,6 @@
       ]}
     },
     {
-      image:'images/story/10-non-matches-endogeneity.png',
       url:'https://research.nualart.cat/area-glocolici/?lang=ca&group=continent&color=llengua_end%C3%B2gena_del_territori&match=No',
       ca:{title:'Els casos no coincidents amaguen mecanismes continentals diferents', paragraphs:[
         'A Europa, 36 dels 40 casos no coincidents tenen llengües endògenes —90%—; a l’Àsia són 38 de 55 —69,1%—. Aquí el desacoblament no es pot atribuir principalment a una llengua exterior.',
@@ -171,6 +162,7 @@
   }
 
   function initialize() {
+    document.body.classList.toggle('embed-mode', embedMode);
     readUrl();
     bindControls();
     setLanguage(state.lang);
@@ -191,6 +183,7 @@
 
   function syncUrl() {
     const params = new URLSearchParams();
+    if (embedMode) params.set('embed', '1');
     if (state.lang !== defaultState.lang) params.set(queryKeys.lang, state.lang);
     if (state.group !== defaultState.group) params.set(queryKeys.group, state.group);
     if (state.color !== defaultState.color) params.set(queryKeys.color, state.color);
@@ -251,6 +244,7 @@
   }
 
   function renderStory() {
+    if (embedMode) return;
     const steps = $('#story-steps');
     if (!steps) return;
     if (storyObserver) storyObserver.disconnect();
@@ -264,21 +258,15 @@
       </article>`;
     }).join('');
 
-    const image = $('#story-image');
-    const link = $('#story-link');
+    const storyEmbed = $('#story-embed');
     const caption = $('#story-caption');
     const activate = (index) => {
       const item = storyCases[index];
       const copy = item[state.lang];
       steps.querySelectorAll('.story-step').forEach((step, stepIndex) => step.classList.toggle('is-active', stepIndex === index));
-      if (image.getAttribute('src') !== item.image) {
-        image.classList.add('is-changing');
-        image.onload = () => image.classList.remove('is-changing');
-        image.src = item.image;
-      }
-      image.alt = copy.title;
-      link.href = item.url;
-      link.setAttribute('aria-label', `${t('storyOpen')}: ${copy.title}`);
+      const config = Object.fromEntries(new URL(item.url).searchParams);
+      storyEmbed.setAttribute('label', copy.title);
+      storyEmbed.configure({ ...config, lang:state.lang });
       caption.textContent = `${index + 1}. ${copy.title}`;
     };
     activate(0);

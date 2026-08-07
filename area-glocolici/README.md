@@ -30,3 +30,19 @@ python3 scripts/build_data.py
 ```
 
 El resultat és `data/glotolici-data.js`. El format JavaScript, en lloc de `fetch()` sobre JSON, permet obrir la visualització directament amb `file://` i també servir-la des de qualsevol servidor web estàtic.
+
+## Incrustació
+
+El component web `js/glotolici-embed.js` permet incrustar una visualització funcional amb els controls, el recompte, la llegenda, els grups i les fitxes de detall, sense la capçalera ni la narració de la pàgina principal:
+
+```html
+<script src="js/glotolici-embed.js"></script>
+<glotolici-embed
+  lang="ca"
+  group="continent"
+  color="coincidència_gentilici_glotònim"
+  continent="Europa">
+</glotolici-embed>
+```
+
+Els atributs disponibles són `lang`, `group`, `color`, `sort`, `q`, `continent`, `match` i `certainty`. El component els transforma en paràmetres de la modalitat compacta `embed=1`.
