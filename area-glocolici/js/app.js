@@ -140,7 +140,7 @@
     lang: browserLanguages.some((lang) => String(lang).toLowerCase().startsWith('ca')) ? 'ca' : 'en',
     group: 'continent',
     color: 'coincidència_gentilici_glotònim',
-    sortByColor: false,
+    sortByColor: true,
     query: '',
     continent: '',
     match: '',
@@ -174,7 +174,7 @@
     if (['ca','en'].includes(params.get('lang'))) state.lang = params.get('lang');
     if (validFields.has(params.get('group'))) state.group = params.get('group');
     if (validFields.has(params.get('color'))) state.color = params.get('color');
-    state.sortByColor = params.get('sort') === '1';
+    if (params.has('sort')) state.sortByColor = params.get('sort') !== '0';
     state.query = params.get('q') || '';
     if (unique('continent').includes(params.get('continent'))) state.continent = params.get('continent');
     if (['Sí','No'].includes(params.get('match'))) state.match = params.get('match');
@@ -187,7 +187,7 @@
     if (state.lang !== defaultState.lang) params.set(queryKeys.lang, state.lang);
     if (state.group !== defaultState.group) params.set(queryKeys.group, state.group);
     if (state.color !== defaultState.color) params.set(queryKeys.color, state.color);
-    if (state.sortByColor !== defaultState.sortByColor) params.set(queryKeys.sortByColor, '1');
+    if (state.sortByColor !== defaultState.sortByColor) params.set(queryKeys.sortByColor, '0');
     if (state.query !== defaultState.query) params.set(queryKeys.query, state.query);
     ['continent','match','certainty'].forEach((key) => {
       if (state[key] !== defaultState[key]) params.set(queryKeys[key], state[key]);
@@ -227,7 +227,7 @@
     $('#reset').addEventListener('click', () => {
       Object.assign(state, defaultState, { lang: state.lang });
       document.querySelectorAll('.controls input, .controls select').forEach((el) => { el.value = ''; });
-      $('#sort-by-color').checked = false;
+      $('#sort-by-color').checked = state.sortByColor;
       $('#group-by').value = state.group; $('#color-by').value = state.color; render();
     });
     dialog('#detail'); dialog('#about');
