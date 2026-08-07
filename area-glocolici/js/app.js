@@ -3,6 +3,7 @@
 
   const data = window.GLOTOLICI_DATA || [];
   const embedMode = new URLSearchParams(location.search).get('embed') === '1';
+  const staticStoryMedia = window.matchMedia('(max-width: 700px)');
   const $ = (selector) => document.querySelector(selector);
   const fields = ['continent','subregió_geogràfica','coincidència_gentilici_glotònim','relacio_formal','oficialitat','llengua_endògena_del_territori','llengua_introduïda_per_colonització','estat_postcolonial','unitat_poble_territori_llengua','grau_de_certesa'];
   const detailFields = [
@@ -165,6 +166,7 @@
     document.body.classList.toggle('embed-mode', embedMode);
     readUrl();
     bindControls();
+    if (!embedMode) staticStoryMedia.addEventListener('change', renderStory);
     setLanguage(state.lang);
   }
 
@@ -248,15 +250,25 @@
     const steps = $('#story-steps');
     if (!steps) return;
     if (storyObserver) storyObserver.disconnect();
+    const staticLayout = staticStoryMedia.matches;
     steps.innerHTML = storyCases.map((item, index) => {
       const copy = item[state.lang];
+      const config = Object.fromEntries(new URL(item.url).searchParams);
+      config.lang = state.lang;
+      const embedAttributes = Object.entries(config).map(([name, value]) => `${name}="${escapeHTML(value)}"`).join(' ');
       return `<article class="story-step${index === 0 ? ' is-active' : ''}" data-story-index="${index}">
         <p class="story-number">${t('storyCase')} ${index + 1} / ${storyCases.length}</p>
         <h3>${copy.title}</h3>
         ${copy.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('')}
+        ${staticLayout ? `<glotolici-embed class="story-inline-embed" ${embedAttributes} label="${escapeHTML(copy.title)}"></glotolici-embed>` : ''}
         <a href="${item.url}" target="_blank" rel="noopener">${t('storyOpen')} ↗</a>
       </article>`;
     }).join('');
+
+    if (staticLayout) {
+      steps.querySelectorAll('.story-step').forEach((step) => step.classList.add('is-active'));
+      return;
+    }
 
     const storyEmbed = $('#story-embed');
     const caption = $('#story-caption');
