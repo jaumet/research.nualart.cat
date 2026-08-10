@@ -136,6 +136,7 @@
     }
   ];
   const palette = ['#005f73','#0a9396','#94d2bd','#e9d8a6','#ee9b00','#ca6702','#bb3e03','#9b2226','#6d597a','#355070','#52796f','#7f5539'];
+  const binaryPalette = ['#005f73','#ee9b00'];
   const browserLanguages = navigator.languages || [navigator.language || 'en'];
   const defaultState = Object.freeze({
     lang: browserLanguages.some((lang) => String(lang).toLowerCase().startsWith('ca')) ? 'ca' : 'en',
@@ -311,7 +312,8 @@
   function render() {
     const rows = filteredData();
     const colorValues = [...new Set(rows.map((row) => clean(row[state.color])))].sort((a,b) => a.localeCompare(b,'ca'));
-    const colors = Object.fromEntries(colorValues.map((value, i) => [value, palette[i % palette.length]]));
+    const activePalette = colorValues.length === 2 ? binaryPalette : palette;
+    const colors = Object.fromEntries(colorValues.map((value, i) => [value, activePalette[i % activePalette.length]]));
     const groups = new Map();
     rows.forEach((row) => { const key = clean(row[state.group]); if (!groups.has(key)) groups.set(key, []); groups.get(key).push(row); });
     const area = $('#area'); area.innerHTML = '';
