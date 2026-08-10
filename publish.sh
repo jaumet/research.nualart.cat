@@ -15,7 +15,9 @@ git add -u -- area-glocolici
 git add -- publish.sh area-glocolici/js/glotolici-embed.js
 
 if git diff --cached --quiet; then
-  echo "Nothing to publish: the Glotolici files have no staged changes."
+  echo "No new Glotolici file changes. Checking that branch '$branch' is published..."
+  git push origin "$branch"
+  echo "Branch '$branch' is up to date on origin."
   exit 0
 fi
 
