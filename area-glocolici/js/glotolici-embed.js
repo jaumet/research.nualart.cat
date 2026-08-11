@@ -3,7 +3,7 @@
 
   const scriptUrl = document.currentScript && document.currentScript.src;
   const appUrl = new URL('../index.html', scriptUrl || document.baseURI);
-  const parameters = ['lang','group','color','sort','q','continent','match','certainty'];
+  const parameters = ['lang','theme','group','color','sort','q','continent','match','certainty'];
   const hostIsEmbed = new URLSearchParams(location.search).get('embed') === '1';
 
   class GlotoliciEmbed extends HTMLElement {
@@ -15,9 +15,9 @@
       super();
       const root = this.attachShadow({ mode:'open' });
       root.innerHTML = `<style>
-        :host{display:block;width:100%;height:100%;min-height:420px;background:#f7f5ef}
-        .stage{position:relative;width:100%;height:100%;overflow:hidden;background:#f7f5ef}
-        iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0;background:#f7f5ef;opacity:0;pointer-events:none;transition:opacity .5s ease}
+        :host{display:block;width:100%;height:100%;min-height:420px;background:transparent}
+        .stage{position:relative;width:100%;height:100%;overflow:hidden;background:transparent}
+        iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0;background:transparent;opacity:0;pointer-events:none;transition:opacity .5s ease}
         iframe.active{opacity:1;pointer-events:auto}
         @media(prefers-reduced-motion:reduce){iframe{transition:none}}
       </style><div class="stage">

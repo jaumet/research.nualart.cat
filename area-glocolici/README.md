@@ -4,7 +4,7 @@ Visualització exploratòria mundial de les relacions entre gentilicis, glotòni
 
 La interfície és disponible en català i anglès. Detecta les preferències lingüístiques del navegador: mostra català quan hi troba una llengua `ca`; altrament, mostra anglès. El selector de la capçalera permet canviar-la manualment.
 
-Cada visualització és reproduïble mitjançant l’URL. Els paràmetres `lang`, `group`, `color`, `sort`, `q`, `continent`, `match` i `certainty` es mantenen sincronitzats amb els controls i permeten compartir una configuració exacta. L’URL només inclou els valors diferents de la configuració per defecte; la portada, per tant, no genera una cadena de consulta innecessària. L’ordenació per color està activada per defecte i només genera `sort=0` quan es desactiva.
+Cada visualització és reproduïble mitjançant l’URL. Els paràmetres `lang`, `theme`, `group`, `color`, `sort`, `q`, `continent`, `match` i `certainty` es mantenen sincronitzats amb els controls i permeten compartir una configuració exacta. L’URL només inclou els valors diferents de la configuració per defecte; la portada, per tant, no genera una cadena de consulta innecessària. El tema fosc i l’ordenació per color estan activats per defecte; només es genera `theme=light` quan se selecciona el tema clar i `sort=0` quan es desactiva l’ordenació.
 
 ## Dades
 
@@ -45,4 +45,4 @@ El component web `js/glotolici-embed.js` permet incrustar una visualització fun
 </glotolici-embed>
 ```
 
-Els atributs disponibles són `lang`, `group`, `color`, `sort`, `q`, `continent`, `match` i `certainty`. El component els transforma en paràmetres de la modalitat compacta `embed=1`.
+Els atributs disponibles són `lang`, `theme`, `group`, `color`, `sort`, `q`, `continent`, `match` i `certainty`. El component els transforma en paràmetres de la modalitat compacta `embed=1`.

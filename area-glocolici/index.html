@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="ca">
+<html lang="ca" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Comparativa mundial entre gentilicis i glotònims en català.">
+  <meta name="theme-color" content="#080e1c">
   <title>Glotolici · Atles de gentilicis i glotònims</title>
   <link rel="stylesheet" href="css/area.css">
 </head>
@@ -15,6 +16,7 @@
       <p class="lede" data-i18n="lede">Explora les relacions entre gentilicis, glotònims, territoris i llengües. Cada quadrat és un cas documentat.</p>
     </div>
     <div class="hero-actions">
+      <label><span data-i18n="theme">Tema</span><select id="theme"><option value="dark" data-i18n="darkTheme">Fosc</option><option value="light" data-i18n="lightTheme">Clar</option></select></label>
       <label><span data-i18n="language">Llengua</span><select id="language"><option value="ca">Català</option><option value="en">English</option></select></label>
       <button id="about-open" class="text-button" type="button" data-i18n="aboutButton">Sobre les dades</button>
     </div>

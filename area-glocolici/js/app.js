@@ -15,11 +15,11 @@
   ];
   const i18n = {
     ca: {
-      title:'Glotolici · Atles de gentilicis i glotònims', description:'Comparativa mundial entre gentilicis i glotònims en català.', eyebrow:'Glotolici · comparativa mundial', heading:'Quan un poble i una llengua comparteixen nom?', lede:'Explora les relacions entre gentilicis, glotònims, territoris i llengües. Cada quadrat és un cas documentat.', language:'Llengua', aboutButton:'Sobre les dades', groupBy:'Agrupa per', colorBy:'Color per', sortByColor:'Ordena els ítems per color', search:'Cerca', searchPlaceholder:'Territori, llengua, gentilici…', continent:'Continent', match:'Coincidència', certainty:'Certesa', all:'Totes', reset:'Neteja', empty:'No hi ha casos que compleixin aquests filtres.', aboutTitle:'Sobre les dades', aboutP1:'El conjunt és una primera versió exploratòria. Les etiquetes <strong>[DUBTOS]</strong> i <strong>[PENDENT]</strong> identifiquen dades que encara requereixen revisió o una font específica.', aboutP2:'La unitat de la visualització és una relació territori–llengua, no necessàriament un estat. Per això també s’hi inclouen territoris autònoms, regions i pobles.', cases:'casos', territories:'territoris', languages:'llengües', matches:'coincidències', of:'de', case:'Cas', sources:'Fonts', warning:'Conté dades dubtoses', pending:'Pendent', yes:'Sí', no:'No', close:'Tanca', summaryLabel:'Resum del conjunt de dades', controlsLabel:'Controls de visualització', legendLabel:'Llegenda de colors', areaLabel:'Visualització dels casos', storyEyebrow:'Deu lectures de les dades', storyTitle:'Què ens explica la relació entre els noms dels pobles i de les llengües?', storyIntro:'Desplaça’t pels deu casos. Cada lectura conserva la configuració exacta de la visualització i pren el cas territori–llengua com a unitat d’anàlisi.', storyCase:'Lectura', storyOpen:'Obre aquesta visualització',
+      title:'Glotolici · Atles de gentilicis i glotònims', description:'Comparativa mundial entre gentilicis i glotònims en català.', eyebrow:'Glotolici · comparativa mundial', heading:'Quan un poble i una llengua comparteixen nom?', lede:'Explora les relacions entre gentilicis, glotònims, territoris i llengües. Cada quadrat és un cas documentat.', theme:'Tema', darkTheme:'Fosc', lightTheme:'Clar', language:'Llengua', aboutButton:'Sobre les dades', groupBy:'Agrupa per', colorBy:'Color per', sortByColor:'Ordena els ítems per color', search:'Cerca', searchPlaceholder:'Territori, llengua, gentilici…', continent:'Continent', match:'Coincidència', certainty:'Certesa', all:'Totes', reset:'Neteja', empty:'No hi ha casos que compleixin aquests filtres.', aboutTitle:'Sobre les dades', aboutP1:'El conjunt és una primera versió exploratòria. Les etiquetes <strong>[DUBTOS]</strong> i <strong>[PENDENT]</strong> identifiquen dades que encara requereixen revisió o una font específica.', aboutP2:'La unitat de la visualització és una relació territori–llengua, no necessàriament un estat. Per això també s’hi inclouen territoris autònoms, regions i pobles.', cases:'casos', territories:'territoris', languages:'llengües', matches:'coincidències', of:'de', case:'Cas', sources:'Fonts', warning:'Conté dades dubtoses', pending:'Pendent', yes:'Sí', no:'No', close:'Tanca', summaryLabel:'Resum del conjunt de dades', controlsLabel:'Controls de visualització', legendLabel:'Llegenda de colors', areaLabel:'Visualització dels casos', storyEyebrow:'Deu lectures de les dades', storyTitle:'Què ens explica la relació entre els noms dels pobles i de les llengües?', storyIntro:'Desplaça’t pels deu casos. Cada lectura conserva la configuració exacta de la visualització i pren el cas territori–llengua com a unitat d’anàlisi.', storyCase:'Lectura', storyOpen:'Obre aquesta visualització',
       fields:{continent:'Continent',subregió_geogràfica:'Subregió geogràfica',coincidència_gentilici_glotònim:'Coincidència gentilici–glotònim',relacio_formal:'Relació formal',oficialitat:'Oficialitat',llengua_endògena_del_territori:'Llengua endògena',llengua_introduïda_per_colonització:'Introduïda per colonització',estat_postcolonial:'Estat postcolonial',unitat_poble_territori_llengua:'Unitat poble–territori–llengua',grau_de_certesa:'Grau de certesa',unitat_analitzada:'Territori o unitat',tipus_unitat:'Tipus d’unitat',llengua:'Llengua',codi_llengua:'Codi de llengua',gentilici_catala:'Gentilici català',glotonim_catala:'Glotònim català',gentilici_local:'Gentilici local',glotonim_local:'Glotònim local',estatus_llengua_al_territori:'Estatus al territori',abast_geografic_llengua:'Abast geogràfic',llengua_majoritària:'Llengua majoritària',context_politic_o_colonial:'Context polític o colonial',origen_historic_dels_noms:'Origen històric dels noms',observacions:'Observacions'}
     },
     en: {
-      title:'Glotolici · Atlas of demonyms and language names', description:'Worldwide comparison of Catalan demonyms and language names.', eyebrow:'Glotolici · worldwide comparison', heading:'When do a people and a language share a name?', lede:'Explore the relationships between demonyms, language names, territories and languages. Each square represents a documented case.', language:'Language', aboutButton:'About the data', groupBy:'Group by', colorBy:'Color by', sortByColor:'Sort items by color', search:'Search', searchPlaceholder:'Territory, language, demonym…', continent:'Continent', match:'Match', certainty:'Certainty', all:'All', reset:'Reset', empty:'No cases match these filters.', aboutTitle:'About the data', aboutP1:'This dataset is a first exploratory version. The labels <strong>[DUBTOS]</strong> (uncertain) and <strong>[PENDENT]</strong> (pending) identify data that still require review or a specific source.', aboutP2:'The visualization unit is a territory–language relationship, not necessarily a state. It therefore also includes autonomous territories, regions and peoples.', cases:'cases', territories:'territories', languages:'languages', matches:'matches', of:'of', case:'Case', sources:'Sources', warning:'Contains uncertain data', pending:'Pending', yes:'Yes', no:'No', close:'Close', summaryLabel:'Dataset summary', controlsLabel:'Visualization controls', legendLabel:'Color legend', areaLabel:'Case visualization', storyEyebrow:'Ten readings of the data', storyTitle:'What does the relationship between the names of peoples and languages tell us?', storyIntro:'Scroll through ten cases. Each reading preserves the exact visualization settings and uses the territory–language case as its unit of analysis.', storyCase:'Reading', storyOpen:'Open this visualization',
+      title:'Glotolici · Atlas of demonyms and language names', description:'Worldwide comparison of Catalan demonyms and language names.', eyebrow:'Glotolici · worldwide comparison', heading:'When do a people and a language share a name?', lede:'Explore the relationships between demonyms, language names, territories and languages. Each square represents a documented case.', theme:'Theme', darkTheme:'Dark', lightTheme:'Light', language:'Language', aboutButton:'About the data', groupBy:'Group by', colorBy:'Color by', sortByColor:'Sort items by color', search:'Search', searchPlaceholder:'Territory, language, demonym…', continent:'Continent', match:'Match', certainty:'Certainty', all:'All', reset:'Reset', empty:'No cases match these filters.', aboutTitle:'About the data', aboutP1:'This dataset is a first exploratory version. The labels <strong>[DUBTOS]</strong> (uncertain) and <strong>[PENDENT]</strong> (pending) identify data that still require review or a specific source.', aboutP2:'The visualization unit is a territory–language relationship, not necessarily a state. It therefore also includes autonomous territories, regions and peoples.', cases:'cases', territories:'territories', languages:'languages', matches:'matches', of:'of', case:'Case', sources:'Sources', warning:'Contains uncertain data', pending:'Pending', yes:'Yes', no:'No', close:'Close', summaryLabel:'Dataset summary', controlsLabel:'Visualization controls', legendLabel:'Color legend', areaLabel:'Case visualization', storyEyebrow:'Ten readings of the data', storyTitle:'What does the relationship between the names of peoples and languages tell us?', storyIntro:'Scroll through ten cases. Each reading preserves the exact visualization settings and uses the territory–language case as its unit of analysis.', storyCase:'Reading', storyOpen:'Open this visualization',
       fields:{continent:'Continent',subregió_geogràfica:'Geographic subregion',coincidència_gentilici_glotònim:'Demonym–language name match',relacio_formal:'Formal relationship',oficialitat:'Official status',llengua_endògena_del_territori:'Endogenous language',llengua_introduïda_per_colonització:'Introduced through colonization',estat_postcolonial:'Postcolonial state',unitat_poble_territori_llengua:'People–territory–language unity',grau_de_certesa:'Degree of certainty',unitat_analitzada:'Territory or unit',tipus_unitat:'Unit type',llengua:'Language',codi_llengua:'Language code',gentilici_catala:'Catalan demonym',glotonim_catala:'Catalan language name',gentilici_local:'Local demonym',glotonim_local:'Local language name',estatus_llengua_al_territori:'Status in the territory',abast_geografic_llengua:'Geographic scope',llengua_majoritària:'Majority language',context_politic_o_colonial:'Political or colonial context',origen_historic_dels_noms:'Historical origin of the names',observacions:'Notes'}
     }
   };
@@ -140,6 +140,7 @@
   const browserLanguages = navigator.languages || [navigator.language || 'en'];
   const defaultState = Object.freeze({
     lang: browserLanguages.some((lang) => String(lang).toLowerCase().startsWith('ca')) ? 'ca' : 'en',
+    theme: 'dark',
     group: 'continent',
     color: 'coincidència_gentilici_glotònim',
     sortByColor: true,
@@ -149,7 +150,7 @@
     certainty: ''
   });
   const state = { ...defaultState };
-  const queryKeys = { lang:'lang', group:'group', color:'color', sortByColor:'sort', query:'q', continent:'continent', match:'match', certainty:'certainty' };
+  const queryKeys = { lang:'lang', theme:'theme', group:'group', color:'color', sortByColor:'sort', query:'q', continent:'continent', match:'match', certainty:'certainty' };
   let storyObserver;
 
   const t = (key) => i18n[state.lang][key];
@@ -166,6 +167,7 @@
   function initialize() {
     document.body.classList.toggle('embed-mode', embedMode);
     readUrl();
+    setTheme(state.theme);
     bindControls();
     if (!embedMode) staticStoryMedia.addEventListener('change', renderStory);
     setLanguage(state.lang);
@@ -175,6 +177,7 @@
     const params = new URLSearchParams(location.search);
     const validFields = new Set(fields);
     if (['ca','en'].includes(params.get('lang'))) state.lang = params.get('lang');
+    if (['dark','light'].includes(params.get('theme'))) state.theme = params.get('theme');
     if (validFields.has(params.get('group'))) state.group = params.get('group');
     if (validFields.has(params.get('color'))) state.color = params.get('color');
     if (params.has('sort')) state.sortByColor = params.get('sort') !== '0';
@@ -188,6 +191,7 @@
     const params = new URLSearchParams();
     if (embedMode) params.set('embed', '1');
     if (state.lang !== defaultState.lang) params.set(queryKeys.lang, state.lang);
+    if (state.theme !== defaultState.theme) params.set(queryKeys.theme, state.theme);
     if (state.group !== defaultState.group) params.set(queryKeys.group, state.group);
     if (state.color !== defaultState.color) params.set(queryKeys.color, state.color);
     if (state.sortByColor !== defaultState.sortByColor) params.set(queryKeys.sortByColor, '0');
@@ -201,7 +205,7 @@
   }
 
   function setLanguage(lang) {
-    state.lang = lang; document.documentElement.lang = lang; document.title = t('title'); $('#language').value = lang;
+    state.lang = lang; document.documentElement.lang = lang; document.title = t('title'); $('#language').value = lang; $('#theme').value = state.theme;
     document.querySelector('meta[name="description"]').content = t('description');
     $('#summary').setAttribute('aria-label', t('summaryLabel')); $('.controls').setAttribute('aria-label', t('controlsLabel'));
     $('#legend').setAttribute('aria-label', t('legendLabel')); $('#area').setAttribute('aria-label', t('areaLabel'));
@@ -218,7 +222,16 @@
     renderSummary(); renderStory(); render();
   }
 
+  function setTheme(theme) {
+    state.theme = theme;
+    document.documentElement.dataset.theme = theme;
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) themeColor.content = theme === 'dark' ? '#080e1c' : '#14213d';
+    if ($('#theme')) $('#theme').value = theme;
+  }
+
   function bindControls() {
+    $('#theme').addEventListener('change', (e) => { setTheme(e.target.value); renderStory(); render(); });
     $('#language').addEventListener('change', (e) => setLanguage(e.target.value));
     $('#group-by').addEventListener('change', (e) => { state.group = e.target.value; render(); });
     $('#color-by').addEventListener('change', (e) => { state.color = e.target.value; render(); });
@@ -228,7 +241,7 @@
       $(id).addEventListener('change', (e) => { state[key] = e.target.value; render(); });
     });
     $('#reset').addEventListener('click', () => {
-      Object.assign(state, defaultState, { lang: state.lang });
+      Object.assign(state, defaultState, { lang: state.lang, theme: state.theme });
       document.querySelectorAll('.controls input, .controls select').forEach((el) => { el.value = ''; });
       $('#sort-by-color').checked = state.sortByColor;
       $('#group-by').value = state.group; $('#color-by').value = state.color; render();
@@ -237,7 +250,7 @@
     $('#about-open').addEventListener('click', () => $('#about').showModal());
     window.addEventListener('popstate', () => {
       Object.assign(state, defaultState);
-      readUrl(); setLanguage(state.lang);
+      readUrl(); setTheme(state.theme); setLanguage(state.lang);
     });
   }
 
@@ -256,6 +269,7 @@
       const copy = item[state.lang];
       const config = Object.fromEntries(new URL(item.url).searchParams);
       config.lang = state.lang;
+      config.theme = state.theme;
       const embedAttributes = Object.entries(config).map(([name, value]) => `${name}="${escapeHTML(value)}"`).join(' ');
       return `<article class="story-step${index === 0 ? ' is-active' : ''}" data-story-index="${index}">
         <p class="story-number">${t('storyCase')} ${index + 1} / ${storyCases.length}</p>
@@ -279,7 +293,7 @@
       steps.querySelectorAll('.story-step').forEach((step, stepIndex) => step.classList.toggle('is-active', stepIndex === index));
       const config = Object.fromEntries(new URL(item.url).searchParams);
       storyEmbed.setAttribute('label', copy.title);
-      storyEmbed.configure({ ...config, lang:state.lang });
+      storyEmbed.configure({ ...config, lang:state.lang, theme:state.theme });
       caption.textContent = `${index + 1}. ${copy.title}`;
     };
     activate(0);
