@@ -1,6 +1,6 @@
 window.DVG_I18N = {
   ca: {
-    navBook: 'El llibre', navFormats: 'Formats', navReader: 'Lector',
+    backProjects: 'Torna als projectes de Jaume Nualart', navBook: 'El llibre', navFormats: 'Formats', navReader: 'Lector',
     heroEyebrow: 'Guia oberta · data.europa.eu', byline: 'Publications Office of the European Union<br>i Maarten Lambrechts', discoverBook: 'Descobreix el llibre',
     coverNote: 'Una edició lineal, accessible i preparada per a lectura en veu alta.', introEyebrow: 'Introducció', introTitle: 'Dades que es poden<br>veure i entendre.',
     introLead: 'La visualització de dades transforma informació complexa en una experiència clara, útil i memorable.',
@@ -18,7 +18,7 @@ window.DVG_I18N = {
     accessibleEdition: 'Edició accessible: Jaume Nualart Vilaplana', loadingBook: 'Carregant el llibre…', fullText: 'Versió completa en text pla · 157.000 paraules aproximadament', searchMatches: '{count} coincidències per a “{query}”', readerLocalError: 'Per activar el lector, obre aquesta pàgina mitjançant un servidor web local.', txtDownload: 'La versió TXT es pot descarregar des de la secció de formats.', audioLoading: 'Carregant l’edició sincronitzada…', audioError: 'No s’ha pogut carregar l’edició àudio + text.'
   },
   en: {
-    navBook: 'The book', navFormats: 'Formats', navReader: 'Reader',
+    backProjects: 'Back to Jaume Nualart’s projects', navBook: 'The book', navFormats: 'Formats', navReader: 'Reader',
     heroEyebrow: 'Open guide · data.europa.eu', byline: 'Publications Office of the European Union<br>and Maarten Lambrechts', discoverBook: 'Discover the book',
     coverNote: 'A linear, accessible edition prepared for read-aloud use.', introEyebrow: 'Introduction', introTitle: 'Data that can be<br>seen and understood.',
     introLead: 'Data visualisation turns complex information into a clear, useful and memorable experience.',

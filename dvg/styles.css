@@ -40,7 +40,9 @@ a { color: inherit; }
   letter-spacing: 0.08em;
   text-decoration: none;
 }
-.brand-mark { width: 28px; height: 5px; background: var(--coral); }
+.back-to-projects { max-width: 310px; font-size: .75rem; line-height: 1.35; letter-spacing: .035em; text-transform: uppercase; }
+.back-to-projects > span:first-child { color: var(--coral); font-size: 1.15rem; transition: transform .2s ease; }
+.back-to-projects:hover > span:first-child { transform: translateX(-4px); }
 .header-link {
   color: var(--white);
   font-size: 0.82rem;
