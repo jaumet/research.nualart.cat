@@ -263,6 +263,12 @@ h2 {
 .format-card:hover, .format-card:focus-visible { color: var(--panel); background: var(--coral); transform: translateY(-4px); }
 .format-number { flex: 0 0 auto; margin-bottom: 48px; color: rgba(255,255,255,.48); font-size: .7rem; }
 .format-card strong { margin-bottom: 12px; font-family: var(--serif); font-size: 2rem; font-weight: 500; }
+.format-icon { width: 34px; height: 34px; margin: -2px 0 14px; fill: currentColor; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.format-card-audiobook .format-icon path:first-child { stroke: none; }
+.format-icon-book path, .format-icon-book-audio .book-outline, .format-icon-book-audio .sound-wave { fill: none; stroke: currentColor; }
+.format-icon-book-audio { width: 112px; }
+.format-icon-book-audio .speaker-fill { stroke: none; }
+.format-card-audiobook strong { margin-top: 0; }
 .format-card > span:not(.format-number) { min-height: 46px; font-size: .83rem; line-height: 1.5; }
 .format-card small { margin-top: 24px; color: rgba(255,255,255,.55); }
 .format-card:hover small, .format-card:hover .format-number { color: rgba(17,47,77,.66); }
