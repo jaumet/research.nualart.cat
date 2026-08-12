@@ -258,7 +258,7 @@ h2 {
 .license-note p { margin: 0; color: rgba(255,255,255,.74); font-size: .82rem; line-height: 1.65; }
 .license-note a { color: var(--light-text); }
 .license-badge { flex: 0 0 auto; display: grid; place-items: center; width: 44px; height: 44px; border: 2px solid var(--coral); border-radius: 50%; color: var(--coral); font-weight: 700; }
-.format-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.2); border-left: 1px solid rgba(255,255,255,.2); }
+.format-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid rgba(255,255,255,.2); border-left: 1px solid rgba(255,255,255,.2); }
 .format-card { min-height: 300px; display: flex; flex-direction: column; align-self: stretch; padding: 25px; border-right: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); text-decoration: none; transition: color .2s, background .2s, transform .2s; }
 .format-card:hover, .format-card:focus-visible { color: var(--panel); background: var(--coral); transform: translateY(-4px); }
 .format-number { flex: 0 0 auto; margin-bottom: 48px; color: rgba(255,255,255,.48); font-size: .7rem; }
