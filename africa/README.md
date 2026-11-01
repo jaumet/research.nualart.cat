@@ -55,6 +55,7 @@ data/languages.js  llengües de Glottolog (generat per build/build_languages.py)
 build/build.py     genera data/geo.js a partir de build/raw/
 build/fetch.sh     torna a descarregar les fonts
 build/check_i18n.js  comprova que les traduccions tenen la mateixa estructura que el català
+build/og.html, og.sh  imatges per compartir (img/og-*.jpg, 1200×630): ./build/og.sh les torna a generar
 ```
 
 Per regenerar les dades:
