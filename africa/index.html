@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#14110f">
+  <title>Àfrica esquarterada</title>
+  <meta name="description" content="Com el colonialisme europeu va traçar fronteres sobre regnes, pobles i cultures africanes: mapes comparats, línia de temps animada 1870–2018, pobles partits i noms abans i després.">
+  <link rel="alternate" hreflang="en" href="en/index.html">
+  <script src="js/lang-redirect.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="version-switch" aria-label="Tria la versió">
+    <span class="vs-label">Tria la versió:</span>
+    <a class="vs-opt" href="infants.html"><span aria-hidden="true">🧒</span> Infants i joves <small>8–14 anys</small></a>
+    <a class="vs-opt" href="index.html" aria-current="page"><span aria-hidden="true">📚</span> Adults <small>amb totes les dades</small></a>
+    <span class="vs-langs" aria-label="Llengua"><a class="vs-lang" href="index.html" hreflang="ca" lang="ca" aria-current="true">Català</a><a class="vs-lang" href="en/index.html" hreflang="en" lang="en">English</a></span>
+  </nav>
+  <header class="hero">
+    <p class="eyebrow">Atles de denúncia · 1870–avui</p>
+    <h1>Àfrica esquarterada</h1>
+    <p class="lede">El 1884, a Berlín, catorze potències es van reunir per repartir-se un continent on no havien posat mai els peus. No hi havia cap africà a la sala. En trenta anys, centenars de regnes, imperis, ciutats i pobles van quedar sotmesos, saquejats i dividits per línies traçades amb regle sobre mapes incomplets. Aquelles línies són, encara avui, les fronteres d'Àfrica.</p>
+    <dl class="stats">
+      <div><dt id="statColonized1914">~90%</dt><dd>del territori africà sota domini europeu el 1914</dd></div>
+      <div><dt>0</dt><dd>representants africans a la Conferència de Berlín</dd></div>
+      <div><dt id="statPartitioned">230</dt><dd>pobles amb el seu territori partit per les fronteres actuals</dd></div>
+      <div><dt>2</dt><dd>estats que van resistir: Etiòpia i Libèria</dd></div>
+    </dl>
+  </header>
+
+  <main>
+    <section class="atlas" aria-label="Atles interactiu">
+      <nav class="tabs" role="tablist" aria-label="Vistes de l'atles">
+        <button role="tab" data-mode="timeline" aria-selected="true">Cronologia</button>
+        <button role="tab" data-mode="compare" aria-selected="false">Abans i després</button>
+        <button role="tab" data-mode="peoples" aria-selected="false">Pobles partits</button>
+        <button role="tab" data-mode="names" aria-selected="false">Noms</button>
+        <span class="tab-sep" aria-hidden="true"></span>
+        <button role="tab" data-mode="ldiv" aria-selected="false">Diversitat lingüística</button>
+        <button role="tab" data-mode="loff" aria-selected="false">Llengües oficials</button>
+        <button role="tab" data-mode="lext" aria-selected="false">Llengües desaparegudes</button>
+      </nav>
+
+      <div class="atlas-body">
+        <div class="map-wrap" id="mapWrap">
+          <svg id="map" role="img" aria-label="Mapa d'Àfrica" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="swipe" id="swipe" hidden>
+            <div class="swipe-line"></div>
+            <button class="swipe-handle" id="swipeHandle" aria-label="Arrossega per comparar">⟷</button>
+            <span class="swipe-tag swipe-tag--left" id="swipeLeftTag"></span>
+            <span class="swipe-tag swipe-tag--right" id="swipeRightTag"></span>
+          </div>
+          <div class="year-badge" id="yearBadge" aria-live="polite">1870</div>
+          <div class="map-tools">
+            <button id="zoomIn" aria-label="Apropa">+</button>
+            <button id="zoomOut" aria-label="Allunya">−</button>
+            <button id="zoomReset" aria-label="Vista inicial">⤢</button>
+          </div>
+          <div class="tooltip" id="tooltip" hidden></div>
+          <div class="legend" id="legend"></div>
+        </div>
+
+        <aside class="panel">
+          <!-- Cronologia -->
+          <div class="panel-mode" data-panel="timeline">
+            <div class="player">
+              <button id="playButton" class="play" aria-label="Reprodueix">▶</button>
+              <div class="slider-wrap">
+                <input id="yearSlider" type="range" min="1870" max="2018" value="1870" step="1" aria-label="Any">
+                <div class="ticks" id="ticks"></div>
+              </div>
+            </div>
+            <div class="player-opts">
+              <label>Velocitat <select id="speedSelect"><option value="3">lenta</option><option value="7" selected>normal</option><option value="15">ràpida</option></select></label>
+              <label><input id="pauseEvents" type="checkbox" checked> Atura't als esdeveniments</label>
+              <label><input id="futureBorders" type="checkbox" checked> Fronteres futures</label>
+            </div>
+            <div class="meter">
+              <div class="meter-row"><span>Sota domini colonial europeu <span data-nref="share"></span></span><strong id="colonizedPct">—</strong></div>
+              <div class="meter-bar" aria-hidden="true"><span class="seg seg-pre" id="segPre"></span><span class="seg seg-col" id="segCol"></span><span class="seg seg-oth" id="segOth"></span><span class="seg seg-ind" id="segInd"></span></div>
+              <div class="meter-keys">
+                <span><i class="seg-pre"></i>Encara no conquerit <b id="prePct">—</b></span>
+                <span><i class="seg-ind"></i>Africà sobirà <b id="indPct">—</b></span>
+                <span><i class="seg-oth"></i>Otomà, egipci o ocupació veïna <b id="othPct">—</b></span>
+              </div>
+            </div>
+            <article class="event-card" id="eventCard"></article>
+            <p class="note">Com llegir les dates i fronteres: <span data-nref="claim"></span><span data-nref="modern"></span><span data-nref="base1880"></span><span data-nref="set"></span></p>
+            <details class="event-list-wrap">
+              <summary>Tots els esdeveniments</summary>
+              <ol class="event-list" id="eventList"></ol>
+            </details>
+          </div>
+
+          <!-- Comparar -->
+          <div class="panel-mode" data-panel="compare" hidden>
+            <h2>Abans i després</h2>
+            <p>Arrossega la línia del mapa per comparar dues èpoques sobre el mateix territori.</p>
+            <div class="compare-selects">
+              <label>Esquerra <select id="compareLeft"></select></label>
+              <label>Dreta <select id="compareRight"></select></label>
+            </div>
+            <div class="presets" id="comparePresets"></div>
+            <label class="check"><input id="overlayBorders" type="checkbox" checked> Superposa les fronteres actuals</label>
+            <label class="check"><input id="compareLabels" type="checkbox" checked> Mostra els noms</label>
+            <p class="note" id="compareNote"></p>
+            <p class="note">Sobre els mapes: <span data-nref="base1880"></span><span data-nref="hatch"></span><span data-nref="map1914"></span><span data-nref="murdock"></span></p>
+          </div>
+
+          <!-- Pobles -->
+          <div class="panel-mode" data-panel="peoples" hidden>
+            <h2>Pobles partits</h2>
+            <p>Territoris de <strong id="peopleTotal">835</strong> pobles segons el mapa etnogràfic de Murdock (1959). En vermell, els <strong id="peoplePart">230</strong> que tenen almenys un 10% del seu territori en un altre estat. <span data-nref="murdock"></span></p>
+            <label class="search"><span class="visually-hidden">Cerca un poble</span><input id="peopleSearch" list="peopleNames" placeholder="Cerca un poble (p. ex. Yoruba)" autocomplete="off"></label>
+            <datalist id="peopleNames"></datalist>
+            <div class="people-detail" id="peopleDetail"></div>
+            <h3>Històries de divisió</h3>
+            <div class="stories" id="stories"></div>
+            <label class="check"><input id="peoples1914" type="checkbox"> Compara amb les fronteres de 1914</label>
+          </div>
+
+          <!-- Noms -->
+          <div class="panel-mode" data-panel="names" hidden>
+            <h2>Noms imposats, noms recuperats</h2>
+            <p>Moltes colònies portaven noms de rius, de productes de comerç o d'homes blancs. A la independència, molts estats van recuperar noms africans.</p>
+            <div class="name-toggle" role="radiogroup" aria-label="Època dels noms">
+              <button data-names="colonial" aria-pressed="true">Noms colonials</button>
+              <button data-names="now" aria-pressed="false">Noms actuals</button>
+            </div>
+            <label class="check"><input id="showCities" type="checkbox" checked> Ciutats rebatejades</label>
+            <p class="city-hint">Apropa't al mapa per llegir els noms de les ciutats.</p>
+            <ol class="renames" id="renames"></ol>
+          </div>
+
+          <!-- Diversitat lingüística -->
+          <div class="panel-mode" data-panel="ldiv" hidden>
+            <h2>Un continent de milers de llengües</h2>
+            <p>A l'Àfrica es parlen més de <strong id="langLiving">2.000</strong> llengües, més d'una quarta part de les del món segons Glottolog. No tenen fronteres nítides: comparteixen territori, se superposen, i la majoria de persones en parlen dues o més. <span data-nref="lpoints"></span></p>
+            <p>Les fronteres colonials van agrupar en un sol estat centenars de llengües —<strong id="langNga">més de 500</strong> a Nigèria, segons Glottolog— i en van partir moltes altres.</p>
+            <div class="name-toggle" role="radiogroup" aria-label="Què mostra el mapa">
+              <button data-ldiv="count" aria-pressed="true">Llengües per país</button>
+              <button data-ldiv="shared" aria-pressed="false">Compartides amb altres estats</button>
+              <button data-ldiv="family" aria-pressed="false">Famílies</button>
+            </div>
+            <p class="note" id="ldivNote"></p>
+            <div class="people-detail" id="langCountryDetail"><p class="note">Passa per sobre d'un país o fes-hi clic per veure'n les llengües.</p></div>
+            <p class="note">Mètode: <span data-nref="lcountries"></span><span data-nref="lgroups"></span><span data-nref="lcontact"></span><span data-nref="lnationalsrc"></span></p>
+          </div>
+
+          <!-- Llengües oficials -->
+          <div class="panel-mode" data-panel="loff" hidden>
+            <h2>La llengua del poder</h2>
+            <p>El 1914, totes les administracions colonials governaven en una llengua europea. Avui, <strong id="loffEuro">—</strong> dels 55 estats i territoris africans encara tenen com a oficial (o de treball) la llengua de l'antiga metròpoli. Les ratlles indiquen que hi conviuen diverses llengües oficials. <span data-nref="loff"></span></p>
+            <div class="name-toggle" role="radiogroup" aria-label="Època">
+              <button data-loff="1914" aria-pressed="false">1914</button>
+              <button data-loff="now" aria-pressed="true">Avui</button>
+            </div>
+            <p class="note" id="loffNote"></p>
+            <div class="lang-stats" id="loffStats"></div>
+          </div>
+
+          <!-- Llengües desaparegudes -->
+          <div class="panel-mode" data-panel="lext" hidden>
+            <h2>Llengües que ja no es parlen</h2>
+            <p>Glottolog registra <strong id="lextCount">100</strong> llengües africanes extingides, <strong id="lextAfter">83</strong> d'elles documentades per darrer cop després de 1880, i <strong id="lextDanger">—</strong> més en perill greu. Cada llengua perduda és una manera de veure el món que desapareix. <span data-nref="lextinct"></span><span data-nref="lstatus"></span></p>
+            <div class="name-toggle" role="radiogroup" aria-label="Què mostra el mapa">
+              <button data-lext="extinct" aria-pressed="true">Extingides</button>
+              <button data-lext="status" aria-pressed="false">Totes, per vitalitat</button>
+            </div>
+            <div class="people-detail" id="langDetail"></div>
+            <h3>Històries</h3>
+            <div class="stories" id="langStories"></div>
+            <details class="event-list-wrap">
+              <summary>Llengües extingides documentades després de 1880</summary>
+              <ol class="event-list" id="extinctList"></ol>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="essay">
+      <div class="essay-grid">
+        <article>
+          <h2>No era terra de ningú</h2>
+          <p>Els mapes europeus del segle XIX pintaven l'interior d'Àfrica en blanc. Aquell buit era una ficció útil: la doctrina de la <em>terra nullius</em> permetia presentar la conquesta com una ocupació d'espais «buits». En realitat, el continent estava ple de sistemes polítics: califats com el de Sokoto, imperis com l'asante o el lunda, regnes com Buganda o el Kongo, ciutats estat suahili, confederacions comercials i milers de societats que s'organitzaven sense estat centralitzat.</p>
+          <p>Al mapa de 1880, les zones ratllades no són buides: són societats que el conjunt de dades no representa, sovint sense estat centralitzat, però també regnes i sultanats que el conjunt de dades omet <span data-nref="hatch"></span>. Les fronteres africanes eren sovint flexibles, negociades, superposades. Les colonials, en canvi, van ser rígides, exclusives i traçades des de fora.</p>
+        </article>
+        <article>
+          <h2>Línies rectes sobre pobles</h2>
+          <p>Moltes fronteres es van traçar seguint meridians, paral·lels i rius sobre mapes que ningú no havia verificat sobre el terreny. El resultat: pobles amb una llengua i una història comunes —massais, ewe, bakongo, somalis, haussa, tuaregs— van quedar repartits entre dos, tres o fins a cinc estats, mentre que dins d'una mateixa colònia s'agrupaven societats sense cap vincle previ.</p>
+          <p>La violència no es va acabar amb la conquesta. Genocidis, treball forçat, camps de concentració, saqueig cultural i guerres d'alliberament van marcar tot el segle XX. Molts conflictes posteriors tenen arrels en aquest disseny.</p>
+        </article>
+        <article>
+          <h2>Una herència intocable</h2>
+          <p>El 1964, la nova Organització per la Unitat Africana va decidir respectar les fronteres heretades: redibuixar-les podia obrir guerres a tot el continent. És la gran paradoxa de la descolonització: els estats independents van haver de preservar la divisió imposada pels colonitzadors. Només Eritrea (1993) i el Sudan del Sud (2011) han aconseguit canviar-la.</p>
+          <p>Recordar aquest procés no és nostàlgia d'un passat idealitzat. És reconèixer una injustícia que continua tenint conseqüències, i que encara espera reparació, restitució i memòria.</p>
+        </article>
+      </div>
+
+      <div class="violence" id="violence">
+        <h2>Cronologia de la violència colonial</h2>
+        <p class="note">Selecció, no exhaustiva. Fes clic en un fet per veure'l al mapa.</p>
+        <ol class="violence-list" id="violenceList"></ol>
+      </div>
+
+      <div class="notes-section" id="notes">
+        <h2>Notes i incerteses</h2>
+        <p class="note">Tot el que és aproximat, discutit o corregit respecte de les fonts de dades. Els números entre claudàtors del mapa i dels textos remeten a aquesta llista.</p>
+        <ol class="notes-list" id="notesList"></ol>
+      </div>
+
+      <div class="sources">
+        <h2>Fonts i mètode</h2>
+        <ul>
+          <li><strong>Fronteres actuals:</strong> Natural Earth, <em>Admin 0 – Countries</em> 1:50m (domini públic).</li>
+          <li><strong>Mapa de 1880:</strong> A. Ourednik, <em>historical-basemaps</em> (GPL-3.0), amb correccions documentades a les notes (regne del Kongo, Transvaal, Lozi/Barotse, confederació aro) i avisos on la geometria és dubtosa.</li>
+          <li><strong>Mapa de 1914:</strong> reconstrucció pròpia a partir de les fronteres actuals agrupades per unitat colonial, amb les peces de <em>historical-basemaps</em> on la frontera era diferent (Kamerun, Togolàndia, Jubalàndia, província de Rudolf, zones espanyoles del Marroc). El conjunt de dades original de 1914 tenia errors greus i no s'ha fet servir directament.</li>
+          <li><strong>Pobles:</strong> G. P. Murdock, <em>Africa: Its Peoples and Their Culture History</em> (1959), digitalitzat per N. Nunn (CC BY-NC-SA 3.0). Representa territoris ètnics aproximats a finals del segle XIX i comença del XX. S'han substituït exònims pejoratius dels grups culturals («Galla», «Hottentot», «Bushmen») per Oromo, Khoikhoi i San.</li>
+          <li><strong>Cronologia de sobirania:</strong> elaboració pròpia sobre les fronteres actuals a partir de la UNESCO, <em>General History of Africa</em> (vols. VII–VIII), i la bibliografia citada. Les dates de conquesta són aproximades: el domini efectiu sovint va arribar anys després de la reclamació formal.</li>
+          <li><strong>Partició de pobles:</strong> càlcul propi en projecció d'àrees iguals (Lambert azimutal). Un poble es considera partit si almenys el 10% del seu territori queda en un segon estat, el mateix criteri que Michalopoulos i Papaioannou, «The Long-Run Effects of the Scramble for Africa», <em>American Economic Review</em> (2016).</li>
+          <li><strong>Llengües:</strong> H. Hammarström, R. Forkel, M. Haspelmath i S. Bank, <em>Glottolog</em> (Max Planck Institute for Evolutionary Anthropology), CC BY 4.0: localització, família, vitalitat i darrera documentació de cada llengua. Llengües oficials: constitucions vigents (vegeu les notes).</li>
+          <li><strong>Violència colonial:</strong> A. Hochschild, <em>King Leopold's Ghost</em> (1998); D. Olusoga i C. Erichsen, <em>The Kaiser's Holocaust</em> (2010); C. Elkins, <em>Imperial Reckoning</em> (2005); A. Adu Boahen (ed.), <em>UNESCO General History of Africa</em> VII (1985). Les xifres són estimacions i es donen en intervals quan les fonts divergeixen.</li>
+        </ul>
+        <p class="note">Eina divulgativa i de memòria, no un SIG de precisió. Les dades es regeneren amb <code>build/build.py</code>; el contingut històric és a <code>js/history.js</code>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Àfrica esquarterada · Funciona sense connexió · Mapes de base: Natural Earth, historical-basemaps, Murdock/Nunn, Glottolog</p>
+    <p>Idea original de <a href="https://nualart.cat">Jaume Nu a l'art</a> · Projecte elaborat amb l'ajuda inestimable d'un agent d'IA.</p>
+    <p class="license"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca"><img src="img/cc-by-nc-sa.svg" width="88" height="31" alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0 Internacional"></a>
+      <span>© 2026 · Sota llicència <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca">Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</a></span></p>
+    <div class="aiud-wrap">
+<div class="aiud-widget" style="position:relative;display:inline-block;color:#0d0e37;font:14px/1.4 system-ui,sans-serif">
+  <style>
+    @keyframes aiud-nudge{0%,100%{transform:translateY(0) rotate(3deg)}50%{transform:translateY(-3px) rotate(3deg)}}
+    .aiud-widget .aiud-ribbon{position:absolute;z-index:2;right:-12px;top:-13px;padding:4px 9px;border-radius:999px;background:#f7836a;color:#0d0e37;font-size:9px;font-weight:900;letter-spacing:.08em;box-shadow:0 4px 10px #0d0e3730;animation:aiud-nudge 1.4s ease-in-out infinite;pointer-events:none}
+    .aiud-widget .aiud-details{position:absolute;z-index:2147483647;left:0;bottom:calc(100% + 9px);visibility:hidden;opacity:0;transform:translateY(5px);width:min(370px,90vw);box-sizing:border-box;padding:15px;border:1px solid #d5d5dc;border-radius:11px;background:#fff;box-shadow:0 18px 45px #0d0e3728;transition:.18s ease;pointer-events:none}
+    .aiud-widget:hover .aiud-details,.aiud-widget:focus-within .aiud-details{visibility:visible;opacity:1;transform:none;pointer-events:auto}
+    @media(prefers-reduced-motion:reduce){.aiud-widget .aiud-ribbon{animation:none}}
+  </style>
+  <button type="button" aria-describedby="aiud-details" style="position:relative;display:flex;align-items:center;gap:9px;width:max-content;max-width:100%;padding:7px 10px 7px 7px;border:1px solid #d5d5dc;border-radius:8px;background:#fff;color:#0d0e37;font:inherit;text-align:left;cursor:pointer;box-shadow:0 4px 12px #0d0e3712">
+    <span class="aiud-ribbon" aria-hidden="true">HOVER / TAP</span>
+    <span style="width:42px;height:42px;flex:0 0 42px;overflow:hidden;border-radius:50%"><img src="https://ai.selectora.cc/static/images/ai-use-declared-logo.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover"></span>
+    <strong style="letter-spacing:.03em">AI USE DECLARED<small style="display:block;color:#66677d;font-size:10px;letter-spacing:0">See how this site uses AI</small></strong>
+  </button>
+  <div class="aiud-details" id="aiud-details" role="tooltip">
+    <p style="margin:0 0 10px"><strong>This site</strong> declares its use of AI as:</p>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px">
+      <img src="https://ai.selectora.cc/static/badges/primary/01-ai-made.png" alt="AI-MADE: AI use disclosure badge" loading="lazy" style="display:block;width:100%;height:auto;grid-column:1/-1">
+      <img src="https://ai.selectora.cc/static/badges/secondary/01-human-reviewed.png" alt="HUMAN-REVIEWED: AI use disclosure badge" loading="lazy" style="display:block;width:100%;height:auto">
+      <img src="https://ai.selectora.cc/static/badges/secondary/02-ai-translated.png" alt="AI-TRANSLATED: AI use disclosure badge" loading="lazy" style="display:block;width:100%;height:auto">
+      <img src="https://ai.selectora.cc/static/badges/secondary/05-ai-generated-code.png" alt="AI-GENERATED CODE: AI use disclosure badge" loading="lazy" style="display:block;width:100%;height:auto">
+      <img src="https://ai.selectora.cc/static/badges/secondary/07-ai-generated-text.png" alt="AI-GENERATED TEXT: AI use disclosure badge" loading="lazy" style="display:block;width:100%;height:auto">
+    </div>
+    <a href="https://ai.selectora.cc/badges/" target="_blank" rel="noopener" style="display:block;margin-top:10px;color:#0d0e37;font-size:11px;font-weight:800">What does this mean? →</a>
+  </div>
+</div>
+    </div>
+  </footer>
+
+  <script src="data/geo.js"></script>
+  <script src="data/languages.js"></script>
+  <script src="js/history.js"></script>
+  <script src="js/languages.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
