@@ -55,16 +55,7 @@
 
   <main>
     <section class="atlas" aria-label="Interactive atlas">
-      <nav class="tabs" role="tablist" aria-label="Atlas views">
-        <button role="tab" data-mode="timeline" aria-selected="true">Timeline</button>
-        <button role="tab" data-mode="compare" aria-selected="false">Before and after</button>
-        <button role="tab" data-mode="peoples" aria-selected="false">Partitioned peoples</button>
-        <button role="tab" data-mode="names" aria-selected="false">Names</button>
-        <span class="tab-sep" aria-hidden="true"></span>
-        <button role="tab" data-mode="ldiv" aria-selected="false">Language diversity</button>
-        <button role="tab" data-mode="loff" aria-selected="false">Official languages</button>
-        <button role="tab" data-mode="lext" aria-selected="false">Lost languages</button>
-      </nav>
+      <p class="scroll-hint">Scroll down to read the atlas: the map changes with each chapter.</p>
 
       <div class="atlas-body">
         <div class="map-wrap" id="mapWrap">
@@ -81,13 +72,17 @@
             <button id="zoomOut" aria-label="Zoom out">−</button>
             <button id="zoomReset" aria-label="Reset view">⤢</button>
           </div>
+          <nav class="chap-nav" aria-label="Atlas chapters"><a href="#cap-timeline" data-go="timeline"><span>1 · Timeline</span></a><a href="#cap-compare" data-go="compare"><span>2 · Before and after</span></a><a href="#cap-peoples" data-go="peoples"><span>3 · Partitioned peoples</span></a><a href="#cap-names" data-go="names"><span>4 · Names</span></a><a href="#cap-ldiv" data-go="ldiv"><span>5 · Language diversity</span></a><a href="#cap-loff" data-go="loff"><span>6 · Official languages</span></a><a href="#cap-lext" data-go="lext"><span>7 · Lost languages</span></a></nav>
           <div class="tooltip" id="tooltip" hidden></div>
           <div class="legend" id="legend"></div>
         </div>
 
-        <aside class="panel">
+        <div class="panel chapters">
           <!-- Timeline -->
-          <div class="panel-mode" data-panel="timeline">
+          <div class="panel-mode chap" data-panel="timeline" id="cap-timeline">
+            <p class="chap-n">1 · Timeline</p>
+            <h2>The scramble, year by year</h2>
+            <p>Press ▶ or drag the slider to watch, year by year, how the European powers divided up the continent and how Africans won it back.</p>
             <div class="player">
               <button id="playButton" class="play" aria-label="Play">▶</button>
               <div class="slider-wrap">
@@ -118,7 +113,8 @@
           </div>
 
           <!-- Compare -->
-          <div class="panel-mode" data-panel="compare" hidden>
+          <div class="panel-mode chap" data-panel="compare" id="cap-compare">
+            <p class="chap-n">2 · Before and after</p>
             <h2>Before and after</h2>
             <p>Drag the line across the map to compare two periods over the same territory.</p>
             <div class="compare-selects">
@@ -133,7 +129,8 @@
           </div>
 
           <!-- Peoples -->
-          <div class="panel-mode" data-panel="peoples" hidden>
+          <div class="panel-mode chap" data-panel="peoples" id="cap-peoples">
+            <p class="chap-n">3 · Partitioned peoples</p>
             <h2>Partitioned peoples</h2>
             <p>The lands of <strong id="peopleTotal">835</strong> peoples according to Murdock's ethnographic map (1959). In red, the <strong id="peoplePart">230</strong> that have at least 10% of their land in another state. <span data-nref="murdock"></span></p>
             <label class="search"><span class="visually-hidden">Search for a people</span><input id="peopleSearch" list="peopleNames" placeholder="Search for a people (e.g. Yoruba)" autocomplete="off"></label>
@@ -145,7 +142,8 @@
           </div>
 
           <!-- Names -->
-          <div class="panel-mode" data-panel="names" hidden>
+          <div class="panel-mode chap" data-panel="names" id="cap-names">
+            <p class="chap-n">4 · Names</p>
             <h2>Names imposed, names reclaimed</h2>
             <p>Many colonies were named after rivers, trade goods or white men. At independence, many states took back African names.</p>
             <div class="name-toggle" role="radiogroup" aria-label="Period of the names">
@@ -158,7 +156,8 @@
           </div>
 
           <!-- Language diversity -->
-          <div class="panel-mode" data-panel="ldiv" hidden>
+          <div class="panel-mode chap" data-panel="ldiv" id="cap-ldiv">
+            <p class="chap-n">5 · Language diversity</p>
             <h2>A continent of thousands of languages</h2>
             <p>More than <strong id="langLiving">2,000</strong> languages are spoken in Africa, more than a quarter of the world's total according to Glottolog. They have no sharp borders: they share territory and overlap, and most people speak two or more. <span data-nref="lpoints"></span></p>
             <p>Colonial borders grouped hundreds of languages into a single state — <strong id="langNga">more than 500</strong> in Nigeria, according to Glottolog — and split many others apart.</p>
@@ -173,7 +172,8 @@
           </div>
 
           <!-- Official languages -->
-          <div class="panel-mode" data-panel="loff" hidden>
+          <div class="panel-mode chap" data-panel="loff" id="cap-loff">
+            <p class="chap-n">6 · Official languages</p>
             <h2>The language of power</h2>
             <p>In 1914, every colonial administration governed in a European language. Today, <strong id="loffEuro">—</strong> of Africa's 55 states and territories still have the former colonial power's language as an official (or working) language. Stripes show that several official languages coexist. <span data-nref="loff"></span></p>
             <div class="name-toggle" role="radiogroup" aria-label="Period">
@@ -185,7 +185,8 @@
           </div>
 
           <!-- Lost languages -->
-          <div class="panel-mode" data-panel="lext" hidden>
+          <div class="panel-mode chap" data-panel="lext" id="cap-lext">
+            <p class="chap-n">7 · Lost languages</p>
             <h2>Languages no longer spoken</h2>
             <p>Glottolog records <strong id="lextCount">100</strong> extinct African languages, <strong id="lextAfter">83</strong> of them last documented after 1880, and <strong id="lextDanger">—</strong> more that are critically endangered. Every language lost is a way of seeing the world that disappears. <span data-nref="lextinct"></span><span data-nref="lstatus"></span></p>
             <div class="name-toggle" role="radiogroup" aria-label="What the map shows">
@@ -200,7 +201,7 @@
               <ol class="event-list" id="extinctList"></ol>
             </details>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 

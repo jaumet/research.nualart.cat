@@ -51,16 +51,7 @@
 
   <main>
     <section class="atlas" aria-label="Atles interactiu">
-      <nav class="tabs" role="tablist" aria-label="Vistes de l'atles">
-        <button role="tab" data-mode="timeline" aria-selected="true">Cronologia</button>
-        <button role="tab" data-mode="compare" aria-selected="false">Abans i després</button>
-        <button role="tab" data-mode="peoples" aria-selected="false">Pobles partits</button>
-        <button role="tab" data-mode="names" aria-selected="false">Noms</button>
-        <span class="tab-sep" aria-hidden="true"></span>
-        <button role="tab" data-mode="ldiv" aria-selected="false">Diversitat lingüística</button>
-        <button role="tab" data-mode="loff" aria-selected="false">Llengües oficials</button>
-        <button role="tab" data-mode="lext" aria-selected="false">Llengües desaparegudes</button>
-      </nav>
+      <p class="scroll-hint">Baixa per llegir l'atles: el mapa canvia amb cada capítol.</p>
 
       <div class="atlas-body">
         <div class="map-wrap" id="mapWrap">
@@ -77,13 +68,17 @@
             <button id="zoomOut" aria-label="Allunya">−</button>
             <button id="zoomReset" aria-label="Vista inicial">⤢</button>
           </div>
+          <nav class="chap-nav" aria-label="Capítols de l'atles"><a href="#cap-timeline" data-go="timeline"><span>1 · Cronologia</span></a><a href="#cap-compare" data-go="compare"><span>2 · Abans i després</span></a><a href="#cap-peoples" data-go="peoples"><span>3 · Pobles partits</span></a><a href="#cap-names" data-go="names"><span>4 · Noms</span></a><a href="#cap-ldiv" data-go="ldiv"><span>5 · Diversitat lingüística</span></a><a href="#cap-loff" data-go="loff"><span>6 · Llengües oficials</span></a><a href="#cap-lext" data-go="lext"><span>7 · Llengües desaparegudes</span></a></nav>
           <div class="tooltip" id="tooltip" hidden></div>
           <div class="legend" id="legend"></div>
         </div>
 
-        <aside class="panel">
+        <div class="panel chapters">
           <!-- Cronologia -->
-          <div class="panel-mode" data-panel="timeline">
+          <div class="panel-mode chap" data-panel="timeline" id="cap-timeline">
+            <p class="chap-n">1 · Cronologia</p>
+            <h2>Cronologia del repartiment</h2>
+            <p>Prem ▶ o arrossega el control per veure, any rere any, com les potències europees es van repartir el continent i com els africans el van recuperar.</p>
             <div class="player">
               <button id="playButton" class="play" aria-label="Reprodueix">▶</button>
               <div class="slider-wrap">
@@ -114,7 +109,8 @@
           </div>
 
           <!-- Comparar -->
-          <div class="panel-mode" data-panel="compare" hidden>
+          <div class="panel-mode chap" data-panel="compare" id="cap-compare">
+            <p class="chap-n">2 · Abans i després</p>
             <h2>Abans i després</h2>
             <p>Arrossega la línia del mapa per comparar dues èpoques sobre el mateix territori.</p>
             <div class="compare-selects">
@@ -129,7 +125,8 @@
           </div>
 
           <!-- Pobles -->
-          <div class="panel-mode" data-panel="peoples" hidden>
+          <div class="panel-mode chap" data-panel="peoples" id="cap-peoples">
+            <p class="chap-n">3 · Pobles partits</p>
             <h2>Pobles partits</h2>
             <p>Territoris de <strong id="peopleTotal">835</strong> pobles segons el mapa etnogràfic de Murdock (1959). En vermell, els <strong id="peoplePart">230</strong> que tenen almenys un 10% del seu territori en un altre estat. <span data-nref="murdock"></span></p>
             <label class="search"><span class="visually-hidden">Cerca un poble</span><input id="peopleSearch" list="peopleNames" placeholder="Cerca un poble (p. ex. Yoruba)" autocomplete="off"></label>
@@ -141,7 +138,8 @@
           </div>
 
           <!-- Noms -->
-          <div class="panel-mode" data-panel="names" hidden>
+          <div class="panel-mode chap" data-panel="names" id="cap-names">
+            <p class="chap-n">4 · Noms</p>
             <h2>Noms imposats, noms recuperats</h2>
             <p>Moltes colònies portaven noms de rius, de productes de comerç o d'homes blancs. A la independència, molts estats van recuperar noms africans.</p>
             <div class="name-toggle" role="radiogroup" aria-label="Època dels noms">
@@ -154,7 +152,8 @@
           </div>
 
           <!-- Diversitat lingüística -->
-          <div class="panel-mode" data-panel="ldiv" hidden>
+          <div class="panel-mode chap" data-panel="ldiv" id="cap-ldiv">
+            <p class="chap-n">5 · Diversitat lingüística</p>
             <h2>Un continent de milers de llengües</h2>
             <p>A l'Àfrica es parlen més de <strong id="langLiving">2.000</strong> llengües, més d'una quarta part de les del món segons Glottolog. No tenen fronteres nítides: comparteixen territori, se superposen, i la majoria de persones en parlen dues o més. <span data-nref="lpoints"></span></p>
             <p>Les fronteres colonials van agrupar en un sol estat centenars de llengües —<strong id="langNga">més de 500</strong> a Nigèria, segons Glottolog— i en van partir moltes altres.</p>
@@ -169,7 +168,8 @@
           </div>
 
           <!-- Llengües oficials -->
-          <div class="panel-mode" data-panel="loff" hidden>
+          <div class="panel-mode chap" data-panel="loff" id="cap-loff">
+            <p class="chap-n">6 · Llengües oficials</p>
             <h2>La llengua del poder</h2>
             <p>El 1914, totes les administracions colonials governaven en una llengua europea. Avui, <strong id="loffEuro">—</strong> dels 55 estats i territoris africans encara tenen com a oficial (o de treball) la llengua de l'antiga metròpoli. Les ratlles indiquen que hi conviuen diverses llengües oficials. <span data-nref="loff"></span></p>
             <div class="name-toggle" role="radiogroup" aria-label="Època">
@@ -181,7 +181,8 @@
           </div>
 
           <!-- Llengües desaparegudes -->
-          <div class="panel-mode" data-panel="lext" hidden>
+          <div class="panel-mode chap" data-panel="lext" id="cap-lext">
+            <p class="chap-n">7 · Llengües desaparegudes</p>
             <h2>Llengües que ja no es parlen</h2>
             <p>Glottolog registra <strong id="lextCount">100</strong> llengües africanes extingides, <strong id="lextAfter">83</strong> d'elles documentades per darrer cop després de 1880, i <strong id="lextDanger">—</strong> més en perill greu. Cada llengua perduda és una manera de veure el món que desapareix. <span data-nref="lextinct"></span><span data-nref="lstatus"></span></p>
             <div class="name-toggle" role="radiogroup" aria-label="Què mostra el mapa">
@@ -196,7 +197,7 @@
               <ol class="event-list" id="extinctList"></ol>
             </details>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 

@@ -38,17 +38,28 @@ button, select, input { font: inherit; color: inherit; }
 
 /* ------------------------------------------------------------ Atles */
 .atlas { max-width: 1440px; margin: 0 auto; padding: 0 16px; }
-.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); overflow-x: auto; }
-.tabs button { background: none; border: 0; border-bottom: 3px solid transparent; padding: 12px 18px; color: var(--ink-3); cursor: pointer; font-weight: 600; white-space: nowrap; }
-.tabs button:hover { color: var(--ink); }
-.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.scroll-hint { margin: 0; padding: 10px 0; text-align: center; color: var(--ink-3); font-size: .86rem; }
+.scroll-hint::after { content: " ↓"; }
 
-.atlas-body { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 0; border: 1px solid var(--line); border-top: 0; background: var(--bg-2); }
-.map-wrap { position: relative; height: min(82vh, 920px); min-height: 520px; background: var(--sea); overflow: hidden; touch-action: none; }
+/* Es llegeix baixant: els capítols passen a l'esquerra i el mapa queda enganxat a la dreta */
+.atlas-body { display: grid; grid-template-columns: minmax(330px, 420px) minmax(0, 1fr); gap: 0; border: 1px solid var(--line); background: var(--bg-2); }
+.map-wrap { order: 2; position: sticky; top: 0; align-self: start; height: 100vh; background: var(--sea); overflow: hidden; touch-action: none; }
 #map { width: 100%; height: 100%; display: block; cursor: grab; user-select: none; }
 #map.dragging { cursor: grabbing; }
 
-.panel { border-left: 1px solid var(--line); padding: 20px; overflow-y: auto; max-height: min(82vh, 920px); min-height: 520px; }
+.panel { order: 1; border-right: 1px solid var(--line); padding: 22vh 26px 18vh; }
+.chap { padding: 22px 0; margin-bottom: 40vh; opacity: .38; transition: opacity .35s; }
+.chap:last-child { margin-bottom: 0; }
+.chap.active, .chap:focus-within { opacity: 1; }
+.chap-n { text-transform: uppercase; letter-spacing: .14em; font-size: .74rem !important; font-weight: 700; color: var(--accent) !important; margin: 0 0 .5rem !important; }
+
+/* Índex de capítols sobre el mapa */
+.chap-nav { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); z-index: 4; display: flex; flex-direction: column; gap: 4px; }
+.chap-nav a { position: relative; display: block; width: 22px; height: 22px; }
+.chap-nav a::before { content: ""; position: absolute; inset: 6px; border-radius: 50%; background: var(--ink-3); opacity: .6; transition: transform .2s, background .2s; }
+.chap-nav a[aria-current]::before { background: var(--accent); opacity: 1; transform: scale(1.35); }
+.chap-nav span { position: absolute; right: 28px; top: 50%; transform: translateY(-50%); white-space: nowrap; padding: 3px 9px; border-radius: 6px; background: rgba(20, 17, 15, .92); border: 1px solid var(--line); color: var(--ink); font-size: .78rem; opacity: 0; pointer-events: none; transition: opacity .15s; }
+.chap-nav a:hover span, .chap-nav a:focus-visible span { opacity: 1; }
 .panel h2 { font-size: 1.45rem; }
 .panel h3 { font-size: 1.05rem; margin-top: 1.4rem; color: var(--ink-2); }
 .panel p { color: var(--ink-2); font-size: .94rem; margin: 0 0 1rem; }
@@ -203,9 +214,8 @@ svg .hover { filter: brightness(1.25); }
 
 /* ------------------------------------------------------------ Responsiu */
 @media (max-width: 1000px) {
-  .atlas-body { grid-template-columns: 1fr; }
-  .panel { border-left: 0; border-top: 1px solid var(--line); max-height: none; min-height: 0; }
-  .map-wrap { height: 70vh; min-height: 420px; }
+  .atlas-body { grid-template-columns: 330px minmax(0, 1fr); }
+  .panel { padding-left: 20px; padding-right: 20px; }
   .essay-grid { grid-template-columns: 1fr; gap: 12px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .violence-list { columns: 1; }
@@ -236,7 +246,6 @@ svg .hover { filter: brightness(1.25); }
 @media (max-width: 1000px) { .notes-list { columns: 1; } }
 
 /* ------------------------------------------------------------ Llengües */
-.tab-sep { flex: none; width: 1px; margin: 10px 6px; background: var(--line); }
 .hex { stroke: rgba(20,17,15,.6); stroke-width: .5; }
 .lang-pt { opacity: .9; }
 .tt-langs { list-style: none; padding: 0; margin: 6px 0 0; }
@@ -268,14 +277,13 @@ svg .hover { filter: brightness(1.25); }
 @media (max-width: 600px) { .version-switch .vs-langs { margin-left: 0; padding-left: 0; border-left: 0; } }
 
 /* ------------------------------------------------------------ Mòbil
-   A la pantalla petita, les pestanyes i el mapa queden enganxats a dalt i el tauler es llegeix
-   a sota mentre el mapa continua visible. A l'ordinador no canvia res. */
+   A la pantalla petita, el mapa queda enganxat a dalt i els capítols es llegeixen a sota. */
 .legend-btn { display: none; }
 @media (max-width: 760px) {
-  .tabs { position: sticky; top: 0; z-index: 20; background: var(--bg); scroll-snap-type: x proximity; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); }
-  .tabs button { padding: 11px 13px; font-size: .9rem; scroll-snap-align: start; }
-  .atlas-body { border-left: 0; border-right: 0; }
-  .map-wrap { position: sticky; top: var(--tabs-h, 48px); z-index: 10; height: 46vh; min-height: 0; border-bottom: 1px solid var(--line); }
+  .atlas-body { display: block; border-left: 0; border-right: 0; }
+  .map-wrap { z-index: 10; height: 46vh; border-bottom: 1px solid var(--line); }
+  .chap-nav { display: none; }
+  .chap { margin-bottom: 22vh; }
   .year-badge { font-size: 2.1rem; left: 12px; top: 6px; }
   .map-tools { right: 8px; top: 8px; }
   .map-tools button { width: 38px; height: 38px; }
@@ -285,5 +293,5 @@ svg .hover { filter: brightness(1.25); }
   .map-wrap.legend-open .legend-btn { background: var(--ink); color: var(--bg); }
   .tooltip { max-width: calc(100% - 16px); font-size: .8rem; }
   .tooltip ol, .tooltip .tt-notes { display: none; } /* al mòbil, només el nom i qui governa: la resta no hi cap */
-  .panel { padding: 16px; }
+  .panel { border-right: 0; padding: 12px 16px 12vh; }
 }

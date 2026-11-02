@@ -288,9 +288,7 @@
   svg.addEventListener("pointerup", endPointer);
   svg.addEventListener("pointercancel", endPointer);
   svg.addEventListener("dblclick", e => zoomAt(1.8, e.clientX, e.clientY));
-  // al mòbil el mapa s'enganxa just a sota de la barra de pestanyes
-  const setTabsH = () => document.documentElement.style.setProperty("--tabs-h", `${$(".tabs").offsetHeight}px`);
-  new ResizeObserver(() => { scheduleLabels(); updateSwipe(); setTabsH(); }).observe(wrap);
+  new ResizeObserver(() => { scheduleLabels(); updateSwipe(); }).observe(wrap);
 
   // ---------------------------------------------------------------- Escalat d'etiquetes
   let labelsQueued = false;
@@ -445,7 +443,7 @@
   H.EVENTS.filter(ev => ev.k === "violencia").forEach(ev => {
     const li = html("li"), b = html("button");
     b.innerHTML = `<span class="y">${ev.y}</span><span><span class="t">${esc(ev.t)}</span>${esc(ev.d)}${uniq(ev.n).map(id => ` <sup>[${noteNum(id)}]</sup>`).join("")}</span>`;
-    b.onclick = () => { setMode("timeline"); stop(); setYear(ev.y, ev); $(".atlas").scrollIntoView({ behavior: "smooth" }); };
+    b.onclick = () => { setMode("timeline"); stop(); setYear(ev.y, ev); goChapter("timeline"); };
     li.append(b); vList.append(li);
   });
 
@@ -1085,11 +1083,12 @@
 
   // ================================================================ Modes
   let mode = "timeline";
+  const chapters = $$(".chap");
   function setMode(m) {
     mode = m;
     stop();
-    $$(".tabs [role=tab]").forEach(b => b.setAttribute("aria-selected", b.dataset.mode === m));
-    $$(".panel-mode").forEach(p => { p.hidden = p.dataset.panel !== m; });
+    chapters.forEach(c => c.classList.toggle("active", c.dataset.panel === m));
+    $$(".chap-nav a").forEach(a => a.toggleAttribute("aria-current", a.dataset.go === m));
     $("#swipe").hidden = m !== "compare";
     $("#yearBadge").hidden = m !== "timeline";
     for (const g of Object.values(snap)) { g.removeAttribute("clip-path"); g.style.display = "none"; }
@@ -1128,11 +1127,44 @@
     renderLegend();
     scheduleLabels();
   }
-  $$(".tabs [role=tab]").forEach(b => b.onclick = () => {
-    setMode(b.dataset.mode);
-    const bar = b.parentElement; // al mòbil la barra es desplaça: centra la pestanya triada
-    bar.scrollLeft = b.offsetLeft - (bar.clientWidth - b.offsetWidth) / 2;
+
+  // ================================================================ Capítols i desplaçament
+  // L'atles es llegeix baixant: el capítol que ha passat la línia de lectura tria què mostra el mapa.
+  // En mòbil la línia és una mica per sota del mapa enganxat a dalt.
+  const readingLine = () => {
+    if (innerWidth > 760) return innerHeight * 0.45;
+    const b = wrap.getBoundingClientRect().bottom;
+    return b + (innerHeight - b) * 0.3;
+  };
+  let scrolled = null; // l'últim capítol triat pel desplaçament: un clic dins d'un altre capítol el canvia sense que el desplaçament el torni enrere
+  function updateChapter() {
+    const line = readingLine();
+    let cur = chapters[0];
+    for (const c of chapters) if (c.getBoundingClientRect().top < line) cur = c;
+    if (cur === scrolled) return;
+    scrolled = cur;
+    if (cur.dataset.panel !== mode) setMode(cur.dataset.panel);
+  }
+  // durant un desplaçament fet per programa, els capítols que es travessen no canvien el mapa
+  let jumping = false, jumpTimer = 0;
+  function goChapter(m) {
+    const c = chapters.find(c => c.dataset.panel === m);
+    const y = scrollY + c.getBoundingClientRect().top - (innerWidth > 760 ? 24 : wrap.offsetHeight + 12);
+    scrolled = c;
+    jumping = true;
+    clearTimeout(jumpTimer);
+    jumpTimer = setTimeout(() => { jumping = false; }, 4000);
+    scrollTo({ top: y, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }
+  $$(".chap-nav a").forEach(a => a.onclick = e => {
+    e.preventDefault();
+    setMode(a.dataset.go);
+    goChapter(a.dataset.go);
   });
+  chapters.forEach(c => c.addEventListener("pointerdown", () => { if (c.dataset.panel !== mode) setMode(c.dataset.panel); }));
+  addEventListener("scroll", () => { if (!jumping) updateChapter(); }, { passive: true });
+  addEventListener("scrollend", () => { jumping = false; clearTimeout(jumpTimer); });
+  addEventListener("resize", updateChapter);
 
   // Llista completa de notes i referències estàtiques de l'HTML
   $("#notesList").innerHTML = NOTE_IDS.map((id, i) => `<li id="nota-${i + 1}" value="${i + 1}">${H.NOTES[id]}</li>`).join("");
