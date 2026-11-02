@@ -238,6 +238,12 @@
     t ? showTipAt(e, t) : hideTip();
   });
   svg.addEventListener("pointerleave", hideTip);
+  // a les pantalles tàctils no hi ha «passar per sobre»: un toc mostra el nom
+  svg.addEventListener("click", e => {
+    if (state === "draw" || !matchMedia("(hover: none)").matches) return;
+    const t = e.target.dataset?.tip;
+    t ? showTipAt(e, t) : hideTip();
+  });
 
   // ---------------------------------------------------------------- Joc: traça una frontera
   const rings = G.peoples.map(p => p.d.split("M").filter(Boolean).map(r => r.replace(/Z/g, "").split("L").map(q => q.split(",").map(Number))));

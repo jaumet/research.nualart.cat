@@ -266,3 +266,24 @@ svg .hover { filter: brightness(1.25); }
 .lang-note strong { color: #f3d27a; }
 .lang-note a { color: #f3d27a; }
 @media (max-width: 600px) { .version-switch .vs-langs { margin-left: 0; padding-left: 0; border-left: 0; } }
+
+/* ------------------------------------------------------------ Mòbil
+   A la pantalla petita, les pestanyes i el mapa queden enganxats a dalt i el tauler es llegeix
+   a sota mentre el mapa continua visible. A l'ordinador no canvia res. */
+.legend-btn { display: none; }
+@media (max-width: 760px) {
+  .tabs { position: sticky; top: 0; z-index: 20; background: var(--bg); scroll-snap-type: x proximity; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); }
+  .tabs button { padding: 11px 13px; font-size: .9rem; scroll-snap-align: start; }
+  .atlas-body { border-left: 0; border-right: 0; }
+  .map-wrap { position: sticky; top: var(--tabs-h, 48px); z-index: 10; height: 46vh; min-height: 0; border-bottom: 1px solid var(--line); }
+  .year-badge { font-size: 2.1rem; left: 12px; top: 6px; }
+  .map-tools { right: 8px; top: 8px; }
+  .map-tools button { width: 38px; height: 38px; }
+  .legend-btn { display: block; position: absolute; right: 8px; bottom: 8px; z-index: 6; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(20, 17, 15, .9); color: var(--ink); font: 600 .8rem var(--sans); }
+  .legend { display: none; pointer-events: auto; left: 8px; bottom: 8px; max-width: calc(100% - 110px); max-height: calc(100% - 16px); overflow-y: auto; font-size: .74rem; }
+  .map-wrap.legend-open .legend { display: block; }
+  .map-wrap.legend-open .legend-btn { background: var(--ink); color: var(--bg); }
+  .tooltip { max-width: calc(100% - 16px); font-size: .8rem; }
+  .tooltip ol, .tooltip .tt-notes { display: none; } /* al mòbil, només el nom i qui governa: la resta no hi cap */
+  .panel { padding: 16px; }
+}

@@ -288,7 +288,9 @@
   svg.addEventListener("pointerup", endPointer);
   svg.addEventListener("pointercancel", endPointer);
   svg.addEventListener("dblclick", e => zoomAt(1.8, e.clientX, e.clientY));
-  new ResizeObserver(() => { scheduleLabels(); updateSwipe(); }).observe(wrap);
+  // al mòbil el mapa s'enganxa just a sota de la barra de pestanyes
+  const setTabsH = () => document.documentElement.style.setProperty("--tabs-h", `${$(".tabs").offsetHeight}px`);
+  new ResizeObserver(() => { scheduleLabels(); updateSwipe(); setTabsH(); }).observe(wrap);
 
   // ---------------------------------------------------------------- Escalat d'etiquetes
   let labelsQueued = false;
@@ -326,6 +328,11 @@
     for (const fn of zoomHooks) fn(k);
   }
 
+  // Botó de llegenda (només es veu al mòbil, on la llegenda tapa massa mapa)
+  const legendBtn = html("button", { type: "button", class: "legend-btn", "aria-expanded": "false" }, tx("Llegenda"));
+  legendBtn.onclick = () => legendBtn.setAttribute("aria-expanded", wrap.classList.toggle("legend-open"));
+  wrap.append(legendBtn);
+
   // ================================================================ Tooltip
   const tip = $("#tooltip");
   function showTip(e, content) {
@@ -358,9 +365,12 @@
     if (!t.dataset || !t.dataset.k) return hideTip();
     showTip(e, tipContent(t));
   });
+  const noHover = matchMedia("(hover: none)");
   svg.addEventListener("click", e => {
     if (moved) return;
     const t = e.target;
+    // a les pantalles tàctils no hi ha «passar per sobre»: un toc mostra el rètol
+    if (noHover.matches) { if (t.dataset?.k) showTip(e, tipContent(t)); else hideTip(); }
     if (t.dataset?.k === "people" && mode === "peoples") selectPeople([+t.dataset.i], null, false);
     if (t.dataset?.k === "lang") selectLang(+t.dataset.i, null, false);
   });
@@ -1118,7 +1128,11 @@
     renderLegend();
     scheduleLabels();
   }
-  $$(".tabs [role=tab]").forEach(b => b.onclick = () => setMode(b.dataset.mode));
+  $$(".tabs [role=tab]").forEach(b => b.onclick = () => {
+    setMode(b.dataset.mode);
+    const bar = b.parentElement; // al mòbil la barra es desplaça: centra la pestanya triada
+    bar.scrollLeft = b.offsetLeft - (bar.clientWidth - b.offsetWidth) / 2;
+  });
 
   // Llista completa de notes i referències estàtiques de l'HTML
   $("#notesList").innerHTML = NOTE_IDS.map((id, i) => `<li id="nota-${i + 1}" value="${i + 1}">${H.NOTES[id]}</li>`).join("");
