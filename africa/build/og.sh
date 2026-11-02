@@ -6,7 +6,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 chrome="$(command -v google-chrome || command -v chromium-browser || command -v chromium)"
 tmp="$(mktemp -d)"
-for v in "ca:0:og-ca" "ca:1:og-ca-infants" "en:0:og-en" "en:1:og-en-kids"; do
+for v in "ca:0:og-ca-detallada" "ca:1:og-ca-escoles" "en:0:og-en-detailed" "en:1:og-en-schools"; do
   IFS=: read -r lang kids name <<< "$v"
   "$chrome" --headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files \
     --user-data-dir="$tmp/profile" --window-size=1200,900 --virtual-time-budget=3000 \

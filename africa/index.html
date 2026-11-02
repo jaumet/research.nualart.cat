@@ -3,254 +3,302 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#14110f">
-  <title>Àfrica esquarterada</title>
-  <meta name="description" content="Com el colonialisme europeu va traçar fronteres sobre regnes, pobles i cultures africanes: mapes comparats, línia de temps animada 1870–2018, pobles partits i noms abans i després.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#fbf5e9">
+  <title>Àfrica esquarterada · Versió per a escoles</title>
+  <meta name="description" content="Versió per a escoles, d'estil pedagògic: com els països europeus es van repartir l'Àfrica, com van partir els seus pobles i com aquests pobles van resistir i tornar a ser lliures. Explicat pel Baobab.">
   <link rel="canonical" href="https://research.nualart.cat/africa/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="research.nualart.cat">
-  <meta property="og:title" content="Àfrica esquarterada">
-  <meta property="og:description" content="Com el colonialisme europeu va traçar fronteres sobre els regnes, els pobles i les llengües d&#x27;Àfrica. Atles interactiu 1870–avui: cronologia animada, pobles partits, noms i llengües.">
+  <meta property="og:title" content="Àfrica esquarterada · Versió per a escoles">
+  <meta property="og:description" content="Com Europa es va repartir l&#x27;Àfrica i com els pobles africans van resistir, explicat pel Baobab. Versió per a escoles, amb mapes, un joc i un repte.">
   <meta property="og:url" content="https://research.nualart.cat/africa/">
-  <meta property="og:image" content="https://research.nualart.cat/africa/img/og-ca.jpg">
-  <meta property="og:image:secure_url" content="https://research.nualart.cat/africa/img/og-ca.jpg">
+  <meta property="og:image" content="https://research.nualart.cat/africa/img/og-ca-escoles.jpg">
+  <meta property="og:image:secure_url" content="https://research.nualart.cat/africa/img/og-ca-escoles.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Mapa d&#x27;Àfrica el 1914 pintat segons la potència colonial, amb el títol Àfrica esquarterada">
+  <meta property="og:image:alt" content="Mapa d&#x27;Àfrica el 1914 pintat segons la potència colonial, amb el títol Àfrica esquarterada, versió per a escoles">
   <meta property="og:locale" content="ca_ES">
   <meta property="og:locale:alternate" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Àfrica esquarterada">
-  <meta name="twitter:description" content="Com el colonialisme europeu va traçar fronteres sobre els regnes, els pobles i les llengües d&#x27;Àfrica. Atles interactiu 1870–avui: cronologia animada, pobles partits, noms i llengües.">
-  <meta name="twitter:image" content="https://research.nualart.cat/africa/img/og-ca.jpg">
-  <meta name="twitter:image:alt" content="Mapa d&#x27;Àfrica el 1914 pintat segons la potència colonial, amb el títol Àfrica esquarterada">
+  <meta name="twitter:title" content="Àfrica esquarterada · Versió per a escoles">
+  <meta name="twitter:description" content="Com Europa es va repartir l&#x27;Àfrica i com els pobles africans van resistir, explicat pel Baobab. Versió per a escoles, amb mapes, un joc i un repte.">
+  <meta name="twitter:image" content="https://research.nualart.cat/africa/img/og-ca-escoles.jpg">
+  <meta name="twitter:image:alt" content="Mapa d&#x27;Àfrica el 1914 pintat segons la potència colonial, amb el títol Àfrica esquarterada, versió per a escoles">
   <link rel="alternate" hreflang="en" href="en/index.html">
   <script src="js/lang-redirect.js"></script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/infants.css">
 </head>
 <body>
+  <!-- Personatge narrador: el Baobab (content i trist) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="baobab-body">
+        <ellipse cx="60" cy="133" rx="44" ry="5" fill="#2b211822"/>
+        <path d="M40 64 L22 34 M47 58 L42 20 M73 58 L76 18 M80 64 L99 32" stroke="#7d5235" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <g fill="#6a9a4f"><circle cx="20" cy="30" r="15"/><circle cx="42" cy="17" r="16"/><circle cx="76" cy="15" r="16"/><circle cx="100" cy="28" r="15"/><circle cx="59" cy="27" r="14"/></g>
+        <g fill="#86b363"><circle cx="38" cy="12" r="6"/><circle cx="72" cy="10" r="6"/><circle cx="96" cy="22" r="5"/></g>
+        <path d="M34 131 C29 102 31 74 41 60 C51 52 69 52 79 60 C89 74 91 102 86 131 Z" fill="#a8774f"/>
+        <path d="M43 118 q5 -7 0 -14 M78 121 q-5 -7 0 -14 M60 126 q3 -5 0 -10" stroke="#8a5f3e" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="50" cy="85" r="4.5" fill="#2b2118"/><circle cx="70" cy="85" r="4.5" fill="#2b2118"/>
+        <circle cx="51.6" cy="83.4" r="1.4" fill="#fff"/><circle cx="71.6" cy="83.4" r="1.4" fill="#fff"/>
+        <circle cx="43" cy="94" r="4" fill="#e9967a" opacity=".55"/><circle cx="77" cy="94" r="4" fill="#e9967a" opacity=".55"/>
+      </g>
+      <symbol id="baobab" viewBox="0 0 120 140"><use href="#baobab-body"/><path d="M50 97 Q60 106 70 97" stroke="#2b2118" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
+      <symbol id="baobab-sad" viewBox="0 0 120 140"><use href="#baobab-body"/><path d="M51 102 Q60 95 69 102" stroke="#2b2118" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M73 92 q1.5 4 0 6 q-1.5 -2 0 -6" fill="#5fa8d3"/></symbol>
+    </defs>
+  </svg>
+
   <nav class="version-switch" aria-label="Tria la versió">
     <span class="vs-label">Tria la versió:</span>
-    <a class="vs-opt" href="infants.html"><span aria-hidden="true">🧒</span> Infants i joves <small>8–14 anys</small></a>
-    <a class="vs-opt" href="index.html" aria-current="page"><span aria-hidden="true">📚</span> Adults <small>amb totes les dades</small></a>
+    <a class="vs-opt" href="index.html" aria-current="page"><span aria-hidden="true">🏫</span> Versió per a escoles <small>estil pedagògic</small></a>
+    <a class="vs-opt" href="detallada.html"><span aria-hidden="true">📚</span> Versió detallada <small>estil acadèmic</small></a>
     <span class="vs-langs" aria-label="Llengua"><a class="vs-lang" href="index.html" hreflang="ca" lang="ca" aria-current="true">Català</a><a class="vs-lang" href="en/index.html" hreflang="en" lang="en">English</a></span>
   </nav>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
   <header class="hero">
-    <p class="eyebrow">Atles de denúncia · 1870–avui</p>
-    <h1>Àfrica esquarterada</h1>
-    <p class="lede">El 1884, a Berlín, catorze potències es van reunir per repartir-se un continent on no havien posat mai els peus. No hi havia cap africà a la sala. En trenta anys, centenars de regnes, imperis, ciutats i pobles van quedar sotmesos, saquejats i dividits per línies traçades amb regle sobre mapes incomplets. Aquelles línies són, encara avui, les fronteres d'Àfrica.</p>
-    <dl class="stats">
-      <div><dt id="statColonized1914">~90%</dt><dd>del territori africà sota domini europeu el 1914</dd></div>
-      <div><dt>0</dt><dd>representants africans a la Conferència de Berlín</dd></div>
-      <div><dt id="statPartitioned">230</dt><dd>pobles amb el seu territori partit per les fronteres actuals</dd></div>
-      <div><dt>2</dt><dd>estats que van resistir: Etiòpia i Libèria</dd></div>
-    </dl>
+    <div class="hero-text">
+      <p class="eyebrow">Una història de l'Àfrica · 1880–avui</p>
+      <h1>Àfrica esquarterada</h1>
+      <p class="word"><strong>Esquarterar</strong> vol dir <em>partir una cosa en trossos</em>. És el que van fer uns quants països d'Europa amb l'Àfrica. Aquesta és la història de com va passar… i de com els pobles africans van resistir.</p>
+      <a class="btn btn-big" href="#cap1">Comença la història ↓</a>
+    </div>
+    <figure class="narrator narrator-hero">
+      <svg class="baobab" role="img" aria-label="El Baobab, el narrador"><use href="#baobab"/></svg>
+      <figcaption class="bubble">Hola! Sóc el <strong>Baobab</strong>. Els baobabs podem viure més de mil anys, i jo fa tant de temps que sóc a la sabana que ho he vist tot. Vine, que t'ho explico!</figcaption>
+    </figure>
   </header>
 
   <main>
-    <section class="atlas" aria-label="Atles interactiu">
-      <p class="scroll-hint">Baixa per llegir l'atles: el mapa canvia amb cada capítol.</p>
-
-      <div class="atlas-body">
-        <div class="map-wrap" id="mapWrap">
+    <div class="story">
+      <div class="map-col">
+        <div class="map-box" id="mapBox">
           <svg id="map" role="img" aria-label="Mapa d'Àfrica" xmlns="http://www.w3.org/2000/svg"></svg>
-          <div class="swipe" id="swipe" hidden>
-            <div class="swipe-line"></div>
-            <button class="swipe-handle" id="swipeHandle" aria-label="Arrossega per comparar">⟷</button>
-            <span class="swipe-tag swipe-tag--left" id="swipeLeftTag"></span>
-            <span class="swipe-tag swipe-tag--right" id="swipeRightTag"></span>
-          </div>
-          <div class="year-badge" id="yearBadge" aria-live="polite">1870</div>
-          <div class="map-tools">
-            <button id="zoomIn" aria-label="Apropa">+</button>
-            <button id="zoomOut" aria-label="Allunya">−</button>
-            <button id="zoomReset" aria-label="Vista inicial">⤢</button>
-          </div>
-          <nav class="chap-nav" aria-label="Capítols de l'atles"><a href="#cap-timeline" data-go="timeline"><span>1 · Cronologia</span></a><a href="#cap-compare" data-go="compare"><span>2 · Abans i després</span></a><a href="#cap-peoples" data-go="peoples"><span>3 · Pobles partits</span></a><a href="#cap-names" data-go="names"><span>4 · Noms</span></a><a href="#cap-ldiv" data-go="ldiv"><span>5 · Diversitat lingüística</span></a><a href="#cap-loff" data-go="loff"><span>6 · Llengües oficials</span></a><a href="#cap-lext" data-go="lext"><span>7 · Llengües desaparegudes</span></a></nav>
-          <div class="tooltip" id="tooltip" hidden></div>
-          <div class="legend" id="legend"></div>
+          <div class="map-year" id="mapYear" aria-live="polite"></div>
+          <div class="map-hint" id="mapHint" hidden></div>
+          <div class="map-legend" id="mapLegend"></div>
+          <div class="tip" id="tip" hidden></div>
         </div>
+      </div>
 
-        <div class="panel chapters">
-          <!-- Cronologia -->
-          <div class="panel-mode chap" data-panel="timeline" id="cap-timeline">
-            <p class="chap-n">1 · Cronologia</p>
-            <h2>Cronologia del repartiment</h2>
-            <p>Prem ▶ o arrossega el control per veure, any rere any, com les potències europees es van repartir el continent i com els africans el van recuperar.</p>
-            <div class="player">
-              <button id="playButton" class="play" aria-label="Reprodueix">▶</button>
-              <div class="slider-wrap">
-                <input id="yearSlider" type="range" min="1870" max="2018" value="1870" step="1" aria-label="Any">
-                <div class="ticks" id="ticks"></div>
-              </div>
-            </div>
-            <div class="player-opts">
-              <label>Velocitat <select id="speedSelect"><option value="3">lenta</option><option value="7" selected>normal</option><option value="15">ràpida</option></select></label>
-              <label><input id="pauseEvents" type="checkbox" checked> Atura't als esdeveniments</label>
-              <label><input id="futureBorders" type="checkbox" checked> Fronteres futures</label>
-            </div>
-            <div class="meter">
-              <div class="meter-row"><span>Sota domini colonial europeu <span data-nref="share"></span></span><strong id="colonizedPct">—</strong></div>
-              <div class="meter-bar" aria-hidden="true"><span class="seg seg-pre" id="segPre"></span><span class="seg seg-col" id="segCol"></span><span class="seg seg-oth" id="segOth"></span><span class="seg seg-ind" id="segInd"></span></div>
-              <div class="meter-keys">
-                <span><i class="seg-pre"></i>Encara no conquerit <b id="prePct">—</b></span>
-                <span><i class="seg-ind"></i>Africà sobirà <b id="indPct">—</b></span>
-                <span><i class="seg-oth"></i>Otomà, egipci o ocupació veïna <b id="othPct">—</b></span>
-              </div>
-            </div>
-            <article class="event-card" id="eventCard"></article>
-            <p class="note">Com llegir les dates i fronteres: <span data-nref="claim"></span><span data-nref="modern"></span><span data-nref="base1880"></span><span data-nref="set"></span></p>
-            <details class="event-list-wrap">
-              <summary>Tots els esdeveniments</summary>
-              <ol class="event-list" id="eventList"></ol>
-            </details>
+      <div class="chapters">
+        <!-- 1 -->
+        <section class="chap" id="cap1" data-map="1880">
+          <p class="chap-n"><span aria-hidden="true">👑</span> Capítol 1 · Abans de 1880</p>
+          <h2>Un continent de regnes i imperis</h2>
+          <p>Fa uns 150 anys, a l'Àfrica hi havia <strong>regnes, imperis, sultanats i ciutats</strong>, cadascun amb els seus reis i reines, les seves lleis i els seus mercats.</p>
+          <ul class="facts">
+            <li><span class="ico" aria-hidden="true">🏰</span><span>L'<strong>Imperi asante</strong> (avui Ghana) era famós pel seu or. El <strong>Califat de Sokoto</strong> (avui Nigèria) tenia ciutats amb milers d'habitants.</span></li>
+            <li><span class="ico" aria-hidden="true">⛪</span><span>L'<strong>Etiòpia</strong> cristiana tenia més de mil anys d'història i el seu propi alfabet.</span></li>
+            <li><span class="ico" aria-hidden="true">🏖️</span><span>Els europeus només controlaven <strong>alguns trossos</strong>: punts de la costa, Algèria i l'extrem sud. Al mapa són els colors <span class="sw" style="--c:#3d6cb3"></span> blau, <span class="sw" style="--c:#c23b32"></span> vermell i <span class="sw" style="--c:#2f8a5b"></span> verd.</span></li>
+          </ul>
+          <div class="callout">
+            <span class="ico" aria-hidden="true">🤔</span>
+            <p><strong>I les zones de color sorra?</strong> No estaven buides! Hi vivien molts pobles que s'organitzaven sense un gran estat amb fronteres dibuixades, com feien els europeus.</p>
           </div>
+          <p class="try"><span aria-hidden="true">👆</span> Passa el dit o el ratolí per sobre del mapa per veure els noms.</p>
+        </section>
 
-          <!-- Comparar -->
-          <div class="panel-mode chap" data-panel="compare" id="cap-compare">
-            <p class="chap-n">2 · Abans i després</p>
-            <h2>Abans i després</h2>
-            <p>Arrossega la línia del mapa per comparar dues èpoques sobre el mateix territori.</p>
-            <div class="compare-selects">
-              <label>Esquerra <select id="compareLeft"></select></label>
-              <label>Dreta <select id="compareRight"></select></label>
-            </div>
-            <div class="presets" id="comparePresets"></div>
-            <label class="check"><input id="overlayBorders" type="checkbox" checked> Superposa les fronteres actuals</label>
-            <label class="check"><input id="compareLabels" type="checkbox" checked> Mostra els noms</label>
-            <p class="note" id="compareNote"></p>
-            <p class="note">Sobre els mapes: <span data-nref="base1880"></span><span data-nref="hatch"></span><span data-nref="map1914"></span><span data-nref="murdock"></span></p>
+        <!-- 2 -->
+        <section class="chap" id="cap2" data-map="peoples">
+          <p class="chap-n"><span aria-hidden="true">🧑🏿‍🤝‍🧑🏾</span> Capítol 2 · Molts pobles</p>
+          <h2>Centenars de pobles, milers de llengües</h2>
+          <p>Cada trosset d'aquest mapa és un <strong>poble</strong>: un grup de persones que comparteixen una llengua, unes festes, unes històries i una manera de viure.</p>
+          <div class="big-numbers">
+            <div><b id="nPeoples">835</b><span>pobles en aquest mapa (i n'hi havia més!)</span></div>
+            <div><b>+2.000</b><span>llengües diferents a tota l'Àfrica</span></div>
           </div>
+          <p>Hi havia pastors, pagesos, pescadors, comerciants, ferrers, músics i contacontes. Alguns pobles eren veïns i amics, d'altres eren rivals. Però <strong>el territori era seu</strong>.</p>
+          <p class="src">Mapa dels pobles: G. P. Murdock (1959). És un mapa antic i amb errors, però és el més complet que hi ha.</p>
+        </section>
 
-          <!-- Pobles -->
-          <div class="panel-mode chap" data-panel="peoples" id="cap-peoples">
-            <p class="chap-n">3 · Pobles partits</p>
-            <h2>Pobles partits</h2>
-            <p>Territoris de <strong id="peopleTotal">835</strong> pobles segons el mapa etnogràfic de Murdock (1959). En vermell, els <strong id="peoplePart">230</strong> que tenen almenys un 10% del seu territori en un altre estat. <span data-nref="murdock"></span></p>
-            <label class="search"><span class="visually-hidden">Cerca un poble</span><input id="peopleSearch" list="peopleNames" placeholder="Cerca un poble (p. ex. Yoruba)" autocomplete="off"></label>
-            <datalist id="peopleNames"></datalist>
-            <div class="people-detail" id="peopleDetail"></div>
-            <h3>Històries de divisió</h3>
-            <div class="stories" id="stories"></div>
-            <label class="check"><input id="peoples1914" type="checkbox"> Compara amb les fronteres de 1914</label>
+        <!-- 3 -->
+        <section class="chap chap-game" id="cap3" data-map="draw">
+          <p class="chap-n"><span aria-hidden="true">✂️</span> Capítol 3 · Berlín, 1884–1885</p>
+          <h2>La reunió on es van repartir l'Àfrica</h2>
+          <p>L'hivern de 1884, representants de <strong>14 països</strong> es van reunir a Berlín, a Alemanya, per parlar de l'Àfrica.</p>
+          <div class="callout callout-red">
+            <span class="ico" aria-hidden="true">🚫</span>
+            <p>Quantes persones africanes hi havia a la sala? <strong>Cap ni una.</strong></p>
           </div>
+          <p>A Berlín no van dibuixar tot el mapa, però van posar <strong>les regles del joc</strong>: qui ocupés un territori i ho fes saber als altres, se'l podia quedar. Després, en molts tractats, van traçar fronteres amb <strong>regle i llapis</strong>, sovint sense haver estat mai en aquells llocs.</p>
+          <div class="game">
+            <h3><span aria-hidden="true">🎮</span> Ara fes tu de diplomàtic</h3>
+            <p>Traça una <strong>línia recta</strong> sobre el mapa: arrossega el ratolí o el dit d'un punt a un altre.</p>
+            <div class="game-result" id="drawResult" aria-live="polite">Esperant la teva línia… <span aria-hidden="true">📏</span></div>
+            <button class="btn btn-small" id="drawClear" hidden>Esborra i torna-ho a provar</button>
+          </div>
+        </section>
 
-          <!-- Noms -->
-          <div class="panel-mode chap" data-panel="names" id="cap-names">
-            <p class="chap-n">4 · Noms</p>
-            <h2>Noms imposats, noms recuperats</h2>
-            <p>Moltes colònies portaven noms de rius, de productes de comerç o d'homes blancs. A la independència, molts estats van recuperar noms africans.</p>
-            <div class="name-toggle" role="radiogroup" aria-label="Època dels noms">
-              <button data-names="colonial" aria-pressed="true">Noms colonials</button>
-              <button data-names="now" aria-pressed="false">Noms actuals</button>
-            </div>
-            <label class="check"><input id="showCities" type="checkbox" checked> Ciutats rebatejades</label>
-            <p class="city-hint">Apropa't al mapa per llegir els noms de les ciutats.</p>
-            <ol class="renames" id="renames"></ol>
+        <!-- 4 -->
+        <section class="chap" id="cap4" data-map="1914">
+          <p class="chap-n"><span aria-hidden="true">🍰</span> Capítol 4 · L'any 1914</p>
+          <h2>L'Àfrica repartida com un pastís</h2>
+          <p>En només <strong>30 anys</strong>, set països europeus es van quedar gairebé tot el continent. Ho van fer amb tractats, enganys i, sobretot, amb guerres de conquesta.</p>
+          <div class="meter-box">
+            <div class="meter-num"><b id="pct1914">96%</b> del territori africà sota domini europeu</div>
+            <div class="meter"><span id="meter1914"></span></div>
           </div>
+          <p>Només dos països van continuar lliures: <strong>Etiòpia</strong> <span aria-hidden="true">⭐</span> i <strong>Libèria</strong> <span aria-hidden="true">⭐</span>.</p>
+          <div class="callout">
+            <span class="ico" aria-hidden="true">🏫</span>
+            <p><strong>Imagina-ho a la teva escola:</strong> un dia arriben set nens d'una altra escola, es reparteixen les vostres taules, les motxilles i el pati, i a més us diuen en quina llengua heu de parlar. Injust, oi?</p>
+          </div>
+        </section>
 
-          <!-- Diversitat lingüística -->
-          <div class="panel-mode chap" data-panel="ldiv" id="cap-ldiv">
-            <p class="chap-n">5 · Diversitat lingüística</p>
-            <h2>Un continent de milers de llengües</h2>
-            <p>A l'Àfrica es parlen més de <strong id="langLiving">2.000</strong> llengües, més d'una quarta part de les del món segons Glottolog. No tenen fronteres nítides: comparteixen territori, se superposen, i la majoria de persones en parlen dues o més. <span data-nref="lpoints"></span></p>
-            <p>Les fronteres colonials van agrupar en un sol estat centenars de llengües —<strong id="langNga">més de 500</strong> a Nigèria, segons Glottolog— i en van partir moltes altres.</p>
-            <div class="name-toggle" role="radiogroup" aria-label="Què mostra el mapa">
-              <button data-ldiv="count" aria-pressed="true">Llengües per país</button>
-              <button data-ldiv="shared" aria-pressed="false">Compartides amb altres estats</button>
-              <button data-ldiv="family" aria-pressed="false">Famílies</button>
-            </div>
-            <p class="note" id="ldivNote"></p>
-            <div class="people-detail" id="langCountryDetail"><p class="note">Passa per sobre d'un país o fes-hi clic per veure'n les llengües.</p></div>
-            <p class="note">Mètode: <span data-nref="lcountries"></span><span data-nref="lgroups"></span><span data-nref="lcontact"></span><span data-nref="lnationalsrc"></span></p>
-          </div>
+        <!-- 5 -->
+        <section class="chap" id="cap5" data-map="partits">
+          <p class="chap-n"><span aria-hidden="true">💔</span> Capítol 5 · Pobles partits</p>
+          <h2>Línies que tallen famílies</h2>
+          <p>Les fronteres noves no tenien en compte qui vivia a cada lloc. Van tallar pel mig <strong><span id="nPart">230</span> dels <span id="nPeoples2">835</span> pobles</strong> del mapa. Famílies, amics i veïns van quedar en països diferents, amb lleis i llengües oficials diferents.</p>
+          <p>Toca un poble per conèixer la seva història:</p>
+          <div class="story-btns" id="storyBtns"></div>
+          <div class="story-card" id="storyCard" aria-live="polite"></div>
+        </section>
 
-          <!-- Llengües oficials -->
-          <div class="panel-mode chap" data-panel="loff" id="cap-loff">
-            <p class="chap-n">6 · Llengües oficials</p>
-            <h2>La llengua del poder</h2>
-            <p>El 1914, totes les administracions colonials governaven en una llengua europea. Avui, <strong id="loffEuro">—</strong> dels 55 estats i territoris africans encara tenen com a oficial (o de treball) la llengua de l'antiga metròpoli. Les ratlles indiquen que hi conviuen diverses llengües oficials. <span data-nref="loff"></span></p>
-            <div class="name-toggle" role="radiogroup" aria-label="Època">
-              <button data-loff="1914" aria-pressed="false">1914</button>
-              <button data-loff="now" aria-pressed="true">Avui</button>
-            </div>
-            <p class="note" id="loffNote"></p>
-            <div class="lang-stats" id="loffStats"></div>
+        <!-- 6 -->
+        <section class="chap chap-dark" id="cap6" data-map="dark">
+          <p class="chap-n"><span aria-hidden="true">⛓️</span> Capítol 6 · La part més fosca</p>
+          <h2>El colonialisme va fer molt mal</h2>
+          <div class="narrator narrator-inline">
+            <svg class="baobab" aria-hidden="true"><use href="#baobab-sad"/></svg>
+            <p class="bubble">Aquest capítol explica coses tristes i dures. Si et fa pena, en pots parlar amb una persona adulta. És important saber-ho perquè no torni a passar.</p>
           </div>
+          <ul class="facts">
+            <li><span class="ico" aria-hidden="true">🌳</span><span><strong>Al Congo</strong>, el rei Leopold II de Bèlgica va fer del país la seva finca privada. Obligaven la gent a recollir cautxú, per fer pneumàtics, i castigaven amb crueltat qui no en portava prou. Hi va morir moltíssima gent. Alguns historiadors parlen de milions de persones, però no hi ha xifres segures.</span></li>
+            <li><span class="ico" aria-hidden="true">🏜️</span><span><strong>A Namíbia</strong>, entre 1904 i 1908, l'exèrcit alemany va matar la major part del poble herero i molts nama. Sovint es considera el primer genocidi del segle XX. Alemanya ho va reconèixer l'any 2021.</span></li>
+            <li><span class="ico" aria-hidden="true">⚒️</span><span><strong>Treballs forçats</strong>, impostos per obligar la gent a treballar per als colons, terres robades i escoles on castigaven els infants per parlar la seva llengua.</span></li>
+          </ul>
+        </section>
 
-          <!-- Llengües desaparegudes -->
-          <div class="panel-mode chap" data-panel="lext" id="cap-lext">
-            <p class="chap-n">7 · Llengües desaparegudes</p>
-            <h2>Llengües que ja no es parlen</h2>
-            <p>Glottolog registra <strong id="lextCount">100</strong> llengües africanes extingides, <strong id="lextAfter">83</strong> d'elles documentades per darrer cop després de 1880, i <strong id="lextDanger">—</strong> més en perill greu. Cada llengua perduda és una manera de veure el món que desapareix. <span data-nref="lextinct"></span><span data-nref="lstatus"></span></p>
-            <div class="name-toggle" role="radiogroup" aria-label="Què mostra el mapa">
-              <button data-lext="extinct" aria-pressed="true">Extingides</button>
-              <button data-lext="status" aria-pressed="false">Totes, per vitalitat</button>
-            </div>
-            <div class="people-detail" id="langDetail"></div>
-            <h3>Històries</h3>
-            <div class="stories" id="langStories"></div>
-            <details class="event-list-wrap">
-              <summary>Llengües extingides documentades després de 1880</summary>
-              <ol class="event-list" id="extinctList"></ol>
-            </details>
+        <!-- 7 -->
+        <section class="chap" id="cap7" data-map="resist">
+          <p class="chap-n"><span aria-hidden="true">✊</span> Capítol 7 · La resistència</p>
+          <h2>Els pobles africans no es van rendir</h2>
+          <p>A tot arreu hi va haver persones que van lluitar per defensar la seva terra i la seva llibertat.</p>
+          <div class="cards">
+            <article class="card"><span class="ico" aria-hidden="true">⚔️</span><h3>Adwa, 1896</h3><p>L'exèrcit d'Etiòpia, amb l'emperador Menelik II i l'emperadriu Taytu, va derrotar Itàlia. Per això Etiòpia va continuar lliure (llevat de 1936–1941).</p></article>
+            <article class="card"><span class="ico" aria-hidden="true">🐎</span><h3>Samori Touré</h3><p>Va resistir França durant setze anys a l'Àfrica occidental, fins que el van capturar el 1898.</p></article>
+            <article class="card"><span class="ico" aria-hidden="true">👑</span><h3>Yaa Asantewaa</h3><p>Una reina mare asante que el 1900 va dirigir la guerra contra els britànics per defensar el Tamboret d'Or, el símbol sagrat del seu poble.</p></article>
+            <article class="card"><span class="ico" aria-hidden="true">💧</span><h3>Maji Maji</h3><p>El 1905, a l'actual Tanzània, molts pobles es van unir contra els alemanys, que els obligaven a cultivar cotó.</p></article>
           </div>
-        </div>
+        </section>
+
+        <!-- 8 -->
+        <section class="chap" id="cap8" data-map="indep">
+          <p class="chap-n"><span aria-hidden="true">🎉</span> Capítol 8 · 1950–2011</p>
+          <h2>Tornar a ser lliures</h2>
+          <p>Després de la Segona Guerra Mundial, els pobles africans van exigir la seva <strong>independència</strong>. Prem el botó i mira com el mapa es torna daurat!</p>
+          <div class="player">
+            <button class="btn" id="playIndep" aria-label="Reprodueix">▶ Reprodueix</button>
+            <input type="range" id="indepSlider" min="1950" max="2011" value="1950" aria-label="Any">
+          </div>
+          <div class="indep-now">
+            <div class="indep-year" id="indepYear">1950</div>
+            <div><b id="indepCount">4</b> de 54 països independents</div>
+          </div>
+          <p class="indep-caption" id="indepCaption" aria-live="polite"></p>
+          <div class="callout">
+            <span class="ico" aria-hidden="true">⚠️</span>
+            <p><strong>Però…</strong> els nous països van heretar les fronteres traçades a Europa. I avui, el <strong>Sàhara Occidental</strong> encara espera poder decidir el seu futur.</p>
+          </div>
+        </section>
+
+        <!-- 9 -->
+        <section class="chap" id="cap9" data-map="langs">
+          <p class="chap-n"><span aria-hidden="true">🗣️</span> Capítol 9 · Les llengües</p>
+          <h2>La ferida que no es veu</h2>
+          <p>A l'Àfrica es parlen més de <strong>2.000 llengües</strong>. Però a molts països la llengua oficial, la del govern i sovint la de l'escola, és la dels antics colonitzadors.</p>
+          <div class="big-numbers">
+            <div><b id="nEuroOnly">23</b><span>de 54 països només tenen llengües oficials europees</span></div>
+          </div>
+          <p><span aria-hidden="true">🇦🇴</span> A Angola, per exemple, molta gent parla <strong>kimbundu, umbundu o kikongo</strong> a casa, però a l'escola s'estudia en portuguès.</p>
+          <p><span aria-hidden="true">🌱</span> Hi ha bones notícies: el <strong>suahili</strong> és oficial a Tanzània i a Kenya i el parlen desenes de milions de persones. I cada cop més escoles ensenyen en llengües africanes.</p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Noms -->
+    <section class="wide" id="noms">
+      <p class="chap-n"><span aria-hidden="true">🏷️</span> Capítol 10 · Noms nous</p>
+      <h2>Com es deia abans?</h2>
+      <p class="lead">Molts països van canviar el nom colonial per un nom propi. Gira les targetes per descobrir-lo!</p>
+      <div class="flips" id="flips"></div>
+    </section>
+
+    <!-- Pensa -->
+    <section class="wide" id="pensa">
+      <p class="chap-n"><span aria-hidden="true">💭</span> I tu, què en penses?</p>
+      <h2>Preguntes per parlar-ne</h2>
+      <div class="cards cards-q">
+        <article class="card q"><span class="ico" aria-hidden="true">👨‍👩‍👧</span><p>Com et sentiries si una frontera et separés dels teus cosins i haguessis de demanar permís per visitar-los?</p></article>
+        <article class="card q"><span class="ico" aria-hidden="true">🚪</span><p>Per què creus que a la reunió de Berlín no hi van convidar cap persona africana?</p></article>
+        <article class="card q"><span class="ico" aria-hidden="true">🗺️</span><p>Coneixes algun carrer, estàtua o lloc que porti el nom d'algú que va participar en el colonialisme?</p></article>
+        <article class="card q"><span class="ico" aria-hidden="true">💬</span><p>Quina llengua parles a casa? I a l'escola? Com et sentiries si no et deixessin parlar la teva?</p></article>
       </div>
     </section>
 
-    <section class="essay">
-      <div class="essay-grid">
-        <article>
-          <h2>No era terra de ningú</h2>
-          <p>Els mapes europeus del segle XIX pintaven l'interior d'Àfrica en blanc. Aquell buit era una ficció útil: la doctrina de la <em>terra nullius</em> permetia presentar la conquesta com una ocupació d'espais «buits». En realitat, el continent estava ple de sistemes polítics: califats com el de Sokoto, imperis com l'asante o el lunda, regnes com Buganda o el Kongo, ciutats estat suahili, confederacions comercials i milers de societats que s'organitzaven sense estat centralitzat.</p>
-          <p>Al mapa de 1880, les zones ratllades no són buides: són societats que el conjunt de dades no representa, sovint sense estat centralitzat, però també regnes i sultanats que el conjunt de dades omet <span data-nref="hatch"></span>. Les fronteres africanes eren sovint flexibles, negociades, superposades. Les colonials, en canvi, van ser rígides, exclusives i traçades des de fora.</p>
-        </article>
-        <article>
-          <h2>Línies rectes sobre pobles</h2>
-          <p>Moltes fronteres es van traçar seguint meridians, paral·lels i rius sobre mapes que ningú no havia verificat sobre el terreny. El resultat: pobles amb una llengua i una història comunes —massais, ewe, bakongo, somalis, haussa, tuaregs— van quedar repartits entre dos, tres o fins a cinc estats, mentre que dins d'una mateixa colònia s'agrupaven societats sense cap vincle previ.</p>
-          <p>La violència no es va acabar amb la conquesta. Genocidis, treball forçat, camps de concentració, saqueig cultural i guerres d'alliberament van marcar tot el segle XX. Molts conflictes posteriors tenen arrels en aquest disseny.</p>
-        </article>
-        <article>
-          <h2>Una herència intocable</h2>
-          <p>El 1964, la nova Organització per la Unitat Africana va decidir respectar les fronteres heretades: redibuixar-les podia obrir guerres a tot el continent. És la gran paradoxa de la descolonització: els estats independents van haver de preservar la divisió imposada pels colonitzadors. Només Eritrea (1993) i el Sudan del Sud (2011) han aconseguit canviar-la.</p>
-          <p>Recordar aquest procés no és nostàlgia d'un passat idealitzat. És reconèixer una injustícia que continua tenint conseqüències, i que encara espera reparació, restitució i memòria.</p>
-        </article>
+    <!-- Quiz -->
+    <section class="wide" id="repte">
+      <p class="chap-n"><span aria-hidden="true">🎯</span> El repte del Baobab</p>
+      <h2>Què has après?</h2>
+      <div class="quiz" id="quiz"></div>
+      <div class="quiz-end" id="quizEnd" hidden>
+        <svg class="baobab" aria-hidden="true"><use href="#baobab"/></svg>
+        <div><p class="quiz-score" id="quizScore"></p><p>Ara ja coneixes una història que durant molt de temps no s'explicava a les escoles. <strong>Explica-la a algú de casa!</strong></p>
+        <button class="btn btn-small" id="quizAgain">Torna-hi</button></div>
       </div>
+    </section>
 
-      <div class="violence" id="violence">
-        <h2>Cronologia de la violència colonial</h2>
-        <p class="note">Selecció, no exhaustiva. Fes clic en un fet per veure'l al mapa.</p>
-        <ol class="violence-list" id="violenceList"></ol>
-      </div>
+    <!-- Glossari -->
+    <section class="wide" id="paraules">
+      <p class="chap-n"><span aria-hidden="true">📖</span> Paraules clau</p>
+      <h2>Petit diccionari</h2>
+      <dl class="glossary">
+        <div><dt><span aria-hidden="true">🏴</span> Colònia</dt><dd>Territori governat per un país estranger que se l'ha quedat per la força.</dd></div>
+        <div><dt><span aria-hidden="true">🌍</span> Colonialisme</dt><dd>Quan un país domina altres pobles i territoris per aprofitar-se de les seves terres, riqueses i persones.</dd></div>
+        <div><dt><span aria-hidden="true">〰️</span> Frontera</dt><dd>Línia que separa dos països.</dd></div>
+        <div><dt><span aria-hidden="true">🧑🏾‍🤝‍🧑🏻</span> Poble</dt><dd>Grup de persones que comparteixen llengua, història i costums.</dd></div>
+        <div><dt><span aria-hidden="true">✊</span> Resistència</dt><dd>Lluitar per no deixar-se dominar.</dd></div>
+        <div><dt><span aria-hidden="true">🕊️</span> Independència</dt><dd>Quan un país es governa a si mateix, sense que el mani un altre.</dd></div>
+        <div><dt><span aria-hidden="true">🗣️</span> Llengua oficial</dt><dd>La llengua que fan servir el govern, les lleis i sovint l'escola.</dd></div>
+        <div><dt><span aria-hidden="true">🚷</span> Apartheid</dt><dd>Sistema de Sud-àfrica (1948–1994) que separava les persones pel color de la pell i donava tot el poder a la minoria blanca.</dd></div>
+        <div><dt><span aria-hidden="true">🕯️</span> Genocidi</dt><dd>Intentar destruir un poble sencer.</dd></div>
+      </dl>
+    </section>
 
-      <div class="notes-section" id="notes">
-        <h2>Notes i incerteses</h2>
-        <p class="note">Tot el que és aproximat, discutit o corregit respecte de les fonts de dades. Els números entre claudàtors del mapa i dels textos remeten a aquesta llista.</p>
-        <ol class="notes-list" id="notesList"></ol>
-      </div>
-
-      <div class="sources">
-        <h2>Fonts i mètode</h2>
-        <ul>
-          <li><strong>Fronteres actuals:</strong> Natural Earth, <em>Admin 0 – Countries</em> 1:50m (domini públic).</li>
-          <li><strong>Mapa de 1880:</strong> A. Ourednik, <em>historical-basemaps</em> (GPL-3.0), amb correccions documentades a les notes (regne del Kongo, Transvaal, Lozi/Barotse, confederació aro) i avisos on la geometria és dubtosa.</li>
-          <li><strong>Mapa de 1914:</strong> reconstrucció pròpia a partir de les fronteres actuals agrupades per unitat colonial, amb les peces de <em>historical-basemaps</em> on la frontera era diferent (Kamerun, Togolàndia, Jubalàndia, província de Rudolf, zones espanyoles del Marroc). El conjunt de dades original de 1914 tenia errors greus i no s'ha fet servir directament.</li>
-          <li><strong>Pobles:</strong> G. P. Murdock, <em>Africa: Its Peoples and Their Culture History</em> (1959), digitalitzat per N. Nunn (CC BY-NC-SA 3.0). Representa territoris ètnics aproximats a finals del segle XIX i comença del XX. S'han substituït exònims pejoratius dels grups culturals («Galla», «Hottentot», «Bushmen») per Oromo, Khoikhoi i San.</li>
-          <li><strong>Cronologia de sobirania:</strong> elaboració pròpia sobre les fronteres actuals a partir de la UNESCO, <em>General History of Africa</em> (vols. VII–VIII), i la bibliografia citada. Les dates de conquesta són aproximades: el domini efectiu sovint va arribar anys després de la reclamació formal.</li>
-          <li><strong>Partició de pobles:</strong> càlcul propi en projecció d'àrees iguals (Lambert azimutal). Un poble es considera partit si almenys el 10% del seu territori queda en un segon estat, el mateix criteri que Michalopoulos i Papaioannou, «The Long-Run Effects of the Scramble for Africa», <em>American Economic Review</em> (2016).</li>
-          <li><strong>Llengües:</strong> H. Hammarström, R. Forkel, M. Haspelmath i S. Bank, <em>Glottolog</em> (Max Planck Institute for Evolutionary Anthropology), CC BY 4.0: localització, família, vitalitat i darrera documentació de cada llengua. Llengües oficials: constitucions vigents (vegeu les notes).</li>
-          <li><strong>Violència colonial:</strong> A. Hochschild, <em>King Leopold's Ghost</em> (1998); D. Olusoga i C. Erichsen, <em>The Kaiser's Holocaust</em> (2010); C. Elkins, <em>Imperial Reckoning</em> (2005); A. Adu Boahen (ed.), <em>UNESCO General History of Africa</em> VII (1985). Les xifres són estimacions i es donen en intervals quan les fonts divergeixen.</li>
-        </ul>
-        <p class="note">Eina divulgativa i de memòria, no un SIG de precisió. Les dades es regeneren amb <code>build/build.py</code>; el contingut històric és a <code>js/history.js</code>.</p>
+    <!-- Mestres -->
+    <section class="wide teachers" id="mestres">
+      <p class="chap-n"><span aria-hidden="true">🍎</span> Per a mestres i famílies</p>
+      <h2>Com fer servir aquesta pàgina</h2>
+      <div class="cols">
+        <div>
+          <h3>Les dades</h3>
+          <p>Totes les xifres surten de les mateixes dades que la <a href="detallada.html">versió detallada</a>. Allà hi ha les fonts, les notes i els dubtes de cada data. Alguns detalls:</p>
+          <ul>
+            <li>El percentatge de 1914 compta el territori de cada país actual segons qui el dominava aquell any.</li>
+            <li>Un poble compta com a «partit» si almenys un 10% del seu territori queda en un segon país (mapa de Murdock, 1959).</li>
+            <li>Les xifres de víctimes del Congo i de Namíbia són estimacions discutides: per això el text no en dona una de sola.</li>
+            <li>«Llengua oficial» no vol dir la llengua que parla la majoria de la gent.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Idees per a l'aula</h3>
+          <ul>
+            <li><strong>El joc de Berlín:</strong> cada grup traça una línia i compta quants pobles parteix. Després, parlem de com ho viurien aquells pobles.</li>
+            <li><strong>Noms:</strong> busqueu què volen dir els noms d'altres països africans.</li>
+            <li><strong>Llengües:</strong> feu una llista de les llengües que es parlen a la classe.</li>
+            <li><strong>Més enllà del dolor:</strong> busqueu informació sobre un regne africà anterior a 1880 i presenteu-lo.</li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Àfrica esquarterada · Funciona sense connexió · Mapes de base: Natural Earth, historical-basemaps, Murdock/Nunn, Glottolog</p>
+    <p>Àfrica esquarterada · Versió per a escoles · Funciona sense connexió · <a href="detallada.html">Versió detallada, amb totes les fonts</a></p>
     <p>Idea original de <a href="https://nualart.cat">Jaume Nu a l'art</a> · Projecte elaborat amb l'ajuda inestimable d'un agent d'IA.</p>
     <p class="license"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca"><img src="img/cc-by-nc-sa.svg" width="88" height="31" alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0 Internacional"></a>
       <span>© 2026 · Sota llicència <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca">Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</a></span></p>
@@ -284,10 +332,10 @@
   </footer>
 
   <script src="data/geo.js"></script>
-  <script src="data/languages.js"></script>
   <script src="js/history.js"></script>
   <script src="js/languages.js"></script>
   <script src="js/i18n.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/infants-content.js"></script>
+  <script src="js/infants.js"></script>
 </body>
 </html>

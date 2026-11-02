@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
   Imatge per compartir (Open Graph), 1200×630. La genera build/og.sh amb Chrome sense finestra.
-  Paràmetres: ?lang=ca|en  &kids=1 (versió per a infants i joves)
+  Paràmetres: ?lang=ca|en  &kids=1 (versió per a escoles)
 -->
 <html>
 <head>
@@ -51,10 +51,10 @@
   const nPart = G.peoples.filter(p => p.s.length > 1 && p.s[1][1] >= 10).length;
 
   const T = {
-    ca: { eyebrow: "Atles de denúncia · 1870–avui", title: "Àfrica<br>esquarterada", badge: "🧒 Per a infants i joves · 8–14 anys",
+    ca: { eyebrow: "Atles de denúncia · 1870–avui", title: "Àfrica<br>esquarterada", badge: "🏫 Versió per a escoles · estil pedagògic",
           sub: kids ? "Com Europa es va repartir l'Àfrica, i com els pobles africans van resistir. T'ho explica el Baobab." : "Com el colonialisme europeu va traçar fronteres sobre els regnes, els pobles i les llengües d'Àfrica.",
           stats: [[`${pct}%`, "del territori sota domini europeu el 1914"], [nPart, "pobles partits per les fronteres"], ["0", "africans a la Conferència de Berlín"]] },
-    en: { eyebrow: "An atlas of denunciation · 1870–today", title: "Africa<br>Carved Up", badge: "🧒 For kids and teens · ages 8–14",
+    en: { eyebrow: "An atlas of denunciation · 1870–today", title: "Africa<br>Carved Up", badge: "🏫 School edition · teaching style",
           sub: kids ? "How Europe divided up Africa, and how African peoples resisted. Told by the Baobab." : "How European colonialism drew borders over Africa's kingdoms, peoples and languages.",
           stats: [[`${pct}%`, "of the land under European rule in 1914"], [nPart, "peoples split by the borders"], ["0", "Africans at the Berlin Conference"]] }
   }[lang];

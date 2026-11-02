@@ -6,12 +6,12 @@ Obre `index.html` amb qualsevol navegador (funciona sense connexió i sense serv
 
 Té dues versions, que es trien a la barra de dalt de tot de cada pàgina:
 
-- **Adults** (`index.html`): l'atles complet, amb totes les dades, notes i fonts.
-- **Infants i joves, 8–14 anys** (`infants.html`): la mateixa història explicada pel Baobab, un narrador de més de mil anys, en deu capítols curts amb icones. El mapa canvia sol a mesura que es llegeix (1880 → pobles → Berlín → 1914 → pobles partits → violència → resistència → independències → llengües). Inclou un joc per traçar una frontera amb regle i veure quants pobles parteixes, una animació de les independències (1950–2011), targetes per girar amb els noms antics i nous, preguntes per parlar-ne, un repte de sis preguntes, un petit diccionari i una secció per a mestres. Totes les xifres es calculen amb les mateixes dades que la versió per a adults.
+- **Versió detallada**, d'estil acadèmic (`detallada.html`): l'atles complet, amb totes les dades, notes i fonts.
+- **Versió per a escoles**, d'estil pedagògic (`index.html`, la que s'obre per defecte): la mateixa història explicada pel Baobab, un narrador de més de mil anys, en deu capítols curts amb icones. El mapa canvia sol a mesura que es llegeix (1880 → pobles → Berlín → 1914 → pobles partits → violència → resistència → independències → llengües). Inclou un joc per traçar una frontera amb regle i veure quants pobles parteixes, una animació de les independències (1950–2011), targetes per girar amb els noms antics i nous, preguntes per parlar-ne, un repte de sis preguntes, un petit diccionari i una secció per a mestres. Totes les xifres es calculen amb les mateixes dades que la versió per a adults.
 
 ### Llengües
 
-El web és en **català** (l'original) i en **anglès** (`en/index.html` i `en/kids.html`, amb el títol *Africa Carved Up*). Es canvia de llengua a la mateixa barra de dalt. En obrir qualsevol pàgina, `js/lang-redirect.js` mira la llengua principal del navegador: si és català, castellà, portuguès, italià o francès mostra la versió catalana, i si no, l'anglesa. Si la persona tria una llengua a la barra, la tria es desa al navegador i té prioritat.
+El web és en **català** (l'original) i en **anglès** (`en/index.html` per a escoles i `en/detailed.html` detallada, amb el títol *Africa Carved Up*). Es canvia de llengua a la mateixa barra de dalt. En obrir qualsevol pàgina, `js/lang-redirect.js` mira la llengua principal del navegador: si és català, castellà, portuguès, italià o francès mostra la versió catalana, i si no, l'anglesa. Si la persona tria una llengua a la barra, la tria es desa al navegador i té prioritat.
 
 La versió anglesa porta un avís a dalt de tot. Explica que l'anglès és una de les llengües que va imposar el colonialisme, i que es fa servir per arribar a més gent, també a moltes persones africanes que llegeixen sobretot en la llengua de l'escola. També diu que és una **traducció esborrany**, feta amb l'ajuda d'un agent d'IA i encara sense revisar, i convida a enviar correccions. Quan s'hi afegeixin llengües africanes (la primera, el suahili), aniran abans que les europees al selector.
 
@@ -38,18 +38,18 @@ En passar per sobre de qualsevol territori es mostra el nom d'aquell moment, qui
 ## Estructura
 
 ```
-index.html         pàgina (adults)
-infants.html       versió per a infants i joves
-css/styles.css     estils (adults)
-css/infants.css    estils (infants i joves)
+index.html         versió per a escoles (la que s'obre per defecte)
+detallada.html     versió detallada
+css/styles.css     estils (versió detallada)
+css/infants.css    estils (versió per a escoles)
 js/history.js      CONTINGUT HISTÒRIC (editable a mà): sobirania per país i any,
                    noms del 1880 i 1914, esdeveniments, canvis de nom, ciutats, històries
 js/languages.js    contingut de les capes de llengües (oficials, 1914, històries, notes)
-js/app.js          lògica del mapa (adults)
-js/infants.js      mapa, joc i repte de la versió per a infants i joves
+js/app.js          lògica del mapa (versió detallada)
+js/infants.js      mapa, joc i repte de la versió per a escoles
 js/infants-content.js  contingut de la versió infantil (històries, fites, targetes, preguntes)
 js/i18n.js         traducció de la interfície: tx("text català") → text de la llengua de la pàgina
-en/                versió anglesa: index.html, kids.html i js/ (history, languages, kids, ui)
+en/                versió anglesa: index.html (escoles), detailed.html (detallada) i js/ (history, languages, kids, ui)
 data/geo.js        geometries projectades (generat, no editar)
 data/languages.js  llengües de Glottolog (generat per build/build_languages.py)
 build/build.py     genera data/geo.js a partir de build/raw/
