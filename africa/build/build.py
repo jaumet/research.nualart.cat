@@ -241,6 +241,8 @@ def title(s):
 # Murdock (1959) fa servir alguns exònims colonials pejoratius: es substitueixen
 GROUP_FIX = {"Galla": "Oromo", "Hottentot": "Khoikhoi", "Bushmen": "San", "Dorobo": "Okiek (Dorobo)",
              "Arabs, Bedoin": "Àrabs beduïns"}
+# i alguns noms de poble: «Beraber» és el nom àrab (plural de «berber»); ells s'anomenen Imazighen
+NAME_FIX = {"Beraber": "Imazighen (Beraber)"}
 SOMALI = {"Mijertein", "Ogaden", "Hawiya", "Ishaak", "Esa", "Geri", "Shebelle", "Gosha"}
 
 peoples = []
@@ -255,6 +257,7 @@ for f in load("Murdock_EA_2011_vkZ.geojson")["features"]:
     name = "-".join(title(w) for w in p["NAME"].split("-"))
     if name.startswith("Uninhabited"):
         continue
+    name = NAME_FIX.get(name, name)
     group = GROUP_FIX.get(p.get("CultureGrp") or "", p.get("CultureGrp") or "")
     if name in SOMALI:
         group = "Somali"
