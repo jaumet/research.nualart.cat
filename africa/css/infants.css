@@ -52,7 +52,7 @@ a { color: var(--terra); }
 /* ---------------------------------------------------------------- Història amb mapa */
 .story { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px; }
 .map-col { order: 2; position: sticky; top: 14px; height: calc(100vh - 28px); align-self: start; }
-.chapters { order: 1; padding: 30vh 0 20vh; }
+.chapters { order: 1; padding: 30vh 0 calc(100vh - 170px); } /* espai final: el mapa no marxa fins que l'últim capítol ha pujat del tot */
 .map-box { position: relative; height: 100%; border-radius: var(--radius); overflow: hidden; background: var(--sky); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); }
 #map { width: 100%; height: 100%; display: block; }
 #map.drawing { cursor: crosshair; touch-action: none; }
@@ -82,7 +82,7 @@ a { color: var(--terra); }
 
 .chap { background: var(--paper); border-radius: var(--radius); padding: 26px 28px; margin-bottom: 55vh; border: 3px solid var(--line); transition: opacity .4s, border-color .4s, transform .4s; opacity: .55; }
 .chap.active { opacity: 1; border-color: var(--ink); box-shadow: 6px 6px 0 var(--ink); }
-.chap:last-child { margin-bottom: 10vh; }
+.chap:last-child { margin-bottom: 0; }
 .chap-n { margin: 0 0 4px; font-weight: 800; color: var(--terra); font-size: .95rem; }
 .chap h2 { font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.15; margin: 0 0 .5em; }
 .chap p { margin: .6em 0; }
