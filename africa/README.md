@@ -81,7 +81,7 @@ Correccions fetes a les dades d'origen (historical-basemaps):
 - Projecció Lambert azimutal d'àrees iguals centrada a l'Àfrica: les àrees i percentatges són comparables.
 - La cronologia de sobirania s'ha fet a mà sobre les fronteres actuals perquè el conjunt de dades *historical-basemaps* conté errors greus entre 1900 i 1960 (el 1900 hi és pràcticament igual que el 1880). Les geometries de 1880 i 1914 sí que se'n fan servir, com a mapes estàtics.
 - Les dates de conquesta són aproximades: la reclamació formal i el domini efectiu sovint van separats per anys o dècades.
-- S'han substituït els exònims pejoratius del mapa de Murdock («Galla», «Hottentot», «Bushmen») per Oromo, Khoikhoi i San, i el nom àrab «Beraber» per Imazighen (`NAME_FIX` a `build/build.py`).
+- S'han substituït els exònims pejoratius del mapa de Murdock («Galla», «Hottentot», «Bushmen») per Oromo, Khoikhoi i San, i «Berbers» i el nom àrab «Beraber» per Imazighen (`GROUP_FIX` i `NAME_FIX` a `build/build.py`).
 
 ## Fonts i llicències
 

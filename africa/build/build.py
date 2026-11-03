@@ -240,7 +240,9 @@ def title(s):
 
 # Murdock (1959) fa servir alguns exònims colonials pejoratius: es substitueixen
 GROUP_FIX = {"Galla": "Oromo", "Hottentot": "Khoikhoi", "Bushmen": "San", "Dorobo": "Okiek (Dorobo)",
-             "Arabs, Bedoin": "Àrabs beduïns"}
+             "Arabs, Bedoin": "Àrabs beduïns",
+             # «berber» ve del grec «bàrbar»: els amazics s'anomenen Imazighen
+             "Berbers, Moroccan": "Imazighen, Moroccan", "Berbers, Algerian": "Imazighen, Algerian", "Berbers, Oasis": "Imazighen, Oasis"}
 # i alguns noms de poble: «Beraber» és el nom àrab (plural de «berber»); ells s'anomenen Imazighen
 NAME_FIX = {"Beraber": "Imazighen (Beraber)"}
 SOMALI = {"Mijertein", "Ogaden", "Hawiya", "Ishaak", "Esa", "Geri", "Shebelle", "Gosha"}
