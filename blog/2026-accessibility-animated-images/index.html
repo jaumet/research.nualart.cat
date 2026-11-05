@@ -84,16 +84,16 @@
         <figcaption class="figure-caption">Example documented by <a href="https://slack.com/help/articles/202931348-Use-emoji-and-reactions" target="_blank" rel="noopener">Slack Help Center: Use emoji and reactions</a>. Accessed 5 November 2026.</figcaption>
       </figure>
 
-      <figure class="source-figure controlled-gif" data-controlled-gif data-gif-src="../assets/slack-gif-picker.gif" data-poster-src="../assets/slack-gif-picker-poster.webp">
+      <figure class="source-figure controlled-gif" data-controlled-gif data-gif-src="../assets/vscode-code-runner.gif" data-poster-src="../assets/vscode-code-runner-poster.webp">
         <div class="gif-stage">
-          <img src="../assets/slack-gif-picker-poster.webp" alt="Slack demonstration of searching for and adding a GIF to a message" data-gif-image>
+          <img src="../assets/vscode-code-runner-poster.webp" alt="Code Runner demonstration in a Visual Studio Code interface with files, code and output" data-gif-image>
         </div>
-        <div class="gif-controls" aria-label="GIF picker animation controls">
+        <div class="gif-controls" aria-label="Code Runner animation controls">
           <button type="button" data-gif-play>Play animation</button>
           <button type="button" data-gif-stop disabled>Stop</button>
         </div>
         <p class="gif-motion-note">The animation starts paused. Stop restores the first frame.</p>
-        <figcaption class="figure-caption">Animated example from <a href="https://slack.com/help/articles/26860009071251-Add-GIFs-to-a-message-in-Slack" target="_blank" rel="noopener">Slack Help Center: Add GIFs to a message</a>. Accessed 5 November 2026.</figcaption>
+        <figcaption class="figure-caption">Official demonstration of the <a href="https://github.com/formulahendry/vscode-code-runner" target="_blank" rel="noopener">Code Runner extension for Visual Studio Code</a>. Within seconds, the file, language, selected code and output all change; there is no timeline or frame-by-frame control. Accessed 5 November 2026.</figcaption>
       </figure>
 
       <ul class="example-list" aria-label="Companies and animated GIFs">
@@ -108,32 +108,45 @@
 
       <h2>An alternative I can control</h2>
 
-      <p>The following demonstration explains a fictional process: enabling a reduce-motion option. It does not start on its own. It can be played and paused, but it can also be moved backwards and forwards one frame at a time. Every state is independent and retains a textual explanation.</p>
+      <p>The following demonstration recreates a process with clicks inside an interface: installing an extension and running code. It does not start on its own. It can be played and paused, but it can also be moved backwards and forwards one frame at a time. Every state is independent, marks the exact click target and retains a textual explanation.</p>
 
       <section class="frame-demo" data-frame-demo data-status-template="Frame {current} of {total}" aria-labelledby="demo-title-en">
-        <h3 id="demo-title-en">Example: enable “Reduce motion”</h3>
+        <h3 id="demo-title-en">Example: install an extension and run code</h3>
         <div class="demo-stage" aria-live="polite">
           <div class="demo-frame is-active" data-demo-frame>
-            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-            <p class="demo-frame-title">1. Open Settings</p>
-            <div class="mock-menu is-highlighted">⚙ Settings</div>
+            <p class="demo-frame-title">1. Click Extensions in the activity bar</p>
+            <div class="vscode-mock" aria-hidden="true">
+              <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="vscode-window-title">Visual Studio Code</span></div>
+              <div class="vscode-shell"><div class="vscode-activity"><span>▤</span><span>⌕</span><span class="click-target">▦<span class="click-cursor">➤</span></span></div><div class="vscode-sidebar"><strong>EXPLORER</strong><span>project</span><span>index.js</span></div><div class="vscode-editor"><strong>index.js</strong><code>console.log('Hello');</code></div></div>
+            </div>
           </div>
           <div class="demo-frame" data-demo-frame aria-hidden="true">
-            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-            <p class="demo-frame-title">2. Choose Accessibility</p>
-            <div class="mock-menu">General</div>
-            <div class="mock-option is-highlighted">Accessibility</div>
+            <p class="demo-frame-title">2. Click the search box and type “Code Runner”</p>
+            <div class="vscode-mock" aria-hidden="true">
+              <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="vscode-window-title">Visual Studio Code</span></div>
+              <div class="vscode-shell"><div class="vscode-activity"><span>▤</span><span>⌕</span><span class="is-selected">▦</span></div><div class="vscode-sidebar"><strong>EXTENSIONS</strong><span class="vscode-search click-target">Code Runner<span class="click-cursor">➤</span></span><span>Search extensions...</span></div><div class="vscode-editor"><strong>Extensions</strong><span>Search for an extension in the Marketplace</span></div></div>
+            </div>
           </div>
           <div class="demo-frame" data-demo-frame aria-hidden="true">
-            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-            <p class="demo-frame-title">3. Enable the option</p>
-            <div class="mock-menu">Motion</div>
-            <div class="mock-option is-highlighted">Reduce motion: On</div>
+            <p class="demo-frame-title">3. Click the “Code Runner” result</p>
+            <div class="vscode-mock" aria-hidden="true">
+              <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="vscode-window-title">Visual Studio Code</span></div>
+              <div class="vscode-shell"><div class="vscode-activity"><span>▤</span><span>⌕</span><span class="is-selected">▦</span></div><div class="vscode-sidebar"><strong>EXTENSIONS</strong><span class="vscode-search">Code Runner</span><span class="vscode-result click-target"><b>▶ Code Runner</b><small>Run code snippets</small><span class="click-cursor">➤</span></span></div><div class="vscode-editor"><strong>Extensions</strong><span>Select a result</span></div></div>
+            </div>
           </div>
           <div class="demo-frame" data-demo-frame aria-hidden="true">
-            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-            <p class="demo-frame-title">4. Preference saved</p>
-            <div class="mock-result">✓ Non-essential animations have been reduced.</div>
+            <p class="demo-frame-title">4. Click the “Install” button</p>
+            <div class="vscode-mock" aria-hidden="true">
+              <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="vscode-window-title">Visual Studio Code</span></div>
+              <div class="vscode-shell"><div class="vscode-activity"><span>▤</span><span>⌕</span><span class="is-selected">▦</span></div><div class="vscode-sidebar"><strong>EXTENSIONS</strong><span class="vscode-search">Code Runner</span><span class="vscode-result"><b>▶ Code Runner</b><small>Run code snippets</small></span></div><div class="vscode-editor"><strong>Code Runner</strong><span>Run code snippets.</span><span class="vscode-button click-target">Install<span class="click-cursor">➤</span></span></div></div>
+            </div>
+          </div>
+          <div class="demo-frame" data-demo-frame aria-hidden="true">
+            <p class="demo-frame-title">5. Open a file and click “Run Code”</p>
+            <div class="vscode-mock" aria-hidden="true">
+              <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="vscode-window-title">Visual Studio Code</span></div>
+              <div class="vscode-shell"><div class="vscode-activity"><span>▤</span><span>⌕</span><span>▦</span></div><div class="vscode-sidebar"><strong>EXPLORER</strong><span>project</span><span class="is-selected">index.js</span></div><div class="vscode-editor"><div class="vscode-editor-head"><strong>index.js</strong><span class="vscode-run click-target">▷ Run Code<span class="click-cursor">➤</span></span></div><code>console.log('Hello');</code><span class="vscode-output">OUTPUT › Hello</span></div></div>
+            </div>
           </div>
         </div>
         <div class="demo-controls" aria-label="Demonstration controls">
@@ -141,7 +154,7 @@
           <button type="button" data-action="next">Next →</button>
           <button type="button" data-action="play">Play</button>
           <button type="button" data-action="pause" disabled>Pause</button>
-          <span class="demo-status" data-demo-status aria-live="polite">Frame 1 of 4</span>
+          <span class="demo-status" data-demo-status aria-live="polite">Frame 1 of 5</span>
         </div>
       </section>
 

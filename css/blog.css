@@ -334,7 +334,7 @@ body.blog-page {
 
 .demo-stage {
   position: relative;
-  min-height: 300px;
+  min-height: 390px;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -345,8 +345,8 @@ body.blog-page {
 
 .demo-frame {
   display: none;
-  width: min(88%, 520px);
-  padding: 24px;
+  width: min(92%, 680px);
+  padding: clamp(12px, 3vw, 24px);
   border: 1px solid #bbb;
   border-radius: 8px;
   background: white;
@@ -377,6 +377,151 @@ body.blog-page {
   background: #bbb;
 }
 
+.vscode-window-title {
+  margin-left: auto;
+  color: #c8c8c8;
+  font-size: 12px;
+}
+
+.vscode-mock {
+  overflow: hidden;
+  border: 1px solid #151515;
+  border-radius: 4px;
+  color: #ddd;
+  background: #1e1e1e;
+  font-size: 13px;
+}
+
+.vscode-mock .mock-toolbar {
+  align-items: center;
+  margin: 0;
+  padding: 8px 10px;
+  background: #323233;
+}
+
+.vscode-mock .mock-dot {
+  width: 9px;
+  height: 9px;
+  background: #777;
+}
+
+.vscode-shell {
+  display: grid;
+  grid-template-columns: 42px minmax(145px, 34%) 1fr;
+  min-height: 230px;
+}
+
+.vscode-activity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 16px;
+  color: #aaa;
+  background: #2d2d2d;
+  font-size: 23px;
+}
+
+.vscode-activity span,
+.vscode-sidebar span,
+.vscode-editor span,
+.vscode-editor code {
+  position: relative;
+  display: block;
+}
+
+.vscode-sidebar,
+.vscode-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+}
+
+.vscode-sidebar {
+  color: #c8c8c8;
+  background: #252526;
+}
+
+.vscode-sidebar strong {
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+
+.vscode-editor code {
+  padding: 14px;
+  color: #ce9178;
+  background: #171717;
+  white-space: nowrap;
+}
+
+.vscode-search {
+  padding: 7px;
+  border: 1px solid #8b8b8b;
+  color: white;
+  background: #3c3c3c;
+}
+
+.vscode-result {
+  display: flex !important;
+  flex-direction: column;
+  gap: 4px;
+  padding: 9px;
+  background: #303031;
+}
+
+.vscode-result small {
+  color: #aaa;
+}
+
+.vscode-button,
+.vscode-run {
+  position: relative;
+  align-self: flex-start;
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 0;
+  border-radius: 2px;
+  color: white;
+  background: #0e639c;
+  font: 600 13px/1 Arial, Helvetica, sans-serif;
+}
+
+.vscode-editor-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.vscode-output {
+  margin-top: auto;
+  padding: 10px;
+  border-top: 1px solid #555;
+  color: #9cdcfe;
+}
+
+.click-target {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+.click-cursor {
+  position: absolute !important;
+  right: -10px;
+  bottom: -16px;
+  z-index: 2;
+  color: #fff;
+  filter: drop-shadow(0 1px 2px #000);
+  font-size: 25px;
+  transform: rotate(-25deg);
+}
+
+.is-selected {
+  color: white;
+  background: #094771;
+}
+
 .mock-menu,
 .mock-option,
 .mock-result {
@@ -396,6 +541,37 @@ body.blog-page {
 .is-highlighted {
   border-color: var(--accent);
   background: #f8e5e1;
+}
+
+@media (max-width: 560px) {
+  .demo-stage {
+    min-height: 420px;
+  }
+
+  .vscode-shell {
+    grid-template-columns: 38px minmax(105px, 40%) 1fr;
+    min-height: 250px;
+  }
+
+  .vscode-sidebar,
+  .vscode-editor {
+    gap: 8px;
+    padding: 10px 8px;
+  }
+
+  .vscode-mock {
+    font-size: 11px;
+  }
+
+  .vscode-editor code {
+    overflow: hidden;
+    padding: 8px 4px;
+    font-size: 10px;
+  }
+
+  .vscode-window-title {
+    display: none;
+  }
 }
 
 .demo-controls {

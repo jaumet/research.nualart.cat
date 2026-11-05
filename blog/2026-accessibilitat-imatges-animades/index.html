@@ -84,16 +84,16 @@
         <figcaption class="figure-caption">Exemple documentat a <a href="https://slack.com/help/articles/202931348-Use-emoji-and-reactions" target="_blank" rel="noopener">Slack Help Center: Use emoji and reactions</a>. Consulta: 5 de novembre de 2026.</figcaption>
       </figure>
 
-      <figure class="source-figure controlled-gif" data-controlled-gif data-gif-src="../assets/slack-gif-picker.gif" data-poster-src="../assets/slack-gif-picker-poster.webp">
+      <figure class="source-figure controlled-gif" data-controlled-gif data-gif-src="../assets/vscode-code-runner.gif" data-poster-src="../assets/vscode-code-runner-poster.webp">
         <div class="gif-stage">
-          <img src="../assets/slack-gif-picker-poster.webp" alt="Demostració de Slack per cercar i afegir un GIF a un missatge" data-gif-image>
+          <img src="../assets/vscode-code-runner-poster.webp" alt="Demostració de l’extensió Code Runner en una interfície de Visual Studio Code amb fitxers, codi i resultats" data-gif-image>
         </div>
-        <div class="gif-controls" aria-label="Controls de l’animació del selector de GIF">
+        <div class="gif-controls" aria-label="Controls de l’animació de Code Runner">
           <button type="button" data-gif-play>Reprodueix l’animació</button>
           <button type="button" data-gif-stop disabled>Atura</button>
         </div>
         <p class="gif-motion-note">L’animació comença aturada. El botó Atura recupera el primer fotograma.</p>
-        <figcaption class="figure-caption">Exemple animat de <a href="https://slack.com/help/articles/26860009071251-Add-GIFs-to-a-message-in-Slack" target="_blank" rel="noopener">Slack Help Center: Add GIFs to a message</a>. Consulta: 5 de novembre de 2026.</figcaption>
+        <figcaption class="figure-caption">Demostració oficial de l’extensió <a href="https://github.com/formulahendry/vscode-code-runner" target="_blank" rel="noopener">Code Runner per a Visual Studio Code</a>. En pocs segons canvien el fitxer, el llenguatge, el codi seleccionat i la sortida; no hi ha cap línia de temps ni control fotograma a fotograma. Consulta: 5 de novembre de 2026.</figcaption>
       </figure>
 
       <ul class="example-list" aria-label="Empreses i GIF animats">
@@ -108,32 +108,45 @@
 
       <h2>Una alternativa que sí que puc controlar</h2>
 
-      <p>La demostració següent explica un procés inventat: activar una opció per reduir el moviment. No comença sola. Es pot reproduir i pausar, però també avançar i retrocedir fotograma a fotograma. Cada estat és independent i conserva una explicació textual.</p>
+      <p>La demostració següent recrea un procés amb clics dins d’una interfície: instal·lar una extensió i executar codi. No comença sola. Es pot reproduir i pausar, però també avançar i retrocedir fotograma a fotograma. Cada estat és independent, marca el punt exacte del clic i conserva una explicació textual.</p>
 
       <section class="frame-demo" data-frame-demo data-status-template="Fotograma {current} de {total}" aria-labelledby="demo-title-ca">
-        <h3 id="demo-title-ca">Exemple: activar “Redueix el moviment”</h3>
+        <h3 id="demo-title-ca">Exemple: instal·lar una extensió i executar codi</h3>
         <div class="demo-stage" aria-live="polite">
           <div class="demo-frame is-active" data-demo-frame>
-            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-            <p class="demo-frame-title">1. Obre Configuració</p>
-            <div class="mock-menu is-highlighted">⚙ Configuració</div>
+            <p class="demo-frame-title">1. Fes clic a Extensions a la barra lateral</p>
+            <div class="vscode-mock" aria-hidden="true">
+              <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="vscode-window-title">Visual Studio Code</span></div>
+              <div class="vscode-shell"><div class="vscode-activity"><span>▤</span><span>⌕</span><span class="click-target">▦<span class="click-cursor">➤</span></span></div><div class="vscode-sidebar"><strong>EXPLORADOR</strong><span>projecte</span><span>index.js</span></div><div class="vscode-editor"><strong>index.js</strong><code>console.log('Hola');</code></div></div>
+            </div>
           </div>
           <div class="demo-frame" data-demo-frame aria-hidden="true">
-            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-            <p class="demo-frame-title">2. Tria Accessibilitat</p>
-            <div class="mock-menu">General</div>
-            <div class="mock-option is-highlighted">Accessibilitat</div>
+            <p class="demo-frame-title">2. Fes clic al cercador i escriu “Code Runner”</p>
+            <div class="vscode-mock" aria-hidden="true">
+              <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="vscode-window-title">Visual Studio Code</span></div>
+              <div class="vscode-shell"><div class="vscode-activity"><span>▤</span><span>⌕</span><span class="is-selected">▦</span></div><div class="vscode-sidebar"><strong>EXTENSIONS</strong><span class="vscode-search click-target">Code Runner<span class="click-cursor">➤</span></span><span>Cerca extensions...</span></div><div class="vscode-editor"><strong>Extensions</strong><span>Cerca una extensió al Marketplace</span></div></div>
+            </div>
           </div>
           <div class="demo-frame" data-demo-frame aria-hidden="true">
-            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-            <p class="demo-frame-title">3. Activa l’opció</p>
-            <div class="mock-menu">Moviment</div>
-            <div class="mock-option is-highlighted">Redueix el moviment: Sí</div>
+            <p class="demo-frame-title">3. Fes clic al resultat “Code Runner”</p>
+            <div class="vscode-mock" aria-hidden="true">
+              <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="vscode-window-title">Visual Studio Code</span></div>
+              <div class="vscode-shell"><div class="vscode-activity"><span>▤</span><span>⌕</span><span class="is-selected">▦</span></div><div class="vscode-sidebar"><strong>EXTENSIONS</strong><span class="vscode-search">Code Runner</span><span class="vscode-result click-target"><b>▶ Code Runner</b><small>Run code snippets</small><span class="click-cursor">➤</span></span></div><div class="vscode-editor"><strong>Extensions</strong><span>Selecciona un resultat</span></div></div>
+            </div>
           </div>
           <div class="demo-frame" data-demo-frame aria-hidden="true">
-            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-            <p class="demo-frame-title">4. Preferència desada</p>
-            <div class="mock-result">✓ Les animacions no essencials s’han reduït.</div>
+            <p class="demo-frame-title">4. Fes clic al botó “Instal·la”</p>
+            <div class="vscode-mock" aria-hidden="true">
+              <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="vscode-window-title">Visual Studio Code</span></div>
+              <div class="vscode-shell"><div class="vscode-activity"><span>▤</span><span>⌕</span><span class="is-selected">▦</span></div><div class="vscode-sidebar"><strong>EXTENSIONS</strong><span class="vscode-search">Code Runner</span><span class="vscode-result"><b>▶ Code Runner</b><small>Run code snippets</small></span></div><div class="vscode-editor"><strong>Code Runner</strong><span>Executa fragments de codi.</span><span class="vscode-button click-target">Instal·la<span class="click-cursor">➤</span></span></div></div>
+            </div>
+          </div>
+          <div class="demo-frame" data-demo-frame aria-hidden="true">
+            <p class="demo-frame-title">5. Obre un fitxer i fes clic a “Executa el codi”</p>
+            <div class="vscode-mock" aria-hidden="true">
+              <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="vscode-window-title">Visual Studio Code</span></div>
+              <div class="vscode-shell"><div class="vscode-activity"><span>▤</span><span>⌕</span><span>▦</span></div><div class="vscode-sidebar"><strong>EXPLORADOR</strong><span>projecte</span><span class="is-selected">index.js</span></div><div class="vscode-editor"><div class="vscode-editor-head"><strong>index.js</strong><span class="vscode-run click-target">▷ Executa el codi<span class="click-cursor">➤</span></span></div><code>console.log('Hola');</code><span class="vscode-output">SORTIDA › Hola</span></div></div>
+            </div>
           </div>
         </div>
         <div class="demo-controls" aria-label="Controls de la demostració">
@@ -141,7 +154,7 @@
           <button type="button" data-action="next">Següent →</button>
           <button type="button" data-action="play">Reprodueix</button>
           <button type="button" data-action="pause" disabled>Pausa</button>
-          <span class="demo-status" data-demo-status aria-live="polite">Fotograma 1 de 4</span>
+          <span class="demo-status" data-demo-status aria-live="polite">Fotograma 1 de 5</span>
         </div>
       </section>
 
