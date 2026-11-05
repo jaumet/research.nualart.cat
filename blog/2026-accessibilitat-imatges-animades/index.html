@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibilitat: no a les imatges animades que no es poden controlar — Jaume Nualart</title>
+  <meta name="description" content="Els GIF animats sense pausa ni control fotograma a fotograma converteixen molts tutorials de programari en una barrera d’accessibilitat.">
+  <link rel="canonical" href="https://research.nualart.cat/blog/2026-accessibilitat-imatges-animades/">
+  <link rel="alternate" hreflang="ca" href="https://research.nualart.cat/blog/2026-accessibilitat-imatges-animades/">
+  <link rel="alternate" hreflang="en" href="https://research.nualart.cat/blog/2026-accessibility-animated-images/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Accessibilitat: no a les imatges animades que no es poden controlar">
+  <meta property="og:description" content="Quan un tutorial visual imposa la seva velocitat, deixa de ser una ajuda i es converteix en una barrera.">
+  <meta property="article:published_time" content="2026-11-05">
+  <link rel="stylesheet" href="../../css/blog.css">
+  <script src="../../js/frame-demo.js" defer></script>
+</head>
+<body class="blog-page">
+  <header class="blog-shell">
+    <nav class="blog-nav" aria-label="Navegació principal">
+      <a class="blog-brand" href="/">Jaume Nualart Vilaplana</a>
+      <div class="blog-nav-links">
+        <a href="/">Research</a>
+        <a href="/publications.html">Publications</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://nualart.cat">nualart.cat</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <header class="article-header">
+      <p class="article-kicker">Accessibilitat · Disseny · Tutorials</p>
+      <h1 class="article-title">Accessibilitat: no a les imatges animades que no es poden controlar</h1>
+      <p class="article-deck">Quan un tutorial visual imposa la seva velocitat, deixa de ser una ajuda i es converteix en una barrera per aprendre.</p>
+      <p class="article-meta">
+        Jaume Nualart Vilaplana · <time datetime="2026-11-05">5 de novembre de 2026</time>
+        <span class="language-switch" aria-label="Canvia d’idioma">
+          <a href="/blog/2026-accessibilitat-imatges-animades/" lang="ca" aria-current="page">CA</a>
+          <a href="/blog/2026-accessibility-animated-images/" lang="en" hreflang="en">EN</a>
+        </span>
+      </p>
+    </header>
+
+    <article class="article-body">
+      <p>Hi ha una pràctica molt estesa en la documentació de programari que em resulta especialment irritant: utilitzar GIF animats per explicar com funciona alguna cosa.</p>
+
+      <p>Els trobem pertot arreu. Tutorials de programació, manuals d’aplicacions, demostracions de funcionalitats, guies d’instal·lació. Una petita animació ens mostra com obrir un menú, seleccionar una opció, arrossegar un element i obtenir un resultat.</p>
+
+      <p>Aparentment és una bona idea. En pocs segons podem veure un procés que requeriria diversos paràgrafs per explicar-lo. Però moltes d’aquestes animacions no es poden aturar, ni fer avançar lentament, ni examinar fotograma a fotograma.</p>
+
+      <p>Per a mi, que tinc baixa visió, això representa sovint una barrera insuperable. I no soc l’únic.</p>
+
+      <blockquote>El problema no és l’animació. El problema és que algú altre ha decidit a quina velocitat he d’entendre les coses.</blockquote>
+
+      <h2>Una explicació que desapareix</h2>
+
+      <p>Per seguir un tutorial necessito poder acostar-me a la pantalla, ampliar-ne una zona, identificar on és el cursor i entendre quin element ha canviat. Mentrestant, el GIF continua. Quan he localitzat el menú, ja mostra el resultat final. Quan torna a començar, he de reconstruir mentalment el punt exacte on m’he perdut.</p>
+
+      <p>Una animació contínua exigeix veure, interpretar i recordar al ritme que ha triat l’autor. Això perjudica persones amb baixa visió, dificultats cognitives o d’atenció, problemes de processament visual, sensibilitat al moviment i limitacions motrius. També perjudica qualsevol persona cansada, distreta o que està aprenent una interfície nova.</p>
+
+      <p>El criteri 2.2.2 de les <a href="https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide" target="_blank" rel="noopener">WCAG 2.2, “Pause, Stop, Hide”</a>, demana un mecanisme per pausar, aturar o ocultar el contingut en moviment que comença automàticament i dura més de cinc segons. És un mínim. En un tutorial, pausar pot no ser suficient: sovint també cal retrocedir, avançar i inspeccionar cada pas.</p>
+
+      <h2>No és un cas excepcional</h2>
+
+      <p>Les mateixes empreses que construeixen eines digitals utilitzen o admeten GIF animats en els seus productes i materials d’ajuda. Això no vol dir que totes les seves implementacions siguin igualment problemàtiques, però mostra fins a quin punt el format s’ha normalitzat.</p>
+
+      <figure class="source-figure">
+        <div class="source-image">
+          <img src="../assets/figma-animated-gif-interface.png" alt="Interfície de Figma amb una imatge GIF seleccionada i les seves propietats visibles">
+        </div>
+        <figcaption class="figure-caption">Exemple documentat a <a href="https://help.figma.com/hc/en-us/articles/360041486873-Use-animated-GIFs-in-prototypes" target="_blank" rel="noopener">Figma Learn — Help Center</a>. Consulta: 5 de novembre de 2026.</figcaption>
+      </figure>
+
+      <figure class="source-figure controlled-gif" data-controlled-gif data-gif-src="../assets/slack-emoji-reaction.gif" data-poster-src="../assets/slack-emoji-reaction-poster.webp">
+        <div class="gif-stage">
+          <img src="../assets/slack-emoji-reaction-poster.webp" alt="Demostració de Slack per afegir una reacció amb emoji" data-gif-image>
+        </div>
+        <div class="gif-controls" aria-label="Controls de l’animació de Slack">
+          <button type="button" data-gif-play>Reprodueix l’animació</button>
+          <button type="button" data-gif-stop disabled>Atura</button>
+        </div>
+        <p class="gif-motion-note">L’animació comença aturada. El botó Atura recupera el primer fotograma.</p>
+        <figcaption class="figure-caption">Exemple documentat a <a href="https://slack.com/help/articles/202931348-Use-emoji-and-reactions" target="_blank" rel="noopener">Slack Help Center: Use emoji and reactions</a>. Consulta: 5 de novembre de 2026.</figcaption>
+      </figure>
+
+      <figure class="source-figure controlled-gif" data-controlled-gif data-gif-src="../assets/slack-gif-picker.gif" data-poster-src="../assets/slack-gif-picker-poster.webp">
+        <div class="gif-stage">
+          <img src="../assets/slack-gif-picker-poster.webp" alt="Demostració de Slack per cercar i afegir un GIF a un missatge" data-gif-image>
+        </div>
+        <div class="gif-controls" aria-label="Controls de l’animació del selector de GIF">
+          <button type="button" data-gif-play>Reprodueix l’animació</button>
+          <button type="button" data-gif-stop disabled>Atura</button>
+        </div>
+        <p class="gif-motion-note">L’animació comença aturada. El botó Atura recupera el primer fotograma.</p>
+        <figcaption class="figure-caption">Exemple animat de <a href="https://slack.com/help/articles/26860009071251-Add-GIFs-to-a-message-in-Slack" target="_blank" rel="noopener">Slack Help Center: Add GIFs to a message</a>. Consulta: 5 de novembre de 2026.</figcaption>
+      </figure>
+
+      <ul class="example-list" aria-label="Empreses i GIF animats">
+        <li><strong>Figma</strong> permet incorporar GIF animats als prototips i reproduir-los en la vista de presentació.</li>
+        <li><strong>Slack</strong> utilitza GIF animats en pàgines d’ajuda i també els integra en els missatges.</li>
+        <li><strong>Microsoft</strong> publica mostres de codi per reproduir GIF i controlar-ne la reproducció.</li>
+        <li><strong>Notion</strong> admet GIF com a format d’imatge dins de les pàgines.</li>
+        <li><strong>GitHub</strong> pot mostrar GIF, però ofereix una preferència d’accessibilitat per desactivar-ne la reproducció automàtica i la seva guia editorial diu explícitament que no se n’utilitzin a la documentació.</li>
+      </ul>
+
+      <p>El cas de GitHub és especialment interessant perquè mostra dues decisions correctes: donar a la persona usuària control global sobre el moviment i adoptar una norma editorial que evita els GIF animats a la documentació. Es pot consultar tant a <a href="https://docs.github.com/en/account-and-profile/how-tos/account-settings/managing-accessibility-settings" target="_blank" rel="noopener">Managing accessibility settings</a> com a la seva <a href="https://docs.github.com/en/contributing/style-guide-and-content-model/style-guide#images" target="_blank" rel="noopener">guia d’estil</a>.</p>
+
+      <h2>Una alternativa que sí que puc controlar</h2>
+
+      <p>La demostració següent explica un procés inventat: activar una opció per reduir el moviment. No comença sola. Es pot reproduir i pausar, però també avançar i retrocedir fotograma a fotograma. Cada estat és independent i conserva una explicació textual.</p>
+
+      <section class="frame-demo" data-frame-demo data-status-template="Fotograma {current} de {total}" aria-labelledby="demo-title-ca">
+        <h3 id="demo-title-ca">Exemple: activar “Redueix el moviment”</h3>
+        <div class="demo-stage" aria-live="polite">
+          <div class="demo-frame is-active" data-demo-frame>
+            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+            <p class="demo-frame-title">1. Obre Configuració</p>
+            <div class="mock-menu is-highlighted">⚙ Configuració</div>
+          </div>
+          <div class="demo-frame" data-demo-frame aria-hidden="true">
+            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+            <p class="demo-frame-title">2. Tria Accessibilitat</p>
+            <div class="mock-menu">General</div>
+            <div class="mock-option is-highlighted">Accessibilitat</div>
+          </div>
+          <div class="demo-frame" data-demo-frame aria-hidden="true">
+            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+            <p class="demo-frame-title">3. Activa l’opció</p>
+            <div class="mock-menu">Moviment</div>
+            <div class="mock-option is-highlighted">Redueix el moviment: Sí</div>
+          </div>
+          <div class="demo-frame" data-demo-frame aria-hidden="true">
+            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+            <p class="demo-frame-title">4. Preferència desada</p>
+            <div class="mock-result">✓ Les animacions no essencials s’han reduït.</div>
+          </div>
+        </div>
+        <div class="demo-controls" aria-label="Controls de la demostració">
+          <button type="button" data-action="previous">← Anterior</button>
+          <button type="button" data-action="next">Següent →</button>
+          <button type="button" data-action="play">Reprodueix</button>
+          <button type="button" data-action="pause" disabled>Pausa</button>
+          <span class="demo-status" data-demo-status aria-live="polite">Fotograma 1 de 4</span>
+        </div>
+      </section>
+
+      <h2>Com hauria de ser un tutorial visual</h2>
+
+      <p>No cal eliminar tota animació. Cal deixar de tractar-la com una seqüència tancada que obliga tothom a mirar de la mateixa manera. Un tutorial accessible hauria de:</p>
+
+      <ol>
+        <li>no començar automàticament;</li>
+        <li>incloure reproducció, pausa, anterior i següent;</li>
+        <li>permetre examinar cada pas sense límit de temps;</li>
+        <li>oferir instruccions textuals equivalents;</li>
+        <li>identificar visualment què canvia en cada pas;</li>
+        <li>respectar la preferència del sistema <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40media/prefers-reduced-motion" target="_blank" rel="noopener"><code>prefers-reduced-motion</code></a>;</li>
+        <li>utilitzar vídeo amb controls o una sèrie d’imatges estàtiques quan siguin alternatives més clares.</li>
+      </ol>
+
+      <div class="callout">
+        <p><strong>Una prova molt senzilla:</strong> si una persona no pot aturar la demostració, ampliar-ne una part i continuar des del mateix punt, el tutorial no està sota el seu control.</p>
+      </div>
+
+      <h2>El temps també forma part de l’accessibilitat</h2>
+
+      <p>Sovint parlem d’accessibilitat en termes de contrast, mida de lletra, text alternatiu o navegació amb teclat. Però també hi ha una accessibilitat temporal: tenir prou temps per percebre, comprendre i actuar.</p>
+
+      <p>Un GIF animat sense controls pren aquest temps i el converteix en una imposició. La solució no és complexa. És donar el control a qui mira.</p>
+
+      <p>I, sobretot, recordar una cosa elemental: un tutorial només és útil si la persona que el necessita el pot seguir.</p>
+    </article>
+  </main>
+
+  <footer class="blog-footer">
+    <p><a href="/blog/">← Totes les entrades</a> · © 2026 Jaume Nualart Vilaplana</p>
+  </footer>
+</body>
+</html>

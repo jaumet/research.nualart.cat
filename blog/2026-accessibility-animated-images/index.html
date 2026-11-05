@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility: no to animated images we cannot control — Jaume Nualart</title>
+  <meta name="description" content="Animated GIFs without pause or frame-by-frame controls turn many software tutorials into an accessibility barrier.">
+  <link rel="canonical" href="https://research.nualart.cat/blog/2026-accessibility-animated-images/">
+  <link rel="alternate" hreflang="ca" href="https://research.nualart.cat/blog/2026-accessibilitat-imatges-animades/">
+  <link rel="alternate" hreflang="en" href="https://research.nualart.cat/blog/2026-accessibility-animated-images/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Accessibility: no to animated images we cannot control">
+  <meta property="og:description" content="When a visual tutorial imposes its own speed, it stops being helpful and becomes a barrier.">
+  <meta property="article:published_time" content="2026-11-05">
+  <link rel="stylesheet" href="../../css/blog.css">
+  <script src="../../js/frame-demo.js" defer></script>
+</head>
+<body class="blog-page">
+  <header class="blog-shell">
+    <nav class="blog-nav" aria-label="Main navigation">
+      <a class="blog-brand" href="/">Jaume Nualart Vilaplana</a>
+      <div class="blog-nav-links">
+        <a href="/">Research</a>
+        <a href="/publications.html">Publications</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://nualart.cat">nualart.cat</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <header class="article-header">
+      <p class="article-kicker">Accessibility · Design · Tutorials</p>
+      <h1 class="article-title">Accessibility: no to animated images we cannot control</h1>
+      <p class="article-deck">When a visual tutorial imposes its own speed, it stops being helpful and becomes a barrier to learning.</p>
+      <p class="article-meta">
+        Jaume Nualart Vilaplana · <time datetime="2026-11-05">5 November 2026</time>
+        <span class="language-switch" aria-label="Change language">
+          <a href="/blog/2026-accessibilitat-imatges-animades/" lang="ca" hreflang="ca">CA</a>
+          <a href="/blog/2026-accessibility-animated-images/" lang="en" aria-current="page">EN</a>
+        </span>
+      </p>
+    </header>
+
+    <article class="article-body">
+      <p>There is a widespread practice in software documentation that I find particularly frustrating: using animated GIFs to explain how something works.</p>
+
+      <p>They are everywhere. Programming tutorials, application manuals, feature demonstrations and installation guides. A short animation shows us how to open a menu, select an option, drag an item and obtain a result.</p>
+
+      <p>It seems like a good idea. In a few seconds we can see a process that would take several paragraphs to explain. But many of these animations cannot be stopped, slowed down or inspected frame by frame.</p>
+
+      <p>For me, as a person with low vision, this is often an insurmountable barrier. And I am not the only one.</p>
+
+      <blockquote>The problem is not animation. The problem is that somebody else has decided how quickly I must understand it.</blockquote>
+
+      <h2>An explanation that disappears</h2>
+
+      <p>To follow a tutorial, I need to move closer to the screen, enlarge one area, find the cursor and understand which element has changed. Meanwhile, the GIF keeps moving. By the time I have found the menu, it is already showing the final result. When it loops, I have to reconstruct the exact point where I got lost.</p>
+
+      <p>A continuous animation requires people to see, interpret and remember at the pace chosen by its author. This affects people with low vision, cognitive or attention disabilities, visual-processing difficulties, motion sensitivity and motor limitations. It also affects anyone who is tired, distracted or learning an unfamiliar interface.</p>
+
+      <p><a href="https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide" target="_blank" rel="noopener">WCAG 2.2 Success Criterion 2.2.2, “Pause, Stop, Hide”</a>, requires a way to pause, stop or hide moving content that starts automatically and lasts longer than five seconds. That is a minimum. In a tutorial, pausing may not be enough: people often need to move backwards, move forwards and inspect each step.</p>
+
+      <h2>This is not an exceptional case</h2>
+
+      <p>The same companies that build digital tools use or support animated GIFs in their products and help materials. This does not mean every implementation is equally problematic, but it shows how normalised the format has become.</p>
+
+      <figure class="source-figure">
+        <div class="source-image">
+          <img src="../assets/figma-animated-gif-interface.png" alt="Figma interface with a GIF image selected and its properties visible">
+        </div>
+        <figcaption class="figure-caption">Example documented by <a href="https://help.figma.com/hc/en-us/articles/360041486873-Use-animated-GIFs-in-prototypes" target="_blank" rel="noopener">Figma Learn — Help Center</a>. Accessed 5 November 2026.</figcaption>
+      </figure>
+
+      <figure class="source-figure controlled-gif" data-controlled-gif data-gif-src="../assets/slack-emoji-reaction.gif" data-poster-src="../assets/slack-emoji-reaction-poster.webp">
+        <div class="gif-stage">
+          <img src="../assets/slack-emoji-reaction-poster.webp" alt="Slack demonstration of adding an emoji reaction" data-gif-image>
+        </div>
+        <div class="gif-controls" aria-label="Slack animation controls">
+          <button type="button" data-gif-play>Play animation</button>
+          <button type="button" data-gif-stop disabled>Stop</button>
+        </div>
+        <p class="gif-motion-note">The animation starts paused. Stop restores the first frame.</p>
+        <figcaption class="figure-caption">Example documented by <a href="https://slack.com/help/articles/202931348-Use-emoji-and-reactions" target="_blank" rel="noopener">Slack Help Center: Use emoji and reactions</a>. Accessed 5 November 2026.</figcaption>
+      </figure>
+
+      <figure class="source-figure controlled-gif" data-controlled-gif data-gif-src="../assets/slack-gif-picker.gif" data-poster-src="../assets/slack-gif-picker-poster.webp">
+        <div class="gif-stage">
+          <img src="../assets/slack-gif-picker-poster.webp" alt="Slack demonstration of searching for and adding a GIF to a message" data-gif-image>
+        </div>
+        <div class="gif-controls" aria-label="GIF picker animation controls">
+          <button type="button" data-gif-play>Play animation</button>
+          <button type="button" data-gif-stop disabled>Stop</button>
+        </div>
+        <p class="gif-motion-note">The animation starts paused. Stop restores the first frame.</p>
+        <figcaption class="figure-caption">Animated example from <a href="https://slack.com/help/articles/26860009071251-Add-GIFs-to-a-message-in-Slack" target="_blank" rel="noopener">Slack Help Center: Add GIFs to a message</a>. Accessed 5 November 2026.</figcaption>
+      </figure>
+
+      <ul class="example-list" aria-label="Companies and animated GIFs">
+        <li><strong>Figma</strong> lets people add animated GIFs to prototypes and play them in presentation view.</li>
+        <li><strong>Slack</strong> uses animated GIFs in help pages and integrates them into messages.</li>
+        <li><strong>Microsoft</strong> publishes code samples for playing GIFs and controlling playback.</li>
+        <li><strong>Notion</strong> supports GIF as an image format within pages.</li>
+        <li><strong>GitHub</strong> can display GIFs, but it provides an accessibility preference to disable autoplay and its editorial style guide explicitly says not to use animated GIFs in documentation.</li>
+      </ul>
+
+      <p>GitHub is particularly interesting because it demonstrates two sound decisions: giving users global control over motion and adopting an editorial rule that avoids animated GIFs in documentation. See both <a href="https://docs.github.com/en/account-and-profile/how-tos/account-settings/managing-accessibility-settings" target="_blank" rel="noopener">Managing accessibility settings</a> and the <a href="https://docs.github.com/en/contributing/style-guide-and-content-model/style-guide#images" target="_blank" rel="noopener">GitHub Docs style guide</a>.</p>
+
+      <h2>An alternative I can control</h2>
+
+      <p>The following demonstration explains a fictional process: enabling a reduce-motion option. It does not start on its own. It can be played and paused, but it can also be moved backwards and forwards one frame at a time. Every state is independent and retains a textual explanation.</p>
+
+      <section class="frame-demo" data-frame-demo data-status-template="Frame {current} of {total}" aria-labelledby="demo-title-en">
+        <h3 id="demo-title-en">Example: enable “Reduce motion”</h3>
+        <div class="demo-stage" aria-live="polite">
+          <div class="demo-frame is-active" data-demo-frame>
+            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+            <p class="demo-frame-title">1. Open Settings</p>
+            <div class="mock-menu is-highlighted">⚙ Settings</div>
+          </div>
+          <div class="demo-frame" data-demo-frame aria-hidden="true">
+            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+            <p class="demo-frame-title">2. Choose Accessibility</p>
+            <div class="mock-menu">General</div>
+            <div class="mock-option is-highlighted">Accessibility</div>
+          </div>
+          <div class="demo-frame" data-demo-frame aria-hidden="true">
+            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+            <p class="demo-frame-title">3. Enable the option</p>
+            <div class="mock-menu">Motion</div>
+            <div class="mock-option is-highlighted">Reduce motion: On</div>
+          </div>
+          <div class="demo-frame" data-demo-frame aria-hidden="true">
+            <div class="mock-toolbar" aria-hidden="true"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+            <p class="demo-frame-title">4. Preference saved</p>
+            <div class="mock-result">✓ Non-essential animations have been reduced.</div>
+          </div>
+        </div>
+        <div class="demo-controls" aria-label="Demonstration controls">
+          <button type="button" data-action="previous">← Previous</button>
+          <button type="button" data-action="next">Next →</button>
+          <button type="button" data-action="play">Play</button>
+          <button type="button" data-action="pause" disabled>Pause</button>
+          <span class="demo-status" data-demo-status aria-live="polite">Frame 1 of 4</span>
+        </div>
+      </section>
+
+      <h2>What an accessible visual tutorial should provide</h2>
+
+      <p>We do not need to eliminate all animation. We need to stop treating it as a sealed sequence that forces everyone to watch in the same way. An accessible tutorial should:</p>
+
+      <ol>
+        <li>not start automatically;</li>
+        <li>include play, pause, previous and next controls;</li>
+        <li>let people inspect every step without a time limit;</li>
+        <li>provide equivalent written instructions;</li>
+        <li>visually identify what changes in each step;</li>
+        <li>respect the system’s <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40media/prefers-reduced-motion" target="_blank" rel="noopener"><code>prefers-reduced-motion</code></a> setting;</li>
+        <li>use controlled video or a sequence of static images when either is clearer.</li>
+      </ol>
+
+      <div class="callout">
+        <p><strong>A very simple test:</strong> if a person cannot stop the demonstration, enlarge part of it and continue from the same point, the tutorial is not under their control.</p>
+      </div>
+
+      <h2>Time is part of accessibility too</h2>
+
+      <p>We often discuss accessibility in terms of contrast, font size, alternative text or keyboard navigation. But there is also temporal accessibility: having enough time to perceive, understand and act.</p>
+
+      <p>An animated GIF without controls takes that time away and turns it into an imposition. The solution is not complicated. Give control to the person watching.</p>
+
+      <p>Above all, remember something basic: a tutorial is useful only if the person who needs it can follow it.</p>
+    </article>
+  </main>
+
+  <footer class="blog-footer">
+    <p><a href="/blog/">← All posts</a> · © 2026 Jaume Nualart Vilaplana</p>
+  </footer>
+</body>
+</html>
