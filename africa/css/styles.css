@@ -295,3 +295,6 @@ svg .hover { filter: brightness(1.25); }
   .tooltip ol, .tooltip .tt-notes { display: none; } /* al mòbil, només el nom i qui governa: la resta no hi cap */
   .panel { border-right: 0; padding: 12px 16px 12vh; }
 }
+
+/* Comptador de visites (js/stats.js) */
+.visit-count { margin-top: .8rem; font-size: .85rem; opacity: .8; }
