@@ -297,4 +297,9 @@ svg .hover { filter: brightness(1.25); }
 }
 
 /* Comptador de visites (js/stats.js) */
+.dedicatoria { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid currentColor; border-top-color: rgba(127,127,127,.3); font-size: .95rem; }
+.dedicatoria .dedic { font-style: italic; margin: 0 0 .8rem; }
+.dedicatoria blockquote { margin: .5rem 0 .5rem 1rem; padding-left: .8rem; border-left: 3px solid rgba(127,127,127,.4); }
+.dedicatoria blockquote p { margin: 0; }
+.dedicatoria cite { display: block; font-size: .8rem; opacity: .8; font-style: normal; margin-top: .15rem; }
 .visit-count { margin-top: .8rem; font-size: .85rem; opacity: .8; }
