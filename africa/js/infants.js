@@ -6,6 +6,8 @@
   const G = window.GEO, H = window.HISTORY, LI = window.LANGINFO, tx = window.tx, LANG = window.LANG;
   const { STORIES: KID_STORIES, MILESTONES, FLIPS, QUIZ } = window.KIDS;
   const $ = s => document.querySelector(s);
+  // edat triada amb el control d'edat (js/age.js): 1 = 3–5, 2 = 6–9, 3 = 10–12, 4 = 13–18
+  const AGE = () => +document.documentElement.dataset.age || 3;
   const NS = "http://www.w3.org/2000/svg";
   const el = (tag, attrs = {}, parent) => {
     const n = document.createElementNS(NS, tag);
@@ -322,7 +324,7 @@
     const countries = new Map();
     idx.forEach(i => G.peoples[i].s.forEach(([a, pct]) => countries.set(a, (countries.get(a) || 0) + pct * G.peoples[i].a)));
     const list = [...countries].filter(([, v]) => v > 0).sort((a, b) => b[1] - a[1]).map(([a]) => cname(a));
-    $("#storyCard").innerHTML = `<h3><span aria-hidden="true">${s.ico}</span> ${s.label}</h3><p>${s.d}</p><p class="small">${tx("Al mapa, en vermell fosc. Països on viuen segons el mapa:")} ${list.join(", ")}.</p>`;
+    $("#storyCard").innerHTML = `<h3><span aria-hidden="true">${s.ico}</span> ${s.label}</h3><p>${(AGE() <= 2 && s.d2) || s.d}</p><p class="small">${tx("Al mapa, en vermell fosc. Països on viuen segons el mapa:")} ${list.join(", ")}.</p>`;
     if (state !== "partits") return;
     peoplePaths.forEach(p => p.classList.remove("sel"));
     idx.forEach(i => peoplePaths[i].classList.add("sel"));
@@ -383,8 +385,9 @@
   }
   function updateChapter() {
     const line = readingLine();
-    let cur = chapters[0];
-    for (const c of chapters) if (c.getBoundingClientRect().top < line) cur = c;
+    const shown = chapters.filter(c => c.getClientRects().length); // capítols d'aquesta edat
+    let cur = shown[0];
+    for (const c of shown) if (c.getBoundingClientRect().top < line) cur = c;
     chapters.forEach(c => c.classList.toggle("active", c === cur));
     setState(cur.dataset.map);
   }
@@ -415,9 +418,11 @@
   // ---------------------------------------------------------------- Repte
   const quiz = $("#quiz");
   let score = 0, answered = 0;
+  let QZ = QUIZ;
   function buildQuiz() {
+    QZ = window.KIDS.QUIZ_BY_AGE?.[AGE()] || QUIZ;
     quiz.replaceChildren(); score = 0; answered = 0; $("#quizEnd").hidden = true;
-    QUIZ.forEach((item, qi) => {
+    QZ.forEach((item, qi) => {
       const box = html("fieldset", { class: "qz" });
       box.append(html("legend", {}, `${qi + 1}. ${item.q}`));
       const opts = html("div", { class: "qz-opts" }), fb = html("p", { class: "qz-fb", "aria-live": "polite" });
@@ -431,7 +436,7 @@
           b.classList.add(right ? "ok" : "ko");
           opts.children[item.ok].classList.add("ok");
           fb.innerHTML = `${right ? tx("✅ Molt bé!") : tx("❌ No ben bé.")} ${item.why}`;
-          if (++answered === QUIZ.length) finish();
+          if (++answered === QZ.length) finish();
         };
         opts.append(b);
       });
@@ -440,10 +445,17 @@
     });
   }
   function finish() {
-    const medal = score === QUIZ.length ? "🏆" : score >= 4 ? "🏅" : "🌱";
-    $("#quizScore").innerHTML = `${medal} ${tx("Has encertat <b>{n} de {total}</b>!", { n: score, total: QUIZ.length })}`;
+    const medal = score === QZ.length ? "🏆" : score >= QZ.length * 0.6 ? "🏅" : "🌱";
+    $("#quizScore").innerHTML = `${medal} ${tx("Has encertat <b>{n} de {total}</b>!", { n: score, total: QZ.length })}`;
     $("#quizEnd").hidden = false;
   }
   $("#quizAgain").onclick = buildQuiz;
   buildQuiz();
+
+  // ---------------------------------------------------------------- Canvi d'edat
+  addEventListener("agechange", () => {
+    buildQuiz();
+    if (selectedStory) selectStory(selectedStory);
+    updateChapter();
+  });
 })();

@@ -16,7 +16,7 @@
   const want = chosen || (ROMANCE.includes(browser) ? "ca" : "en");
   if (want !== here) {
     const alt = document.querySelector(`link[rel="alternate"][hreflang="${want}"]`);
-    if (alt) { location.replace(alt.href + location.hash); return; }
+    if (alt) { location.replace(alt.href + location.search + location.hash); return; }
   }
   // en triar una llengua a la barra de dalt, es recorda
   document.addEventListener("click", e => {

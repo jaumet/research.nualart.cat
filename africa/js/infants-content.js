@@ -6,12 +6,12 @@
 window.KIDS = {
   // id i g com a HISTORY.STORIES: nom del mapa de Murdock o, amb g, tot el grup cultural
   STORIES: [
-    { id: "Masai", ico: "🐄", label: "Massais", d: "Pastors que viuen amb els seus ramats de vaques a les sabanes. El 1886 i el 1890, britànics i alemanys van traçar una línia recta que els va deixar repartits entre Kenya i Tanzània." },
-    { id: "Somali", g: true, ico: "⭐", label: "Somalis", d: "Parlen la mateixa llengua però van quedar repartits en cinc territoris. L'estrella de cinc puntes de la bandera de Somàlia recorda aquests cinc trossos. Avui viuen a Somàlia, Etiòpia, Kenya i Djibouti." },
-    { id: "Kongo", ico: "👑", label: "Bakongo", d: "Hereus del gran Regne del Kongo. Portugal, França i el rei Leopold II se'l van repartir. Avui viuen a Angola, la RD del Congo i la República del Congo, i parlen kikongo." },
-    { id: "Ewe", ico: "🥁", label: "Ewe", d: "Primer els van separar britànics i alemanys, i després de 1919, britànics i francesos. Avui viuen entre Ghana i Togo." },
-    { id: "Tuareg", g: true, ico: "🐪", label: "Tuaregs", d: "Nòmades del desert del Sàhara. Per a ells les fronteres no tenien cap sentit, però ara n'han de travessar moltes. Viuen a Algèria, Líbia, Mali, Níger i Burkina Faso." },
-    { id: "Chewa", ico: "🌽", label: "Chewa", d: "Hereus de l'antic Imperi maravi. Un acord entre britànics i portuguesos de 1891 els va repartir entre Malawi, Moçambic i Zàmbia." }
+    { id: "Masai", ico: "🐄", label: "Massais", d2: "Pastors de vaques. Una ratlla recta els va partir entre dos països: Kenya i Tanzània.", d: "Pastors que viuen amb els seus ramats de vaques a les sabanes. El 1886 i el 1890, britànics i alemanys van traçar una línia recta que els va deixar repartits entre Kenya i Tanzània." },
+    { id: "Somali", g: true, ico: "⭐", label: "Somalis", d2: "Parlen la mateixa llengua, però els van repartir en cinc trossos. Per això la seva bandera té una estrella de cinc puntes. ⭐", d: "Parlen la mateixa llengua però van quedar repartits en cinc territoris. L'estrella de cinc puntes de la bandera de Somàlia recorda aquests cinc trossos. Avui viuen a Somàlia, Etiòpia, Kenya i Djibouti." },
+    { id: "Kongo", ico: "👑", label: "Bakongo", d2: "Tenien un gran regne, el Regne del Kongo. Ara viuen repartits en tres països.", d: "Hereus del gran Regne del Kongo. Portugal, França i el rei Leopold II se'l van repartir. Avui viuen a Angola, la RD del Congo i la República del Congo, i parlen kikongo." },
+    { id: "Ewe", ico: "🥁", label: "Ewe", d2: "Primer els van separar uns, després uns altres. Avui viuen entre Ghana i Togo.", d: "Primer els van separar britànics i alemanys, i després de 1919, britànics i francesos. Avui viuen entre Ghana i Togo." },
+    { id: "Tuareg", g: true, ico: "🐪", label: "Tuaregs", d2: "Viatgen pel desert amb camells. Abans no hi havia fronteres; ara n'han de creuar moltes. 🐪", d: "Nòmades del desert del Sàhara. Per a ells les fronteres no tenien cap sentit, però ara n'han de travessar moltes. Viuen a Algèria, Líbia, Mali, Níger i Burkina Faso." },
+    { id: "Chewa", ico: "🌽", label: "Chewa", d2: "Pagesos de blat de moro. Un acord entre dos països d'Europa els va repartir en tres països.", d: "Hereus de l'antic Imperi maravi. Un acord entre britànics i portuguesos de 1891 els va repartir entre Malawi, Moçambic i Zàmbia." }
   ],
 
   // [any, text]: es mostra el text de l'última fita anterior o igual a l'any del control
@@ -53,5 +53,28 @@ window.KIDS = {
     { q: "Per què el 1960 es diu «l'any d'Àfrica»?", a: ["Perquè disset països es van independitzar", "Perquè es va fer la reunió de Berlín", "Perquè es van dibuixar les fronteres"], ok: 0, why: "En un sol any, disset països africans es van fer independents." },
     { q: "Quantes llengües es parlen a l'Àfrica?", a: ["Unes 50", "Unes 200", "Més de 2.000"], ok: 2, why: "És un dels llocs del món amb més llengües diferents." },
     { q: "Qui era Yaa Asantewaa?", a: ["Una reina mare que va lluitar contra els britànics", "Una exploradora europea", "La primera presidenta de Ghana"], ok: 0, why: "El 1900 va dirigir la guerra per defensar el Tamboret d'Or asante." }
-  ]
+  ],
+
+  // repte per edats (js/age.js): 1 = 3–5, 2 = 6–9, 3 = 10–12 (el QUIZ de sempre), 4 = 13–18
+  QUIZ_BY_AGE: {
+    1: [
+      { q: "A la reunió on es van repartir l'Àfrica, hi havia gent africana?", a: ["Sí 🙂", "No 🙁"], ok: 1, why: "No van preguntar a ningú que hi visqués." },
+      { q: "A l'Àfrica es parlen…", a: ["Poques llengües", "Moltíssimes llengües 🗣️"], ok: 1, why: "Més de dues mil!" },
+      { q: "Al final, els pobles africans…", a: ["Van tornar a ser lliures 🎉", "Es van quedar sempre igual"], ok: 0, why: "Un per un, els països es van fer independents." }
+    ],
+    2: [
+      { q: "Quantes persones africanes hi havia a la reunió de Berlín?", a: ["Cap ni una", "Cinc", "Catorze"], ok: 0, why: "Es van repartir l'Àfrica sense preguntar a ningú que hi visqués." },
+      { q: "Quins dos països africans van continuar lliures?", a: ["Etiòpia i Libèria", "Ghana i Mali", "Egipte i el Marroc"], ok: 0, why: "Etiòpia va guanyar Itàlia en una gran batalla, a Adwa." },
+      { q: "Quantes llengües es parlen a l'Àfrica?", a: ["Unes 50", "Unes 200", "Més de 2.000"], ok: 2, why: "És un dels llocs del món amb més llengües diferents." },
+      { q: "Què vol dir «Zimbabwe»?", a: ["Terra del riu", "Cases de pedra", "País lliure"], ok: 1, why: "Recorda una ciutat antiga, el Gran Zimbabwe, feta de pedra." }
+    ],
+    4: [
+      { q: "Què establia el principi d'«ocupació efectiva» de la Conferència de Berlín?", a: ["Que calia ocupar de debò una costa per reclamar-la", "Que els pobles africans podien votar", "Que les fronteres havien de seguir els rius"], ok: 0, why: "Va accelerar la cursa per conquerir el continent." },
+      { q: "Per què l'OUA va decidir el 1964 mantenir les fronteres colonials?", a: ["Perquè eren justes", "Per evitar guerres sobre on començava cada país", "Perquè ho exigia Europa"], ok: 1, why: "Una decisió pràctica que també va fer permanents les ferides." },
+      { q: "Qui va publicar el 1904 un informe sobre els abusos al Congo?", a: ["Otto von Bismarck", "Roger Casement", "Cecil Rhodes"], ok: 1, why: "L'informe Casement va ajudar a obrir una gran campanya internacional." },
+      { q: "Què va reconèixer Alemanya el 2021?", a: ["El genocidi d'herero i nama", "La independència de Namíbia", "Els errors del mapa de Murdock"], ok: 0, why: "Però molts representants herero i nama van rebutjar l'acord perquè no els havien deixat participar." },
+      { q: "Què vol dir «neocolonialisme», segons Kwame Nkrumah?", a: ["Tornar a ocupar un país amb l'exèrcit", "Controlar l'economia d'un país que ja és independent", "Canviar el nom colonial d'un país"], ok: 1, why: "La independència política no sempre va portar la independència econòmica." },
+      { q: "Per què cal llegir amb esperit crític un mapa de «tribus» com el de Murdock?", a: ["Perquè és en color", "Perquè moltes etiquetes es van fixar per governar, i les identitats es barrejaven", "Perquè és massa nou"], ok: 1, why: "Un mapa amb línies nítides entre pobles també és una simplificació." }
+    ]
+  }
 };

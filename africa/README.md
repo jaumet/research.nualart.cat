@@ -98,3 +98,11 @@ Les versions anteriors del projecte (`../africa_layers_viewer`, `../africa_quatr
 Idea original de [Jaume Nu a l'art](https://nualart.cat). Projecte elaborat amb l'ajuda inestimable d'un agent d'IA.
 
 © 2026 · [Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca). Les dades de tercers conserven les seves llicències (vegeu «Fonts i llicències»).
+
+## Menu (☰)
+
+A button fixed at the top left opens a side panel with every chapter (and its steps) and every other section, to jump straight to any point. It is `js/gem-menu.js`, the same component in every Gem (as in «Xarxes amb cap»): it builds the list from the page (`.chap-n` labels, `<h2>` titles, `.wide` sections), takes the page's own colours and speaks Catalan, English, Hindi or Punjabi from `<html lang>`. Each page loads it at the end of `<body>`; `data-bar` gives the top bar room for the button.
+
+## Logo, draft notice and age slider
+
+Since 19 Nov 2026 the page has the Liminal Ed logo next to the ☰ button, a draft notice at the bottom, and an age slider under the top bar (shared kit: `0-mapes-colonials/gem-age/`, files `js/gem-age.js`, `css/gem-age.css`, `img/logo-liminal-ed*.png`). Bands: 🧸 3–5 · 🎒 6–9 · 📘 10–12 (default) · 🎓 13–18. Catalan texts per age are in `index.html` (`data-ages`), English ones in `js/ages-en.js`; the quiz and the story cards per age are in `js/infants-content.js` and `en/js/kids.js` (`QUIZ_BY_AGE`, `d2`). The detailed editions get the logo and the notice only.

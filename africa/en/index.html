@@ -28,7 +28,9 @@
   <meta name="twitter:image:alt" content="Map of Africa in 1914 coloured by colonial power, with the title Africa Carved Up, school edition">
   <link rel="alternate" hreflang="ca" href="../index.html">
   <script src="../js/lang-redirect.js"></script>
+  <script src="../js/gem-age.js" data-bands="🧸 3–5|🎒 6–9|📘 10–12|🎓 13–18" data-default="3" data-key="africa-age" data-big="1 2" data-after=".version-switch"></script>
   <link rel="stylesheet" href="../css/infants.css">
+  <link rel="stylesheet" href="../css/gem-age.css">
 </head>
 <body>
   <!-- Narrator character: the Baobab (happy and sad) -->
@@ -50,7 +52,8 @@
     </defs>
   </svg>
 
-  <nav class="version-switch" aria-label="Choose a version">
+  <nav class="version-switch has-brand" aria-label="Choose a version">
+    <a class="gem-brand" href="https://liminaled.com" aria-label="Liminal Ed"><img class="gb-dark" src="../img/logo-liminal-ed.png" alt="" width="972" height="163"><img class="gb-light" src="../img/logo-liminal-ed-light.png" alt="" width="972" height="163"></a>
     <span class="vs-label">Choose a version:</span>
     <a class="vs-opt" href="index.html" aria-current="page"><span aria-hidden="true">🏫</span> School edition <small>teaching style</small></a>
     <a class="vs-opt" href="detailed.html"><span aria-hidden="true">📚</span> Detailed edition <small>academic style</small></a>
@@ -341,6 +344,10 @@
       <blockquote><p>“The border is an open wound.”</p><cite>Gloria Anzaldúa, <i>Borderlands/La Frontera</i> (1987)</cite></blockquote>
     </section>
     <p class="visit-count" id="visitCount" hidden>Visits to the atlas: <strong data-n>—</strong> · <small>Anonymous statistics, no cookies (GoatCounter)</small></p>
+      <aside class="gem-disclaimer" aria-label="About this draft" lang="en">
+      <p><strong><span aria-hidden="true">🌱</span> This is a draft.</strong> It was written with the help of an AI and nobody has checked it yet. The historical maps are simplified: before the 20th century few borders were sharp lines, and historians do not always agree on where they ran. The map of peoples (Murdock, 1959) also has known errors.</p>
+      <p>The texts for the youngest readers simplify a lot, but they should never say anything false. If you spot a mistake, at any age, <a href="https://nualart.cat">let us know</a>!</p>
+    </aside>
   </footer>
 
   <script src="../data/geo.js"></script>
@@ -351,6 +358,7 @@
   <script src="js/kids.js"></script>
   <script src="../js/infants.js"></script>
   <script src="../js/stats.js"></script>
+  <script src="../js/ages-en.js"></script>
   <script src="../js/gem-menu.js" data-bar=".version-switch"></script>
 </body>
 </html>
